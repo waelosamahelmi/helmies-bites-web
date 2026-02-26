@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Globe, Link as LinkIcon } from 'lucide-react';
 
 interface Props {

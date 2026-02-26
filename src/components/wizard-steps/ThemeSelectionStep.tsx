@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Palette, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 interface Props {
   data: any;
@@ -7,7 +7,7 @@ interface Props {
   onUpdate: (data: any) => void;
 }
 
-export function ThemeSelectionStep({ data, sessionId, onUpdate }: Props) {
+export function ThemeSelectionStep({ data, onUpdate }: Props) {
   const [themes, setThemes] = useState<any[]>([]);
   const [selectedTheme, setSelectedTheme] = useState(data.themeId || null);
   const [isGeneratingAI, setIsGeneratingAI] = useState(false);

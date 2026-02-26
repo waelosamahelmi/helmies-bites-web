@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Check, Plus, ArrowRight } from 'lucide-react';
+import { Check, Plus } from 'lucide-react';
 
 export function Pricing() {
   return (
@@ -28,8 +28,8 @@ export function Pricing() {
                 <PricingItem text="Mobile-optimized" included />
                 <PricingItem text="Multi-language" included />
                 <PricingItem text="Admin dashboard" included />
-                <PricingItem text="Cash on Delivery" excluded />
-                <PricingItem text="AI Assistant" excluded />
+                <PricingItem text="Cash on Delivery" />
+                <PricingItem text="AI Assistant" />
               </ul>
 
               <Link
@@ -61,7 +61,7 @@ export function Pricing() {
                 <PricingItem text="Priority support" included />
                 <PricingItem text="Advanced analytics" included />
                 <PricingItem text="Custom domain" included />
-                <PricingItem text="AI Assistant" excluded />
+                <PricingItem text="AI Assistant" />
               </ul>
 
               <Link
@@ -118,10 +118,10 @@ export function Pricing() {
 
 interface PricingItemProps {
   text: string;
-  included: boolean;
+  included?: boolean;
 }
 
-function PricingItem({ text, included }: PricingItemProps) {
+function PricingItem({ text, included = false }: PricingItemProps) {
   return (
     <li className="flex items-center gap-2 text-sm">
       {included ? (

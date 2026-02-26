@@ -1,4 +1,4 @@
-import { Check, CreditCard, Truck, User } from 'lucide-react';
+import { Check, Globe, Truck, User } from 'lucide-react';
 
 interface Props {
   data: any;

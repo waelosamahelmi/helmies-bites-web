@@ -16,6 +16,7 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
     descriptionEn: data.descriptionEn || '',
     cuisine: data.cuisine || '',
     city: data.city || '',
+    email: data.email || '',
   });
   const [isGenerating, setIsGenerating] = useState(false);
 

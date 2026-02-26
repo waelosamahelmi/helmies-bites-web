@@ -26,7 +26,7 @@ export function StartWizard() {
   const CurrentStepComponent = steps[currentStepIndex].component;
 
   const updateData = (newData: any) => {
-    setWizardData(prev => ({ ...prev, ...newData }));
+    setWizardData((prev: any) => ({ ...prev, ...newData }));
   };
 
   const goToNextStep = () => {

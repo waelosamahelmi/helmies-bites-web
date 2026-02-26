@@ -7,7 +7,7 @@ interface Props {
   onUpdate: (data: any) => void;
 }
 
-export function MenuUploadStep({ data, sessionId, onUpdate }: Props) {
+export function MenuUploadStep({ sessionId, onUpdate }: Props) {
   const [file, setFile] = useState<File | null>(null);
   const [isParsing, setIsParsing] = useState(false);
   const [parsedMenu, setParsedMenu] = useState<any>(null);
