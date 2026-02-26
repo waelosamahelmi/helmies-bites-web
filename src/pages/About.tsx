@@ -71,7 +71,7 @@ const milestones = [
 
 export function About() {
   return (
-    <div>
+    <div className="pt-20">
       {/* ===== HERO ===== */}
       <section className="hero-gradient section-padding relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">

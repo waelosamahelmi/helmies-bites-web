@@ -20,7 +20,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0D0907]">
       <ScrollToTop />
       <Navbar />
-      <main className="pt-20">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/features" element={<Features />} />

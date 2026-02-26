@@ -107,7 +107,7 @@ export function StartWizard() {
   const progress = ((currentStepIndex + 1) / steps.length) * 100;
 
   return (
-    <div className="min-h-screen hero-gradient py-12 px-4">
+    <div className="min-h-screen hero-gradient pt-24 pb-12 px-4">
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Back Button */}
         <div className="text-center mb-6">

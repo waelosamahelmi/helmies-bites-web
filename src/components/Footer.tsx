@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
 
 export function Footer() {
@@ -71,13 +70,13 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-12">
             {['Features', 'Pricing', 'About', 'FAQ'].map((item) => (
-              <Link
+              <a
                 key={item}
-                to={`/${item.toLowerCase()}`}
+                href={`/${item.toLowerCase()}`}
                 className="text-white/60 hover:text-[#FF7A00] transition-colors duration-300 font-semibold text-sm tracking-wide"
               >
                 {item}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -142,12 +141,12 @@ export function Footer() {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
-                      <Link
-                        to={link.href}
+                      <a
+                        href={link.href}
                         className="text-white/40 hover:text-[#FF7A00] transition-colors duration-300 text-sm"
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>

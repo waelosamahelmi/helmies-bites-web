@@ -251,7 +251,7 @@ export function Privacy() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 pt-20">
       {/* Header */}
       <div className="bg-[#1A1410] border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-12">

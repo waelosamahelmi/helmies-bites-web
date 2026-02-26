@@ -591,7 +591,7 @@ export function Features() {
   };
 
   return (
-    <div className="font-sans">
+    <div className="font-sans pt-20">
       {/* ===== HERO SECTION - Two Column Aivora Layout ===== */}
       <section className="hero-gradient relative min-h-screen flex items-center overflow-hidden">
         {/* Background Blurs */}

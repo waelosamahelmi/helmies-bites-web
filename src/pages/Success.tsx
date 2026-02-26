@@ -7,14 +7,14 @@ export function Success() {
 
   if (!result) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen pt-20 flex items-center justify-center">
         <p>No setup data found. Please complete the wizard first.</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen py-20 px-4">
+    <div className="min-h-screen pt-24 pb-8 px-4">
       <div className="max-w-2xl mx-auto text-center">
         <div className="mb-8">
           <div className="inline-flex items-center justify-center h-20 w-20 bg-[#FF7A00]/10 rounded-full mb-4">

@@ -1,34 +1,17 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Menu, X, Rocket, ExternalLink } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const lastScrollY = useRef(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
-
-      if (currentScroll < lastScrollY.current && currentScroll > 100) {
-        setIsSticky(true);
-        setTimeout(() => setIsVisible(true), 10);
-      } else if (currentScroll > lastScrollY.current) {
-        setIsVisible(false);
-        setTimeout(() => setIsSticky(false), 150);
-      }
-
-      if (currentScroll <= 100) {
-        setIsSticky(false);
-        setIsVisible(false);
-      }
-
-      lastScrollY.current = currentScroll;
+      setHasScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -36,6 +19,7 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
+    { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
@@ -44,16 +28,15 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isSticky
-          ? `bg-[#0D0907]/90 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-          }`
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${hasScrolled
+          ? 'bg-[#0D0907]/90 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20'
           : 'bg-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 bg-gradient-to-br from-[#FF7A00] to-[#CC6200] overflow-hidden">
                 <img src="/b.svg" alt="Helmies Bites" className="h-8 w-8" />
@@ -67,14 +50,14 @@ export function Navbar() {
               <span className="gradient-text">Helmies</span>
               <span className="text-white">Bites</span>
             </span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`font-semibold text-sm tracking-wide transition-all duration-300 relative group ${isActive(link.path)
                     ? 'text-[#FF7A00]'
                     : 'text-white/70 hover:text-white'
@@ -83,7 +66,7 @@ export function Navbar() {
                 {link.name}
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#FF7A00] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
                   }`} />
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -123,17 +106,16 @@ export function Navbar() {
           <div className="lg:hidden py-6 border-t border-white/5">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  href={link.path}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${isActive(link.path)
                       ? 'bg-[#FF7A00]/10 text-[#FF7A00]'
                       : 'text-white/70 hover:bg-white/5 hover:text-white'
                     }`}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <div className="mx-6 mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00]/10 border border-[#FF7A00]/20">
                 <Rocket className="h-4 w-4 text-[#FF7A00]" />

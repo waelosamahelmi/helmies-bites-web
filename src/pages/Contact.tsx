@@ -79,7 +79,7 @@ export function Contact() {
   ];
 
   return (
-    <div>
+    <div className="pt-20">
       {/* Hero Section */}
       <section className="hero-gradient section-padding relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">

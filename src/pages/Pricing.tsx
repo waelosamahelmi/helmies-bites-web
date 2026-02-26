@@ -367,7 +367,7 @@ export function Pricing() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0907] font-sans">
+    <div className="min-h-screen bg-[#0D0907] font-sans pt-20">
       {/* ================================================================
           Hero Section
           ================================================================ */}

@@ -291,7 +291,7 @@ export function FAQ() {
   );
 
   return (
-    <div className="min-h-screen bg-[#0D0907]">
+    <div className="min-h-screen bg-[#0D0907] pt-20">
       {/* Hero Section */}
       <section className="section-padding bg-[#0D0907] relative overflow-hidden">
         {/* Floating decorative elements */}
