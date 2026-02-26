@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SectionTitle } from '../components/SectionTitle';
+import { AivoraButton } from '../components/AivoraButton';
+import { LaunchCountdown } from '../components/LaunchCountdown';
 import {
   Mail,
   Phone,
@@ -8,9 +11,9 @@ import {
   Send,
   MessageCircle,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  HelpCircle
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -49,7 +52,7 @@ export function Contact() {
       value: 'support@helmiesbites.fi',
       link: 'mailto:support@helmiesbites.fi',
       description: 'We respond within 24 hours',
-      color: 'from-orange-500 to-amber-500'
+      color: 'from-[#FF7A00] to-[#CC6200]'
     },
     {
       icon: <Phone className="h-7 w-7 text-white" />,
@@ -57,7 +60,7 @@ export function Contact() {
       value: '+358 20 123 4567',
       link: 'tel:+358201234567',
       description: 'Mon-Fri, 9am-6pm EET',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-[#CC6200] to-[#D4915C]'
     },
     {
       icon: <MapPin className="h-7 w-7 text-white" />,
@@ -65,7 +68,7 @@ export function Contact() {
       value: 'Helsinki, Finland',
       link: null,
       description: 'Punavuori district',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-[#D4915C] to-[#FF7A00]'
     }
   ];
 
@@ -79,56 +82,51 @@ export function Contact() {
     <div>
       {/* Hero Section */}
       <section className="hero-gradient section-padding relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-orange-400/20 rounded-full blur-3xl floating" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#D4915C]/20 rounded-full blur-3xl floating-delayed" />
+        </div>
         <div className="max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center py-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 backdrop-blur-sm border border-white/30 mb-6">
-                <Sparkles className="h-4 w-4 text-orange-500" />
-                <span className="text-sm font-semibold text-gray-700">We're here to help</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-black text-gray-900 mb-6">
-                Get in <span className="gradient-text">touch</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Have questions about Helmies Bites? We'd love to hear from you.
-                <br />
-                Send us a message and we'll respond as soon as possible.
-              </p>
+              <SectionTitle
+                subtitle="We're here to help"
+                title="touch"
+                titleHighlight="Get in"
+                description="Have questions about Helmies Bites? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+                icon={<MessageCircle className="h-4 w-4" />}
+              />
             </div>
           </ScrollReveal>
         </div>
-
-        {/* Decorative floating elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full blur-3xl floating" />
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-3xl floating-delayed" />
       </section>
 
       {/* Contact Form and Info */}
-      <section className="section-padding bg-gradient-to-b from-white to-orange-50/30">
+      <section className="section-padding bg-[#0D0907]">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <ScrollReveal direction="left">
-                <div className="glass-card rounded-3xl p-8 md:p-10">
+                <div className="glass-card xb-border rounded-3xl p-8 md:p-10">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="feature-icon">
                       <Send className="h-6 w-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-black text-gray-900">Send us a message</h2>
+                    <h2 className="text-3xl font-black text-white">Send us a message</h2>
                   </div>
-                  <p className="text-gray-600 mb-8 ml-1">
+                  <p className="text-white/60 mb-8 ml-1">
                     Fill out the form below and we'll get back to you within 24 hours.
                   </p>
 
                   {isSubmitted && (
-                    <div className="mb-8 p-5 bg-green-50/80 backdrop-blur-sm border-2 border-green-200/50 rounded-2xl flex items-center gap-4">
-                      <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="mb-8 p-5 bg-green-500/10 backdrop-blur-sm border border-green-500/30 rounded-2xl flex items-center gap-4">
+                      <div className="w-12 h-12 bg-[#FF7A00] rounded-xl flex items-center justify-center flex-shrink-0">
                         <CheckCircle2 className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <p className="font-bold text-green-800">Message sent successfully!</p>
-                        <p className="text-green-700 text-sm">Thank you! We've received your message and will respond soon.</p>
+                        <p className="font-bold text-green-400">Message sent successfully!</p>
+                        <p className="text-green-400/70 text-sm">Thank you! We've received your message and will respond soon.</p>
                       </div>
                     </div>
                   )}
@@ -136,7 +134,7 @@ export function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-3">
+                        <label htmlFor="name" className="block text-sm font-bold text-white/80 mb-3">
                           Your Name *
                         </label>
                         <input
@@ -151,7 +149,7 @@ export function Contact() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-3">
+                        <label htmlFor="email" className="block text-sm font-bold text-white/80 mb-3">
                           Email Address *
                         </label>
                         <input
@@ -168,7 +166,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-bold text-gray-700 mb-3">
+                      <label htmlFor="subject" className="block text-sm font-bold text-white/80 mb-3">
                         Subject *
                       </label>
                       <select
@@ -190,7 +188,7 @@ export function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-3">
+                      <label htmlFor="message" className="block text-sm font-bold text-white/80 mb-3">
                         Your Message *
                       </label>
                       <textarea
@@ -231,32 +229,32 @@ export function Contact() {
             <div className="lg:col-span-2 space-y-6">
               {/* Contact Cards */}
               <ScrollReveal direction="right">
-                <h3 className="text-2xl font-black text-gray-900 mb-6 flex items-center gap-3">
+                <h3 className="text-2xl font-black text-white mb-6 flex items-center gap-3">
                   <span className="gradient-text">Contact</span> Information
                 </h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <div
                       key={index}
-                      className={`glass-card glass-card-hover rounded-2xl p-5 cursor-pointer`}
+                      className="glass-card xb-border glass-card-hover rounded-2xl p-5 cursor-pointer"
                     >
                       <div className="flex items-center gap-4">
                         <div className={`feature-icon bg-gradient-to-br ${info.color}`}>
                           {info.icon}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-gray-900 mb-1">{info.title}</h4>
+                          <h4 className="font-bold text-white mb-1">{info.title}</h4>
                           {info.link ? (
                             <a
                               href={info.link}
-                              className="text-orange-600 hover:text-orange-700 font-semibold block truncate transition-colors"
+                              className="text-[#FF7A00] hover:text-[#FF7A00] font-semibold block truncate transition-colors"
                             >
                               {info.value}
                             </a>
                           ) : (
-                            <p className="text-gray-700 font-semibold truncate">{info.value}</p>
+                            <p className="text-white/80 font-semibold truncate">{info.value}</p>
                           )}
-                          <p className="text-sm text-gray-500 mt-1">{info.description}</p>
+                          <p className="text-sm text-white/50 mt-1">{info.description}</p>
                         </div>
                       </div>
                     </div>
@@ -266,27 +264,27 @@ export function Contact() {
 
               {/* Support Hours */}
               <ScrollReveal direction="right" delay={0.1}>
-                <div className="glass-card rounded-2xl p-6">
+                <div className="glass-card xb-border rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="feature-icon bg-gradient-to-br from-amber-500 to-orange-500">
+                    <div className="feature-icon bg-gradient-to-br from-[#FF7A00] to-[#CC6200]">
                       <Clock className="h-6 w-6 text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900">Support Hours</h4>
+                    <h4 className="text-xl font-bold text-white">Support Hours</h4>
                   </div>
                   <div className="space-y-4">
                     {supportHours.map((schedule, index) => (
                       <div
                         key={index}
-                        className="flex justify-between items-center py-3 border-b border-gray-100/50 last:border-0"
+                        className="flex justify-between items-center py-3 border-b border-white/10 last:border-0"
                       >
-                        <span className="text-gray-600 font-medium">{schedule.day}</span>
-                        <span className="text-gray-900 font-bold">{schedule.hours}</span>
+                        <span className="text-white/60 font-medium">{schedule.day}</span>
+                        <span className="text-white font-bold">{schedule.hours}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-5 pt-5 border-t-2 border-orange-100">
-                    <p className="text-sm text-gray-500 flex items-center gap-2">
-                      <Sparkles className="h-4 w-4 text-orange-500" />
+                  <div className="mt-5 pt-5 border-t border-white/10">
+                    <p className="text-sm text-white/50 flex items-center gap-2">
+                      <Sparkles className="h-4 w-4 text-[#FF7A00]" />
                       Average response time: within 24 hours
                     </p>
                   </div>
@@ -295,7 +293,7 @@ export function Contact() {
 
               {/* Live Chat CTA */}
               <ScrollReveal direction="right" delay={0.2}>
-                <div className="gradient-bg rounded-3xl p-6 text-white relative overflow-hidden">
+                <div className="rounded-3xl p-6 text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF7A00 0%, #CC6200 50%, #D4915C 100%)' }}>
                   {/* Decorative elements */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-2xl" />
@@ -312,7 +310,7 @@ export function Contact() {
                     </p>
                     <button
                       onClick={() => alert('Live chat coming soon!')}
-                      className="w-full px-6 py-4 bg-white text-gray-900 rounded-2xl font-bold hover:bg-orange-50 transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg"
+                      className="w-full px-6 py-4 bg-[#0D0907] text-white rounded-2xl font-bold hover:bg-[#1A1410] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg"
                     >
                       <MessageCircle className="h-5 w-5" />
                       Start Live Chat
@@ -330,29 +328,29 @@ export function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="section-padding bg-gradient-to-b from-orange-50/30 to-white">
+      <section className="section-padding bg-[#2A1F15]/20" style={{ background: 'linear-gradient(to bottom, #0D0907, #2A1F15 50%, #0D0907)' }}>
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
-            <div className="glass-card rounded-3xl overflow-hidden shadow-xl">
-              <div className="aspect-video w-full bg-gradient-to-br from-orange-100 via-amber-50 to-pink-100 flex items-center justify-center relative">
+            <div className="glass-card xb-border rounded-3xl overflow-hidden shadow-xl">
+              <div className="aspect-video w-full bg-gradient-to-br from-[#2A1F15] via-[#1A1410] to-[#0D0907] flex items-center justify-center relative">
                 {/* Decorative pattern */}
                 <div className="absolute inset-0 opacity-30">
-                  <div className="absolute top-10 left-10 w-20 h-20 border-4 border-orange-200 rounded-lg" />
-                  <div className="absolute bottom-10 right-10 w-16 h-16 border-4 border-pink-200 rounded-full" />
-                  <div className="absolute top-1/2 right-20 w-12 h-12 border-4 border-purple-200 rounded-lg rotate-45" />
+                  <div className="absolute top-10 left-10 w-20 h-20 border-4 border-[#FF7A00]/20 rounded-lg" />
+                  <div className="absolute bottom-10 right-10 w-16 h-16 border-4 border-[#D4915C]/20 rounded-full" />
+                  <div className="absolute top-1/2 right-20 w-12 h-12 border-4 border-[#FF7A00]/20 rounded-lg rotate-45" />
                 </div>
 
                 <div className="text-center relative z-10 p-8">
-                  <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-orange-500 to-pink-500 w-20 h-20">
+                  <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-[#FF7A00] to-[#D4915C] w-20 h-20">
                     <MapPin className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-3xl font-black text-gray-900 mb-3">Helsinki, Finland</h3>
-                  <p className="text-gray-600 text-lg mb-6">Punavuori District</p>
+                  <h3 className="text-3xl font-black text-white mb-3">Helsinki, Finland</h3>
+                  <p className="text-white/60 text-lg mb-6">Punavuori District</p>
                   <a
                     href="https://maps.google.com/?q=Punavuori,Helsinki,Finland"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-white text-orange-600 rounded-2xl font-bold hover:bg-orange-50 transition-all transform hover:scale-105 shadow-lg border-2 border-orange-100"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-[#0D0907] text-[#FF7A00] rounded-2xl font-bold hover:bg-[#1A1410] transition-all transform hover:scale-105 shadow-lg border border-white/10"
                   >
                     <MapPin className="h-5 w-5" />
                     Open in Google Maps
@@ -365,57 +363,53 @@ export function Contact() {
       </section>
 
       {/* FAQ Link */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[#0D0907]">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <div className="glass-card rounded-3xl p-10 md:p-16">
-              <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-purple-500 to-blue-500 w-20 h-20">
-                <Sparkles className="h-10 w-10 text-white" />
+            <div className="glass-card xb-border rounded-3xl p-10 md:p-16">
+              <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-[#CC6200] to-[#D4915C] w-20 h-20">
+                <HelpCircle className="h-10 w-10 text-white" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-                Looking for <span className="gradient-text">quick answers</span>?
-              </h2>
-              <p className="text-xl text-gray-600 mb-8 max-w-xl mx-auto">
-                Check out our FAQ page for common questions about Helmies Bites.
-              </p>
-              <Link
-                to="/faq"
-                className="btn-primary inline-flex items-center gap-3"
-              >
-                <Sparkles className="h-5 w-5" />
-                Visit FAQ
-              </Link>
+              <SectionTitle
+                subtitle="Common Questions"
+                title="quick answers?"
+                titleHighlight="Looking for"
+                description="Check out our FAQ page for common questions about Helmies Bites."
+                icon={<HelpCircle className="h-4 w-4" />}
+              />
+              <div className="mt-8">
+                <AivoraButton to="/faq">Visit FAQ</AivoraButton>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding hero-gradient relative overflow-hidden">
+      <section className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2A1F15 0%, #0D0907 50%, #2A1F15 100%)' }}>
         {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-40 h-40 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-full blur-3xl floating" />
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-3xl floating-delayed" />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-[#FF7A00]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 floating" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4915C]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 floating-delayed" />
+        </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <ScrollReveal>
-            <div className="glass-card rounded-3xl p-10 md:p-16">
-              <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-orange-500 to-pink-500 w-20 h-20">
-                <Send className="h-10 w-10 text-white" />
+            <div className="glass-card xb-border rounded-3xl p-10 md:p-16">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#CC6200] flex items-center justify-center">
+                <Send className="h-12 w-12 text-white" />
               </div>
-              <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
-                Ready to get <span className="gradient-text">started</span>?
-              </h2>
-              <p className="text-xl text-gray-600 mb-10 max-w-xl mx-auto">
-                Join hundreds of restaurants already using Helmies Bites to streamline their operations.
-              </p>
-              <Link
-                to="/get-started"
-                className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5"
-              >
-                <Send className="h-6 w-6" />
-                Start Free Setup
-              </Link>
-              <p className="text-sm text-gray-500 mt-6">
+              <SectionTitle
+                subtitle="Let's grow together"
+                title="started?"
+                titleHighlight="Ready to get"
+                description="Join hundreds of restaurants already using Helmies Bites to streamline their operations."
+                icon={<Sparkles className="h-4 w-4" />}
+              />
+              <div className="mt-10">
+                <LaunchCountdown compact />
+              </div>
+              <p className="text-sm text-white/50 mt-6">
                 No credit card required. Setup takes less than 5 minutes.
               </p>
             </div>

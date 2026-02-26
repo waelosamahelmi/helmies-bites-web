@@ -26,11 +26,11 @@ const sections = [
           Helmies Bites Oy is the data controller responsible for processing your personal
           data. Our contact information:
         </p>
-        <div className="bg-orange-50 p-4 rounded-lg border border-orange-100">
-          <p className="font-semibold text-gray-900">Data Controller</p>
+        <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+          <p className="font-semibold text-white">Data Controller</p>
           <p>Company: Helmies Bites Oy</p>
           <p>Address: Helsinki, Finland</p>
-          <p>Email: <a href={`mailto:${GDPR_EMAIL}`} className="text-orange-600 hover:underline">{GDPR_EMAIL}</a></p>
+          <p>Email: <a href={`mailto:${GDPR_EMAIL}`} className="text-[#FF7A00] hover:underline">{GDPR_EMAIL}</a></p>
           <p>Business ID: (Finnish: Y-tunnus) Available upon request</p>
         </div>
       </div>
@@ -75,14 +75,14 @@ const sections = [
       <div className="space-y-4">
         <p>We process the following categories of personal data:</p>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Account and Contact Data</h4>
+        <h4 className="font-semibold text-white mt-6">Account and Contact Data</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li>Name, email address, phone number</li>
           <li>Account credentials and authentication data</li>
           <li>Communication preferences</li>
         </ul>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Business Data</h4>
+        <h4 className="font-semibold text-white mt-6">Business Data</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li>Restaurant name and address</li>
           <li>Business registration information</li>
@@ -90,7 +90,7 @@ const sections = [
           <li>Operating hours and location data</li>
         </ul>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Financial Data</h4>
+        <h4 className="font-semibold text-white mt-6">Financial Data</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li>Payment and billing information</li>
           <li>Bank account details for settlements</li>
@@ -98,7 +98,7 @@ const sections = [
           <li>Invoices and receipts</li>
         </ul>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Technical Data</h4>
+        <h4 className="font-semibold text-white mt-6">Technical Data</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li>IP address and device information</li>
           <li>Usage and browsing data</li>
@@ -119,11 +119,11 @@ const sections = [
           mechanisms for you to exercise these rights.
         </p>
 
-        <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
-          <h4 className="font-semibold text-gray-900 mb-3">How to Exercise Your Rights</h4>
-          <p className="text-sm text-gray-700 mb-3">
+        <div className="bg-[#2A1F15]/20 p-4 rounded-lg border border-white/10">
+          <h4 className="font-semibold text-white mb-3">How to Exercise Your Rights</h4>
+          <p className="text-sm text-white/80 mb-3">
             To exercise any of these rights, please contact us at{' '}
-            <a href={`mailto:${GDPR_EMAIL}`} className="text-orange-600 hover:underline">
+            <a href={`mailto:${GDPR_EMAIL}`} className="text-[#FF7A00] hover:underline">
               {GDPR_EMAIL}
             </a>.
             We will respond to your request within 30 days, free of charge.
@@ -191,7 +191,7 @@ const sections = [
           <li>The personal data has been processed unlawfully</li>
           <li>The personal data must be erased for compliance with legal obligation</li>
         </ul>
-        <p className="text-gray-600 italic">
+        <p className="text-white/60 italic">
           Note: We may retain certain data for legal, accounting, or regulatory purposes even
           after your request for erasure.
         </p>
@@ -280,7 +280,7 @@ const sections = [
           <li>Menu optimization suggestions</li>
           <li>Personalized recommendations</li>
         </ul>
-        <p className="text-gray-600 italic">
+        <p className="text-white/60 italic">
           These features do not produce legal effects and can be disabled through your account
           settings.
         </p>
@@ -298,7 +298,7 @@ const sections = [
           (EEA). We ensure appropriate safeguards are in place for such transfers.
         </p>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Transfer Mechanisms</h4>
+        <h4 className="font-semibold text-white mt-6">Transfer Mechanisms</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li>
             <strong>Standard Contractual Clauses (SCCs):</strong> We use European Commission-approved
@@ -314,7 +314,7 @@ const sections = [
           </li>
         </ul>
 
-        <p className="text-gray-600 italic mt-4">
+        <p className="text-white/60 italic mt-4">
           You may request a copy of the appropriate safeguards used for your data transfers by
           contacting us at {GDPR_EMAIL}.
         </p>
@@ -364,7 +364,7 @@ const sections = [
           longer than necessary for the purposes for which it is processed.
         </p>
 
-        <h4 className="font-semibold text-gray-900 mt-6">Retention Periods</h4>
+        <h4 className="font-semibold text-white mt-6">Retention Periods</h4>
         <ul className="list-disc list-inside space-y-2 ml-4">
           <li><strong>Account data:</strong> 3 years after account closure</li>
           <li><strong>Financial records:</strong> 7 years (tax requirement)</li>
@@ -373,7 +373,7 @@ const sections = [
           <li><strong>Server logs:</strong> 90 days</li>
         </ul>
 
-        <p className="text-gray-600 italic">
+        <p className="text-white/60 italic">
           After the retention period expires, data is securely deleted or anonymized.
         </p>
       </div>
@@ -416,14 +416,14 @@ const sections = [
           the Member State of your habitual residence, place of work, or place of alleged
           infringement.
         </p>
-        <div className="bg-orange-50 p-4 rounded-lg border border-orange-100">
-          <p className="font-semibold text-gray-900">Finnish Supervisory Authority</p>
+        <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+          <p className="font-semibold text-white">Finnish Supervisory Authority</p>
           <p>Office of the Data Protection Ombudsman</p>
           <p>Address: Ratapihantie 9, 00100 Helsinki, Finland</p>
           <p>Email: tietosuoja@om.fi</p>
-          <p>Website: <a href="https://tietosuoja.fi" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">tietosuoja.fi</a></p>
+          <p>Website: <a href="https://tietosuoja.fi" target="_blank" rel="noopener noreferrer" className="text-[#FF7A00] hover:underline">tietosuoja.fi</a></p>
         </div>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-white/60">
           This right is without prejudice to any other administrative or judicial remedy.
         </p>
       </div>
@@ -439,15 +439,15 @@ const sections = [
           For any GDPR-related inquiries, including requests to exercise your rights, please
           contact us:
         </p>
-        <div className="bg-orange-50 p-4 rounded-lg border border-orange-100">
-          <p className="font-semibold text-gray-900">Data Protection Contact</p>
-          <p>Email: <a href={`mailto:${GDPR_EMAIL}`} className="text-orange-600 hover:underline">{GDPR_EMAIL}</a></p>
+        <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+          <p className="font-semibold text-white">Data Protection Contact</p>
+          <p>Email: <a href={`mailto:${GDPR_EMAIL}`} className="text-[#FF7A00] hover:underline">{GDPR_EMAIL}</a></p>
           <p>Address: Helsinki, Finland</p>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-sm text-white/60 mt-2">
             Response time: Within 30 days of receipt of request
           </p>
         </div>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-white/60">
           You may also designate an authorized representative to exercise rights on your behalf
           within the European Union.
         </p>
@@ -471,15 +471,15 @@ export function GDPR() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-[#1A1410] border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-blue-100 rounded-lg">
               <Shield className="h-6 w-6 text-blue-600" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">GDPR Compliance</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-white">GDPR Compliance</h1>
           </div>
-          <p className="text-gray-600">
+          <p className="text-white/60">
             Last updated: {LAST_UPDATED}
           </p>
         </div>
@@ -489,23 +489,23 @@ export function GDPR() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Navigation */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 lg:sticky lg:top-24">
-              <h3 className="font-semibold text-gray-900 mb-4">Table of Contents</h3>
+            <div className="bg-[#1A1410] rounded-xl shadow-sm border border-white/5 p-4 lg:sticky lg:top-24">
+              <h3 className="font-semibold text-white mb-4">Table of Contents</h3>
               <nav className="space-y-2 max-h-[70vh] overflow-y-auto">
                 {sections.map((section) => (
                   <button
                     key={section.id}
                     onClick={() => handleScrollToSection(section.id)}
-                    className="block w-full text-left text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"
+                    className="block w-full text-left text-sm text-white/60 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-lg transition-colors"
                   >
                     {section.title}
                   </button>
                 ))}
               </nav>
-              <div className="mt-6 pt-4 border-t border-gray-200">
+              <div className="mt-6 pt-4 border-t border-white/10">
                 <button
                   onClick={handlePrint}
-                  className="w-full text-sm text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="w-full text-sm text-white/60 hover:text-white px-3 py-2 rounded-lg hover:bg-[#2A1F15]/30 transition-colors"
                 >
                   Print this page
                 </button>
@@ -515,11 +515,11 @@ export function GDPR() {
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <div className="bg-[#1A1410] rounded-xl shadow-sm border border-white/5 p-8">
               {/* Introduction */}
               <ScrollReveal>
                 <div className="prose prose-gray max-w-none mb-12">
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-lg text-white/80 leading-relaxed">
                     This GDPR Compliance document explains how Helmies Bites implements the
                     General Data Protection Regulation (GDPR) and how you can exercise your
                     data subject rights. We are committed to protecting your personal data and
@@ -558,7 +558,7 @@ export function GDPR() {
                       <p><strong>Integrity and confidentiality</strong></p>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 mt-4">
+                  <p className="text-sm text-white/60 mt-4">
                     We are accountable for, and able to demonstrate, compliance with these principles.
                   </p>
                 </div>
@@ -575,9 +575,9 @@ export function GDPR() {
                       <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
                         {section.icon}
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
+                      <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                     </div>
-                    <div className="text-gray-700 leading-relaxed pl-11">
+                    <div className="text-white/80 leading-relaxed pl-11">
                       {section.content}
                     </div>
                   </section>
@@ -586,8 +586,8 @@ export function GDPR() {
 
               {/* Footer Note */}
               <ScrollReveal>
-                <div className="mt-12 pt-8 border-t border-gray-200">
-                  <p className="text-sm text-gray-500">
+                <div className="mt-12 pt-8 border-t border-white/10">
+                  <p className="text-sm text-white/50">
                     This GDPR Compliance document is provided for informational purposes and does
                     not constitute legal advice. Regulations may change, and we recommend consulting
                     with legal professionals for specific compliance needs. We regularly review and

@@ -128,15 +128,15 @@ export function Cookies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-[#1A1410] border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 bg-orange-100 rounded-lg">
-              <CookieIcon className="h-6 w-6 text-orange-600" />
+            <div className="p-2 bg-[#FF7A00]/10 rounded-lg">
+              <CookieIcon className="h-6 w-6 text-[#FF7A00]" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Cookie Policy</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-white">Cookie Policy</h1>
           </div>
-          <p className="text-gray-600">
+          <p className="text-white/60">
             Last updated: {LAST_UPDATED}
           </p>
         </div>
@@ -146,18 +146,18 @@ export function Cookies() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Navigation */}
           <aside className="lg:w-64 flex-shrink-0">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 lg:sticky lg:top-24">
-              <h3 className="font-semibold text-gray-900 mb-4">Table of Contents</h3>
+            <div className="bg-[#1A1410] rounded-xl shadow-sm border border-white/5 p-4 lg:sticky lg:top-24">
+              <h3 className="font-semibold text-white mb-4">Table of Contents</h3>
               <nav className="space-y-2">
                 <button
                   onClick={() => handleScrollToSection('what-are-cookies')}
-                  className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   What Are Cookies?
                 </button>
                 <button
                   onClick={() => handleScrollToSection('how-we-use-cookies')}
-                  className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   How We Use Cookies
                 </button>
@@ -165,34 +165,34 @@ export function Cookies() {
                   <button
                     key={type.id}
                     onClick={() => handleScrollToSection(type.id)}
-                    className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                    className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                   >
                     {type.name}
                   </button>
                 ))}
                 <button
                   onClick={() => handleScrollToSection('third-party-cookies')}
-                  className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   Third-Party Cookies
                 </button>
                 <button
                   onClick={() => handleScrollToSection('manage-cookies')}
-                  className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   Managing Cookies
                 </button>
                 <button
                   onClick={() => handleScrollToSection('updates')}
-                  className="block w-full text-left text-sm text-gray-600 hover:text-orange-600 hover:bg-orange-50 px-3 py-2 rounded-lg transition-colors"
+                  className="block w-full text-left text-sm text-white/60 hover:text-[#FF7A00] hover:bg-[#FF7A00]/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   Updates to This Policy
                 </button>
               </nav>
-              <div className="mt-6 pt-4 border-t border-gray-200">
+              <div className="mt-6 pt-4 border-t border-white/10">
                 <button
                   onClick={handlePrint}
-                  className="w-full text-sm text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="w-full text-sm text-white/60 hover:text-white px-3 py-2 rounded-lg hover:bg-[#2A1F15]/30 transition-colors"
                 >
                   Print this page
                 </button>
@@ -202,11 +202,11 @@ export function Cookies() {
 
           {/* Main Content */}
           <main className="flex-1 min-w-0">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <div className="bg-[#1A1410] rounded-xl shadow-sm border border-white/5 p-8">
               {/* Introduction */}
               <ScrollReveal>
                 <div className="prose prose-gray max-w-none mb-12">
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-lg text-white/80 leading-relaxed">
                     This Cookie Policy explains how Helmies Bites uses cookies and similar
                     technologies on our platform. By using our services, you consent to the use
                     of cookies as described in this policy.
@@ -218,43 +218,43 @@ export function Cookies() {
               <ScrollReveal delay={0.05}>
                 <section id="what-are-cookies" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <CookieIcon className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">What Are Cookies?</h2>
+                    <h2 className="text-2xl font-bold text-white">What Are Cookies?</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       Cookies are small text files that are stored on your device (computer,
                       tablet, or mobile) when you visit a website. They are widely used to make
                       websites work more efficiently and to provide information to website owners.
                     </p>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-3">Types of Cookies</h4>
+                    <div className="bg-[#2A1F15]/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-white mb-3">Types of Cookies</h4>
                       <ul className="space-y-2 text-sm">
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-4 w-4 text-[#FF7A00] mt-0.5 flex-shrink-0" />
                           <div>
                             <strong>Session Cookies:</strong> Temporary cookies that expire when
                             you close your browser
                           </div>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-4 w-4 text-[#FF7A00] mt-0.5 flex-shrink-0" />
                           <div>
                             <strong>Persistent Cookies:</strong> Remain on your device for a set
                             period or until deleted
                           </div>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-4 w-4 text-[#FF7A00] mt-0.5 flex-shrink-0" />
                           <div>
                             <strong>First-Party Cookies:</strong> Set by the website you are visiting
                           </div>
                         </li>
                         <li className="flex items-start gap-2">
-                          <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                          <CheckCircle2 className="h-4 w-4 text-[#FF7A00] mt-0.5 flex-shrink-0" />
                           <div>
                             <strong>Third-Party Cookies:</strong> Set by external services used on
                             the website
@@ -270,12 +270,12 @@ export function Cookies() {
               <ScrollReveal delay={0.1}>
                 <section id="how-we-use-cookies" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <Shield className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">How We Use Cookies</h2>
+                    <h2 className="text-2xl font-bold text-white">How We Use Cookies</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       We use cookies for the following purposes:
                     </p>
@@ -296,36 +296,36 @@ export function Cookies() {
                 <ScrollReveal key={cookieType.id} delay={0.15 + index * 0.05}>
                   <section id={cookieType.id} className="mb-12 scroll-mt-24">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                      <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                         {cookieType.icon}
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-900">{cookieType.name}</h2>
+                      <h2 className="text-2xl font-bold text-white">{cookieType.name}</h2>
                     </div>
-                    <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                    <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                       <p>{cookieType.description}</p>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          <p className="text-xs text-gray-500 uppercase tracking-wide">Purpose</p>
+                        <div className="bg-[#2A1F15]/20 p-3 rounded-lg">
+                          <p className="text-xs text-white/50 uppercase tracking-wide">Purpose</p>
                           <p className="text-sm font-medium">{cookieType.purpose}</p>
                         </div>
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          <p className="text-xs text-gray-500 uppercase tracking-wide">Provider</p>
+                        <div className="bg-[#2A1F15]/20 p-3 rounded-lg">
+                          <p className="text-xs text-white/50 uppercase tracking-wide">Provider</p>
                           <p className="text-sm font-medium">{cookieType.provider}</p>
                         </div>
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          <p className="text-xs text-gray-500 uppercase tracking-wide">Lifetime</p>
+                        <div className="bg-[#2A1F15]/20 p-3 rounded-lg">
+                          <p className="text-xs text-white/50 uppercase tracking-wide">Lifetime</p>
                           <p className="text-sm font-medium">{cookieType.lifetime}</p>
                         </div>
-                        <div className="bg-gray-50 p-3 rounded-lg">
-                          <p className="text-xs text-gray-500 uppercase tracking-wide">Can be disabled?</p>
+                        <div className="bg-[#2A1F15]/20 p-3 rounded-lg">
+                          <p className="text-xs text-white/50 uppercase tracking-wide">Can be disabled?</p>
                           <p className="text-sm font-medium">
                             {cookieType.id === 'essential' ? (
                               <span className="text-red-600 flex items-center gap-1">
                                 <XCircle className="h-3 w-3" /> No, required
                               </span>
                             ) : (
-                              <span className="text-green-600 flex items-center gap-1">
+                              <span className="text-[#FF7A00] flex items-center gap-1">
                                 <CheckCircle2 className="h-3 w-3" /> Yes
                               </span>
                             )}
@@ -334,19 +334,19 @@ export function Cookies() {
                       </div>
 
                       <div className="mt-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Examples</h4>
+                        <h4 className="font-semibold text-white mb-2">Examples</h4>
                         <div className="overflow-x-auto">
                           <table className="w-full text-sm">
                             <thead>
-                              <tr className="border-b border-gray-200">
+                              <tr className="border-b border-white/10">
                                 <th className="text-left py-2 px-3 font-medium">Cookie Name</th>
                                 <th className="text-left py-2 px-3 font-medium">Purpose</th>
                               </tr>
                             </thead>
                             <tbody>
                               {cookieType.examples.map((example) => (
-                                <tr key={example.name} className="border-b border-gray-100">
-                                  <td className="py-2 px-3 font-mono text-xs bg-gray-50 rounded">
+                                <tr key={example.name} className="border-b border-white/5">
+                                  <td className="py-2 px-3 font-mono text-xs bg-[#2A1F15]/20 rounded">
                                     {example.name}
                                   </td>
                                   <td className="py-2 px-3">{example.purpose}</td>
@@ -365,19 +365,19 @@ export function Cookies() {
               <ScrollReveal delay={0.4}>
                 <section id="third-party-cookies" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <Shield className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">Third-Party Cookies</h2>
+                    <h2 className="text-2xl font-bold text-white">Third-Party Cookies</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       We allow certain third parties to place cookies on your device for the
                       services described below:
                     </p>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-3">Google Analytics</h4>
+                    <div className="bg-[#2A1F15]/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-white mb-3">Google Analytics</h4>
                       <p className="text-sm mb-2">
                         Google Analytics collects anonymous usage data to help us understand how
                         visitors use our platform.
@@ -388,15 +388,15 @@ export function Cookies() {
                           href="https://policies.google.com/privacy"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-orange-600 hover:underline"
+                          className="text-[#FF7A00] hover:underline"
                         >
                           policies.google.com/privacy
                         </a>
                       </p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-3">Google Ads</h4>
+                    <div className="bg-[#2A1F15]/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-white mb-3">Google Ads</h4>
                       <p className="text-sm mb-2">
                         Google Ads uses cookies to deliver relevant advertisements and measure
                         ad campaign performance.
@@ -407,15 +407,15 @@ export function Cookies() {
                           href="https://policies.google.com/privacy"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-orange-600 hover:underline"
+                          className="text-[#FF7A00] hover:underline"
                         >
                           policies.google.com/privacy
                         </a>
                       </p>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-gray-900 mb-3">Payment Processors</h4>
+                    <div className="bg-[#2A1F15]/20 p-4 rounded-lg">
+                      <h4 className="font-semibold text-white mb-3">Payment Processors</h4>
                       <p className="text-sm mb-2">
                         Stripe and PayPal may use cookies to process payments securely.
                       </p>
@@ -426,7 +426,7 @@ export function Cookies() {
                             href="https://stripe.com/privacy"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-orange-600 hover:underline"
+                            className="text-[#FF7A00] hover:underline"
                           >
                             stripe.com/privacy
                           </a>
@@ -437,7 +437,7 @@ export function Cookies() {
                             href="https://www.paypal.com/webapps/mpp/ua/privacy-full"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-orange-600 hover:underline"
+                            className="text-[#FF7A00] hover:underline"
                           >
                             paypal.com/privacy
                           </a>
@@ -452,12 +452,12 @@ export function Cookies() {
               <ScrollReveal delay={0.45}>
                 <section id="manage-cookies" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <Settings className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">Managing Cookies</h2>
+                    <h2 className="text-2xl font-bold text-white">Managing Cookies</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       You have the right to decide whether to accept or reject cookies. You can
                       set or amend your web browser controls to accept or refuse cookies. If you
@@ -465,25 +465,25 @@ export function Cookies() {
                       to some functionality and areas may be restricted.
                     </p>
 
-                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-100">
-                      <h4 className="font-semibold text-gray-900 mb-3">Your Cookie Choices</h4>
+                    <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+                      <h4 className="font-semibold text-white mb-3">Your Cookie Choices</h4>
                       <div className="flex flex-wrap gap-3">
                         <button
                           onClick={handleAcceptAll}
-                          className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 font-medium text-sm transition-colors"
+                          className="px-4 py-2 bg-[#FF7A00] text-white rounded-lg hover:bg-orange-700 font-medium text-sm transition-colors"
                         >
                           Accept All Cookies
                         </button>
                         <button
                           onClick={handleRejectNonEssential}
-                          className="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-50 font-medium text-sm transition-colors border border-gray-200"
+                          className="px-4 py-2 bg-[#1A1410] text-white/80 rounded-lg hover:bg-[#2A1F15]/20 font-medium text-sm transition-colors border border-white/10"
                         >
                           Reject Non-Essential
                         </button>
                       </div>
                     </div>
 
-                    <h4 className="font-semibold text-gray-900 mt-6">Browser Settings</h4>
+                    <h4 className="font-semibold text-white mt-6">Browser Settings</h4>
                     <p className="text-sm">
                       Most web browsers allow some control over cookies through browser settings.
                       To learn more about how to manage and delete cookies, visit the help pages
@@ -494,7 +494,7 @@ export function Cookies() {
                         href="https://support.google.com/chrome/answer/95647"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-orange-600 hover:underline"
+                        className="text-[#FF7A00] hover:underline"
                       >
                         Chrome (Google)
                       </a>
@@ -502,7 +502,7 @@ export function Cookies() {
                         href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-orange-600 hover:underline"
+                        className="text-[#FF7A00] hover:underline"
                       >
                         Firefox (Mozilla)
                       </a>
@@ -510,7 +510,7 @@ export function Cookies() {
                         href="https://support.microsoft.com/en-us/help/4027915/microsoft-edge-delete-cookies"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-orange-600 hover:underline"
+                        className="text-[#FF7A00] hover:underline"
                       >
                         Edge (Microsoft)
                       </a>
@@ -518,7 +518,7 @@ export function Cookies() {
                         href="https://support.apple.com/en-us/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-orange-600 hover:underline"
+                        className="text-[#FF7A00] hover:underline"
                       >
                         Safari (Apple)
                       </a>
@@ -531,12 +531,12 @@ export function Cookies() {
               <ScrollReveal delay={0.5}>
                 <section id="updates" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <Shield className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">Updates to This Policy</h2>
+                    <h2 className="text-2xl font-bold text-white">Updates to This Policy</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       We may update this Cookie Policy from time to time to reflect changes in
                       our practices, technology, legal requirements, or other factors. Any changes
@@ -554,18 +554,18 @@ export function Cookies() {
               <ScrollReveal delay={0.55}>
                 <section id="contact" className="mb-12 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2 bg-orange-100 rounded-lg text-orange-600">
+                    <div className="p-2 bg-[#FF7A00]/10 rounded-lg text-[#FF7A00]">
                       <Mail className="h-6 w-6" />
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900">Contact Us</h2>
+                    <h2 className="text-2xl font-bold text-white">Contact Us</h2>
                   </div>
-                  <div className="text-gray-700 leading-relaxed pl-11 space-y-4">
+                  <div className="text-white/80 leading-relaxed pl-11 space-y-4">
                     <p>
                       If you have questions about our use of cookies, please contact us:
                     </p>
-                    <div className="bg-orange-50 p-4 rounded-lg border border-orange-100">
-                      <p className="font-semibold text-gray-900">Privacy Contact</p>
-                      <p>Email: <a href={`mailto:${PRIVACY_EMAIL}`} className="text-orange-600 hover:underline">{PRIVACY_EMAIL}</a></p>
+                    <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+                      <p className="font-semibold text-white">Privacy Contact</p>
+                      <p>Email: <a href={`mailto:${PRIVACY_EMAIL}`} className="text-[#FF7A00] hover:underline">{PRIVACY_EMAIL}</a></p>
                     </div>
                   </div>
                 </section>
@@ -573,12 +573,12 @@ export function Cookies() {
 
               {/* Footer Note */}
               <ScrollReveal delay={0.6}>
-                <div className="mt-12 pt-8 border-t border-gray-200">
-                  <p className="text-sm text-gray-500">
+                <div className="mt-12 pt-8 border-t border-white/10">
+                  <p className="text-sm text-white/50">
                     This Cookie Policy is designed to comply with the GDPR ePrivacy Directive and
                     other applicable cookie laws. For more information about how we handle your
                     personal data, please see our{' '}
-                    <a href="/privacy" className="text-orange-600 hover:underline">
+                    <a href="/privacy" className="text-[#FF7A00] hover:underline">
                       Privacy Policy
                     </a>.
                   </p>

@@ -13,10 +13,12 @@ import { GDPR } from './pages/GDPR';
 import { Cookies } from './pages/Cookies';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50/30 to-pink-50/30">
+    <div className="min-h-screen bg-[#0D0907]">
+      <ScrollToTop />
       <Navbar />
       <main className="pt-20">
         <Routes>

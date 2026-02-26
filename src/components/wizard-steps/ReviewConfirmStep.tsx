@@ -141,7 +141,7 @@ export function ReviewConfirmStep({ data }: Props) {
             <div className="mt-4 pt-4 border-t border-orange-200">
               <p className="text-sm text-gray-600">
                 <Check className="h-4 w-4 inline text-green-600 mr-1" />
-                No hidden fees. Cancel anytime.
+                No hidden fees. 3-month cancellation notice.
               </p>
             </div>
           </div>

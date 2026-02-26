@@ -1,42 +1,71 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Utensils, Menu, X, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X, Rocket, ExternalLink } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const lastScrollY = useRef(0);
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll < lastScrollY.current && currentScroll > 100) {
+        setIsSticky(true);
+        setTimeout(() => setIsVisible(true), 10);
+      } else if (currentScroll > lastScrollY.current) {
+        setIsVisible(false);
+        setTimeout(() => setIsSticky(false), 150);
+      }
+
+      if (currentScroll <= 100) {
+        setIsSticky(false);
+        setIsVisible(false);
+      }
+
+      lastScrollY.current = currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Features', path: '/features' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'About', path: '/about' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isSticky
+          ? `bg-[#0D0907]/90 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/20 ${isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+          }`
+          : 'bg-transparent'
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center gap-3 group"
-          >
+          <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 rounded-2xl gradient-bg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <Utensils className="h-6 w-6 text-white" strokeWidth={2.5} />
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 bg-gradient-to-br from-[#FF7A00] to-[#CC6200] overflow-hidden">
+                <img src="/b.svg" alt="Helmies Bites" className="h-8 w-8" />
               </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white" />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#FF7A00] rounded-full border-2 border-[#0D0907] animate-pulse" />
             </div>
             <span
               className="font-black text-2xl tracking-tight"
               style={{ fontFamily: 'Nunito, sans-serif' }}
             >
               <span className="gradient-text">Helmies</span>
-              <span className="text-gray-800">Bites</span>
+              <span className="text-white">Bites</span>
             </span>
           </Link>
 
@@ -46,70 +75,79 @@ export function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-semibold text-sm tracking-wide transition-all duration-300 relative group ${
-                  isActive(link.path)
-                    ? 'text-orange-600'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+                className={`font-semibold text-sm tracking-wide transition-all duration-300 relative group ${isActive(link.path)
+                    ? 'text-[#FF7A00]'
+                    : 'text-white/70 hover:text-white'
+                  }`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 gradient-bg transition-all duration-300 ${
-                  isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#FF7A00] transition-all duration-300 ${isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              to="/get-started"
-              className="btn-primary inline-flex items-center gap-2"
+          {/* Desktop Right Actions */}
+          <div className="hidden lg:flex items-center gap-3">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/20">
+              <Rocket className="h-4 w-4 text-[#FF7A00]" />
+              <span className="text-sm font-bold text-[#FF7A00]">Launching Mar 5</span>
+            </div>
+            <a
+              href="https://plateos.fi/demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-2 rounded-full bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300 hover:scale-105"
             >
-              Get Started Free
-              <ChevronDown className="h-4 w-4" />
-            </Link>
+              Try Demo
+              <ExternalLink className="h-3.5 w-3.5" />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-2 rounded-xl border border-white/10 hover:border-[#FF7A00]/30 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-700" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-700" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-gray-200/50">
+          <div className="lg:hidden py-6 border-t border-white/5">
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    isActive(link.path)
-                      ? 'bg-orange-50 text-orange-600'
-                      : 'text-gray-600 hover:bg-gray-50'
-                  }`}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${isActive(link.path)
+                      ? 'bg-[#FF7A00]/10 text-[#FF7A00]'
+                      : 'text-white/70 hover:bg-white/5 hover:text-white'
+                    }`}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/get-started"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mx-6 mt-4 btn-primary text-center"
+              <div className="mx-6 mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00]/10 border border-[#FF7A00]/20">
+                <Rocket className="h-4 w-4 text-[#FF7A00]" />
+                <span className="text-sm font-bold text-[#FF7A00]">Launching March 5th</span>
+              </div>
+              <a
+                href="https://plateos.fi/demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-6 mt-2 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300"
               >
-                Get Started Free
-              </Link>
+                Try Demo
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
         )}

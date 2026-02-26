@@ -5,7 +5,7 @@
  * Supports multiple animation directions and customizable timing.
  */
 
-import { forwardRef, useRef, useImperativeHandle, useEffect, useState } from 'react';
+import { forwardRef, useRef, useImperativeHandle, useEffect, useState, Children } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGsap } from '../hooks/use-gsap';
@@ -414,8 +414,8 @@ export const ScrollReveal = forwardRef<ScrollRevealRef, ScrollRevealProps>(
       const finalToggleActions = toggleActions || (once && !scrub
         ? 'play none none none'
         : reverse || scrub
-        ? 'play none none reverse'
-        : 'play none none none');
+          ? 'play none none reverse'
+          : 'play none none none');
 
       // Create animation
       const animation = gsap.fromTo(
@@ -531,11 +531,11 @@ export const ScrollReveal = forwardRef<ScrollRevealRef, ScrollRevealProps>(
 
     // Prepare content
     const content = wrapChildren && typeof children !== 'string'
-      ? (children as React.ReactElement[]).map((child, i) => (
-          <div key={i} className="scroll-reveal-item">
-            {child}
-          </div>
-        ))
+      ? Children.toArray(children).map((child, i) => (
+        <div key={i} className="scroll-reveal-item">
+          {child}
+        </div>
+      ))
       : children;
 
     return (
@@ -668,7 +668,7 @@ export const ScrollRevealBatch = forwardRef<ScrollRevealRef, ScrollRevealBatchPr
         {...props}
       >
         <div style={style} className="scroll-reveal-batch-inner">
-          {children.map((child, i) => (
+          {Children.toArray(children).map((child, i) => (
             <div key={i} className="scroll-reveal-batch-item">
               {child}
             </div>

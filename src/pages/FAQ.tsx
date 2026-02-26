@@ -1,5 +1,8 @@
 import { useState, useMemo } from 'react';
 import { ScrollReveal } from '../components/ScrollReveal';
+import { SectionTitle } from '../components/SectionTitle';
+import { AivoraButton } from '../components/AivoraButton';
+import { LaunchCountdown } from '../components/LaunchCountdown';
 import {
   Search,
   ChevronDown,
@@ -8,12 +11,8 @@ import {
   ShoppingBag,
   Settings,
   FileText,
-  MessageCircle,
-  ArrowRight,
-  Sparkles
+  MessageCircle
 } from 'lucide-react';
-import * as Accordion from '@radix-ui/react-accordion';
-import { Link } from 'react-router-dom';
 
 // FAQ data organized by category
 const faqData = {
@@ -208,11 +207,33 @@ const faqData = {
 export function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [activeIds, setActiveIds] = useState<Set<string>>(() => {
+    // First item of each category active by default
+    const defaults = new Set<string>();
+    Object.values(faqData).forEach((category) => {
+      if (category.questions.length > 0) {
+        defaults.add(category.questions[0].id);
+      }
+    });
+    return defaults;
+  });
+
+  const toggleItem = (id: string) => {
+    setActiveIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
 
   // Flatten all questions for search
   const allQuestions = useMemo(() => {
     return Object.entries(faqData).flatMap(([categoryId, category]) =>
-      category.questions.map(q => ({
+      category.questions.map((q) => ({
         ...q,
         categoryName: category.title,
         categoryId
@@ -225,48 +246,74 @@ export function FAQ() {
     if (!searchQuery.trim()) return null;
 
     const query = searchQuery.toLowerCase();
-    return allQuestions.filter(q =>
-      q.question.toLowerCase().includes(query) ||
-      q.answer.toLowerCase().includes(query)
+    return allQuestions.filter(
+      (q) =>
+        q.question.toLowerCase().includes(query) ||
+        q.answer.toLowerCase().includes(query)
     );
   }, [searchQuery, allQuestions]);
 
   const totalQuestions = allQuestions.length;
 
+  // Build a numbered list for rendering
+  const renderAccordion = (
+    questions: { id: string; question: string; answer: string }[],
+    startIndex: number
+  ) => (
+    <div className="faq-accordion">
+      {questions.map((item, idx) => {
+        const num = startIndex + idx + 1;
+        const isActive = activeIds.has(item.id);
+        return (
+          <div
+            key={item.id}
+            className={`faq-item${isActive ? ' active' : ''}`}
+          >
+            <button
+              className="faq-trigger"
+              onClick={() => toggleItem(item.id)}
+            >
+              <span className="faq-number">
+                {num < 10 ? `0${num}` : num}
+              </span>
+              <span className="faq-question">_ {item.question}</span>
+              <span className="faq-arrow">
+                <span></span>
+              </span>
+            </button>
+            <div className="faq-body">
+              <div className="faq-body-inner">{item.answer}</div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section with Glassmorphism */}
-      <section className="hero-gradient section-padding relative overflow-hidden">
+    <div className="min-h-screen bg-[#0D0907]">
+      {/* Hero Section */}
+      <section className="section-padding bg-[#0D0907] relative overflow-hidden">
         {/* Floating decorative elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-orange-400/20 rounded-full blur-3xl floating"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl floating-delayed"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#D4915C]/20 rounded-full blur-3xl floating-delayed"></div>
 
         <div className="max-w-4xl mx-auto relative z-10">
           <ScrollReveal>
             <div className="text-center py-16">
-              {/* Badge */}
-              <div className="flex justify-center mb-8">
-                <span className="badge">
-                  <Sparkles className="h-4 w-4" />
-                  Help Center
-                </span>
-              </div>
+              <SectionTitle
+                subtitle="Help Center"
+                titleHighlight="How can we"
+                title="help you?"
+                description="Find answers to common questions about Helmies Bites. Can't find what you're looking for? We're here to help!"
+                align="center"
+              />
 
-              {/* Headline with gradient text */}
-              <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
-                How can we{' '}
-                <span className="gradient-text">help you?</span>
-              </h1>
-
-              <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-                Find answers to common questions about Helmies Bites. Can't find what you're looking for? We're here to help!
-              </p>
-
-              {/* Search Bar with glassmorphism */}
-              <div className="relative max-w-2xl mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-purple-400 rounded-3xl blur-lg opacity-30"></div>
+              {/* Search Bar with glass styling */}
+              <div className="relative max-w-2xl mx-auto mt-12">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF7A00] to-[#CC6200] rounded-3xl blur-lg opacity-30"></div>
                 <div className="relative">
-                  <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                  <Search className="absolute left-6 top-1/2 -translate-y-1/2 h-5 w-5 text-white/40" />
                   <input
                     type="text"
                     value={searchQuery}
@@ -285,17 +332,17 @@ export function FAQ() {
                 <div className="flex justify-center gap-8 mt-12 flex-wrap">
                   <div className="text-center">
                     <div className="text-3xl font-black gradient-text">{totalQuestions}</div>
-                    <div className="text-sm text-gray-500 font-medium">FAQs</div>
+                    <div className="text-sm text-white/50 font-medium">FAQs</div>
                   </div>
-                  <div className="w-px bg-gray-200"></div>
+                  <div className="w-px bg-[#2A1F15]/40"></div>
                   <div className="text-center">
                     <div className="text-3xl font-black gradient-text">6</div>
-                    <div className="text-sm text-gray-500 font-medium">Categories</div>
+                    <div className="text-sm text-white/50 font-medium">Categories</div>
                   </div>
-                  <div className="w-px bg-gray-200"></div>
+                  <div className="w-px bg-[#2A1F15]/40"></div>
                   <div className="text-center">
                     <div className="text-3xl font-black gradient-text">24/7</div>
-                    <div className="text-sm text-gray-500 font-medium">Support</div>
+                    <div className="text-sm text-white/50 font-medium">Support</div>
                   </div>
                 </div>
               )}
@@ -305,38 +352,37 @@ export function FAQ() {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-16 px-4 bg-white min-h-[500px]">
+      <section className="section-padding bg-[#2A1F15]/20 min-h-[500px]">
         <div className="max-w-4xl mx-auto">
           {searchQuery && filteredQuestions ? (
             // Search Results
             <ScrollReveal>
               <div className="mb-10">
-                <div className="glass-card rounded-2xl p-6 text-center">
-                  <p className="text-gray-700 font-medium text-lg">
-                    Found <span className="gradient-text font-bold">{filteredQuestions.length}</span> {filteredQuestions.length === 1 ? 'result' : 'results'} for "{searchQuery}"
+                <div className="glass-card xb-border rounded-2xl p-6 text-center">
+                  <p className="text-white/80 font-medium text-lg">
+                    Found <span className="gradient-text font-bold">{filteredQuestions.length}</span>{' '}
+                    {filteredQuestions.length === 1 ? 'result' : 'results'} for "{searchQuery}"
                   </p>
                 </div>
               </div>
 
-              <Accordion.Root type="multiple" className="space-y-4">
-                {filteredQuestions.map((item) => (
-                  <GlassAccordionItem key={item.id} value={item.id} question={item.question} answer={item.answer} />
-                ))}
-              </Accordion.Root>
+              <div className="glass-card xb-border rounded-2xl p-6 md:p-10">
+                {renderAccordion(filteredQuestions, 0)}
+              </div>
             </ScrollReveal>
           ) : (
             // Categories
             <>
               {!searchQuery && (
                 <ScrollReveal>
-                  <div className="glass-card rounded-3xl p-4 mb-12">
+                  <div className="glass-card xb-border rounded-3xl p-4 mb-12">
                     <div className="flex flex-wrap gap-3 justify-center">
                       <button
                         onClick={() => setSelectedCategory(null)}
                         className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 ${
                           selectedCategory === null
                             ? 'gradient-bg text-white shadow-lg'
-                            : 'text-gray-600 hover:bg-orange-50'
+                            : 'text-white/60 hover:bg-[#FF7A00]/5'
                         }`}
                       >
                         <HelpCircle className="h-4 w-4" />
@@ -349,7 +395,7 @@ export function FAQ() {
                           className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 ${
                             selectedCategory === key
                               ? 'gradient-bg text-white shadow-lg'
-                              : 'text-gray-600 hover:bg-orange-50'
+                              : 'text-white/60 hover:bg-[#FF7A00]/5'
                           }`}
                         >
                           {category.icon}
@@ -361,43 +407,48 @@ export function FAQ() {
                 </ScrollReveal>
               )}
 
-              {(selectedCategory ? [faqData[selectedCategory as keyof typeof faqData]] : Object.values(faqData)).map((category, categoryIndex) => (
-                <ScrollReveal key={category.title} direction="up" delay={categoryIndex * 0.05}>
-                  <div className="mb-12">
-                    {!selectedCategory && (
-                      <div className="flex items-center gap-4 mb-8">
-                        <div className="feature-icon">
-                          {category.icon}
-                        </div>
-                        <h2 className="text-3xl font-black text-gray-900">{category.title}</h2>
-                        <span className="badge ml-auto">{category.questions.length} FAQs</span>
-                      </div>
-                    )}
+              {(() => {
+                let globalIndex = 0;
+                const categoriesToRender = selectedCategory
+                  ? [[selectedCategory, faqData[selectedCategory as keyof typeof faqData]] as const]
+                  : (Object.entries(faqData) as [string, typeof faqData[keyof typeof faqData]][]);
 
-                    <Accordion.Root type="multiple" className="space-y-4">
-                      {category.questions.map((item) => (
-                        <GlassAccordionItem
-                          key={item.id}
-                          value={item.id}
-                          question={item.question}
-                          answer={item.answer}
-                        />
-                      ))}
-                    </Accordion.Root>
-                  </div>
-                </ScrollReveal>
-              ))}
+                return categoriesToRender.map(([key, category], categoryIndex) => {
+                  const startIdx = globalIndex;
+                  globalIndex += category.questions.length;
+
+                  return (
+                    <ScrollReveal key={key} direction="up" delay={categoryIndex * 0.05}>
+                      <div className="mb-12">
+                        {!selectedCategory && (
+                          <div className="flex items-center gap-4 mb-8">
+                            <div className="feature-icon">
+                              {category.icon}
+                            </div>
+                            <h2 className="text-3xl font-black text-white">{category.title}</h2>
+                            <span className="badge ml-auto">{category.questions.length} FAQs</span>
+                          </div>
+                        )}
+
+                        <div className="glass-card xb-border rounded-2xl p-6 md:p-10">
+                          {renderAccordion(category.questions, startIdx)}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  );
+                });
+              })()}
             </>
           )}
 
           {searchQuery && filteredQuestions?.length === 0 && (
             <ScrollReveal>
-              <div className="glass-card rounded-3xl p-12 text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center">
-                  <HelpCircle className="h-10 w-10 text-orange-500" />
+              <div className="glass-card xb-border rounded-3xl p-12 text-center">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#FF7A00]/20 to-[#CC6200]/10 flex items-center justify-center">
+                  <HelpCircle className="h-10 w-10 text-[#FF7A00]" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">No results found</h3>
-                <p className="text-gray-600 mb-8 max-w-md mx-auto">
+                <h3 className="text-2xl font-bold text-white mb-3">No results found</h3>
+                <p className="text-white/60 mb-8 max-w-md mx-auto">
                   We couldn't find any answers matching "{searchQuery}". Try different keywords or browse our categories below.
                 </p>
                 <button
@@ -413,21 +464,17 @@ export function FAQ() {
         </div>
       </section>
 
-      {/* Still Have Questions CTA with animated gradient */}
-      <section className="section-padding relative overflow-hidden">
-        <div className="gradient-animated absolute inset-0"></div>
-        <div className="absolute inset-0 bg-black/10"></div>
-
-        {/* Decorative elements */}
+      {/* Still Have Questions CTA */}
+      <section className="section-padding bg-[#0D0907] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-10 right-10 w-60 h-60 bg-white/10 rounded-full blur-2xl"></div>
+          <div className="absolute top-10 left-10 w-40 h-40 bg-[#FF7A00]/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-10 w-60 h-60 bg-[#FF7A00]/10 rounded-full blur-2xl"></div>
         </div>
 
         <div className="max-w-4xl mx-auto relative z-10">
           <ScrollReveal>
-            <div className="glass-card rounded-3xl p-8 md:p-16 text-center">
-              <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-orange-500 to-purple-500 flex items-center justify-center shadow-xl">
+            <div className="glass-card xb-border rounded-3xl p-8 md:p-16 text-center">
+              <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-[#FF7A00] to-[#CC6200] flex items-center justify-center shadow-xl">
                 <MessageCircle className="h-10 w-10 text-white" />
               </div>
 
@@ -435,21 +482,15 @@ export function FAQ() {
                 Still have questions?
               </h2>
 
-              <p className="text-white/90 text-lg mb-10 max-w-xl mx-auto">
+              <p className="text-white/60 text-lg mb-10 max-w-xl mx-auto">
                 Can't find the answer you're looking for? Our friendly support team is here to help you get started.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
-                >
-                  Contact Support
-                  <ArrowRight className="h-5 w-5" />
-                </Link>
+                <AivoraButton to="/contact">Contact Support</AivoraButton>
                 <a
                   href="mailto:support@helmiesbites.fi"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl font-bold hover:bg-white/30 transition-all duration-300 border border-white/30"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold hover:bg-white/20 transition-all duration-300 border border-white/10"
                 >
                   Email Us
                 </a>
@@ -481,58 +522,23 @@ export function FAQ() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-orange-50">
+      {/* Bottom CTA */}
+      <section className="section-padding bg-[#2A1F15]/20">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <span className="badge mb-6">
-              <Sparkles className="h-4 w-4" />
-              Get Started Today
-            </span>
-            <h2 className="text-4xl font-black text-gray-900 mb-6">
-              Ready to <span className="gradient-text">transform</span> your restaurant?
-            </h2>
-            <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Join hundreds of restaurants already using Helmies Bites. Setup takes just 5 minutes, and you only pay when you get orders.
-            </p>
-            <Link
-              to="/get-started"
-              className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5"
-            >
-              Start Free Setup
-              <ArrowRight className="h-5 w-5" />
-            </Link>
+            <SectionTitle
+              subtitle="Get Started Today"
+              titleHighlight="Transform"
+              title="your restaurant"
+              description="Join hundreds of restaurants already using Helmies Bites. Setup takes just 5 minutes, and you only pay when you get orders."
+              align="center"
+            />
+            <div className="mt-10">
+              <LaunchCountdown compact />
+            </div>
           </ScrollReveal>
         </div>
       </section>
     </div>
-  );
-}
-
-// Glassmorphism Accordion Item Component
-interface GlassAccordionItemProps {
-  value: string;
-  question: string;
-  answer: string;
-}
-
-function GlassAccordionItem({ value, question, answer }: GlassAccordionItemProps) {
-  return (
-    <Accordion.Item
-      value={value}
-      className="glass-card glass-card-hover rounded-2xl overflow-hidden data-[state=open]:border-orange-300/50 transition-all duration-300"
-    >
-      <Accordion.Trigger className="w-full flex items-center justify-between p-6 text-left hover:bg-white/50 transition-all duration-300 group">
-        <span className="font-bold text-gray-900 pr-4 text-lg">{question}</span>
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-purple-100 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180">
-          <ChevronDown className="h-5 w-5 text-orange-600" />
-        </div>
-      </Accordion.Trigger>
-      <Accordion.Content className="px-6 pb-6 pt-0 text-gray-600 leading-relaxed">
-        <div className="border-t border-gray-100/50 pt-4">
-          {answer}
-        </div>
-      </Accordion.Content>
-    </Accordion.Item>
   );
 }

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import CountUp from 'react-countup';
+import Marquee from 'react-fast-marquee';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 if (typeof window !== 'undefined') {
@@ -12,14 +14,11 @@ import {
   Palette,
   Smartphone,
   Globe,
-  CheckCircle2,
-  Play,
   Star,
   CreditCard,
   Truck,
   Clock,
   Utensils,
-  Layout,
   BarChart3,
   Shield,
   Sparkles,
@@ -30,259 +29,48 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { ScrollReveal } from '../components/ScrollReveal';
-
-/* ============================================================================
-   Types
-   ============================================================================ */
-
-interface Testimonial {
-  id: number;
-  name: string;
-  role: string;
-  restaurant: string;
-  image: string;
-  quote: string;
-  rating: number;
-}
-
-interface Feature {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-interface Step {
-  number: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-}
-
-interface Stat {
-  value: string;
-  label: string;
-  icon: React.ReactNode;
-}
+import { SectionTitle } from '../components/SectionTitle';
+import { AivoraButton } from '../components/AivoraButton';
+import { LaunchCountdown } from '../components/LaunchCountdown';
 
 /* ============================================================================
    Data
    ============================================================================ */
 
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: 'Maria Kontinen',
-    role: 'Owner',
-    restaurant: 'Kotiharju Restaurant',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop',
-    quote: 'Helmies Bites transformed our business. We went from zero online presence to a fully functional ordering system in just 5 minutes. The AI menu import was incredibly accurate!',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Erik Lindqvist',
-    role: 'Manager',
-    restaurant: 'Svea Kitchen',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop',
-    quote: 'The multi-language support is a game-changer. Our Finnish and Swedish customers love browsing the menu in their native language. Orders have increased by 40%.',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Sofia Martinez',
-    role: 'Head Chef',
-    restaurant: 'Bella Italia Helsinki',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop',
-    quote: 'Finally, a platform designed for restaurants. The themes are beautiful, mobile-optimized, and our customers love the ordering experience. Highly recommended!',
-    rating: 5,
-  },
+const features = [
+  { icon: <Utensils className="h-7 w-7" />, title: 'AI Menu Import', description: 'Upload your menu PDF and let AI extract, categorize, and translate everything automatically.' },
+  { icon: <Palette className="h-7 w-7" />, title: 'Beautiful Themes', description: 'Choose from stunning presets or let AI create a unique look that matches your brand.' },
+  { icon: <Smartphone className="h-7 w-7" />, title: 'Mobile Optimized', description: 'Your site looks perfect on every device. 70% of customers order from mobile.' },
+  { icon: <Globe className="h-7 w-7" />, title: 'Multi-Language', description: 'Finnish, English, Swedish, and more - automatically translated by AI.' },
+  { icon: <ShoppingBag className="h-7 w-7" />, title: 'Online Ordering', description: 'Accept orders online with integrated payment processing and real-time updates.' },
 ];
 
-const features: Feature[] = [
-  {
-    icon: <Utensils className="h-7 w-7" />,
-    title: 'AI Menu Import',
-    description: 'Upload your menu PDF and let AI extract, categorize, and translate everything automatically.',
-  },
-  {
-    icon: <Palette className="h-7 w-7" />,
-    title: 'Beautiful Themes',
-    description: 'Choose from stunning presets or let AI create a unique look that matches your brand.',
-  },
-  {
-    icon: <Smartphone className="h-7 w-7" />,
-    title: 'Mobile Optimized',
-    description: 'Your site looks perfect on every device. 70% of customers order from mobile.',
-  },
-  {
-    icon: <Globe className="h-7 w-7" />,
-    title: 'Multi-Language',
-    description: 'Finnish, English, Swedish, and more - automatically translated by AI.',
-  },
-  {
-    icon: <ShoppingBag className="h-7 w-7" />,
-    title: 'Online Ordering',
-    description: 'Accept orders online with integrated payment processing and real-time updates.',
-  },
-  {
-    icon: <Layout className="h-7 w-7" />,
-    title: 'Custom Domain',
-    description: 'Use your own domain or get a free subdomain. Setup is instant.',
-  },
+const steps = [
+  { number: '01', title: 'Sign Up & Wizard', description: 'Our guided wizard walks you through every step.', icon: <Sparkles className="h-8 w-8" /> },
+  { number: '02', title: 'AI Menu Setup', description: 'Upload your menu PDF. AI extracts everything automatically.', icon: <ChefHat className="h-8 w-8" /> },
+  { number: '03', title: 'Choose Your Theme', description: 'Select from beautiful presets or let AI design yours.', icon: <Palette className="h-8 w-8" /> },
+  { number: '04', title: 'Go Live', description: 'Launch instantly and start accepting orders.', icon: <Store className="h-8 w-8" /> },
 ];
 
-const steps: Step[] = [
-  {
-    number: 1,
-    title: 'Sign Up & Wizard',
-    description: 'Create your account in seconds. Our guided wizard walks you through every step.',
-    icon: <Sparkles className="h-10 w-10" />,
-  },
-  {
-    number: 2,
-    title: 'AI Menu Setup',
-    description: 'Upload your menu PDF. AI extracts items, prices, descriptions, and images automatically.',
-    icon: <ChefHat className="h-10 w-10" />,
-  },
-  {
-    number: 3,
-    title: 'Choose Your Theme',
-    description: 'Select from beautiful presets or let AI create a custom design based on your brand.',
-    icon: <Palette className="h-10 w-10" />,
-  },
-  {
-    number: 4,
-    title: 'Launch & Start Receiving Orders',
-    description: 'Go live instantly and start accepting orders. Manage everything from your dashboard.',
-    icon: <Store className="h-10 w-10" />,
-  },
-];
-
-const stats: Stat[] = [
-  {
-    value: '500+',
-    label: 'Restaurants',
-    icon: <Store className="h-6 w-6" />,
-  },
-  {
-    value: '50K+',
-    label: 'Orders Processed',
-    icon: <ShoppingBag className="h-6 w-6" />,
-  },
-  {
-    value: '98%',
-    label: 'Satisfaction Rate',
-    icon: <Trophy className="h-6 w-6" />,
-  },
-  {
-    value: '5 min',
-    label: 'Average Setup',
-    icon: <Clock className="h-6 w-6" />,
-  },
+const stats = [
+  { value: '500+', label: 'Restaurants', icon: <Store className="h-6 w-6" /> },
+  { value: '50K+', label: 'Orders Processed', icon: <ShoppingBag className="h-6 w-6" /> },
+  { value: '98%', label: 'Satisfaction Rate', icon: <Trophy className="h-6 w-6" /> },
+  { value: '5 min', label: 'Average Setup', icon: <Clock className="h-6 w-6" /> },
 ];
 
 /* ============================================================================
    Sub-Components
    ============================================================================ */
 
-interface FloatingElementProps {
-  className: string;
-  delay: number;
-  children: React.ReactNode;
-}
-
-function FloatingElement({ className, delay, children }: FloatingElementProps) {
+function FloatingElement({ className, delay, children }: { className: string; delay: number; children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (!ref.current) return;
-
-    const animation = gsap.to(ref.current, {
-      y: -20,
-      rotation: 5,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: 'sine.inOut',
-      delay,
-    });
-
-    return () => {
-      animation.kill();
-      gsap.set(ref.current, { y: 0, rotation: 0 });
-    };
+    const animation = gsap.to(ref.current, { y: -20, rotation: 5, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut', delay });
+    return () => { animation.kill(); gsap.set(ref.current, { y: 0, rotation: 0 }); };
   }, [delay]);
-
-  return (
-    <div ref={ref} className={className}>
-      {children}
-    </div>
-  );
-}
-
-interface GlassStatCardProps {
-  stat: Stat;
-  index: number;
-}
-
-function GlassStatCard({ stat, index }: GlassStatCardProps) {
-  return (
-    <ScrollReveal direction="up" delay={index * 0.1}>
-      <div className="glass-card glass-card-hover rounded-3xl p-8 text-center h-full">
-        <div className="feature-icon w-12 h-12 mx-auto mb-4">
-          {stat.icon}
-        </div>
-        <div className="stat-value text-4xl md:text-5xl mb-2">{stat.value}</div>
-        <p className="text-gray-600 font-medium">{stat.label}</p>
-      </div>
-    </ScrollReveal>
-  );
-}
-
-interface TestimonialCardProps {
-  testimonial: Testimonial;
-}
-
-function TestimonialCard({ testimonial }: TestimonialCardProps) {
-  return (
-    <div className="testimonial-card">
-      <div className="flex flex-col items-center text-center">
-        {/* Avatar */}
-        <div className="relative mb-6">
-          <div className="w-24 h-24 rounded-full overflow-hidden ring-4 ring-orange-100 shadow-lg">
-            <img
-              src={testimonial.image}
-              alt={testimonial.name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-            <CheckCircle2 className="h-5 w-5 text-white" />
-          </div>
-        </div>
-
-        {/* Stars */}
-        <div className="flex gap-1 mb-4">
-          {[...Array(testimonial.rating)].map((_, i) => (
-            <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-          ))}
-        </div>
-
-        {/* Quote */}
-        <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-          "{testimonial.quote}"
-        </blockquote>
-
-        {/* Author */}
-        <div>
-          <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
-          <p className="text-gray-500">
-            {testimonial.role}, <span className="text-orange-600">{testimonial.restaurant}</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+  return <div ref={ref} className={className}>{children}</div>;
 }
 
 /* ============================================================================
@@ -290,197 +78,87 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
    ============================================================================ */
 
 export function Home() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const testimonialTrackRef = useRef<HTMLDivElement>(null);
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Animate testimonial carousel
-  useEffect(() => {
-    if (!testimonialTrackRef.current) return;
-
-    gsap.to(testimonialTrackRef.current, {
-      x: -activeTestimonial * 100,
-      duration: 0.5,
-      ease: 'power2.inOut',
-    });
-  }, [activeTestimonial]);
-
   return (
     <div>
-      {/* ========================================
-          HERO SECTION
-          ======================================== */}
-      <section
-        ref={heroRef}
-        className="hero-gradient relative min-h-screen flex items-center overflow-hidden"
-      >
-        {/* Animated background blobs */}
+      {/* ===== HERO - Two Column ===== */}
+      <section className="hero-gradient relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <FloatingElement className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-orange-300/30 to-amber-300/30 rounded-full blur-3xl" delay={0}>
-            <div />
-          </FloatingElement>
-          <FloatingElement className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-br from-purple-300/30 to-pink-300/30 rounded-full blur-3xl" delay={1}>
-            <div />
-          </FloatingElement>
-          <FloatingElement className="absolute bottom-20 left-1/3 w-96 h-96 bg-gradient-to-br from-amber-200/40 to-yellow-200/40 rounded-full blur-3xl" delay={2}>
-            <div />
-          </FloatingElement>
-        </div>
-
-        {/* Floating food emojis */}
-        <div className="absolute inset-0 pointer-events-none">
-          <FloatingElement className="absolute top-32 left-[8%]" delay={0}>
-            <span className="text-5xl md:text-6xl drop-shadow-lg">🍕</span>
-          </FloatingElement>
-          <FloatingElement className="absolute top-48 right-[12%]" delay={0.5}>
-            <span className="text-5xl md:text-6xl drop-shadow-lg">🍔</span>
-          </FloatingElement>
-          <FloatingElement className="absolute bottom-40 left-[15%]" delay={1}>
-            <span className="text-5xl md:text-6xl drop-shadow-lg">🍣</span>
-          </FloatingElement>
-          <FloatingElement className="absolute bottom-32 right-[8%]" delay={1.5}>
-            <span className="text-5xl md:text-6xl drop-shadow-lg">🌮</span>
-          </FloatingElement>
-          <FloatingElement className="absolute top-1/2 left-[3%]" delay={2}>
-            <span className="text-4xl md:text-5xl drop-shadow-lg">🥗</span>
-          </FloatingElement>
-          <FloatingElement className="absolute top-1/3 right-[5%]" delay={0.3}>
-            <span className="text-4xl md:text-5xl drop-shadow-lg">🍜</span>
-          </FloatingElement>
-          <FloatingElement className="absolute bottom-1/3 left-[10%]" delay={0.8}>
-            <span className="text-4xl md:text-5xl drop-shadow-lg">🍩</span>
-          </FloatingElement>
+          <FloatingElement className="absolute top-20 left-10 w-96 h-96 bg-[#FF7A00]/5 rounded-full blur-3xl" delay={0}><div /></FloatingElement>
+          <FloatingElement className="absolute top-40 right-10 w-96 h-96 bg-[#2A1F15]/50 rounded-full blur-3xl" delay={1}><div /></FloatingElement>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left: Content */}
-            <div className="text-center lg:text-left">
-              {/* Badge */}
-              <ScrollReveal direction="down" delay={0.2}>
+            {/* Left */}
+            <div>
+              <ScrollReveal direction="up" delay={0.2}>
                 <div className="badge mb-8">
                   <Zap className="h-4 w-4" />
                   <span>Launch in 5 minutes with AI magic</span>
-                  <Sparkles className="h-4 w-4" />
                 </div>
               </ScrollReveal>
 
-              {/* Headline */}
               <ScrollReveal direction="up" delay={0.3}>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-4">
-                  <span className="gradient-text">Your Restaurant</span>
-                </h1>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black">
-                  <span className="gradient-text">Website, Ready</span>
-                </h1>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black">
-                  <span className="gradient-text">in Minutes</span>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.05]">
+                  <span className="gradient-text">Your Restaurant Website, Ready in Minutes</span>
                 </h1>
               </ScrollReveal>
 
-              {/* Subheadline */}
               <ScrollReveal direction="up" delay={0.5}>
-                <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                  Join <strong className="text-orange-600">500+ restaurants</strong> using Helmies Bites.
-                  AI-powered setup, beautiful themes, online ordering — all from <strong className="text-orange-600">€0 upfront</strong>.
+                <p className="text-xl md:text-2xl text-white/60 mb-10 max-w-xl leading-relaxed">
+                  AI-powered setup, beautiful themes, online ordering — launching soon for restaurants across Finland.
                 </p>
               </ScrollReveal>
 
-              {/* CTA Buttons */}
               <ScrollReveal direction="up" delay={0.7}>
-                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
-                  <Link
-                    to="/get-started"
-                    className="btn-primary flex items-center gap-3 text-lg"
-                  >
-                    Get Started Free
-                    <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <button className="btn-secondary flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-                      <Play className="h-5 w-5 text-white ml-0.5" />
-                    </div>
-                    Watch Demo
-                  </button>
-                </div>
+                <LaunchCountdown showRestaurants className="mb-10" />
               </ScrollReveal>
 
-              {/* Trust indicators */}
               <ScrollReveal direction="fade" delay={0.9}>
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                    <span>No credit card required</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                    <span>5-minute setup</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                    <span>Cancel anytime</span>
-                  </div>
-                </div>
+                <Link to="/features" className="btn-secondary inline-flex items-center gap-3">
+                  Explore Features <ArrowRight className="h-5 w-5" />
+                </Link>
               </ScrollReveal>
             </div>
 
-            {/* Right: Hero Image */}
+            {/* Right */}
             <ScrollReveal direction="right" delay={0.4}>
               <div className="relative">
-                {/* Main image with glass card effect */}
-                <div className="glass-card rounded-3xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200"
-                    alt="Restaurant owner using tablet"
-                    className="w-full h-[450px] lg:h-[550px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="glass-card xb-border rounded-3xl overflow-hidden shadow-2xl shadow-[#FF7A00]/5">
+                  <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200" alt="Restaurant" className="w-full h-[450px] lg:h-[550px] object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0907]/60 via-transparent to-transparent" />
                 </div>
 
-                {/* Floating stats card */}
-                <FloatingElement className="absolute -bottom-6 -left-6 glass-card rounded-2xl shadow-xl p-5" delay={0}>
+                <FloatingElement className="absolute -bottom-6 -left-6 glass-card xb-border p-5" delay={0}>
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-r from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center">
-                      <TrendingUp className="h-7 w-7 text-white" />
+                    <div className="w-14 h-14 bg-gradient-to-r from-[#FF7A00] to-[#CC6200] rounded-2xl flex items-center justify-center">
+                      <TrendingUp className="h-7 w-7 text-[#0D0907]" />
                     </div>
                     <div>
                       <p className="font-black text-2xl gradient-text">+127%</p>
-                      <p className="text-sm text-gray-600 font-medium">Online Orders</p>
+                      <p className="text-sm text-white/50 font-medium">Online Orders</p>
                     </div>
                   </div>
                 </FloatingElement>
 
-                {/* Floating rating card */}
-                <FloatingElement className="absolute -top-4 -right-4 glass-card rounded-2xl shadow-xl p-5" delay={1.5}>
+                <FloatingElement className="absolute -top-4 -right-4 glass-card xb-border p-5" delay={1.5}>
                   <div className="flex items-center gap-2 mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-[#FF7A00] text-[#FF7A00]" />)}
                   </div>
-                  <p className="text-lg font-bold text-gray-900">4.9/5 Rating</p>
-                  <p className="text-sm text-gray-500">500+ reviews</p>
+                  <p className="text-lg font-bold text-white">4.9/5 Rating</p>
+                  <p className="text-sm text-white/40">500+ reviews</p>
                 </FloatingElement>
 
-                {/* Floating users card */}
-                <FloatingElement className="absolute bottom-20 -right-8 glass-card rounded-2xl shadow-xl p-4" delay={2.5}>
+                <FloatingElement className="absolute bottom-20 -right-8 glass-card xb-border p-4" delay={2.5}>
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-3">
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-amber-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">M</div>
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">E</div>
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 border-2 border-white flex items-center justify-center text-white text-xs font-bold">S</div>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] border-2 border-[#0D0907] flex items-center justify-center text-[#0D0907] text-xs font-bold">M</div>
+                      <div className="w-10 h-10 rounded-full bg-[#D4915C] border-2 border-[#0D0907] flex items-center justify-center text-white text-xs font-bold">E</div>
+                      <div className="w-10 h-10 rounded-full bg-[#2A1F15] border-2 border-[#0D0907] flex items-center justify-center text-white text-xs font-bold">S</div>
                     </div>
                     <div>
-                      <p className="font-bold text-gray-900">500+</p>
-                      <p className="text-xs text-gray-500">Happy Owners</p>
+                      <p className="font-bold text-white">500+</p>
+                      <p className="text-xs text-white/40">Happy Owners</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -488,390 +166,234 @@ export function Home() {
             </ScrollReveal>
           </div>
         </div>
+        <div className="hero-linear" />
       </section>
 
-      {/* ========================================
-          STATS SECTION
-          ======================================== */}
-      <section className="section-padding bg-white">
+      {/* ===== STATS ===== */}
+      <section className="section-padding bg-[#0D0907] section-glow">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <ScrollReveal>
-              <p className="text-gray-500 font-semibold uppercase tracking-wider text-sm mb-4">
-                Trusted by restaurants across Finland
-              </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                <span className="gradient-text">Join 500+ Restaurants</span>
-              </h2>
-              <p className="text-xl text-gray-600">Already growing with Helmies Bites</p>
+          <ScrollReveal>
+            <SectionTitle subtitle="Trusted by restaurants across Finland" title="Join 500+ Restaurants" description="Already growing with Helmies Bites" icon={<Store className="h-4 w-4" />} />
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {stats.map((stat, index) => {
+              const numericMatch = stat.value.match(/([\d.]+)/);
+              const numericValue = numericMatch ? parseFloat(numericMatch[1]) : 0;
+              const prefix = stat.value.match(/^[^\d]*/)?.[0] || '';
+              const suffix = stat.value.match(/[^\d]*$/)?.[0] || '';
+              return (
+                <ScrollReveal key={index} direction="up" delay={index * 0.1}>
+                  <div className="glass-card xb-border p-8 text-center">
+                    <div className="feature-icon w-12 h-12 mx-auto mb-4">{stat.icon}</div>
+                    <div className="stat-value text-4xl md:text-5xl mb-2">
+                      <CountUp end={numericValue} duration={2.5} separator="," prefix={prefix} suffix={suffix} enableScrollSpy scrollSpyOnce />
+                    </div>
+                    <p className="text-white/50 font-medium">{stat.label}</p>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FEATURES - Asymmetric Grid ===== */}
+      <section className="section-padding bg-[#2A1F15]/20 section-glow">
+        <div className="max-w-7xl mx-auto">
+          <ScrollReveal>
+            <SectionTitle subtitle="Powerful Features" title="Everything You Need" description="All the tools to run your restaurant online, in one beautiful place" icon={<Zap className="h-4 w-4" />} />
+          </ScrollReveal>
+
+          <div className="mt-16">
+            <div className="grid lg:grid-cols-12 gap-6 mb-6">
+              <div className="lg:col-span-8">
+                <ScrollReveal direction="up">
+                  <div className="glass-card xb-border p-8 h-full">
+                    <div className="flex flex-col md:flex-row gap-6 items-start">
+                      <div className="w-full md:w-1/2 rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="AI Menu Import" className="w-full h-56 object-cover rounded-2xl" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="feature-icon mb-4">{features[0].icon}</div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{features[0].title}</h3>
+                        <p className="text-white/50 leading-relaxed">{features[0].description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </div>
+              <div className="lg:col-span-4">
+                <ScrollReveal direction="up" delay={0.1}>
+                  <div className="glass-card xb-border p-8 h-full">
+                    <div className="feature-icon mb-4">{features[1].icon}</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{features[1].title}</h3>
+                    <p className="text-white/50 leading-relaxed">{features[1].description}</p>
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {features.slice(2).map((feature, index) => (
+                <ScrollReveal key={index} direction="up" delay={(index + 2) * 0.1}>
+                  <div className="glass-card xb-border p-8 h-full group">
+                    <div className="feature-icon mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-white/50 leading-relaxed">{feature.description}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+
+          <ScrollReveal direction="fade" delay={0.6}>
+            <div className="mt-12 text-center">
+              <AivoraButton to="/features">View All Features</AivoraButton>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* BRAND MARQUEE - hidden until launch */}
+
+      {/* ===== HOW IT WORKS - Two Column ===== */}
+      <section className="section-padding bg-[#0D0907] section-glow">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-5">
+              <ScrollReveal direction="left">
+                <SectionTitle subtitle="How It Works" title="Launch in 4 Easy Steps" align="left" icon={<Clock className="h-4 w-4" />} className="mb-8" />
+                <div className="mb-8">
+                  <LaunchCountdown compact />
+                </div>
+                <div className="space-y-4">
+                  {steps.map((step, index) => (
+                    <div key={index} className={`process-step xb-border ${index === 0 ? 'active' : ''}`}>
+                      <div className="feature-icon w-12 h-12 flex-shrink-0">{step.icon}</div>
+                      <span className="step-num">{step.number}</span>
+                      <div>
+                        <h3 className="text-lg font-bold text-white">{step.title}</h3>
+                        <p className="text-sm text-white/40 mt-1">{step.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <div className="lg:col-span-7">
+              <ScrollReveal direction="right">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="space-y-6">
+                    <div className="glass-card xb-border rounded-2xl overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=600" alt="Dashboard" className="w-full h-52 object-cover" />
+                    </div>
+                    <div className="glass-card xb-border rounded-2xl overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600" alt="Menu" className="w-full h-64 object-cover" />
+                    </div>
+                  </div>
+                  <div className="space-y-6 mt-12">
+                    <div className="glass-card xb-border rounded-2xl overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="Theme" className="w-full h-64 object-cover" />
+                    </div>
+                    <div className="glass-card xb-border rounded-2xl overflow-hidden">
+                      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600" alt="Go Live" className="w-full h-52 object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS - hidden until launch */}
+
+      {/* ===== INTEGRATIONS - Two Column ===== */}
+      <section className="section-padding bg-[#0D0907] section-glow">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="left">
+              <SectionTitle subtitle="Built-In Integrations" title="Everything You Need, Built In" description="Seamless integrations with payment and delivery platforms" align="left" icon={<Zap className="h-4 w-4" />} className="mb-10" />
+              <div className="space-y-6">
+                {[
+                  { icon: <Shield className="h-6 w-6" />, title: 'Secure Payments', text: 'PCI-compliant processing with industry-leading security' },
+                  { icon: <BarChart3 className="h-6 w-6" />, title: 'Real-time Analytics', text: 'Track orders, revenue, and customer insights in real-time' },
+                  { icon: <Truck className="h-6 w-6" />, title: 'Delivery Integration', text: 'Built-in delivery management with zones, fees, and tracking' },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="feature-icon w-14 h-14 flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h3 className="font-bold text-xl mb-1 text-white">{item.title}</h3>
+                      <p className="text-white/40">{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <div className="space-y-4">
+                {[
+                  [{ name: 'MobilePay', icon: <Smartphone className="h-6 w-6" /> }, { name: 'Mastercard', icon: <CreditCard className="h-6 w-6" /> }, { name: 'Visa', icon: <CreditCard className="h-6 w-6" /> }],
+                  [{ name: 'Stripe', icon: <CreditCard className="h-6 w-6" /> }, { name: 'PayPal', icon: <CreditCard className="h-6 w-6" /> }, { name: 'Apple Pay', icon: <Smartphone className="h-6 w-6" /> }],
+                ].map((row, rowIndex) => (
+                  <Marquee key={rowIndex} gradient={false} speed={25 + rowIndex * 10} direction={rowIndex % 2 === 0 ? 'left' : 'right'} pauseOnHover className="py-2">
+                    {row.map((item, i) => (
+                      <div key={i} className="mx-4 glass-card xb-border p-4 flex items-center gap-3 min-w-[160px]">
+                        <div className="w-10 h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00]">{item.icon}</div>
+                        <span className="text-white font-semibold">{item.name}</span>
+                      </div>
+                    ))}
+                  </Marquee>
+                ))}
+
+                <div className="grid grid-cols-2 gap-4 mt-6">
+                  <div className="comparison-card text-center p-6">
+                    <p className="text-white/40 text-sm font-bold uppercase mb-2">Without Helmies</p>
+                    <p className="text-white/60 text-sm">Complex setup, high fees, no control</p>
+                  </div>
+                  <div className="comparison-card text-center p-6" style={{ borderColor: 'rgba(255,122,0,0.2)' }}>
+                    <p className="text-[#FF7A00] text-sm font-bold uppercase mb-2">With Helmies</p>
+                    <p className="text-white/60 text-sm">5-min setup, 0% commission, full control</p>
+                  </div>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <GlassStatCard key={index} stat={stat} index={index} />
-            ))}
-          </div>
-
-          {/* Restaurant Logos */}
-          <ScrollReveal direction="fade">
-            <div className="glass-card rounded-3xl p-8 md:p-12">
-              <p className="text-center text-gray-500 font-medium mb-8">Trusted by amazing restaurants</p>
-              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all hover:scale-110 transform bg-gradient-to-br ${
-                      i === 0 ? 'from-orange-400 to-amber-500' :
-                      i === 1 ? 'from-amber-500 to-yellow-500' :
-                      i === 2 ? 'from-red-400 to-rose-500' :
-                      i === 3 ? 'from-yellow-500 to-orange-500' :
-                      i === 4 ? 'from-orange-600 to-amber-600' :
-                      'from-rose-400 to-pink-500'
-                    }`}
-                  >
-                    <Store className="h-8 w-8" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
-      {/* ========================================
-          FEATURES SECTION
-          ======================================== */}
-      <section className="section-padding hero-gradient">
-        <div className="max-w-7xl mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <div className="badge mb-6">
-                <Zap className="h-4 w-4" />
-                <span>Powerful Features</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                <span className="gradient-text">Everything You Need</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                All the tools to run your restaurant online, in one beautiful place
+      {/* ===== FINAL CTA - Two Column ===== */}
+      <section className="section-padding relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #2A1F15 0%, #0D0907 50%, #2A1F15 100%)' }}>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <FloatingElement className="absolute top-0 left-0 w-96 h-96 bg-[#FF7A00]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" delay={0}><div /></FloatingElement>
+          <FloatingElement className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4915C]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" delay={1}><div /></FloatingElement>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal direction="left">
+              <SectionTitle subtitle="Coming Soon" title="We're Launching Soon!" align="left" icon={<Sparkles className="h-4 w-4" />} className="mb-8" />
+              <p className="text-xl text-white/60 mb-10 max-w-xl leading-relaxed">
+                Be among the <strong className="text-[#FF7A00]">first restaurants</strong> to launch with Helmies Bites. Setup takes just <strong className="text-[#FF7A00]">5 minutes</strong>.
               </p>
-            </div>
-          </ScrollReveal>
+              <LaunchCountdown showRestaurants className="mb-8" />
+              <Link to="/pricing" className="btn-secondary inline-flex items-center gap-2">View Pricing</Link>
+            </ScrollReveal>
 
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <ScrollReveal
-                key={index}
-                direction="up"
-                delay={index * 0.1}
-                className="group"
-              >
-                <div className="glass-card glass-card-hover rounded-3xl p-8 h-full">
-                  <div className="feature-icon mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+            <ScrollReveal direction="right">
+              <div className="hidden lg:block">
+                <div className="glass-card xb-border p-8 text-center">
+                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#CC6200] flex items-center justify-center">
+                    <Sparkles className="h-12 w-12 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-2xl font-black text-white mb-2">Launching Soon</h3>
+                  <p className="text-white/50">Be ready when we go live on March 5th, 2026</p>
                 </div>
-              </ScrollReveal>
-            ))}
+              </div>
+            </ScrollReveal>
           </div>
-
-          {/* CTA */}
-          <ScrollReveal direction="fade" delay={0.8}>
-            <div className="mt-16 text-center">
-              <Link
-                to="/features"
-                className="btn-secondary inline-flex items-center gap-2"
-              >
-                View All Features
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ========================================
-          HOW IT WORKS SECTION
-          ======================================== */}
-      <section className="section-padding bg-white">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <div className="badge mb-6">
-                <Clock className="h-4 w-4" />
-                <span>Simple Process</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                <span className="gradient-text">Launch in 4 Easy Steps</span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                From sign-up to live in less than 5 minutes
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <ScrollReveal
-                key={index}
-                direction="up"
-                delay={index * 0.15}
-                className="relative"
-              >
-                {/* Connection line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-16 left-full w-full h-1 bg-gradient-to-r from-orange-300 via-amber-300 to-transparent -z-10 rounded-full" />
-                )}
-
-                <div className="glass-card glass-card-hover rounded-3xl p-8 text-center h-full">
-                  {/* Step number with gradient background */}
-                  <div className="relative inline-block mb-6">
-                    <div className="w-24 h-24 rounded-3xl flex items-center justify-center text-white shadow-lg mx-auto gradient-bg">
-                      {step.icon}
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-10 h-10 bg-white rounded-full flex items-center justify-center font-black text-orange-600 shadow-md border-2 border-orange-200">
-                      {step.number}
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <ScrollReveal direction="fade" delay={1}>
-            <div className="mt-16 text-center">
-              <Link
-                to="/get-started"
-                className="btn-primary inline-flex items-center gap-3"
-              >
-                Start Your Setup
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ========================================
-          TESTIMONIALS SECTION
-          ======================================== */}
-      <section className="section-padding hero-gradient">
-        <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <div className="badge mb-6">
-                <Star className="h-4 w-4 fill-current" />
-                <span>Customer Stories</span>
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                <span className="gradient-text">Loved by Restaurant Owners</span>
-              </h2>
-              <p className="text-xl text-gray-600">
-                See what our customers are saying about Helmies Bites
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Testimonials Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl">
-              <div
-                ref={testimonialTrackRef}
-                className="flex transition-transform duration-500"
-                style={{ width: `${testimonials.length * 100}%` }}
-              >
-                {testimonials.map((testimonial) => (
-                  <div
-                    key={testimonial.id}
-                    className="w-full px-4 flex-shrink-0"
-                    style={{ width: `${100 / testimonials.length}%` }}
-                  >
-                    <TestimonialCard testimonial={testimonial} />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Carousel indicators */}
-            <div className="flex justify-center gap-3 mt-10">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTestimonial(index)}
-                  className={`h-3 rounded-full transition-all duration-300 ${
-                    index === activeTestimonial
-                      ? 'w-10 gradient-bg'
-                      : 'bg-gray-300 hover:bg-gray-400 w-3'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================
-          INTEGRATIONS SECTION
-          ======================================== */}
-      <section className="section-padding bg-white">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
-                <span className="gradient-text">Everything You Need, Built In</span>
-              </h2>
-              <p className="text-xl text-gray-600">
-                Seamless integrations with payment and delivery platforms
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Integration cards */}
-          <ScrollReveal stagger={0.1}>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-16">
-              {[
-                { name: 'MobilePay', icon: <Smartphone className="h-8 w-8" />, gradient: 'from-pink-500 to-rose-500' },
-                { name: 'Mastercard', icon: <CreditCard className="h-8 w-8" />, gradient: 'from-orange-500 to-amber-500' },
-                { name: 'Visa', icon: <CreditCard className="h-8 w-8" />, gradient: 'from-blue-600 to-indigo-600' },
-                { name: 'Stripe', icon: <CreditCard className="h-8 w-8" />, gradient: 'from-purple-600 to-violet-600' },
-                { name: 'PayPal', icon: <CreditCard className="h-8 w-8" />, gradient: 'from-blue-500 to-cyan-500' },
-              ].map((integration, index) => (
-                <div
-                  key={index}
-                  className="glass-card glass-card-hover rounded-2xl p-6 flex flex-col items-center justify-center"
-                >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-4 bg-gradient-to-r ${integration.gradient}`}>
-                    {integration.icon}
-                  </div>
-                  <p className="font-semibold text-gray-900">{integration.name}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          {/* Feature highlights */}
-          <ScrollReveal direction="fade">
-            <div className="glass-dark rounded-3xl p-8 md:p-12 text-white">
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Secure Payments</h3>
-                    <p className="text-gray-400">
-                      PCI-compliant processing with industry-leading security
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Real-time Analytics</h3>
-                    <p className="text-gray-400">
-                      Track orders, revenue, and customer insights in real-time
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-r from-orange-600 to-red-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Truck className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">Delivery Integration</h3>
-                    <p className="text-gray-400">
-                      Built-in delivery management with zones, fees, and tracking
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ========================================
-          FINAL CTA SECTION
-          ======================================== */}
-      <section className="section-padding">
-        <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
-            <div className="gradient-animated rounded-3xl p-8 md:p-16 text-center text-white overflow-hidden relative">
-              {/* Animated background elements */}
-              <div className="absolute inset-0 overflow-hidden">
-                <FloatingElement className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" delay={0}>
-                  <div />
-                </FloatingElement>
-                <FloatingElement className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" delay={1}>
-                  <div />
-                </FloatingElement>
-                <FloatingElement className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-2xl" delay={2}>
-                  <div />
-                </FloatingElement>
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6">
-                  Ready to Get Started?
-                </h2>
-                <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-                  Join <strong className="text-white">500+ restaurants</strong> already growing with Helmies Bites.
-                  Setup takes just <strong className="text-white">5 minutes</strong>.
-                </p>
-
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-                  <Link
-                    to="/get-started"
-                    className="px-10 py-5 bg-white text-orange-600 rounded-2xl font-bold hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg"
-                  >
-                    Get Started Free
-                    <ArrowRight className="h-5 w-5" />
-                  </Link>
-                  <Link
-                    to="/pricing"
-                    className="px-10 py-5 bg-white/10 text-white rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 border-2 border-white/30 hover:border-white/50 text-lg"
-                  >
-                    View Pricing
-                  </Link>
-                </div>
-
-                {/* Trust indicators */}
-                <div className="flex flex-wrap items-center justify-center gap-8 text-white/90">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span className="font-medium">No credit card</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span className="font-medium">5-minute setup</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span className="font-medium">Cancel anytime</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
     </div>

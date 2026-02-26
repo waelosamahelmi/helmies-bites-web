@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,7 +12,6 @@ import {
   Smartphone,
   ChevronDown,
   ChevronUp,
-  ArrowRight,
   Check,
   X,
   Palette,
@@ -29,8 +27,16 @@ import {
   Gift,
   QrCode,
 } from 'lucide-react';
+import { ScrollReveal } from '../components/ScrollReveal';
+import { SectionTitle } from '../components/SectionTitle';
+import { AivoraButton } from '../components/AivoraButton';
+import { LaunchCountdown } from '../components/LaunchCountdown';
 
 gsap.registerPlugin(ScrollTrigger);
+
+/* ============================================================================
+   Types
+   ============================================================================ */
 
 interface FeatureItem {
   icon: React.ReactNode;
@@ -49,13 +55,17 @@ interface FeatureCategory {
   color: string;
 }
 
+/* ============================================================================
+   Data
+   ============================================================================ */
+
 const featureCategories: FeatureCategory[] = [
   {
     id: 'online-ordering',
     title: 'Online Ordering',
     description: 'Streamline your ordering process with a seamless customer experience',
     icon: <ShoppingCart className="h-6 w-6" />,
-    color: 'from-orange-500 to-amber-500',
+    color: 'from-[#FF7A00] to-[#CC6200]',
     features: [
       {
         icon: <ShoppingCart className="h-5 w-5" />,
@@ -97,7 +107,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Menu Management',
     description: 'Create and manage beautiful, engaging menus with AI assistance',
     icon: <Utensils className="h-6 w-6" />,
-    color: 'from-red-500 to-orange-500',
+    color: 'from-red-500 to-[#CC6200]',
     features: [
       {
         icon: <Palette className="h-5 w-5" />,
@@ -138,7 +148,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Payment Processing',
     description: 'Accept payments securely and get paid instantly',
     icon: <CreditCard className="h-6 w-6" />,
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-[#FF7A00] to-[#CC6200]',
     features: [
       {
         icon: <CreditCard className="h-5 w-5" />,
@@ -172,7 +182,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Delivery Management',
     description: 'Take control of your delivery operations or integrate with partners',
     icon: <Truck className="h-6 w-6" />,
-    color: 'from-blue-500 to-indigo-500',
+    color: 'from-[#D4915C] to-[#FF7A00]/50',
     features: [
       {
         icon: <MapPin className="h-5 w-5" />,
@@ -206,7 +216,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Analytics & Reports',
     description: 'Data-driven insights to grow your business',
     icon: <BarChart3 className="h-6 w-6" />,
-    color: 'from-purple-500 to-violet-500',
+    color: 'from-[#CC6200] to-[#CC6200]',
     features: [
       {
         icon: <TrendingUpIcon className="h-5 w-5" />,
@@ -240,7 +250,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Marketing Tools',
     description: 'Attract new customers and keep them coming back',
     icon: <Megaphone className="h-6 w-6" />,
-    color: 'from-pink-500 to-rose-500',
+    color: 'from-[#D4915C] to-[#D4915C]',
     features: [
       {
         icon: <TagIcon className="h-5 w-5" />,
@@ -308,7 +318,7 @@ const featureCategories: FeatureCategory[] = [
     title: 'Mobile Friendly',
     description: 'Perfect experience on every device, everywhere',
     icon: <Smartphone className="h-6 w-6" />,
-    color: 'from-violet-500 to-purple-500',
+    color: 'from-[#CC6200] to-[#CC6200]',
     features: [
       {
         icon: <Smartphone className="h-5 w-5" />,
@@ -393,19 +403,22 @@ const comparisonData = [
 ];
 
 const integrations = [
-  { name: 'Stripe', category: 'Payments', icon: '', color: 'from-indigo-500 to-purple-600' },
-  { name: 'MobilePay', category: 'Payments', icon: '', color: 'from-pink-500 to-rose-500' },
-  { name: 'PayPal', category: 'Payments', icon: '', color: 'from-blue-500 to-blue-600' },
-  { name: 'Mailchimp', category: 'Marketing', icon: '', color: 'from-yellow-400 to-orange-500' },
-  { name: 'Klaviyo', category: 'Marketing', icon: '', color: 'from-green-500 to-teal-500' },
+  { name: 'Stripe', category: 'Payments', icon: '', color: 'from-[#FF7A00]/50 to-[#CC6200]' },
+  { name: 'MobilePay', category: 'Payments', icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
+  { name: 'PayPal', category: 'Payments', icon: '', color: 'from-[#D4915C] to-blue-600' },
+  { name: 'Mailchimp', category: 'Marketing', icon: '', color: 'from-yellow-400 to-[#CC6200]' },
+  { name: 'Klaviyo', category: 'Marketing', icon: '', color: 'from-[#FF7A00] to-teal-500' },
   { name: 'QuickBooks', category: 'Accounting', icon: '', color: 'from-emerald-500 to-green-600' },
-  { name: 'Xero', category: 'Accounting', icon: '', color: 'from-blue-600 to-indigo-600' },
-  { name: 'Meta', category: 'Social', icon: '', color: 'from-blue-600 to-blue-700' },
+  { name: 'Xero', category: 'Accounting', icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
+  { name: 'Meta', category: 'Social', icon: '', color: 'from-[#D4915C] to-blue-700' },
   { name: 'Google', category: 'Analytics', icon: '', color: 'from-red-500 to-yellow-500' },
-  { name: 'Facebook', category: 'Social', icon: '', color: 'from-blue-500 to-blue-600' },
+  { name: 'Facebook', category: 'Social', icon: '', color: 'from-[#D4915C] to-blue-600' },
 ];
 
-// Icon Components
+/* ============================================================================
+   Icon Components
+   ============================================================================ */
+
 function ReceiptIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M4 2v20l6-4 6 4V2H4Z"/><path d="m8 8 2 2 4-4"/></svg>;
 }
@@ -434,6 +447,24 @@ function WifiIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>;
 }
 
+/* ============================================================================
+   Floating Element Sub-Component
+   ============================================================================ */
+
+function FloatingElement({ className, delay, children }: { className: string; delay: number; children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!ref.current) return;
+    const animation = gsap.to(ref.current, { y: -15, rotation: 3, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut', delay });
+    return () => { animation.kill(); gsap.set(ref.current, { y: 0, rotation: 0 }); };
+  }, [delay]);
+  return <div ref={ref} className={className}>{children}</div>;
+}
+
+/* ============================================================================
+   FeatureAccordion Component
+   ============================================================================ */
+
 function FeatureAccordion({ category, isOpen, onToggle }: { category: FeatureCategory; isOpen: boolean; onToggle: () => void }) {
   const contentRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
@@ -448,147 +479,104 @@ function FeatureAccordion({ category, isOpen, onToggle }: { category: FeatureCat
     }
   }, [isOpen]);
 
+  // Separate first feature (hero/asymmetric) from the rest
+  const firstFeature = category.features[0];
+  const restFeatures = category.features.slice(1);
+
   return (
-    <div className="glass-card glass-card-hover rounded-3xl overflow-hidden transition-all duration-500">
+    <div className="glass-card xb-border rounded-3xl overflow-hidden transition-all duration-500">
+      {/* Accordion Header */}
       <button
         onClick={onToggle}
-        className="w-full p-6 md:p-8 flex items-center justify-between text-left hover:bg-white/50 transition-colors duration-300"
+        className="w-full p-6 md:p-8 flex items-center justify-between text-left hover:bg-white/[0.02] transition-colors duration-300"
       >
         <div className="flex items-center gap-5">
           <div className={`feature-icon p-4 rounded-2xl bg-gradient-to-br ${category.color} text-white`}>
             {category.icon}
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900">{category.title}</h3>
-            <p className="text-gray-600 text-sm md:text-base mt-1">{category.description}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-white">{category.title}</h3>
+            <p className="text-white/50 text-sm md:text-base mt-1">{category.description}</p>
           </div>
         </div>
-        <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-orange-100 rotate-180' : 'bg-gray-100'}`}>
-          {isOpen ? <ChevronUp className="h-5 w-5 text-orange-600" /> : <ChevronDown className="h-5 w-5 text-gray-500" />}
+        <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-[#FF7A00]/10 rotate-180' : 'bg-[#2A1F15]/30'}`}>
+          {isOpen ? <ChevronUp className="h-5 w-5 text-[#FF7A00]" /> : <ChevronDown className="h-5 w-5 text-white/50" />}
         </div>
       </button>
+
+      {/* Accordion Content */}
       <div
         ref={contentRef}
         className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div ref={featuresRef} className="p-6 md:p-8 pt-0 space-y-4">
-          {category.features.map((feature, idx) => (
-            <div key={idx} className="feature-item glass-card rounded-2xl p-5 border border-white/60 transition-all duration-300 hover:border-orange-200 hover:shadow-lg">
-              <div className="flex gap-5">
-                <div className="flex-shrink-0">
-                  <div className="feature-icon w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center">
-                    {feature.icon}
-                  </div>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-start justify-between gap-4 mb-2">
-                    <h4 className="font-bold text-lg text-gray-900">{feature.title}</h4>
-                    {feature.image && (
-                      <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-md">
-                        <img
-                          src={feature.image}
-                          alt={feature.title}
-                          className="w-full h-full object-cover"
-                        />
+        <div ref={featuresRef} className="p-6 md:p-8 pt-0 space-y-5">
+          {/* First Feature - Asymmetric Large Card */}
+          {firstFeature && (
+            <div className="feature-item">
+              <div className="glass-card xb-border rounded-2xl overflow-hidden">
+                <div className="grid md:grid-cols-5 gap-0">
+                  {firstFeature.image && (
+                    <div className="md:col-span-2 relative overflow-hidden">
+                      <img
+                        src={firstFeature.image}
+                        alt={firstFeature.title}
+                        className="w-full h-48 md:h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0D0907]/40" />
+                    </div>
+                  )}
+                  <div className={`${firstFeature.image ? 'md:col-span-3' : 'md:col-span-5'} p-6 md:p-8`}>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="feature-icon w-12 h-12 rounded-xl bg-gradient-to-br from-[#FF7A00] to-[#CC6200] text-white flex items-center justify-center">
+                        {firstFeature.icon}
                       </div>
-                    )}
-                  </div>
-                  <p className="text-gray-600 mb-3 text-sm md:text-base leading-relaxed">{feature.description}</p>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-sm font-semibold border border-green-200">
-                    <Zap className="h-4 w-4" />
-                    {feature.benefit}
+                      <h4 className="font-black text-xl text-white">{firstFeature.title}</h4>
+                    </div>
+                    <p className="text-white/50 mb-4 leading-relaxed">{firstFeature.description}</p>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FF7A00]/10 text-[#FF7A00] rounded-full text-sm font-semibold border border-[#FF7A00]/20">
+                      <Zap className="h-4 w-4" />
+                      {firstFeature.benefit}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
+          )}
+
+          {/* Remaining Features - Grid Layout */}
+          <div className="grid md:grid-cols-2 gap-4">
+            {restFeatures.map((feature, idx) => (
+              <div key={idx} className="feature-item glass-card xb-border rounded-2xl p-5 transition-all duration-300 hover:border-[#FF7A00]/20">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="feature-icon w-11 h-11 rounded-xl bg-gradient-to-br from-[#FF7A00] to-[#CC6200] text-white flex items-center justify-center">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-bold text-white mb-1">{feature.title}</h4>
+                    <p className="text-white/50 text-sm mb-3 leading-relaxed">{feature.description}</p>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#FF7A00]/10 text-[#FF7A00] rounded-full text-xs font-semibold border border-[#FF7A00]/20">
+                      <Zap className="h-3 w-3" />
+                      {feature.benefit}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
+/* ============================================================================
+   Main Component
+   ============================================================================ */
+
 export function Features() {
-  const heroRef = useRef<HTMLDivElement>(null);
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['online-ordering']));
-
-  useEffect(() => {
-    // Hero animations
-    if (heroRef.current) {
-      const tl = gsap.timeline();
-      tl.from(heroRef.current.querySelector('.hero-title'),
-        { opacity: 0, y: 50, duration: 0.8, ease: 'power3.out' }
-      )
-      .from(heroRef.current.querySelector('.hero-subtitle'),
-        { opacity: 0, y: 30, duration: 0.6, ease: 'power3.out' }, '-=0.4'
-      )
-      .from(heroRef.current.querySelector('.hero-cta'),
-        { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.3'
-      )
-      .from(heroRef.current.querySelectorAll('.stat-card'),
-        { opacity: 0, scale: 0.8, duration: 0.5, stagger: 0.1, ease: 'back.out(1.7)' }, '-=0.3'
-      );
-    }
-
-    // Scroll animations for sections
-    const sections = document.querySelectorAll('.scroll-reveal');
-    sections.forEach((section) => {
-      gsap.fromTo(section,
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    });
-
-    // Comparison table animation
-    const comparisonRows = document.querySelectorAll('.comparison-row');
-    comparisonRows.forEach((row, idx) => {
-      gsap.fromTo(row,
-        { opacity: 0, x: -20 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 0.5,
-          delay: idx * 0.05,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: row,
-            start: 'top 90%',
-          },
-        }
-      );
-    });
-
-    // Integration cards animation
-    const integrationCards = document.querySelectorAll('.integration-card');
-    gsap.fromTo(integrationCards,
-      { opacity: 0, scale: 0.8 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 0.5,
-        stagger: 0.05,
-        ease: 'back.out(1.7)',
-        scrollTrigger: {
-          trigger: '.integrations-grid',
-          start: 'top 85%',
-        },
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories((prev) => {
@@ -604,257 +592,349 @@ export function Features() {
 
   return (
     <div className="font-sans">
-      {/* Hero Section */}
-      <section ref={heroRef} className="hero-gradient relative min-h-[85vh] flex items-center overflow-hidden">
-        {/* Animated Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
-
-        {/* Floating Icons */}
+      {/* ===== HERO SECTION - Two Column Aivora Layout ===== */}
+      <section className="hero-gradient relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Blurs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="floating absolute top-20 left-[10%] opacity-10">
-            <ShoppingCart className="h-16 w-16 text-orange-500" />
-          </div>
-          <div className="floating-delayed absolute top-40 right-[15%] opacity-10">
-            <CreditCard className="h-20 w-20 text-orange-600" />
-          </div>
-          <div className="floating absolute bottom-20 left-[20%] opacity-10">
-            <Truck className="h-18 w-18 text-amber-500" />
-          </div>
-          <div className="floating-delayed absolute top-32 left-[60%] opacity-10">
-            <BarChart3 className="h-14 w-14 text-purple-500" />
-          </div>
-          <div className="floating absolute bottom-32 right-[25%] opacity-10">
-            <Smartphone className="h-16 w-16 text-pink-500" />
+          <FloatingElement className="absolute top-20 left-10 w-96 h-96 bg-[#FF7A00]/5 rounded-full blur-3xl" delay={0}><div /></FloatingElement>
+          <FloatingElement className="absolute top-40 right-10 w-96 h-96 bg-[#2A1F15]/50 rounded-full blur-3xl" delay={1}><div /></FloatingElement>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Content */}
+            <div>
+              <ScrollReveal direction="up" delay={0.2}>
+                <div className="badge mb-8">
+                  <Zap className="h-4 w-4" />
+                  <span>Everything You Need to Succeed</span>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="up" delay={0.3}>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.05]">
+                  <span className="gradient-text">Powerful Features For Every Restaurant</span>
+                </h1>
+              </ScrollReveal>
+
+              <ScrollReveal direction="up" delay={0.5}>
+                <p className="text-xl md:text-2xl text-white/50 mb-10 max-w-xl leading-relaxed">
+                  From AI-powered setup to delivery management, everything you need to run a successful restaurant business in <strong className="text-[#FF7A00]">one beautiful platform</strong>.
+                </p>
+              </ScrollReveal>
+
+              <ScrollReveal direction="up" delay={0.7}>
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+                  <LaunchCountdown compact />
+                  <a href="#features" className="btn-secondary flex items-center gap-3">
+                    Explore Features
+                  </a>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="fade" delay={0.9}>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {[
+                    { value: '5 min', label: 'Setup Time' },
+                    { value: '0%', label: 'Commission' },
+                    { value: '24/7', label: 'Support' },
+                    { value: '50+', label: 'Integrations' },
+                  ].map((stat, i) => (
+                    <div key={i} className="glass-card xb-border p-4 text-center">
+                      <div className="text-xl md:text-2xl font-black gradient-text">{stat.value}</div>
+                      <div className="text-white/40 text-xs mt-1 font-medium">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Right Column - Floating Icons Grid */}
+            <ScrollReveal direction="right" delay={0.4}>
+              <div className="relative h-[500px] lg:h-[600px]">
+                {/* Central Glow */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-64 h-64 bg-[#FF7A00]/10 rounded-full blur-3xl" />
+                </div>
+
+                {/* Floating Feature Icons */}
+                <FloatingElement className="absolute top-8 left-[10%] glass-card xb-border p-5 rounded-2xl" delay={0}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#FF7A00] to-[#CC6200] rounded-xl flex items-center justify-center">
+                      <ShoppingCart className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Online Ordering</p>
+                      <p className="text-white/40 text-xs">Smart cart & checkout</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+
+                <FloatingElement className="absolute top-4 right-[5%] glass-card xb-border p-5 rounded-2xl" delay={0.5}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#D4915C] to-[#CC6200] rounded-xl flex items-center justify-center">
+                      <Utensils className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Menu Management</p>
+                      <p className="text-white/40 text-xs">AI-powered setup</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+
+                <FloatingElement className="absolute top-[35%] left-[5%] glass-card xb-border p-5 rounded-2xl" delay={1}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#FF7A00] to-[#D4915C] rounded-xl flex items-center justify-center">
+                      <CreditCard className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Payments</p>
+                      <p className="text-white/40 text-xs">Stripe & mobile wallets</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+
+                <FloatingElement className="absolute top-[40%] right-[0%] glass-card xb-border p-5 rounded-2xl" delay={1.5}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#CC6200] to-[#FF7A00] rounded-xl flex items-center justify-center">
+                      <BarChart3 className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Analytics</p>
+                      <p className="text-white/40 text-xs">Data-driven insights</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+
+                <FloatingElement className="absolute bottom-[20%] left-[15%] glass-card xb-border p-5 rounded-2xl" delay={2}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#D4915C] to-[#FF7A00] rounded-xl flex items-center justify-center">
+                      <Truck className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Delivery</p>
+                      <p className="text-white/40 text-xs">Zones & tracking</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+
+                <FloatingElement className="absolute bottom-[10%] right-[10%] glass-card xb-border p-5 rounded-2xl" delay={2.5}>
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-[#FF7A00] to-[#CC6200] rounded-xl flex items-center justify-center">
+                      <Smartphone className="h-6 w-6 text-[#0D0907]" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-sm">Mobile Ready</p>
+                      <p className="text-white/40 text-xs">PWA & responsive</p>
+                    </div>
+                  </div>
+                </FloatingElement>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-24 text-center">
-          <div className="badge mb-8">
-            <Zap className="h-4 w-4" />
-            Everything You Need to Succeed
-          </div>
-
-          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            <span className="gradient-text">Powerful Features</span>
-            <br />
-            <span className="gradient-text">For Every Restaurant</span>
-          </h1>
-
-          <p className="hero-subtitle text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
-            From AI-powered setup to delivery management, everything you need to run a successful restaurant business in one beautiful platform.
-          </p>
-
-          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/get-started"
-              className="btn-primary inline-flex items-center justify-center gap-3"
-            >
-              Start Free Trial
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-            <a
-              href="#features"
-              className="btn-secondary inline-flex items-center justify-center gap-2"
-            >
-              Explore Features
-            </a>
-          </div>
-
-          {/* Quick Stats with Glass Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
-            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-black gradient-text">5 min</div>
-              <div className="text-gray-600 text-sm mt-2 font-medium">Setup Time</div>
-            </div>
-            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-black gradient-text">0%</div>
-              <div className="text-gray-600 text-sm mt-2 font-medium">Commission</div>
-            </div>
-            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-black gradient-text">24/7</div>
-              <div className="text-gray-600 text-sm mt-2 font-medium">Support</div>
-            </div>
-            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
-              <div className="text-3xl md:text-4xl font-black gradient-text">50+</div>
-              <div className="text-gray-600 text-sm mt-2 font-medium">Integrations</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Wave Divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" className="fill-white" />
-          </svg>
-        </div>
+        {/* Hero Linear Separator */}
+        <div className="hero-linear" />
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="section-padding bg-white">
+      {/* ===== FEATURE CATEGORIES SECTION ===== */}
+      <section id="features" className="section-padding bg-[#0D0907]">
         <div className="max-w-5xl mx-auto">
-          <div className="scroll-reveal text-center mb-16">
-            <div className="badge mb-6">
-              <Star className="h-4 w-4" />
-              Comprehensive Platform
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              <span className="gradient-text">Complete Restaurant Platform</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Explore our comprehensive suite of features designed to help you grow your restaurant business.
-            </p>
-          </div>
+          <ScrollReveal>
+            <SectionTitle
+              subtitle="Comprehensive Platform"
+              title="Complete Restaurant Platform"
+              description="Explore our comprehensive suite of features designed to help you grow your restaurant business."
+              icon={<Star className="h-4 w-4" />}
+            />
+          </ScrollReveal>
 
-          <div className="space-y-5">
+          <div className="space-y-5 mt-16">
             {featureCategories.map((category) => (
-              <FeatureAccordion
-                key={category.id}
-                category={category}
-                isOpen={expandedCategories.has(category.id)}
-                onToggle={() => toggleCategory(category.id)}
-              />
+              <ScrollReveal key={category.id} direction="up" once>
+                <FeatureAccordion
+                  category={category}
+                  isOpen={expandedCategories.has(category.id)}
+                  onToggle={() => toggleCategory(category.id)}
+                />
+              </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="section-padding hero-gradient">
-        <div className="max-w-5xl mx-auto">
-          <div className="scroll-reveal text-center mb-16">
-            <div className="badge mb-6">
-              <BarChart3 className="h-4 w-4" />
-              See the Difference
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              <span className="gradient-text">Why Helmies vs Traditional?</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              See how we compare to traditional delivery platforms and ordering systems.
-            </p>
-          </div>
+      {/* ===== COMPARISON SECTION - Aivora "Without vs With" Layout ===== */}
+      <section className="section-padding bg-[#2A1F15]/20">
+        <div className="max-w-6xl mx-auto">
+          <ScrollReveal>
+            <SectionTitle
+              subtitle="See the Difference"
+              title="Why Helmies vs Traditional?"
+              description="See how we compare to traditional delivery platforms and ordering systems."
+              icon={<BarChart3 className="h-4 w-4" />}
+            />
+          </ScrollReveal>
 
-          <div className="scroll-reveal">
-            <div className="glass-card rounded-3xl p-6 md:p-8 shadow-2xl overflow-hidden">
-              {/* Comparison Header */}
-              <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200/60">
-                <div className="font-bold text-gray-700 text-lg">Feature</div>
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl font-bold shadow-lg">
-                    <Star className="h-5 w-5 fill-white" />
-                    Helmies
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="inline-flex px-6 py-3 bg-gray-100 text-gray-600 rounded-2xl font-semibold">
-                    Traditional
-                  </div>
-                </div>
-              </div>
-
-              {/* Comparison Rows */}
-              <div className="space-y-3">
-                {comparisonData.map((item, idx) => (
-                  <div key={idx} className="comparison-row grid grid-cols-3 gap-4 py-4 rounded-2xl bg-gradient-to-r from-white/80 to-transparent hover:from-orange-50/80 transition-all duration-300 items-center">
-                    <div className="font-semibold text-gray-900 pl-4">{item.feature}</div>
-                    <div className="text-center">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-xl font-semibold border border-green-200">
-                        <Check className="h-4 w-4" />
-                        {item.helmies}
+          {/* Side-by-Side Comparison Cards (Aivora Pattern) */}
+          <div className="grid lg:grid-cols-2 gap-6 mt-16 relative">
+            {/* Without Helmies */}
+            <ScrollReveal direction="left" delay={0.1}>
+              <div className="comparison-card relative h-full">
+                <h3 className="text-xl md:text-2xl font-black text-white/60 mb-8">Without Helmies</h3>
+                <ul className="space-y-4">
+                  {comparisonData.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center mt-0.5">
+                        <X className="h-3.5 w-3.5 text-red-400" />
                       </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-50 to-pink-50 text-red-600 rounded-xl font-medium border border-red-200">
-                        <X className="h-4 w-4" />
-                        {item.traditional}
+                      <div>
+                        <span className="text-white/40 text-sm font-medium block">{item.feature}</span>
+                        <span className="text-white/60 text-sm">{item.traditional}</span>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* V/S Badge - positioned on the right edge */}
+                <span className="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#CC6200] items-center justify-center text-[#0D0907] font-black text-sm border-2 border-[#0D0907] shadow-lg shadow-[#FF7A00]/20">
+                  v/s
+                </span>
               </div>
+            </ScrollReveal>
+
+            {/* With Helmies */}
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="comparison-card relative h-full" style={{ borderColor: 'rgba(255,122,0,0.15)' }}>
+                <h3 className="text-xl md:text-2xl font-black gradient-text mb-8">With Helmies</h3>
+                <ul className="space-y-4">
+                  {comparisonData.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FF7A00]/10 flex items-center justify-center mt-0.5">
+                        <Check className="h-3.5 w-3.5 text-[#FF7A00]" />
+                      </div>
+                      <div>
+                        <span className="text-white/40 text-sm font-medium block">{item.feature}</span>
+                        <span className="text-white text-sm font-semibold">{item.helmies}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            {/* Mobile V/S Badge */}
+            <div className="lg:hidden flex justify-center -my-3 relative z-10">
+              <span className="w-12 h-12 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#CC6200] flex items-center justify-center text-[#0D0907] font-black text-sm border-2 border-[#0D0907] shadow-lg shadow-[#FF7A00]/20">
+                v/s
+              </span>
             </div>
           </div>
 
-          <div className="scroll-reveal mt-12 text-center">
-            <Link
-              to="/pricing"
-              className="btn-primary inline-flex items-center gap-3"
-            >
-              View Pricing Plans
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
+          <ScrollReveal direction="up" delay={0.3}>
+            <div className="mt-12 text-center">
+              <AivoraButton to="/pricing">View Pricing Plans</AivoraButton>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* Integration Showcase Section */}
-      <section className="section-padding bg-white">
+      {/* ===== INTEGRATION SECTION ===== */}
+      <section className="section-padding bg-[#0D0907]">
         <div className="max-w-6xl mx-auto">
-          <div className="scroll-reveal text-center mb-16">
-            <div className="badge mb-6">
-              <Zap className="h-4 w-4" />
-              Connect Everything
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              <span className="gradient-text">Seamless Integrations</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Connect with the tools you already use. From payment processors to marketing platforms, we've got you covered.
-            </p>
-          </div>
+          <ScrollReveal>
+            <SectionTitle
+              subtitle="Connect Everything"
+              title="Seamless Integrations"
+              description="Connect with the tools you already use. From payment processors to marketing platforms, we have got you covered."
+              icon={<Zap className="h-4 w-4" />}
+            />
+          </ScrollReveal>
 
-          <div className="integrations-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mb-16">
-            {integrations.map((integration) => (
-              <div key={integration.name} className="integration-card group">
-                <div className={`card-gradient bg-gradient-to-br ${integration.color} p-6 rounded-3xl text-white text-center shadow-lg transition-all duration-500 transform group-hover:-translate-y-2 group-hover:shadow-2xl`}>
-                  <div className="font-black text-xl mb-1">{integration.name}</div>
-                  <div className="text-xs opacity-80 font-medium">{integration.category}</div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mt-16">
+            {integrations.map((integration, idx) => (
+              <ScrollReveal key={integration.name} direction="scale" delay={idx * 0.05} once>
+                <div className="glass-card xb-border p-6 text-center group hover:border-[#FF7A00]/20 transition-all duration-300 hover:-translate-y-1">
+                  <div className={`w-14 h-14 mx-auto mb-3 rounded-2xl bg-gradient-to-br ${integration.color} flex items-center justify-center`}>
+                    <span className="text-white font-black text-lg">{integration.name.charAt(0)}</span>
+                  </div>
+                  <div className="font-bold text-white text-sm mb-1">{integration.name}</div>
+                  <div className="text-white/40 text-xs font-medium">{integration.category}</div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
           {/* Integration Categories Summary */}
-          <div className="scroll-reveal grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-            {Object.entries(
-              integrations.reduce((acc: Record<string, number>, integration) => {
-                acc[integration.category] = (acc[integration.category] || 0) + 1;
-                return acc;
-              }, {})
-            ).map(([category, count]) => (
-              <div key={category} className="glass-card glass-card-hover rounded-3xl p-6 text-center">
-                <div className="text-3xl font-black gradient-text mb-1">{count}+</div>
-                <div className="text-gray-600 text-sm font-medium">{category}</div>
-              </div>
-            ))}
-          </div>
+          <ScrollReveal direction="up" delay={0.2}>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-12">
+              {Object.entries(
+                integrations.reduce((acc: Record<string, number>, integration) => {
+                  acc[integration.category] = (acc[integration.category] || 0) + 1;
+                  return acc;
+                }, {})
+              ).map(([category, count]) => (
+                <div key={category} className="glass-card xb-border p-6 text-center">
+                  <div className="text-3xl font-black gradient-text mb-1">{count}+</div>
+                  <div className="text-white/50 text-sm font-medium">{category}</div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-orange-50 via-white to-pink-50">
-        <div className="scroll-reveal max-w-4xl mx-auto text-center">
-          <div className="card-gradient rounded-3xl p-10 md:p-16 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-              Ready to Transform Your Restaurant?
-            </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join hundreds of restaurants already using Helmies to grow their business.
-            </p>
-            <Link
-              to="/get-started"
-              className="inline-flex px-10 py-5 bg-white text-orange-600 rounded-2xl font-black hover:bg-orange-50 transition-all items-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300"
-            >
-              Get Started for Free
-              <ArrowRight className="h-6 w-6" />
-            </Link>
-            <p className="mt-8 text-white/80 text-sm font-medium">
-              No credit card required. Setup in 5 minutes.
-            </p>
+      {/* ===== CTA SECTION - Aivora Left-Aligned Layout ===== */}
+      <section className="section-padding bg-[#2A1F15]/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Content */}
+            <ScrollReveal direction="left">
+              <SectionTitle
+                subtitle="Ready to grow?"
+                title="Transform Your Restaurant"
+                description="Join hundreds of restaurants already using Helmies to grow their business. No credit card required. Setup in 5 minutes."
+                align="left"
+                icon={<Zap className="h-4 w-4" />}
+              />
+              <div className="mt-10">
+                <LaunchCountdown showRestaurants />
+              </div>
+            </ScrollReveal>
+
+            {/* Right Column - Stats / Highlights */}
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-5">
+                <div className="glass-card xb-border p-6">
+                  <div className="feature-icon w-12 h-12 mb-4">
+                    <Zap className="h-6 w-6" />
+                  </div>
+                  <div className="text-2xl font-black gradient-text mb-1">5 min</div>
+                  <p className="text-white/50 text-sm">Average setup time with AI-powered wizard</p>
+                </div>
+                <div className="glass-card xb-border p-6">
+                  <div className="feature-icon w-12 h-12 mb-4">
+                    <Star className="h-6 w-6" />
+                  </div>
+                  <div className="text-2xl font-black gradient-text mb-1">0%</div>
+                  <p className="text-white/50 text-sm">Commission on every order you receive</p>
+                </div>
+                <div className="glass-card xb-border p-6">
+                  <div className="feature-icon w-12 h-12 mb-4">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <div className="text-2xl font-black gradient-text mb-1">500+</div>
+                  <p className="text-white/50 text-sm">Restaurants already growing with us</p>
+                </div>
+                <div className="glass-card xb-border p-6">
+                  <div className="feature-icon w-12 h-12 mb-4">
+                    <Globe className="h-6 w-6" />
+                  </div>
+                  <div className="text-2xl font-black gradient-text mb-1">24/7</div>
+                  <p className="text-white/50 text-sm">Finnish support whenever you need help</p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

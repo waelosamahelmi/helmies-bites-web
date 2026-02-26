@@ -28,7 +28,7 @@ const domainOptions = [
     icon: <LinkIcon className="h-6 w-6" />,
     gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
     badge: 'PREMIUM',
-    badgeColor: 'bg-purple-100 text-purple-700 border-purple-200',
+    badgeColor: 'bg-[#FF7A00]/10 text-[#8B4513] border-[#FF7A00]/20',
   },
   {
     id: 'path' as DomainType,
@@ -163,8 +163,8 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
       {domainType === 'custom' && (
         <div className="glass-card rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center">
-              <LinkIcon className="h-5 w-5 text-purple-600" />
+            <div className="w-10 h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center">
+              <LinkIcon className="h-5 w-5 text-[#CC6200]" />
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
@@ -181,8 +181,8 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             placeholder="your-restaurant.fi"
             className="input-modern"
           />
-          <div className="mt-4 p-4 rounded-xl bg-purple-50 border border-purple-200">
-            <p className="text-sm text-purple-900">
+          <div className="mt-4 p-4 rounded-xl bg-purple-50 border border-[#FF7A00]/20">
+            <p className="text-sm text-[#3A1F0B]">
               <strong>After setup:</strong> You'll need to update your DNS settings to point to our servers.
               We'll send you detailed instructions via email.
             </p>

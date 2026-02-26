@@ -191,7 +191,7 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
       </div>
 
       {/* AI Theme Generation */}
-      <div className="glass-card rounded-2xl p-6 bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
+      <div className="glass-card rounded-2xl p-6 bg-gradient-to-r from-purple-50 to-pink-50 border-[#FF7A00]/20">
         <div className="text-center">
           <div className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-4">
             <Sparkles className="h-8 w-8 text-white" />

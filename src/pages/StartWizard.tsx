@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Loader2, Check, ArrowUpRight, Rocket } from 'lucide-react';
 import { api } from '@/lib/api';
+import { SectionTitle } from '@/components/SectionTitle';
 import { RestaurantInfoStep } from '@/components/wizard-steps/RestaurantInfoStep';
 import { MenuUploadStep } from '@/components/wizard-steps/MenuUploadStep';
 import { ThemeSelectionStep } from '@/components/wizard-steps/ThemeSelectionStep';
@@ -107,27 +108,32 @@ export function StartWizard() {
 
   return (
     <div className="min-h-screen hero-gradient py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-10">
+      <div className="max-w-4xl mx-auto relative z-10">
+        {/* Back Button */}
+        <div className="text-center mb-6">
           <button
             onClick={() => navigate('/')}
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors font-semibold mb-6"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-[#FF7A00] transition-colors font-semibold"
           >
             <ChevronLeft className="h-5 w-5" />
             Back to Home
           </button>
-          <h1 className="text-4xl md:text-5xl font-black mb-3">
-            <span className="gradient-text">Setup Your Restaurant</span>
-          </h1>
-          <p className="text-gray-600 text-lg">Complete these steps to launch your restaurant website</p>
         </div>
 
+        {/* Header - SectionTitle */}
+        <SectionTitle
+          subtitle="Get Started"
+          title="Setup Your Restaurant"
+          description="Complete these steps to launch your restaurant website"
+          icon={<Rocket className="h-4 w-4" />}
+          className="mb-10"
+        />
+
         {/* Progress Steps */}
-        <div className="glass-card rounded-3xl p-6 mb-8">
+        <div className="glass-card xb-border rounded-[20px] p-6 mb-8">
           <div className="relative">
             {/* Progress Line Background */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2 rounded-full" />
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-[#2A1F15]/40 -translate-y-1/2 rounded-full" />
 
             {/* Active Progress Line */}
             <div
@@ -157,8 +163,8 @@ export function StartWizard() {
                         isCompleted
                           ? 'gradient-bg text-white shadow-lg scale-110'
                           : isCurrent
-                          ? 'gradient-bg text-white shadow-lg scale-110 ring-4 ring-orange-100'
-                          : 'bg-white text-gray-400 border-2 border-gray-200'
+                          ? 'gradient-bg text-white shadow-lg scale-110 ring-4 ring-[#FF7A00]/20'
+                          : 'bg-[#1A1410] text-white/40 border-2 border-white/10'
                       }`}
                     >
                       {isCompleted ? (
@@ -171,7 +177,7 @@ export function StartWizard() {
                     {/* Step Label */}
                     <span
                       className={`text-xs font-semibold whitespace-nowrap hidden sm:block ${
-                        isCurrent ? 'text-orange-600' : isCompleted ? 'text-gray-600' : 'text-gray-400'
+                        isCurrent ? 'text-[#FF7A00]' : isCompleted ? 'text-white/60' : 'text-white/40'
                       }`}
                     >
                       {step.title}
@@ -185,10 +191,10 @@ export function StartWizard() {
           {/* Progress Bar (Mobile) */}
           <div className="mt-6 sm:hidden">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-semibold text-gray-600">Step {currentStepIndex + 1} of {steps.length}</span>
+              <span className="text-sm font-semibold text-white/60">Step {currentStepIndex + 1} of {steps.length}</span>
               <span className="text-sm font-bold gradient-text">{Math.round(progress)}%</span>
             </div>
-            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-2 bg-[#2A1F15]/40 rounded-full overflow-hidden">
               <div
                 className="h-full gradient-bg transition-all duration-500 ease-out rounded-full"
                 style={{ width: `${progress}%` }}
@@ -198,17 +204,17 @@ export function StartWizard() {
         </div>
 
         {/* Current Step Card */}
-        <div className="glass-card glass-card-hover rounded-3xl p-8 md:p-10 mb-8">
+        <div className="glass-card xb-border rounded-[20px] p-8 md:p-10 mb-8">
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-2">
               <div className="feature-icon w-12 h-12">
                 {stepIcons[steps[currentStepIndex].icon]}
               </div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900">
+              <h2 className="text-2xl md:text-3xl font-black text-white">
                 {steps[currentStepIndex].title}
               </h2>
             </div>
-            <p className="text-gray-600 ml-15 mt-2">
+            <p className="text-white/60 ml-15 mt-2">
               {getStepDescription(steps[currentStepIndex].id)}
             </p>
           </div>
@@ -223,6 +229,7 @@ export function StartWizard() {
 
         {/* Navigation Buttons */}
         <div className="flex items-center justify-between gap-4">
+          {/* Previous - btn-secondary */}
           <button
             onClick={goToPreviousStep}
             disabled={currentStepIndex === 0}
@@ -232,40 +239,103 @@ export function StartWizard() {
             Previous
           </button>
 
+          {/* Next / Complete - aivora-btn style */}
           {currentStepIndex === steps.length - 1 ? (
             <button
               onClick={handleComplete}
               disabled={isSubmitting}
-              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              className="aivora-btn disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                  Setting up...
-                </>
-              ) : (
-                <>
-                  Complete Setup
-                  <Check className="h-5 w-5" />
-                </>
-              )}
+              <span className="relative z-10">
+                {isSubmitting ? (
+                  <span className="flex items-center gap-2">
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                    Setting up...
+                  </span>
+                ) : (
+                  'Complete Setup'
+                )}
+              </span>
+              <span className="arrow-icon">
+                {isSubmitting ? (
+                  <Loader2 className="h-5 w-5 text-white animate-spin" />
+                ) : (
+                  <>
+                    <ArrowUpRight className="h-5 w-5 text-white" />
+                    <ArrowUpRight className="h-5 w-5 text-white" />
+                  </>
+                )}
+              </span>
+              <span className="btn-bg-svg">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 484 60"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="484" height="60" fill="url(#wizard_btn_grad)" />
+                  <defs>
+                    <radialGradient
+                      id="wizard_btn_grad"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stopColor="#FF7A00" />
+                      <stop offset="1" stopColor="#0D0907" stopOpacity="0" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </span>
             </button>
           ) : (
             <button
               onClick={goToNextStep}
-              className="btn-primary flex items-center gap-2"
+              className="aivora-btn"
             >
-              Next Step
-              <ChevronRight className="h-5 w-5" />
+              <span className="relative z-10">Next Step</span>
+              <span className="arrow-icon">
+                <ChevronRight className="h-5 w-5 text-white" />
+                <ChevronRight className="h-5 w-5 text-white" />
+              </span>
+              <span className="btn-bg-svg">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 484 60"
+                  fill="none"
+                  preserveAspectRatio="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="484" height="60" fill="url(#wizard_next_grad)" />
+                  <defs>
+                    <radialGradient
+                      id="wizard_next_grad"
+                      cx="0"
+                      cy="0"
+                      r="1"
+                      gradientTransform="matrix(-667.5 -25 0.582116 -49.7476 497 39)"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stopColor="#FF7A00" />
+                      <stop offset="1" stopColor="#0D0907" stopOpacity="0" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+              </span>
             </button>
           )}
         </div>
 
         {/* Help Text */}
         <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-white/50">
             Need help? Contact our support team at{' '}
-            <a href="mailto:support@helmiesbites.fi" className="text-orange-600 font-semibold hover:underline">
+            <a href="mailto:support@helmiesbites.fi" className="text-[#FF7A00] font-semibold hover:underline">
               support@helmiesbites.fi
             </a>
           </p>
