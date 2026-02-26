@@ -154,8 +154,8 @@ const integrations = [
   { name: 'MobilePay', icon: <Smartphone className="h-8 w-8" />, color: 'bg-pink-500' },
   { name: 'Mastercard', icon: <CreditCard className="h-8 w-8" />, color: 'bg-orange-500' },
   { name: 'Visa', icon: <CreditCard className="h-8 w-8" />, color: 'bg-blue-600' },
-  { name: 'Wolt', icon: <Truck className="h-8 w-8" />, color: 'bg-blue-500' },
-  { name: 'Foodora', icon: <Truck className="h-8 w-8" />, color: 'bg-orange-600' },
+  { name: 'Stripe', icon: <CreditCard className="h-8 w-8" />, color: 'bg-purple-600' },
+  { name: 'PayPal', icon: <CreditCard className="h-8 w-8" />, color: 'bg-blue-500' },
 ];
 
 const restaurantLogos = [
@@ -794,7 +794,7 @@ export function Home() {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Delivery Integration</h3>
                     <p className="text-gray-400 text-sm">
-                      Connect with Wolt, Foodora, or your own delivery fleet
+                      Built-in delivery management with zones, fees, and tracking
                     </p>
                   </div>
                 </div>

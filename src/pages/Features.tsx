@@ -195,9 +195,9 @@ const featureCategories: FeatureCategory[] = [
       },
       {
         icon: <Users className="h-5 w-5" />,
-        title: 'Third-Party Integration',
-        description: 'Seamlessly integrate with Wolt, Foodora, and other delivery platforms.',
-        benefit: 'Manage all orders from one place',
+        title: 'Driver Management',
+        description: 'Assign orders to drivers, track deliveries, and optimize routes.',
+        benefit: 'Complete control over delivery experience',
       },
     ],
   },
@@ -394,8 +394,8 @@ const comparisonData = [
 
 const integrations = [
   { name: 'Stripe', category: 'Payments' },
-  { name: 'Wolt', category: 'Delivery' },
-  { name: 'Foodora', category: 'Delivery' },
+  { name: 'MobilePay', category: 'Payments' },
+  { name: 'PayPal', category: 'Payments' },
   { name: 'Mailchimp', category: 'Marketing' },
   { name: 'Klaviyo', category: 'Marketing' },
   { name: 'QuickBooks', category: 'Accounting' },
@@ -409,8 +409,8 @@ const integrations = [
 
 const integrationColors: Record<string, string> = {
   Stripe: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-  Wolt: 'bg-gradient-to-br from-blue-500 to-cyan-500',
-  Foodora: 'bg-gradient-to-br from-pink-500 to-rose-500',
+  MobilePay: 'bg-gradient-to-br from-pink-500 to-rose-500',
+  PayPal: 'bg-gradient-to-br from-blue-500 to-blue-600',
   Mailchimp: 'bg-gradient-to-br from-yellow-400 to-orange-500',
   Klaviyo: 'bg-gradient-to-br from-green-500 to-teal-500',
   QuickBooks: 'bg-gradient-to-br from-emerald-500 to-green-600',
