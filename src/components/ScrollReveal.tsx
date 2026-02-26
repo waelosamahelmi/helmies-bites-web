@@ -403,8 +403,13 @@ export const ScrollReveal = forwardRef<ScrollRevealRef, ScrollRevealProps>(
 
       // Determine targets
       const targets = stagger > 0
-        ? '> *' // Direct children
+        ? Array.from(elementRef.current?.children || []) // Direct children as array
         : elementRef.current; // Wrapper itself
+
+      // Skip if no valid targets
+      if (!targets || (Array.isArray(targets) && targets.length === 0)) {
+        return;
+      }
 
       const finalToggleActions = toggleActions || (once && !scrub
         ? 'play none none none'
