@@ -23,6 +23,15 @@ export function Navbar() {
             <Link to="/pricing" className="text-gray-600 hover:text-gray-900">
               Pricing
             </Link>
+            <Link to="/about" className="text-gray-600 hover:text-gray-900">
+              About
+            </Link>
+            <Link to="/faq" className="text-gray-600 hover:text-gray-900">
+              FAQ
+            </Link>
+            <Link to="/contact" className="text-gray-600 hover:text-gray-900">
+              Contact
+            </Link>
             <Link to="/get-started" className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 font-medium">
               Get Started
             </Link>
@@ -52,6 +61,27 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                to="/faq"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                FAQ
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-600 hover:text-gray-900"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
               </Link>
               <Link
                 to="/get-started"
