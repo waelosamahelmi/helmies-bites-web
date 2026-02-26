@@ -9,14 +9,15 @@ import {
   Shield,
   HelpCircle,
   ChevronDown,
+  Star,
+  Clock,
+  CreditCard,
+  HeadphonesIcon,
+  CheckCircle2,
+  XCircle,
+  Award,
 } from 'lucide-react';
 import { ScrollReveal, ScrollRevealBatch } from '../components/ScrollReveal';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@radix-ui/react-accordion';
 
 /* ============================================================================
    Pricing Tiers Data
@@ -39,6 +40,7 @@ interface PricingTier {
     text: string;
     variant: 'primary' | 'secondary';
   };
+  icon: React.ReactNode;
 }
 
 const pricingTiers: PricingTier[] = [
@@ -49,6 +51,8 @@ const pricingTiers: PricingTier[] = [
     monthlyPrice: 0,
     yearlyPrice: 0,
     transactionFee: '5%',
+    badge: undefined,
+    icon: <Star className="h-6 w-6" />,
     features: {
       included: [
         'Essential features',
@@ -83,6 +87,7 @@ const pricingTiers: PricingTier[] = [
     transactionFee: '3%',
     badge: 'Most Popular',
     highlighted: true,
+    icon: <Sparkles className="h-6 w-6" />,
     features: {
       included: [
         'Everything in Starter',
@@ -113,6 +118,7 @@ const pricingTiers: PricingTier[] = [
     monthlyPrice: null,
     yearlyPrice: null,
     transactionFee: '2%',
+    icon: <Award className="h-6 w-6" />,
     features: {
       included: [
         'Everything in Professional',
@@ -277,44 +283,43 @@ interface BillingToggleProps {
 }
 
 function BillingToggle({ isYearly, onToggle }: BillingToggleProps) {
-  const toggleRef = useRef<HTMLDivElement>(null);
   const pillRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!pillRef.current) return;
 
     gsap.to(pillRef.current, {
-      x: isYearly ? 0 : 72,
+      left: isYearly ? 'calc(100% - 68px - 4px)' : '4px',
       duration: 0.3,
       ease: 'power2.out',
     });
   }, [isYearly]);
 
   return (
-    <div ref={toggleRef} className="flex items-center gap-3">
+    <div className="flex items-center gap-4">
       <span
-        className={`text-sm font-medium transition-colors ${
-          !isYearly ? 'text-gray-900' : 'text-gray-500'
+        className={`text-sm font-bold transition-all duration-300 ${
+          !isYearly ? 'text-gray-900' : 'text-gray-400'
         }`}
       >
         Monthly
       </span>
       <button
         onClick={() => onToggle(!isYearly)}
-        className="relative w-36 h-8 bg-gray-100 rounded-full p-1 transition-colors hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+        className="relative w-40 h-10 glass-card rounded-full p-1 transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
         aria-pressed={isYearly}
       >
         <div
           ref={pillRef}
-          className="absolute top-1 left-1 w-[68px] h-6 bg-orange-600 rounded-full shadow-sm"
+          className="absolute top-1 left-1 w-[68px] h-8 rounded-full gradient-bg shadow-md z-10"
         />
-        <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-white">
-          {isYearly ? 'Yearly -20%' : 'Monthly'}
+        <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-600">
+          {isYearly ? 'Yearly' : 'Monthly'}
         </span>
       </button>
       <span
-        className={`text-sm font-medium transition-colors ${
-          isYearly ? 'text-gray-900' : 'text-gray-500'
+        className={`text-sm font-bold transition-all duration-300 ${
+          isYearly ? 'text-gray-900' : 'text-gray-400'
         }`}
       >
         Yearly
@@ -334,28 +339,23 @@ interface PricingCardProps {
 
 function PricingCard({ tier, isYearly }: PricingCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const isHoveredRef = useRef(false);
 
   const price = isYearly && tier.yearlyPrice !== null ? tier.yearlyPrice : tier.monthlyPrice;
   const showMonthlyEquivalent = isYearly && tier.yearlyPrice !== null && tier.monthlyPrice !== 0;
 
   const handleMouseEnter = () => {
-    if (!cardRef.current || !tier.highlighted) return;
-    isHoveredRef.current = true;
+    if (!cardRef.current) return;
     gsap.to(cardRef.current, {
       y: -8,
-      scale: 1.02,
       duration: 0.3,
       ease: 'power2.out',
     });
   };
 
   const handleMouseLeave = () => {
-    if (!cardRef.current || !tier.highlighted) return;
-    isHoveredRef.current = false;
+    if (!cardRef.current) return;
     gsap.to(cardRef.current, {
       y: 0,
-      scale: 1,
       duration: 0.3,
       ease: 'power2.out',
     });
@@ -366,98 +366,102 @@ function PricingCard({ tier, isYearly }: PricingCardProps) {
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-2xl p-8 transition-all duration-300 ${
-        tier.highlighted
-          ? 'bg-gradient-to-br from-orange-600 to-orange-700 text-white shadow-2xl shadow-orange-600/25'
-          : 'bg-white border border-gray-200 shadow-sm hover:shadow-lg hover:border-orange-200'
+      className={`relative glass-card glass-card-hover rounded-3xl p-8 ${
+        tier.highlighted ? 'pricing-popular glow-orange' : ''
       }`}
     >
-      {tier.badge && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-orange-500 text-white text-sm font-semibold rounded-full shadow-lg">
-            <Sparkles className="h-3.5 w-3.5" />
-            {tier.badge}
-          </span>
-        </div>
-      )}
+      {/* Icon */}
+      <div
+        className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+          tier.highlighted
+            ? 'bg-gradient-to-br from-orange-500 to-pink-500 text-white'
+            : 'feature-icon'
+        }`}
+      >
+        {tier.icon}
+      </div>
 
+      {/* Name & Tagline */}
       <div className="mb-6">
-        <h3 className={`text-xl font-bold mb-1 ${tier.highlighted ? 'text-white' : 'text-gray-900'}`}>
+        <h3 className="text-2xl font-black text-gray-900 mb-2">
           {tier.name}
         </h3>
-        <p className={`text-sm ${tier.highlighted ? 'text-orange-100' : 'text-gray-500'}`}>
+        <p className="text-sm text-gray-500 font-medium">
           {tier.tagline}
         </p>
       </div>
 
+      {/* Price */}
       <div className="mb-6">
         {price === null ? (
-          <div>
-            <span className={`text-4xl font-bold ${tier.highlighted ? 'text-white' : 'text-gray-900'}`}>
+          <div className="flex items-baseline gap-2">
+            <span className="text-4xl font-black text-gray-900">
               Custom
             </span>
           </div>
         ) : (
           <div>
             <div className="flex items-baseline gap-1">
-              <span className="text-4xl font-bold">
-                {price === 0 ? 'Free' : `${price}`}
+              <span className="text-5xl font-black gradient-text">
+                {price === 0 ? 'Free' : `$${price}`}
               </span>
               {price > 0 && (
-                <span className={`text-lg ${tier.highlighted ? 'text-orange-100' : 'text-gray-500'}`}>
+                <span className="text-lg font-semibold text-gray-400">
                   /mo
                 </span>
               )}
             </div>
             {showMonthlyEquivalent && (
-              <p className="text-sm text-orange-100 mt-1">
-                Billed {price * 12}/year (save 20%)
+              <p className="text-sm text-gray-500 mt-2 font-medium">
+                Billed ${price * 12}/year
+                <span className="ml-2 inline-flex items-center gap-1 text-green-600 font-bold">
+                  <Zap className="h-3 w-3" />
+                  Save 20%
+                </span>
               </p>
             )}
           </div>
         )}
-        <div className="mt-3">
-          <span className={`text-sm font-medium ${tier.highlighted ? 'text-orange-100' : 'text-gray-600'}`}>
+        <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full">
+          <span className="text-sm font-bold text-orange-600">
             {tier.transactionFee} transaction fee
           </span>
         </div>
       </div>
 
-      <ul className="space-y-3 mb-8">
+      {/* Features */}
+      <ul className="space-y-4 mb-8">
         {tier.features.included.map((feature, i) => (
-          <li key={i} className="flex items-start gap-2">
-            <Check
-              className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                tier.highlighted ? 'text-orange-200' : 'text-green-600'
-              }`}
-            />
-            <span className={`text-sm ${tier.highlighted ? 'text-white' : 'text-gray-700'}`}>
+          <li key={i} className="flex items-start gap-3">
+            <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <CheckCircle2 className="h-4 w-4 text-green-600" />
+            </div>
+            <span className="text-sm font-medium text-gray-700">
               {feature}
             </span>
           </li>
         ))}
         {tier.features.excluded.map((feature, i) => (
-          <li key={i} className="flex items-start gap-2 opacity-60">
-            <X
-              className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                tier.highlighted ? 'text-orange-200' : 'text-gray-400'
-              }`}
-            />
-            <span className={`text-sm ${tier.highlighted ? 'text-white' : 'text-gray-400'}`}>
+          <li key={i} className="flex items-start gap-3 opacity-40">
+            <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <X className="h-4 w-4 text-gray-400" />
+            </div>
+            <span className="text-sm font-medium text-gray-500">
               {feature}
             </span>
           </li>
         ))}
       </ul>
 
+      {/* CTA Button */}
       <Link
         to="/get-started"
-        className={`block w-full px-6 py-3 rounded-xl font-semibold text-center transition-all duration-200 ${
+        className={`block w-full px-6 py-4 rounded-2xl font-bold text-center transition-all duration-300 ${
           tier.highlighted
-            ? 'bg-white text-orange-600 hover:bg-orange-50 shadow-lg'
+            ? 'btn-primary'
             : tier.cta.variant === 'primary'
-            ? 'bg-orange-600 text-white hover:bg-orange-700'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            ? 'btn-primary'
+            : 'btn-secondary'
         }`}
       >
         {tier.cta.text}
@@ -476,14 +480,20 @@ interface FAQItemProps {
 
 function FAQItem({ faq }: FAQItemProps) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const chevronRef = useRef<SVGSVGElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (!contentRef.current) return;
+    if (!contentRef.current || !chevronRef.current) return;
 
     if (isOpen) {
       gsap.to(contentRef.current, {
         height: 'auto',
+        duration: 0.4,
+        ease: 'power3.out',
+      });
+      gsap.to(chevronRef.current, {
+        rotation: 180,
         duration: 0.3,
         ease: 'power2.out',
       });
@@ -493,30 +503,36 @@ function FAQItem({ faq }: FAQItemProps) {
         duration: 0.3,
         ease: 'power2.out',
       });
+      gsap.to(chevronRef.current, {
+        rotation: 0,
+        duration: 0.3,
+        ease: 'power2.out',
+      });
     }
   }, [isOpen]);
 
   return (
-    <AccordionItem value={faq.id} className="border-b border-gray-200 last:border-0">
-      <AccordionTrigger
+    <div className="glass-card rounded-2xl mb-4 overflow-hidden">
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full py-5 text-left group focus:outline-none"
+        className="flex items-center justify-between w-full p-6 text-left group focus:outline-none"
       >
-        <span className="text-lg font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+        <span className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors pr-4">
           {faq.question}
         </span>
-        <ChevronDown
-          className={`h-5 w-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ml-4 ${
-            isOpen ? 'rotate-180 text-orange-600' : ''
-          }`}
-        />
-      </AccordionTrigger>
-      <AccordionContent asChild>
-        <div ref={contentRef} className="overflow-hidden">
-          <p className="pb-5 text-gray-600 leading-relaxed">{faq.answer}</p>
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center flex-shrink-0 group-hover:from-orange-200 group-hover:to-pink-200 transition-all duration-300">
+          <ChevronDown
+            ref={chevronRef}
+            className="h-5 w-5 text-orange-600"
+          />
         </div>
-      </AccordionContent>
-    </AccordionItem>
+      </button>
+      <div ref={contentRef} className="overflow-hidden">
+        <p className="px-6 pb-6 text-gray-600 leading-relaxed">
+          {faq.answer}
+        </p>
+      </div>
+    </div>
   );
 }
 
@@ -533,8 +549,8 @@ function FeatureCheck({ value, highlighted }: FeatureCheckProps) {
   if (typeof value === 'string') {
     return (
       <span
-        className={`text-sm font-medium ${
-          highlighted ? 'text-orange-600' : value === 'Basic' ? 'text-gray-500' : 'text-gray-700'
+        className={`text-sm font-bold ${
+          highlighted ? 'gradient-text' : value === 'Basic' ? 'text-gray-400' : 'text-gray-600'
         }`}
       >
         {value}
@@ -543,9 +559,13 @@ function FeatureCheck({ value, highlighted }: FeatureCheckProps) {
   }
 
   return value ? (
-    <Check className={`h-5 w-5 ${highlighted ? 'text-orange-600' : 'text-green-600'}`} />
+    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mx-auto">
+      <Check className="h-5 w-5 text-green-600" />
+    </div>
   ) : (
-    <X className="h-5 w-5 text-gray-300" />
+    <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center mx-auto">
+      <XCircle className="h-5 w-5 text-gray-300" />
+    </div>
   );
 }
 
@@ -556,11 +576,9 @@ function FeatureCheck({ value, highlighted }: FeatureCheckProps) {
 export function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
-  const pricingCardsRef = useRef<HTMLDivElement>(null);
-  const tableRef = useRef<HTMLDivElement>(null);
+  const savingsBadgeRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Animate hero elements on mount
     if (!heroRef.current) return;
 
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -590,40 +608,61 @@ export function Pricing() {
       );
   }, []);
 
+  useEffect(() => {
+    if (!savingsBadgeRef.current) return;
+
+    if (isYearly) {
+      gsap.fromTo(
+        savingsBadgeRef.current,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(1.7)' }
+      );
+    }
+  }, [isYearly]);
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-white font-sans">
       {/* Hero Section */}
-      <section ref={heroRef} className="pt-24 pb-16 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-full mb-6">
+      <section ref={heroRef} className="hero-gradient section-padding relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 floating" />
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 floating-delayed" />
+
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="hero-badge badge mb-8">
             <Sparkles className="h-4 w-4" />
-            <span className="text-sm font-medium">Trusted by 500+ restaurants</span>
+            <span>Trusted by 500+ restaurants worldwide</span>
           </div>
 
-          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-            Simple, Transparent Pricing
+          <h1 className="hero-title text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+            <span className="gradient-text">Simple, Transparent</span>
+            <br />
+            <span className="text-gray-900">Pricing</span>
           </h1>
 
-          <p className="hero-subtitle text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            No hidden fees. Cancel anytime. Choose the plan that fits your restaurant.
+          <p className="hero-subtitle text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+            No hidden fees. Cancel anytime. Choose the perfect plan for your restaurant's success.
           </p>
 
-          <div className="hero-toggle flex items-center justify-center">
+          <div className="hero-toggle flex items-center justify-center mb-6">
             <BillingToggle isYearly={isYearly} onToggle={setIsYearly} />
           </div>
 
           {isYearly && (
-            <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full">
-              <Zap className="h-4 w-4" />
-              <span className="text-sm font-medium">Save 20% with yearly billing</span>
+            <div
+              ref={savingsBadgeRef}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full shadow-lg"
+            >
+              <Zap className="h-5 w-5" />
+              <span className="text-sm font-bold">Save 20% with yearly billing</span>
             </div>
           )}
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section ref={pricingCardsRef} className="py-12 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="section-padding bg-gradient-to-b from-white to-gray-50/50">
+        <div className="max-w-7xl mx-auto px-6">
           <ScrollRevealBatch
             stagger={0.15}
             direction="up"
@@ -640,164 +679,250 @@ export function Pricing() {
       </section>
 
       {/* Trust Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal direction="fade">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 md:p-12 border border-orange-100">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                    <Shield className="h-7 w-7 text-orange-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Money-Back Guarantee</h3>
-                  <p className="text-sm text-gray-600">
-                    30-day full refund if you're not satisfied
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                    <Zap className="h-7 w-7 text-orange-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">No Setup Fees</h3>
-                  <p className="text-sm text-gray-600">
-                    Launch your restaurant website in minutes, completely free
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                    <Sparkles className="h-7 w-7 text-orange-600" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Cancel Anytime</h3>
-                  <p className="text-sm text-gray-600">
-                    No contracts or long-term commitments required
-                  </p>
-                </div>
-              </div>
+      <section className="section-padding gradient-animated relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/5" />
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <ScrollReveal direction="up">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+                Why Restaurants Choose Us
+              </h2>
+              <p className="text-white/80 text-lg max-w-2xl mx-auto">
+                We're committed to your success with risk-free guarantees
+              </p>
             </div>
           </ScrollReveal>
+
+          <ScrollRevealBatch
+            stagger={0.1}
+            direction="up"
+            display="grid"
+            gridCols={3}
+            gap="2rem"
+            className="md:grid-cols-3 grid-cols-1"
+          >
+            {/* Trust Badge 1 */}
+            <div className="glass-card rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-3">
+                Money-Back Guarantee
+              </h3>
+              <p className="text-gray-600 font-medium">
+                30-day full refund if you're not completely satisfied
+              </p>
+            </div>
+
+            {/* Trust Badge 2 */}
+            <div className="glass-card rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-orange-400 to-pink-500 flex items-center justify-center shadow-lg">
+                <Zap className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-3">
+                No Setup Fees
+              </h3>
+              <p className="text-gray-600 font-medium">
+                Launch your restaurant website in minutes, completely free
+              </p>
+            </div>
+
+            {/* Trust Badge 3 */}
+            <div className="glass-card rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center shadow-lg">
+                <Clock className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-black text-gray-900 mb-3">
+                Cancel Anytime
+              </h3>
+              <p className="text-gray-600 font-medium">
+                No contracts or long-term commitments required
+              </p>
+            </div>
+          </ScrollRevealBatch>
         </div>
       </section>
 
       {/* Features Comparison Table */}
-      <section ref={tableRef} className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal direction="up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <section className="section-padding bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <ScrollReveal direction="up" className="text-center mb-16">
+            <div className="badge mb-6">
+              <CompareArrows className="h-4 w-4" />
+              <span>Side-by-side comparison</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
               Compare All Features
             </h2>
-            <p className="text-gray-600">See exactly what's included in each plan</p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              See exactly what's included in each plan to make the right choice
+            </p>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[600px]">
-                <thead>
-                  <tr className="border-b-2 border-gray-200">
-                    <th className="text-left py-4 px-4 font-semibold text-gray-900 w-1/3">
-                      Feature
-                    </th>
-                    <th className="text-center py-4 px-4 font-semibold text-gray-500">
-                      Starter
-                    </th>
-                    <th className="text-center py-4 px-4 font-semibold text-orange-600">
-                      Professional
-                    </th>
-                    <th className="text-center py-4 px-4 font-semibold text-gray-500">
-                      Enterprise
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonFeatures.map((category) => (
-                    <Fragment key={category.category}>
-                      <tr className="bg-gray-50">
-                        <td colSpan={4} className="py-3 px-4">
-                          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                            {category.category}
-                          </span>
-                        </td>
-                      </tr>
-                      {category.features.map((feature) => (
-                        <tr key={feature.name} className="border-b border-gray-100 hover:bg-gray-50/50">
-                          <td className="py-4 px-4 text-sm font-medium text-gray-700">
-                            {feature.name}
-                          </td>
-                          <td className="py-4 px-4 text-center">
-                            <FeatureCheck value={feature.starter} />
-                          </td>
-                          <td className="py-4 px-4 text-center">
-                            <FeatureCheck value={feature.professional} highlighted />
-                          </td>
-                          <td className="py-4 px-4 text-center">
-                            <FeatureCheck value={feature.enterprise} />
+            <div className="glass-card rounded-3xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[700px]">
+                  <thead>
+                    <tr className="border-b border-gray-200/50 bg-gradient-to-r from-orange-50 to-pink-50">
+                      <th className="text-left py-6 px-6 font-black text-gray-900">
+                        Feature
+                      </th>
+                      <th className="text-center py-6 px-6 font-bold text-gray-500">
+                        Starter
+                      </th>
+                      <th className="text-center py-6 px-6 font-black text-orange-600">
+                        Professional
+                      </th>
+                      <th className="text-center py-6 px-6 font-bold text-gray-500">
+                        Enterprise
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {comparisonFeatures.map((category) => (
+                      <Fragment key={category.category}>
+                        <tr className="bg-gray-50/50">
+                          <td colSpan={4} className="py-4 px-6">
+                            <span className="text-xs font-black text-gray-400 uppercase tracking-wider">
+                              {category.category}
+                            </span>
                           </td>
                         </tr>
-                      ))}
-                    </Fragment>
-                  ))}
-                </tbody>
-              </table>
+                        {category.features.map((feature, idx) => (
+                          <tr
+                            key={feature.name}
+                            className={`border-b border-gray-100 transition-colors ${
+                              idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'
+                            }`}
+                          >
+                            <td className="py-5 px-6 text-sm font-bold text-gray-700">
+                              {feature.name}
+                            </td>
+                            <td className="py-5 px-6 text-center">
+                              <FeatureCheck value={feature.starter} />
+                            </td>
+                            <td className="py-5 px-6 text-center bg-gradient-to-b from-orange-50/50 to-transparent">
+                              <FeatureCheck value={feature.professional} highlighted />
+                            </td>
+                            <td className="py-5 px-6 text-center">
+                              <FeatureCheck value={feature.enterprise} />
+                            </td>
+                          </tr>
+                        ))}
+                      </Fragment>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-3xl mx-auto">
-          <ScrollReveal direction="up" className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-700 rounded-full mb-6">
+      <section className="section-padding hero-gradient">
+        <div className="max-w-4xl mx-auto px-6">
+          <ScrollReveal direction="up" className="text-center mb-16">
+            <div className="badge mb-6">
               <HelpCircle className="h-4 w-4" />
-              <span className="text-sm font-medium">Common Questions</span>
+              <span>Got questions?</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600">Everything you need to know about our pricing</p>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Everything you need to know about our pricing and plans
+            </p>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <Accordion type="multiple" className="space-y-0">
+            <div className="space-y-4">
               {faqs.map((faq) => (
                 <FAQItem key={faq.id} faq={faq} />
               ))}
-            </Accordion>
+            </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="section-padding bg-white relative overflow-hidden">
+        {/* Decorative Background */}
+        <div className="absolute inset-0 gradient-animated opacity-10" />
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <ScrollReveal direction="scale">
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 text-white">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="card-gradient rounded-3xl p-10 md:p-16 text-center glow-orange">
+              <div className="w-20 h-20 mx-auto mb-8 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
+                <Sparkles className="h-10 w-10 text-white" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
                 Ready to Grow Your Restaurant?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of restaurants already using Helmies Bites. Start free, no credit card
-                required.
+              <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-medium">
+                Join hundreds of restaurants already using Helmies Bites. Start free, no credit card required.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   to="/get-started"
-                  className="px-8 py-4 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition-colors"
+                  className="px-10 py-5 bg-white text-orange-600 rounded-2xl font-black hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
                 >
                   Get Started Free
                 </Link>
                 <Link
                   to="/features"
-                  className="px-8 py-4 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-colors border border-white/20"
+                  className="px-10 py-5 bg-white/10 text-white rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 border border-white/30 backdrop-blur-sm"
                 >
                   See All Features
                 </Link>
+              </div>
+
+              {/* Trust Indicators */}
+              <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-white/80">
+                <div className="flex items-center gap-2">
+                  <Shield className="h-5 w-5" />
+                  <span className="text-sm font-medium">30-day guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CreditCard className="h-5 w-5" />
+                  <span className="text-sm font-medium">No credit card required</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <HeadphonesIcon className="h-5 w-5" />
+                  <span className="text-sm font-medium">24/7 support</span>
+                </div>
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
     </div>
+  );
+}
+
+// Additional icon for comparison section
+function CompareArrows({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="m20 20-4-4" />
+      <path d="m16 20 4-4" />
+      <path d="M4 4l4 4" />
+      <path d="M8 4l-4 4" />
+      <path d="M12 12V4" />
+      <path d="M12 12v8" />
+      <path d="M4 12h16" />
+    </svg>
   );
 }

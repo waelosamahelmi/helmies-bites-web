@@ -16,9 +16,9 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50/30 to-pink-50/30">
       <Navbar />
-      <main>
+      <main className="pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/features" element={<Features />} />

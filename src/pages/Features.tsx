@@ -160,7 +160,7 @@ const featureCategories: FeatureCategory[] = [
         benefit: 'Mobile users convert 2x more',
       },
       {
-        icon: <Receipt className="h-5 w-5" />,
+        icon: <ReceiptIcon className="h-5 w-5" />,
         title: 'Digital Receipts',
         description: 'Automatic email receipts with order details and easy re-order links.',
         benefit: 'Encourage repeat purchases',
@@ -182,7 +182,7 @@ const featureCategories: FeatureCategory[] = [
         image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80',
       },
       {
-        icon: <Calculator className="h-5 w-5" />,
+        icon: <CalculatorIcon className="h-5 w-5" />,
         title: 'Dynamic Fee Calculation',
         description: 'Set fees based on distance, order size, or time-of-day with automatic adjustments.',
         benefit: 'Protect margins on small orders',
@@ -209,7 +209,7 @@ const featureCategories: FeatureCategory[] = [
     color: 'from-purple-500 to-violet-500',
     features: [
       {
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUpIcon className="h-5 w-5" />,
         title: 'Sales Analytics',
         description: 'Track revenue, average order value, and growth over time with beautiful visualizations.',
         benefit: 'Make data-driven business decisions',
@@ -243,7 +243,7 @@ const featureCategories: FeatureCategory[] = [
     color: 'from-pink-500 to-rose-500',
     features: [
       {
-        icon: <Tag className="h-5 w-5" />,
+        icon: <TagIcon className="h-5 w-5" />,
         title: 'Promotions & Discounts',
         description: 'Create coupon codes, percentage discounts, and BOGO offers with ease.',
         benefit: 'Drive sales during slow periods',
@@ -262,7 +262,7 @@ const featureCategories: FeatureCategory[] = [
         benefit: 'Reach customers directly in their inbox',
       },
       {
-        icon: <Share2 className="h-5 w-5" />,
+        icon: <Share2Icon className="h-5 w-5" />,
         title: 'Social Sharing',
         description: 'Easy sharing to Facebook, Instagram, and other social platforms.',
         benefit: 'Amplify your reach organically',
@@ -284,7 +284,7 @@ const featureCategories: FeatureCategory[] = [
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
       },
       {
-        icon: <GitBranch className="h-5 w-5" />,
+        icon: <GitBranchIcon className="h-5 w-5" />,
         title: 'Location-Specific Options',
         description: 'Customize menus, pricing, and delivery zones for each location independently.',
         benefit: 'Adapt to local market conditions',
@@ -324,7 +324,7 @@ const featureCategories: FeatureCategory[] = [
         benefit: 'Increase engagement and repeat orders',
       },
       {
-        icon: <Wifi className="h-5 w-5" />,
+        icon: <WifiIcon className="h-5 w-5" />,
         title: 'Offline Capability',
         description: 'Menu browsing works even with poor or no internet connection.',
         benefit: 'Never lose a customer to connectivity issues',
@@ -347,8 +347,8 @@ const comparisonData = [
   },
   {
     feature: 'Monthly Cost',
-    helmies: 'From 29€/month',
-    traditional: '99€-299€/month',
+    helmies: 'From 29/month',
+    traditional: '99-299/month',
   },
   {
     feature: 'Commission on Orders',
@@ -393,61 +393,44 @@ const comparisonData = [
 ];
 
 const integrations = [
-  { name: 'Stripe', category: 'Payments' },
-  { name: 'MobilePay', category: 'Payments' },
-  { name: 'PayPal', category: 'Payments' },
-  { name: 'Mailchimp', category: 'Marketing' },
-  { name: 'Klaviyo', category: 'Marketing' },
-  { name: 'QuickBooks', category: 'Accounting' },
-  { name: 'Xero', category: 'Accounting' },
-  { name: 'Meta', category: 'Social' },
-  { name: 'Google', category: 'Analytics' },
-  { name: 'Facebook', category: 'Social' },
-  { name: 'Instagram', category: 'Social' },
-  { name: 'WhatsApp', category: 'Messaging' },
+  { name: 'Stripe', category: 'Payments', icon: '', color: 'from-indigo-500 to-purple-600' },
+  { name: 'MobilePay', category: 'Payments', icon: '', color: 'from-pink-500 to-rose-500' },
+  { name: 'PayPal', category: 'Payments', icon: '', color: 'from-blue-500 to-blue-600' },
+  { name: 'Mailchimp', category: 'Marketing', icon: '', color: 'from-yellow-400 to-orange-500' },
+  { name: 'Klaviyo', category: 'Marketing', icon: '', color: 'from-green-500 to-teal-500' },
+  { name: 'QuickBooks', category: 'Accounting', icon: '', color: 'from-emerald-500 to-green-600' },
+  { name: 'Xero', category: 'Accounting', icon: '', color: 'from-blue-600 to-indigo-600' },
+  { name: 'Meta', category: 'Social', icon: '', color: 'from-blue-600 to-blue-700' },
+  { name: 'Google', category: 'Analytics', icon: '', color: 'from-red-500 to-yellow-500' },
+  { name: 'Facebook', category: 'Social', icon: '', color: 'from-blue-500 to-blue-600' },
 ];
 
-const integrationColors: Record<string, string> = {
-  Stripe: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-  MobilePay: 'bg-gradient-to-br from-pink-500 to-rose-500',
-  PayPal: 'bg-gradient-to-br from-blue-500 to-blue-600',
-  Mailchimp: 'bg-gradient-to-br from-yellow-400 to-orange-500',
-  Klaviyo: 'bg-gradient-to-br from-green-500 to-teal-500',
-  QuickBooks: 'bg-gradient-to-br from-emerald-500 to-green-600',
-  Xero: 'bg-gradient-to-br from-blue-600 to-indigo-600',
-  Meta: 'bg-gradient-to-br from-blue-600 to-blue-700',
-  Google: 'bg-gradient-to-br from-red-500 to-yellow-500',
-  Facebook: 'bg-gradient-to-br from-blue-500 to-blue-600',
-  Instagram: 'bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500',
-  WhatsApp: 'bg-gradient-to-br from-green-400 to-green-600',
-};
-
-// Add icon imports used in features
-function Receipt({ className }: { className?: string }) {
+// Icon Components
+function ReceiptIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M4 2v20l6-4 6 4V2H4Z"/><path d="m8 8 2 2 4-4"/></svg>;
 }
 
-function Calculator({ className }: { className?: string }) {
+function CalculatorIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 14h-2"/><path d="M16 18h-2"/><path d="M16 14v4"/><path d="M8 14h2"/><path d="M8 18h2"/><path d="M8 14v4"/><path d="M12 14h2"/><path d="M12 18h2"/><path d="M12 14v4"/></svg>;
 }
 
-function TrendingUp({ className }: { className?: string }) {
+function TrendingUpIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>;
 }
 
-function Tag({ className }: { className?: string }) {
+function TagIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg>;
 }
 
-function Share2({ className }: { className?: string }) {
+function Share2Icon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>;
 }
 
-function GitBranch({ className }: { className?: string }) {
+function GitBranchIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>;
 }
 
-function Wifi({ className }: { className?: string }) {
+function WifiIcon({ className }: { className?: string }) {
   return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>;
 }
 
@@ -466,40 +449,42 @@ function FeatureAccordion({ category, isOpen, onToggle }: { category: FeatureCat
   }, [isOpen]);
 
   return (
-    <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+    <div className="glass-card glass-card-hover rounded-3xl overflow-hidden transition-all duration-500">
       <button
         onClick={onToggle}
-        className="w-full p-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+        className="w-full p-6 md:p-8 flex items-center justify-between text-left hover:bg-white/50 transition-colors duration-300"
       >
-        <div className="flex items-center gap-4">
-          <div className={`p-3 rounded-xl bg-gradient-to-br ${category.color} text-white`}>
+        <div className="flex items-center gap-5">
+          <div className={`feature-icon p-4 rounded-2xl bg-gradient-to-br ${category.color} text-white`}>
             {category.icon}
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-900">{category.title}</h3>
-            <p className="text-gray-600 text-sm">{category.description}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900">{category.title}</h3>
+            <p className="text-gray-600 text-sm md:text-base mt-1">{category.description}</p>
           </div>
         </div>
-        {isOpen ? <ChevronUp className="h-5 w-5 text-gray-500" /> : <ChevronDown className="h-5 w-5 text-gray-500" />}
+        <div className={`p-2 rounded-full transition-all duration-300 ${isOpen ? 'bg-orange-100 rotate-180' : 'bg-gray-100'}`}>
+          {isOpen ? <ChevronUp className="h-5 w-5 text-orange-600" /> : <ChevronDown className="h-5 w-5 text-gray-500" />}
+        </div>
       </button>
       <div
         ref={contentRef}
-        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[4000px] opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div ref={featuresRef} className="p-6 pt-0 space-y-6">
+        <div ref={featuresRef} className="p-6 md:p-8 pt-0 space-y-4">
           {category.features.map((feature, idx) => (
-            <div key={idx} className="feature-item p-5 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100">
+            <div key={idx} className="feature-item glass-card rounded-2xl p-5 border border-white/60 transition-all duration-300 hover:border-orange-200 hover:shadow-lg">
               <div className="flex gap-5">
                 <div className="flex-shrink-0">
-                  <div className={`p-2.5 rounded-lg bg-gradient-to-br ${category.color} text-white`}>
+                  <div className="feature-icon w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center">
                     {feature.icon}
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-4 mb-2">
-                    <h4 className="font-semibold text-lg text-gray-900">{feature.title}</h4>
+                    <h4 className="font-bold text-lg text-gray-900">{feature.title}</h4>
                     {feature.image && (
-                      <div className="flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-xl overflow-hidden shadow-md">
                         <img
                           src={feature.image}
                           alt={feature.title}
@@ -508,9 +493,9 @@ function FeatureAccordion({ category, isOpen, onToggle }: { category: FeatureCat
                       </div>
                     )}
                   </div>
-                  <p className="text-gray-600 mb-3">{feature.description}</p>
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-sm font-medium">
-                    <Zap className="h-3.5 w-3.5" />
+                  <p className="text-gray-600 mb-3 text-sm md:text-base leading-relaxed">{feature.description}</p>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-sm font-semibold border border-green-200">
+                    <Zap className="h-4 w-4" />
                     {feature.benefit}
                   </div>
                 </div>
@@ -540,8 +525,8 @@ export function Features() {
       .from(heroRef.current.querySelector('.hero-cta'),
         { opacity: 0, y: 20, duration: 0.5, ease: 'power3.out' }, '-=0.3'
       )
-      .from(heroRef.current.querySelectorAll('.floating-icon'),
-        { opacity: 0, scale: 0, duration: 0.5, stagger: 0.1, ease: 'back.out(1.7)' }, '-=0.3'
+      .from(heroRef.current.querySelectorAll('.stat-card'),
+        { opacity: 0, scale: 0.8, duration: 0.5, stagger: 0.1, ease: 'back.out(1.7)' }, '-=0.3'
       );
     }
 
@@ -618,75 +603,84 @@ export function Features() {
   };
 
   return (
-    <div>
+    <div className="font-sans">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative overflow-hidden bg-gradient-to-br from-orange-600 via-orange-500 to-amber-500 text-white">
+      <section ref={heroRef} className="hero-gradient relative min-h-[85vh] flex items-center overflow-hidden">
         {/* Animated Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }} />
         </div>
 
         {/* Floating Icons */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="floating-icon absolute top-20 left-[10%] animate-bounce" style={{ animationDuration: '3s' }}>
-            <ShoppingCart className="h-8 w-8 opacity-20" />
+          <div className="floating absolute top-20 left-[10%] opacity-10">
+            <ShoppingCart className="h-16 w-16 text-orange-500" />
           </div>
-          <div className="floating-icon absolute top-40 right-[15%] animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
-            <CreditCard className="h-10 w-10 opacity-20" />
+          <div className="floating-delayed absolute top-40 right-[15%] opacity-10">
+            <CreditCard className="h-20 w-20 text-orange-600" />
           </div>
-          <div className="floating-icon absolute bottom-20 left-[20%] animate-bounce" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}>
-            <Truck className="h-9 w-9 opacity-20" />
+          <div className="floating absolute bottom-20 left-[20%] opacity-10">
+            <Truck className="h-18 w-18 text-amber-500" />
           </div>
-          <div className="floating-icon absolute top-32 left-[60%] animate-bounce" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}>
-            <BarChart3 className="h-7 w-7 opacity-20" />
+          <div className="floating-delayed absolute top-32 left-[60%] opacity-10">
+            <BarChart3 className="h-14 w-14 text-purple-500" />
           </div>
-          <div className="floating-icon absolute bottom-32 right-[25%] animate-bounce" style={{ animationDuration: '3.8s', animationDelay: '0.8s' }}>
-            <Smartphone className="h-8 w-8 opacity-20" />
+          <div className="floating absolute bottom-32 right-[25%] opacity-10">
+            <Smartphone className="h-16 w-16 text-pink-500" />
           </div>
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-24 md:py-32 text-center">
-          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Powerful Features for Every Restaurant
+        <div className="relative max-w-6xl mx-auto px-6 py-24 text-center">
+          <div className="badge mb-8">
+            <Zap className="h-4 w-4" />
+            Everything You Need to Succeed
+          </div>
+
+          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+            <span className="gradient-text">Powerful Features</span>
+            <br />
+            <span className="gradient-text">For Every Restaurant</span>
           </h1>
-          <p className="hero-subtitle text-xl md:text-2xl text-orange-100 max-w-3xl mx-auto mb-10">
-            From AI-powered setup to delivery management, everything you need to run a successful restaurant business in one platform.
+
+          <p className="hero-subtitle text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+            From AI-powered setup to delivery management, everything you need to run a successful restaurant business in one beautiful platform.
           </p>
-          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center">
+
+          <div className="hero-cta flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/get-started"
-              className="inline-flex px-8 py-4 bg-white text-orange-600 rounded-xl font-semibold hover:bg-orange-50 transition-all items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="btn-primary inline-flex items-center justify-center gap-3"
             >
               Start Free Trial
               <ArrowRight className="h-5 w-5" />
             </Link>
             <a
               href="#features"
-              className="inline-flex px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white/10 transition-all items-center justify-center gap-2"
+              className="btn-secondary inline-flex items-center justify-center gap-2"
             >
               Explore Features
             </a>
           </div>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">5 min</div>
-              <div className="text-orange-200 text-sm">Setup Time</div>
+          {/* Quick Stats with Glass Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-black gradient-text">5 min</div>
+              <div className="text-gray-600 text-sm mt-2 font-medium">Setup Time</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">0%</div>
-              <div className="text-orange-200 text-sm">Commission</div>
+            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-black gradient-text">0%</div>
+              <div className="text-gray-600 text-sm mt-2 font-medium">Commission</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">24/7</div>
-              <div className="text-orange-200 text-sm">Support</div>
+            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-black gradient-text">24/7</div>
+              <div className="text-gray-600 text-sm mt-2 font-medium">Support</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold">50+</div>
-              <div className="text-orange-200 text-sm">Integrations</div>
+            <div className="stat-card glass-card glass-card-hover rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-black gradient-text">50+</div>
+              <div className="text-gray-600 text-sm mt-2 font-medium">Integrations</div>
             </div>
           </div>
         </div>
@@ -694,24 +688,28 @@ export function Features() {
         {/* Wave Divider */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" className="fill-orange-50" />
+            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" className="fill-white" />
           </svg>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 px-4 bg-orange-50">
+      <section id="features" className="section-padding bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="scroll-reveal text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Complete Restaurant Platform
+            <div className="badge mb-6">
+              <Star className="h-4 w-4" />
+              Comprehensive Platform
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <span className="gradient-text">Complete Restaurant Platform</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Explore our comprehensive suite of features designed to help you grow your restaurant business.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             {featureCategories.map((category) => (
               <FeatureAccordion
                 key={category.id}
@@ -725,102 +723,112 @@ export function Features() {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="section-padding hero-gradient">
         <div className="max-w-5xl mx-auto">
           <div className="scroll-reveal text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Helmies Bites vs Traditional Solutions
+            <div className="badge mb-6">
+              <BarChart3 className="h-4 w-4" />
+              See the Difference
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <span className="gradient-text">Why Helmies vs Traditional?</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               See how we compare to traditional delivery platforms and ordering systems.
             </p>
           </div>
 
-          <div className="scroll-reveal overflow-x-auto">
-            <div className="min-w-[600px]">
+          <div className="scroll-reveal">
+            <div className="glass-card rounded-3xl p-6 md:p-8 shadow-2xl overflow-hidden">
               {/* Comparison Header */}
-              <div className="grid grid-cols-3 gap-4 mb-4">
-                <div className="font-semibold text-gray-700">Feature</div>
+              <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-gray-200/60">
+                <div className="font-bold text-gray-700 text-lg">Feature</div>
                 <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl font-bold">
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl font-bold shadow-lg">
                     <Star className="h-5 w-5 fill-white" />
-                    Helmies Bites
+                    Helmies
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="inline-flex px-4 py-2 bg-gray-100 text-gray-700 rounded-xl font-semibold">
-                    Traditional Platforms
+                  <div className="inline-flex px-6 py-3 bg-gray-100 text-gray-600 rounded-2xl font-semibold">
+                    Traditional
                   </div>
                 </div>
               </div>
 
               {/* Comparison Rows */}
-              {comparisonData.map((item, idx) => (
-                <div key={idx} className="comparison-row grid grid-cols-3 gap-4 py-4 border-b border-gray-100 items-center">
-                  <div className="font-medium text-gray-900">{item.feature}</div>
-                  <div className="text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-lg font-medium">
-                      <Check className="h-4 w-4" />
-                      {item.helmies}
+              <div className="space-y-3">
+                {comparisonData.map((item, idx) => (
+                  <div key={idx} className="comparison-row grid grid-cols-3 gap-4 py-4 rounded-2xl bg-gradient-to-r from-white/80 to-transparent hover:from-orange-50/80 transition-all duration-300 items-center">
+                    <div className="font-semibold text-gray-900 pl-4">{item.feature}</div>
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-xl font-semibold border border-green-200">
+                        <Check className="h-4 w-4" />
+                        {item.helmies}
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-50 to-pink-50 text-red-600 rounded-xl font-medium border border-red-200">
+                        <X className="h-4 w-4" />
+                        {item.traditional}
+                      </div>
                     </div>
                   </div>
-                  <div className="text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 rounded-lg">
-                      <X className="h-4 w-4" />
-                      {item.traditional}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="scroll-reveal mt-12 text-center">
             <Link
               to="/pricing"
-              className="inline-flex px-8 py-4 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition-colors items-center gap-2"
+              className="btn-primary inline-flex items-center gap-3"
             >
-              View Pricing
+              View Pricing Plans
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Integrations Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Integration Showcase Section */}
+      <section className="section-padding bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="scroll-reveal text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Seamless Integrations
+            <div className="badge mb-6">
+              <Zap className="h-4 w-4" />
+              Connect Everything
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <span className="gradient-text">Seamless Integrations</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Connect with the tools you already use. From payment processors to marketing platforms, we've got you covered.
             </p>
           </div>
 
-          <div className="integrations-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="integrations-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 mb-16">
             {integrations.map((integration) => (
               <div key={integration.name} className="integration-card group">
-                <div className={`p-6 rounded-2xl ${integrationColors[integration.name] || 'bg-gradient-to-br from-gray-200 to-gray-300'} text-white text-center shadow-md hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-1`}>
-                  <div className="font-bold text-lg">{integration.name}</div>
-                  <div className="text-xs opacity-80 mt-1">{integration.category}</div>
+                <div className={`card-gradient bg-gradient-to-br ${integration.color} p-6 rounded-3xl text-white text-center shadow-lg transition-all duration-500 transform group-hover:-translate-y-2 group-hover:shadow-2xl`}>
+                  <div className="font-black text-xl mb-1">{integration.name}</div>
+                  <div className="text-xs opacity-80 font-medium">{integration.category}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Integration Categories */}
-          <div className="scroll-reveal mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {/* Integration Categories Summary */}
+          <div className="scroll-reveal grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
             {Object.entries(
               integrations.reduce((acc: Record<string, number>, integration) => {
                 acc[integration.category] = (acc[integration.category] || 0) + 1;
                 return acc;
               }, {})
             ).map(([category, count]) => (
-              <div key={category} className="text-center p-4 bg-white rounded-xl shadow-sm">
-                <div className="text-2xl font-bold text-orange-600">{count}+</div>
-                <div className="text-gray-600 text-sm">{category}</div>
+              <div key={category} className="glass-card glass-card-hover rounded-3xl p-6 text-center">
+                <div className="text-3xl font-black gradient-text mb-1">{count}+</div>
+                <div className="text-gray-600 text-sm font-medium">{category}</div>
               </div>
             ))}
           </div>
@@ -828,23 +836,23 @@ export function Features() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="section-padding bg-gradient-to-br from-orange-50 via-white to-pink-50">
         <div className="scroll-reveal max-w-4xl mx-auto text-center">
-          <div className="p-8 md:p-12 bg-gradient-to-br from-orange-500 to-amber-500 rounded-3xl text-white shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="card-gradient rounded-3xl p-10 md:p-16 shadow-2xl">
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
               Ready to Transform Your Restaurant?
             </h2>
-            <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-              Join hundreds of restaurants already using Helmies Bites to grow their business.
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+              Join hundreds of restaurants already using Helmies to grow their business.
             </p>
             <Link
               to="/get-started"
-              className="inline-flex px-10 py-5 bg-white text-orange-600 rounded-xl font-bold hover:bg-orange-50 transition-all items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="inline-flex px-10 py-5 bg-white text-orange-600 rounded-2xl font-black hover:bg-orange-50 transition-all items-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300"
             >
               Get Started for Free
               <ArrowRight className="h-6 w-6" />
             </Link>
-            <p className="mt-6 text-orange-200 text-sm">
+            <p className="mt-8 text-white/80 text-sm font-medium">
               No credit card required. Setup in 5 minutes.
             </p>
           </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Loader2, Check } from 'lucide-react';
 import { api } from '@/lib/api';
 import { RestaurantInfoStep } from '@/components/wizard-steps/RestaurantInfoStep';
 import { MenuUploadStep } from '@/components/wizard-steps/MenuUploadStep';
@@ -9,12 +9,48 @@ import { DomainSetupStep } from '@/components/wizard-steps/DomainSetupStep';
 import { ReviewConfirmStep } from '@/components/wizard-steps/ReviewConfirmStep';
 
 const steps = [
-  { id: 'restaurant-info', title: 'Restaurant Info', component: RestaurantInfoStep },
-  { id: 'menu-upload', title: 'Menu', component: MenuUploadStep },
-  { id: 'theme', title: 'Theme', component: ThemeSelectionStep },
-  { id: 'domain', title: 'Domain', component: DomainSetupStep },
-  { id: 'review', title: 'Review', component: ReviewConfirmStep },
+  { id: 'restaurant-info', title: 'Restaurant Info', icon: 'store' },
+  { id: 'menu-upload', title: 'Menu', icon: 'menu' },
+  { id: 'theme', title: 'Theme', icon: 'palette' },
+  { id: 'domain', title: 'Domain', icon: 'globe' },
+  { id: 'review', title: 'Review', icon: 'check' },
 ];
+
+const stepComponents: Record<string, React.ComponentType<any>> = {
+  'restaurant-info': RestaurantInfoStep,
+  'menu-upload': MenuUploadStep,
+  'theme': ThemeSelectionStep,
+  'domain': DomainSetupStep,
+  'review': ReviewConfirmStep,
+};
+
+const stepIcons: Record<string, React.ReactNode> = {
+  store: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    </svg>
+  ),
+  menu: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+    </svg>
+  ),
+  palette: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+    </svg>
+  ),
+  globe: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    </svg>
+  ),
+  check: (
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+};
 
 export function StartWizard() {
   const navigate = useNavigate();
@@ -23,7 +59,7 @@ export function StartWizard() {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const CurrentStepComponent = steps[currentStepIndex].component;
+  const CurrentStepComponent = stepComponents[steps[currentStepIndex].id];
 
   const updateData = (newData: any) => {
     setWizardData((prev: any) => ({ ...prev, ...newData }));
@@ -32,14 +68,21 @@ export function StartWizard() {
   const goToNextStep = () => {
     if (currentStepIndex < steps.length - 1) {
       setCurrentStepIndex(prev => prev + 1);
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const goToPreviousStep = () => {
     if (currentStepIndex > 0) {
       setCurrentStepIndex(prev => prev - 1);
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const goToStep = (index: number) => {
+    if (index <= currentStepIndex) {
+      setCurrentStepIndex(index);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -47,13 +90,10 @@ export function StartWizard() {
     setIsSubmitting(true);
 
     try {
-      // Submit to backend
       const result = await api.post('/api/wizard/complete', {
         sessionId,
         data: wizardData,
       });
-
-      // Navigate to success page
       navigate('/success', { state: result });
     } catch (error) {
       console.error('Failed to complete wizard:', error);
@@ -66,37 +106,113 @@ export function StartWizard() {
   const progress = ((currentStepIndex + 1) / steps.length) * 100;
 
   return (
-    <div className="min-h-screen py-8 px-4">
-      <div className="max-w-3xl mx-auto">
-        {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-2">
-            <button
-              onClick={() => navigate('/')}
-              className="text-gray-600 hover:text-gray-900 text-sm flex items-center gap-1"
-            >
-              <ChevronLeft className="h-4 w-4" />
-              Back
-            </button>
-            <span className="text-sm text-gray-500">
-              Step {currentStepIndex + 1} of {steps.length}
-            </span>
-          </div>
-          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+    <div className="min-h-screen hero-gradient py-12 px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <button
+            onClick={() => navigate('/')}
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors font-semibold mb-6"
+          >
+            <ChevronLeft className="h-5 w-5" />
+            Back to Home
+          </button>
+          <h1 className="text-4xl md:text-5xl font-black mb-3">
+            <span className="gradient-text">Setup Your Restaurant</span>
+          </h1>
+          <p className="text-gray-600 text-lg">Complete these steps to launch your restaurant website</p>
+        </div>
+
+        {/* Progress Steps */}
+        <div className="glass-card rounded-3xl p-6 mb-8">
+          <div className="relative">
+            {/* Progress Line Background */}
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2 rounded-full" />
+
+            {/* Active Progress Line */}
             <div
-              className="h-full bg-orange-600 transition-all duration-300"
-              style={{ width: `${progress}%` }}
+              className="absolute top-1/2 left-0 h-1 gradient-bg -translate-y-1/2 rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${((steps.length - 1) > 0 ? (currentStepIndex / (steps.length - 1)) : 1) * 100}%` }}
             />
+
+            {/* Step Indicators */}
+            <div className="relative flex justify-between">
+              {steps.map((step, index) => {
+                const isCompleted = index < currentStepIndex;
+                const isCurrent = index === currentStepIndex;
+                const isClickable = index <= currentStepIndex;
+
+                return (
+                  <button
+                    key={step.id}
+                    onClick={() => isClickable && goToStep(index)}
+                    disabled={!isClickable}
+                    className={`flex flex-col items-center gap-2 transition-all ${
+                      isClickable ? 'cursor-pointer' : 'cursor-default'
+                    }`}
+                  >
+                    {/* Step Circle */}
+                    <div
+                      className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                        isCompleted
+                          ? 'gradient-bg text-white shadow-lg scale-110'
+                          : isCurrent
+                          ? 'gradient-bg text-white shadow-lg scale-110 ring-4 ring-orange-100'
+                          : 'bg-white text-gray-400 border-2 border-gray-200'
+                      }`}
+                    >
+                      {isCompleted ? (
+                        <Check className="w-6 h-6" />
+                      ) : (
+                        stepIcons[step.icon]
+                      )}
+                    </div>
+
+                    {/* Step Label */}
+                    <span
+                      className={`text-xs font-semibold whitespace-nowrap hidden sm:block ${
+                        isCurrent ? 'text-orange-600' : isCompleted ? 'text-gray-600' : 'text-gray-400'
+                      }`}
+                    >
+                      {step.title}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Progress Bar (Mobile) */}
+          <div className="mt-6 sm:hidden">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-sm font-semibold text-gray-600">Step {currentStepIndex + 1} of {steps.length}</span>
+              <span className="text-sm font-bold gradient-text">{Math.round(progress)}%</span>
+            </div>
+            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div
+                className="h-full gradient-bg transition-all duration-500 ease-out rounded-full"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
           </div>
         </div>
 
-        {/* Step Title */}
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">{steps[currentStepIndex].title}</h1>
-        </div>
+        {/* Current Step Card */}
+        <div className="glass-card glass-card-hover rounded-3xl p-8 md:p-10 mb-8">
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="feature-icon w-12 h-12">
+                {stepIcons[steps[currentStepIndex].icon]}
+              </div>
+              <h2 className="text-2xl md:text-3xl font-black text-gray-900">
+                {steps[currentStepIndex].title}
+              </h2>
+            </div>
+            <p className="text-gray-600 ml-15 mt-2">
+              {getStepDescription(steps[currentStepIndex].id)}
+            </p>
+          </div>
 
-        {/* Current Step */}
-        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
           <CurrentStepComponent
             data={wizardData}
             sessionId={sessionId}
@@ -105,14 +221,14 @@ export function StartWizard() {
           />
         </div>
 
-        {/* Navigation */}
-        <div className="mt-6 flex items-center justify-between">
+        {/* Navigation Buttons */}
+        <div className="flex items-center justify-between gap-4">
           <button
             onClick={goToPreviousStep}
             disabled={currentStepIndex === 0}
-            className="px-6 py-3 border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="btn-secondary disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 font-bold"
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-5 w-5" />
             Previous
           </button>
 
@@ -120,31 +236,52 @@ export function StartWizard() {
             <button
               onClick={handleComplete}
               disabled={isSubmitting}
-              className="px-6 py-3 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="h-4 w-4 animate-spin" />
+                  <Loader2 className="h-5 w-5 animate-spin" />
                   Setting up...
                 </>
               ) : (
                 <>
                   Complete Setup
-                  <ChevronRight className="h-4 w-4" />
+                  <Check className="h-5 w-5" />
                 </>
               )}
             </button>
           ) : (
             <button
               onClick={goToNextStep}
-              className="px-6 py-3 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 flex items-center gap-2"
+              className="btn-primary flex items-center gap-2"
             >
-              Next
-              <ChevronRight className="h-4 w-4" />
+              Next Step
+              <ChevronRight className="h-5 w-5" />
             </button>
           )}
+        </div>
+
+        {/* Help Text */}
+        <div className="text-center mt-8">
+          <p className="text-sm text-gray-500">
+            Need help? Contact our support team at{' '}
+            <a href="mailto:support@helmiesbites.fi" className="text-orange-600 font-semibold hover:underline">
+              support@helmiesbites.fi
+            </a>
+          </p>
         </div>
       </div>
     </div>
   );
+}
+
+function getStepDescription(stepId: string): string {
+  const descriptions: Record<string, string> = {
+    'restaurant-info': 'Tell us about your restaurant so we can personalize your experience.',
+    'menu-upload': 'Upload your menu and let our AI do the heavy lifting.',
+    'theme': 'Choose a beautiful theme or let AI create one unique to you.',
+    'domain': 'Set up your web address and go live in minutes.',
+    'review': 'Review everything before launching your restaurant website.',
+  };
+  return descriptions[stepId] || '';
 }

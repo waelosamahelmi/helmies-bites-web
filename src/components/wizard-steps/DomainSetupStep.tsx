@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Globe, Link as LinkIcon } from 'lucide-react';
+import { Globe, Link as LinkIcon, Check, Crown, Zap } from 'lucide-react';
 
 interface Props {
   data: any;
@@ -7,146 +7,269 @@ interface Props {
   onUpdate: (data: any) => void;
 }
 
+type DomainType = 'subdomain' | 'custom' | 'path';
+
+const domainOptions = [
+  {
+    id: 'subdomain' as DomainType,
+    title: 'Free Subdomain',
+    description: 'restaurant.helmiesbites.fi',
+    fullDescription: 'Get a free subdomain on our platform',
+    icon: <Globe className="h-6 w-6" />,
+    gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+    badge: 'FREE',
+    badgeColor: 'bg-green-100 text-green-700 border-green-200',
+  },
+  {
+    id: 'custom' as DomainType,
+    title: 'Custom Domain',
+    description: 'your-restaurant.fi',
+    fullDescription: 'Use your own domain name',
+    icon: <LinkIcon className="h-6 w-6" />,
+    gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+    badge: 'PREMIUM',
+    badgeColor: 'bg-purple-100 text-purple-700 border-purple-200',
+  },
+  {
+    id: 'path' as DomainType,
+    title: 'Free Path',
+    description: 'helmiesbites.fi/restaurant',
+    fullDescription: 'Get a free path on our platform',
+    icon: <Zap className="h-6 w-6" />,
+    gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+    badge: 'FREE',
+    badgeColor: 'bg-green-100 text-green-700 border-green-200',
+  },
+];
+
 export function DomainSetupStep({ data, onUpdate }: Props) {
-  const [domainType, setDomainType] = useState(data.domainType || 'subdomain');
+  const [domainType, setDomainType] = useState<DomainType>(data.domainType || 'subdomain');
   const [slug, setSlug] = useState(data.slug || '');
   const [customDomain, setCustomDomain] = useState(data.customDomain || '');
 
-  const handleUpdate = () => {
-    onUpdate({ domainType, slug, customDomain });
+  const handleSelectType = (type: DomainType) => {
+    setDomainType(type);
+    onUpdate({ domainType: type });
+  };
+
+  const handleSlugChange = (value: string) => {
+    const sanitized = value.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-');
+    setSlug(sanitized);
+    onUpdate({ slug: sanitized });
+  };
+
+  const handleCustomDomainChange = (value: string) => {
+    setCustomDomain(value);
+    onUpdate({ customDomain: value });
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* Domain Type Selection */}
       <div>
-        <h3 className="font-medium text-gray-900 mb-4">Choose Your Domain Type</h3>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="feature-icon w-12 h-12">
+            <Globe className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-gray-900">Choose Your Domain Type</h3>
+            <p className="text-sm text-gray-500">Select how you want your restaurant to be accessed</p>
+          </div>
+        </div>
 
-        <div className="space-y-3">
-          <DomainOption
-            selected={domainType === 'subdomain'}
-            onClick={() => {
-              setDomainType('subdomain');
-              handleUpdate();
-            }}
-            title="Free Subdomain"
-            description="restaurant.helmiesbites.fi"
-            icon={<Globe className="h-5 w-5" />}
-            free
-          />
+        <div className="grid md:grid-cols-3 gap-4">
+          {domainOptions.map((option) => {
+            const isSelected = domainType === option.id;
+            return (
+              <button
+                key={option.id}
+                onClick={() => handleSelectType(option.id)}
+                className={`relative rounded-2xl overflow-hidden transition-all duration-300 ${
+                  isSelected
+                    ? 'ring-4 ring-orange-500 shadow-xl scale-105'
+                    : 'glass-card glass-card-hover'
+                }`}
+              >
+                {/* Gradient Header */}
+                <div
+                  className="p-6 text-white text-center"
+                  style={{ background: option.gradient }}
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
+                    {option.icon}
+                  </div>
+                  <h4 className="font-bold text-lg">{option.title}</h4>
+                  <p className="text-sm text-white/80 mt-1">{option.description}</p>
+                </div>
 
-          <DomainOption
-            selected={domainType === 'custom'}
-            onClick={() => {
-              setDomainType('custom');
-              handleUpdate();
-            }}
-            title="Custom Domain"
-            description="Use your own domain name"
-            icon={<LinkIcon className="h-5 w-5" />}
-          />
+                {/* Badge */}
+                <div className="absolute top-3 right-3">
+                  <span className={`px-2 py-1 rounded-full text-xs font-bold ${option.badgeColor}`}>
+                    {option.badge}
+                  </span>
+                </div>
 
-          <DomainOption
-            selected={domainType === 'path'}
-            onClick={() => {
-              setDomainType('path');
-              handleUpdate();
-            }}
-            title="Free Path"
-            description="helmiesbites.fi/restaurant"
-            icon={<Globe className="h-5 w-5" />}
-            free
-          />
+                {/* Selected Indicator */}
+                {isSelected && (
+                  <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white shadow-lg flex items-center justify-center">
+                    <Check className="h-5 w-5 text-green-600" />
+                  </div>
+                )}
+              </button>
+            );
+          })}
         </div>
       </div>
 
+      {/* Subdomain Input */}
       {domainType === 'subdomain' && (
-        <div className="bg-gray-50 rounded-lg p-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Your Subdomain
-          </label>
-          <div className="flex items-center">
+        <div className="glass-card rounded-2xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+              <Globe className="h-5 w-5 text-green-600" />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-900">
+                Your Subdomain
+              </label>
+              <p className="text-xs text-gray-500">Choose a unique name for your restaurant</p>
+            </div>
+          </div>
+          <div className="flex items-stretch">
             <input
               type="text"
               value={slug}
-              onChange={(e) => {
-                setSlug(e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '-'));
-                handleUpdate();
-              }}
+              onChange={(e) => handleSlugChange(e.target.value)}
               placeholder="restaurant-name"
-              className="flex-1 px-4 py-3 border border-gray-200 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="input-modern rounded-r-none border-r-0 text-left"
             />
-            <span className="px-4 py-3 bg-gray-200 text-gray-600 rounded-r-lg border border-l-0 border-gray-200">
+            <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-r-2xl border-2 border-l-0 border-gray-300 font-semibold whitespace-nowrap">
               .helmiesbites.fi
-            </span>
+            </div>
           </div>
-          <p className="text-xs text-gray-500 mt-2">
-            Only lowercase letters, numbers, and hyphens allowed
-          </p>
+          <div className="flex items-center gap-2 mt-3">
+            <Check className="h-4 w-4 text-green-600" />
+            <p className="text-xs text-gray-500">
+              Your website will be live at{' '}
+              <span className="font-semibold text-orange-600">
+                {slug || 'restaurant-name'}.helmiesbites.fi
+              </span>
+            </p>
+          </div>
         </div>
       )}
 
+      {/* Custom Domain Input */}
       {domainType === 'custom' && (
-        <div className="bg-gray-50 rounded-lg p-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Your Domain
-          </label>
+        <div className="glass-card rounded-2xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center">
+              <LinkIcon className="h-5 w-5 text-purple-600" />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-900">
+                Your Custom Domain
+              </label>
+              <p className="text-xs text-gray-500">Use a domain you already own</p>
+            </div>
+            <span className="ml-auto badge text-xs">Premium</span>
+          </div>
           <input
             type="text"
             value={customDomain}
-            onChange={(e) => {
-              setCustomDomain(e.target.value);
-              handleUpdate();
-            }}
+            onChange={(e) => handleCustomDomainChange(e.target.value)}
             placeholder="your-restaurant.fi"
-            className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="input-modern"
           />
-          <p className="text-xs text-gray-500 mt-2">
-            You'll need to update your DNS settings after setup
-          </p>
+          <div className="mt-4 p-4 rounded-xl bg-purple-50 border border-purple-200">
+            <p className="text-sm text-purple-900">
+              <strong>After setup:</strong> You'll need to update your DNS settings to point to our servers.
+              We'll send you detailed instructions via email.
+            </p>
+          </div>
         </div>
       )}
 
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <p className="text-sm text-blue-900">
-          <strong>Note:</strong> You can always add a custom domain later from your admin dashboard.
-          Free domains are available immediately.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-interface DomainOptionProps {
-  selected: boolean;
-  onClick: () => void;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  free?: boolean;
-}
-
-function DomainOption({ selected, onClick, title, description, icon, free }: DomainOptionProps) {
-  return (
-    <button
-      onClick={onClick}
-      className={`w-full p-4 border-2 rounded-lg flex items-start gap-3 text-left transition-all ${
-        selected
-          ? 'border-orange-500 bg-orange-50'
-          : 'border-gray-200 hover:border-gray-300'
-      }`}
-    >
-      <div className={`p-2 rounded ${selected ? 'bg-orange-100 text-orange-600' : 'bg-gray-100 text-gray-600'}`}>
-        {icon}
-      </div>
-      <div className="flex-1">
-        <div className="flex items-center gap-2">
-          <p className="font-medium text-gray-900">{title}</p>
-          {free && (
-            <span className="px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full">Free</span>
-          )}
+      {/* Path Input */}
+      {domainType === 'path' && (
+        <div className="glass-card rounded-2xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
+              <Zap className="h-5 w-5 text-green-600" />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-900">
+                Your Path
+              </label>
+              <p className="text-xs text-gray-500">Choose a unique path for your restaurant</p>
+            </div>
+          </div>
+          <div className="flex items-stretch">
+            <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-l-2xl border-2 border-r-0 border-gray-300 font-semibold whitespace-nowrap">
+              helmiesbites.fi/
+            </div>
+            <input
+              type="text"
+              value={slug}
+              onChange={(e) => handleSlugChange(e.target.value)}
+              placeholder="restaurant-name"
+              className="input-modern rounded-l-none"
+            />
+          </div>
+          <div className="flex items-center gap-2 mt-3">
+            <Check className="h-4 w-4 text-green-600" />
+            <p className="text-xs text-gray-500">
+              Your website will be live at{' '}
+              <span className="font-semibold text-orange-600">
+                helmiesbites.fi/{slug || 'restaurant-name'}
+              </span>
+            </p>
+          </div>
         </div>
-        <p className="text-sm text-gray-500">{description}</p>
+      )}
+
+      {/* Info Cards */}
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="glass-card rounded-2xl p-6 bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200">
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center flex-shrink-0">
+              <Zap className="h-5 w-5 text-blue-600" />
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Instant Activation</h4>
+              <p className="text-sm text-gray-600">
+                Free domains are available immediately after setup. No waiting required!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="glass-card rounded-2xl p-6 bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200">
+          <div className="flex items-start gap-3">
+            <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
+              <Crown className="h-5 w-5 text-orange-600" />
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-1">Upgrade Anytime</h4>
+              <p className="text-sm text-gray-600">
+                You can add a custom domain later from your admin dashboard.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </button>
+
+      {/* Availability Check */}
+      {slug && domainType !== 'custom' && (
+        <div className="glass-card rounded-2xl p-4 flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+            <Check className="h-4 w-4 text-green-600" />
+          </div>
+          <p className="text-sm text-gray-700">
+            <span className="font-semibold text-green-600">Available!</span> This address is ready for you.
+          </p>
+        </div>
+      )}
+    </div>
   );
 }
