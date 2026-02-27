@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helmies Bites — Prelaunch Services Ad (English)</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<style>
+  /* ===== RESET & BASE ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    background: #0D0907;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+    position: relative;
+  }
+
+  /* ===== BACKGROUND ===== */
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0;
+    animation: orbPulse 6s ease-in-out infinite;
+  }
+  .bg-orb-1 { width: 500px; height: 500px; background: #FF7A00; top: -150px; left: -100px; opacity: 0.06; animation-delay: 0s; }
+  .bg-orb-2 { width: 400px; height: 400px; background: #CC6200; bottom: -100px; right: -80px; opacity: 0.05; animation-delay: 2s; }
+  .bg-orb-3 { width: 300px; height: 300px; background: #D4915C; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0.03; animation-delay: 4s; }
+
+  @keyframes orbPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  /* Subtle grid overlay */
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,122,0,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,122,0,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0;
+    animation: fadeIn 1s 0.5s forwards;
+  }
+
+  /* ===== SCENES ===== */
+  .scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scene.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ===== GLASS CARD ===== */
+  .glass {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .glass-sm {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+  }
+  .glass-glow {
+    box-shadow: 0 0 60px rgba(255,122,0,0.08), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* ===== CURSOR ===== */
+  .cursor {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    z-index: 100;
+    opacity: 0;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    transition: none;
+  }
+  .cursor svg {
+    width: 28px;
+    height: 28px;
+  }
+  .cursor-ring {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(255,122,0,0.6);
+    border-radius: 50%;
+    top: -8px;
+    left: -8px;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  /* ===== TYPING TEXT ===== */
+  .typing-container {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #FF7A00;
+    animation: blinkCaret 0.7s step-end infinite;
+  }
+  @keyframes blinkCaret {
+    50% { border-color: transparent; }
+  }
+
+  /* ===== COMMON TEXT ===== */
+  .title-xl {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .title-lg {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .title-md {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .text-body {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.5;
+  }
+  .text-sm {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #FF7A00, #FFB347, #FF7A00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .orange { color: #FF7A00; }
+
+  /* ===== BADGE ===== */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: rgba(255,122,0,0.1);
+    border: 1px solid rgba(255,122,0,0.2);
+    font-size: 14px;
+    font-weight: 700;
+    color: #FF7A00;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #FF7A00;
+    border-radius: 50%;
+    animation: pulseDot 2s ease-in-out infinite;
+  }
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  /* ===== BUTTON ===== */
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #FF7A00, #CC6200);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 8px 32px rgba(255,122,0,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  }
+  .btn-cta.shine::after {
+    animation: shine 0.8s forwards;
+  }
+  @keyframes shine {
+    to { left: 100%; }
+  }
+
+  /* ===== LOTTIE CONTAINERS ===== */
+  .lottie-container {
+    position: absolute;
+    opacity: 0;
+  }
+
+  /* ===== SCREENSHOT MOCKUP ===== */
+  .phone-mockup {
+    width: 320px;
+    height: 580px;
+    border-radius: 40px;
+    border: 3px solid rgba(255,255,255,0.1);
+    background: #1A1410;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+  }
+  .phone-notch {
+    width: 140px;
+    height: 28px;
+    background: #0D0907;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  .phone-content {
+    padding: 8px 16px;
+    height: calc(100% - 28px);
+    overflow: hidden;
+  }
+
+  /* Browser mockup */
+  .browser-mockup {
+    width: 680px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #1A1410;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .browser-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .browser-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+  }
+  .browser-dot.red { background: #ff5f57; }
+  .browser-dot.yellow { background: #ffbd2e; }
+  .browser-dot.green { background: #28c840; }
+  .browser-url {
+    flex: 1;
+    padding: 6px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+  }
+  .browser-body {
+    padding: 24px;
+    min-height: 380px;
+  }
+
+  /* ===== FEATURE CARD ===== */
+  .feature-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .feature-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255,122,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #FF7A00;
+    stroke: #FF7A00;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ===== MENU ITEM (mockup) ===== */
+  .menu-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  .menu-item.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .menu-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2A1F15, #1A1410);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .menu-info {
+    flex: 1;
+  }
+  .menu-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  .menu-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 4px;
+  }
+  .menu-price {
+    font-size: 15px;
+    font-weight: 800;
+    color: #FF7A00;
+  }
+  .menu-add {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(255,122,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    color: #FF7A00;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid rgba(255,122,0,0.2);
+  }
+
+  /* ===== THEME CARDS ===== */
+  .theme-card {
+    width: 200px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.06);
+    position: relative;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    flex-shrink: 0;
+  }
+  .theme-card.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .theme-card.selected {
+    border-color: #FF7A00;
+    box-shadow: 0 0 30px rgba(255,122,0,0.25);
+  }
+  .theme-card .theme-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-end;
+  }
+  .theme-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+  }
+  .theme-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+  }
+  .theme-check {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: #FF7A00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .theme-card.selected .theme-check {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* ===== PAYMENT ICONS ===== */
+  .pay-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  .pay-icon.show {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .pay-icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255,122,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== STEP INDICATOR ===== */
+  .step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .step-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    transition: all 0.4s ease;
+  }
+  .step-dot.active {
+    background: #FF7A00;
+    width: 36px;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(255,122,0,0.4);
+  }
+
+  /* ===== PROGRESS BAR ===== */
+  .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF7A00, #FFB347);
+    z-index: 200;
+    border-radius: 0 2px 2px 0;
+  }
+
+  /* ===== LOGO ===== */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #FF7A00, #CC6200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(255,122,0,0.3);
+    overflow: hidden;
+  }
+  .logo-icon img {
+    width: 32px;
+    height: 32px;
+  }
+  .logo-text {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+  }
+
+  /* ===== COUNTER ===== */
+  .counter-box {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    background: rgba(255,122,0,0.08);
+    border: 1px solid rgba(255,122,0,0.15);
+  }
+  .counter-num {
+    font-size: 48px;
+    font-weight: 900;
+    color: #FF7A00;
+    font-variant-numeric: tabular-nums;
+  }
+  .counter-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255,122,0,0.7);
+  }
+
+  /* ===== REPLAY ===== */
+  .replay-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 300;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .replay-btn:hover {
+    background: rgba(255,122,0,0.15);
+    border-color: rgba(255,122,0,0.3);
+  }
+  .replay-btn svg {
+    width: 22px;
+    height: 22px;
+    color: rgba(255,255,255,0.5);
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes cursorMove {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes cursorClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    100% { transform: scale(1); }
+  }
+  @keyframes ringExpand {
+    0% { opacity: 0.8; transform: scale(0); }
+    100% { opacity: 0; transform: scale(1.5); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes sceneIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes sceneOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes progressGrow {
+    from { width: 0%; }
+    to { width: var(--target-width); }
+  }
+  @keyframes textReveal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+  }
+  @keyframes checkPop {
+    0% { transform: scale(0) rotate(-45deg); }
+    60% { transform: scale(1.2) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+</style>
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-layer">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor">
+    <svg viewBox="0 0 24 24" fill="white" stroke="none">
+      <path d="M5.65 3.15L19.85 12.85C20.15 13.05 20.1 13.5 19.75 13.65L13.65 16.15L10.35 22.65C10.15 23.05 9.6 23 9.45 22.6L5.15 3.75C5.05 3.35 5.4 3 5.65 3.15Z"/>
+    </svg>
+    <div class="cursor-ring" id="cursorRing"></div>
+  </div>
+
+  <!-- ==================== SCENE 1: HOOK ==================== -->
+  <div class="scene" id="scene1">
+    <div style="text-align:center; padding: 30px 60px;">
+      <!-- Logo -->
+      <div class="logo" id="s1-logo" style="justify-content:center; margin-bottom: 20px; opacity:0;">
+        <div class="logo-icon">
+          <img src="../public/b.svg" alt="H" onerror="this.parentElement.innerHTML='<span style=color:#fff;font-weight:900;font-size:22px>H</span>'" />
+        </div>
+        <div class="logo-text">
+          <span class="gradient-text">Helmies</span><span style="color:#fff">Bites</span>
+        </div>
+      </div>
+
+      <!-- Badge -->
+      <div class="badge" id="s1-badge" style="opacity:0; margin-bottom: 16px;">
+        <div class="badge-dot"></div>
+        LAUNCHING MARCH 5TH
+      </div>
+
+      <!-- Lottie: Cooking -->
+      <div id="lottie-pizzeria" style="width:540px; height:540px; margin: 0 auto 10px; opacity:0;"></div>
+
+      <!-- Title -->
+      <h1 class="title-xl" id="s1-title" style="opacity:0; margin-bottom: 12px;">
+        <span class="gradient-text">Your restaurant website</span><br>
+        <span style="color:#fff;">ready in minutes</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-body" id="s1-subtitle" style="opacity:0; max-width: 680px; margin: 0 auto;">
+        AI creates your menu, pick a theme, and go live.
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== SCENE 2: AI MENU IMPORT ==================== -->
+  <div class="scene" id="scene2">
+    <div style="padding: 50px 60px; width: 100%;">
+      <!-- Section Label -->
+      <div class="badge" id="s2-badge" style="opacity:0; margin-bottom: 24px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.37 2.63a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>
+        AI MENU IMPORT
+      </div>
+
+      <h2 class="title-lg" id="s2-title" style="opacity:0; margin-bottom: 12px;">
+        <span class="gradient-text">Upload your menu.</span><br>
+        <span style="color:#fff">AI handles the rest.</span>
+      </h2>
+      <p class="text-sm" id="s2-desc" style="opacity:0; margin-bottom: 30px; max-width: 400px;">
+        Upload a PDF or enter your restaurant name — AI recognizes dishes, prices and categories automatically.
+      </p>
+
+      <!-- Browser mockup -->
+      <div class="browser-mockup" id="s2-browser" style="opacity:0; margin: 0 auto;">
+        <div class="browser-bar">
+          <div class="browser-dot red"></div>
+          <div class="browser-dot yellow"></div>
+          <div class="browser-dot green"></div>
+          <div class="browser-url">
+            <span id="s2-url-text"></span>
+          </div>
+        </div>
+        <div class="browser-body">
+          <!-- Upload area -->
+          <div id="s2-upload" style="border: 2px dashed rgba(255,122,0,0.25); border-radius: 16px; padding: 30px; text-align: center; margin-bottom: 20px; opacity:0;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 12px; display:block; opacity:0.6;">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p style="font-size:15px; font-weight:700; color:rgba(255,255,255,0.5);">Drop your menu PDF here</p>
+          </div>
+
+          <!-- Menu items appear after "upload" -->
+          <div id="s2-menu-items" style="display:flex; flex-direction:column; gap:10px;">
+            <div class="menu-item" id="mi1">
+              <div class="menu-img">🍕</div>
+              <div class="menu-info">
+                <div class="menu-name">Margherita Pizza</div>
+                <div class="menu-desc">Tomato, mozzarella, basil</div>
+                <div class="menu-price">€12.90</div>
+              </div>
+              <div class="menu-add">+</div>
+            </div>
+            <div class="menu-item" id="mi2">
+              <div class="menu-img">🍝</div>
+              <div class="menu-info">
+                <div class="menu-name">Pasta Carbonara</div>
+                <div class="menu-desc">Pecorino, guanciale, egg</div>
+                <div class="menu-price">€14.50</div>
+              </div>
+              <div class="menu-add">+</div>
+            </div>
+            <div class="menu-item" id="mi3">
+              <div class="menu-img">🥗</div>
+              <div class="menu-info">
+                <div class="menu-name">Caesar Salad</div>
+                <div class="menu-desc">Romaine lettuce, parmesan, croutons</div>
+                <div class="menu-price">€10.90</div>
+              </div>
+              <div class="menu-add">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lottie: Task Checklist (small, corner) -->
+      <div id="lottie-checklist-s2" style="width:120px; height:120px; position:absolute; bottom:50px; right:60px; opacity:0;"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SCENE 3: THEMES ==================== -->
+  <div class="scene" id="scene3">
+    <div style="padding: 50px 60px; width: 100%; text-align: center;">
+      <div class="badge" id="s3-badge" style="opacity:0; margin-bottom: 24px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        BEAUTIFUL THEMES
+      </div>
+
+      <h2 class="title-lg" id="s3-title" style="opacity:0; margin-bottom: 12px;">
+        <span class="gradient-text">Choose your theme.</span><br>
+        <span style="color:#fff">Your brand, your style.</span>
+      </h2>
+      <p class="text-sm" id="s3-desc" style="opacity:0; margin-bottom: 40px;">
+        Beautiful ready-made themes or let AI create a unique look for you.
+      </p>
+
+      <!-- Theme cards row -->
+      <div style="display: flex; justify-content: center; gap: 20px;" id="s3-themes">
+        <div class="theme-card" id="theme1">
+          <div class="theme-bg" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+            <div class="theme-name">Midnight</div>
+            <div class="theme-label">Dark & Elegant</div>
+          </div>
+          <div class="theme-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="theme-card" id="theme2">
+          <div class="theme-bg" style="background: linear-gradient(135deg, #2A1F15, #3d2b1a);">
+            <div class="theme-name">Rustic</div>
+            <div class="theme-label">Warm & Inviting</div>
+          </div>
+          <div class="theme-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="theme-card" id="theme3">
+          <div class="theme-bg" style="background: linear-gradient(135deg, #0D4F3C, #1a7a5e);">
+            <div class="theme-name">Fresh</div>
+            <div class="theme-label">Fresh & Modern</div>
+          </div>
+          <div class="theme-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+        <div class="theme-card" id="theme4">
+          <div class="theme-bg" style="background: linear-gradient(135deg, #4a1942, #6a2468);">
+            <div class="theme-name">Royal</div>
+            <div class="theme-label">Luxurious & Dark</div>
+          </div>
+          <div class="theme-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCENE 4: ORDERING & PAYMENTS ==================== -->
+  <div class="scene" id="scene4">
+    <div style="padding: 50px 60px; width: 100%; display: flex; gap: 40px; align-items: center;">
+      <!-- Left: Phone mockup -->
+      <div style="flex-shrink: 0; position: relative;">
+        <div class="phone-mockup" id="s4-phone" style="opacity:0;">
+          <div class="phone-notch"></div>
+          <div class="phone-content">
+            <!-- Mini restaurant header -->
+            <div style="text-align:center; margin-bottom:12px; padding-top:8px;">
+              <div style="font-size:18px; font-weight:900; color:#fff;">Ravintola Babylon</div>
+              <div style="font-size:11px; color:rgba(255,255,255,0.4);">ravintolababylon.fi</div>
+            </div>
+            <!-- Mini menu -->
+            <div style="display:flex; flex-direction:column; gap:8px;" id="s4-menu">
+              <div class="menu-item" id="s4-mi1" style="padding:8px;">
+                <div class="menu-img" style="width:48px;height:48px;font-size:22px;">🍕</div>
+                <div class="menu-info">
+                  <div class="menu-name" style="font-size:13px;">Margherita</div>
+                  <div class="menu-price" style="font-size:13px;">€12.90</div>
+                </div>
+                <div class="menu-add" style="width:26px;height:26px;font-size:14px;">+</div>
+              </div>
+              <div class="menu-item" id="s4-mi2" style="padding:8px;">
+                <div class="menu-img" style="width:48px;height:48px;font-size:22px;">🍔</div>
+                <div class="menu-info">
+                  <div class="menu-name" style="font-size:13px;">Burger Classic</div>
+                  <div class="menu-price" style="font-size:13px;">€14.90</div>
+                </div>
+                <div class="menu-add" style="width:26px;height:26px;font-size:14px;">+</div>
+              </div>
+              <div class="menu-item" id="s4-mi3" style="padding:8px;">
+                <div class="menu-img" style="width:48px;height:48px;font-size:22px;">🥙</div>
+                <div class="menu-info">
+                  <div class="menu-name" style="font-size:13px;">Kebab Wrap</div>
+                  <div class="menu-price" style="font-size:13px;">€11.50</div>
+                </div>
+                <div class="menu-add" style="width:26px;height:26px;font-size:14px;">+</div>
+              </div>
+            </div>
+            <!-- Cart bar -->
+            <div id="s4-cart" style="position:absolute; bottom:16px; left:16px; right:16px; padding: 12px 16px; border-radius: 16px; background: linear-gradient(135deg, #FF7A00, #CC6200); display:flex; justify-content:space-between; align-items:center; opacity:0; transition: transform 0.2s ease;">
+              <span id="s4-cart-items" style="font-size:13px; font-weight:700;">🛒 1 item</span>
+              <span id="s4-cart-total" style="font-size:14px; font-weight:900;">€12.90 →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lottie: Credit Card -->
+        <div id="lottie-creditcard" style="width:140px; height:140px; position:absolute; bottom:-30px; right:-50px; opacity:0;"></div>
+      </div>
+
+      <!-- Right: Features list -->
+      <div style="flex:1;">
+        <div class="badge" id="s4-badge" style="opacity:0; margin-bottom: 24px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          ONLINE ORDERING
+        </div>
+
+        <h2 class="title-md" id="s4-title" style="opacity:0; margin-bottom: 24px;">
+          <span class="gradient-text">Orders & payments</span><br>
+          <span style="color:#fff">on one platform.</span>
+        </h2>
+
+        <!-- Payment icons -->
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 24px;" id="s4-payments">
+          <div class="pay-icon" id="pay1">
+            <div class="pay-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            </div>
+            <span style="font-size:14px; font-weight:700; color:#fff;">Stripe</span>
+          </div>
+          <div class="pay-icon" id="pay2">
+            <div class="pay-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <span style="font-size:14px; font-weight:700; color:#fff;">MobilePay</span>
+          </div>
+          <div class="pay-icon" id="pay3">
+            <div class="pay-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/><path d="M10 2c1 .5 2 2 2 5"/></svg>
+            </div>
+            <span style="font-size:14px; font-weight:700; color:#fff;">Apple Pay</span>
+          </div>
+          <div class="pay-icon" id="pay4">
+            <div class="pay-icon-circle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            </div>
+            <span style="font-size:14px; font-weight:700; color:#fff;">Google Pay</span>
+          </div>
+        </div>
+
+        <!-- Feature list -->
+        <div style="display:flex; flex-direction:column; gap:10px;" id="s4-features">
+          <div class="feature-card" id="fc1">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#fff;">Mobile Optimized</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.4);">70% of orders come from mobile</div>
+            </div>
+          </div>
+          <div class="feature-card" id="fc2">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 10-5.5 5.5L8 13"/></svg>
+            </div>
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#fff;">Real-time Notifications</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.4);">Orders directly to your restaurant</div>
+            </div>
+          </div>
+          <div class="feature-card" id="fc3">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <div>
+              <div style="font-size:16px; font-weight:700; color:#fff;">Analytics & Reports</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.4);">Sales, orders and customer data</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCENE 5: CTA / GO LIVE ==================== -->
+  <div class="scene" id="scene5">
+    <div style="text-align:center; padding: 50px 80px;">
+      <!-- Lottie: Sign Out (launch) -->
+      <div id="lottie-launch" style="width:200px; height:200px; margin: 0 auto 20px; opacity:0;"></div>
+
+      <h2 class="title-xl" id="s5-title" style="opacity:0; margin-bottom: 16px;">
+        <span class="gradient-text">Go Live.</span><br>
+        <span style="color:#fff">March 5th.</span>
+      </h2>
+
+      <p class="text-body" id="s5-subtitle" style="opacity:0; margin-bottom: 32px; max-width: 600px; margin-left:auto; margin-right:auto;">
+        4 steps. 5 minutes. Your restaurant website online.
+      </p>
+
+      <!-- Steps summary -->
+      <div style="display:flex; justify-content:center; gap:16px; margin-bottom: 36px; flex-wrap:wrap;" id="s5-steps">
+        <div class="glass-sm" id="step1" style="padding: 16px 24px; text-align:center; opacity:0; min-width: 180px;">
+          <div style="font-size:28px; font-weight:900; color:#FF7A00; margin-bottom:4px;">01</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">Sign Up</div>
+        </div>
+        <div class="glass-sm" id="step2" style="padding: 16px 24px; text-align:center; opacity:0; min-width: 180px;">
+          <div style="font-size:28px; font-weight:900; color:#FF7A00; margin-bottom:4px;">02</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">AI Menu</div>
+        </div>
+        <div class="glass-sm" id="step3" style="padding: 16px 24px; text-align:center; opacity:0; min-width: 180px;">
+          <div style="font-size:28px; font-weight:900; color:#FF7A00; margin-bottom:4px;">03</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">Pick Theme</div>
+        </div>
+        <div class="glass-sm" id="step4" style="padding: 16px 24px; text-align:center; opacity:0; min-width: 180px;">
+          <div style="font-size:28px; font-weight:900; color:#FF7A00; margin-bottom:4px;">04</div>
+          <div style="font-size:14px; font-weight:700; color:#fff;">Go Live</div>
+        </div>
+      </div>
+
+      <!-- Pricing highlight -->
+      <div class="glass glass-glow" id="s5-pricing" style="display:inline-flex; gap:40px; padding: 28px 48px; margin-bottom: 32px; opacity:0;">
+        <div style="text-align:center;">
+          <div style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.4); margin-bottom:4px;">STARTER</div>
+          <div style="font-size:28px; font-weight:900; color:#FF7A00;">5%</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.35);">per order</div>
+        </div>
+        <div style="width:1px; background:rgba(255,255,255,0.08);"></div>
+        <div style="text-align:center;">
+          <div style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.4); margin-bottom:4px;">PRO</div>
+          <div style="font-size:28px; font-weight:900; color:#FF7A00;">€129</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.35);">/ mo, 0% commission</div>
+        </div>
+        <div style="width:1px; background:rgba(255,255,255,0.08);"></div>
+        <div style="text-align:center;">
+          <div style="font-size:14px; font-weight:700; color:rgba(255,255,255,0.4); margin-bottom:4px;">ANNUAL</div>
+          <div style="font-size:28px; font-weight:900; color:#FF7A00;">€99</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.35);">/ mo, everything included</div>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo" id="s5-logo" style="justify-content:center; margin-top:28px; opacity:0;">
+        <div class="logo-icon">
+          <img src="../public/b.svg" alt="H" onerror="this.parentElement.innerHTML='<span style=color:#fff;font-weight:900;font-size:22px>H</span>'" />
+        </div>
+        <div class="logo-text">
+          <span class="gradient-text">Helmies</span><span style="color:#fff">Bites</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Replay -->
+  <div class="replay-btn" id="replayBtn" onclick="replayAll()">
+    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+  </div>
+
+  <!-- Step indicators -->
+  <div class="step-indicator" id="stepIndicator" style="position:absolute; bottom:24px; left:50%; transform:translateX(-50%); z-index:200;">
+    <div class="step-dot active" id="dot1"></div>
+    <div class="step-dot" id="dot2"></div>
+    <div class="step-dot" id="dot3"></div>
+    <div class="step-dot" id="dot4"></div>
+    <div class="step-dot" id="dot5"></div>
+  </div>
+
+<script>
+// ===== LOTTIE SETUP =====
+const lottiePizzeria = lottie.loadAnimation({
+  container: document.getElementById('lottie-pizzeria'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: false,
+  path: '../public/Cooking.json'
+});
+
+const lottieChecklist = lottie.loadAnimation({
+  container: document.getElementById('lottie-checklist-s2'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: false,
+  path: '../public/Task Checklist.json'
+});
+
+const lottieCreditCard = lottie.loadAnimation({
+  container: document.getElementById('lottie-creditcard'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: false,
+  path: '../public/Credit Card.json'
+});
+
+const lottieLaunch = lottie.loadAnimation({
+  container: document.getElementById('lottie-launch'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: false,
+  path: '../public/Sign Out.json'
+});
+
+// ===== UTILITIES =====
+function $(id) { return document.getElementById(id); }
+
+function animateIn(el, delay, animation = 'fadeInUp', duration = 0.6) {
+  setTimeout(() => {
+    el.style.animation = `${animation} ${duration}s cubic-bezier(0.22, 1, 0.36, 1) forwards`;
+  }, delay);
+}
+
+function showScene(id) {
+  document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+  const scene = $(id);
+  scene.classList.add('active');
+  scene.style.animation = 'sceneIn 0.6s ease forwards';
+}
+
+function hideScene(id, callback) {
+  const scene = $(id);
+  scene.style.animation = 'sceneOut 0.4s ease forwards';
+  setTimeout(() => {
+    scene.classList.remove('active');
+    if (callback) callback();
+  }, 400);
+}
+
+function moveCursor(x, y, duration, callback) {
+  const cursor = $('cursor');
+  cursor.style.opacity = '1';
+  cursor.style.transition = `left ${duration}ms cubic-bezier(0.25, 0.1, 0.25, 1), top ${duration}ms cubic-bezier(0.25, 0.1, 0.25, 1)`;
+  cursor.style.left = x + 'px';
+  cursor.style.top = y + 'px';
+  setTimeout(() => {
+    if (callback) callback();
+  }, duration);
+}
+
+// Move cursor to the center of a DOM element
+function moveCursorTo(el, duration, callback) {
+  const rect = el.getBoundingClientRect();
+  const x = rect.left + rect.width / 2;
+  const y = rect.top + rect.height / 2;
+  moveCursor(x, y, duration, callback);
+}
+
+function clickCursor(callback) {
+  const cursor = $('cursor');
+  const ring = $('cursorRing');
+  cursor.style.animation = 'cursorClick 0.3s ease';
+  ring.style.animation = 'ringExpand 0.5s ease forwards';
+  setTimeout(() => {
+    cursor.style.animation = '';
+    ring.style.animation = '';
+    ring.style.opacity = '0';
+    ring.style.transform = 'scale(0)';
+    if (callback) callback();
+  }, 500);
+}
+
+function hideCursor() {
+  $('cursor').style.opacity = '0';
+  $('cursor').style.transition = 'opacity 0.3s ease';
+}
+
+function updateDots(active) {
+  for (let i = 1; i <= 5; i++) {
+    const dot = $('dot' + i);
+    if (i === active) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  }
+}
+
+function updateProgress(scene, total) {
+  const bar = $('progressBar');
+  const w = (scene / total) * 100;
+  bar.style.transition = 'width 0.5s ease';
+  bar.style.width = w + '%';
+}
+
+function typeText(element, text, speed, callback) {
+  let i = 0;
+  element.textContent = '';
+  element.style.opacity = '1';
+  const interval = setInterval(() => {
+    element.textContent += text[i];
+    i++;
+    if (i >= text.length) {
+      clearInterval(interval);
+      if (callback) setTimeout(callback, 200);
+    }
+  }, speed);
+}
+
+// ===== SCENE TIMELINES =====
+const SCENE_DURATION = 6000; // 6 sec per scene
+let timeouts = [];
+
+function clearAllTimeouts() {
+  timeouts.forEach(t => clearTimeout(t));
+  timeouts = [];
+}
+
+function t(fn, delay) {
+  timeouts.push(setTimeout(fn, delay));
+}
+
+// ----- SCENE 1: Hook -----
+function playScene1() {
+  updateDots(1);
+  updateProgress(0, 5);
+  showScene('scene1');
+
+  animateIn($('s1-logo'), 200, 'fadeInScale', 0.5);
+  animateIn($('s1-badge'), 500, 'fadeInUp', 0.5);
+
+  t(() => {
+    $('lottie-pizzeria').style.opacity = '1';
+    $('lottie-pizzeria').style.animation = 'fadeInScale 0.6s ease forwards';
+    lottiePizzeria.play();
+  }, 800);
+
+  animateIn($('s1-title'), 1200, 'fadeInUp', 0.7);
+  animateIn($('s1-subtitle'), 1700, 'fadeInUp', 0.5);
+
+  t(() => {
+    updateProgress(1, 5);
+  }, 2000);
+
+  t(() => {
+    hideScene('scene1', playScene2);
+  }, SCENE_DURATION);
+}
+
+// ----- SCENE 2: AI Menu Import -----
+function playScene2() {
+  updateDots(2);
+  showScene('scene2');
+  hideCursor();
+
+  animateIn($('s2-badge'), 200, 'fadeInUp', 0.4);
+  animateIn($('s2-title'), 400, 'fadeInUp', 0.5);
+  animateIn($('s2-desc'), 600, 'fadeInUp', 0.4);
+  animateIn($('s2-browser'), 800, 'fadeInScale', 0.6);
+
+  t(() => {
+    $('s2-upload').style.opacity = '1';
+    $('s2-upload').style.animation = 'fadeInUp 0.4s ease forwards';
+  }, 1400);
+
+  // Cursor moves to URL bar and types
+  t(() => {
+    moveCursorTo($('s2-url-text').parentElement, 600, () => {
+      typeText($('s2-url-text'), 'helmies.fi/admin/menu', 40);
+    });
+  }, 1600);
+
+  // Cursor moves to upload area and clicks
+  t(() => {
+    moveCursorTo($('s2-upload'), 500, () => {
+      clickCursor(() => {
+        // Upload flash effect
+        $('s2-upload').style.borderColor = 'rgba(255,122,0,0.6)';
+        $('s2-upload').style.background = 'rgba(255,122,0,0.05)';
+        $('s2-upload').querySelector('p').textContent = '✓ menu.pdf uploaded!';
+        $('s2-upload').querySelector('p').style.color = '#FF7A00';
+      });
+    });
+  }, 2800);
+
+  // Menu items appear one by one
+  t(() => { $('mi1').classList.add('show'); }, 3600);
+  t(() => { $('mi2').classList.add('show'); }, 3900);
+  t(() => {
+    $('mi3').classList.add('show');
+    hideCursor();
+  }, 4200);
+
+  // Checklist Lottie
+  t(() => {
+    $('lottie-checklist-s2').style.opacity = '1';
+    $('lottie-checklist-s2').style.animation = 'fadeInScale 0.4s ease forwards';
+    lottieChecklist.play();
+  }, 4000);
+
+  t(() => { updateProgress(2, 5); }, 2500);
+
+  t(() => {
+    hideScene('scene2', playScene3);
+  }, SCENE_DURATION);
+}
+
+// ----- SCENE 3: Themes -----
+function playScene3() {
+  updateDots(3);
+  showScene('scene3');
+  hideCursor();
+
+  animateIn($('s3-badge'), 200, 'fadeInUp', 0.4);
+  animateIn($('s3-title'), 400, 'fadeInUp', 0.5);
+  animateIn($('s3-desc'), 600, 'fadeInUp', 0.4);
+
+  // Show theme cards
+  t(() => { $('theme1').classList.add('show'); }, 900);
+  t(() => { $('theme2').classList.add('show'); }, 1100);
+  t(() => { $('theme3').classList.add('show'); }, 1300);
+  t(() => { $('theme4').classList.add('show'); }, 1500);
+
+  // Cursor moves to theme 2 (Rustic) and clicks
+  t(() => {
+    moveCursorTo($('theme2'), 700, () => {
+      clickCursor(() => {
+        $('theme2').classList.add('selected');
+      });
+    });
+  }, 2200);
+
+  // Then moves to theme 3 (Fresh) and clicks
+  t(() => {
+    // Deselect theme 2
+    moveCursorTo($('theme3'), 500, () => {
+      clickCursor(() => {
+        $('theme2').classList.remove('selected');
+        $('theme3').classList.add('selected');
+      });
+    });
+  }, 3800);
+
+  t(() => { hideCursor(); }, 4600);
+
+  t(() => { updateProgress(3, 5); }, 2000);
+
+  t(() => {
+    hideScene('scene3', playScene4);
+  }, SCENE_DURATION);
+}
+
+// ----- SCENE 4: Ordering & Payments -----
+function playScene4() {
+  updateDots(4);
+  showScene('scene4');
+  hideCursor();
+
+  // Phone slides in
+  animateIn($('s4-phone'), 200, 'slideInLeft', 0.6);
+  animateIn($('s4-badge'), 400, 'fadeInUp', 0.4);
+  animateIn($('s4-title'), 600, 'fadeInUp', 0.5);
+
+  // Menu items in phone appear
+  t(() => { $('s4-mi1').classList.add('show'); }, 1000);
+  t(() => { $('s4-mi2').classList.add('show'); }, 1200);
+  t(() => { $('s4-mi3').classList.add('show'); }, 1400);
+
+  // Cursor clicks add buttons one by one, cart updates incrementally
+  t(() => {
+    moveCursorTo($('s4-mi1').querySelector('.menu-add'), 500, () => {
+      clickCursor(() => {
+        $('s4-mi1').querySelector('.menu-add').style.background = 'rgba(255,122,0,0.4)';
+        $('s4-mi1').querySelector('.menu-add').textContent = '✓';
+        // Cart appears with first item
+        $('s4-cart').style.opacity = '1';
+        $('s4-cart').style.animation = 'fadeInUp 0.4s ease forwards';
+        $('s4-cart-items').textContent = '🛒 1 item';
+        $('s4-cart-total').textContent = '€12.90 →';
+      });
+    });
+  }, 1800);
+
+  t(() => {
+    moveCursorTo($('s4-mi2').querySelector('.menu-add'), 300, () => {
+      clickCursor(() => {
+        $('s4-mi2').querySelector('.menu-add').style.background = 'rgba(255,122,0,0.4)';
+        $('s4-mi2').querySelector('.menu-add').textContent = '✓';
+        // Cart updates to 2 items
+        $('s4-cart-items').textContent = '🛒 2 items';
+        $('s4-cart-total').textContent = '€27.80 →';
+        $('s4-cart').style.transform = 'scale(1.03)';
+        setTimeout(() => { $('s4-cart').style.transform = 'scale(1)'; }, 200);
+      });
+    });
+  }, 2600);
+
+  t(() => {
+    moveCursorTo($('s4-mi3').querySelector('.menu-add'), 300, () => {
+      clickCursor(() => {
+        $('s4-mi3').querySelector('.menu-add').style.background = 'rgba(255,122,0,0.4)';
+        $('s4-mi3').querySelector('.menu-add').textContent = '✓';
+        // Cart updates to 3 items
+        $('s4-cart-items').textContent = '🛒 3 items';
+        $('s4-cart-total').textContent = '€39.30 →';
+        $('s4-cart').style.transform = 'scale(1.05)';
+        setTimeout(() => { $('s4-cart').style.transform = 'scale(1)'; }, 200);
+        hideCursor();
+      });
+    });
+  }, 3300);
+
+  // Payment icons
+  t(() => { $('pay1').classList.add('show'); }, 1600);
+  t(() => { $('pay2').classList.add('show'); }, 1800);
+  t(() => { $('pay3').classList.add('show'); }, 2000);
+  t(() => { $('pay4').classList.add('show'); }, 2200);
+
+  // Feature cards
+  t(() => { $('fc1').classList.add('show'); }, 2800);
+  t(() => { $('fc2').classList.add('show'); }, 3100);
+  t(() => { $('fc3').classList.add('show'); }, 3400);
+
+  // Credit Card Lottie
+  t(() => {
+    $('lottie-creditcard').style.opacity = '1';
+    $('lottie-creditcard').style.animation = 'fadeInScale 0.4s ease forwards';
+    lottieCreditCard.play();
+  }, 2400);
+
+  t(() => { updateProgress(4, 5); }, 2000);
+
+  t(() => {
+    hideScene('scene4', playScene5);
+  }, SCENE_DURATION);
+}
+
+// ----- SCENE 5: CTA -----
+function playScene5() {
+  updateDots(5);
+  showScene('scene5');
+  hideCursor();
+
+  t(() => {
+    $('lottie-launch').style.opacity = '1';
+    $('lottie-launch').style.animation = 'fadeInScale 0.5s ease forwards';
+    lottieLaunch.play();
+  }, 200);
+
+  animateIn($('s5-title'), 600, 'fadeInUp', 0.6);
+  animateIn($('s5-subtitle'), 900, 'fadeInUp', 0.5);
+
+  // Steps
+  t(() => { $('step1').style.opacity = '1'; $('step1').style.animation = 'fadeInUp 0.4s ease forwards'; }, 1200);
+  t(() => { $('step2').style.opacity = '1'; $('step2').style.animation = 'fadeInUp 0.4s ease forwards'; }, 1400);
+  t(() => { $('step3').style.opacity = '1'; $('step3').style.animation = 'fadeInUp 0.4s ease forwards'; }, 1600);
+  t(() => { $('step4').style.opacity = '1'; $('step4').style.animation = 'fadeInUp 0.4s ease forwards'; }, 1800);
+
+  // Pricing
+  animateIn($('s5-pricing'), 2200, 'fadeInScale', 0.6);
+
+  // Logo
+  animateIn($('s5-logo'), 2800, 'fadeInUp', 0.4);
+
+  t(() => { updateProgress(5, 5); }, 2000);
+
+  // Show replay
+  t(() => {
+    $('replayBtn').style.opacity = '1';
+  }, 5000);
+}
+
+// ===== MASTER TIMELINE =====
+function startAd() {
+  clearAllTimeouts();
+  $('replayBtn').style.opacity = '0';
+  $('progressBar').style.width = '0%';
+  hideCursor();
+
+  // Reset all animations
+  document.querySelectorAll('.scene').forEach(s => {
+    s.classList.remove('active');
+    s.style.animation = '';
+  });
+
+  // Reset dynamic elements
+  ['s1-logo','s1-badge','s1-title','s1-subtitle'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  $('lottie-pizzeria').style.opacity = '0'; $('lottie-pizzeria').style.animation = '';
+  ['s2-badge','s2-title','s2-desc','s2-browser'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  $('s2-upload').style.opacity = '0'; $('s2-upload').style.animation = '';
+  $('s2-upload').style.borderColor = 'rgba(255,122,0,0.25)';
+  $('s2-upload').style.background = 'transparent';
+  const uploadP = $('s2-upload').querySelector('p');
+  if (uploadP) { uploadP.textContent = 'Drop your menu PDF here'; uploadP.style.color = 'rgba(255,255,255,0.5)'; }
+  $('s2-url-text').textContent = '';
+  $('lottie-checklist-s2').style.opacity = '0'; $('lottie-checklist-s2').style.animation = '';
+  document.querySelectorAll('.menu-item').forEach(el => { el.classList.remove('show'); el.style.opacity = ''; el.style.transform = ''; });
+  // Reset add buttons
+  document.querySelectorAll('.menu-add').forEach(el => { el.style.background = ''; el.textContent = '+'; });
+
+  ['s3-badge','s3-title','s3-desc'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  document.querySelectorAll('.theme-card').forEach(el => { el.classList.remove('show','selected'); });
+
+  ['s4-phone','s4-badge','s4-title'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  ['s4-mi1','s4-mi2','s4-mi3'].forEach(id => { $(id).classList.remove('show'); $(id).style.opacity = ''; $(id).style.transform = ''; });
+  $('s4-cart').style.opacity = '0'; $('s4-cart').style.animation = ''; $('s4-cart').style.transform = '';
+  $('lottie-creditcard').style.opacity = '0'; $('lottie-creditcard').style.animation = '';
+  document.querySelectorAll('.pay-icon').forEach(el => el.classList.remove('show'));
+  document.querySelectorAll('.feature-card').forEach(el => el.classList.remove('show'));
+
+  ['s5-title','s5-subtitle','s5-pricing','s5-logo'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  ['step1','step2','step3','step4'].forEach(id => { $(id).style.animation = ''; $(id).style.opacity = '0'; });
+  $('lottie-launch').style.opacity = '0'; $('lottie-launch').style.animation = '';
+
+  // Stop all lotties
+  lottiePizzeria.stop();
+  lottieChecklist.stop();
+  lottieCreditCard.stop();
+  lottieLaunch.stop();
+
+  // Start
+  t(playScene1, 300);
+}
+
+function replayAll() {
+  startAd();
+}
+
+// Auto-start
+window.addEventListener('load', () => {
+  setTimeout(startAd, 500);
+});
+</script>
+</body>
+</html>
