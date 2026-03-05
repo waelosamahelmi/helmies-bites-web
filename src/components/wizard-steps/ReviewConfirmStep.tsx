@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Check, Globe, Truck, User, ShoppingBag, CreditCard } from 'lucide-react';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 }
 
 export function ReviewConfirmStep({ data }: Props) {
+  const { t } = useTranslation('wizard');
   const monthlyFee = calculateMonthlyFee(data);
   const oneTimeFee = calculateOneTimeFee(data);
 
@@ -14,58 +16,58 @@ export function ReviewConfirmStep({ data }: Props) {
     <div className="space-y-8">
       {/* Review Sections */}
       <div>
-        <h3 className="text-xl font-bold text-gray-900 mb-6">Review Your Restaurant</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-6">{t('review.title')}</h3>
 
         <div className="grid md:grid-cols-2 gap-4">
           {/* Restaurant Information */}
           <ReviewCard
             icon={<User className="h-6 w-6" />}
-            title="Restaurant Information"
+            title={t('review.sections.restaurantInfo.title')}
             iconGradient="linear-gradient(135deg, #f97316 0%, #ea580c 100%)"
             items={[
-              { label: 'Name', value: data.name || 'Not set' },
-              { label: 'Cuisine', value: getCuisineLabel(data.cuisine) || 'Not set' },
-              { label: 'City', value: data.city || 'Not set' },
+              { label: t('review.sections.restaurantInfo.name'), value: data.name || t('review.notSet') },
+              { label: t('review.sections.restaurantInfo.cuisine'), value: getCuisineLabel(data.cuisine, t) || t('review.notSet') },
+              { label: t('review.sections.restaurantInfo.city'), value: data.city || t('review.notSet') },
             ]}
           />
 
           {/* Website */}
           <ReviewCard
             icon={<Globe className="h-6 w-6" />}
-            title="Website"
+            title={t('review.sections.website.title')}
             iconGradient="linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)"
             items={[
               {
-                label: 'Domain',
+                label: t('review.sections.website.domain'),
                 value: data.domainType === 'custom'
-                  ? data.customDomain || 'Not set'
+                  ? data.customDomain || t('review.notSet')
                   : data.domainType === 'path'
                   ? `helmiesbites.fi/${data.slug || 'restaurant'}`
                   : `${data.slug || 'restaurant'}.helmiesbites.fi`
               },
-              { label: 'Theme', value: data.theme?.name || 'Selected theme' },
+              { label: t('review.sections.website.theme'), value: data.theme?.name || t('review.sections.website.selectedTheme') },
             ]}
           />
 
           {/* Menu */}
           <ReviewCard
             icon={<ShoppingBag className="h-6 w-6" />}
-            title="Menu"
+            title={t('review.sections.menu.title')}
             iconGradient="linear-gradient(135deg, #22c55e 0%, #16a34a 100%)"
             items={[
-              { label: 'Items', value: `${data.menu?.items?.length || 0} menu items` },
-              { label: 'Categories', value: `${data.menu?.categories?.length || 0} categories` },
-              { label: 'Languages', value: 'Finnish, English, Swedish' },
+              { label: t('review.sections.menu.items'), value: t('review.sections.menu.menuItems', { count: data.menu?.items?.length || 0 }) },
+              { label: t('review.sections.menu.categories'), value: t('review.sections.menu.menuCategories', { count: data.menu?.categories?.length || 0 }) },
+              { label: t('review.sections.menu.languages'), value: t('review.sections.menu.languageList') },
             ]}
           />
 
           {/* Contact */}
           <ReviewCard
             icon={<Truck className="h-6 w-6" />}
-            title="Contact"
+            title={t('review.sections.contact.title')}
             iconGradient="linear-gradient(135deg, #d946ef 0%, #c026d3 100%)"
             items={[
-              { label: 'Email', value: data.email || 'Not set' },
+              { label: t('review.sections.contact.email'), value: data.email || t('review.notSet') },
             ]}
           />
         </div>
@@ -73,75 +75,80 @@ export function ReviewConfirmStep({ data }: Props) {
 
       {/* Pricing Summary */}
       <div>
-        <h3 className="text-xl font-bold text-gray-900 mb-6">Pricing Summary</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-6">{t('review.pricing.title')}</h3>
 
         <div className="glass-card rounded-2xl overflow-hidden">
           {/* Base Service */}
           <PricingRow
-            label="Base Platform Fee"
-            value="5% per online order"
+            label={t('review.pricing.basePlatformFee.label')}
+            value={t('review.pricing.basePlatformFee.value')}
             included
-            description="Only pay when you get orders"
+            description={t('review.pricing.basePlatformFee.description')}
+            oneTimeLabel={t('review.pricing.oneTime')}
           />
 
           {/* Optional Features */}
           {data.features?.cashOnDelivery && (
             <PricingRow
-              label="Cash on Delivery"
-              value="€30/month"
+              label={t('review.pricing.cashOnDelivery.label')}
+              value={t('review.pricing.cashOnDelivery.value')}
               included
-              description="Accept cash payments on delivery"
+              description={t('review.pricing.cashOnDelivery.description')}
+              oneTimeLabel={t('review.pricing.oneTime')}
             />
           )}
 
           {data.features?.aiAssistant && (
             <PricingRow
-              label="AI Assistant"
-              value="€10/month"
+              label={t('review.pricing.aiAssistant.label')}
+              value={t('review.pricing.aiAssistant.value')}
               included
-              description="Smart customer support AI"
+              description={t('review.pricing.aiAssistant.description')}
+              oneTimeLabel={t('review.pricing.oneTime')}
             />
           )}
 
           {data.features?.aiImages && (
             <PricingRow
-              label="AI Menu Images"
-              value="€20"
+              label={t('review.pricing.aiImages.label')}
+              value={t('review.pricing.aiImages.value')}
               included
-              description="One-time fee for AI-generated food images"
+              description={t('review.pricing.aiImages.description')}
               oneTime
+              oneTimeLabel={t('review.pricing.oneTime')}
             />
           )}
 
           {data.features?.aiBranding && (
             <PricingRow
-              label="AI Branding"
-              value="€5"
+              label={t('review.pricing.aiBranding.label')}
+              value={t('review.pricing.aiBranding.value')}
               included
-              description="One-time fee for AI-generated logo"
+              description={t('review.pricing.aiBranding.description')}
               oneTime
+              oneTimeLabel={t('review.pricing.oneTime')}
             />
           )}
 
           {/* Total */}
           <div className="bg-gradient-to-r from-orange-50 to-pink-50 p-6 border-t border-orange-200">
             <div className="flex justify-between items-center mb-3">
-              <span className="text-lg font-bold text-gray-900">Monthly Total</span>
+              <span className="text-lg font-bold text-gray-900">{t('review.pricing.monthlyTotal')}</span>
               <span className="text-2xl font-black gradient-text">
-                €{monthlyFee}
-                <span className="text-lg text-gray-500">/mo</span>
+                &euro;{monthlyFee}
+                <span className="text-lg text-gray-500">{t('review.pricing.perMonth')}</span>
               </span>
             </div>
             {oneTimeFee > 0 && (
               <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-600">One-time charges</span>
-                <span className="font-bold text-gray-900">€{oneTimeFee}</span>
+                <span className="text-gray-600">{t('review.pricing.oneTimeCharges')}</span>
+                <span className="font-bold text-gray-900">&euro;{oneTimeFee}</span>
               </div>
             )}
             <div className="mt-4 pt-4 border-t border-orange-200">
               <p className="text-sm text-gray-600">
                 <Check className="h-4 w-4 inline text-green-600 mr-1" />
-                No hidden fees. 3-month cancellation notice.
+                {t('review.pricing.noHiddenFees')}
               </p>
             </div>
           </div>
@@ -155,23 +162,22 @@ export function ReviewConfirmStep({ data }: Props) {
             <Check className="h-7 w-7 text-white" />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-green-900 mb-2">You're All Set!</h3>
+            <h3 className="text-xl font-bold text-green-900 mb-2">{t('review.readyToLaunch.title')}</h3>
             <p className="text-green-800 mb-4">
-              Click "Complete Setup" to launch your restaurant website. Your login credentials
-              will be sent to your email address.
+              {t('review.readyToLaunch.description')}
             </p>
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 text-sm text-green-700">
                 <Check className="h-4 w-4" />
-                <span>Instant activation</span>
+                <span>{t('review.readyToLaunch.instantActivation')}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-green-700">
                 <Check className="h-4 w-4" />
-                <span>Free SSL certificate</span>
+                <span>{t('review.readyToLaunch.freeSSL')}</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-green-700">
                 <Check className="h-4 w-4" />
-                <span>Mobile responsive</span>
+                <span>{t('review.readyToLaunch.mobileResponsive')}</span>
               </div>
             </div>
           </div>
@@ -182,17 +188,16 @@ export function ReviewConfirmStep({ data }: Props) {
       <div className="glass-card rounded-2xl p-6">
         <div className="flex items-center gap-3 mb-4">
           <CreditCard className="h-6 w-6 text-gray-600" />
-          <h4 className="font-bold text-gray-900">Payment Information</h4>
+          <h4 className="font-bold text-gray-900">{t('review.payment.title')}</h4>
         </div>
         <p className="text-sm text-gray-600 mb-4">
-          You can add your payment details after setup. We offer various payment methods including
-          credit card, direct debit, and invoice.
+          {t('review.payment.description')}
         </p>
         <div className="flex flex-wrap gap-2">
-          <span className="badge">Visa</span>
-          <span className="badge">Mastercard</span>
-          <span className="badge">American Express</span>
-          <span className="badge">Invoice</span>
+          <span className="badge">{t('review.payment.methods.visa')}</span>
+          <span className="badge">{t('review.payment.methods.mastercard')}</span>
+          <span className="badge">{t('review.payment.methods.amex')}</span>
+          <span className="badge">{t('review.payment.methods.invoice')}</span>
         </div>
       </div>
     </div>
@@ -237,9 +242,10 @@ interface PricingRowProps {
   included: boolean;
   description?: string;
   oneTime?: boolean;
+  oneTimeLabel: string;
 }
 
-function PricingRow({ label, value, included, description, oneTime }: PricingRowProps) {
+function PricingRow({ label, value, included, description, oneTime, oneTimeLabel }: PricingRowProps) {
   return (
     <div className={`flex items-start gap-4 p-5 border-b border-gray-100 last:border-b-0 ${
       included ? '' : 'bg-gray-50'
@@ -258,7 +264,7 @@ function PricingRow({ label, value, included, description, oneTime }: PricingRow
           <span className="font-semibold text-gray-900">{label}</span>
           {oneTime && (
             <span className="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold">
-              One-time
+              {oneTimeLabel}
             </span>
           )}
         </div>
@@ -285,18 +291,19 @@ function calculateOneTimeFee(data: any): number {
   return fee;
 }
 
-function getCuisineLabel(value: string): string {
-  const cuisines: Record<string, string> = {
-    finnish: 'Finnish',
-    italian: 'Italian',
-    chinese: 'Chinese',
-    indian: 'Indian',
-    thai: 'Thai',
-    japanese: 'Japanese',
-    burger: 'Burger & American',
-    pizza: 'Pizza',
-    kebab: 'Kebab',
-    mexican: 'Mexican',
+function getCuisineLabel(value: string, t: (key: string) => string): string {
+  const cuisineKeys: Record<string, string> = {
+    finnish: 'review.cuisineLabels.finnish',
+    italian: 'review.cuisineLabels.italian',
+    chinese: 'review.cuisineLabels.chinese',
+    indian: 'review.cuisineLabels.indian',
+    thai: 'review.cuisineLabels.thai',
+    japanese: 'review.cuisineLabels.japanese',
+    burger: 'review.cuisineLabels.burger',
+    pizza: 'review.cuisineLabels.pizza',
+    kebab: 'review.cuisineLabels.kebab',
+    mexican: 'review.cuisineLabels.mexican',
   };
-  return cuisines[value] || value;
+  const key = cuisineKeys[value];
+  return key ? t(key) : value;
 }

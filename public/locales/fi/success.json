@@ -1,0 +1,10 @@
+{
+  "noData": "Asetustietoja ei löytynyt. Suorita ohjattu asennus ensin.",
+  "title": "Tervetuloa Helmies Bitesiin!",
+  "subtitle": "Ravintolasi verkkosivusto on nyt käytössä ja valmis vastaanottamaan tilauksia",
+  "websiteLive": "Verkkosivustosi on käytössä",
+  "yourWebsite": "Verkkosivustosi",
+  "adminDashboard": "Hallintapaneeli",
+  "credentials": "<strong>Kirjautumistiedot on lähetetty sähköpostiisi.</strong> Tarkista postilaatikkosi käyttäjätunnusta ja salasanaa varten.",
+  "contactUs": "Kysyttävää? Ota meihin yhteyttä osoitteessa support@helmiesbites.fi"
+}

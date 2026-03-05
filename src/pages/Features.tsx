@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -54,366 +55,6 @@ interface FeatureCategory {
   features: FeatureItem[];
   color: string;
 }
-
-/* ============================================================================
-   Data
-   ============================================================================ */
-
-const featureCategories: FeatureCategory[] = [
-  {
-    id: 'online-ordering',
-    title: 'Online Ordering',
-    description: 'Streamline your ordering process with a seamless customer experience',
-    icon: <ShoppingCart className="h-6 w-6" />,
-    color: 'from-[#FF7A00] to-[#CC6200]',
-    features: [
-      {
-        icon: <ShoppingCart className="h-5 w-5" />,
-        title: 'Smart Shopping Cart',
-        description: 'Intuitive cart with real-time updates, quantity controls, and special instructions support.',
-        benefit: 'Reduce cart abandonment by up to 35%',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
-      },
-      {
-        icon: <CreditCard className="h-5 w-5" />,
-        title: 'One-Click Checkout',
-        description: 'Save customer details for lightning-fast repeat orders with Stripe integration.',
-        benefit: 'Customers complete orders 3x faster',
-        image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80',
-      },
-      {
-        icon: <MapPin className="h-5 w-5" />,
-        title: 'Real-Time Order Tracking',
-        description: 'Live order status updates from preparation to delivery or pickup.',
-        benefit: 'Reduce "Where is my order?" calls by 80%',
-        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80',
-      },
-      {
-        icon: <Clock className="h-5 w-5" />,
-        title: 'Scheduled Ordering',
-        description: 'Let customers order hours or days in advance for pickup or delivery.',
-        benefit: 'Capture orders during off-peak hours',
-      },
-      {
-        icon: <Bell className="h-5 w-5" />,
-        title: 'Order Notifications',
-        description: 'Instant SMS and email alerts for new orders, updates, and confirmations.',
-        benefit: 'Never miss an order again',
-      },
-    ],
-  },
-  {
-    id: 'menu-management',
-    title: 'Menu Management',
-    description: 'Create and manage beautiful, engaging menus with AI assistance',
-    icon: <Utensils className="h-6 w-6" />,
-    color: 'from-red-500 to-[#CC6200]',
-    features: [
-      {
-        icon: <Palette className="h-5 w-5" />,
-        title: 'AI-Powered Menu Setup',
-        description: 'Upload photos and descriptions. Our AI organizes everything into categories, suggests prices, and creates modifiers.',
-        benefit: 'Go from zero to live menu in under 5 minutes',
-        image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
-      },
-      {
-        icon: <Package className="h-5 w-5" />,
-        title: 'Custom Modifiers & Options',
-        description: 'Add toppings, sizes, cooking preferences, and special requests with ease.',
-        benefit: 'Increase average order value by 20%',
-      },
-      {
-        icon: <Star className="h-5 w-5" />,
-        title: 'Photo Galleries',
-        description: 'Upload multiple high-quality photos to showcase your dishes beautifully.',
-        benefit: 'Photos increase orders by 30%',
-        image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
-      },
-      {
-        icon: <Globe className="h-5 w-5" />,
-        title: 'Multi-Language Menus',
-        description: 'AI translates your menu into Finnish, English, Swedish, and more automatically.',
-        benefit: 'Reach a broader customer base',
-      },
-      {
-        icon: <QrCode className="h-5 w-5" />,
-        title: 'QR Code Menus',
-        description: 'Generate printable QR codes for table-side ordering and contactless menus.',
-        benefit: 'Reduce physical menu printing costs',
-      },
-    ],
-  },
-  {
-    id: 'payment-processing',
-    title: 'Payment Processing',
-    description: 'Accept payments securely and get paid instantly',
-    icon: <CreditCard className="h-6 w-6" />,
-    color: 'from-[#FF7A00] to-[#CC6200]',
-    features: [
-      {
-        icon: <CreditCard className="h-5 w-5" />,
-        title: 'Stripe Integration',
-        description: 'Accept all major credit cards, mobile wallets, and local payment methods through Stripe.',
-        benefit: 'Industry-leading security and reliability',
-        image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80',
-      },
-      {
-        icon: <Zap className="h-5 w-5" />,
-        title: 'Instant Payouts',
-        description: 'Configure daily automatic payouts to your bank account. No waiting weeks for your money.',
-        benefit: 'Improve cash flow immediately',
-      },
-      {
-        icon: <Smartphone className="h-5 w-5" />,
-        title: 'Mobile Payments',
-        description: 'Accept Apple Pay, Google Pay, and other mobile wallets for seamless checkout.',
-        benefit: 'Mobile users convert 2x more',
-      },
-      {
-        icon: <ReceiptIcon className="h-5 w-5" />,
-        title: 'Digital Receipts',
-        description: 'Automatic email receipts with order details and easy re-order links.',
-        benefit: 'Encourage repeat purchases',
-      },
-    ],
-  },
-  {
-    id: 'delivery-management',
-    title: 'Delivery Management',
-    description: 'Take control of your delivery operations or integrate with partners',
-    icon: <Truck className="h-6 w-6" />,
-    color: 'from-[#D4915C] to-[#FF7A00]/50',
-    features: [
-      {
-        icon: <MapPin className="h-5 w-5" />,
-        title: 'Delivery Zones',
-        description: 'Define custom delivery areas with radius-based or polygon zones and unique fees.',
-        benefit: 'Optimize delivery costs and coverage',
-        image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80',
-      },
-      {
-        icon: <CalculatorIcon className="h-5 w-5" />,
-        title: 'Dynamic Fee Calculation',
-        description: 'Set fees based on distance, order size, or time-of-day with automatic adjustments.',
-        benefit: 'Protect margins on small orders',
-      },
-      {
-        icon: <Smartphone className="h-5 w-5" />,
-        title: 'Driver App',
-        description: 'Dedicated mobile app for delivery drivers with route optimization and status updates.',
-        benefit: 'Complete control over delivery experience',
-      },
-      {
-        icon: <Users className="h-5 w-5" />,
-        title: 'Driver Management',
-        description: 'Assign orders to drivers, track deliveries, and optimize routes.',
-        benefit: 'Complete control over delivery experience',
-      },
-    ],
-  },
-  {
-    id: 'analytics',
-    title: 'Analytics & Reports',
-    description: 'Data-driven insights to grow your business',
-    icon: <BarChart3 className="h-6 w-6" />,
-    color: 'from-[#CC6200] to-[#CC6200]',
-    features: [
-      {
-        icon: <TrendingUpIcon className="h-5 w-5" />,
-        title: 'Sales Analytics',
-        description: 'Track revenue, average order value, and growth over time with beautiful visualizations.',
-        benefit: 'Make data-driven business decisions',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-      },
-      {
-        icon: <Star className="h-5 w-5" />,
-        title: 'Popular Items Report',
-        description: 'Discover your best-sellers and underperforming items to optimize your menu.',
-        benefit: 'Focus on what drives profit',
-      },
-      {
-        icon: <Users className="h-5 w-5" />,
-        title: 'Customer Insights',
-        description: 'Understand customer behavior, order frequency, and lifetime value.',
-        benefit: 'Identify and retain VIP customers',
-      },
-      {
-        icon: <Clock className="h-5 w-5" />,
-        title: 'Peak Hour Analysis',
-        description: 'Identify your busiest times to optimize staffing and preparation.',
-        benefit: 'Reduce wait times and improve service',
-      },
-    ],
-  },
-  {
-    id: 'marketing',
-    title: 'Marketing Tools',
-    description: 'Attract new customers and keep them coming back',
-    icon: <Megaphone className="h-6 w-6" />,
-    color: 'from-[#D4915C] to-[#D4915C]',
-    features: [
-      {
-        icon: <TagIcon className="h-5 w-5" />,
-        title: 'Promotions & Discounts',
-        description: 'Create coupon codes, percentage discounts, and BOGO offers with ease.',
-        benefit: 'Drive sales during slow periods',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
-      },
-      {
-        icon: <Gift className="h-5 w-5" />,
-        title: 'Loyalty Programs',
-        description: 'Reward repeat customers with points, free items, and exclusive perks.',
-        benefit: 'Increase customer retention by 40%',
-      },
-      {
-        icon: <Mail className="h-5 w-5" />,
-        title: 'Email Campaigns',
-        description: 'Send targeted email campaigns to announce specials, events, and promotions.',
-        benefit: 'Reach customers directly in their inbox',
-      },
-      {
-        icon: <Share2Icon className="h-5 w-5" />,
-        title: 'Social Sharing',
-        description: 'Easy sharing to Facebook, Instagram, and other social platforms.',
-        benefit: 'Amplify your reach organically',
-      },
-    ],
-  },
-  {
-    id: 'multi-location',
-    title: 'Multi-Location Support',
-    description: 'Manage multiple restaurants from a single dashboard',
-    icon: <Building2 className="h-6 w-6" />,
-    color: 'from-cyan-500 to-teal-500',
-    features: [
-      {
-        icon: <Building2 className="h-5 w-5" />,
-        title: 'Centralized Management',
-        description: 'Manage menus, prices, and settings across all locations from one admin panel.',
-        benefit: 'Save hours of administrative work',
-        image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
-      },
-      {
-        icon: <GitBranchIcon className="h-5 w-5" />,
-        title: 'Location-Specific Options',
-        description: 'Customize menus, pricing, and delivery zones for each location independently.',
-        benefit: 'Adapt to local market conditions',
-      },
-      {
-        icon: <BarChart3 className="h-5 w-5" />,
-        title: 'Aggregated Reporting',
-        description: 'View individual location performance or consolidated reports across all locations.',
-        benefit: 'See the big picture and details',
-      },
-      {
-        icon: <Users className="h-5 w-5" />,
-        title: 'Role-Based Access',
-        description: 'Grant location managers access only to their specific restaurant data.',
-        benefit: 'Maintain security and control',
-      },
-    ],
-  },
-  {
-    id: 'mobile-friendly',
-    title: 'Mobile Friendly',
-    description: 'Perfect experience on every device, everywhere',
-    icon: <Smartphone className="h-6 w-6" />,
-    color: 'from-[#CC6200] to-[#CC6200]',
-    features: [
-      {
-        icon: <Smartphone className="h-5 w-5" />,
-        title: 'Responsive Design',
-        description: 'Your site looks stunning on phones, tablets, and desktops automatically.',
-        benefit: '70% of customers order on mobile',
-        image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
-      },
-      {
-        icon: <Zap className="h-5 w-5" />,
-        title: 'PWA Support',
-        description: 'Progressive Web App technology lets customers install your site like a native app.',
-        benefit: 'Increase engagement and repeat orders',
-      },
-      {
-        icon: <WifiIcon className="h-5 w-5" />,
-        title: 'Offline Capability',
-        description: 'Menu browsing works even with poor or no internet connection.',
-        benefit: 'Never lose a customer to connectivity issues',
-      },
-      {
-        icon: <Zap className="h-5 w-5" />,
-        title: 'Lightning Fast',
-        description: 'Optimized performance loads pages instantly even on older devices.',
-        benefit: 'Faster sites convert more customers',
-      },
-    ],
-  },
-];
-
-const comparisonData = [
-  {
-    feature: 'Setup Time',
-    helmies: '5 minutes with AI',
-    traditional: 'Days to weeks',
-  },
-  {
-    feature: 'Monthly Cost',
-    helmies: 'From 29/month',
-    traditional: '99-299/month',
-  },
-  {
-    feature: 'Commission on Orders',
-    helmies: '0%',
-    traditional: '15-30%',
-  },
-  {
-    feature: 'Payment Processing',
-    helmies: 'Direct Stripe - funds in your account',
-    traditional: 'Held by platform, paid out weekly/monthly',
-  },
-  {
-    feature: 'Menu Management',
-    helmies: 'AI-powered, instant updates',
-    traditional: 'Manual input, slow changes',
-  },
-  {
-    feature: 'Custom Branding',
-    helmies: 'Full customization with AI',
-    traditional: 'Limited templates or expensive custom',
-  },
-  {
-    feature: 'Customer Data',
-    helmies: '100% yours - full export',
-    traditional: 'Owned by platform',
-  },
-  {
-    feature: 'Multi-Language',
-    helmies: 'Auto-translate with AI',
-    traditional: 'Manual translation needed',
-  },
-  {
-    feature: 'Delivery Fees',
-    helmies: 'You keep it all',
-    traditional: 'Platform takes a cut',
-  },
-  {
-    feature: 'Support',
-    helmies: '24/7 Finnish support',
-    traditional: 'Often outsourced, slow response',
-  },
-];
-
-const integrations = [
-  { name: 'Stripe', category: 'Payments', icon: '', color: 'from-[#FF7A00]/50 to-[#CC6200]' },
-  { name: 'MobilePay', category: 'Payments', icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
-  { name: 'PayPal', category: 'Payments', icon: '', color: 'from-[#D4915C] to-blue-600' },
-  { name: 'Mailchimp', category: 'Marketing', icon: '', color: 'from-yellow-400 to-[#CC6200]' },
-  { name: 'Klaviyo', category: 'Marketing', icon: '', color: 'from-[#FF7A00] to-teal-500' },
-  { name: 'QuickBooks', category: 'Accounting', icon: '', color: 'from-emerald-500 to-green-600' },
-  { name: 'Xero', category: 'Accounting', icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
-  { name: 'Meta', category: 'Social', icon: '', color: 'from-[#D4915C] to-blue-700' },
-  { name: 'Google', category: 'Analytics', icon: '', color: 'from-red-500 to-yellow-500' },
-  { name: 'Facebook', category: 'Social', icon: '', color: 'from-[#D4915C] to-blue-600' },
-];
 
 /* ============================================================================
    Icon Components
@@ -576,6 +217,7 @@ function FeatureAccordion({ category, isOpen, onToggle }: { category: FeatureCat
    ============================================================================ */
 
 export function Features() {
+  const { t } = useTranslation('features');
   const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['online-ordering']));
 
   const toggleCategory = (categoryId: string) => {
@@ -589,6 +231,330 @@ export function Features() {
       return newSet;
     });
   };
+
+  /* ---------- Data (uses t() for all user-facing strings) ---------- */
+
+  const featureCategories: FeatureCategory[] = [
+    {
+      id: 'online-ordering',
+      title: t('categories.onlineOrdering.title'),
+      description: t('categories.onlineOrdering.description'),
+      icon: <ShoppingCart className="h-6 w-6" />,
+      color: 'from-[#FF7A00] to-[#CC6200]',
+      features: [
+        {
+          icon: <ShoppingCart className="h-5 w-5" />,
+          title: t('categories.onlineOrdering.features.smartShoppingCart.title'),
+          description: t('categories.onlineOrdering.features.smartShoppingCart.description'),
+          benefit: t('categories.onlineOrdering.features.smartShoppingCart.benefit'),
+          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
+        },
+        {
+          icon: <CreditCard className="h-5 w-5" />,
+          title: t('categories.onlineOrdering.features.oneClickCheckout.title'),
+          description: t('categories.onlineOrdering.features.oneClickCheckout.description'),
+          benefit: t('categories.onlineOrdering.features.oneClickCheckout.benefit'),
+          image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80',
+        },
+        {
+          icon: <MapPin className="h-5 w-5" />,
+          title: t('categories.onlineOrdering.features.realTimeOrderTracking.title'),
+          description: t('categories.onlineOrdering.features.realTimeOrderTracking.description'),
+          benefit: t('categories.onlineOrdering.features.realTimeOrderTracking.benefit'),
+          image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80',
+        },
+        {
+          icon: <Clock className="h-5 w-5" />,
+          title: t('categories.onlineOrdering.features.scheduledOrdering.title'),
+          description: t('categories.onlineOrdering.features.scheduledOrdering.description'),
+          benefit: t('categories.onlineOrdering.features.scheduledOrdering.benefit'),
+        },
+        {
+          icon: <Bell className="h-5 w-5" />,
+          title: t('categories.onlineOrdering.features.orderNotifications.title'),
+          description: t('categories.onlineOrdering.features.orderNotifications.description'),
+          benefit: t('categories.onlineOrdering.features.orderNotifications.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'menu-management',
+      title: t('categories.menuManagement.title'),
+      description: t('categories.menuManagement.description'),
+      icon: <Utensils className="h-6 w-6" />,
+      color: 'from-red-500 to-[#CC6200]',
+      features: [
+        {
+          icon: <Palette className="h-5 w-5" />,
+          title: t('categories.menuManagement.features.aiPoweredMenuSetup.title'),
+          description: t('categories.menuManagement.features.aiPoweredMenuSetup.description'),
+          benefit: t('categories.menuManagement.features.aiPoweredMenuSetup.benefit'),
+          image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+        },
+        {
+          icon: <Package className="h-5 w-5" />,
+          title: t('categories.menuManagement.features.customModifiersOptions.title'),
+          description: t('categories.menuManagement.features.customModifiersOptions.description'),
+          benefit: t('categories.menuManagement.features.customModifiersOptions.benefit'),
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          title: t('categories.menuManagement.features.photoGalleries.title'),
+          description: t('categories.menuManagement.features.photoGalleries.description'),
+          benefit: t('categories.menuManagement.features.photoGalleries.benefit'),
+          image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
+        },
+        {
+          icon: <Globe className="h-5 w-5" />,
+          title: t('categories.menuManagement.features.multiLanguageMenus.title'),
+          description: t('categories.menuManagement.features.multiLanguageMenus.description'),
+          benefit: t('categories.menuManagement.features.multiLanguageMenus.benefit'),
+        },
+        {
+          icon: <QrCode className="h-5 w-5" />,
+          title: t('categories.menuManagement.features.qrCodeMenus.title'),
+          description: t('categories.menuManagement.features.qrCodeMenus.description'),
+          benefit: t('categories.menuManagement.features.qrCodeMenus.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'payment-processing',
+      title: t('categories.paymentProcessing.title'),
+      description: t('categories.paymentProcessing.description'),
+      icon: <CreditCard className="h-6 w-6" />,
+      color: 'from-[#FF7A00] to-[#CC6200]',
+      features: [
+        {
+          icon: <CreditCard className="h-5 w-5" />,
+          title: t('categories.paymentProcessing.features.stripeIntegration.title'),
+          description: t('categories.paymentProcessing.features.stripeIntegration.description'),
+          benefit: t('categories.paymentProcessing.features.stripeIntegration.benefit'),
+          image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80',
+        },
+        {
+          icon: <Zap className="h-5 w-5" />,
+          title: t('categories.paymentProcessing.features.instantPayouts.title'),
+          description: t('categories.paymentProcessing.features.instantPayouts.description'),
+          benefit: t('categories.paymentProcessing.features.instantPayouts.benefit'),
+        },
+        {
+          icon: <Smartphone className="h-5 w-5" />,
+          title: t('categories.paymentProcessing.features.mobilePayments.title'),
+          description: t('categories.paymentProcessing.features.mobilePayments.description'),
+          benefit: t('categories.paymentProcessing.features.mobilePayments.benefit'),
+        },
+        {
+          icon: <ReceiptIcon className="h-5 w-5" />,
+          title: t('categories.paymentProcessing.features.digitalReceipts.title'),
+          description: t('categories.paymentProcessing.features.digitalReceipts.description'),
+          benefit: t('categories.paymentProcessing.features.digitalReceipts.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'delivery-management',
+      title: t('categories.deliveryManagement.title'),
+      description: t('categories.deliveryManagement.description'),
+      icon: <Truck className="h-6 w-6" />,
+      color: 'from-[#D4915C] to-[#FF7A00]/50',
+      features: [
+        {
+          icon: <MapPin className="h-5 w-5" />,
+          title: t('categories.deliveryManagement.features.deliveryZones.title'),
+          description: t('categories.deliveryManagement.features.deliveryZones.description'),
+          benefit: t('categories.deliveryManagement.features.deliveryZones.benefit'),
+          image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80',
+        },
+        {
+          icon: <CalculatorIcon className="h-5 w-5" />,
+          title: t('categories.deliveryManagement.features.dynamicFeeCalculation.title'),
+          description: t('categories.deliveryManagement.features.dynamicFeeCalculation.description'),
+          benefit: t('categories.deliveryManagement.features.dynamicFeeCalculation.benefit'),
+        },
+        {
+          icon: <Smartphone className="h-5 w-5" />,
+          title: t('categories.deliveryManagement.features.driverApp.title'),
+          description: t('categories.deliveryManagement.features.driverApp.description'),
+          benefit: t('categories.deliveryManagement.features.driverApp.benefit'),
+        },
+        {
+          icon: <Users className="h-5 w-5" />,
+          title: t('categories.deliveryManagement.features.driverManagement.title'),
+          description: t('categories.deliveryManagement.features.driverManagement.description'),
+          benefit: t('categories.deliveryManagement.features.driverManagement.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'analytics',
+      title: t('categories.analytics.title'),
+      description: t('categories.analytics.description'),
+      icon: <BarChart3 className="h-6 w-6" />,
+      color: 'from-[#CC6200] to-[#CC6200]',
+      features: [
+        {
+          icon: <TrendingUpIcon className="h-5 w-5" />,
+          title: t('categories.analytics.features.salesAnalytics.title'),
+          description: t('categories.analytics.features.salesAnalytics.description'),
+          benefit: t('categories.analytics.features.salesAnalytics.benefit'),
+          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+        },
+        {
+          icon: <Star className="h-5 w-5" />,
+          title: t('categories.analytics.features.popularItemsReport.title'),
+          description: t('categories.analytics.features.popularItemsReport.description'),
+          benefit: t('categories.analytics.features.popularItemsReport.benefit'),
+        },
+        {
+          icon: <Users className="h-5 w-5" />,
+          title: t('categories.analytics.features.customerInsights.title'),
+          description: t('categories.analytics.features.customerInsights.description'),
+          benefit: t('categories.analytics.features.customerInsights.benefit'),
+        },
+        {
+          icon: <Clock className="h-5 w-5" />,
+          title: t('categories.analytics.features.peakHourAnalysis.title'),
+          description: t('categories.analytics.features.peakHourAnalysis.description'),
+          benefit: t('categories.analytics.features.peakHourAnalysis.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'marketing',
+      title: t('categories.marketing.title'),
+      description: t('categories.marketing.description'),
+      icon: <Megaphone className="h-6 w-6" />,
+      color: 'from-[#D4915C] to-[#D4915C]',
+      features: [
+        {
+          icon: <TagIcon className="h-5 w-5" />,
+          title: t('categories.marketing.features.promotionsDiscounts.title'),
+          description: t('categories.marketing.features.promotionsDiscounts.description'),
+          benefit: t('categories.marketing.features.promotionsDiscounts.benefit'),
+          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
+        },
+        {
+          icon: <Gift className="h-5 w-5" />,
+          title: t('categories.marketing.features.loyaltyPrograms.title'),
+          description: t('categories.marketing.features.loyaltyPrograms.description'),
+          benefit: t('categories.marketing.features.loyaltyPrograms.benefit'),
+        },
+        {
+          icon: <Mail className="h-5 w-5" />,
+          title: t('categories.marketing.features.emailCampaigns.title'),
+          description: t('categories.marketing.features.emailCampaigns.description'),
+          benefit: t('categories.marketing.features.emailCampaigns.benefit'),
+        },
+        {
+          icon: <Share2Icon className="h-5 w-5" />,
+          title: t('categories.marketing.features.socialSharing.title'),
+          description: t('categories.marketing.features.socialSharing.description'),
+          benefit: t('categories.marketing.features.socialSharing.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'multi-location',
+      title: t('categories.multiLocation.title'),
+      description: t('categories.multiLocation.description'),
+      icon: <Building2 className="h-6 w-6" />,
+      color: 'from-cyan-500 to-teal-500',
+      features: [
+        {
+          icon: <Building2 className="h-5 w-5" />,
+          title: t('categories.multiLocation.features.centralizedManagement.title'),
+          description: t('categories.multiLocation.features.centralizedManagement.description'),
+          benefit: t('categories.multiLocation.features.centralizedManagement.benefit'),
+          image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80',
+        },
+        {
+          icon: <GitBranchIcon className="h-5 w-5" />,
+          title: t('categories.multiLocation.features.locationSpecificOptions.title'),
+          description: t('categories.multiLocation.features.locationSpecificOptions.description'),
+          benefit: t('categories.multiLocation.features.locationSpecificOptions.benefit'),
+        },
+        {
+          icon: <BarChart3 className="h-5 w-5" />,
+          title: t('categories.multiLocation.features.aggregatedReporting.title'),
+          description: t('categories.multiLocation.features.aggregatedReporting.description'),
+          benefit: t('categories.multiLocation.features.aggregatedReporting.benefit'),
+        },
+        {
+          icon: <Users className="h-5 w-5" />,
+          title: t('categories.multiLocation.features.roleBasedAccess.title'),
+          description: t('categories.multiLocation.features.roleBasedAccess.description'),
+          benefit: t('categories.multiLocation.features.roleBasedAccess.benefit'),
+        },
+      ],
+    },
+    {
+      id: 'mobile-friendly',
+      title: t('categories.mobileFriendly.title'),
+      description: t('categories.mobileFriendly.description'),
+      icon: <Smartphone className="h-6 w-6" />,
+      color: 'from-[#CC6200] to-[#CC6200]',
+      features: [
+        {
+          icon: <Smartphone className="h-5 w-5" />,
+          title: t('categories.mobileFriendly.features.responsiveDesign.title'),
+          description: t('categories.mobileFriendly.features.responsiveDesign.description'),
+          benefit: t('categories.mobileFriendly.features.responsiveDesign.benefit'),
+          image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80',
+        },
+        {
+          icon: <Zap className="h-5 w-5" />,
+          title: t('categories.mobileFriendly.features.pwaSupport.title'),
+          description: t('categories.mobileFriendly.features.pwaSupport.description'),
+          benefit: t('categories.mobileFriendly.features.pwaSupport.benefit'),
+        },
+        {
+          icon: <WifiIcon className="h-5 w-5" />,
+          title: t('categories.mobileFriendly.features.offlineCapability.title'),
+          description: t('categories.mobileFriendly.features.offlineCapability.description'),
+          benefit: t('categories.mobileFriendly.features.offlineCapability.benefit'),
+        },
+        {
+          icon: <Zap className="h-5 w-5" />,
+          title: t('categories.mobileFriendly.features.lightningFast.title'),
+          description: t('categories.mobileFriendly.features.lightningFast.description'),
+          benefit: t('categories.mobileFriendly.features.lightningFast.benefit'),
+        },
+      ],
+    },
+  ];
+
+  const comparisonKeys = [
+    'setupTime', 'monthlyCost', 'commissionOnOrders', 'paymentProcessing',
+    'menuManagement', 'customBranding', 'customerData', 'multiLanguage',
+    'deliveryFees', 'support',
+  ] as const;
+
+  const comparisonData = comparisonKeys.map((key) => ({
+    feature: t(`comparison.items.${key}.feature`),
+    helmies: t(`comparison.items.${key}.helmies`),
+    traditional: t(`comparison.items.${key}.traditional`),
+  }));
+
+  const integrations = [
+    { name: 'Stripe', category: t('integrations.categories.payments'), icon: '', color: 'from-[#FF7A00]/50 to-[#CC6200]' },
+    { name: 'MobilePay', category: t('integrations.categories.payments'), icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
+    { name: 'PayPal', category: t('integrations.categories.payments'), icon: '', color: 'from-[#D4915C] to-blue-600' },
+    { name: 'Mailchimp', category: t('integrations.categories.marketing'), icon: '', color: 'from-yellow-400 to-[#CC6200]' },
+    { name: 'Klaviyo', category: t('integrations.categories.marketing'), icon: '', color: 'from-[#FF7A00] to-teal-500' },
+    { name: 'QuickBooks', category: t('integrations.categories.accounting'), icon: '', color: 'from-emerald-500 to-green-600' },
+    { name: 'Xero', category: t('integrations.categories.accounting'), icon: '', color: 'from-[#D4915C] to-[#D4915C]' },
+    { name: 'Meta', category: t('integrations.categories.social'), icon: '', color: 'from-[#D4915C] to-blue-700' },
+    { name: 'Google', category: t('integrations.categories.analytics'), icon: '', color: 'from-red-500 to-yellow-500' },
+    { name: 'Facebook', category: t('integrations.categories.social'), icon: '', color: 'from-[#D4915C] to-blue-600' },
+  ];
+
+  const heroStats = [
+    { value: t('hero.stats.setupTime.value'), label: t('hero.stats.setupTime.label') },
+    { value: t('hero.stats.commission.value'), label: t('hero.stats.commission.label') },
+    { value: t('hero.stats.support.value'), label: t('hero.stats.support.label') },
+    { value: t('hero.stats.integrations.value'), label: t('hero.stats.integrations.label') },
+  ];
 
   return (
     <div className="font-sans pt-20">
@@ -607,19 +573,21 @@ export function Features() {
               <ScrollReveal direction="up" delay={0.2}>
                 <div className="badge mb-8">
                   <Zap className="h-4 w-4" />
-                  <span>Everything You Need to Succeed</span>
+                  <span>{t('hero.badge')}</span>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.3}>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.05]">
-                  <span className="gradient-text">Powerful Features For Every Restaurant</span>
+                  <span className="gradient-text">{t('hero.title')}</span>
                 </h1>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.5}>
                 <p className="text-xl md:text-2xl text-white/50 mb-10 max-w-xl leading-relaxed">
-                  From AI-powered setup to delivery management, everything you need to run a successful restaurant business in <strong className="text-[#FF7A00]">one beautiful platform</strong>.
+                  <Trans i18nKey="hero.description" ns="features">
+                    From AI-powered setup to delivery management, everything you need to run a successful restaurant business in <strong className="text-[#FF7A00]">one beautiful platform</strong>.
+                  </Trans>
                 </p>
               </ScrollReveal>
 
@@ -627,19 +595,14 @@ export function Features() {
                 <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
                   <LaunchCountdown compact />
                   <a href="#features" className="btn-secondary flex items-center gap-3">
-                    Explore Features
+                    {t('hero.exploreFeatures')}
                   </a>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="fade" delay={0.9}>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  {[
-                    { value: '5 min', label: 'Setup Time' },
-                    { value: '0%', label: 'Commission' },
-                    { value: '24/7', label: 'Support' },
-                    { value: '50+', label: 'Integrations' },
-                  ].map((stat, i) => (
+                  {heroStats.map((stat, i) => (
                     <div key={i} className="glass-card xb-border p-4 text-center">
                       <div className="text-xl md:text-2xl font-black gradient-text">{stat.value}</div>
                       <div className="text-white/40 text-xs mt-1 font-medium">{stat.label}</div>
@@ -664,8 +627,8 @@ export function Features() {
                       <ShoppingCart className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Online Ordering</p>
-                      <p className="text-white/40 text-xs">Smart cart & checkout</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.onlineOrdering.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.onlineOrdering.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -676,8 +639,8 @@ export function Features() {
                       <Utensils className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Menu Management</p>
-                      <p className="text-white/40 text-xs">AI-powered setup</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.menuManagement.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.menuManagement.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -688,8 +651,8 @@ export function Features() {
                       <CreditCard className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Payments</p>
-                      <p className="text-white/40 text-xs">Stripe & mobile wallets</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.payments.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.payments.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -700,8 +663,8 @@ export function Features() {
                       <BarChart3 className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Analytics</p>
-                      <p className="text-white/40 text-xs">Data-driven insights</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.analytics.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.analytics.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -712,8 +675,8 @@ export function Features() {
                       <Truck className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Delivery</p>
-                      <p className="text-white/40 text-xs">Zones & tracking</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.delivery.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.delivery.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -724,8 +687,8 @@ export function Features() {
                       <Smartphone className="h-6 w-6 text-[#0D0907]" />
                     </div>
                     <div>
-                      <p className="font-bold text-white text-sm">Mobile Ready</p>
-                      <p className="text-white/40 text-xs">PWA & responsive</p>
+                      <p className="font-bold text-white text-sm">{t('hero.floatingIcons.mobileReady.title')}</p>
+                      <p className="text-white/40 text-xs">{t('hero.floatingIcons.mobileReady.subtitle')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -743,9 +706,9 @@ export function Features() {
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <SectionTitle
-              subtitle="Comprehensive Platform"
-              title="Complete Restaurant Platform"
-              description="Explore our comprehensive suite of features designed to help you grow your restaurant business."
+              subtitle={t('categories.sectionSubtitle')}
+              title={t('categories.sectionTitle')}
+              description={t('categories.sectionDescription')}
               icon={<Star className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -769,9 +732,9 @@ export function Features() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <SectionTitle
-              subtitle="See the Difference"
-              title="Why Helmies vs Traditional?"
-              description="See how we compare to traditional delivery platforms and ordering systems."
+              subtitle={t('comparison.sectionSubtitle')}
+              title={t('comparison.sectionTitle')}
+              description={t('comparison.sectionDescription')}
               icon={<BarChart3 className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -781,7 +744,7 @@ export function Features() {
             {/* Without Helmies */}
             <ScrollReveal direction="left" delay={0.1}>
               <div className="comparison-card relative h-full">
-                <h3 className="text-xl md:text-2xl font-black text-white/60 mb-8">Without Helmies</h3>
+                <h3 className="text-xl md:text-2xl font-black text-white/60 mb-8">{t('comparison.withoutHelmies')}</h3>
                 <ul className="space-y-4">
                   {comparisonData.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
@@ -806,7 +769,7 @@ export function Features() {
             {/* With Helmies */}
             <ScrollReveal direction="right" delay={0.2}>
               <div className="comparison-card relative h-full" style={{ borderColor: 'rgba(255,122,0,0.15)' }}>
-                <h3 className="text-xl md:text-2xl font-black gradient-text mb-8">With Helmies</h3>
+                <h3 className="text-xl md:text-2xl font-black gradient-text mb-8">{t('comparison.withHelmies')}</h3>
                 <ul className="space-y-4">
                   {comparisonData.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
@@ -833,7 +796,7 @@ export function Features() {
 
           <ScrollReveal direction="up" delay={0.3}>
             <div className="mt-12 text-center">
-              <AivoraButton to="/pricing">View Pricing Plans</AivoraButton>
+              <AivoraButton to="/pricing">{t('comparison.viewPricing')}</AivoraButton>
             </div>
           </ScrollReveal>
         </div>
@@ -844,9 +807,9 @@ export function Features() {
         <div className="max-w-6xl mx-auto">
           <ScrollReveal>
             <SectionTitle
-              subtitle="Connect Everything"
-              title="Seamless Integrations"
-              description="Connect with the tools you already use. From payment processors to marketing platforms, we have got you covered."
+              subtitle={t('integrations.sectionSubtitle')}
+              title={t('integrations.sectionTitle')}
+              description={t('integrations.sectionDescription')}
               icon={<Zap className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -891,9 +854,9 @@ export function Features() {
             {/* Left Column - Content */}
             <ScrollReveal direction="left">
               <SectionTitle
-                subtitle="Ready to grow?"
-                title="Transform Your Restaurant"
-                description="Join hundreds of restaurants already using Helmies to grow their business. No credit card required. Setup in 5 minutes."
+                subtitle={t('cta.sectionSubtitle')}
+                title={t('cta.sectionTitle')}
+                description={t('cta.sectionDescription')}
                 align="left"
                 icon={<Zap className="h-4 w-4" />}
               />
@@ -909,29 +872,29 @@ export function Features() {
                   <div className="feature-icon w-12 h-12 mb-4">
                     <Zap className="h-6 w-6" />
                   </div>
-                  <div className="text-2xl font-black gradient-text mb-1">5 min</div>
-                  <p className="text-white/50 text-sm">Average setup time with AI-powered wizard</p>
+                  <div className="text-2xl font-black gradient-text mb-1">{t('cta.stats.setupTime.value')}</div>
+                  <p className="text-white/50 text-sm">{t('cta.stats.setupTime.description')}</p>
                 </div>
                 <div className="glass-card xb-border p-6">
                   <div className="feature-icon w-12 h-12 mb-4">
                     <Star className="h-6 w-6" />
                   </div>
-                  <div className="text-2xl font-black gradient-text mb-1">0%</div>
-                  <p className="text-white/50 text-sm">Commission on every order you receive</p>
+                  <div className="text-2xl font-black gradient-text mb-1">{t('cta.stats.commission.value')}</div>
+                  <p className="text-white/50 text-sm">{t('cta.stats.commission.description')}</p>
                 </div>
                 <div className="glass-card xb-border p-6">
                   <div className="feature-icon w-12 h-12 mb-4">
                     <Users className="h-6 w-6" />
                   </div>
-                  <div className="text-2xl font-black gradient-text mb-1">500+</div>
-                  <p className="text-white/50 text-sm">Restaurants already growing with us</p>
+                  <div className="text-2xl font-black gradient-text mb-1">{t('cta.stats.restaurants.value')}</div>
+                  <p className="text-white/50 text-sm">{t('cta.stats.restaurants.description')}</p>
                 </div>
                 <div className="glass-card xb-border p-6">
                   <div className="feature-icon w-12 h-12 mb-4">
                     <Globe className="h-6 w-6" />
                   </div>
-                  <div className="text-2xl font-black gradient-text mb-1">24/7</div>
-                  <p className="text-white/50 text-sm">Finnish support whenever you need help</p>
+                  <div className="text-2xl font-black gradient-text mb-1">{t('cta.stats.support.value')}</div>
+                  <p className="text-white/50 text-sm">{t('cta.stats.support.description')}</p>
                 </div>
               </div>
             </ScrollReveal>

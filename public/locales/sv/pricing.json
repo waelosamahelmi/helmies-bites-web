@@ -1,0 +1,253 @@
+{
+  "hero": {
+    "subtitle": "Prisplaner",
+    "titleHighlight": "Enkel och flexibel",
+    "title": "Prissättning",
+    "description": "Börja gratis. Uppgradera när du växer. Varje nivå leder till nästa — inga återvändsgränder."
+  },
+  "tiers": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "Betala per användning",
+      "priceDisplay": "5 %",
+      "priceSubtext": "per onlinebeställning",
+      "setupFee": "0 € installation",
+      "highlights": [
+        "49 € minsta månadsavgift",
+        "5 % per onlinebeställning",
+        "Inget åtagande krävs"
+      ],
+      "bestFor": "Små kaféer, för att testa",
+      "features": {
+        "included": [
+          "Komplett webbplatsbyggare",
+          "Onlinebeställningssystem",
+          "AI-menyimport",
+          "Stripe betalningsintegration",
+          "Mobiloptimerad design",
+          "Flerspråkigt stöd",
+          "Gratis subdomän",
+          "E-postsupport",
+          "49 € minsta månadsavgift"
+        ],
+        "excluded": [
+          "Stöd för offlinebetalningar",
+          "Eget varumärke och domän",
+          "AI-assistent",
+          "Avancerad analys",
+          "Prioriterad support"
+        ]
+      },
+      "ctaText": "Börja gratis",
+      "pricingTag": "Gratisplan"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Månadsprenumeration",
+      "priceSubtext": "/månad",
+      "setupFee": "500 € engångsavgift",
+      "highlights": [
+        "Alla funktioner upplåsta",
+        "Offlinebetalningar inkluderade",
+        "500 € engångsavgift"
+      ],
+      "bestFor": "Etablerade restauranger redo att satsa",
+      "features": {
+        "included": [
+          "Allt i Starter",
+          "Inga transaktionsavgifter",
+          "Stöd för offlinebetalningar (kontant, kortterminal)",
+          "AI-assistent för kunder",
+          "Avancerad analys och rapporter",
+          "Eget varumärke och domän",
+          "Prioriterad support",
+          "Integration med sociala medier",
+          "Hantering av leveranszoner"
+        ],
+        "excluded": [
+          "White-label-lösning",
+          "API-åtkomst",
+          "Dedikerad kontaktperson"
+        ]
+      },
+      "ctaText": "Kom igång",
+      "pricingTag": "Premiumplan",
+      "toggle": {
+        "monthly": "Månadsvis",
+        "yearly": "Årsvis",
+        "yearlyDiscount": "10 % rabatt",
+        "monthlyLabel": "/månad",
+        "yearlyLabel": "/år"
+      }
+    },
+    "annual": {
+      "name": "Årsplan",
+      "tagline": "Bästa värdet",
+      "priceDisplay": "99 €",
+      "priceSubtext": "/månad faktureras årligen",
+      "setupFee": "0 € installation",
+      "highlights": [
+        "1 190 €/första året",
+        "Förnyelse: 1 390 €/år",
+        "3 år: 2 990 € (83 €/mån)"
+      ],
+      "bestFor": "Restauranger som vill ha maximal besparing",
+      "features": {
+        "included": [
+          "Allt i Pro",
+          "Inga transaktionsavgifter",
+          "Alla funktioner upplåsta",
+          "0 € installation (sparar 500 €)",
+          "Lägsta effektiva månadskostnad",
+          "Dedikerad kontaktperson",
+          "Anpassade integrationer",
+          "Stöd för flera filialer",
+          "SLA-garanti"
+        ]
+      },
+      "ctaText": "Lås in besparingar",
+      "pricingTag": "Årsplan",
+      "bestValueBadge": "Bästa värdet",
+      "bestForLabel": "Bäst för"
+    }
+  },
+  "trust": {
+    "subtitle": "Förtroende",
+    "titleHighlight": "Varför restauranger",
+    "title": "väljer oss",
+    "description": "Vi är engagerade i din framgång med riskfria garantier",
+    "badges": {
+      "moneyBack": {
+        "title": "Pengarna-tillbaka-garanti",
+        "description": "30 dagars full återbetalning om du inte är helt nöjd"
+      },
+      "noSetupFees": {
+        "title": "Inga installationsavgifter",
+        "description": "Lansera din restaurangwebbplats på minuter, helt gratis"
+      },
+      "threeMonthNotice": {
+        "title": "3 månaders uppsägningstid",
+        "description": "Avsluta med 3 månaders uppsägningstid"
+      }
+    }
+  },
+  "comparison": {
+    "subtitle": "Jämförelse sida vid sida",
+    "titleHighlight": "Jämför alla",
+    "title": "Funktioner",
+    "description": "Se exakt vad som ingår i varje plan för att göra rätt val",
+    "tableHeader": "Funktion",
+    "starterHeader": "Starter",
+    "proHeader": "Pro",
+    "annualHeader": "Årsplan",
+    "categories": {
+      "pricing": "Prissättning",
+      "coreFeatures": "Kärnfunktioner",
+      "payments": "Betalningar",
+      "aiAutomation": "AI och automation",
+      "brandingCustomization": "Varumärke och anpassning",
+      "analyticsSupport": "Analys och support",
+      "technical": "Tekniskt"
+    },
+    "features": {
+      "monthlyCost": "Månadskostnad",
+      "setupFee": "Installationsavgift",
+      "transactionFees": "Transaktionsavgifter",
+      "commitment": "Åtagande",
+      "websiteBuilder": "Webbplatsbyggare",
+      "onlineOrdering": "Onlinebeställning",
+      "aiMenuImport": "AI-menyimport",
+      "mobileOptimized": "Mobiloptimerad",
+      "multiLanguage": "Flerspråkig",
+      "stripeIntegration": "Stripe-integration",
+      "offlinePayments": "Offlinebetalningar (kontant, terminal)",
+      "customPaymentGateway": "Anpassad betalningsgateway",
+      "aiMenuImportAi": "AI-menyimport",
+      "aiAssistant": "AI-assistent",
+      "aiTranslations": "AI-översättningar",
+      "freeSubdomain": "Gratis subdomän",
+      "customDomain": "Egen domän",
+      "customBranding": "Eget varumärke",
+      "whiteLabelSolution": "White-label-lösning",
+      "basicAnalytics": "Grundläggande analys",
+      "advancedReports": "Avancerade rapporter",
+      "emailSupport": "E-postsupport",
+      "prioritySupport": "Prioriterad support",
+      "dedicatedAccountManager": "Dedikerad kontaktperson",
+      "slaGuarantee": "SLA-garanti",
+      "apiAccess": "API-åtkomst",
+      "customIntegrations": "Anpassade integrationer",
+      "multiBranchSupport": "Stöd för flera filialer"
+    },
+    "values": {
+      "starter": {
+        "monthlyCost": "5 % + 49 € min",
+        "setupFee": "0 €",
+        "transactionFees": "5 %",
+        "commitment": "Inget"
+      },
+      "pro": {
+        "monthlyCost": "129 €/mån",
+        "setupFee": "500 €",
+        "transactionFees": "0 %",
+        "commitment": "Månadsvis"
+      },
+      "annual": {
+        "monthlyCost": "99 €/mån",
+        "setupFee": "0 €",
+        "transactionFees": "0 %",
+        "commitment": "1 eller 3 år"
+      }
+    }
+  },
+  "faq": {
+    "subtitle": "Har du frågor?",
+    "titleHighlight": "Vanliga",
+    "title": "Frågor",
+    "description": "Allt du behöver veta om vår prissättning och våra planer",
+    "starterPayAsYouGo": {
+      "question": "Hur fungerar Starters betala-per-användning-modell?",
+      "answer": "Med Starter betalar du 5 % av dina onlinebeställningar som behandlas genom vår plattform — ingen månadsprenumeration. Det finns en minsta månadsavgift på 49 € för att täcka plattformskostnader. Till exempel, om du behandlar 2 000 € i onlinebeställningar betalar du 100 € (5 %). Om dina 5 % understiger 49 € betalar du ändå minimiavgiften på 49 €."
+    },
+    "proSetupFee": {
+      "question": "Vad ingår i Pro-installationsavgiften på 500 €?",
+      "answer": "Engångsavgiften på 500 € täcker full onboarding: vi konfigurerar din webbplats, importerar din meny med AI, ställer in din egna domän, konfigurerar offlinebetalningsterminalerna och ger en dedikerad utbildningssession. Med årsplanen är installationen helt gratis (0 €)."
+    },
+    "switchPlans": {
+      "question": "Kan jag byta mellan planer?",
+      "answer": "Absolut! Den naturliga uppgraderingsvägen är: Starter → Pro → Årsplan. Du kan uppgradera när som helst. Vid byte från Starter till Pro betalar du 500 € installationsavgift och månadsfaktureringen börjar. Vid byte till årsplan slopas installationsavgiften och eventuell kvarvarande Pro-prenumeration proportioneras."
+    },
+    "annualPricing": {
+      "question": "Hur fungerar årsplanens prissättning?",
+      "answer": "Första året: 1 190 € (effektivt 99 €/månad). Förnyelse: 1 390 €/år. Vi erbjuder också ett 3-årsåtagande för 2 990 € totalt (bara 83 €/månad). Alla årsplaner inkluderar 0 € installation och alla funktioner upplåsta från dag ett."
+    },
+    "paymentMethods": {
+      "question": "Vilka betalningsmetoder accepterar ni?",
+      "answer": "Vi accepterar alla vanliga kreditkort (Visa, Mastercard, American Express), banköverföringar och PayPal. Års- och 3-årsplaner kan även betalas via faktura."
+    },
+    "offlinePaymentsStarter": {
+      "question": "Vad gäller offlinebetalningar på Starter-planen?",
+      "answer": "Starter-planen stöder endast onlinebetalningar via Stripe. Om du behöver acceptera kontanter, kortterminalsbetalningar eller andra offlinemetoder behöver du Pro- eller årsplanen."
+    },
+    "contractCommitment": {
+      "question": "Finns det kontrakt eller åtagande?",
+      "answer": "Alla planer har 3 månaders uppsägningstid. Årsplan: 1 eller 3 års åtagande med våra bästa priser."
+    },
+    "refundPolicy": {
+      "question": "Vad är er återbetalningspolicy?",
+      "answer": "Vi erbjuder 30 dagars pengarna-tillbaka-garanti på Pro- och årsplaner. Om du inte är nöjd inom de första 30 dagarna, kontakta oss för full återbetalning — inga frågor."
+    }
+  },
+  "cta": {
+    "subtitle": "Kom igång",
+    "titleHighlight": "Redo att växa",
+    "title": "din restaurang?",
+    "description": "Gå med bland hundratals restauranger som redan använder Helmies Bites. Börja gratis, inget kreditkort krävs.",
+    "seeAllFeatures": "Se alla funktioner",
+    "trustIndicators": {
+      "guarantee": "30 dagars garanti",
+      "noCreditCard": "Inget kreditkort krävs",
+      "support": "24/7 support"
+    }
+  }
+}

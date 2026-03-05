@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Loader2, Sparkles, Store, MapPin, Mail, UtensilsCrossed } from 'lucide-react';
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: Props) {
+  const { t } = useTranslation('wizard');
   const [formData, setFormData] = useState({
     name: data.name || '',
     nameEn: data.nameEn || '',
@@ -81,17 +83,17 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
   };
 
   const cuisineOptions = [
-    { value: 'finnish', label: 'Finnish', flag: 'fi' },
-    { value: 'italian', label: 'Italian', flag: 'it' },
-    { value: 'chinese', label: 'Chinese', flag: 'cn' },
-    { value: 'indian', label: 'Indian', flag: 'in' },
-    { value: 'thai', label: 'Thai', flag: 'th' },
-    { value: 'japanese', label: 'Japanese', flag: 'jp' },
-    { value: 'burger', label: 'Burger & American', flag: 'us' },
-    { value: 'pizza', label: 'Pizza', flag: 'it' },
-    { value: 'kebab', label: 'Kebab', flag: 'tr' },
-    { value: 'mexican', label: 'Mexican', flag: 'mx' },
-    { value: 'other', label: 'Other', flag: '🌍' },
+    { value: 'finnish', labelKey: 'restaurantInfo.cuisine.options.finnish', flag: 'fi' },
+    { value: 'italian', labelKey: 'restaurantInfo.cuisine.options.italian', flag: 'it' },
+    { value: 'chinese', labelKey: 'restaurantInfo.cuisine.options.chinese', flag: 'cn' },
+    { value: 'indian', labelKey: 'restaurantInfo.cuisine.options.indian', flag: 'in' },
+    { value: 'thai', labelKey: 'restaurantInfo.cuisine.options.thai', flag: 'th' },
+    { value: 'japanese', labelKey: 'restaurantInfo.cuisine.options.japanese', flag: 'jp' },
+    { value: 'burger', labelKey: 'restaurantInfo.cuisine.options.burger', flag: 'us' },
+    { value: 'pizza', labelKey: 'restaurantInfo.cuisine.options.pizza', flag: 'it' },
+    { value: 'kebab', labelKey: 'restaurantInfo.cuisine.options.kebab', flag: 'tr' },
+    { value: 'mexican', labelKey: 'restaurantInfo.cuisine.options.mexican', flag: 'mx' },
+    { value: 'other', labelKey: 'restaurantInfo.cuisine.options.other', flag: '\u{1F30D}' },
   ];
 
   return (
@@ -104,17 +106,17 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
           </div>
           <div>
             <label className="block text-sm font-bold text-gray-900">
-              Restaurant Name
+              {t('restaurantInfo.name.label')}
             </label>
-            <p className="text-xs text-gray-500">The name your customers will see</p>
+            <p className="text-xs text-gray-500">{t('restaurantInfo.name.hint')}</p>
           </div>
-          <span className="ml-auto badge text-xs">Required</span>
+          <span className="ml-auto badge text-xs">{t('restaurantInfo.name.required')}</span>
         </div>
         <input
           type="text"
           value={formData.name}
           onChange={(e) => handleChange('name', e.target.value)}
-          placeholder="e.g., Ravintola Babylon"
+          placeholder={t('restaurantInfo.name.placeholder')}
           className="input-modern"
           required
         />
@@ -127,12 +129,12 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
             {isGenerating ? (
               <>
                 <Loader2 className="h-4 w-4 animate-spin" />
-                AI is generating...
+                {t('restaurantInfo.aiGenerate.generating')}
               </>
             ) : (
               <>
                 <Sparkles className="h-4 w-4" />
-                Auto-fill with AI
+                {t('restaurantInfo.aiGenerate.autoFill')}
               </>
             )}
           </button>
@@ -149,9 +151,9 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
-                Cuisine Type
+                {t('restaurantInfo.cuisine.label')}
               </label>
-              <p className="text-xs text-gray-500">What food do you serve?</p>
+              <p className="text-xs text-gray-500">{t('restaurantInfo.cuisine.hint')}</p>
             </div>
           </div>
           <select
@@ -159,10 +161,10 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
             onChange={(e) => handleChange('cuisine', e.target.value)}
             className="input-modern"
           >
-            <option value="">Select cuisine type</option>
+            <option value="">{t('restaurantInfo.cuisine.placeholder')}</option>
             {cuisineOptions.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.flag} {option.label}
+                {option.flag} {t(option.labelKey)}
               </option>
             ))}
           </select>
@@ -176,16 +178,16 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
-                City
+                {t('restaurantInfo.city.label')}
               </label>
-              <p className="text-xs text-gray-500">Where is your restaurant?</p>
+              <p className="text-xs text-gray-500">{t('restaurantInfo.city.hint')}</p>
             </div>
           </div>
           <input
             type="text"
             value={formData.city}
             onChange={(e) => handleChange('city', e.target.value)}
-            placeholder="e.g., Helsinki"
+            placeholder={t('restaurantInfo.city.placeholder')}
             className="input-modern"
           />
         </div>
@@ -196,13 +198,13 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
         {/* Finnish Description */}
         <div className="glass-card rounded-2xl p-6">
           <label className="block text-sm font-bold text-gray-900 mb-2">
-            Description (Finnish)
+            {t('restaurantInfo.descriptionFi.label')}
           </label>
-          <p className="text-xs text-gray-500 mb-4">Describe your restaurant to Finnish customers</p>
+          <p className="text-xs text-gray-500 mb-4">{t('restaurantInfo.descriptionFi.hint')}</p>
           <textarea
             value={formData.description}
             onChange={(e) => handleChange('description', e.target.value)}
-            placeholder="Kerro ravintolastasi..."
+            placeholder={t('restaurantInfo.descriptionFi.placeholder')}
             rows={5}
             className="input-modern resize-none"
           />
@@ -211,13 +213,13 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
         {/* English Description */}
         <div className="glass-card rounded-2xl p-6">
           <label className="block text-sm font-bold text-gray-900 mb-2">
-            Description (English)
+            {t('restaurantInfo.descriptionEn.label')}
           </label>
-          <p className="text-xs text-gray-500 mb-4">Describe your restaurant to international customers</p>
+          <p className="text-xs text-gray-500 mb-4">{t('restaurantInfo.descriptionEn.hint')}</p>
           <textarea
             value={formData.descriptionEn}
             onChange={(e) => handleChange('descriptionEn', e.target.value)}
-            placeholder="Describe your restaurant..."
+            placeholder={t('restaurantInfo.descriptionEn.placeholder')}
             rows={5}
             className="input-modern resize-none"
           />
@@ -232,16 +234,16 @@ export function RestaurantInfoStep({ data, sessionId, setSessionId, onUpdate }: 
           </div>
           <div>
             <label className="block text-sm font-bold text-gray-900">
-              Email Address
+              {t('restaurantInfo.email.label')}
             </label>
-            <p className="text-xs text-gray-500">For login credentials and updates</p>
+            <p className="text-xs text-gray-500">{t('restaurantInfo.email.hint')}</p>
           </div>
         </div>
         <input
           type="email"
           value={formData.email}
           onChange={(e) => handleChange('email', e.target.value)}
-          placeholder="your@email.com"
+          placeholder={t('restaurantInfo.email.placeholder')}
           className="input-modern"
         />
       </div>

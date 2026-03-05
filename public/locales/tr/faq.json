@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "subtitle": "Yardım Merkezi",
+    "titleHighlight": "Size nasıl",
+    "title": "yardımcı olabiliriz?",
+    "description": "Helmies Bites hakkında sık sorulan soruların yanıtlarını bulun. Aradığınızı bulamıyor musunuz? Yardımcı olmak için buradayız!",
+    "searchPlaceholder": "Yanıt arayın...",
+    "stats": {
+      "faqs": "SSS",
+      "categories": "Kategoriler",
+      "categoriesCount": "6",
+      "support": "Destek",
+      "supportValue": "7/24"
+    }
+  },
+  "search": {
+    "found": "Bulundu",
+    "result": "sonuç",
+    "results": "sonuç",
+    "for": "için"
+  },
+  "noResults": {
+    "title": "Sonuç bulunamadı",
+    "description_prefix": "\"",
+    "description_suffix": "\" ile eşleşen yanıt bulamadık. Farklı anahtar kelimeler deneyin veya aşağıdaki kategorilere göz atın.",
+    "clearSearch": "Aramayı Temizle"
+  },
+  "allCategories": "Tüm Kategoriler",
+  "faqsSuffix": "SSS",
+  "categories": {
+    "gettingStarted": {
+      "title": "Başlarken",
+      "questions": {
+        "q1": {
+          "question": "Restoran web sitemi kurmak ne kadar sürer?",
+          "answer": "Çoğu restoran ilk kurulumu sadece 5 dakikada tamamlayabilir. Yapay zeka destekli sihirbazımız, restoran bilgilerinizi girmeniz, menünüzü yüklemeniz ve tema seçmeniz konusunda sizi yönlendirir. Kurulumdan sonra web siteniz hemen yayında ve sipariş almaya hazırdır."
+        },
+        "q2": {
+          "question": "Teknik bilgiye ihtiyacım var mı?",
+          "answer": "Kesinlikle hayır! Helmies Bites, teknik uzmanlığı olmayan restoran sahipleri için özel olarak tasarlanmıştır. Sezgisel arayüzümüz ve yapay zeka yardımımız, herhangi bir kodlama veya tasarım bilgisi olmadan profesyonel bir web sitesi oluşturmayı kolaylaştırır."
+        },
+        "q3": {
+          "question": "Kurulum sırasında hangi bilgileri sağlamam gerekiyor?",
+          "answer": "Restoranınızın temel bilgilerine (ad, adres, iletişim bilgileri), menünüze (PDF olarak yüklenebilir - yapay zekamız öğeleri çıkaracaktır) ve tercih ettiğiniz renk şemasına ihtiyacınız olacak. Hepsi bu! Teknik detayları biz hallederiz."
+        },
+        "q4": {
+          "question": "Kendi alan adımı kullanabilir miyim?",
+          "answer": "Evet! Kendi özel alan adınızı (örneğin www.restoraniniz.fi) Helmies Bites web sitenize bağlayabilirsiniz. DNS ayarlarınızı güncellemeniz için talimatlar sağlıyoruz veya yourrestaurant.helmiesbites.fi gibi ücretsiz bir alt alan adı kullanabilirsiniz."
+        },
+        "q5": {
+          "question": "Ücretsiz deneme var mı?",
+          "answer": "Kesinlikle! Başlamak için herhangi bir ön ödeme yok. Sadece platform üzerinden online sipariş aldığınızda %5 hizmet ücretimizi ödersiniz. Bu, hizmetimizi tamamen risksiz deneyebileceğiniz anlamına gelir."
+        }
+      }
+    },
+    "payments": {
+      "title": "Ödemeler",
+      "questions": {
+        "q1": {
+          "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+          "answer": "Stripe, Paytrail ve MobilePay dahil olmak üzere büyük Fin ödeme sağlayıcılarıyla entegreyiz. Müşterileriniz kredi/banka kartları, mobil ödemeler ve online bankacılık hizmetleriyle ödeme yapabilir. Müşteri geri bildirimlerine göre sürekli yeni ödeme seçenekleri ekliyoruz."
+        },
+        "q2": {
+          "question": "Siparişlerden ödemeleri nasıl alıyorum?",
+          "answer": "Müşteri siparişlerinden gelen ödemeler doğrudan banka hesabınıza aktarılır. İşlem süresi ödeme sağlayıcınıza bağlıdır, ancak çoğu transfer 1-3 iş günü içinde tamamlanır. %5 hizmet ücretimiz her siparişten otomatik olarak düşülür."
+        },
+        "q3": {
+          "question": "Hizmet ücretiniz nedir?",
+          "answer": "Her online sipariş için basit bir %5 hizmet ücreti alıyoruz. Bu, ödeme işleme, barındırma, bakım ve müşteri desteğini kapsar. Aylık ücret, kurulum ücreti veya gizli masraf yoktur. Sadece sipariş aldığınızda ödersiniz."
+        },
+        "q4": {
+          "question": "Ayrı bir ödeme işlemcisi hesabına ihtiyacım var mı?",
+          "answer": "Entegre ödeme işlememizle sizi kurabilir veya zaten bir Stripe veya Paytrail hesabınız varsa, Helmies Bites hesabınıza bağlayabilirsiniz. Her iki seçenek de güvenlidir ve Fin ödeme düzenlemelerine uygundur."
+        },
+        "q5": {
+          "question": "PCI uyumluluğu sağlanıyor mu?",
+          "answer": "Evet, sertifikalı ödeme ortaklarımız aracılığıyla tüm PCI uyumluluk gereksinimlerini karşılıyoruz. Güvenlik sertifikaları veya veri koruma standartları konusunda endişelenmenize gerek yok - restoranınıza odaklanabilmeniz için her şeyi biz hallediyoruz."
+        }
+      }
+    },
+    "orders": {
+      "title": "Siparişler",
+      "questions": {
+        "q1": {
+          "question": "Online siparişleri nasıl alıyorum?",
+          "answer": "Siparişler, restoran panonuz üzerinden gerçek zamanlı olarak alınır. Ayrıca SMS, e-posta veya mobil uygulamamız aracılığıyla bildirimleri etkinleştirebilirsiniz. Yeni bir sipariş geldiğinde, tüm sipariş detaylarıyla birlikte anında uyarılırsınız."
+        },
+        "q2": {
+          "question": "Sipariş uygunluğumu özelleştirebilir miyim?",
+          "answer": "Evet! Çalışma saatlerinizi belirleyebilir, belirli zamanlarda sipariş kabul edebilir veya kapalı olduğunuzda ya da tamamen dolu olduğunuzda siparişi geçici olarak devre dışı bırakabilirsiniz. Sipariş kabul etme zamanınız üzerinde tam kontrole sahipsiniz."
+        },
+        "q3": {
+          "question": "Bir siparişi iptal etmem gerekirse ne olur?",
+          "answer": "Bir siparişi iptal etmeniz gerekirse, bunu panonuzdan yapabilirsiniz. Müşteri hemen bilgilendirilecek ve ödemesi otomatik olarak iade edilecektir. Mümkünse durumu açıklamak için müşteriyle doğrudan iletişime geçmenizi öneririz."
+        },
+        "q4": {
+          "question": "Teslim alma ve teslimat sunabilir miyim?",
+          "answer": "Evet, teslim alma, teslimat veya her ikisini de sunmayı seçebilirsiniz. Teslimat için teslimat bölgeleri, ücretler ve minimum sipariş tutarları belirleyebilirsiniz. Sistemimiz tercih ederseniz üçüncü taraf teslimat hizmetleriyle de entegre olabilir."
+        },
+        "q5": {
+          "question": "Özel istekler nasıl ele alınır?",
+          "answer": "Müşteriler siparişlerine özel istekler ekleyebilir ve bunlar sipariş panonuzda belirgin bir şekilde görüntülenir. Bu istekleri inceleyebilir ve siparişlerini hazırlamadan önce açıklamaya ihtiyacınız varsa müşteriyle iletişime geçebilirsiniz."
+        }
+      }
+    },
+    "menu": {
+      "title": "Menü",
+      "questions": {
+        "q1": {
+          "question": "Menümü nasıl eklerim?",
+          "answer": "En kolay yol, mevcut menünüzü PDF olarak yüklemektir. Yapay zekamız tüm öğeleri, açıklamaları ve fiyatları otomatik olarak çıkaracaktır. Ardından çıkarılan bilgileri inceleyip düzenleyebilirsiniz. Alternatif olarak, menü düzenleyicimiz aracılığıyla öğeleri manuel olarak ekleyebilirsiniz."
+        },
+        "q2": {
+          "question": "Birden fazla menü oluşturabilir miyim?",
+          "answer": "Evet! Kahvaltı, öğle yemeği, akşam yemeği veya özel etkinlikler için farklı menüler oluşturabilirsiniz. Her menünün ne zaman aktif olacağını planlayabilirsiniz, böylece gün veya hafta boyunca farklı ürünler sunmanız kolaylaşır."
+        },
+        "q3": {
+          "question": "Menü öğelerini veya fiyatları nasıl güncellerim?",
+          "answer": "Menü güncellemeleri panonuz aracılığıyla basittir. Menünüze gidin, düzenlemek istediğiniz öğeye tıklayın, değişikliklerinizi yapın ve kaydedin. Değişiklikler hemen canlı web sitenize yansıtılır."
+        },
+        "q4": {
+          "question": "Menü öğelerine fotoğraf ekleyebilir miyim?",
+          "answer": "Kesinlikle! Fotoğraf eklemek menünüzü daha çekici kılar ve siparişleri artırabilir. Her öğe için birden fazla fotoğraf yükleyebilirsiniz ve sistemimiz bunları web gösterimi ve hızlı yükleme için otomatik olarak optimize eder."
+        },
+        "q5": {
+          "question": "Menü çevirisi nasıl çalışır?",
+          "answer": "Yapay zekamız menünüzü otomatik olarak Fince, İsveççe, İngilizce ve diğer dillere çevirebilir. Doğruluğu sağlamak için çevirileri inceleyip düzenleyebilirsiniz. Çok dilli menüler, daha geniş bir müşteri tabanına hizmet vermenize yardımcı olur."
+        }
+      }
+    },
+    "technical": {
+      "title": "Teknik",
+      "questions": {
+        "q1": {
+          "question": "Web sitem mobil uyumlu mu?",
+          "answer": "Evet, her Helmies Bites web sitesi tamamen duyarlı ve mobil cihazlar için optimize edilmiştir. Siteniz akıllı telefonlarda, tabletlerde ve masaüstü bilgisayarlarda harika görünecek ve mükemmel çalışacaktır."
+        },
+        "q2": {
+          "question": "Platform ne kadar güvenilir?",
+          "answer": "Bulut tabanlı altyapımızla %99,9 çalışma süresini koruyoruz. Web siteniz, otomatik yedeklemeli güvenli sunucularda barındırılmaktadır. Teknik sorunlar konusunda endişelenmenize gerek kalmaması için tüm bakım ve güncellemeleri biz hallederiz."
+        },
+        "q3": {
+          "question": "Sosyal medya ile entegre edebilir miyim?",
+          "answer": "Evet, web sitenizi sosyal medya profillerinize kolayca bağlayabilir ve sosyal paylaşım düğmeleri ekleyebilirsiniz. Ayrıca menünüzü ve özel tekliflerinizi Instagram ve Facebook gibi platformlarda tanıtmanıza yardımcı olacak araçlar da sunuyoruz."
+        },
+        "q4": {
+          "question": "Hangi analitikler mevcut?",
+          "answer": "Panonuz sipariş geçmişi, popüler ürünler, gelir trendleri ve müşteri bilgilerini gösteren analitiği içerir. Bu içgörüler, menünüz ve pazarlamanız hakkında veriye dayalı kararlar almanıza yardımcı olur."
+        },
+        "q5": {
+          "question": "Verilerim güvende mi?",
+          "answer": "Güvenlik birinci önceliğimizdir. Endüstri standardı şifreleme kullanıyor, GDPR düzenlemelerine uyuyor ve düzenli güvenlik denetimleri yapıyoruz. Verileriniz ve müşterilerinizin verileri her zaman korunmaktadır."
+        }
+      }
+    },
+    "billing": {
+      "title": "Faturalandırma",
+      "questions": {
+        "q1": {
+          "question": "Aylık ücret var mı?",
+          "answer": "Hayır, aylık ücret veya abonelik yoktur. Sadece online sipariş aldığınızda %5 hizmet ücretimizi ödersiniz. Bu, bir ayda hiç sipariş almazsanız, o ay için hiçbir şey ödemeyeceğiniz anlamına gelir."
+        },
+        "q2": {
+          "question": "Fatura geçmişimi nasıl görüntülerim?",
+          "answer": "Fatura geçmişiniz panonuzda mevcuttur. Toplanan tüm ücretlerin ayrıntılı raporlarını görüntüleyebilir, faturaları indirebilir ve gelirinizi zaman içinde takip edebilirsiniz."
+        },
+        "q3": {
+          "question": "Belirli özellikler için ek ücret var mı?",
+          "answer": "Standart fiyatlandırmamız tüm temel özellikleri içerir. Kapıda ödeme (+30/ay) veya Yapay Zeka Asistanı (+10/ay) gibi bazı premium eklentiler ek ücret karşılığında mevcuttur, ancak bunlar tamamen isteğe bağlıdır."
+        },
+        "q4": {
+          "question": "Hizmet ücreti için iade alabilir miyim?",
+          "answer": "Hizmet ücretleri, ödeme işleme ve platform kullanımını kapsadığı için genellikle iade edilmez. Ancak, bir ücretin hatalı olarak alındığını düşünüyorsanız, lütfen destek ekibimizle iletişime geçin ve durumunuzu inceleyeceğiz."
+        },
+        "q5": {
+          "question": "Kurumsal planlar sunuyor musunuz?",
+          "answer": "Büyük restoran grupları veya zincirler için özel fiyatlandırma düzenlemelerini tartışabiliriz. Özel ihtiyaçlarınızı görüşmek için satış ekibimizle iletişime geçin, size uygun bir plan oluşturalım."
+        }
+      }
+    }
+  },
+  "stillHaveQuestions": {
+    "title": "Hâlâ sorularınız mı var?",
+    "description": "Aradığınız cevabı bulamıyor musunuz? Dost canlısı destek ekibimiz başlamanıza yardımcı olmak için burada.",
+    "contactSupport": "Destek ile İletişim",
+    "emailUs": "Bize E-posta Gönderin",
+    "trustIndicators": {
+      "fastResponse": "Hızlı Yanıt",
+      "expertHelp": "Uzman Yardımı",
+      "freeSupport": "Ücretsiz Destek"
+    }
+  },
+  "bottomCta": {
+    "subtitle": "Bugün Başlayın",
+    "titleHighlight": "Restoranınızı",
+    "title": "dönüştürün",
+    "description": "Helmies Bites kullanan yüzlerce restorana katılın. Kurulum sadece 5 dakika sürer ve sadece sipariş aldığınızda ödersiniz."
+  }
+}

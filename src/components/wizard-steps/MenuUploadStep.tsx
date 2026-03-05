@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Upload, Loader2, FileText, Image as ImageIcon, Sparkles, CheckCircle, Info } from 'lucide-react';
 
 interface Props {
@@ -8,6 +9,7 @@ interface Props {
 }
 
 export function MenuUploadStep({ sessionId, onUpdate }: Props) {
+  const { t } = useTranslation('wizard');
   const [file, setFile] = useState<File | null>(null);
   const [isParsing, setIsParsing] = useState(false);
   const [parsedMenu, setParsedMenu] = useState<any>(null);
@@ -59,14 +61,14 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
       onUpdate({ menu: result.menu });
     } catch (error) {
       console.error('Menu parsing failed:', error);
-      alert('Failed to parse menu. Please try again or upload a different file.');
+      alert(t('menuUpload.errors.parseFailed'));
     } finally {
       setIsParsing(false);
     }
   };
 
   const supportedFormats = [
-    { name: 'PDF', icon: '📄' },
+    { name: 'PDF', icon: '\u{1F4C4}' },
     { name: 'PNG', icon: 'image' },
     { name: 'JPG', icon: 'image' },
   ];
@@ -76,9 +78,9 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
       {/* Upload Area */}
       <div className="glass-card rounded-2xl p-8">
         <div className="text-center mb-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Upload Your Menu</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">{t('menuUpload.title')}</h3>
           <p className="text-gray-600">
-            Upload a PDF or image of your menu. Our AI will extract all items, prices, and create translations.
+            {t('menuUpload.description')}
           </p>
         </div>
 
@@ -117,7 +119,7 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
                 }}
                 className="text-sm text-red-600 hover:text-red-700 font-semibold"
               >
-                Remove file
+                {t('menuUpload.dropZone.removeFile')}
               </button>
             </div>
           ) : (
@@ -125,8 +127,8 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
               <div className="w-20 h-20 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-4">
                 <Upload className="h-10 w-10 text-gray-400" />
               </div>
-              <p className="text-gray-700 font-semibold text-lg mb-1">Click to upload or drag and drop</p>
-              <p className="text-sm text-gray-500">PDF, PNG, JPG up to 10MB</p>
+              <p className="text-gray-700 font-semibold text-lg mb-1">{t('menuUpload.dropZone.clickToUpload')}</p>
+              <p className="text-sm text-gray-500">{t('menuUpload.dropZone.fileTypes')}</p>
             </div>
           )}
 
@@ -150,12 +152,12 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
               {isParsing ? (
                 <>
                   <Loader2 className="h-5 w-5 animate-spin" />
-                  Parsing your menu with AI...
+                  {t('menuUpload.parsing.inProgress')}
                 </>
               ) : (
                 <>
                   <Sparkles className="h-5 w-5" />
-                  Parse Menu with AI
+                  {t('menuUpload.parsing.button')}
                 </>
               )}
             </button>
@@ -166,7 +168,7 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
               }}
               className="btn-secondary"
             >
-              Choose Different File
+              {t('menuUpload.parsing.chooseDifferent')}
             </button>
           </div>
         )}
@@ -180,14 +182,14 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
               <CheckCircle className="h-6 w-6 text-green-600" />
             </div>
             <div className="flex-1">
-              <h3 className="font-bold text-green-900 text-lg mb-2">Menu Parsed Successfully!</h3>
+              <h3 className="font-bold text-green-900 text-lg mb-2">{t('menuUpload.success.title')}</h3>
               <p className="text-green-700 mb-4">
-                Our AI found {parsedMenu.items?.length || 0} items in {parsedMenu.categories?.length || 0} categories
+                {t('menuUpload.success.itemsFound', { items: parsedMenu.items?.length || 0, categories: parsedMenu.categories?.length || 0 })}
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="badge bg-green-100 text-green-700 border-green-200">Finnish</span>
-                <span className="badge bg-green-100 text-green-700 border-green-200">English</span>
-                <span className="badge bg-green-100 text-green-700 border-green-200">Swedish</span>
+                <span className="badge bg-green-100 text-green-700 border-green-200">{t('menuUpload.success.languages.finnish')}</span>
+                <span className="badge bg-green-100 text-green-700 border-green-200">{t('menuUpload.success.languages.english')}</span>
+                <span className="badge bg-green-100 text-green-700 border-green-200">{t('menuUpload.success.languages.swedish')}</span>
               </div>
             </div>
           </div>
@@ -201,8 +203,8 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
             <Info className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <h3 className="font-bold text-gray-900">Supported Formats</h3>
-            <p className="text-sm text-gray-500">We accept these file types</p>
+            <h3 className="font-bold text-gray-900">{t('menuUpload.supportedFormats.title')}</h3>
+            <p className="text-sm text-gray-500">{t('menuUpload.supportedFormats.description')}</p>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-4">
@@ -220,32 +222,32 @@ export function MenuUploadStep({ sessionId, onUpdate }: Props) {
 
       {/* Tips */}
       <div className="glass-card rounded-2xl p-6 bg-gradient-to-r from-orange-50 to-pink-50">
-        <h3 className="font-bold gradient-text-warm mb-3">Tips for Best Results</h3>
+        <h3 className="font-bold gradient-text-warm mb-3">{t('menuUpload.tips.title')}</h3>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex items-start gap-2">
-            <span className="text-orange-500 mt-0.5">•</span>
-            Upload a clear, high-resolution image or well-formatted PDF
+            <span className="text-orange-500 mt-0.5">&bull;</span>
+            {t('menuUpload.tips.tip1')}
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-orange-500 mt-0.5">•</span>
-            Ensure prices are clearly visible next to each item
+            <span className="text-orange-500 mt-0.5">&bull;</span>
+            {t('menuUpload.tips.tip2')}
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-orange-500 mt-0.5">•</span>
-            Keep categories (appetizers, mains, etc.) well organized
+            <span className="text-orange-500 mt-0.5">&bull;</span>
+            {t('menuUpload.tips.tip3')}
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-orange-500 mt-0.5">•</span>
-            Our AI will automatically translate to Finnish, English, and Swedish
+            <span className="text-orange-500 mt-0.5">&bull;</span>
+            {t('menuUpload.tips.tip4')}
           </li>
         </ul>
       </div>
 
       {/* Manual Option */}
       <div className="text-center">
-        <p className="text-gray-600 mb-3">Don't have a digital menu?</p>
+        <p className="text-gray-600 mb-3">{t('menuUpload.manual.prompt')}</p>
         <button className="btn-secondary">
-          Create Menu Manually Instead
+          {t('menuUpload.manual.button')}
         </button>
       </div>
     </div>

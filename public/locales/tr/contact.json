@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "subtitle": "Yardımcı olmak için buradayız",
+    "title": "geçin",
+    "titleHighlight": "İletişime",
+    "description": "Helmies Bites hakkında sorularınız mı var? Sizden haber almak isteriz. Bize bir mesaj gönderin, en kısa sürede yanıtlayacağız."
+  },
+  "form": {
+    "title": "Bize mesaj gönderin",
+    "subtitle": "Aşağıdaki formu doldurun, 24 saat içinde size geri döneceğiz.",
+    "name": {
+      "label": "Adınız *",
+      "placeholder": "Adınızı girin"
+    },
+    "email": {
+      "label": "E-posta Adresi *",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "Konu *",
+      "placeholder": "Bir konu seçin",
+      "general": "Genel Soru",
+      "sales": "Satış Sorusu",
+      "support": "Teknik Destek",
+      "partnership": "Ortaklık Fırsatı",
+      "feedback": "Geri Bildirim",
+      "other": "Diğer"
+    },
+    "message": {
+      "label": "Mesajınız *",
+      "placeholder": "Bugün size nasıl yardımcı olabiliriz?"
+    },
+    "submit": "Mesaj Gönder",
+    "submitting": "Mesaj gönderiliyor...",
+    "success": {
+      "title": "Mesaj başarıyla gönderildi!",
+      "description": "Teşekkürler! Mesajınızı aldık ve en kısa sürede yanıtlayacağız."
+    }
+  },
+  "contactInfo": {
+    "title": "İletişim",
+    "titleSuffix": "Bilgileri",
+    "emailUs": {
+      "title": "E-posta Gönderin",
+      "value": "support@helmiesbites.fi",
+      "description": "24 saat içinde yanıt veriyoruz"
+    },
+    "callUs": {
+      "title": "Bizi Arayın",
+      "value": "+358 20 123 4567",
+      "description": "Pzt-Cum, 09:00-18:00 EET"
+    },
+    "visitUs": {
+      "title": "Bizi Ziyaret Edin",
+      "value": "Helsinki, Finlandiya",
+      "description": "Punavuori bölgesi"
+    }
+  },
+  "supportHours": {
+    "title": "Destek Saatleri",
+    "mondayFriday": {
+      "day": "Pazartesi - Cuma",
+      "hours": "09:00 - 18:00 EET"
+    },
+    "saturday": {
+      "day": "Cumartesi",
+      "hours": "10:00 - 16:00 EET"
+    },
+    "sunday": {
+      "day": "Pazar",
+      "hours": "Kapalı"
+    },
+    "averageResponse": "Ortalama yanıt süresi: 24 saat içinde"
+  },
+  "liveChat": {
+    "title": "Anında yardım mı gerekiyor?",
+    "description": "Sorularınıza hızlı yanıtlar almak için destek ekibimizle sohbet edin.",
+    "button": "Canlı Sohbet Başlat",
+    "alertMessage": "Canlı sohbet çok yakında!",
+    "availability": "Pzt-Cum, 09:00-18:00 EET arası mevcuttur"
+  },
+  "map": {
+    "city": "Helsinki, Finlandiya",
+    "district": "Punavuori Bölgesi",
+    "openInMaps": "Google Haritalar'da Aç"
+  },
+  "faqLink": {
+    "subtitle": "Sık Sorulan Sorular",
+    "title": "hızlı cevaplar mı?",
+    "titleHighlight": "Arıyorsunuz",
+    "description": "Helmies Bites hakkında sık sorulan sorular için SSS sayfamıza göz atın.",
+    "button": "SSS'yi Ziyaret Et"
+  },
+  "cta": {
+    "subtitle": "Birlikte büyüyelim",
+    "title": "başlamaya?",
+    "titleHighlight": "Hazır mısınız",
+    "description": "İşlemlerini kolaylaştırmak için Helmies Bites kullanan yüzlerce restorana katılın.",
+    "noCardRequired": "Kredi kartı gerekmez. Kurulum 5 dakikadan az sürer."
+  }
+}

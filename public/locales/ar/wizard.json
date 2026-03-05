@@ -1,0 +1,340 @@
+{
+  "backToHome": "العودة إلى الرئيسية",
+  "header": {
+    "subtitle": "ابدأ الآن",
+    "title": "أعد موقع مطعمك",
+    "description": "أكمل هذه الخطوات لإطلاق موقع مطعمك"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "معلومات المطعم",
+      "description": "أخبرنا عن مطعمك حتى نتمكن من تخصيص تجربتك."
+    },
+    "menuUpload": {
+      "title": "القائمة",
+      "description": "ارفع قائمتك ودع الذكاء الاصطناعي يقوم بالمهمة الصعبة."
+    },
+    "theme": {
+      "title": "القالب",
+      "description": "اختر قالبًا جميلًا أو دع الذكاء الاصطناعي يبتكر واحدًا فريدًا لك."
+    },
+    "domain": {
+      "title": "النطاق",
+      "description": "أعد عنوان الويب الخاص بك وانطلق في دقائق."
+    },
+    "review": {
+      "title": "المراجعة",
+      "description": "راجع كل شيء قبل إطلاق موقع مطعمك."
+    }
+  },
+  "progress": {
+    "stepOf": "الخطوة {{current}} من {{total}}",
+    "percentage": "{{value}}%"
+  },
+  "buttons": {
+    "previous": "السابق",
+    "nextStep": "الخطوة التالية",
+    "completeSetup": "إكمال الإعداد",
+    "settingUp": "جارٍ الإعداد..."
+  },
+  "errors": {
+    "completeFailed": "فشل إكمال الإعداد. يرجى المحاولة مرة أخرى."
+  },
+  "help": {
+    "text": "تحتاج مساعدة؟ تواصل مع فريق الدعم على",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "اسم المطعم",
+      "hint": "الاسم الذي سيراه عملاؤك",
+      "placeholder": "مثال: Ravintola Babylon",
+      "required": "مطلوب"
+    },
+    "aiGenerate": {
+      "generating": "الذكاء الاصطناعي يقوم بالإنشاء...",
+      "autoFill": "ملء تلقائي بالذكاء الاصطناعي"
+    },
+    "cuisine": {
+      "label": "نوع المطبخ",
+      "hint": "ما نوع الطعام الذي تقدمه؟",
+      "placeholder": "اختر نوع المطبخ",
+      "options": {
+        "finnish": "فنلندي",
+        "italian": "إيطالي",
+        "chinese": "صيني",
+        "indian": "هندي",
+        "thai": "تايلاندي",
+        "japanese": "ياباني",
+        "burger": "برجر وأمريكي",
+        "pizza": "بيتزا",
+        "kebab": "كباب",
+        "mexican": "مكسيكي",
+        "other": "أخرى"
+      }
+    },
+    "city": {
+      "label": "المدينة",
+      "hint": "أين يقع مطعمك؟",
+      "placeholder": "مثال: هلسنكي"
+    },
+    "descriptionFi": {
+      "label": "الوصف (الفنلندية)",
+      "hint": "صف مطعمك للعملاء الفنلنديين",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "الوصف (الإنجليزية)",
+      "hint": "صف مطعمك للعملاء الدوليين",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "البريد الإلكتروني",
+      "hint": "لبيانات تسجيل الدخول والتحديثات",
+      "placeholder": "your@email.com"
+    }
+  },
+  "menuUpload": {
+    "title": "ارفع قائمتك",
+    "description": "ارفع ملف PDF أو صورة لقائمتك. سيقوم الذكاء الاصطناعي باستخراج جميع العناصر والأسعار وإنشاء الترجمات.",
+    "dropZone": {
+      "clickToUpload": "انقر للرفع أو اسحب وأفلت",
+      "fileTypes": "PDF, PNG, JPG حتى 10MB",
+      "removeFile": "إزالة الملف"
+    },
+    "parsing": {
+      "inProgress": "جارٍ تحليل قائمتك بالذكاء الاصطناعي...",
+      "button": "تحليل القائمة بالذكاء الاصطناعي",
+      "chooseDifferent": "اختيار ملف مختلف"
+    },
+    "success": {
+      "title": "تم تحليل القائمة بنجاح!",
+      "itemsFound": "وجد الذكاء الاصطناعي {{items}} عنصر في {{categories}} فئة",
+      "languages": {
+        "finnish": "الفنلندية",
+        "english": "الإنجليزية",
+        "swedish": "السويدية"
+      }
+    },
+    "errors": {
+      "parseFailed": "فشل تحليل القائمة. يرجى المحاولة مرة أخرى أو رفع ملف مختلف."
+    },
+    "supportedFormats": {
+      "title": "الصيغ المدعومة",
+      "description": "نقبل أنواع الملفات التالية"
+    },
+    "tips": {
+      "title": "نصائح لأفضل النتائج",
+      "tip1": "ارفع صورة واضحة عالية الدقة أو ملف PDF منسق جيدًا",
+      "tip2": "تأكد من أن الأسعار واضحة بجانب كل عنصر",
+      "tip3": "حافظ على تنظيم الفئات (مقبلات، أطباق رئيسية، إلخ) بشكل جيد",
+      "tip4": "سيقوم الذكاء الاصطناعي تلقائيًا بالترجمة إلى الفنلندية والإنجليزية والسويدية"
+    },
+    "manual": {
+      "prompt": "ليس لديك قائمة رقمية؟",
+      "button": "إنشاء القائمة يدويًا بدلاً من ذلك"
+    }
+  },
+  "themeSelection": {
+    "title": "اختر قالبك",
+    "description": "اختر تصميمًا يتناسب مع علامتك التجارية",
+    "allThemes": "جميع القوالب",
+    "themes": {
+      "modernOrange": {
+        "name": "البرتقالي العصري",
+        "description": "جريء ونشيط"
+      },
+      "elegantDark": {
+        "name": "الداكن الأنيق",
+        "description": "راقٍ ومتميز"
+      },
+      "freshGreen": {
+        "name": "الأخضر المنعش",
+        "description": "طبيعي وصحي"
+      },
+      "oceanBlue": {
+        "name": "الأزرق المحيطي",
+        "description": "هادئ واحترافي"
+      },
+      "berryBlend": {
+        "name": "مزيج التوت",
+        "description": "مرح ونابض بالحياة"
+      },
+      "rusticWarm": {
+        "name": "الدافئ الريفي",
+        "description": "مريح وترحيبي"
+      },
+      "royalPurple": {
+        "name": "الأرجواني الملكي",
+        "description": "فاخر وجريء"
+      },
+      "sunsetCoral": {
+        "name": "مرجان الغروب",
+        "description": "دافئ ومرحّب"
+      }
+    },
+    "aiTheme": {
+      "title": "أنشئ قالبًا فريدًا بالذكاء الاصطناعي",
+      "description": "دع الذكاء الاصطناعي يصمم قالبًا فريدًا من نوعه بناءً على شخصية مطعمك ونوع المطبخ",
+      "generating": "جارٍ إنشاء قالب الذكاء الاصطناعي...",
+      "button": "إنشاء قالب فريد (€5)",
+      "selected": "تم اختيار قالب الذكاء الاصطناعي"
+    },
+    "customizeLater": {
+      "title": "خصص لاحقًا",
+      "description": "غير متأكد؟ يمكنك دائمًا تغيير الألوان والخطوط والتخطيطات من لوحة التحكم بعد الإعداد. قوالبنا قابلة للتخصيص بالكامل!"
+    }
+  },
+  "domainSetup": {
+    "title": "اختر نوع النطاق",
+    "description": "اختر كيف تريد الوصول إلى مطعمك",
+    "options": {
+      "subdomain": {
+        "title": "نطاق فرعي مجاني",
+        "description": "restaurant.helmiesbites.fi",
+        "fullDescription": "احصل على نطاق فرعي مجاني على منصتنا",
+        "badge": "مجاني"
+      },
+      "custom": {
+        "title": "نطاق مخصص",
+        "description": "your-restaurant.fi",
+        "fullDescription": "استخدم اسم نطاقك الخاص",
+        "badge": "مميز"
+      },
+      "path": {
+        "title": "مسار مجاني",
+        "description": "helmiesbites.fi/restaurant",
+        "fullDescription": "احصل على مسار مجاني على منصتنا",
+        "badge": "مجاني"
+      }
+    },
+    "subdomain": {
+      "label": "نطاقك الفرعي",
+      "hint": "اختر اسمًا فريدًا لمطعمك",
+      "placeholder": "restaurant-name",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "سيكون موقعك متاحًا على"
+    },
+    "customDomain": {
+      "label": "نطاقك المخصص",
+      "hint": "استخدم نطاقًا تملكه بالفعل",
+      "placeholder": "your-restaurant.fi",
+      "premium": "مميز",
+      "dnsNote": "<strong>بعد الإعداد:</strong> ستحتاج إلى تحديث إعدادات DNS لتوجيهها إلى خوادمنا. سنرسل لك تعليمات مفصلة عبر البريد الإلكتروني."
+    },
+    "path": {
+      "label": "مسارك",
+      "hint": "اختر مسارًا فريدًا لمطعمك",
+      "placeholder": "restaurant-name",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "سيكون موقعك متاحًا على"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "تفعيل فوري",
+        "description": "النطاقات المجانية متاحة فورًا بعد الإعداد. لا حاجة للانتظار!"
+      },
+      "upgradeAnytime": {
+        "title": "ترقية في أي وقت",
+        "description": "يمكنك إضافة نطاق مخصص لاحقًا من لوحة التحكم."
+      }
+    },
+    "availability": {
+      "available": "متاح!",
+      "readyForYou": "هذا العنوان جاهز لك."
+    }
+  },
+  "review": {
+    "title": "راجع مطعمك",
+    "sections": {
+      "restaurantInfo": {
+        "title": "معلومات المطعم",
+        "name": "الاسم",
+        "cuisine": "نوع المطبخ",
+        "city": "المدينة"
+      },
+      "website": {
+        "title": "الموقع الإلكتروني",
+        "domain": "النطاق",
+        "theme": "القالب",
+        "selectedTheme": "القالب المحدد"
+      },
+      "menu": {
+        "title": "القائمة",
+        "items": "العناصر",
+        "categories": "الفئات",
+        "languages": "اللغات",
+        "menuItems": "{{count}} عنصر في القائمة",
+        "menuCategories": "{{count}} فئة",
+        "languageList": "الفنلندية، الإنجليزية، السويدية"
+      },
+      "contact": {
+        "title": "التواصل",
+        "email": "البريد الإلكتروني"
+      }
+    },
+    "notSet": "لم يتم التعيين",
+    "pricing": {
+      "title": "ملخص الأسعار",
+      "basePlatformFee": {
+        "label": "رسوم المنصة الأساسية",
+        "value": "٥٪ لكل طلب إلكتروني",
+        "description": "ادفع فقط عندما تحصل على طلبات"
+      },
+      "cashOnDelivery": {
+        "label": "الدفع عند الاستلام",
+        "value": "€30/شهريًا",
+        "description": "قبول المدفوعات النقدية عند التوصيل"
+      },
+      "aiAssistant": {
+        "label": "مساعد الذكاء الاصطناعي",
+        "value": "€10/شهريًا",
+        "description": "دعم عملاء ذكي بالذكاء الاصطناعي"
+      },
+      "aiImages": {
+        "label": "صور القائمة بالذكاء الاصطناعي",
+        "value": "€20",
+        "description": "رسوم لمرة واحدة لصور الطعام المُنشأة بالذكاء الاصطناعي"
+      },
+      "aiBranding": {
+        "label": "العلامة التجارية بالذكاء الاصطناعي",
+        "value": "€5",
+        "description": "رسوم لمرة واحدة لشعار مُنشأ بالذكاء الاصطناعي"
+      },
+      "oneTime": "لمرة واحدة",
+      "monthlyTotal": "الإجمالي الشهري",
+      "perMonth": "/شهريًا",
+      "oneTimeCharges": "رسوم لمرة واحدة",
+      "noHiddenFees": "لا رسوم مخفية. إشعار إلغاء ٣ أشهر."
+    },
+    "readyToLaunch": {
+      "title": "أنت جاهز!",
+      "description": "انقر على \"إكمال الإعداد\" لإطلاق موقع مطعمك. سيتم إرسال بيانات تسجيل الدخول إلى بريدك الإلكتروني.",
+      "instantActivation": "تفعيل فوري",
+      "freeSSL": "شهادة SSL مجانية",
+      "mobileResponsive": "متجاوب مع الجوال"
+    },
+    "payment": {
+      "title": "معلومات الدفع",
+      "description": "يمكنك إضافة تفاصيل الدفع بعد الإعداد. نقدم طرق دفع متعددة بما في ذلك بطاقة الائتمان والخصم المباشر والفاتورة.",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "فاتورة"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "فنلندي",
+      "italian": "إيطالي",
+      "chinese": "صيني",
+      "indian": "هندي",
+      "thai": "تايلاندي",
+      "japanese": "ياباني",
+      "burger": "برجر وأمريكي",
+      "pizza": "بيتزا",
+      "kebab": "كباب",
+      "mexican": "مكسيكي"
+    }
+  }
+}

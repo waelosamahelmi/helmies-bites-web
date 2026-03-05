@@ -1,0 +1,253 @@
+{
+  "hero": {
+    "subtitle": "Hinnoittelusuunnitelmat",
+    "titleHighlight": "Yksinkertainen ja joustava",
+    "title": "Hinnoittelu",
+    "description": "Aloita ilmaiseksi. Päivitä kasvaessasi. Jokainen taso johtaa seuraavaan — ei umpikujia."
+  },
+  "tiers": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "Maksa käytön mukaan",
+      "priceDisplay": "5 %",
+      "priceSubtext": "verkkotilausta kohti",
+      "setupFee": "0 € asennus",
+      "highlights": [
+        "49 € vähimmäiskuukausimaksu",
+        "5 % verkkotilausta kohti",
+        "Ei sitoutumista"
+      ],
+      "bestFor": "Pienet kahvilat, kokeilijoille",
+      "features": {
+        "included": [
+          "Täysi verkkosivustorakentaja",
+          "Verkkotilausjärjestelmä",
+          "Tekoälyruokalistan tuonti",
+          "Stripe-maksuintegraatio",
+          "Mobiilioptimoitu suunnittelu",
+          "Monikielinen tuki",
+          "Ilmainen aliverkkotunnus",
+          "Sähköpostituki",
+          "49 € vähimmäiskuukausimaksu"
+        ],
+        "excluded": [
+          "Offline-maksutuki",
+          "Oma brändäys ja verkkotunnus",
+          "Tekoälyavustaja",
+          "Edistynyt analytiikka",
+          "Prioriteettituki"
+        ]
+      },
+      "ctaText": "Aloita ilmaiseksi",
+      "pricingTag": "Ilmainen suunnitelma"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Kuukausitilaus",
+      "priceSubtext": "/kk",
+      "setupFee": "500 € kertamaksu",
+      "highlights": [
+        "Kaikki ominaisuudet käytössä",
+        "Offline-maksut mukana",
+        "500 € kertamaksu"
+      ],
+      "bestFor": "Vakiintuneet ravintolat valmiina sitoutumaan",
+      "features": {
+        "included": [
+          "Kaikki Starter-suunnitelmasta",
+          "Ei transaktiomaksuja",
+          "Offline-maksutuki (käteinen, korttipääte)",
+          "Tekoälyavustaja asiakkaille",
+          "Edistynyt analytiikka ja raportit",
+          "Oma brändäys ja verkkotunnus",
+          "Prioriteettituki",
+          "Sosiaalisen median integraatio",
+          "Toimitusvyöhykkeiden hallinta"
+        ],
+        "excluded": [
+          "White-label-ratkaisu",
+          "API-pääsy",
+          "Oma yhteyshenkilö"
+        ]
+      },
+      "ctaText": "Aloita nyt",
+      "pricingTag": "Premium-suunnitelma",
+      "toggle": {
+        "monthly": "Kuukausittain",
+        "yearly": "Vuosittain",
+        "yearlyDiscount": "10 % alennus",
+        "monthlyLabel": "/kk",
+        "yearlyLabel": "/vuosi"
+      }
+    },
+    "annual": {
+      "name": "Vuosittainen",
+      "tagline": "Paras arvo",
+      "priceDisplay": "99 €",
+      "priceSubtext": "/kk laskutetaan vuosittain",
+      "setupFee": "0 € asennus",
+      "highlights": [
+        "1 190 €/ensimmäinen vuosi",
+        "Uusinta: 1 390 €/vuosi",
+        "3 vuotta: 2 990 € (83 €/kk)"
+      ],
+      "bestFor": "Ravintolat jotka haluavat maksimaaliset säästöt",
+      "features": {
+        "included": [
+          "Kaikki Pro-suunnitelmasta",
+          "Ei transaktiomaksuja",
+          "Kaikki ominaisuudet käytössä",
+          "0 € asennus (säästä 500 €)",
+          "Alhaisin efektiivinen kuukausikustannus",
+          "Oma yhteyshenkilö",
+          "Mukautetut integraatiot",
+          "Monen toimipaikan tuki",
+          "SLA-takuu"
+        ]
+      },
+      "ctaText": "Lukitse säästöt",
+      "pricingTag": "Vuosisuunnitelma",
+      "bestValueBadge": "Paras arvo",
+      "bestForLabel": "Paras"
+    }
+  },
+  "trust": {
+    "subtitle": "Luottamus",
+    "titleHighlight": "Miksi ravintolat",
+    "title": "valitsevat meidät",
+    "description": "Olemme sitoutuneet menestykseesi riskittömillä takuilla",
+    "badges": {
+      "moneyBack": {
+        "title": "Rahat takaisin -takuu",
+        "description": "30 päivän täysi palautus, jos et ole täysin tyytyväinen"
+      },
+      "noSetupFees": {
+        "title": "Ei asennusmaksuja",
+        "description": "Julkaise ravintolasi verkkosivusto minuuteissa, täysin ilmaiseksi"
+      },
+      "threeMonthNotice": {
+        "title": "3 kuukauden irtisanomisaika",
+        "description": "Peruuta 3 kuukauden irtisanomisajalla"
+      }
+    }
+  },
+  "comparison": {
+    "subtitle": "Vertailu rinnakkain",
+    "titleHighlight": "Vertaa kaikkia",
+    "title": "Ominaisuuksia",
+    "description": "Katso tarkalleen mitä kukin suunnitelma sisältää oikean valinnan tekemiseksi",
+    "tableHeader": "Ominaisuus",
+    "starterHeader": "Starter",
+    "proHeader": "Pro",
+    "annualHeader": "Vuosittainen",
+    "categories": {
+      "pricing": "Hinnoittelu",
+      "coreFeatures": "Ydinominaisuudet",
+      "payments": "Maksut",
+      "aiAutomation": "Tekoäly ja automaatio",
+      "brandingCustomization": "Brändäys ja mukauttaminen",
+      "analyticsSupport": "Analytiikka ja tuki",
+      "technical": "Tekninen"
+    },
+    "features": {
+      "monthlyCost": "Kuukausikustannus",
+      "setupFee": "Asennusmaksu",
+      "transactionFees": "Transaktiomaksut",
+      "commitment": "Sitoutuminen",
+      "websiteBuilder": "Verkkosivustorakentaja",
+      "onlineOrdering": "Verkkotilaukset",
+      "aiMenuImport": "Tekoälyruokalistan tuonti",
+      "mobileOptimized": "Mobiilioptimoitu",
+      "multiLanguage": "Monikielinen",
+      "stripeIntegration": "Stripe-integraatio",
+      "offlinePayments": "Offline-maksut (käteinen, pääte)",
+      "customPaymentGateway": "Mukautettu maksuyhdyskäytävä",
+      "aiMenuImportAi": "Tekoälyruokalistan tuonti",
+      "aiAssistant": "Tekoälyavustaja",
+      "aiTranslations": "Tekoälykäännökset",
+      "freeSubdomain": "Ilmainen aliverkkotunnus",
+      "customDomain": "Oma verkkotunnus",
+      "customBranding": "Oma brändäys",
+      "whiteLabelSolution": "White-label-ratkaisu",
+      "basicAnalytics": "Perusanalytiikka",
+      "advancedReports": "Edistyneet raportit",
+      "emailSupport": "Sähköpostituki",
+      "prioritySupport": "Prioriteettituki",
+      "dedicatedAccountManager": "Oma yhteyshenkilö",
+      "slaGuarantee": "SLA-takuu",
+      "apiAccess": "API-pääsy",
+      "customIntegrations": "Mukautetut integraatiot",
+      "multiBranchSupport": "Monen toimipaikan tuki"
+    },
+    "values": {
+      "starter": {
+        "monthlyCost": "5 % + 49 € min",
+        "setupFee": "0 €",
+        "transactionFees": "5 %",
+        "commitment": "Ei"
+      },
+      "pro": {
+        "monthlyCost": "129 €/kk",
+        "setupFee": "500 €",
+        "transactionFees": "0 %",
+        "commitment": "Kuukausittain"
+      },
+      "annual": {
+        "monthlyCost": "99 €/kk",
+        "setupFee": "0 €",
+        "transactionFees": "0 %",
+        "commitment": "1 tai 3 vuotta"
+      }
+    }
+  },
+  "faq": {
+    "subtitle": "Kysymyksiä?",
+    "titleHighlight": "Usein kysytyt",
+    "title": "Kysymykset",
+    "description": "Kaikki mitä sinun tarvitsee tietää hinnoittelustamme ja suunnitelmistamme",
+    "starterPayAsYouGo": {
+      "question": "Miten Starter-suunnitelman maksa-käytön-mukaan -malli toimii?",
+      "answer": "Starter-suunnitelmalla maksat 5 % alustamme kautta käsitellyistä verkkotilauksista — ei kuukausimaksua. Vähimmäiskuukausimaksu on 49 € alustan kustannusten kattamiseksi. Esimerkiksi jos käsittelet 2 000 € verkkotilauksia, maksat 100 € (5 %). Jos 5 % jää alle 49 €, maksat silti 49 € vähimmäismaksun."
+    },
+    "proSetupFee": {
+      "question": "Mitä 500 € Pro-asennusmaksu sisältää?",
+      "answer": "Kertamaksu 500 € kattaa täyden perehdytyksen: konfiguroimme verkkosivustosi, tuomme ruokalistasi tekoälyllä, asetamme oman verkkotunnuksen, konfiguroimme offline-maksupäätteet ja tarjoamme henkilökohtaisen koulutuksen. Vuosisuunnitelmassa asennus on täysin ilmainen (0 €)."
+    },
+    "switchPlans": {
+      "question": "Voinko vaihtaa suunnitelmien välillä?",
+      "answer": "Ehdottomasti! Luontainen päivityspolku on: Starter → Pro → Vuosittainen. Voit päivittää milloin tahansa. Starterista Prohon vaihdettaessa maksat 500 € asennusmaksun ja kuukausilaskutus alkaa. Vuosittaiseen vaihdettaessa asennusmaksu poistetaan ja jäljellä oleva Pro-tilaus hyvitetään suhteellisesti."
+    },
+    "annualPricing": {
+      "question": "Miten vuosisuunnitelman hinnoittelu toimii?",
+      "answer": "Ensimmäinen vuosi: 1 190 € (efektiivisesti 99 €/kk). Uusinta: 1 390 €/vuosi. Tarjoamme myös 3 vuoden sitoutumisen hintaan 2 990 € (vain 83 €/kk). Kaikki vuosisuunnitelmat sisältävät 0 € asennuksen ja kaikki ominaisuudet alusta alkaen."
+    },
+    "paymentMethods": {
+      "question": "Mitä maksutapoja hyväksytte?",
+      "answer": "Hyväksymme kaikki yleisimmät luottokortit (Visa, Mastercard, American Express), tilisiirrot ja PayPalin. Vuosi- ja 3 vuoden suunnitelmat voidaan maksaa myös laskulla."
+    },
+    "offlinePaymentsStarter": {
+      "question": "Entä offline-maksut Starter-suunnitelmassa?",
+      "answer": "Starter-suunnitelma tukee vain verkkomaksuja Stripen kautta. Jos tarvitset käteismaksuja, korttipäätemaksuja tai muita offline-maksutapoja, tarvitset Pro- tai vuosisuunnitelman."
+    },
+    "contractCommitment": {
+      "question": "Onko sopimusta tai sitoutumista?",
+      "answer": "Kaikkien suunnitelmien irtisanomisaika on 3 kuukautta. Vuosittainen: 1 tai 3 vuoden sitoutuminen parhailla hinnoillamme."
+    },
+    "refundPolicy": {
+      "question": "Mikä on palautuskäytäntönne?",
+      "answer": "Tarjoamme 30 päivän rahat takaisin -takuun Pro- ja vuosisuunnitelmille. Jos et ole tyytyväinen ensimmäisten 30 päivän aikana, ota meihin yhteyttä saadaksesi täyden palautuksen — ei kysymyksiä."
+    }
+  },
+  "cta": {
+    "subtitle": "Aloita nyt",
+    "titleHighlight": "Valmis kasvattamaan",
+    "title": "ravintolaasi?",
+    "description": "Liity satojen ravintoloiden joukkoon, jotka jo käyttävät Helmies Bitesiä. Aloita ilmaiseksi, luottokorttia ei tarvita.",
+    "seeAllFeatures": "Katso kaikki ominaisuudet",
+    "trustIndicators": {
+      "guarantee": "30 päivän takuu",
+      "noCreditCard": "Luottokorttia ei tarvita",
+      "support": "24/7 tuki"
+    }
+  }
+}

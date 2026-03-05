@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "subtitle": "About Us",
+    "title": "accessible",
+    "titleHighlight": "Making restaurant technology",
+    "description": "We believe every restaurant deserves a beautiful online presence, regardless of size or technical expertise."
+  },
+  "story": {
+    "subtitle": "Our Story",
+    "title": "big ideas",
+    "titleHighlight": "From a small kitchen to",
+    "imageAlt": "Restaurant kitchen",
+    "launchYear": "2026",
+    "launchLabel": "Launching now",
+    "paragraph1": "Helmies Bites was born from a simple observation: while technology has transformed many industries, most restaurants still struggle to establish a strong online presence. Expensive websites, complicated ordering systems, and technical barriers kept many amazing restaurants from reaching their full potential.",
+    "paragraph2": "Our founder, Wael Helmi, a creative developer based in Helsinki, saw this gap and set out to build a better solution - one that doesn't require deep technical knowledge or a large budget.",
+    "paragraph3": "Now, as we launch in early 2026, we're ready to help restaurants across Finland and beyond establish their digital presence, accept online orders, and connect with customers in meaningful ways."
+  },
+  "missionVision": {
+    "subtitle": "Our Purpose",
+    "title": "Vision",
+    "titleHighlight": "Mission &",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To empower every restaurant with affordable, easy-to-use technology that helps them thrive in the digital age. We believe that great food deserves to be discovered, ordered, and enjoyed by everyone.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "A world where every restaurant, from the smallest family cafe to the largest dining establishment, has equal access to the digital tools they need to succeed and grow their business."
+  },
+  "team": {
+    "subtitle": "Our Team",
+    "title": "Helmies",
+    "titleHighlight": "Meet the people behind",
+    "description": "A passionate team of creative developers working together to transform restaurant technology.",
+    "linkedin": "LinkedIn",
+    "waelHelmi": {
+      "name": "Wael Helmi",
+      "role": "Founder & CEO",
+      "bio": "Creative developer passionate about building beautiful digital experiences for the restaurant industry."
+    },
+    "naghamAlaa": {
+      "name": "Nagham Alaa",
+      "role": "UI/UX Designer",
+      "bio": "Creative developer crafting intuitive and stunning user experiences."
+    }
+  },
+  "values": {
+    "subtitle": "What We Believe",
+    "title": "Values",
+    "titleHighlight": "Our Core",
+    "customerFirst": {
+      "title": "Customer First",
+      "description": "Every decision starts with what is best for our restaurant partners and their customers."
+    },
+    "continuousInnovation": {
+      "title": "Continuous Innovation",
+      "description": "We constantly evolve our platform to stay ahead of industry trends and technology."
+    },
+    "reliability": {
+      "title": "Reliability",
+      "description": "Built on robust infrastructure ensuring your restaurant is always online and ready."
+    },
+    "simplicity": {
+      "title": "Simplicity",
+      "description": "Complex technology made simple so you can focus on what matters - your food."
+    }
+  },
+  "milestones": {
+    "subtitle": "Our Journey",
+    "title": "Milestones",
+    "titleHighlight": "Key",
+    "founded": {
+      "year": "Late 2025",
+      "title": "Founded",
+      "description": "Started building Helmies Bites with a vision to make restaurant technology accessible to everyone"
+    },
+    "platformLaunch": {
+      "year": "Feb 2026",
+      "title": "Platform Launch",
+      "description": "Launching our AI-powered platform to help restaurants establish their digital presence"
+    }
+  },
+  "location": {
+    "subtitle": "Visit Us",
+    "title": "Home",
+    "titleHighlight": "Our",
+    "imageAlt": "Helsinki office",
+    "cityTitle": "Helsinki, Finland",
+    "description": "We're proud to call Helsinki our home. From here, we serve restaurants across Finland and continue our expansion throughout Europe.",
+    "address": "Punavuori, Helsinki, Finland",
+    "email": "hello@helmiesbites.fi",
+    "teamSize": "25+ team members"
+  },
+  "cta": {
+    "subtitle": "Join our family",
+    "title": "Ready to Get Started?",
+    "description": "Be part of our story and let us help you write yours. Be among the",
+    "firstRestaurants": "first restaurants",
+    "descriptionEnd": "to launch with Helmies Bites.",
+    "contactUs": "Contact Us",
+    "joinTitle": "Join Our Family",
+    "joinDescription": "Be part of the growing community of restaurants thriving with Helmies Bites"
+  }
+}

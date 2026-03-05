@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Globe, Link as LinkIcon, Check, Crown, Zap } from 'lucide-react';
 
 interface Props {
@@ -9,43 +10,44 @@ interface Props {
 
 type DomainType = 'subdomain' | 'custom' | 'path';
 
-const domainOptions = [
-  {
-    id: 'subdomain' as DomainType,
-    title: 'Free Subdomain',
-    description: 'restaurant.helmiesbites.fi',
-    fullDescription: 'Get a free subdomain on our platform',
-    icon: <Globe className="h-6 w-6" />,
-    gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
-    badge: 'FREE',
-    badgeColor: 'bg-green-100 text-green-700 border-green-200',
-  },
-  {
-    id: 'custom' as DomainType,
-    title: 'Custom Domain',
-    description: 'your-restaurant.fi',
-    fullDescription: 'Use your own domain name',
-    icon: <LinkIcon className="h-6 w-6" />,
-    gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-    badge: 'PREMIUM',
-    badgeColor: 'bg-[#FF7A00]/10 text-[#8B4513] border-[#FF7A00]/20',
-  },
-  {
-    id: 'path' as DomainType,
-    title: 'Free Path',
-    description: 'helmiesbites.fi/restaurant',
-    fullDescription: 'Get a free path on our platform',
-    icon: <Zap className="h-6 w-6" />,
-    gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
-    badge: 'FREE',
-    badgeColor: 'bg-green-100 text-green-700 border-green-200',
-  },
-];
-
 export function DomainSetupStep({ data, onUpdate }: Props) {
+  const { t } = useTranslation('wizard');
   const [domainType, setDomainType] = useState<DomainType>(data.domainType || 'subdomain');
   const [slug, setSlug] = useState(data.slug || '');
   const [customDomain, setCustomDomain] = useState(data.customDomain || '');
+
+  const domainOptions = [
+    {
+      id: 'subdomain' as DomainType,
+      titleKey: 'domainSetup.options.subdomain.title',
+      descriptionKey: 'domainSetup.options.subdomain.description',
+      fullDescriptionKey: 'domainSetup.options.subdomain.fullDescription',
+      icon: <Globe className="h-6 w-6" />,
+      gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+      badgeKey: 'domainSetup.options.subdomain.badge',
+      badgeColor: 'bg-green-100 text-green-700 border-green-200',
+    },
+    {
+      id: 'custom' as DomainType,
+      titleKey: 'domainSetup.options.custom.title',
+      descriptionKey: 'domainSetup.options.custom.description',
+      fullDescriptionKey: 'domainSetup.options.custom.fullDescription',
+      icon: <LinkIcon className="h-6 w-6" />,
+      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+      badgeKey: 'domainSetup.options.custom.badge',
+      badgeColor: 'bg-[#FF7A00]/10 text-[#8B4513] border-[#FF7A00]/20',
+    },
+    {
+      id: 'path' as DomainType,
+      titleKey: 'domainSetup.options.path.title',
+      descriptionKey: 'domainSetup.options.path.description',
+      fullDescriptionKey: 'domainSetup.options.path.fullDescription',
+      icon: <Zap className="h-6 w-6" />,
+      gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+      badgeKey: 'domainSetup.options.path.badge',
+      badgeColor: 'bg-green-100 text-green-700 border-green-200',
+    },
+  ];
 
   const handleSelectType = (type: DomainType) => {
     setDomainType(type);
@@ -72,8 +74,8 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             <Globe className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-900">Choose Your Domain Type</h3>
-            <p className="text-sm text-gray-500">Select how you want your restaurant to be accessed</p>
+            <h3 className="text-xl font-bold text-gray-900">{t('domainSetup.title')}</h3>
+            <p className="text-sm text-gray-500">{t('domainSetup.description')}</p>
           </div>
         </div>
 
@@ -98,14 +100,14 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
                   <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mx-auto mb-3">
                     {option.icon}
                   </div>
-                  <h4 className="font-bold text-lg">{option.title}</h4>
-                  <p className="text-sm text-white/80 mt-1">{option.description}</p>
+                  <h4 className="font-bold text-lg">{t(option.titleKey)}</h4>
+                  <p className="text-sm text-white/80 mt-1">{t(option.descriptionKey)}</p>
                 </div>
 
                 {/* Badge */}
                 <div className="absolute top-3 right-3">
                   <span className={`px-2 py-1 rounded-full text-xs font-bold ${option.badgeColor}`}>
-                    {option.badge}
+                    {t(option.badgeKey)}
                   </span>
                 </div>
 
@@ -130,9 +132,9 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
-                Your Subdomain
+                {t('domainSetup.subdomain.label')}
               </label>
-              <p className="text-xs text-gray-500">Choose a unique name for your restaurant</p>
+              <p className="text-xs text-gray-500">{t('domainSetup.subdomain.hint')}</p>
             </div>
           </div>
           <div className="flex items-stretch">
@@ -140,19 +142,19 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
               type="text"
               value={slug}
               onChange={(e) => handleSlugChange(e.target.value)}
-              placeholder="restaurant-name"
+              placeholder={t('domainSetup.subdomain.placeholder')}
               className="input-modern rounded-r-none border-r-0 text-left"
             />
             <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-r-2xl border-2 border-l-0 border-gray-300 font-semibold whitespace-nowrap">
-              .helmiesbites.fi
+              {t('domainSetup.subdomain.suffix')}
             </div>
           </div>
           <div className="flex items-center gap-2 mt-3">
             <Check className="h-4 w-4 text-green-600" />
             <p className="text-xs text-gray-500">
-              Your website will be live at{' '}
+              {t('domainSetup.subdomain.liveAt')}{' '}
               <span className="font-semibold text-orange-600">
-                {slug || 'restaurant-name'}.helmiesbites.fi
+                {slug || 'restaurant-name'}{t('domainSetup.subdomain.suffix')}
               </span>
             </p>
           </div>
@@ -168,24 +170,24 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
-                Your Custom Domain
+                {t('domainSetup.customDomain.label')}
               </label>
-              <p className="text-xs text-gray-500">Use a domain you already own</p>
+              <p className="text-xs text-gray-500">{t('domainSetup.customDomain.hint')}</p>
             </div>
-            <span className="ml-auto badge text-xs">Premium</span>
+            <span className="ml-auto badge text-xs">{t('domainSetup.customDomain.premium')}</span>
           </div>
           <input
             type="text"
             value={customDomain}
             onChange={(e) => handleCustomDomainChange(e.target.value)}
-            placeholder="your-restaurant.fi"
+            placeholder={t('domainSetup.customDomain.placeholder')}
             className="input-modern"
           />
           <div className="mt-4 p-4 rounded-xl bg-purple-50 border border-[#FF7A00]/20">
-            <p className="text-sm text-[#3A1F0B]">
-              <strong>After setup:</strong> You'll need to update your DNS settings to point to our servers.
-              We'll send you detailed instructions via email.
-            </p>
+            <p
+              className="text-sm text-[#3A1F0B]"
+              dangerouslySetInnerHTML={{ __html: t('domainSetup.customDomain.dnsNote') }}
+            />
           </div>
         </div>
       )}
@@ -199,29 +201,29 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             </div>
             <div>
               <label className="block text-sm font-bold text-gray-900">
-                Your Path
+                {t('domainSetup.path.label')}
               </label>
-              <p className="text-xs text-gray-500">Choose a unique path for your restaurant</p>
+              <p className="text-xs text-gray-500">{t('domainSetup.path.hint')}</p>
             </div>
           </div>
           <div className="flex items-stretch">
             <div className="px-4 py-4 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 rounded-l-2xl border-2 border-r-0 border-gray-300 font-semibold whitespace-nowrap">
-              helmiesbites.fi/
+              {t('domainSetup.path.prefix')}
             </div>
             <input
               type="text"
               value={slug}
               onChange={(e) => handleSlugChange(e.target.value)}
-              placeholder="restaurant-name"
+              placeholder={t('domainSetup.path.placeholder')}
               className="input-modern rounded-l-none"
             />
           </div>
           <div className="flex items-center gap-2 mt-3">
             <Check className="h-4 w-4 text-green-600" />
             <p className="text-xs text-gray-500">
-              Your website will be live at{' '}
+              {t('domainSetup.path.liveAt')}{' '}
               <span className="font-semibold text-orange-600">
-                helmiesbites.fi/{slug || 'restaurant-name'}
+                {t('domainSetup.path.prefix')}{slug || 'restaurant-name'}
               </span>
             </p>
           </div>
@@ -236,9 +238,9 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
               <Zap className="h-5 w-5 text-blue-600" />
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 mb-1">Instant Activation</h4>
+              <h4 className="font-bold text-gray-900 mb-1">{t('domainSetup.infoCards.instantActivation.title')}</h4>
               <p className="text-sm text-gray-600">
-                Free domains are available immediately after setup. No waiting required!
+                {t('domainSetup.infoCards.instantActivation.description')}
               </p>
             </div>
           </div>
@@ -250,9 +252,9 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
               <Crown className="h-5 w-5 text-orange-600" />
             </div>
             <div>
-              <h4 className="font-bold text-gray-900 mb-1">Upgrade Anytime</h4>
+              <h4 className="font-bold text-gray-900 mb-1">{t('domainSetup.infoCards.upgradeAnytime.title')}</h4>
               <p className="text-sm text-gray-600">
-                You can add a custom domain later from your admin dashboard.
+                {t('domainSetup.infoCards.upgradeAnytime.description')}
               </p>
             </div>
           </div>
@@ -266,7 +268,7 @@ export function DomainSetupStep({ data, onUpdate }: Props) {
             <Check className="h-4 w-4 text-green-600" />
           </div>
           <p className="text-sm text-gray-700">
-            <span className="font-semibold text-green-600">Available!</span> This address is ready for you.
+            <span className="font-semibold text-green-600">{t('domainSetup.availability.available')}</span> {t('domainSetup.availability.readyForYou')}
           </p>
         </div>
       )}

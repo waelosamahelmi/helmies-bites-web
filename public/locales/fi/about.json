@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "subtitle": "Meistä",
+    "title": "saavutettavaksi",
+    "titleHighlight": "Teemme ravintolateknologiasta",
+    "description": "Uskomme, että jokainen ravintola ansaitsee kauniin verkkonäkyvyyden koosta tai teknisestä osaamisesta riippumatta."
+  },
+  "story": {
+    "subtitle": "Tarinamme",
+    "title": "suuriin ideoihin",
+    "titleHighlight": "Pienestä keittiöstä",
+    "imageAlt": "Ravintolan keittiö",
+    "launchYear": "2026",
+    "launchLabel": "Julkaistaan nyt",
+    "paragraph1": "Helmies Bites syntyi yksinkertaisesta havainnosta: vaikka teknologia on mullistanut monia aloja, useimmat ravintolat kamppailevat edelleen vahvan verkkonäkyvyyden luomisessa. Kalliit verkkosivustot, monimutkaiset tilausjärjestelmät ja tekniset esteet pitivät monia upeita ravintoloita poissa täydestä potentiaalistaan.",
+    "paragraph2": "Perustajamme Wael Helmi, luova kehittäjä Helsingistä, näki tämän aukon ja ryhtyi rakentamaan parempaa ratkaisua — sellaista, joka ei vaadi syvällistä teknistä osaamista tai suurta budjettia.",
+    "paragraph3": "Nyt, kun julkaisemme vuoden 2026 alussa, olemme valmiita auttamaan ravintoloita kaikkialla Suomessa ja sen ulkopuolella luomaan digitaalisen läsnäolonsa, vastaanottamaan verkkotilauksia ja yhdistymään asiakkaisiinsa merkityksellisillä tavoilla."
+  },
+  "missionVision": {
+    "subtitle": "Tarkoituksemme",
+    "title": "Visio",
+    "titleHighlight": "Missio &",
+    "missionTitle": "Missiomme",
+    "missionDescription": "Antaa jokaiselle ravintolalle edullista, helppokäyttöistä teknologiaa, joka auttaa menestymään digitaalisella aikakaudella. Uskomme, että hyvä ruoka ansaitsee tulla löydetyksi, tilatuksi ja nautituksi kaikkien toimesta.",
+    "visionTitle": "Visiomme",
+    "visionDescription": "Maailma, jossa jokaisella ravintolalla, pienimmästä perhekahvilasta suurimpaan ravintolaan, on yhtäläinen pääsy digitaalisiin työkaluihin, joita he tarvitsevat menestyäkseen ja kasvattaakseen liiketoimintaansa."
+  },
+  "team": {
+    "subtitle": "Tiimimme",
+    "title": "Helmiesin",
+    "titleHighlight": "Tapaa ihmiset",
+    "description": "Intohimoinen tiimi luovia kehittäjiä, jotka työskentelevät yhdessä ravintolateknologian muuttamiseksi.",
+    "linkedin": "LinkedIn",
+    "waelHelmi": {
+      "name": "Wael Helmi",
+      "role": "Perustaja ja toimitusjohtaja",
+      "bio": "Luova kehittäjä, joka on intohimoinen rakentamaan kauniita digitaalisia kokemuksia ravintola-alalle."
+    },
+    "naghamAlaa": {
+      "name": "Nagham Alaa",
+      "role": "UI/UX-suunnittelija",
+      "bio": "Luova kehittäjä, joka luo intuitiivisia ja upeita käyttökokemuksia."
+    }
+  },
+  "values": {
+    "subtitle": "Mihin uskomme",
+    "title": "Arvot",
+    "titleHighlight": "Ydinarvomme",
+    "customerFirst": {
+      "title": "Asiakas ensin",
+      "description": "Jokainen päätös alkaa siitä, mikä on parasta ravintolakumppaneillemme ja heidän asiakkailleen."
+    },
+    "continuousInnovation": {
+      "title": "Jatkuva innovointi",
+      "description": "Kehitämme alustaamme jatkuvasti pysyäksemme alan trendien ja teknologian edellä."
+    },
+    "reliability": {
+      "title": "Luotettavuus",
+      "description": "Rakennettu vakaalle infrastruktuurille, joka varmistaa ravintolasi olevan aina verkossa ja valmiina."
+    },
+    "simplicity": {
+      "title": "Yksinkertaisuus",
+      "description": "Monimutkainen teknologia tehtynä yksinkertaiseksi, jotta voit keskittyä siihen mikä on tärkeintä — ruokaasi."
+    }
+  },
+  "milestones": {
+    "subtitle": "Matkamme",
+    "title": "Virstanpylväät",
+    "titleHighlight": "Tärkeimmät",
+    "founded": {
+      "year": "Loppuvuosi 2025",
+      "title": "Perustaminen",
+      "description": "Aloitimme Helmies Bitesin rakentamisen visiolla tehdä ravintolateknologiasta kaikkien saavutettavissa"
+    },
+    "platformLaunch": {
+      "year": "Helmi 2026",
+      "title": "Alustan julkaisu",
+      "description": "Julkaisemme tekoälykäyttöisen alustamme auttaaksemme ravintoloita luomaan digitaalisen läsnäolonsa"
+    }
+  },
+  "location": {
+    "subtitle": "Vieraile meillä",
+    "title": "Kotimme",
+    "titleHighlight": "Meidän",
+    "imageAlt": "Helsingin toimisto",
+    "cityTitle": "Helsinki, Suomi",
+    "description": "Olemme ylpeitä voidessamme kutsua Helsinkiä kodiksemme. Täältä palvelemme ravintoloita kaikkialla Suomessa ja jatkamme laajentumistamme ympäri Eurooppaa.",
+    "address": "Punavuori, Helsinki, Suomi",
+    "email": "hello@helmiesbites.fi",
+    "teamSize": "25+ tiimin jäsentä"
+  },
+  "cta": {
+    "subtitle": "Liity perheeseemme",
+    "title": "Oletko valmis aloittamaan?",
+    "description": "Ole osa tarinaamme ja anna meidän auttaa sinua kirjoittamaan omasi. Ole mukana",
+    "firstRestaurants": "ensimmäisten ravintoloiden",
+    "descriptionEnd": "joukossa, jotka julkaisevat Helmies Bitesin kanssa.",
+    "contactUs": "Ota yhteyttä",
+    "joinTitle": "Liity perheeseemme",
+    "joinDescription": "Ole osa kasvavaa ravintolayhteisöä, joka menestyy Helmies Bitesin avulla"
+  }
+}

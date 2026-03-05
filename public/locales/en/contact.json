@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "subtitle": "We're here to help",
+    "title": "touch",
+    "titleHighlight": "Get in",
+    "description": "Have questions about Helmies Bites? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+  },
+  "form": {
+    "title": "Send us a message",
+    "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+    "name": {
+      "label": "Your Name *",
+      "placeholder": "Enter your name"
+    },
+    "email": {
+      "label": "Email Address *",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "Subject *",
+      "placeholder": "Select a subject",
+      "general": "General Inquiry",
+      "sales": "Sales Question",
+      "support": "Technical Support",
+      "partnership": "Partnership Opportunity",
+      "feedback": "Feedback",
+      "other": "Other"
+    },
+    "message": {
+      "label": "Your Message *",
+      "placeholder": "How can we help you today?"
+    },
+    "submit": "Send Message",
+    "submitting": "Sending message...",
+    "success": {
+      "title": "Message sent successfully!",
+      "description": "Thank you! We've received your message and will respond soon."
+    }
+  },
+  "contactInfo": {
+    "title": "Contact",
+    "titleSuffix": "Information",
+    "emailUs": {
+      "title": "Email Us",
+      "value": "support@helmiesbites.fi",
+      "description": "We respond within 24 hours"
+    },
+    "callUs": {
+      "title": "Call Us",
+      "value": "+358 20 123 4567",
+      "description": "Mon-Fri, 9am-6pm EET"
+    },
+    "visitUs": {
+      "title": "Visit Us",
+      "value": "Helsinki, Finland",
+      "description": "Punavuori district"
+    }
+  },
+  "supportHours": {
+    "title": "Support Hours",
+    "mondayFriday": {
+      "day": "Monday - Friday",
+      "hours": "9:00 AM - 6:00 PM EET"
+    },
+    "saturday": {
+      "day": "Saturday",
+      "hours": "10:00 AM - 4:00 PM EET"
+    },
+    "sunday": {
+      "day": "Sunday",
+      "hours": "Closed"
+    },
+    "averageResponse": "Average response time: within 24 hours"
+  },
+  "liveChat": {
+    "title": "Need instant help?",
+    "description": "Chat with our support team for quick answers to your questions.",
+    "button": "Start Live Chat",
+    "alertMessage": "Live chat coming soon!",
+    "availability": "Available Mon-Fri, 9am-6pm EET"
+  },
+  "map": {
+    "city": "Helsinki, Finland",
+    "district": "Punavuori District",
+    "openInMaps": "Open in Google Maps"
+  },
+  "faqLink": {
+    "subtitle": "Common Questions",
+    "title": "quick answers?",
+    "titleHighlight": "Looking for",
+    "description": "Check out our FAQ page for common questions about Helmies Bites.",
+    "button": "Visit FAQ"
+  },
+  "cta": {
+    "subtitle": "Let's grow together",
+    "title": "started?",
+    "titleHighlight": "Ready to get",
+    "description": "Join hundreds of restaurants already using Helmies Bites to streamline their operations.",
+    "noCardRequired": "No credit card required. Setup takes less than 5 minutes."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Etusivu",
+    "features": "Ominaisuudet",
+    "pricing": "Hinnoittelu",
+    "about": "Meistä",
+    "faq": "UKK",
+    "tryDemo": "Kokeile demoa",
+    "launchingDate": "Julkaisu 5. maaliskuuta",
+    "launchingDateFull": "Julkaisu 5. maaliskuuta"
+  },
+  "footer": {
+    "product": "Tuote",
+    "company": "Yritys",
+    "support": "Tuki",
+    "legal": "Juridiikka",
+    "links": {
+      "features": "Ominaisuudet",
+      "pricing": "Hinnoittelu",
+      "examples": "Esimerkit",
+      "integrations": "Integraatiot",
+      "aboutUs": "Meistä",
+      "blog": "Blogi",
+      "careers": "Ura",
+      "helpCenter": "Tukikeskus",
+      "documentation": "Dokumentaatio",
+      "apiReference": "API-viite",
+      "status": "Tila",
+      "privacyPolicy": "Tietosuojakäytäntö",
+      "termsOfService": "Käyttöehdot",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Evästekäytäntö"
+    },
+    "socialGroup": "Liity sosiaaliseen ryhmäämme",
+    "newsletter": "Tilaa uutiskirjeemme",
+    "emailPlaceholder": "Syötä sähköpostiosoitteesi",
+    "submit": "Lähetä",
+    "copyright": "© 2026 Helmies Bites. Kaikki oikeudet pidätetään. Tehty 💚:lla Suomessa.",
+    "launchingDate": "Julkaisu 5. maaliskuuta"
+  },
+  "countdown": {
+    "days": "Päivät",
+    "hours": "Tunnit",
+    "min": "Min",
+    "sec": "Sek",
+    "launchingIn": "Julkaisuun",
+    "launchingDate": "Julkaisu 5. maaliskuuta",
+    "launchingWith": "Julkaistaan yhdessä"
+  }
+}

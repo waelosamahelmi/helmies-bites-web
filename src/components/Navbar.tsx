@@ -1,8 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import { Menu, X, Rocket, ExternalLink } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../i18n/LanguageSwitcher';
 
 export function Navbar() {
+  const { t } = useTranslation('common');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const location = useLocation();
@@ -19,11 +22,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Features', path: '/features' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'About', path: '/about' },
-    { name: 'FAQ', path: '/faq' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.features'), path: '/features' },
+    { name: t('nav.pricing'), path: '/pricing' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.faq'), path: '/faq' },
   ];
 
   return (
@@ -72,9 +75,10 @@ export function Navbar() {
 
           {/* Desktop Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
+            <LanguageSwitcher />
             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/20">
               <Rocket className="h-4 w-4 text-[#FF7A00]" />
-              <span className="text-sm font-bold text-[#FF7A00]">Launching Mar 5</span>
+              <span className="text-sm font-bold text-[#FF7A00]">{t('nav.launchingDate')}</span>
             </div>
             <a
               href="https://plateos.fi/demo"
@@ -82,7 +86,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 rounded-full bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300 hover:scale-105"
             >
-              Try Demo
+              {t('nav.tryDemo')}
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -117,9 +121,10 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <LanguageSwitcher mobile />
               <div className="mx-6 mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00]/10 border border-[#FF7A00]/20">
                 <Rocket className="h-4 w-4 text-[#FF7A00]" />
-                <span className="text-sm font-bold text-[#FF7A00]">Launching March 5th</span>
+                <span className="text-sm font-bold text-[#FF7A00]">{t('nav.launchingDateFull')}</span>
               </div>
               <a
                 href="https://plateos.fi/demo"
@@ -127,7 +132,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="mx-6 mt-2 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300"
               >
-                Try Demo
+                {t('nav.tryDemo')}
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>

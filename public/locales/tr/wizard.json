@@ -1,0 +1,340 @@
+{
+  "backToHome": "Ana Sayfaya Dön",
+  "header": {
+    "subtitle": "Başlayın",
+    "title": "Restoranınızı Kurun",
+    "description": "Restoran web sitenizi başlatmak için bu adımları tamamlayın"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "Restoran Bilgileri",
+      "description": "Deneyiminizi kişiselleştirebilmemiz için restoranınız hakkında bilgi verin."
+    },
+    "menuUpload": {
+      "title": "Menü",
+      "description": "Menünüzü yükleyin ve yapay zekamızın işi halletmesine izin verin."
+    },
+    "theme": {
+      "title": "Tema",
+      "description": "Güzel bir tema seçin veya yapay zekanın size özel bir tema oluşturmasına izin verin."
+    },
+    "domain": {
+      "title": "Alan Adı",
+      "description": "Web adresinizi ayarlayın ve dakikalar içinde yayına geçin."
+    },
+    "review": {
+      "title": "İnceleme",
+      "description": "Restoran web sitenizi başlatmadan önce her şeyi gözden geçirin."
+    }
+  },
+  "progress": {
+    "stepOf": "Adım {{current}} / {{total}}",
+    "percentage": "{{value}}%"
+  },
+  "buttons": {
+    "previous": "Önceki",
+    "nextStep": "Sonraki Adım",
+    "completeSetup": "Kurulumu Tamamla",
+    "settingUp": "Kuruluyor..."
+  },
+  "errors": {
+    "completeFailed": "Kurulum tamamlanamadı. Lütfen tekrar deneyin."
+  },
+  "help": {
+    "text": "Yardım mı gerekiyor? Destek ekibimizle iletişime geçin:",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "Restoran Adı",
+      "hint": "Müşterilerinizin göreceği ad",
+      "placeholder": "örn. Ravintola Babylon",
+      "required": "Zorunlu"
+    },
+    "aiGenerate": {
+      "generating": "Yapay zeka üretiyor...",
+      "autoFill": "Yapay zeka ile otomatik doldur"
+    },
+    "cuisine": {
+      "label": "Mutfak Türü",
+      "hint": "Ne tür yemekler sunuyorsunuz?",
+      "placeholder": "Mutfak türünü seçin",
+      "options": {
+        "finnish": "Fin",
+        "italian": "İtalyan",
+        "chinese": "Çin",
+        "indian": "Hint",
+        "thai": "Tayland",
+        "japanese": "Japon",
+        "burger": "Burger ve Amerikan",
+        "pizza": "Pizza",
+        "kebab": "Kebap",
+        "mexican": "Meksika",
+        "other": "Diğer"
+      }
+    },
+    "city": {
+      "label": "Şehir",
+      "hint": "Restoranınız nerede?",
+      "placeholder": "örn. Helsinki"
+    },
+    "descriptionFi": {
+      "label": "Açıklama (Fince)",
+      "hint": "Restoranınızı Fin müşterilerinize tanıtın",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "Açıklama (İngilizce)",
+      "hint": "Restoranınızı uluslararası müşterilerinize tanıtın",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "E-posta Adresi",
+      "hint": "Giriş bilgileri ve güncellemeler için",
+      "placeholder": "your@email.com"
+    }
+  },
+  "menuUpload": {
+    "title": "Menünüzü Yükleyin",
+    "description": "Menünüzün PDF'ini veya resmini yükleyin. Yapay zekamız tüm öğeleri, fiyatları çıkaracak ve çeviriler oluşturacaktır.",
+    "dropZone": {
+      "clickToUpload": "Yüklemek için tıklayın veya sürükleyip bırakın",
+      "fileTypes": "PDF, PNG, JPG 10MB'a kadar",
+      "removeFile": "Dosyayı kaldır"
+    },
+    "parsing": {
+      "inProgress": "Menünüz yapay zeka ile işleniyor...",
+      "button": "Menüyü Yapay Zeka ile İşle",
+      "chooseDifferent": "Farklı Dosya Seç"
+    },
+    "success": {
+      "title": "Menü Başarıyla İşlendi!",
+      "itemsFound": "Yapay zekamız {{categories}} kategoride {{items}} öğe buldu",
+      "languages": {
+        "finnish": "Fince",
+        "english": "İngilizce",
+        "swedish": "İsveççe"
+      }
+    },
+    "errors": {
+      "parseFailed": "Menü işlenemedi. Lütfen tekrar deneyin veya farklı bir dosya yükleyin."
+    },
+    "supportedFormats": {
+      "title": "Desteklenen Formatlar",
+      "description": "Bu dosya türlerini kabul ediyoruz"
+    },
+    "tips": {
+      "title": "En İyi Sonuç İçin İpuçları",
+      "tip1": "Net, yüksek çözünürlüklü bir resim veya iyi biçimlendirilmiş PDF yükleyin",
+      "tip2": "Fiyatların her öğenin yanında açıkça görünür olduğundan emin olun",
+      "tip3": "Kategorileri (mezeler, ana yemekler vb.) düzenli tutun",
+      "tip4": "Yapay zekamız otomatik olarak Fince, İngilizce ve İsveççeye çevirecektir"
+    },
+    "manual": {
+      "prompt": "Dijital menünüz yok mu?",
+      "button": "Bunun Yerine Manuel Menü Oluştur"
+    }
+  },
+  "themeSelection": {
+    "title": "Temanızı Seçin",
+    "description": "Markanıza uygun bir tasarım seçin",
+    "allThemes": "Tüm Temalar",
+    "themes": {
+      "modernOrange": {
+        "name": "Modern Turuncu",
+        "description": "Cesur ve enerjik"
+      },
+      "elegantDark": {
+        "name": "Zarif Koyu",
+        "description": "Sofistike ve rafine"
+      },
+      "freshGreen": {
+        "name": "Taze Yeşil",
+        "description": "Doğal ve sağlıklı"
+      },
+      "oceanBlue": {
+        "name": "Okyanus Mavisi",
+        "description": "Sakin ve profesyonel"
+      },
+      "berryBlend": {
+        "name": "Meyve Karışımı",
+        "description": "Eğlenceli ve canlı"
+      },
+      "rusticWarm": {
+        "name": "Rustik Sıcak",
+        "description": "Rahat ve davetkar"
+      },
+      "royalPurple": {
+        "name": "Kraliyet Moru",
+        "description": "Lüks ve cesur"
+      },
+      "sunsetCoral": {
+        "name": "Gün Batımı Mercan",
+        "description": "Sıcak ve karşılayıcı"
+      }
+    },
+    "aiTheme": {
+      "title": "Benzersiz Yapay Zeka Teması Oluşturun",
+      "description": "Yapay zekamızın restoranınızın kişiliğine ve mutfağına göre eşsiz bir tema tasarlamasına izin verin",
+      "generating": "Yapay zeka teması oluşturuluyor...",
+      "button": "Benzersiz Tema Oluştur (€5)",
+      "selected": "Yapay zeka teması seçildi"
+    },
+    "customizeLater": {
+      "title": "Daha Sonra Özelleştir",
+      "description": "Emin değil misiniz? Kurulumdan sonra yönetim panelinizden renkleri, yazı tiplerini ve düzenleri her zaman değiştirebilirsiniz. Temalarımız tamamen özelleştirilebilir!"
+    }
+  },
+  "domainSetup": {
+    "title": "Alan Adı Türünüzü Seçin",
+    "description": "Restoranınıza nasıl erişileceğini seçin",
+    "options": {
+      "subdomain": {
+        "title": "Ücretsiz Alt Alan Adı",
+        "description": "restaurant.helmiesbites.fi",
+        "fullDescription": "Platformumuzda ücretsiz bir alt alan adı edinin",
+        "badge": "ÜCRETSİZ"
+      },
+      "custom": {
+        "title": "Özel Alan Adı",
+        "description": "your-restaurant.fi",
+        "fullDescription": "Kendi alan adınızı kullanın",
+        "badge": "PREMİUM"
+      },
+      "path": {
+        "title": "Ücretsiz Yol",
+        "description": "helmiesbites.fi/restaurant",
+        "fullDescription": "Platformumuzda ücretsiz bir yol edinin",
+        "badge": "ÜCRETSİZ"
+      }
+    },
+    "subdomain": {
+      "label": "Alt Alan Adınız",
+      "hint": "Restoranınız için benzersiz bir ad seçin",
+      "placeholder": "restaurant-name",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "Web siteniz şu adreste yayında olacak"
+    },
+    "customDomain": {
+      "label": "Özel Alan Adınız",
+      "hint": "Zaten sahip olduğunuz bir alan adını kullanın",
+      "placeholder": "your-restaurant.fi",
+      "premium": "Premium",
+      "dnsNote": "<strong>Kurulumdan sonra:</strong> DNS ayarlarınızı sunucularımıza yönlendirmek için güncellemeniz gerekecektir. Size ayrıntılı talimatları e-posta ile göndereceğiz."
+    },
+    "path": {
+      "label": "Yolunuz",
+      "hint": "Restoranınız için benzersiz bir yol seçin",
+      "placeholder": "restaurant-name",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "Web siteniz şu adreste yayında olacak"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "Anında Aktivasyon",
+        "description": "Ücretsiz alan adları kurulumdan hemen sonra kullanılabilir. Bekleme gerekmez!"
+      },
+      "upgradeAnytime": {
+        "title": "İstediğiniz Zaman Yükseltin",
+        "description": "Yönetim panelinizden daha sonra özel alan adı ekleyebilirsiniz."
+      }
+    },
+    "availability": {
+      "available": "Uygun!",
+      "readyForYou": "Bu adres sizin için hazır."
+    }
+  },
+  "review": {
+    "title": "Restoranınızı İnceleyin",
+    "sections": {
+      "restaurantInfo": {
+        "title": "Restoran Bilgileri",
+        "name": "Ad",
+        "cuisine": "Mutfak",
+        "city": "Şehir"
+      },
+      "website": {
+        "title": "Web Sitesi",
+        "domain": "Alan Adı",
+        "theme": "Tema",
+        "selectedTheme": "Seçilen tema"
+      },
+      "menu": {
+        "title": "Menü",
+        "items": "Öğeler",
+        "categories": "Kategoriler",
+        "languages": "Diller",
+        "menuItems": "{{count}} menü öğesi",
+        "menuCategories": "{{count}} kategori",
+        "languageList": "Fince, İngilizce, İsveççe"
+      },
+      "contact": {
+        "title": "İletişim",
+        "email": "E-posta"
+      }
+    },
+    "notSet": "Belirtilmedi",
+    "pricing": {
+      "title": "Fiyat Özeti",
+      "basePlatformFee": {
+        "label": "Temel Platform Ücreti",
+        "value": "Online sipariş başına %5",
+        "description": "Sadece sipariş aldığınızda ödeyin"
+      },
+      "cashOnDelivery": {
+        "label": "Kapıda Ödeme",
+        "value": "€30/ay",
+        "description": "Teslimat sırasında nakit ödeme kabul edin"
+      },
+      "aiAssistant": {
+        "label": "Yapay Zeka Asistanı",
+        "value": "€10/ay",
+        "description": "Akıllı müşteri destek yapay zekası"
+      },
+      "aiImages": {
+        "label": "Yapay Zeka Menü Görselleri",
+        "value": "€20",
+        "description": "Yapay zeka tarafından oluşturulan yemek görselleri için tek seferlik ücret"
+      },
+      "aiBranding": {
+        "label": "Yapay Zeka Markalaşma",
+        "value": "€5",
+        "description": "Yapay zeka tarafından oluşturulan logo için tek seferlik ücret"
+      },
+      "oneTime": "Tek seferlik",
+      "monthlyTotal": "Aylık Toplam",
+      "perMonth": "/ay",
+      "oneTimeCharges": "Tek seferlik ücretler",
+      "noHiddenFees": "Gizli ücret yok. 3 aylık iptal bildirim süresi."
+    },
+    "readyToLaunch": {
+      "title": "Her Şey Hazır!",
+      "description": "Restoran web sitenizi başlatmak için \"Kurulumu Tamamla\"ya tıklayın. Giriş bilgileriniz e-posta adresinize gönderilecektir.",
+      "instantActivation": "Anında aktivasyon",
+      "freeSSL": "Ücretsiz SSL sertifikası",
+      "mobileResponsive": "Mobil uyumlu"
+    },
+    "payment": {
+      "title": "Ödeme Bilgileri",
+      "description": "Ödeme detaylarınızı kurulumdan sonra ekleyebilirsiniz. Kredi kartı, otomatik ödeme ve fatura dahil çeşitli ödeme yöntemleri sunuyoruz.",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "Fatura"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "Fin",
+      "italian": "İtalyan",
+      "chinese": "Çin",
+      "indian": "Hint",
+      "thai": "Tayland",
+      "japanese": "Japon",
+      "burger": "Burger ve Amerikan",
+      "pizza": "Pizza",
+      "kebab": "Kebap",
+      "mexican": "Meksika"
+    }
+  }
+}

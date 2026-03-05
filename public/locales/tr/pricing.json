@@ -1,0 +1,253 @@
+{
+  "hero": {
+    "subtitle": "Fiyat Planları",
+    "titleHighlight": "Basit ve Esnek",
+    "title": "Fiyatlandırma",
+    "description": "Ücretsiz başlayın. Büyüdükçe yükseltin. Her plan bir sonrakine taşır — çıkmaz sokak yok."
+  },
+  "tiers": {
+    "starter": {
+      "name": "Başlangıç",
+      "tagline": "Kullandıkça öde",
+      "priceDisplay": "5%",
+      "priceSubtext": "online sipariş başına",
+      "setupFee": "€0 kurulum",
+      "highlights": [
+        "Minimum aylık ücret €49",
+        "Online sipariş başına %5",
+        "Taahhüt yok"
+      ],
+      "bestFor": "Küçük kafeler, deneme aşaması",
+      "features": {
+        "included": [
+          "Tam web sitesi oluşturucu",
+          "Online sipariş sistemi",
+          "Yapay zeka menü içe aktarımı",
+          "Stripe ödeme entegrasyonu",
+          "Mobil uyumlu tasarım",
+          "Çoklu dil desteği",
+          "Ücretsiz alt alan adı",
+          "E-posta desteği",
+          "Minimum aylık ücret €49"
+        ],
+        "excluded": [
+          "Çevrimdışı ödeme desteği",
+          "Özel marka ve alan adı",
+          "Yapay Zeka Asistanı",
+          "Gelişmiş analitik",
+          "Öncelikli destek"
+        ]
+      },
+      "ctaText": "Ücretsiz Başla",
+      "pricingTag": "Ücretsiz Plan"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Aylık abonelik",
+      "priceSubtext": "/ay",
+      "setupFee": "€500 tek seferlik kurulum",
+      "highlights": [
+        "Tüm özellikler açık",
+        "Çevrimdışı ödemeler dahil",
+        "€500 tek seferlik kurulum"
+      ],
+      "bestFor": "Taahhüt vermeye hazır köklü restoranlar",
+      "features": {
+        "included": [
+          "Başlangıç'taki her şey",
+          "İşlem ücreti yok",
+          "Çevrimdışı ödeme desteği (nakit, kart terminali)",
+          "Müşteriler için Yapay Zeka Asistanı",
+          "Gelişmiş analitik ve raporlar",
+          "Özel marka ve alan adı",
+          "Öncelikli destek",
+          "Sosyal medya entegrasyonu",
+          "Teslimat bölgesi yönetimi"
+        ],
+        "excluded": [
+          "White-label çözüm",
+          "API erişimi",
+          "Özel hesap yöneticisi"
+        ]
+      },
+      "ctaText": "Başlayın",
+      "pricingTag": "Premium Plan",
+      "toggle": {
+        "monthly": "Aylık",
+        "yearly": "Yıllık",
+        "yearlyDiscount": "%10 indirim",
+        "monthlyLabel": "/ay",
+        "yearlyLabel": "/yıl"
+      }
+    },
+    "annual": {
+      "name": "Yıllık",
+      "tagline": "En iyi değer",
+      "priceDisplay": "€99",
+      "priceSubtext": "/ay yıllık faturalandırma",
+      "setupFee": "€0 kurulum",
+      "highlights": [
+        "İlk yıl €1.190",
+        "Yenileme: €1.390/yıl",
+        "3 yıl: €2.990 (€83/ay)"
+      ],
+      "bestFor": "Maksimum tasarruf isteyen restoranlar",
+      "features": {
+        "included": [
+          "Pro'daki her şey",
+          "İşlem ücreti yok",
+          "Tüm özellikler açık",
+          "€0 kurulum (€500 tasarruf)",
+          "En düşük efektif aylık maliyet",
+          "Özel hesap yöneticisi",
+          "Özel entegrasyonlar",
+          "Çoklu şube desteği",
+          "SLA garantisi"
+        ]
+      },
+      "ctaText": "Tasarrufu Kilitle",
+      "pricingTag": "Yıllık Plan",
+      "bestValueBadge": "En İyi Değer",
+      "bestForLabel": "En uygun"
+    }
+  },
+  "trust": {
+    "subtitle": "Güven",
+    "titleHighlight": "Restoranlar neden",
+    "title": "bizi seçiyor",
+    "description": "Risksiz garantilerle başarınıza kararlıyız",
+    "badges": {
+      "moneyBack": {
+        "title": "Para İade Garantisi",
+        "description": "Tamamen memnun kalmazsanız 30 gün içinde tam iade"
+      },
+      "noSetupFees": {
+        "title": "Kurulum Ücreti Yok",
+        "description": "Restoran web sitenizi dakikalar içinde, tamamen ücretsiz başlatın"
+      },
+      "threeMonthNotice": {
+        "title": "3 Ay Bildirim Süresi",
+        "description": "3 aylık bildirim süresiyle iptal edin"
+      }
+    }
+  },
+  "comparison": {
+    "subtitle": "Yan yana karşılaştırma",
+    "titleHighlight": "Tüm Özellikleri",
+    "title": "Karşılaştır",
+    "description": "Doğru seçimi yapmak için her plana nelerin dahil olduğunu görün",
+    "tableHeader": "Özellik",
+    "starterHeader": "Başlangıç",
+    "proHeader": "Pro",
+    "annualHeader": "Yıllık",
+    "categories": {
+      "pricing": "Fiyatlandırma",
+      "coreFeatures": "Temel Özellikler",
+      "payments": "Ödemeler",
+      "aiAutomation": "Yapay Zeka ve Otomasyon",
+      "brandingCustomization": "Marka ve Kişiselleştirme",
+      "analyticsSupport": "Analitik ve Destek",
+      "technical": "Teknik"
+    },
+    "features": {
+      "monthlyCost": "Aylık maliyet",
+      "setupFee": "Kurulum ücreti",
+      "transactionFees": "İşlem ücretleri",
+      "commitment": "Taahhüt",
+      "websiteBuilder": "Web sitesi oluşturucu",
+      "onlineOrdering": "Online sipariş",
+      "aiMenuImport": "Yapay zeka menü içe aktarımı",
+      "mobileOptimized": "Mobil uyumlu",
+      "multiLanguage": "Çoklu dil",
+      "stripeIntegration": "Stripe entegrasyonu",
+      "offlinePayments": "Çevrimdışı ödemeler (nakit, terminal)",
+      "customPaymentGateway": "Özel ödeme geçidi",
+      "aiMenuImportAi": "Yapay zeka menü içe aktarımı",
+      "aiAssistant": "Yapay Zeka Asistanı",
+      "aiTranslations": "Yapay zeka çevirileri",
+      "freeSubdomain": "Ücretsiz alt alan adı",
+      "customDomain": "Özel alan adı",
+      "customBranding": "Özel marka",
+      "whiteLabelSolution": "White-label çözüm",
+      "basicAnalytics": "Temel analitik",
+      "advancedReports": "Gelişmiş raporlar",
+      "emailSupport": "E-posta desteği",
+      "prioritySupport": "Öncelikli destek",
+      "dedicatedAccountManager": "Özel hesap yöneticisi",
+      "slaGuarantee": "SLA garantisi",
+      "apiAccess": "API erişimi",
+      "customIntegrations": "Özel entegrasyonlar",
+      "multiBranchSupport": "Çoklu şube desteği"
+    },
+    "values": {
+      "starter": {
+        "monthlyCost": "%5 + min €49",
+        "setupFee": "€0",
+        "transactionFees": "%5",
+        "commitment": "Yok"
+      },
+      "pro": {
+        "monthlyCost": "€129/ay",
+        "setupFee": "€500",
+        "transactionFees": "%0",
+        "commitment": "Aylık"
+      },
+      "annual": {
+        "monthlyCost": "€99/ay",
+        "setupFee": "€0",
+        "transactionFees": "%0",
+        "commitment": "1 veya 3 yıl"
+      }
+    }
+  },
+  "faq": {
+    "subtitle": "Sorularınız mı var?",
+    "titleHighlight": "Sıkça Sorulan",
+    "title": "Sorular",
+    "description": "Fiyatlarımız ve planlarımız hakkında bilmeniz gereken her şey",
+    "starterPayAsYouGo": {
+      "question": "Başlangıç kullandıkça öde modeli nasıl çalışır?",
+      "answer": "Başlangıç planında, platformumuz aracılığıyla işlenen online siparişlerinizin %5'ini ödersiniz — aylık abonelik yok. Platform maliyetlerini karşılamak için minimum aylık ücret €49'dur. Örneğin, €2.000 online sipariş işlerseniz, €100 (%5) ödersiniz. %5'iniz €49'un altında kalırsa, yine de minimum €49 ödersiniz."
+    },
+    "proSetupFee": {
+      "question": "€500 Pro kurulum ücreti neleri kapsar?",
+      "answer": "Tek seferlik €500 kurulum ücreti tam kurulumu kapsar: web sitenizi yapılandırırız, menünüzü yapay zeka ile içe aktarırız, özel alan adınızı kurarız, çevrimdışı ödeme terminallerini yapılandırırız ve özel eğitim oturumu düzenleriz. Yıllık planda kurulum tamamen ücretsizdir (€0)."
+    },
+    "switchPlans": {
+      "question": "Planlar arasında geçiş yapabilir miyim?",
+      "answer": "Kesinlikle! Doğal yükseltme yolu: Başlangıç → Pro → Yıllık. İstediğiniz zaman yükseltme yapabilirsiniz. Başlangıç'tan Pro'ya geçerken €500 kurulum ücretini ödersiniz ve aylık faturalandırma başlar. Yıllık'a geçerken kurulum ücreti kaldırılır ve kalan Pro aboneliği orantılı olarak hesaplanır."
+    },
+    "annualPricing": {
+      "question": "Yıllık plan fiyatlandırması nasıl çalışır?",
+      "answer": "İlk yıl: €1.190 (efektif olarak aylık €99). Yenileme: €1.390/yıl. Ayrıca toplam €2.990'a 3 yıllık taahhüt sunuyoruz (sadece aylık €83). Tüm yıllık planlar €0 kurulum ve ilk günden tüm özellikleri içerir."
+    },
+    "paymentMethods": {
+      "question": "Hangi ödeme yöntemlerini kabul ediyorsunuz?",
+      "answer": "Tüm büyük kredi kartlarını (Visa, Mastercard, American Express), banka havalelerini ve PayPal'ı kabul ediyoruz. Yıllık ve 3 yıllık planlar fatura ile de ödenebilir."
+    },
+    "offlinePaymentsStarter": {
+      "question": "Başlangıç planında çevrimdışı ödemeler ne olacak?",
+      "answer": "Başlangıç planı yalnızca Stripe üzerinden online ödemeleri destekler. Nakit, kart terminali ödemeleri veya diğer çevrimdışı yöntemleri kabul etmeniz gerekiyorsa, Pro veya Yıllık plana ihtiyacınız olacaktır."
+    },
+    "contractCommitment": {
+      "question": "Sözleşme veya taahhüt var mı?",
+      "answer": "Tüm planlar 3 aylık iptal bildirim süresi gerektirir. Yıllık: En iyi fiyatlarla 1 yıllık veya 3 yıllık taahhüt."
+    },
+    "refundPolicy": {
+      "question": "İade politikanız nedir?",
+      "answer": "Pro ve Yıllık planlarda 30 günlük para iade garantisi sunuyoruz. İlk 30 gün içinde memnun kalmazsanız, tam iade için bizimle iletişime geçin — soru sorulmaz."
+    }
+  },
+  "cta": {
+    "subtitle": "Başlayın",
+    "titleHighlight": "Restoranınızı büyütmeye",
+    "title": "hazır mısınız?",
+    "description": "Helmies Bites kullanan yüzlerce restorana katılın. Ücretsiz başlayın, kredi kartı gerekmez.",
+    "seeAllFeatures": "Tüm Özellikleri Gör",
+    "trustIndicators": {
+      "guarantee": "30 gün garanti",
+      "noCreditCard": "Kredi kartı gerekmez",
+      "support": "7/24 destek"
+    }
+  }
+}

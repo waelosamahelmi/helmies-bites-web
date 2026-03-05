@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "faq": "FAQ",
+    "tryDemo": "Try Demo",
+    "launchingDate": "Launching Mar 5",
+    "launchingDateFull": "Launching March 5th"
+  },
+  "footer": {
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "examples": "Examples",
+      "integrations": "Integrations",
+      "aboutUs": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "helpCenter": "Help Center",
+      "documentation": "Documentation",
+      "apiReference": "API Reference",
+      "status": "Status",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "socialGroup": "Join our social group",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Enter your email",
+    "submit": "Submit",
+    "copyright": "© 2026 Helmies Bites. All rights reserved. Made with 💚 in Finland.",
+    "launchingDate": "Launching March 5th"
+  },
+  "countdown": {
+    "days": "Days",
+    "hours": "Hours",
+    "min": "Min",
+    "sec": "Sec",
+    "launchingIn": "Launching in",
+    "launchingDate": "Launching March 5th",
+    "launchingWith": "Launching with"
+  }
+}

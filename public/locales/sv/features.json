@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "badge": "Allt du behöver för att lyckas",
+    "title": "Kraftfulla funktioner för varje restaurang",
+    "description": "Från AI-driven installation till leveranshantering, allt du behöver för att driva en framgångsrik restaurangverksamhet i <strong>en vacker plattform</strong>.",
+    "exploreFeatures": "Utforska funktioner",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "label": "Installationstid"
+      },
+      "commission": {
+        "value": "0 %",
+        "label": "Provision"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Support"
+      },
+      "integrations": {
+        "value": "50+",
+        "label": "Integrationer"
+      }
+    },
+    "floatingIcons": {
+      "onlineOrdering": {
+        "title": "Onlinebeställning",
+        "subtitle": "Smart varukorg och kassa"
+      },
+      "menuManagement": {
+        "title": "Menyhantering",
+        "subtitle": "AI-driven installation"
+      },
+      "payments": {
+        "title": "Betalningar",
+        "subtitle": "Stripe och mobilplånböcker"
+      },
+      "analytics": {
+        "title": "Analys",
+        "subtitle": "Datadrivna insikter"
+      },
+      "delivery": {
+        "title": "Leverans",
+        "subtitle": "Zoner och spårning"
+      },
+      "mobileReady": {
+        "title": "Mobilredo",
+        "subtitle": "PWA och responsiv"
+      }
+    }
+  },
+  "categories": {
+    "sectionSubtitle": "Omfattande plattform",
+    "sectionTitle": "Komplett restaurangplattform",
+    "sectionDescription": "Utforska vår omfattande svit av funktioner designade för att hjälpa dig växa din restaurangverksamhet.",
+    "onlineOrdering": {
+      "title": "Onlinebeställning",
+      "description": "Effektivisera din beställningsprocess med en sömlös kundupplevelse",
+      "features": {
+        "smartShoppingCart": {
+          "title": "Smart varukorg",
+          "description": "Intuitiv varukorg med realtidsuppdateringar, kvantitetskontroller och stöd för specialönskemål.",
+          "benefit": "Minska övergivna varukorgar med upp till 35 %"
+        },
+        "oneClickCheckout": {
+          "title": "Ett-klicks-kassa",
+          "description": "Spara kunduppgifter för blixtsnabba upprepade beställningar med Stripe-integration.",
+          "benefit": "Kunder slutför beställningar 3x snabbare"
+        },
+        "realTimeOrderTracking": {
+          "title": "Realtidsspårning av beställningar",
+          "description": "Realtidsuppdateringar av beställningsstatus från tillagning till leverans eller hämtning.",
+          "benefit": "Minska \"Var är min beställning?\"-samtal med 80 %"
+        },
+        "scheduledOrdering": {
+          "title": "Schemalagda beställningar",
+          "description": "Låt kunder beställa timmar eller dagar i förväg för hämtning eller leverans.",
+          "benefit": "Fånga beställningar under lugnare tider"
+        },
+        "orderNotifications": {
+          "title": "Beställningsaviseringar",
+          "description": "Omedelbara SMS- och e-postaviseringar för nya beställningar, uppdateringar och bekräftelser.",
+          "benefit": "Missa aldrig en beställning igen"
+        }
+      }
+    },
+    "menuManagement": {
+      "title": "Menyhantering",
+      "description": "Skapa och hantera vackra, engagerande menyer med AI-assistans",
+      "features": {
+        "aiPoweredMenuSetup": {
+          "title": "AI-driven menyinstallation",
+          "description": "Ladda upp foton och beskrivningar. Vår AI organiserar allt i kategorier, föreslår priser och skapar tillägg.",
+          "benefit": "Gå från noll till live-meny på under 5 minuter"
+        },
+        "customModifiersOptions": {
+          "title": "Anpassade tillägg och alternativ",
+          "description": "Lägg till toppings, storlekar, tillagningspreferenser och specialönskemål enkelt.",
+          "benefit": "Öka genomsnittligt ordervärde med 20 %"
+        },
+        "photoGalleries": {
+          "title": "Fotogallerier",
+          "description": "Ladda upp flera högkvalitativa foton för att visa upp dina rätter på bästa sätt.",
+          "benefit": "Foton ökar beställningar med 30 %"
+        },
+        "multiLanguageMenus": {
+          "title": "Flerspråkiga menyer",
+          "description": "AI översätter din meny till finska, engelska, svenska och fler språk automatiskt.",
+          "benefit": "Nå en bredare kundbas"
+        },
+        "qrCodeMenus": {
+          "title": "QR-kodmenyer",
+          "description": "Generera utskrivbara QR-koder för bordbeställning och kontaktlösa menyer.",
+          "benefit": "Minska kostnader för fysiska menyer"
+        }
+      }
+    },
+    "paymentProcessing": {
+      "title": "Betalningshantering",
+      "description": "Ta emot betalningar säkert och få betalt direkt",
+      "features": {
+        "stripeIntegration": {
+          "title": "Stripe-integration",
+          "description": "Acceptera alla vanliga kreditkort, mobilplånböcker och lokala betalningsmetoder via Stripe.",
+          "benefit": "Branschledande säkerhet och tillförlitlighet"
+        },
+        "instantPayouts": {
+          "title": "Omedelbara utbetalningar",
+          "description": "Konfigurera dagliga automatiska utbetalningar till ditt bankkonto. Ingen väntan på veckor.",
+          "benefit": "Förbättra kassaflödet omedelbart"
+        },
+        "mobilePayments": {
+          "title": "Mobilbetalningar",
+          "description": "Acceptera Apple Pay, Google Pay och andra mobilplånböcker för sömlös utcheckning.",
+          "benefit": "Mobilanvändare konverterar 2x mer"
+        },
+        "digitalReceipts": {
+          "title": "Digitala kvitton",
+          "description": "Automatiska e-postkvitton med beställningsdetaljer och enkla ombeställningslänkar.",
+          "benefit": "Uppmuntra upprepade köp"
+        }
+      }
+    },
+    "deliveryManagement": {
+      "title": "Leveranshantering",
+      "description": "Ta kontroll över dina leveransoperationer eller integrera med partners",
+      "features": {
+        "deliveryZones": {
+          "title": "Leveranszoner",
+          "description": "Definiera anpassade leveransområden med radiebaserade eller polygonzoner och unika avgifter.",
+          "benefit": "Optimera leveranskostnader och täckning"
+        },
+        "dynamicFeeCalculation": {
+          "title": "Dynamisk avgiftsberäkning",
+          "description": "Ställ in avgifter baserat på avstånd, orderstorlek eller tid på dygnet med automatiska justeringar.",
+          "benefit": "Skydda marginaler på små beställningar"
+        },
+        "driverApp": {
+          "title": "Förarapp",
+          "description": "Dedikerad mobilapp för leveransförare med ruttoptimering och statusuppdateringar.",
+          "benefit": "Full kontroll över leveransupplevelsen"
+        },
+        "driverManagement": {
+          "title": "Förarhantering",
+          "description": "Tilldela beställningar till förare, spåra leveranser och optimera rutter.",
+          "benefit": "Full kontroll över leveransupplevelsen"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Analys och rapporter",
+      "description": "Datadrivna insikter för att växa din verksamhet",
+      "features": {
+        "salesAnalytics": {
+          "title": "Försäljningsanalys",
+          "description": "Spåra intäkter, genomsnittligt ordervärde och tillväxt över tid med vackra visualiseringar.",
+          "benefit": "Fatta datadrivna affärsbeslut"
+        },
+        "popularItemsReport": {
+          "title": "Rapport över populära rätter",
+          "description": "Upptäck dina bästsäljare och underpresterande rätter för att optimera din meny.",
+          "benefit": "Fokusera på det som driver vinst"
+        },
+        "customerInsights": {
+          "title": "Kundinsikter",
+          "description": "Förstå kundbeteende, beställningsfrekvens och livstidsvärde.",
+          "benefit": "Identifiera och behåll VIP-kunder"
+        },
+        "peakHourAnalysis": {
+          "title": "Analys av rusningstider",
+          "description": "Identifiera dina mest intensiva tider för att optimera bemanning och förberedelser.",
+          "benefit": "Minska väntetider och förbättra service"
+        }
+      }
+    },
+    "marketing": {
+      "title": "Marknadsföringsverktyg",
+      "description": "Attrahera nya kunder och få dem att komma tillbaka",
+      "features": {
+        "promotionsDiscounts": {
+          "title": "Kampanjer och rabatter",
+          "description": "Skapa kupongkoder, procentrabatter och köp en, få en-erbjudanden enkelt.",
+          "benefit": "Driv försäljning under lugna perioder"
+        },
+        "loyaltyPrograms": {
+          "title": "Lojalitetsprogram",
+          "description": "Belöna återkommande kunder med poäng, gratisartiklar och exklusiva förmåner.",
+          "benefit": "Öka kundretention med 40 %"
+        },
+        "emailCampaigns": {
+          "title": "E-postkampanjer",
+          "description": "Skicka riktade e-postkampanjer för att annonsera erbjudanden, evenemang och kampanjer.",
+          "benefit": "Nå kunder direkt i deras inkorg"
+        },
+        "socialSharing": {
+          "title": "Social delning",
+          "description": "Enkel delning till Facebook, Instagram och andra sociala plattformar.",
+          "benefit": "Förstärk din räckvidd organiskt"
+        }
+      }
+    },
+    "multiLocation": {
+      "title": "Stöd för flera platser",
+      "description": "Hantera flera restauranger från en enda instrumentpanel",
+      "features": {
+        "centralizedManagement": {
+          "title": "Centraliserad hantering",
+          "description": "Hantera menyer, priser och inställningar på alla platser från en adminpanel.",
+          "benefit": "Spara timmar av administrativt arbete"
+        },
+        "locationSpecificOptions": {
+          "title": "Platsspecifika alternativ",
+          "description": "Anpassa menyer, prissättning och leveranszoner för varje plats oberoende.",
+          "benefit": "Anpassa till lokala marknadsförhållanden"
+        },
+        "aggregatedReporting": {
+          "title": "Aggregerad rapportering",
+          "description": "Visa enskild platsprestation eller konsoliderade rapporter för alla platser.",
+          "benefit": "Se helhetsbilden och detaljerna"
+        },
+        "roleBasedAccess": {
+          "title": "Rollbaserad åtkomst",
+          "description": "Ge platschefer åtkomst enbart till sin specifika restaurangdata.",
+          "benefit": "Upprätthåll säkerhet och kontroll"
+        }
+      }
+    },
+    "mobileFriendly": {
+      "title": "Mobilvänlig",
+      "description": "Perfekt upplevelse på alla enheter, överallt",
+      "features": {
+        "responsiveDesign": {
+          "title": "Responsiv design",
+          "description": "Din webbplats ser fantastisk ut på telefoner, surfplattor och datorer automatiskt.",
+          "benefit": "70 % av kunderna beställer via mobilen"
+        },
+        "pwaSupport": {
+          "title": "PWA-stöd",
+          "description": "Progressive Web App-teknologi låter kunder installera din webbplats som en inbyggd app.",
+          "benefit": "Öka engagemang och upprepade beställningar"
+        },
+        "offlineCapability": {
+          "title": "Offline-kapacitet",
+          "description": "Menybläddring fungerar även med dålig eller ingen internetanslutning.",
+          "benefit": "Förlora aldrig en kund på grund av anslutningsproblem"
+        },
+        "lightningFast": {
+          "title": "Blixtsnabb",
+          "description": "Optimerad prestanda laddar sidor direkt även på äldre enheter.",
+          "benefit": "Snabbare webbplatser konverterar fler kunder"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "sectionSubtitle": "Se skillnaden",
+    "sectionTitle": "Varför Helmies vs traditionellt?",
+    "sectionDescription": "Se hur vi jämförs med traditionella leveransplattformar och beställningssystem.",
+    "withoutHelmies": "Utan Helmies",
+    "withHelmies": "Med Helmies",
+    "viewPricing": "Visa prisplaner",
+    "items": {
+      "setupTime": {
+        "feature": "Installationstid",
+        "helmies": "5 minuter med AI",
+        "traditional": "Dagar till veckor"
+      },
+      "monthlyCost": {
+        "feature": "Månadskostnad",
+        "helmies": "Från 29/månad",
+        "traditional": "99-299/månad"
+      },
+      "commissionOnOrders": {
+        "feature": "Provision på beställningar",
+        "helmies": "0 %",
+        "traditional": "15-30 %"
+      },
+      "paymentProcessing": {
+        "feature": "Betalningshantering",
+        "helmies": "Direkt Stripe - pengarna på ditt konto",
+        "traditional": "Hålls av plattformen, utbetalas veckovis/månadsvis"
+      },
+      "menuManagement": {
+        "feature": "Menyhantering",
+        "helmies": "AI-driven, omedelbara uppdateringar",
+        "traditional": "Manuell inmatning, långsamma ändringar"
+      },
+      "customBranding": {
+        "feature": "Egen varumärkesanpassning",
+        "helmies": "Full anpassning med AI",
+        "traditional": "Begränsade mallar eller dyrt skräddarsytt"
+      },
+      "customerData": {
+        "feature": "Kunddata",
+        "helmies": "100 % din - full export",
+        "traditional": "Ägs av plattformen"
+      },
+      "multiLanguage": {
+        "feature": "Flerspråkighet",
+        "helmies": "Automatisk översättning med AI",
+        "traditional": "Manuell översättning krävs"
+      },
+      "deliveryFees": {
+        "feature": "Leveransavgifter",
+        "helmies": "Du behåller allt",
+        "traditional": "Plattformen tar en andel"
+      },
+      "support": {
+        "feature": "Support",
+        "helmies": "24/7 finsk support",
+        "traditional": "Ofta outsourcad, långsam respons"
+      }
+    }
+  },
+  "integrations": {
+    "sectionSubtitle": "Anslut allt",
+    "sectionTitle": "Sömlösa integrationer",
+    "sectionDescription": "Anslut till verktyg du redan använder. Från betalningsleverantörer till marknadsföringsplattformar, vi har dig täckt.",
+    "categories": {
+      "payments": "Betalningar",
+      "marketing": "Marknadsföring",
+      "accounting": "Bokföring",
+      "social": "Socialt",
+      "analytics": "Analys"
+    }
+  },
+  "cta": {
+    "sectionSubtitle": "Redo att växa?",
+    "sectionTitle": "Förvandla din restaurang",
+    "sectionDescription": "Gå med bland hundratals restauranger som redan använder Helmies för att växa sin verksamhet. Inget kreditkort krävs. Installation på 5 minuter.",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "description": "Genomsnittlig installationstid med AI-driven guide"
+      },
+      "commission": {
+        "value": "0 %",
+        "description": "Provision på varje beställning du tar emot"
+      },
+      "restaurants": {
+        "value": "500+",
+        "description": "Restauranger som redan växer med oss"
+      },
+      "support": {
+        "value": "24/7",
+        "description": "Finsk support när du behöver hjälp"
+      }
+    }
+  }
+}

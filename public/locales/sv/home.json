@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Lansera på 5 minuter med AI-magi",
+    "title": "Din restaurangwebbplats, klar på minuter",
+    "description": "AI-driven installation, vackra teman, onlinebeställning — lanseras snart för restauranger i hela Finland.",
+    "cta": "Utforska funktioner"
+  },
+  "stats": {
+    "subtitle": "Betrodd av restauranger i hela Finland",
+    "title": "Gå med bland 500+ restauranger",
+    "description": "Redan växande med Helmies Bites",
+    "restaurants": "Restauranger",
+    "ordersProcessed": "Bearbetade beställningar",
+    "satisfactionRate": "Nöjdhetsgrad",
+    "averageSetup": "Genomsnittlig installation"
+  },
+  "features": {
+    "subtitle": "Kraftfulla funktioner",
+    "title": "Allt du behöver",
+    "description": "Alla verktyg för att driva din restaurang online, på ett och samma ställe",
+    "aiMenuImport": {
+      "title": "AI-menyimport",
+      "description": "Ladda upp din meny som PDF och låt AI extrahera, kategorisera och översätta allt automatiskt."
+    },
+    "beautifulThemes": {
+      "title": "Vackra teman",
+      "description": "Välj bland fantastiska förval eller låt AI skapa en unik look som matchar ditt varumärke."
+    },
+    "mobileOptimized": {
+      "title": "Mobiloptimerad",
+      "description": "Din webbplats ser perfekt ut på alla enheter. 70 % av kunderna beställer via mobilen."
+    },
+    "multiLanguage": {
+      "title": "Flerspråkig",
+      "description": "Finska, engelska, svenska och fler — automatiskt översatt av AI."
+    },
+    "onlineOrdering": {
+      "title": "Onlinebeställning",
+      "description": "Ta emot beställningar online med integrerad betalningshantering och realtidsuppdateringar."
+    },
+    "viewAll": "Visa alla funktioner"
+  },
+  "howItWorks": {
+    "subtitle": "Så fungerar det",
+    "title": "Lansera i 4 enkla steg",
+    "steps": {
+      "signUp": {
+        "title": "Registrera dig och guiden",
+        "description": "Vår steg-för-steg-guide leder dig genom varje moment."
+      },
+      "aiMenu": {
+        "title": "AI-menyinstallation",
+        "description": "Ladda upp din meny som PDF. AI extraherar allt automatiskt."
+      },
+      "theme": {
+        "title": "Välj ditt tema",
+        "description": "Välj bland vackra förval eller låt AI designa ditt."
+      },
+      "goLive": {
+        "title": "Gå live",
+        "description": "Lansera direkt och börja ta emot beställningar."
+      }
+    }
+  },
+  "integrations": {
+    "subtitle": "Inbyggda integrationer",
+    "title": "Allt du behöver, inbyggt",
+    "description": "Sömlösa integrationer med betalnings- och leveransplattformar",
+    "securePayments": {
+      "title": "Säkra betalningar",
+      "text": "PCI-kompatibel hantering med branschledande säkerhet"
+    },
+    "realTimeAnalytics": {
+      "title": "Realtidsanalys",
+      "text": "Spåra beställningar, intäkter och kundinsikter i realtid"
+    },
+    "deliveryIntegration": {
+      "title": "Leveransintegration",
+      "text": "Inbyggd leveranshantering med zoner, avgifter och spårning"
+    },
+    "withoutHelmies": "Utan Helmies",
+    "withoutDesc": "Komplicerad installation, höga avgifter, ingen kontroll",
+    "withHelmies": "Med Helmies",
+    "withDesc": "5 min installation, 0 % provision, full kontroll"
+  },
+  "floating": {
+    "onlineOrders": "Onlinebeställningar",
+    "rating": "4,9/5 Betyg",
+    "reviews": "500+ omdömen",
+    "happyOwners": "Nöjda ägare"
+  },
+  "cta": {
+    "subtitle": "Kommer snart",
+    "title": "Vi lanserar snart!",
+    "description": "Var bland de <1>första restaurangerna</1> att lansera med Helmies Bites. Installationen tar bara <3>5 minuter</3>.",
+    "viewPricing": "Visa priser",
+    "launchingSoon": "Kommer snart",
+    "launchingDate": "Var redo när vi går live den 5 mars 2026"
+  }
+}

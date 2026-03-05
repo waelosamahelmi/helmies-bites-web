@@ -1,3 +1,4 @@
+import { useTranslation, Trans } from 'react-i18next';
 import { ScrollReveal } from '../components/ScrollReveal';
 import {
   FileCheck,
@@ -14,359 +15,333 @@ import {
 const LAST_UPDATED = 'February 26, 2026';
 const CONTACT_EMAIL = 'legal@helmiesbites.fi';
 
-const sections = [
-  {
-    id: 'acceptance',
-    icon: <FileCheck className="h-6 w-6" />,
-    title: 'Acceptance of Terms',
-    content: (
-      <div className="space-y-4">
-        <p>
-          By accessing or using Helmies Bites services, you agree to be bound by these Terms of
-          Service and all applicable laws and regulations. If you do not agree with any of these
-          terms, you are prohibited from using our services.
-        </p>
-        <p>
-          These terms constitute a legally binding agreement between you and Helmies Bites Oy,
-          a company registered in Finland.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'service-description',
-    icon: <FileCheck className="h-6 w-6" />,
-    title: 'Description of Service',
-    content: (
-      <div className="space-y-4">
-        <p>
-          Helmies Bites provides a restaurant website builder and online ordering platform that
-          enables restaurants to:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Create and customize restaurant websites</li>
-          <li>Display menus and pricing information</li>
-          <li>Accept online orders and payments</li>
-          <li>Manage orders and customer communications</li>
-          <li>Integrate with domain and hosting services</li>
-        </ul>
-        <p>
-          We reserve the right to modify, suspend, or discontinue any aspect of our services at
-          any time without prior notice.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'user-responsibilities',
-    icon: <UserCheck className="h-6 w-6" />,
-    title: 'User Responsibilities',
-    content: (
-      <div className="space-y-4">
-        <p>As a user of our services, you agree to:</p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Provide accurate, current, and complete information</li>
-          <li>Maintain the security of your account credentials</li>
-          <li>Accept responsibility for all activities under your account</li>
-          <li>Notify us immediately of any unauthorized use</li>
-          <li>Comply with all applicable laws and regulations</li>
-          <li>Not use our services for any illegal or unauthorized purpose</li>
-          <li>Not attempt to gain unauthorized access to our systems</li>
-          <li>Not interfere with or disrupt our services or servers</li>
-        </ul>
-        <p className="text-white/60 italic">
-          You are solely responsible for the content you publish on your restaurant website,
-          including menu items, prices, and images.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'payment-terms',
-    icon: <CreditCard className="h-6 w-6" />,
-    title: 'Payment and Billing',
-    content: (
-      <div className="space-y-4">
-        <h4 className="font-semibold text-white">Service Fees</h4>
-        <p>
-          Helmies Bites charges a service fee of 5% on each online order processed through our
-          platform. This fee is automatically deducted from the order total before settlement.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">Optional Add-ons</h4>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Cash on Delivery: €30/month</li>
-          <li>AI Assistant: €10/month</li>
-        </ul>
-
-        <h4 className="font-semibold text-white mt-6">Payment Processing</h4>
-        <p>
-          All payments are processed through third-party payment processors (Stripe, PayPal).
-          Additional payment processor fees may apply and are separate from our service fees.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">Settlement</h4>
-        <p>
-          Order proceeds (minus our service fee and payment processor fees) are settled to your
-          designated bank account on a weekly basis, typically within 3-5 business days.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">Taxes</h4>
-        <p>
-          All prices are exclusive of VAT. Finnish VAT (25.5% as of 2026) is added to service
-          fees where applicable. You are responsible for any taxes related to your business
-          operations.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'cancellation',
-    icon: <XCircle className="h-6 w-6" />,
-    title: 'Cancellation and Termination',
-    content: (
-      <div className="space-y-4">
-        <h4 className="font-semibold text-white">By You</h4>
-        <p>
-          You may cancel your account at any time by contacting us or through your account
-          settings. Upon cancellation:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>You will continue to have access until the end of your current billing period</li>
-          <li>All pending orders will be processed and settled</li>
-          <li>Your website will be taken offline within 30 days</li>
-          <li>You may request export of your data within 90 days</li>
-        </ul>
-
-        <h4 className="font-semibold text-white mt-6">By Us</h4>
-        <p>
-          We reserve the right to suspend or terminate your account at any time for:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Violation of these Terms of Service</li>
-          <li>Violation of applicable laws or regulations</li>
-          <li>Fraudulent or abusive activity</li>
-          <li>Extended period of inactivity (12+ months)</li>
-        </ul>
-        <p className="text-white/60 italic">
-          We will provide reasonable notice before termination except in cases of fraud or
-          illegal activity.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: ' refunds',
-    icon: <CreditCard className="h-6 w-6" />,
-    title: 'Refunds',
-    content: (
-      <div className="space-y-4">
-        <p>
-          Our service fee is non-refundable once an order has been processed. However, we may
-          issue refunds or credits in our sole discretion in cases of:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Service interruptions lasting more than 24 hours</li>
-          <li>Double charging due to technical errors</li>
-          <li>Orders not fulfilled due to platform issues</li>
-        </ul>
-        <p>
-          For customer refund requests related to orders, please refer to our individual
-          restaurant refund policy, which you can set in your account settings.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'intellectual-property',
-    icon: <FileCheck className="h-6 w-6" />,
-    title: 'Intellectual Property',
-    content: (
-      <div className="space-y-4">
-        <h4 className="font-semibold text-white">Our Property</h4>
-        <p>
-          The Helmies Bites platform, including all software, designs, text, graphics, logos,
-          and other content, is owned by Helmies Bites Oy and protected by intellectual
-          property laws. You may not:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Copy, modify, or distribute our platform</li>
-          <li>Use our trademarks without permission</li>
-          <li>Reverse engineer or attempt to extract source code</li>
-        </ul>
-
-        <h4 className="font-semibold text-white mt-6">Your Content</h4>
-        <p>
-          You retain ownership of all content you provide to our platform (menu items, images,
-          descriptions). By using our services, you grant us a license to use, display, and
-          process your content solely to provide our services to you.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">User-Generated Content</h4>
-        <p>
-          Customer reviews, feedback, and other user-generated content may be used by us for
-          marketing and service improvement purposes, in accordance with our Privacy Policy.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'limitation-of-liability',
-    icon: <AlertCircle className="h-6 w-6" />,
-    title: 'Limitation of Liability',
-    content: (
-      <div className="space-y-4">
-        <p className="font-semibold text-white">
-          TO THE MAXIMUM EXTENT PERMITTED BY LAW, HELMIES BITES SHALL NOT BE LIABLE FOR:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Indirect, incidental, special, or consequential damages</li>
-          <li>Lost profits or lost business opportunities</li>
-          <li>Loss of data or corruption of data</li>
-          <li>Service interruptions or downtime</li>
-          <li>Actions or omissions by third parties (payment processors, delivery services)</li>
-        </ul>
-
-        <h4 className="font-semibold text-white mt-6">Total Liability</h4>
-        <p>
-          Our total liability to you for all claims shall not exceed the amount of service fees
-          you paid to us in the 12 months preceding the claim. This limitation applies to all
-          causes of action in the aggregate.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">No Warranties</h4>
-        <p>
-          Our services are provided "as is" without warranties of any kind, whether express or
-          implied. We do not guarantee uninterrupted or error-free operation.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'dispute-resolution',
-    icon: <Scale className="h-6 w-6" />,
-    title: 'Dispute Resolution',
-    content: (
-      <div className="space-y-4">
-        <h4 className="font-semibold text-white">Governing Law</h4>
-        <p>
-          These Terms of Service are governed by the laws of Finland. Any disputes relating to
-          these terms shall be resolved in the courts of Helsinki, Finland.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">Resolution Process</h4>
-        <p>
-          We encourage you to contact us directly at{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#FF7A00] hover:underline">
-            {CONTACT_EMAIL}
-          </a>{' '}
-          to resolve any issues informally. Most disputes can be resolved quickly through direct
-          communication.
-        </p>
-
-        <h4 className="font-semibold text-white mt-6">EU Consumer Rights</h4>
-        <p>
-          For consumers located in the European Union, you may have access to alternative
-          dispute resolution mechanisms through the EU Online Dispute Resolution platform.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'indemnification',
-    icon: <Shield className="h-6 w-6" />,
-    title: 'Indemnification',
-    content: (
-      <div className="space-y-4">
-        <p>
-          You agree to indemnify, defend, and hold harmless Helmies Bites and its affiliates,
-          officers, directors, employees, and agents from and against any claims, damages,
-          losses, liabilities, and expenses arising from:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Your use of our services</li>
-          <li>Your violation of these Terms of Service</li>
-          <li>Your violation of any third-party rights</li>
-          <li>Content you provide or publish through our platform</li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    id: 'modifications',
-    icon: <Clock className="h-6 w-6" />,
-    title: 'Modifications to Terms',
-    content: (
-      <div className="space-y-4">
-        <p>
-          We reserve the right to modify these Terms of Service at any time. We will notify you
-          of material changes by:
-        </p>
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>Posting the new terms on our platform</li>
-          <li>Sending an email to your registered email address</li>
-          <li>Displaying a prominent notice in your account dashboard</li>
-        </ul>
-        <p>
-          Continued use of our services after modifications constitutes acceptance of the new
-          terms. If you do not agree to the modified terms, you must discontinue use of our
-          services.
-        </p>
-      </div>
-    ),
-  },
-  {
-    id: 'general-provisions',
-    icon: <FileCheck className="h-6 w-6" />,
-    title: 'General Provisions',
-    content: (
-      <div className="space-y-4">
-        <ul className="list-disc list-inside space-y-2 ml-4">
-          <li>
-            <strong>Entire Agreement:</strong> These terms constitute the entire agreement
-            between you and Helmies Bites regarding our services.
-          </li>
-          <li>
-            <strong>Severability:</strong> If any provision is found invalid, the remaining
-            provisions shall remain in full force.
-          </li>
-          <li>
-            <strong>Waiver:</strong> Our failure to enforce any right does not constitute a
-            waiver of that right.
-          </li>
-          <li>
-            <strong>Assignment:</strong> You may not assign these terms without our consent.
-            We may assign our rights and obligations without restriction.
-          </li>
-          <li>
-            <strong>Force Majeure:</strong> We are not liable for delays or failures due to
-            causes beyond our reasonable control.
-          </li>
-        </ul>
-      </div>
-    ),
-  },
-  {
-    id: 'contact',
-    icon: <Mail className="h-6 w-6" />,
-    title: 'Contact Us',
-    content: (
-      <div className="space-y-4">
-        <p>
-          If you have questions about these Terms of Service, please contact us:
-        </p>
-        <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
-          <p className="font-semibold text-white">Legal Contact</p>
-          <p>Email: <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#FF7A00] hover:underline">{CONTACT_EMAIL}</a></p>
-          <p>Address: Helsinki, Finland</p>
-          <p>Business ID: (Finnish: Y-tunnus) Available upon request</p>
-        </div>
-      </div>
-    ),
-  },
-];
-
 export function Terms() {
+  const { t } = useTranslation('legal');
+
+  const sections = [
+    {
+      id: 'acceptance',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: t('terms.sections.acceptance.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.acceptance.content1')}
+          </p>
+          <p>
+            {t('terms.sections.acceptance.content2')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'service-description',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: t('terms.sections.serviceDescription.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.serviceDescription.intro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.serviceDescription.items.item1')}</li>
+            <li>{t('terms.sections.serviceDescription.items.item2')}</li>
+            <li>{t('terms.sections.serviceDescription.items.item3')}</li>
+            <li>{t('terms.sections.serviceDescription.items.item4')}</li>
+            <li>{t('terms.sections.serviceDescription.items.item5')}</li>
+          </ul>
+          <p>
+            {t('terms.sections.serviceDescription.content')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'user-responsibilities',
+      icon: <UserCheck className="h-6 w-6" />,
+      title: t('terms.sections.userResponsibilities.title'),
+      content: (
+        <div className="space-y-4">
+          <p>{t('terms.sections.userResponsibilities.intro')}</p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.userResponsibilities.items.item1')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item2')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item3')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item4')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item5')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item6')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item7')}</li>
+            <li>{t('terms.sections.userResponsibilities.items.item8')}</li>
+          </ul>
+          <p className="text-white/60 italic">
+            {t('terms.sections.userResponsibilities.note')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'payment-terms',
+      icon: <CreditCard className="h-6 w-6" />,
+      title: t('terms.sections.paymentTerms.title'),
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-white">{t('terms.sections.paymentTerms.serviceFeesTitle')}</h4>
+          <p>
+            {t('terms.sections.paymentTerms.serviceFeesContent')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.paymentTerms.addonsTitle')}</h4>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.paymentTerms.addonsItems.item1')}</li>
+            <li>{t('terms.sections.paymentTerms.addonsItems.item2')}</li>
+          </ul>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.paymentTerms.processingTitle')}</h4>
+          <p>
+            {t('terms.sections.paymentTerms.processingContent')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.paymentTerms.settlementTitle')}</h4>
+          <p>
+            {t('terms.sections.paymentTerms.settlementContent')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.paymentTerms.taxesTitle')}</h4>
+          <p>
+            {t('terms.sections.paymentTerms.taxesContent')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'cancellation',
+      icon: <XCircle className="h-6 w-6" />,
+      title: t('terms.sections.cancellation.title'),
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-white">{t('terms.sections.cancellation.byYouTitle')}</h4>
+          <p>
+            {t('terms.sections.cancellation.byYouIntro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.cancellation.byYouItems.item1')}</li>
+            <li>{t('terms.sections.cancellation.byYouItems.item2')}</li>
+            <li>{t('terms.sections.cancellation.byYouItems.item3')}</li>
+            <li>{t('terms.sections.cancellation.byYouItems.item4')}</li>
+          </ul>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.cancellation.byUsTitle')}</h4>
+          <p>
+            {t('terms.sections.cancellation.byUsIntro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.cancellation.byUsItems.item1')}</li>
+            <li>{t('terms.sections.cancellation.byUsItems.item2')}</li>
+            <li>{t('terms.sections.cancellation.byUsItems.item3')}</li>
+            <li>{t('terms.sections.cancellation.byUsItems.item4')}</li>
+          </ul>
+          <p className="text-white/60 italic">
+            {t('terms.sections.cancellation.note')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: ' refunds',
+      icon: <CreditCard className="h-6 w-6" />,
+      title: t('terms.sections.refunds.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.refunds.intro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.refunds.items.item1')}</li>
+            <li>{t('terms.sections.refunds.items.item2')}</li>
+            <li>{t('terms.sections.refunds.items.item3')}</li>
+          </ul>
+          <p>
+            {t('terms.sections.refunds.content')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'intellectual-property',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: t('terms.sections.intellectualProperty.title'),
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-white">{t('terms.sections.intellectualProperty.ourPropertyTitle')}</h4>
+          <p>
+            {t('terms.sections.intellectualProperty.ourPropertyIntro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.intellectualProperty.ourPropertyItems.item1')}</li>
+            <li>{t('terms.sections.intellectualProperty.ourPropertyItems.item2')}</li>
+            <li>{t('terms.sections.intellectualProperty.ourPropertyItems.item3')}</li>
+          </ul>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.intellectualProperty.yourContentTitle')}</h4>
+          <p>
+            {t('terms.sections.intellectualProperty.yourContentText')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.intellectualProperty.userGeneratedTitle')}</h4>
+          <p>
+            {t('terms.sections.intellectualProperty.userGeneratedText')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'limitation-of-liability',
+      icon: <AlertCircle className="h-6 w-6" />,
+      title: t('terms.sections.limitationOfLiability.title'),
+      content: (
+        <div className="space-y-4">
+          <p className="font-semibold text-white">
+            {t('terms.sections.limitationOfLiability.disclaimer')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.limitationOfLiability.items.item1')}</li>
+            <li>{t('terms.sections.limitationOfLiability.items.item2')}</li>
+            <li>{t('terms.sections.limitationOfLiability.items.item3')}</li>
+            <li>{t('terms.sections.limitationOfLiability.items.item4')}</li>
+            <li>{t('terms.sections.limitationOfLiability.items.item5')}</li>
+          </ul>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.limitationOfLiability.totalLiabilityTitle')}</h4>
+          <p>
+            {t('terms.sections.limitationOfLiability.totalLiabilityContent')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.limitationOfLiability.noWarrantiesTitle')}</h4>
+          <p>
+            {t('terms.sections.limitationOfLiability.noWarrantiesContent')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'dispute-resolution',
+      icon: <Scale className="h-6 w-6" />,
+      title: t('terms.sections.disputeResolution.title'),
+      content: (
+        <div className="space-y-4">
+          <h4 className="font-semibold text-white">{t('terms.sections.disputeResolution.governingLawTitle')}</h4>
+          <p>
+            {t('terms.sections.disputeResolution.governingLawContent')}
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.disputeResolution.resolutionProcessTitle')}</h4>
+          <p>
+            <Trans
+              i18nKey="terms.sections.disputeResolution.resolutionProcessContent"
+              ns="legal"
+              values={{ email: CONTACT_EMAIL }}
+              components={{
+                1: <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#FF7A00] hover:underline" />,
+              }}
+            />
+          </p>
+
+          <h4 className="font-semibold text-white mt-6">{t('terms.sections.disputeResolution.euConsumerTitle')}</h4>
+          <p>
+            {t('terms.sections.disputeResolution.euConsumerContent')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'indemnification',
+      icon: <Shield className="h-6 w-6" />,
+      title: t('terms.sections.indemnification.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.indemnification.intro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.indemnification.items.item1')}</li>
+            <li>{t('terms.sections.indemnification.items.item2')}</li>
+            <li>{t('terms.sections.indemnification.items.item3')}</li>
+            <li>{t('terms.sections.indemnification.items.item4')}</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      id: 'modifications',
+      icon: <Clock className="h-6 w-6" />,
+      title: t('terms.sections.modifications.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.modifications.intro')}
+          </p>
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>{t('terms.sections.modifications.items.item1')}</li>
+            <li>{t('terms.sections.modifications.items.item2')}</li>
+            <li>{t('terms.sections.modifications.items.item3')}</li>
+          </ul>
+          <p>
+            {t('terms.sections.modifications.content')}
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 'general-provisions',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: t('terms.sections.generalProvisions.title'),
+      content: (
+        <div className="space-y-4">
+          <ul className="list-disc list-inside space-y-2 ml-4">
+            <li>
+              <strong>{t('terms.sections.generalProvisions.items.item1Label')}</strong>{' '}
+              {t('terms.sections.generalProvisions.items.item1Text')}
+            </li>
+            <li>
+              <strong>{t('terms.sections.generalProvisions.items.item2Label')}</strong>{' '}
+              {t('terms.sections.generalProvisions.items.item2Text')}
+            </li>
+            <li>
+              <strong>{t('terms.sections.generalProvisions.items.item3Label')}</strong>{' '}
+              {t('terms.sections.generalProvisions.items.item3Text')}
+            </li>
+            <li>
+              <strong>{t('terms.sections.generalProvisions.items.item4Label')}</strong>{' '}
+              {t('terms.sections.generalProvisions.items.item4Text')}
+            </li>
+            <li>
+              <strong>{t('terms.sections.generalProvisions.items.item5Label')}</strong>{' '}
+              {t('terms.sections.generalProvisions.items.item5Text')}
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      id: 'contact',
+      icon: <Mail className="h-6 w-6" />,
+      title: t('terms.sections.contact.title'),
+      content: (
+        <div className="space-y-4">
+          <p>
+            {t('terms.sections.contact.intro')}
+          </p>
+          <div className="bg-[#FF7A00]/5 p-4 rounded-lg border border-orange-100">
+            <p className="font-semibold text-white">{t('terms.sections.contact.contactLabel')}</p>
+            <p>{t('terms.sections.contact.emailLabel')} <a href={`mailto:${CONTACT_EMAIL}`} className="text-[#FF7A00] hover:underline">{CONTACT_EMAIL}</a></p>
+            <p>{t('terms.sections.contact.addressLabel')} {t('terms.sections.contact.address')}</p>
+            <p>{t('terms.sections.contact.businessIdLabel')} {t('terms.sections.contact.businessId')}</p>
+          </div>
+        </div>
+      ),
+    },
+  ];
+
   const handleScrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -387,10 +362,10 @@ export function Terms() {
             <div className="p-2 bg-[#FF7A00]/10 rounded-lg">
               <FileCheck className="h-6 w-6 text-[#FF7A00]" />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white">Terms of Service</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-white">{t('terms.title')}</h1>
           </div>
           <p className="text-white/60">
-            Last updated: {LAST_UPDATED}
+            {t('terms.lastUpdated', { date: LAST_UPDATED })}
           </p>
         </div>
       </div>
@@ -400,7 +375,7 @@ export function Terms() {
           {/* Sidebar Navigation */}
           <aside className="lg:w-64 flex-shrink-0">
             <div className="bg-[#1A1410] rounded-xl shadow-sm border border-white/5 p-4 lg:sticky lg:top-24">
-              <h3 className="font-semibold text-white mb-4">Table of Contents</h3>
+              <h3 className="font-semibold text-white mb-4">{t('terms.tableOfContents')}</h3>
               <nav className="space-y-2 max-h-[70vh] overflow-y-auto">
                 {sections.map((section) => (
                   <button
@@ -417,7 +392,7 @@ export function Terms() {
                   onClick={handlePrint}
                   className="w-full text-sm text-white/60 hover:text-white px-3 py-2 rounded-lg hover:bg-[#2A1F15]/30 transition-colors"
                 >
-                  Print this page
+                  {t('terms.printPage')}
                 </button>
               </div>
             </div>
@@ -430,9 +405,7 @@ export function Terms() {
               <ScrollReveal>
                 <div className="prose prose-gray max-w-none mb-12">
                   <p className="text-lg text-white/80 leading-relaxed">
-                    Welcome to Helmies Bites. These Terms of Service govern your use of our
-                    restaurant platform and online ordering services. By using our services, you
-                    agree to these terms. Please read them carefully.
+                    {t('terms.introduction')}
                   </p>
                 </div>
               </ScrollReveal>
@@ -461,9 +434,7 @@ export function Terms() {
               <ScrollReveal>
                 <div className="mt-12 pt-8 border-t border-white/10">
                   <p className="text-sm text-white/50">
-                    These Terms of Service are designed to comply with Finnish and European Union
-                    consumer protection laws. If you have any questions about your rights as a
-                    consumer, please contact us or your local consumer protection authority.
+                    {t('terms.footerNote')}
                   </p>
                 </div>
               </ScrollReveal>

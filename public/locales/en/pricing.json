@@ -1,0 +1,253 @@
+{
+  "hero": {
+    "subtitle": "Pricing Plans",
+    "titleHighlight": "Simple & Flexible",
+    "title": "Pricing",
+    "description": "Start free. Upgrade as you grow. Every tier feeds the next — no dead ends."
+  },
+  "tiers": {
+    "starter": {
+      "name": "Starter",
+      "tagline": "Pay-as-you-go",
+      "priceDisplay": "5%",
+      "priceSubtext": "per online order",
+      "setupFee": "€0 setup",
+      "highlights": [
+        "€49 minimum monthly fee",
+        "5% per online order",
+        "No commitment required"
+      ],
+      "bestFor": "Small cafés, testing the waters",
+      "features": {
+        "included": [
+          "Full website builder",
+          "Online ordering system",
+          "AI menu import",
+          "Stripe payment integration",
+          "Mobile-optimized design",
+          "Multi-language support",
+          "Free subdomain",
+          "Email support",
+          "€49 minimum monthly fee"
+        ],
+        "excluded": [
+          "Offline payment support",
+          "Custom branding & domain",
+          "AI Assistant",
+          "Advanced analytics",
+          "Priority support"
+        ]
+      },
+      "ctaText": "Start for Free",
+      "pricingTag": "Free Plan"
+    },
+    "pro": {
+      "name": "Pro",
+      "tagline": "Monthly subscription",
+      "priceSubtext": "/month",
+      "setupFee": "€500 one-time setup",
+      "highlights": [
+        "Full features unlocked",
+        "Offline payments included",
+        "€500 one-time setup"
+      ],
+      "bestFor": "Established restaurants ready to commit",
+      "features": {
+        "included": [
+          "Everything in Starter",
+          "No transaction fees",
+          "Offline payment support (cash, card terminal)",
+          "AI Assistant for customers",
+          "Advanced analytics & reports",
+          "Custom branding & domain",
+          "Priority support",
+          "Social media integration",
+          "Delivery zone management"
+        ],
+        "excluded": [
+          "White-label solution",
+          "API access",
+          "Dedicated account manager"
+        ]
+      },
+      "ctaText": "Get Started",
+      "pricingTag": "Premium Plan",
+      "toggle": {
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "yearlyDiscount": "10% off",
+        "monthlyLabel": "/month",
+        "yearlyLabel": "/year"
+      }
+    },
+    "annual": {
+      "name": "Annual",
+      "tagline": "Best value",
+      "priceDisplay": "€99",
+      "priceSubtext": "/month billed annually",
+      "setupFee": "€0 setup",
+      "highlights": [
+        "€1,190/first year",
+        "Renewal: €1,390/year",
+        "3-year: €2,990 (€83/mo)"
+      ],
+      "bestFor": "Restaurants wanting maximum savings",
+      "features": {
+        "included": [
+          "Everything in Pro",
+          "No transaction fees",
+          "All features unlocked",
+          "€0 setup (saves €500)",
+          "Lowest effective monthly cost",
+          "Dedicated account manager",
+          "Custom integrations",
+          "Multi-branch support",
+          "SLA guarantee"
+        ]
+      },
+      "ctaText": "Lock in Savings",
+      "pricingTag": "Annual Plan",
+      "bestValueBadge": "Best Value",
+      "bestForLabel": "Best for"
+    }
+  },
+  "trust": {
+    "subtitle": "Trust",
+    "titleHighlight": "Why Restaurants",
+    "title": "Choose Us",
+    "description": "We're committed to your success with risk-free guarantees",
+    "badges": {
+      "moneyBack": {
+        "title": "Money-Back Guarantee",
+        "description": "30-day full refund if you're not completely satisfied"
+      },
+      "noSetupFees": {
+        "title": "No Setup Fees",
+        "description": "Launch your restaurant website in minutes, completely free"
+      },
+      "threeMonthNotice": {
+        "title": "3-Month Notice",
+        "description": "Cancel with a 3-month notice period"
+      }
+    }
+  },
+  "comparison": {
+    "subtitle": "Side-by-side comparison",
+    "titleHighlight": "Compare All",
+    "title": "Features",
+    "description": "See exactly what's included in each plan to make the right choice",
+    "tableHeader": "Feature",
+    "starterHeader": "Starter",
+    "proHeader": "Pro",
+    "annualHeader": "Annual",
+    "categories": {
+      "pricing": "Pricing",
+      "coreFeatures": "Core Features",
+      "payments": "Payments",
+      "aiAutomation": "AI & Automation",
+      "brandingCustomization": "Branding & Customization",
+      "analyticsSupport": "Analytics & Support",
+      "technical": "Technical"
+    },
+    "features": {
+      "monthlyCost": "Monthly cost",
+      "setupFee": "Setup fee",
+      "transactionFees": "Transaction fees",
+      "commitment": "Commitment",
+      "websiteBuilder": "Website builder",
+      "onlineOrdering": "Online ordering",
+      "aiMenuImport": "AI menu import",
+      "mobileOptimized": "Mobile-optimized",
+      "multiLanguage": "Multi-language",
+      "stripeIntegration": "Stripe integration",
+      "offlinePayments": "Offline payments (cash, terminal)",
+      "customPaymentGateway": "Custom payment gateway",
+      "aiMenuImportAi": "AI menu import",
+      "aiAssistant": "AI Assistant",
+      "aiTranslations": "AI translations",
+      "freeSubdomain": "Free subdomain",
+      "customDomain": "Custom domain",
+      "customBranding": "Custom branding",
+      "whiteLabelSolution": "White-label solution",
+      "basicAnalytics": "Basic analytics",
+      "advancedReports": "Advanced reports",
+      "emailSupport": "Email support",
+      "prioritySupport": "Priority support",
+      "dedicatedAccountManager": "Dedicated account manager",
+      "slaGuarantee": "SLA guarantee",
+      "apiAccess": "API access",
+      "customIntegrations": "Custom integrations",
+      "multiBranchSupport": "Multi-branch support"
+    },
+    "values": {
+      "starter": {
+        "monthlyCost": "5% + €49 min",
+        "setupFee": "€0",
+        "transactionFees": "5%",
+        "commitment": "None"
+      },
+      "pro": {
+        "monthlyCost": "€129/mo",
+        "setupFee": "€500",
+        "transactionFees": "0%",
+        "commitment": "Monthly"
+      },
+      "annual": {
+        "monthlyCost": "€99/mo",
+        "setupFee": "€0",
+        "transactionFees": "0%",
+        "commitment": "1 or 3 years"
+      }
+    }
+  },
+  "faq": {
+    "subtitle": "Got questions?",
+    "titleHighlight": "Frequently Asked",
+    "title": "Questions",
+    "description": "Everything you need to know about our pricing and plans",
+    "starterPayAsYouGo": {
+      "question": "How does the Starter pay-as-you-go model work?",
+      "answer": "With Starter, you pay 5% of your online orders processed through our platform — no monthly subscription. There is a minimum monthly fee of €49 to cover platform costs. For example, if you process €2,000 in online orders, you pay €100 (5%). If your 5% comes to less than €49, you still pay the €49 minimum."
+    },
+    "proSetupFee": {
+      "question": "What does the €500 Pro setup fee include?",
+      "answer": "The one-time €500 setup fee covers full onboarding: we configure your website, import your menu with AI, set up your custom domain, configure offline payment terminals, and provide a dedicated training session. With the Annual plan, setup is completely free (€0)."
+    },
+    "switchPlans": {
+      "question": "Can I switch between plans?",
+      "answer": "Absolutely! The natural upgrade path is: Starter → Pro → Annual. You can upgrade at any time. When switching from Starter to Pro, you pay the €500 setup fee and start the monthly billing. When switching to Annual, the setup fee is waived and any remaining Pro subscription is prorated."
+    },
+    "annualPricing": {
+      "question": "How does the Annual plan pricing work?",
+      "answer": "First year: €1,190 (effectively €99/month). Renewal: €1,390/year. We also offer a 3-year commitment at €2,990 total (just €83/month). All annual plans include €0 setup and all features unlocked from day one."
+    },
+    "paymentMethods": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards (Visa, Mastercard, American Express), bank transfers, and PayPal. Annual and 3-year plans can also be paid via invoice."
+    },
+    "offlinePaymentsStarter": {
+      "question": "What about offline payments on the Starter plan?",
+      "answer": "The Starter plan only supports online payments through Stripe. If you need to accept cash, card terminal payments, or other offline methods, you'll need the Pro or Annual plan."
+    },
+    "contractCommitment": {
+      "question": "Is there a contract or commitment?",
+      "answer": "All plans require a 3-month cancellation notice. Annual: 1-year or 3-year commitment with our best rates."
+    },
+    "refundPolicy": {
+      "question": "What is your refund policy?",
+      "answer": "We offer a 30-day money-back guarantee on Pro and Annual plans. If you're not satisfied within the first 30 days, contact us for a full refund — no questions asked."
+    }
+  },
+  "cta": {
+    "subtitle": "Get Started",
+    "titleHighlight": "Ready to Grow",
+    "title": "Your Restaurant?",
+    "description": "Join hundreds of restaurants already using Helmies Bites. Start free, no credit card required.",
+    "seeAllFeatures": "See All Features",
+    "trustIndicators": {
+      "guarantee": "30-day guarantee",
+      "noCreditCard": "No credit card required",
+      "support": "24/7 support"
+    }
+  }
+}

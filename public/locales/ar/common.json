@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "features": "المميزات",
+    "pricing": "الأسعار",
+    "about": "من نحن",
+    "faq": "الأسئلة الشائعة",
+    "tryDemo": "جرّب العرض التوضيحي",
+    "launchingDate": "الإطلاق ٥ مارس",
+    "launchingDateFull": "الإطلاق في ٥ مارس"
+  },
+  "footer": {
+    "product": "المنتج",
+    "company": "الشركة",
+    "support": "الدعم",
+    "legal": "قانوني",
+    "links": {
+      "features": "المميزات",
+      "pricing": "الأسعار",
+      "examples": "أمثلة",
+      "integrations": "التكاملات",
+      "aboutUs": "من نحن",
+      "blog": "المدونة",
+      "careers": "وظائف",
+      "helpCenter": "مركز المساعدة",
+      "documentation": "التوثيق",
+      "apiReference": "مرجع API",
+      "status": "الحالة",
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfService": "شروط الخدمة",
+      "gdpr": "GDPR",
+      "cookiePolicy": "سياسة ملفات تعريف الارتباط"
+    },
+    "socialGroup": "انضم إلى مجتمعنا",
+    "newsletter": "اشترك في نشرتنا الإخبارية",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "submit": "إرسال",
+    "copyright": "© 2026 Helmies Bites. جميع الحقوق محفوظة. صُنع بـ 💚 في فنلندا.",
+    "launchingDate": "الإطلاق في ٥ مارس"
+  },
+  "countdown": {
+    "days": "أيام",
+    "hours": "ساعات",
+    "min": "دقيقة",
+    "sec": "ثانية",
+    "launchingIn": "الإطلاق خلال",
+    "launchingDate": "الإطلاق في ٥ مارس",
+    "launchingWith": "الإطلاق مع"
+  }
+}

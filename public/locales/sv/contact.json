@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "subtitle": "Vi finns här för att hjälpa",
+    "title": "kontakt",
+    "titleHighlight": "Kom i",
+    "description": "Har du frågor om Helmies Bites? Vi vill gärna höra från dig. Skicka oss ett meddelande så svarar vi så snart som möjligt."
+  },
+  "form": {
+    "title": "Skicka oss ett meddelande",
+    "subtitle": "Fyll i formuläret nedan så återkommer vi inom 24 timmar.",
+    "name": {
+      "label": "Ditt namn *",
+      "placeholder": "Ange ditt namn"
+    },
+    "email": {
+      "label": "E-postadress *",
+      "placeholder": "din@epost.com"
+    },
+    "subject": {
+      "label": "Ämne *",
+      "placeholder": "Välj ett ämne",
+      "general": "Allmän förfrågan",
+      "sales": "Försäljningsfråga",
+      "support": "Teknisk support",
+      "partnership": "Samarbetsmöjlighet",
+      "feedback": "Feedback",
+      "other": "Övrigt"
+    },
+    "message": {
+      "label": "Ditt meddelande *",
+      "placeholder": "Hur kan vi hjälpa dig idag?"
+    },
+    "submit": "Skicka meddelande",
+    "submitting": "Skickar meddelande...",
+    "success": {
+      "title": "Meddelande skickat!",
+      "description": "Tack! Vi har tagit emot ditt meddelande och svarar snart."
+    }
+  },
+  "contactInfo": {
+    "title": "Kontakt",
+    "titleSuffix": "information",
+    "emailUs": {
+      "title": "E-posta oss",
+      "value": "support@helmiesbites.fi",
+      "description": "Vi svarar inom 24 timmar"
+    },
+    "callUs": {
+      "title": "Ring oss",
+      "value": "+358 20 123 4567",
+      "description": "Mån-Fre, 9-18 EET"
+    },
+    "visitUs": {
+      "title": "Besök oss",
+      "value": "Helsingfors, Finland",
+      "description": "Rödbergen"
+    }
+  },
+  "supportHours": {
+    "title": "Supporttider",
+    "mondayFriday": {
+      "day": "Måndag - Fredag",
+      "hours": "9:00 - 18:00 EET"
+    },
+    "saturday": {
+      "day": "Lördag",
+      "hours": "10:00 - 16:00 EET"
+    },
+    "sunday": {
+      "day": "Söndag",
+      "hours": "Stängt"
+    },
+    "averageResponse": "Genomsnittlig svarstid: inom 24 timmar"
+  },
+  "liveChat": {
+    "title": "Behöver du hjälp direkt?",
+    "description": "Chatta med vårt supportteam för snabba svar på dina frågor.",
+    "button": "Starta livechatt",
+    "alertMessage": "Livechatt kommer snart!",
+    "availability": "Tillgänglig Mån-Fre, 9-18 EET"
+  },
+  "map": {
+    "city": "Helsingfors, Finland",
+    "district": "Rödbergen",
+    "openInMaps": "Öppna i Google Maps"
+  },
+  "faqLink": {
+    "subtitle": "Vanliga frågor",
+    "title": "snabba svar?",
+    "titleHighlight": "Letar du efter",
+    "description": "Kolla in vår FAQ-sida för vanliga frågor om Helmies Bites.",
+    "button": "Besök FAQ"
+  },
+  "cta": {
+    "subtitle": "Låt oss växa tillsammans",
+    "title": "komma igång?",
+    "titleHighlight": "Redo att",
+    "description": "Gå med bland hundratals restauranger som redan använder Helmies Bites för att effektivisera sin verksamhet.",
+    "noCardRequired": "Inget kreditkort krävs. Installationen tar mindre än 5 minuter."
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "badge": "Kaikki mitä tarvitset menestyäksesi",
+    "title": "Tehokkaat ominaisuudet jokaiselle ravintolalle",
+    "description": "Tekoälypohjaisesta asennuksesta toimitustenhallintaan, kaikki mitä tarvitset menestyvän ravintolaliiketoiminnan pyörittämiseen <strong>yhdessä kauniissa alustassa</strong>.",
+    "exploreFeatures": "Tutustu ominaisuuksiin",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "label": "Asennusaika"
+      },
+      "commission": {
+        "value": "0 %",
+        "label": "Provisio"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Tuki"
+      },
+      "integrations": {
+        "value": "50+",
+        "label": "Integraatiot"
+      }
+    },
+    "floatingIcons": {
+      "onlineOrdering": {
+        "title": "Verkkotilaukset",
+        "subtitle": "Älykäs ostoskori ja kassa"
+      },
+      "menuManagement": {
+        "title": "Ruokalistahallinta",
+        "subtitle": "Tekoälykäyttöinen asennus"
+      },
+      "payments": {
+        "title": "Maksut",
+        "subtitle": "Stripe ja mobiililompakot"
+      },
+      "analytics": {
+        "title": "Analytiikka",
+        "subtitle": "Dataan perustuvat näkemykset"
+      },
+      "delivery": {
+        "title": "Toimitus",
+        "subtitle": "Vyöhykkeet ja seuranta"
+      },
+      "mobileReady": {
+        "title": "Mobiilivalmiina",
+        "subtitle": "PWA ja responsiivinen"
+      }
+    }
+  },
+  "categories": {
+    "sectionSubtitle": "Kattava alusta",
+    "sectionTitle": "Täydellinen ravintola-alusta",
+    "sectionDescription": "Tutustu kattavaan ominaisuusvalikoimaamme, joka on suunniteltu auttamaan ravintolaliiketoimintasi kasvattamisessa.",
+    "onlineOrdering": {
+      "title": "Verkkotilaukset",
+      "description": "Tehosta tilausproses siasi saumattomalla asiakaskokemuksella",
+      "features": {
+        "smartShoppingCart": {
+          "title": "Älykäs ostoskori",
+          "description": "Intuitiivinen ostoskori reaaliaikaisilla päivityksillä, määrähallinnalla ja erikoistoiveiden tuella.",
+          "benefit": "Vähennä ostoskorin hylkäämistä jopa 35 %"
+        },
+        "oneClickCheckout": {
+          "title": "Yhden klikkauksen kassa",
+          "description": "Tallenna asiakastiedot salamannopeihin uusintatilauksia varten Stripe-integraatiolla.",
+          "benefit": "Asiakkaat tekevät tilauksen 3x nopeammin"
+        },
+        "realTimeOrderTracking": {
+          "title": "Reaaliaikainen tilausseuranta",
+          "description": "Reaaliaikaiset tilapäivitykset valmistuksesta toimitukseen tai noutoon.",
+          "benefit": "Vähennä \"Missä tilaukseni on?\" -soittoja 80 %"
+        },
+        "scheduledOrdering": {
+          "title": "Ajastetut tilaukset",
+          "description": "Anna asiakkaiden tilata tunteja tai päiviä etukäteen noutoa tai toimitusta varten.",
+          "benefit": "Vastaanota tilauksia myös hiljaisina aikoina"
+        },
+        "orderNotifications": {
+          "title": "Tilausilmoitukset",
+          "description": "Välittömät SMS- ja sähköpostihälytykset uusista tilauksista, päivityksistä ja vahvistuksista.",
+          "benefit": "Älä koskaan menetä tilausta"
+        }
+      }
+    },
+    "menuManagement": {
+      "title": "Ruokalistahallinta",
+      "description": "Luo ja hallitse kauniita, houkuttelevia ruokalistoja tekoälyn avustamana",
+      "features": {
+        "aiPoweredMenuSetup": {
+          "title": "Tekoälykäyttöinen ruokalistan luonti",
+          "description": "Lataa kuvia ja kuvauksia. Tekoälymme järjestää kaiken kategorioihin, ehdottaa hintoja ja luo muokkausvaihtoehdot.",
+          "benefit": "Siirry nollasta live-ruokalistaan alle 5 minuutissa"
+        },
+        "customModifiersOptions": {
+          "title": "Mukautetut lisävalinnat",
+          "description": "Lisää täytteet, koot, kypsennysasteeet ja erikoistoiveet helposti.",
+          "benefit": "Kasvata keskimääräistä tilausarvoa 20 %"
+        },
+        "photoGalleries": {
+          "title": "Kuvagalleriat",
+          "description": "Lataa useita laadukkaita kuvia esitelläksesi annoksesi kauniisti.",
+          "benefit": "Kuvat lisäävät tilauksia 30 %"
+        },
+        "multiLanguageMenus": {
+          "title": "Monikieliset ruokalistat",
+          "description": "Tekoäly kääntää ruokalistasi suomeksi, englanniksi, ruotsiksi ja muille kielille automaattisesti.",
+          "benefit": "Tavoita laajempi asiakaskunta"
+        },
+        "qrCodeMenus": {
+          "title": "QR-koodiruokalistat",
+          "description": "Luo tulostettavat QR-koodit pöytätilauksiin ja kontaktittomiin ruokalistoihin.",
+          "benefit": "Vähennä fyysisten ruokalistojen painokustannuksia"
+        }
+      }
+    },
+    "paymentProcessing": {
+      "title": "Maksunkäsittely",
+      "description": "Vastaanota maksuja turvallisesti ja saa rahasi heti",
+      "features": {
+        "stripeIntegration": {
+          "title": "Stripe-integraatio",
+          "description": "Hyväksy kaikki yleisimmät luottokortit, mobiililompakot ja paikalliset maksutavat Stripen kautta.",
+          "benefit": "Alan johtava turvallisuus ja luotettavuus"
+        },
+        "instantPayouts": {
+          "title": "Välittömät maksut",
+          "description": "Määritä päivittäiset automaattiset maksut pankkitilillesi. Ei viikkojen odotusta rahojesi saamiseksi.",
+          "benefit": "Paranna kassavirtaa heti"
+        },
+        "mobilePayments": {
+          "title": "Mobiilimaksut",
+          "description": "Hyväksy Apple Pay, Google Pay ja muut mobiililompakot saumattomaan kassaprosessiin.",
+          "benefit": "Mobiiliasiakkaat konvertoituvat 2x enemmän"
+        },
+        "digitalReceipts": {
+          "title": "Digitaaliset kuitit",
+          "description": "Automaattiset sähköpostikuitit tilaustiedoilla ja helpoilla uudelleentilauslinkeillä.",
+          "benefit": "Kannusta uusintaostoksiin"
+        }
+      }
+    },
+    "deliveryManagement": {
+      "title": "Toimitustenhallinta",
+      "description": "Ota hallinta toimitusoperaatioistasi tai integroi kumppaneiden kanssa",
+      "features": {
+        "deliveryZones": {
+          "title": "Toimitusvyöhykkeet",
+          "description": "Määritä mukautetut toimitusalueet säde- tai aluepohjaisten vyöhykkeiden ja yksilöllisten maksujen avulla.",
+          "benefit": "Optimoi toimituskustannukset ja kattavuus"
+        },
+        "dynamicFeeCalculation": {
+          "title": "Dynaaminen maksulaskenta",
+          "description": "Aseta maksut etäisyyden, tilauskoon tai vuorokaudenajan perusteella automaattisilla mukautuksilla.",
+          "benefit": "Suojaa katteet pienissä tilauksissa"
+        },
+        "driverApp": {
+          "title": "Kuljettajasovellus",
+          "description": "Omistettu mobiilisovellus toimituskuljettajille reitin optimoinnilla ja tilapäivityksillä.",
+          "benefit": "Täysi hallinta toimituskokemukseen"
+        },
+        "driverManagement": {
+          "title": "Kuljettajahallinta",
+          "description": "Määritä tilauksia kuljettajille, seuraa toimituksia ja optimoi reittejä.",
+          "benefit": "Täysi hallinta toimituskokemukseen"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Analytiikka ja raportit",
+      "description": "Datapohjaiset näkemykset liiketoimintasi kasvattamiseen",
+      "features": {
+        "salesAnalytics": {
+          "title": "Myyntianalytiikka",
+          "description": "Seuraa liikevaihtoa, keskimääräistä tilausarvoa ja kasvua ajan mittaan kauniilla visualisoinneilla.",
+          "benefit": "Tee datalähtöisiä liiketoimintapäätöksiä"
+        },
+        "popularItemsReport": {
+          "title": "Suosittujen tuotteiden raportti",
+          "description": "Löydä myydyimmät ja heikommin menestyvät tuotteet ruokalistasi optimoimiseksi.",
+          "benefit": "Keskity siihen, mikä tuottaa voittoa"
+        },
+        "customerInsights": {
+          "title": "Asiakasnäkemykset",
+          "description": "Ymmärrä asiakkaiden käyttäytymistä, tilaustiheyttä ja elinikäistä arvoa.",
+          "benefit": "Tunnista ja säilytä VIP-asiakkaat"
+        },
+        "peakHourAnalysis": {
+          "title": "Ruuhka-aikojen analyysi",
+          "description": "Tunnista kiireisimmät ajat henkilöstön ja valmistelun optimoimiseksi.",
+          "benefit": "Vähennä odotusaikoja ja paranna palvelua"
+        }
+      }
+    },
+    "marketing": {
+      "title": "Markkinointityökalut",
+      "description": "Houkuttele uusia asiakkaita ja pidä heidät palaavina",
+      "features": {
+        "promotionsDiscounts": {
+          "title": "Kampanjat ja alennukset",
+          "description": "Luo alennuskoodeja, prosenttialennuksia ja osta yksi, saat toisen -tarjouksia helposti.",
+          "benefit": "Kasvata myyntiä hiljaisina aikoina"
+        },
+        "loyaltyPrograms": {
+          "title": "Kanta-asiakasohjelmat",
+          "description": "Palkitse palaavat asiakkaat pisteillä, ilmaisilla tuotteilla ja eksklusiivisilla eduilla.",
+          "benefit": "Kasvata asiakaspysyvyyttä 40 %"
+        },
+        "emailCampaigns": {
+          "title": "Sähköpostikampanjat",
+          "description": "Lähetä kohdennettuja sähköpostikampanjoita tarjouksista, tapahtumista ja kampanjoista.",
+          "benefit": "Tavoita asiakkaat suoraan heidän postilaatikkoonsa"
+        },
+        "socialSharing": {
+          "title": "Sosiaalisen median jakaminen",
+          "description": "Helppo jakaminen Facebookiin, Instagramiin ja muille sosiaalisen median alustoille.",
+          "benefit": "Vahvista näkyvyyttäsi orgaanisesti"
+        }
+      }
+    },
+    "multiLocation": {
+      "title": "Monen toimipaikan tuki",
+      "description": "Hallitse useita ravintoloita yhdestä hallintapaneelista",
+      "features": {
+        "centralizedManagement": {
+          "title": "Keskitetty hallinta",
+          "description": "Hallitse ruokalistoja, hintoja ja asetuksia kaikissa toimipaikoissa yhdestä hallintapaneelista.",
+          "benefit": "Säästä tunteja hallinnollista työtä"
+        },
+        "locationSpecificOptions": {
+          "title": "Toimipaikkakohtaiset valinnat",
+          "description": "Mukauta ruokalistoja, hinnoittelua ja toimitusvyöhykkeitä jokaiselle toimipaikalle itsenäisesti.",
+          "benefit": "Mukaudu paikallisiin markkinaolosuhteisiin"
+        },
+        "aggregatedReporting": {
+          "title": "Koottu raportointi",
+          "description": "Tarkastele yksittäisen toimipaikan suorituskykyä tai koottuja raportteja kaikista toimipaikoista.",
+          "benefit": "Näe kokonaiskuva ja yksityiskohdat"
+        },
+        "roleBasedAccess": {
+          "title": "Roolipohjainen pääsy",
+          "description": "Anna toimipaikkavastaavien käyttää vain oman ravintolansa tietoja.",
+          "benefit": "Ylläpidä turvallisuutta ja hallintaa"
+        }
+      }
+    },
+    "mobileFriendly": {
+      "title": "Mobiiliystävällinen",
+      "description": "Täydellinen kokemus jokaisella laitteella, kaikkialla",
+      "features": {
+        "responsiveDesign": {
+          "title": "Responsiivinen suunnittelu",
+          "description": "Sivustosi näyttää upealta puhelimilla, tableteilla ja pöytäkoneilla automaattisesti.",
+          "benefit": "70 % asiakkaista tilaa mobiililla"
+        },
+        "pwaSupport": {
+          "title": "PWA-tuki",
+          "description": "Progressive Web App -teknologia mahdollistaa sivustosi asentamisen kuin natiivisovellus.",
+          "benefit": "Lisää sitoutumista ja uusintatilauksia"
+        },
+        "offlineCapability": {
+          "title": "Offline-toiminnallisuus",
+          "description": "Ruokalistan selaaminen toimii myös heikolla tai puuttuvalla internet-yhteydellä.",
+          "benefit": "Älä koskaan menetä asiakasta yhteysongelmien takia"
+        },
+        "lightningFast": {
+          "title": "Salamannopea",
+          "description": "Optimoitu suorituskyky lataa sivut hetkessä jopa vanhemmilla laitteilla.",
+          "benefit": "Nopeammat sivustot konvertoivat enemmän asiakkaita"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "sectionSubtitle": "Näe ero",
+    "sectionTitle": "Miksi Helmies vs perinteinen?",
+    "sectionDescription": "Katso miten vertaudumme perinteisiin toimitusalustoihin ja tilausjärjestelmiin.",
+    "withoutHelmies": "Ilman Helmiesiä",
+    "withHelmies": "Helmiesin kanssa",
+    "viewPricing": "Katso hinnoittelusuunnitelmat",
+    "items": {
+      "setupTime": {
+        "feature": "Asennusaika",
+        "helmies": "5 minuuttia tekoälyllä",
+        "traditional": "Päiviä tai viikkoja"
+      },
+      "monthlyCost": {
+        "feature": "Kuukausikustannus",
+        "helmies": "Alkaen 29/kk",
+        "traditional": "99-299/kk"
+      },
+      "commissionOnOrders": {
+        "feature": "Provisio tilauksista",
+        "helmies": "0 %",
+        "traditional": "15-30 %"
+      },
+      "paymentProcessing": {
+        "feature": "Maksunkäsittely",
+        "helmies": "Suora Stripe - rahat tililläsi",
+        "traditional": "Alustan hallussa, maksetaan viikoittain/kuukausittain"
+      },
+      "menuManagement": {
+        "feature": "Ruokalistahallinta",
+        "helmies": "Tekoälykäyttöinen, välittömät päivitykset",
+        "traditional": "Manuaalinen syöttö, hitaat muutokset"
+      },
+      "customBranding": {
+        "feature": "Oma brändäys",
+        "helmies": "Täysi mukauttaminen tekoälyllä",
+        "traditional": "Rajoitetut mallit tai kallis räätälöinti"
+      },
+      "customerData": {
+        "feature": "Asiakasdata",
+        "helmies": "100 % sinun - täysi vienti",
+        "traditional": "Alustan omistama"
+      },
+      "multiLanguage": {
+        "feature": "Monikielisyys",
+        "helmies": "Automaattikäännös tekoälyllä",
+        "traditional": "Manuaalinen käännös tarvitaan"
+      },
+      "deliveryFees": {
+        "feature": "Toimitusmaksut",
+        "helmies": "Pidät kaiken itsellesi",
+        "traditional": "Alusta ottaa osuutensa"
+      },
+      "support": {
+        "feature": "Tuki",
+        "helmies": "24/7 suomenkielinen tuki",
+        "traditional": "Usein ulkoistettu, hidas vastaus"
+      }
+    }
+  },
+  "integrations": {
+    "sectionSubtitle": "Yhdistä kaikki",
+    "sectionTitle": "Saumattomat integraatiot",
+    "sectionDescription": "Yhdistä jo käyttämiisi työkaluihin. Maksunvälittäjistä markkinointialustoihin, meiltä löytyy ratkaisu.",
+    "categories": {
+      "payments": "Maksut",
+      "marketing": "Markkinointi",
+      "accounting": "Kirjanpito",
+      "social": "Sosiaalinen",
+      "analytics": "Analytiikka"
+    }
+  },
+  "cta": {
+    "sectionSubtitle": "Valmis kasvamaan?",
+    "sectionTitle": "Muuta ravintolasi",
+    "sectionDescription": "Liity satojen ravintoloiden joukkoon, jotka jo käyttävät Helmiesiä liiketoimintansa kasvattamiseen. Luottokorttia ei tarvita. Asennus 5 minuutissa.",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "description": "Keskimääräinen asennusaika tekoälyohjatulla asennuksella"
+      },
+      "commission": {
+        "value": "0 %",
+        "description": "Provisio jokaisesta vastaanotetusta tilauksesta"
+      },
+      "restaurants": {
+        "value": "500+",
+        "description": "Ravintoloita jo kasvussa kanssamme"
+      },
+      "support": {
+        "value": "24/7",
+        "description": "Suomenkielinen tuki aina kun tarvitset apua"
+      }
+    }
+  }
+}

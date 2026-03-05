@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "badge": "成功所需的一切",
+    "title": "为每家餐厅提供强大功能",
+    "description": "从 AI 驱动的设置到配送管理，在<strong>一个精美的平台</strong>上拥有经营成功餐厅所需的一切。",
+    "exploreFeatures": "探索功能",
+    "stats": {
+      "setupTime": {
+        "value": "5 分钟",
+        "label": "设置时间"
+      },
+      "commission": {
+        "value": "0%",
+        "label": "佣金"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "客户支持"
+      },
+      "integrations": {
+        "value": "50+",
+        "label": "集成服务"
+      }
+    },
+    "floatingIcons": {
+      "onlineOrdering": {
+        "title": "在线订餐",
+        "subtitle": "智能购物车与结账"
+      },
+      "menuManagement": {
+        "title": "菜单管理",
+        "subtitle": "AI 驱动设置"
+      },
+      "payments": {
+        "title": "支付",
+        "subtitle": "Stripe 和移动钱包"
+      },
+      "analytics": {
+        "title": "数据分析",
+        "subtitle": "数据驱动的洞察"
+      },
+      "delivery": {
+        "title": "配送",
+        "subtitle": "区域与追踪"
+      },
+      "mobileReady": {
+        "title": "移动端就绪",
+        "subtitle": "PWA 和响应式"
+      }
+    }
+  },
+  "categories": {
+    "sectionSubtitle": "综合平台",
+    "sectionTitle": "完整的餐厅平台",
+    "sectionDescription": "探索我们全面的功能套件，助力您发展餐厅业务。",
+    "onlineOrdering": {
+      "title": "在线订餐",
+      "description": "通过无缝的客户体验简化您的订餐流程",
+      "features": {
+        "smartShoppingCart": {
+          "title": "智能购物车",
+          "description": "直观的购物车，支持实时更新、数量控制和特殊说明。",
+          "benefit": "将购物车放弃率降低高达 35%"
+        },
+        "oneClickCheckout": {
+          "title": "一键结账",
+          "description": "保存客户信息，通过 Stripe 集成实现快速重复下单。",
+          "benefit": "客户完成订单速度快 3 倍"
+        },
+        "realTimeOrderTracking": {
+          "title": "实时订单跟踪",
+          "description": "从准备到配送或自取的实时订单状态更新。",
+          "benefit": "将「我的订单在哪里？」的来电减少 80%"
+        },
+        "scheduledOrdering": {
+          "title": "预约下单",
+          "description": "允许客户提前数小时或数天预约自取或配送订单。",
+          "benefit": "在非高峰时段也能获取订单"
+        },
+        "orderNotifications": {
+          "title": "订单通知",
+          "description": "新订单、更新和确认的即时短信和电子邮件提醒。",
+          "benefit": "再也不会错过任何订单"
+        }
+      }
+    },
+    "menuManagement": {
+      "title": "菜单管理",
+      "description": "借助 AI 创建和管理精美、吸引人的菜单",
+      "features": {
+        "aiPoweredMenuSetup": {
+          "title": "AI 驱动菜单设置",
+          "description": "上传照片和描述。我们的 AI 将所有内容自动分类、建议价格并创建修饰选项。",
+          "benefit": "从零到上线菜单不到 5 分钟"
+        },
+        "customModifiersOptions": {
+          "title": "自定义修饰与选项",
+          "description": "轻松添加配料、大小、烹饪偏好和特殊要求。",
+          "benefit": "将平均订单金额提高 20%"
+        },
+        "photoGalleries": {
+          "title": "图片库",
+          "description": "上传多张高质量照片，精美展示您的菜品。",
+          "benefit": "图片可将订单量提高 30%"
+        },
+        "multiLanguageMenus": {
+          "title": "多语言菜单",
+          "description": "AI 自动将您的菜单翻译为芬兰语、英语、瑞典语等语言。",
+          "benefit": "覆盖更广泛的客户群体"
+        },
+        "qrCodeMenus": {
+          "title": "二维码菜单",
+          "description": "生成可打印的二维码，用于桌旁点餐和无接触菜单。",
+          "benefit": "减少纸质菜单印刷成本"
+        }
+      }
+    },
+    "paymentProcessing": {
+      "title": "支付处理",
+      "description": "安全接受付款，即时到账",
+      "features": {
+        "stripeIntegration": {
+          "title": "Stripe 集成",
+          "description": "通过 Stripe 接受所有主流信用卡、移动钱包和本地支付方式。",
+          "benefit": "行业领先的安全性和可靠性"
+        },
+        "instantPayouts": {
+          "title": "即时到账",
+          "description": "配置每日自动转账到您的银行账户。无需等待数周才能收到款项。",
+          "benefit": "立即改善现金流"
+        },
+        "mobilePayments": {
+          "title": "移动支付",
+          "description": "接受 Apple Pay、Google Pay 和其他移动钱包，实现无缝结账。",
+          "benefit": "移动用户转化率提高 2 倍"
+        },
+        "digitalReceipts": {
+          "title": "电子收据",
+          "description": "自动发送包含订单详情和便捷重新下单链接的电子邮件收据。",
+          "benefit": "促进重复购买"
+        }
+      }
+    },
+    "deliveryManagement": {
+      "title": "配送管理",
+      "description": "掌控您的配送运营或与合作伙伴集成",
+      "features": {
+        "deliveryZones": {
+          "title": "配送区域",
+          "description": "使用基于半径或多边形区域定义自定义配送范围和独立费用。",
+          "benefit": "优化配送成本和覆盖范围"
+        },
+        "dynamicFeeCalculation": {
+          "title": "动态费用计算",
+          "description": "根据距离、订单大小或时段设置费用，支持自动调整。",
+          "benefit": "保护小订单的利润率"
+        },
+        "driverApp": {
+          "title": "骑手应用",
+          "description": "专属的骑手移动应用，具有路线优化和状态更新功能。",
+          "benefit": "完全掌控配送体验"
+        },
+        "driverManagement": {
+          "title": "骑手管理",
+          "description": "为骑手分配订单、跟踪配送并优化路线。",
+          "benefit": "完全掌控配送体验"
+        }
+      }
+    },
+    "analytics": {
+      "title": "分析与报告",
+      "description": "数据驱动的洞察助力业务增长",
+      "features": {
+        "salesAnalytics": {
+          "title": "销售分析",
+          "description": "通过精美的可视化图表跟踪收入、平均订单金额和增长趋势。",
+          "benefit": "做出数据驱动的商业决策"
+        },
+        "popularItemsReport": {
+          "title": "热门菜品报告",
+          "description": "发现畅销菜品和表现不佳的菜品，优化您的菜单。",
+          "benefit": "专注于创造利润的菜品"
+        },
+        "customerInsights": {
+          "title": "客户洞察",
+          "description": "了解客户行为、下单频率和终身价值。",
+          "benefit": "识别并留住 VIP 客户"
+        },
+        "peakHourAnalysis": {
+          "title": "高峰时段分析",
+          "description": "识别最繁忙的时段，优化人员配置和备餐。",
+          "benefit": "减少等待时间，提升服务质量"
+        }
+      }
+    },
+    "marketing": {
+      "title": "营销工具",
+      "description": "吸引新客户并促使他们再次光顾",
+      "features": {
+        "promotionsDiscounts": {
+          "title": "促销与折扣",
+          "description": "轻松创建优惠码、百分比折扣和买一送一优惠。",
+          "benefit": "在淡季拉动销售"
+        },
+        "loyaltyPrograms": {
+          "title": "会员忠诚度计划",
+          "description": "通过积分、免费菜品和专属福利奖励回头客。",
+          "benefit": "将客户留存率提高 40%"
+        },
+        "emailCampaigns": {
+          "title": "邮件营销",
+          "description": "发送有针对性的邮件活动，宣传特惠、活动和促销信息。",
+          "benefit": "直达客户收件箱"
+        },
+        "socialSharing": {
+          "title": "社交分享",
+          "description": "轻松分享到 Facebook、Instagram 和其他社交平台。",
+          "benefit": "自然扩大您的影响力"
+        }
+      }
+    },
+    "multiLocation": {
+      "title": "多门店支持",
+      "description": "在一个管理面板中管理多家餐厅",
+      "features": {
+        "centralizedManagement": {
+          "title": "集中管理",
+          "description": "从一个管理面板管理所有门店的菜单、价格和设置。",
+          "benefit": "节省大量管理工作时间"
+        },
+        "locationSpecificOptions": {
+          "title": "门店特定选项",
+          "description": "为每个门店独立自定义菜单、定价和配送区域。",
+          "benefit": "适应本地市场条件"
+        },
+        "aggregatedReporting": {
+          "title": "汇总报告",
+          "description": "查看单个门店的表现或所有门店的汇总报告。",
+          "benefit": "全局概览与细节兼顾"
+        },
+        "roleBasedAccess": {
+          "title": "基于角色的权限",
+          "description": "仅授予门店经理访问其特定餐厅数据的权限。",
+          "benefit": "保障安全和控制"
+        }
+      }
+    },
+    "mobileFriendly": {
+      "title": "移动端友好",
+      "description": "在每台设备上都有完美体验",
+      "features": {
+        "responsiveDesign": {
+          "title": "响应式设计",
+          "description": "您的网站在手机、平板和桌面设备上自动呈现完美效果。",
+          "benefit": "70% 的客户在移动端下单"
+        },
+        "pwaSupport": {
+          "title": "PWA 支持",
+          "description": "渐进式 Web 应用技术让客户可以像原生应用一样安装您的网站。",
+          "benefit": "提高参与度和重复下单率"
+        },
+        "offlineCapability": {
+          "title": "离线功能",
+          "description": "即使网络连接不佳或无网络，菜单浏览仍然可用。",
+          "benefit": "不因网络问题流失任何客户"
+        },
+        "lightningFast": {
+          "title": "极速加载",
+          "description": "优化的性能即使在旧设备上也能即时加载页面。",
+          "benefit": "更快的网站转化更多客户"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "sectionSubtitle": "看看区别",
+    "sectionTitle": "为什么选择 Helmies 而非传统方案？",
+    "sectionDescription": "看看我们与传统配送平台和订餐系统的对比。",
+    "withoutHelmies": "没有 Helmies",
+    "withHelmies": "使用 Helmies",
+    "viewPricing": "查看价格方案",
+    "items": {
+      "setupTime": {
+        "feature": "设置时间",
+        "helmies": "AI 助力 5 分钟完成",
+        "traditional": "数天到数周"
+      },
+      "monthlyCost": {
+        "feature": "月费",
+        "helmies": "29 欧元/月起",
+        "traditional": "99-299 欧元/月"
+      },
+      "commissionOnOrders": {
+        "feature": "订单佣金",
+        "helmies": "0%",
+        "traditional": "15-30%"
+      },
+      "paymentProcessing": {
+        "feature": "支付处理",
+        "helmies": "Stripe 直连 - 资金直达您的账户",
+        "traditional": "由平台持有，每周/每月结算"
+      },
+      "menuManagement": {
+        "feature": "菜单管理",
+        "helmies": "AI 驱动，即时更新",
+        "traditional": "手动输入，变更缓慢"
+      },
+      "customBranding": {
+        "feature": "自定义品牌",
+        "helmies": "AI 全面定制",
+        "traditional": "有限模板或昂贵定制"
+      },
+      "customerData": {
+        "feature": "客户数据",
+        "helmies": "100% 归您所有 - 完全可导出",
+        "traditional": "归平台所有"
+      },
+      "multiLanguage": {
+        "feature": "多语言",
+        "helmies": "AI 自动翻译",
+        "traditional": "需要手动翻译"
+      },
+      "deliveryFees": {
+        "feature": "配送费",
+        "helmies": "全部归您所有",
+        "traditional": "平台抽成"
+      },
+      "support": {
+        "feature": "客户支持",
+        "helmies": "24/7 芬兰本地支持",
+        "traditional": "通常外包，响应缓慢"
+      }
+    }
+  },
+  "integrations": {
+    "sectionSubtitle": "连接一切",
+    "sectionTitle": "无缝集成",
+    "sectionDescription": "与您已在使用的工具连接。从支付处理器到营销平台，我们一应俱全。",
+    "categories": {
+      "payments": "支付",
+      "marketing": "营销",
+      "accounting": "财务",
+      "social": "社交",
+      "analytics": "分析"
+    }
+  },
+  "cta": {
+    "sectionSubtitle": "准备好成长了吗？",
+    "sectionTitle": "转型您的餐厅",
+    "sectionDescription": "加入已使用 Helmies 发展业务的数百家餐厅。无需信用卡。5 分钟完成设置。",
+    "stats": {
+      "setupTime": {
+        "value": "5 分钟",
+        "description": "AI 驱动向导的平均设置时间"
+      },
+      "commission": {
+        "value": "0%",
+        "description": "您收到的每笔订单均零佣金"
+      },
+      "restaurants": {
+        "value": "500+",
+        "description": "已在与我们共同成长的餐厅"
+      },
+      "support": {
+        "value": "24/7",
+        "description": "需要帮助时随时提供芬兰本地支持"
+      }
+    }
+  }
+}

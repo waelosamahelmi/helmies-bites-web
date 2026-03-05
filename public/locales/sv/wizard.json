@@ -1,0 +1,340 @@
+{
+  "backToHome": "Tillbaka till startsidan",
+  "header": {
+    "subtitle": "Kom igång",
+    "title": "Ställ in din restaurang",
+    "description": "Slutför dessa steg för att lansera din restaurangwebbplats"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "Restauranginfo",
+      "description": "Berätta om din restaurang så att vi kan anpassa din upplevelse."
+    },
+    "menuUpload": {
+      "title": "Meny",
+      "description": "Ladda upp din meny och låt vår AI göra det tunga jobbet."
+    },
+    "theme": {
+      "title": "Tema",
+      "description": "Välj ett vackert tema eller låt AI skapa ett unikt för dig."
+    },
+    "domain": {
+      "title": "Domän",
+      "description": "Ställ in din webbadress och gå live på minuter."
+    },
+    "review": {
+      "title": "Granskning",
+      "description": "Granska allt innan du lanserar din restaurangwebbplats."
+    }
+  },
+  "progress": {
+    "stepOf": "Steg {{current}} av {{total}}",
+    "percentage": "{{value}} %"
+  },
+  "buttons": {
+    "previous": "Föregående",
+    "nextStep": "Nästa steg",
+    "completeSetup": "Slutför installation",
+    "settingUp": "Ställer in..."
+  },
+  "errors": {
+    "completeFailed": "Det gick inte att slutföra installationen. Vänligen försök igen."
+  },
+  "help": {
+    "text": "Behöver du hjälp? Kontakta vårt supportteam på",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "Restaurangnamn",
+      "hint": "Namnet dina kunder kommer att se",
+      "placeholder": "t.ex. Ravintola Babylon",
+      "required": "Obligatoriskt"
+    },
+    "aiGenerate": {
+      "generating": "AI genererar...",
+      "autoFill": "Fyll i automatiskt med AI"
+    },
+    "cuisine": {
+      "label": "Kökstyp",
+      "hint": "Vilken mat serverar du?",
+      "placeholder": "Välj kökstyp",
+      "options": {
+        "finnish": "Finsk",
+        "italian": "Italiensk",
+        "chinese": "Kinesisk",
+        "indian": "Indisk",
+        "thai": "Thailändsk",
+        "japanese": "Japansk",
+        "burger": "Burgare & amerikanskt",
+        "pizza": "Pizza",
+        "kebab": "Kebab",
+        "mexican": "Mexikanskt",
+        "other": "Övrigt"
+      }
+    },
+    "city": {
+      "label": "Stad",
+      "hint": "Var ligger din restaurang?",
+      "placeholder": "t.ex. Helsingfors"
+    },
+    "descriptionFi": {
+      "label": "Beskrivning (finska)",
+      "hint": "Beskriv din restaurang för finska kunder",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "Beskrivning (engelska)",
+      "hint": "Beskriv din restaurang för internationella kunder",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "E-postadress",
+      "hint": "För inloggningsuppgifter och uppdateringar",
+      "placeholder": "din@epost.com"
+    }
+  },
+  "menuUpload": {
+    "title": "Ladda upp din meny",
+    "description": "Ladda upp en PDF eller bild av din meny. Vår AI extraherar alla artiklar, priser och skapar översättningar.",
+    "dropZone": {
+      "clickToUpload": "Klicka för att ladda upp eller dra och släpp",
+      "fileTypes": "PDF, PNG, JPG upp till 10 MB",
+      "removeFile": "Ta bort fil"
+    },
+    "parsing": {
+      "inProgress": "Analyserar din meny med AI...",
+      "button": "Analysera meny med AI",
+      "chooseDifferent": "Välj en annan fil"
+    },
+    "success": {
+      "title": "Menyn analyserad!",
+      "itemsFound": "Vår AI hittade {{items}} artiklar i {{categories}} kategorier",
+      "languages": {
+        "finnish": "Finska",
+        "english": "Engelska",
+        "swedish": "Svenska"
+      }
+    },
+    "errors": {
+      "parseFailed": "Det gick inte att analysera menyn. Vänligen försök igen eller ladda upp en annan fil."
+    },
+    "supportedFormats": {
+      "title": "Filformat som stöds",
+      "description": "Vi accepterar dessa filtyper"
+    },
+    "tips": {
+      "title": "Tips för bästa resultat",
+      "tip1": "Ladda upp en tydlig, högupplöst bild eller välformaterad PDF",
+      "tip2": "Se till att priser är tydligt synliga bredvid varje artikel",
+      "tip3": "Håll kategorier (förrätter, huvudrätter osv.) välorganiserade",
+      "tip4": "Vår AI översätter automatiskt till finska, engelska och svenska"
+    },
+    "manual": {
+      "prompt": "Har du ingen digital meny?",
+      "button": "Skapa meny manuellt istället"
+    }
+  },
+  "themeSelection": {
+    "title": "Välj ditt tema",
+    "description": "Välj en design som matchar ditt varumärke",
+    "allThemes": "Alla teman",
+    "themes": {
+      "modernOrange": {
+        "name": "Modern orange",
+        "description": "Djärv och energisk"
+      },
+      "elegantDark": {
+        "name": "Elegant mörk",
+        "description": "Sofistikerad och förfinad"
+      },
+      "freshGreen": {
+        "name": "Fräsch grön",
+        "description": "Naturlig och hälsosam"
+      },
+      "oceanBlue": {
+        "name": "Havsblå",
+        "description": "Lugn och professionell"
+      },
+      "berryBlend": {
+        "name": "Bärmix",
+        "description": "Lekfull och livlig"
+      },
+      "rusticWarm": {
+        "name": "Rustik varm",
+        "description": "Mysig och inbjudande"
+      },
+      "royalPurple": {
+        "name": "Kunglig lila",
+        "description": "Lyxig och djärv"
+      },
+      "sunsetCoral": {
+        "name": "Solnedgångskorall",
+        "description": "Varm och välkomnande"
+      }
+    },
+    "aiTheme": {
+      "title": "Skapa ett unikt AI-tema",
+      "description": "Låt vår AI designa ett unikt tema baserat på din restaurangs personlighet och kök",
+      "generating": "Genererar AI-tema...",
+      "button": "Generera unikt tema (5 €)",
+      "selected": "AI-tema valt"
+    },
+    "customizeLater": {
+      "title": "Anpassa senare",
+      "description": "Inte säker? Du kan alltid ändra färger, typsnitt och layouter från din adminpanel efter installationen. Våra teman är helt anpassningsbara!"
+    }
+  },
+  "domainSetup": {
+    "title": "Välj din domäntyp",
+    "description": "Välj hur du vill att din restaurang ska nås",
+    "options": {
+      "subdomain": {
+        "title": "Gratis subdomän",
+        "description": "restaurang.helmiesbites.fi",
+        "fullDescription": "Få en gratis subdomän på vår plattform",
+        "badge": "GRATIS"
+      },
+      "custom": {
+        "title": "Egen domän",
+        "description": "din-restaurang.fi",
+        "fullDescription": "Använd ditt eget domännamn",
+        "badge": "PREMIUM"
+      },
+      "path": {
+        "title": "Gratis sökväg",
+        "description": "helmiesbites.fi/restaurang",
+        "fullDescription": "Få en gratis sökväg på vår plattform",
+        "badge": "GRATIS"
+      }
+    },
+    "subdomain": {
+      "label": "Din subdomän",
+      "hint": "Välj ett unikt namn för din restaurang",
+      "placeholder": "restaurang-namn",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "Din webbplats kommer att vara live på"
+    },
+    "customDomain": {
+      "label": "Din egna domän",
+      "hint": "Använd en domän du redan äger",
+      "placeholder": "din-restaurang.fi",
+      "premium": "Premium",
+      "dnsNote": "<strong>Efter installation:</strong> Du behöver uppdatera dina DNS-inställningar så att de pekar mot våra servrar. Vi skickar detaljerade instruktioner via e-post."
+    },
+    "path": {
+      "label": "Din sökväg",
+      "hint": "Välj en unik sökväg för din restaurang",
+      "placeholder": "restaurang-namn",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "Din webbplats kommer att vara live på"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "Omedelbar aktivering",
+        "description": "Gratis domäner är tillgängliga direkt efter installation. Ingen väntan!"
+      },
+      "upgradeAnytime": {
+        "title": "Uppgradera när som helst",
+        "description": "Du kan lägga till en egen domän senare från din adminpanel."
+      }
+    },
+    "availability": {
+      "available": "Tillgänglig!",
+      "readyForYou": "Den här adressen är redo för dig."
+    }
+  },
+  "review": {
+    "title": "Granska din restaurang",
+    "sections": {
+      "restaurantInfo": {
+        "title": "Restauranginformation",
+        "name": "Namn",
+        "cuisine": "Kök",
+        "city": "Stad"
+      },
+      "website": {
+        "title": "Webbplats",
+        "domain": "Domän",
+        "theme": "Tema",
+        "selectedTheme": "Valt tema"
+      },
+      "menu": {
+        "title": "Meny",
+        "items": "Artiklar",
+        "categories": "Kategorier",
+        "languages": "Språk",
+        "menuItems": "{{count}} menyartiklar",
+        "menuCategories": "{{count}} kategorier",
+        "languageList": "Finska, engelska, svenska"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "email": "E-post"
+      }
+    },
+    "notSet": "Ej angivet",
+    "pricing": {
+      "title": "Prisöversikt",
+      "basePlatformFee": {
+        "label": "Grundavgift",
+        "value": "5 % per onlinebeställning",
+        "description": "Betala bara när du får beställningar"
+      },
+      "cashOnDelivery": {
+        "label": "Betalning vid leverans",
+        "value": "30 €/mån",
+        "description": "Ta emot kontantbetalningar vid leverans"
+      },
+      "aiAssistant": {
+        "label": "AI-assistent",
+        "value": "10 €/mån",
+        "description": "Smart AI-kundsupport"
+      },
+      "aiImages": {
+        "label": "AI-menybilder",
+        "value": "20 €",
+        "description": "Engångsavgift för AI-genererade matbilder"
+      },
+      "aiBranding": {
+        "label": "AI-varumärke",
+        "value": "5 €",
+        "description": "Engångsavgift för AI-genererad logotyp"
+      },
+      "oneTime": "Engångs",
+      "monthlyTotal": "Månadsvis totalt",
+      "perMonth": "/mån",
+      "oneTimeCharges": "Engångsavgifter",
+      "noHiddenFees": "Inga dolda avgifter. 3 månaders uppsägningstid."
+    },
+    "readyToLaunch": {
+      "title": "Allt är klart!",
+      "description": "Klicka på \"Slutför installation\" för att lansera din restaurangwebbplats. Dina inloggningsuppgifter skickas till din e-postadress.",
+      "instantActivation": "Omedelbar aktivering",
+      "freeSSL": "Gratis SSL-certifikat",
+      "mobileResponsive": "Mobilresponsiv"
+    },
+    "payment": {
+      "title": "Betalningsinformation",
+      "description": "Du kan lägga till dina betalningsuppgifter efter installationen. Vi erbjuder olika betalningsmetoder inklusive kreditkort, autogiro och faktura.",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "Faktura"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "Finsk",
+      "italian": "Italiensk",
+      "chinese": "Kinesisk",
+      "indian": "Indisk",
+      "thai": "Thailändsk",
+      "japanese": "Japansk",
+      "burger": "Burgare & amerikanskt",
+      "pizza": "Pizza",
+      "kebab": "Kebab",
+      "mexican": "Mexikanskt"
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "backToHome": "Takaisin etusivulle",
+  "header": {
+    "subtitle": "Aloita",
+    "title": "Perusta ravintolasi",
+    "description": "Suorita nämä vaiheet julkaistaksesi ravintolasi verkkosivuston"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "Ravintolan tiedot",
+      "description": "Kerro meille ravintolastasi, jotta voimme mukauttaa kokemuksesi."
+    },
+    "menuUpload": {
+      "title": "Ruokalista",
+      "description": "Lataa ruokalistasi ja anna tekoälymme tehdä raskaan työn."
+    },
+    "theme": {
+      "title": "Teema",
+      "description": "Valitse kaunis teema tai anna tekoälyn luoda ainutlaatuinen sinulle."
+    },
+    "domain": {
+      "title": "Verkkotunnus",
+      "description": "Määritä verkko-osoitteesi ja julkaise minuuteissa."
+    },
+    "review": {
+      "title": "Tarkistus",
+      "description": "Tarkista kaikki ennen ravintolasi verkkosivuston julkaisua."
+    }
+  },
+  "progress": {
+    "stepOf": "Vaihe {{current}}/{{total}}",
+    "percentage": "{{value}} %"
+  },
+  "buttons": {
+    "previous": "Edellinen",
+    "nextStep": "Seuraava vaihe",
+    "completeSetup": "Viimeistele asennus",
+    "settingUp": "Asennetaan..."
+  },
+  "errors": {
+    "completeFailed": "Asennuksen viimeistely epäonnistui. Yritä uudelleen."
+  },
+  "help": {
+    "text": "Tarvitsetko apua? Ota yhteyttä tukitiimiimme osoitteessa",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "Ravintolan nimi",
+      "hint": "Nimi jonka asiakkaasi näkevät",
+      "placeholder": "esim. Ravintola Babylon",
+      "required": "Pakollinen"
+    },
+    "aiGenerate": {
+      "generating": "Tekoäly generoi...",
+      "autoFill": "Täytä automaattisesti tekoälyllä"
+    },
+    "cuisine": {
+      "label": "Keittiötyyppi",
+      "hint": "Millaista ruokaa tarjoat?",
+      "placeholder": "Valitse keittiötyyppi",
+      "options": {
+        "finnish": "Suomalainen",
+        "italian": "Italialainen",
+        "chinese": "Kiinalainen",
+        "indian": "Intialainen",
+        "thai": "Thaimaalainen",
+        "japanese": "Japanilainen",
+        "burger": "Burgeri & amerikkalainen",
+        "pizza": "Pizza",
+        "kebab": "Kebab",
+        "mexican": "Meksikolainen",
+        "other": "Muu"
+      }
+    },
+    "city": {
+      "label": "Kaupunki",
+      "hint": "Missä ravintolasi sijaitsee?",
+      "placeholder": "esim. Helsinki"
+    },
+    "descriptionFi": {
+      "label": "Kuvaus (suomi)",
+      "hint": "Kuvaile ravintolaasi suomalaisille asiakkaille",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "Kuvaus (englanti)",
+      "hint": "Kuvaile ravintolaasi kansainvälisille asiakkaille",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "Sähköpostiosoite",
+      "hint": "Kirjautumistietoja ja päivityksiä varten",
+      "placeholder": "sinun@sähköposti.com"
+    }
+  },
+  "menuUpload": {
+    "title": "Lataa ruokalistasi",
+    "description": "Lataa PDF tai kuva ruokalistastasi. Tekoälymme poimii kaikki annokset, hinnat ja luo käännökset.",
+    "dropZone": {
+      "clickToUpload": "Klikkaa ladataksesi tai vedä ja pudota",
+      "fileTypes": "PDF, PNG, JPG enintään 10 Mt",
+      "removeFile": "Poista tiedosto"
+    },
+    "parsing": {
+      "inProgress": "Ruokalistaasi analysoidaan tekoälyllä...",
+      "button": "Analysoi ruokalista tekoälyllä",
+      "chooseDifferent": "Valitse eri tiedosto"
+    },
+    "success": {
+      "title": "Ruokalista analysoitu onnistuneesti!",
+      "itemsFound": "Tekoälymme löysi {{items}} annosta {{categories}} kategoriasta",
+      "languages": {
+        "finnish": "Suomi",
+        "english": "Englanti",
+        "swedish": "Ruotsi"
+      }
+    },
+    "errors": {
+      "parseFailed": "Ruokalistan analysointi epäonnistui. Yritä uudelleen tai lataa eri tiedosto."
+    },
+    "supportedFormats": {
+      "title": "Tuetut tiedostomuodot",
+      "description": "Hyväksymme nämä tiedostotyypit"
+    },
+    "tips": {
+      "title": "Vinkkejä parhaisiin tuloksiin",
+      "tip1": "Lataa selkeä, korkearesoluutioinen kuva tai hyvin muotoiltu PDF",
+      "tip2": "Varmista, että hinnat näkyvät selvästi jokaisen annoksen vieressä",
+      "tip3": "Pidä kategoriat (alkupalat, pääruoat jne.) hyvin järjesteltynä",
+      "tip4": "Tekoälymme kääntää automaattisesti suomeksi, englanniksi ja ruotsiksi"
+    },
+    "manual": {
+      "prompt": "Eikö sinulla ole digitaalista ruokalistaa?",
+      "button": "Luo ruokalista manuaalisesti"
+    }
+  },
+  "themeSelection": {
+    "title": "Valitse teemasi",
+    "description": "Valitse muotoilu, joka vastaa brändiäsi",
+    "allThemes": "Kaikki teemat",
+    "themes": {
+      "modernOrange": {
+        "name": "Moderni oranssi",
+        "description": "Rohkea ja energinen"
+      },
+      "elegantDark": {
+        "name": "Elegantti tumma",
+        "description": "Hienostunut ja tyylikäs"
+      },
+      "freshGreen": {
+        "name": "Raikas vihreä",
+        "description": "Luonnollinen ja terveellinen"
+      },
+      "oceanBlue": {
+        "name": "Merensininen",
+        "description": "Rauhallinen ja ammattimainen"
+      },
+      "berryBlend": {
+        "name": "Marjasekoitus",
+        "description": "Leikkisä ja eloisa"
+      },
+      "rusticWarm": {
+        "name": "Rustiikki lämmin",
+        "description": "Kodikas ja kutsuva"
+      },
+      "royalPurple": {
+        "name": "Kuninkaallinen violetti",
+        "description": "Ylellinen ja rohkea"
+      },
+      "sunsetCoral": {
+        "name": "Auringonlaskun koralli",
+        "description": "Lämmin ja tervetullut"
+      }
+    },
+    "aiTheme": {
+      "title": "Luo ainutlaatuinen tekoälyteema",
+      "description": "Anna tekoälymme suunnitella ainutlaatuinen teema ravintolasi persoonallisuuden ja keittiön perusteella",
+      "generating": "Tekoälyteemaa luodaan...",
+      "button": "Luo ainutlaatuinen teema (5 €)",
+      "selected": "Tekoälyteema valittu"
+    },
+    "customizeLater": {
+      "title": "Mukauta myöhemmin",
+      "description": "Etkö ole varma? Voit aina muuttaa värejä, fontteja ja asetteluja hallintapaneelista asennuksen jälkeen. Teemamme ovat täysin muokattavissa!"
+    }
+  },
+  "domainSetup": {
+    "title": "Valitse verkkotunnustyyppisi",
+    "description": "Valitse miten ravintolasi löydetään verkosta",
+    "options": {
+      "subdomain": {
+        "title": "Ilmainen aliverkkotunnus",
+        "description": "ravintola.helmiesbites.fi",
+        "fullDescription": "Saat ilmaisen aliverkkotunnuksen alustaltamme",
+        "badge": "ILMAINEN"
+      },
+      "custom": {
+        "title": "Oma verkkotunnus",
+        "description": "oma-ravintola.fi",
+        "fullDescription": "Käytä omaa verkkotunnustasi",
+        "badge": "PREMIUM"
+      },
+      "path": {
+        "title": "Ilmainen polku",
+        "description": "helmiesbites.fi/ravintola",
+        "fullDescription": "Saat ilmaisen polun alustaltamme",
+        "badge": "ILMAINEN"
+      }
+    },
+    "subdomain": {
+      "label": "Aliverkkotunnuksesi",
+      "hint": "Valitse ainutlaatuinen nimi ravintolallesi",
+      "placeholder": "ravintolan-nimi",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "Verkkosivustosi on käytettävissä osoitteessa"
+    },
+    "customDomain": {
+      "label": "Oma verkkotunnuksesi",
+      "hint": "Käytä jo omistamaasi verkkotunnusta",
+      "placeholder": "oma-ravintola.fi",
+      "premium": "Premium",
+      "dnsNote": "<strong>Asennuksen jälkeen:</strong> Sinun on päivitettävä DNS-asetuksesi osoittamaan palvelimillemme. Lähetämme sinulle yksityiskohtaiset ohjeet sähköpostitse."
+    },
+    "path": {
+      "label": "Polkusi",
+      "hint": "Valitse ainutlaatuinen polku ravintolallesi",
+      "placeholder": "ravintolan-nimi",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "Verkkosivustosi on käytettävissä osoitteessa"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "Välitön aktivointi",
+        "description": "Ilmaiset verkkotunnukset ovat käytettävissä heti asennuksen jälkeen. Ei odottelua!"
+      },
+      "upgradeAnytime": {
+        "title": "Päivitä milloin tahansa",
+        "description": "Voit lisätä oman verkkotunnuksen myöhemmin hallintapaneelista."
+      }
+    },
+    "availability": {
+      "available": "Saatavilla!",
+      "readyForYou": "Tämä osoite on varattu sinulle."
+    }
+  },
+  "review": {
+    "title": "Tarkista ravintolasi",
+    "sections": {
+      "restaurantInfo": {
+        "title": "Ravintolan tiedot",
+        "name": "Nimi",
+        "cuisine": "Keittiö",
+        "city": "Kaupunki"
+      },
+      "website": {
+        "title": "Verkkosivusto",
+        "domain": "Verkkotunnus",
+        "theme": "Teema",
+        "selectedTheme": "Valittu teema"
+      },
+      "menu": {
+        "title": "Ruokalista",
+        "items": "Annokset",
+        "categories": "Kategoriat",
+        "languages": "Kielet",
+        "menuItems": "{{count}} annosta",
+        "menuCategories": "{{count}} kategoriaa",
+        "languageList": "Suomi, englanti, ruotsi"
+      },
+      "contact": {
+        "title": "Yhteystiedot",
+        "email": "Sähköposti"
+      }
+    },
+    "notSet": "Ei asetettu",
+    "pricing": {
+      "title": "Hinnoitteluyhteenveto",
+      "basePlatformFee": {
+        "label": "Perusmaksu",
+        "value": "5 % verkkotilausta kohti",
+        "description": "Maksa vain kun saat tilauksia"
+      },
+      "cashOnDelivery": {
+        "label": "Käteismaksu toimituksessa",
+        "value": "30 €/kk",
+        "description": "Vastaanota käteismaksuja toimituksessa"
+      },
+      "aiAssistant": {
+        "label": "Tekoälyavustaja",
+        "value": "10 €/kk",
+        "description": "Älykäs asiakastuen tekoäly"
+      },
+      "aiImages": {
+        "label": "Tekoälyruokakuvat",
+        "value": "20 €",
+        "description": "Kertamaksu tekoälyn luomista ruokakuvista"
+      },
+      "aiBranding": {
+        "label": "Tekoälybrändäys",
+        "value": "5 €",
+        "description": "Kertamaksu tekoälyn luomasta logosta"
+      },
+      "oneTime": "Kertamaksu",
+      "monthlyTotal": "Kuukausittainen yhteensä",
+      "perMonth": "/kk",
+      "oneTimeCharges": "Kertamaksut",
+      "noHiddenFees": "Ei piilomaksuja. 3 kuukauden irtisanomisaika."
+    },
+    "readyToLaunch": {
+      "title": "Kaikki on valmista!",
+      "description": "Klikkaa \"Viimeistele asennus\" julkaistaksesi ravintolasi verkkosivuston. Kirjautumistietosi lähetetään sähköpostiisi.",
+      "instantActivation": "Välitön aktivointi",
+      "freeSSL": "Ilmainen SSL-sertifikaatti",
+      "mobileResponsive": "Mobiiliresponsiivinen"
+    },
+    "payment": {
+      "title": "Maksutiedot",
+      "description": "Voit lisätä maksutietosi asennuksen jälkeen. Tarjoamme useita maksutapoja kuten luottokortti, suoraveloitus ja lasku.",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "Lasku"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "Suomalainen",
+      "italian": "Italialainen",
+      "chinese": "Kiinalainen",
+      "indian": "Intialainen",
+      "thai": "Thaimaalainen",
+      "japanese": "Japanilainen",
+      "burger": "Burgeri & amerikkalainen",
+      "pizza": "Pizza",
+      "kebab": "Kebab",
+      "mexican": "Meksikolainen"
+    }
+  }
+}

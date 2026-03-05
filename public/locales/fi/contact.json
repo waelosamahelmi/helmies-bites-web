@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "subtitle": "Olemme täällä auttamassa",
+    "title": "yhteyttä",
+    "titleHighlight": "Ota meihin",
+    "description": "Onko sinulla kysyttävää Helmies Bitesistä? Kuulisimme mielellämme sinusta. Lähetä meille viesti, niin vastaamme mahdollisimman pian."
+  },
+  "form": {
+    "title": "Lähetä meille viesti",
+    "subtitle": "Täytä alla oleva lomake, niin palaamme asiaan 24 tunnin kuluessa.",
+    "name": {
+      "label": "Nimesi *",
+      "placeholder": "Syötä nimesi"
+    },
+    "email": {
+      "label": "Sähköpostiosoite *",
+      "placeholder": "sinun@sähköposti.com"
+    },
+    "subject": {
+      "label": "Aihe *",
+      "placeholder": "Valitse aihe",
+      "general": "Yleinen tiedustelu",
+      "sales": "Myyntikysymys",
+      "support": "Tekninen tuki",
+      "partnership": "Yhteistyömahdollisuus",
+      "feedback": "Palaute",
+      "other": "Muu"
+    },
+    "message": {
+      "label": "Viestisi *",
+      "placeholder": "Miten voimme auttaa sinua tänään?"
+    },
+    "submit": "Lähetä viesti",
+    "submitting": "Lähetetään viestiä...",
+    "success": {
+      "title": "Viesti lähetetty onnistuneesti!",
+      "description": "Kiitos! Olemme vastaanottaneet viestisi ja vastaamme pian."
+    }
+  },
+  "contactInfo": {
+    "title": "Yhteystiedot",
+    "titleSuffix": "",
+    "emailUs": {
+      "title": "Lähetä sähköpostia",
+      "value": "support@helmiesbites.fi",
+      "description": "Vastaamme 24 tunnin kuluessa"
+    },
+    "callUs": {
+      "title": "Soita meille",
+      "value": "+358 20 123 4567",
+      "description": "Ma-Pe, 9-18 EET"
+    },
+    "visitUs": {
+      "title": "Vieraile meillä",
+      "value": "Helsinki, Suomi",
+      "description": "Punavuoren kaupunginosa"
+    }
+  },
+  "supportHours": {
+    "title": "Tukiajat",
+    "mondayFriday": {
+      "day": "Maanantai - Perjantai",
+      "hours": "9:00 - 18:00 EET"
+    },
+    "saturday": {
+      "day": "Lauantai",
+      "hours": "10:00 - 16:00 EET"
+    },
+    "sunday": {
+      "day": "Sunnuntai",
+      "hours": "Suljettu"
+    },
+    "averageResponse": "Keskimääräinen vastausaika: 24 tunnin kuluessa"
+  },
+  "liveChat": {
+    "title": "Tarvitsetko apua heti?",
+    "description": "Keskustele tukitiimimme kanssa saadaksesi nopeat vastaukset kysymyksiisi.",
+    "button": "Aloita live-chat",
+    "alertMessage": "Live-chat tulossa pian!",
+    "availability": "Saatavilla Ma-Pe, 9-18 EET"
+  },
+  "map": {
+    "city": "Helsinki, Suomi",
+    "district": "Punavuoren kaupunginosa",
+    "openInMaps": "Avaa Google Mapsissa"
+  },
+  "faqLink": {
+    "subtitle": "Yleisiä kysymyksiä",
+    "title": "nopeita vastauksia?",
+    "titleHighlight": "Etsitkö",
+    "description": "Tutustu UKK-sivuumme löytääksesi vastauksia yleisiin kysymyksiin Helmies Bitesistä.",
+    "button": "Siirry UKK-sivulle"
+  },
+  "cta": {
+    "subtitle": "Kasvetaan yhdessä",
+    "title": "aloittamaan?",
+    "titleHighlight": "Oletko valmis",
+    "description": "Liity satojen ravintoloiden joukkoon, jotka jo käyttävät Helmies Bitesiä toimintansa tehostamiseen.",
+    "noCardRequired": "Luottokorttia ei tarvita. Asennus kestää alle 5 minuuttia."
+  }
+}

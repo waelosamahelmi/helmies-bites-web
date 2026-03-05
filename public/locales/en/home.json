@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Launch in 5 minutes with AI magic",
+    "title": "Your Restaurant Website, Ready in Minutes",
+    "description": "AI-powered setup, beautiful themes, online ordering — launching soon for restaurants across Finland.",
+    "cta": "Explore Features"
+  },
+  "stats": {
+    "subtitle": "Trusted by restaurants across Finland",
+    "title": "Join 500+ Restaurants",
+    "description": "Already growing with Helmies Bites",
+    "restaurants": "Restaurants",
+    "ordersProcessed": "Orders Processed",
+    "satisfactionRate": "Satisfaction Rate",
+    "averageSetup": "Average Setup"
+  },
+  "features": {
+    "subtitle": "Powerful Features",
+    "title": "Everything You Need",
+    "description": "All the tools to run your restaurant online, in one beautiful place",
+    "aiMenuImport": {
+      "title": "AI Menu Import",
+      "description": "Upload your menu PDF and let AI extract, categorize, and translate everything automatically."
+    },
+    "beautifulThemes": {
+      "title": "Beautiful Themes",
+      "description": "Choose from stunning presets or let AI create a unique look that matches your brand."
+    },
+    "mobileOptimized": {
+      "title": "Mobile Optimized",
+      "description": "Your site looks perfect on every device. 70% of customers order from mobile."
+    },
+    "multiLanguage": {
+      "title": "Multi-Language",
+      "description": "Finnish, English, Swedish, and more - automatically translated by AI."
+    },
+    "onlineOrdering": {
+      "title": "Online Ordering",
+      "description": "Accept orders online with integrated payment processing and real-time updates."
+    },
+    "viewAll": "View All Features"
+  },
+  "howItWorks": {
+    "subtitle": "How It Works",
+    "title": "Launch in 4 Easy Steps",
+    "steps": {
+      "signUp": {
+        "title": "Sign Up & Wizard",
+        "description": "Our guided wizard walks you through every step."
+      },
+      "aiMenu": {
+        "title": "AI Menu Setup",
+        "description": "Upload your menu PDF. AI extracts everything automatically."
+      },
+      "theme": {
+        "title": "Choose Your Theme",
+        "description": "Select from beautiful presets or let AI design yours."
+      },
+      "goLive": {
+        "title": "Go Live",
+        "description": "Launch instantly and start accepting orders."
+      }
+    }
+  },
+  "integrations": {
+    "subtitle": "Built-In Integrations",
+    "title": "Everything You Need, Built In",
+    "description": "Seamless integrations with payment and delivery platforms",
+    "securePayments": {
+      "title": "Secure Payments",
+      "text": "PCI-compliant processing with industry-leading security"
+    },
+    "realTimeAnalytics": {
+      "title": "Real-time Analytics",
+      "text": "Track orders, revenue, and customer insights in real-time"
+    },
+    "deliveryIntegration": {
+      "title": "Delivery Integration",
+      "text": "Built-in delivery management with zones, fees, and tracking"
+    },
+    "withoutHelmies": "Without Helmies",
+    "withoutDesc": "Complex setup, high fees, no control",
+    "withHelmies": "With Helmies",
+    "withDesc": "5-min setup, 0% commission, full control"
+  },
+  "floating": {
+    "onlineOrders": "Online Orders",
+    "rating": "4.9/5 Rating",
+    "reviews": "500+ reviews",
+    "happyOwners": "Happy Owners"
+  },
+  "cta": {
+    "subtitle": "Coming Soon",
+    "title": "We're Launching Soon!",
+    "description": "Be among the <1>first restaurants</1> to launch with Helmies Bites. Setup takes just <3>5 minutes</3>.",
+    "viewPricing": "View Pricing",
+    "launchingSoon": "Launching Soon",
+    "launchingDate": "Be ready when we go live on March 5th, 2026"
+  }
+}

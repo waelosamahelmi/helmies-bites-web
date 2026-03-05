@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Sparkles, Palette, Check } from 'lucide-react';
 
 interface Props {
@@ -9,14 +10,15 @@ interface Props {
 
 interface Theme {
   id: string;
-  name: string;
-  description: string;
+  nameKey: string;
+  descriptionKey: string;
   gradient: string;
   previewColors: string[];
   category: string;
 }
 
 export function ThemeSelectionStep({ data, onUpdate }: Props) {
+  const { t } = useTranslation('wizard');
   const [themes, setThemes] = useState<Theme[]>([]);
   const [selectedTheme, setSelectedTheme] = useState(data.themeId || null);
   const [isGeneratingAI, setIsGeneratingAI] = useState(false);
@@ -29,64 +31,64 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
     setThemes([
       {
         id: 'modern-orange',
-        name: 'Modern Orange',
-        description: 'Bold and energetic',
+        nameKey: 'themeSelection.themes.modernOrange.name',
+        descriptionKey: 'themeSelection.themes.modernOrange.description',
         gradient: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
         previewColors: ['#f97316', '#fb923c', '#fed7aa', '#fff7ed'],
         category: 'modern',
       },
       {
         id: 'elegant-dark',
-        name: 'Elegant Dark',
-        description: 'Sophisticated and refined',
+        nameKey: 'themeSelection.themes.elegantDark.name',
+        descriptionKey: 'themeSelection.themes.elegantDark.description',
         gradient: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
         previewColors: ['#1e293b', '#334155', '#475569', '#64748b'],
         category: 'elegant',
       },
       {
         id: 'fresh-green',
-        name: 'Fresh Green',
-        description: 'Natural and healthy',
+        nameKey: 'themeSelection.themes.freshGreen.name',
+        descriptionKey: 'themeSelection.themes.freshGreen.description',
         gradient: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
         previewColors: ['#22c55e', '#4ade80', '#86efac', '#dcfce7'],
         category: 'fresh',
       },
       {
         id: 'ocean-blue',
-        name: 'Ocean Blue',
-        description: 'Calm and professional',
+        nameKey: 'themeSelection.themes.oceanBlue.name',
+        descriptionKey: 'themeSelection.themes.oceanBlue.description',
         gradient: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
         previewColors: ['#3b82f6', '#60a5fa', '#93c5fd', '#dbeafe'],
         category: 'modern',
       },
       {
         id: 'berry-blend',
-        name: 'Berry Blend',
-        description: 'Playful and vibrant',
+        nameKey: 'themeSelection.themes.berryBlend.name',
+        descriptionKey: 'themeSelection.themes.berryBlend.description',
         gradient: 'linear-gradient(135deg, #d946ef 0%, #c026d3 100%)',
         previewColors: ['#d946ef', '#e879f9', '#f0abfc', '#fae8ff'],
         category: 'vibrant',
       },
       {
         id: 'rustic-warm',
-        name: 'Rustic Warm',
-        description: 'Cozy and inviting',
+        nameKey: 'themeSelection.themes.rusticWarm.name',
+        descriptionKey: 'themeSelection.themes.rusticWarm.description',
         gradient: 'linear-gradient(135deg, #b45309 0%, #92400e 100%)',
         previewColors: ['#b45309', '#d97706', '#fbbf24', '#fef3c7'],
         category: 'rustic',
       },
       {
         id: 'royal-purple',
-        name: 'Royal Purple',
-        description: 'Luxurious and bold',
+        nameKey: 'themeSelection.themes.royalPurple.name',
+        descriptionKey: 'themeSelection.themes.royalPurple.description',
         gradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
         previewColors: ['#8b5cf6', '#a78bfa', '#c4b5fd', '#ede9fe'],
         category: 'elegant',
       },
       {
         id: 'sunset-coral',
-        name: 'Sunset Coral',
-        description: 'Warm and welcoming',
+        nameKey: 'themeSelection.themes.sunsetCoral.name',
+        descriptionKey: 'themeSelection.themes.sunsetCoral.description',
         gradient: 'linear-gradient(135deg, #f472b6 0%, #fb923c 100%)',
         previewColors: ['#f472b6', '#fda4af', '#fb923c', '#fed7aa'],
         category: 'vibrant',
@@ -119,15 +121,15 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
             <Palette className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-900">Choose Your Theme</h3>
-            <p className="text-sm text-gray-500">Select a design that matches your brand</p>
+            <h3 className="text-xl font-bold text-gray-900">{t('themeSelection.title')}</h3>
+            <p className="text-sm text-gray-500">{t('themeSelection.description')}</p>
           </div>
         </div>
 
         {/* Category Tabs */}
         <div className="flex flex-wrap gap-2 mb-6">
           <button className="px-4 py-2 rounded-full text-sm font-bold gradient-bg text-white">
-            All Themes
+            {t('themeSelection.allThemes')}
           </button>
           {categories.map((category) => (
             <button
@@ -181,8 +183,8 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
 
                 {/* Theme Info */}
                 <div className="p-4 bg-white">
-                  <p className="font-bold text-gray-900">{theme.name}</p>
-                  <p className="text-xs text-gray-500 capitalize">{theme.description}</p>
+                  <p className="font-bold text-gray-900">{t(theme.nameKey)}</p>
+                  <p className="text-xs text-gray-500 capitalize">{t(theme.descriptionKey)}</p>
                 </div>
               </button>
             );
@@ -196,9 +198,9 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
           <div className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-4">
             <Sparkles className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-xl font-bold gradient-text mb-2">Create a Unique AI Theme</h3>
+          <h3 className="text-xl font-bold gradient-text mb-2">{t('themeSelection.aiTheme.title')}</h3>
           <p className="text-gray-600 mb-6">
-            Let our AI design a one-of-a-kind theme based on your restaurant's personality and cuisine
+            {t('themeSelection.aiTheme.description')}
           </p>
           <button
             onClick={handleAIGenerate}
@@ -208,19 +210,19 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
             {isGeneratingAI ? (
               <>
                 <Loader2 className="h-5 w-5 animate-spin" />
-                Generating AI theme...
+                {t('themeSelection.aiTheme.generating')}
               </>
             ) : (
               <>
                 <Sparkles className="h-5 w-5" />
-                Generate Unique Theme (€5)
+                {t('themeSelection.aiTheme.button')}
               </>
             )}
           </button>
           {selectedTheme === 'ai-generated' && (
             <div className="mt-4 flex items-center justify-center gap-2 text-green-600 font-semibold">
               <Check className="h-5 w-5" />
-              AI theme selected
+              {t('themeSelection.aiTheme.selected')}
             </div>
           )}
         </div>
@@ -233,10 +235,9 @@ export function ThemeSelectionStep({ data, onUpdate }: Props) {
             <Palette className="h-5 w-5 text-blue-600" />
           </div>
           <div>
-            <h4 className="font-bold text-gray-900 mb-2">Customize Later</h4>
+            <h4 className="font-bold text-gray-900 mb-2">{t('themeSelection.customizeLater.title')}</h4>
             <p className="text-sm text-gray-600">
-              Not sure? You can always change colors, fonts, and layouts from your admin dashboard after setup.
-              Our themes are fully customizable!
+              {t('themeSelection.customizeLater.description')}
             </p>
           </div>
         </div>

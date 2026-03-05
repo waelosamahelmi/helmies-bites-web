@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Rocket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const LAUNCH_DATE = new Date('2026-03-05T00:00:00+02:00'); // March 5, 2026 Helsinki time
 
@@ -24,6 +25,7 @@ interface LaunchCountdownProps {
 }
 
 export function LaunchCountdown({ compact = false, showRestaurants = false, className = '' }: LaunchCountdownProps) {
+  const { t } = useTranslation('common');
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
@@ -32,10 +34,10 @@ export function LaunchCountdown({ compact = false, showRestaurants = false, clas
   }, []);
 
   const units = [
-    { label: 'Days', value: timeLeft.days },
-    { label: 'Hours', value: timeLeft.hours },
-    { label: 'Min', value: timeLeft.minutes },
-    { label: 'Sec', value: timeLeft.seconds },
+    { label: t('countdown.days'), value: timeLeft.days },
+    { label: t('countdown.hours'), value: timeLeft.hours },
+    { label: t('countdown.min'), value: timeLeft.minutes },
+    { label: t('countdown.sec'), value: timeLeft.seconds },
   ];
 
   if (compact) {
@@ -43,7 +45,7 @@ export function LaunchCountdown({ compact = false, showRestaurants = false, clas
       <div className={`flex items-center gap-3 ${className}`}>
         <Rocket className="h-4 w-4 text-[#FF7A00]" />
         <span className="text-sm font-bold text-white/70">
-          Launching in{' '}
+          {t('countdown.launchingIn')}{' '}
           <span className="text-[#FF7A00]">
             {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
           </span>
@@ -57,7 +59,7 @@ export function LaunchCountdown({ compact = false, showRestaurants = false, clas
       <div className="flex items-center gap-2 mb-4">
         <Rocket className="h-5 w-5 text-[#FF7A00]" />
         <span className="text-sm font-bold uppercase tracking-wider text-[#FF7A00]">
-          Launching March 5th
+          {t('countdown.launchingDate')}
         </span>
       </div>
 
@@ -77,7 +79,7 @@ export function LaunchCountdown({ compact = false, showRestaurants = false, clas
       {showRestaurants && (
         <div className="mt-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-white/30 mb-3">
-            Launching with
+            {t('countdown.launchingWith')}
           </p>
           <div className="flex flex-wrap gap-2">
             {['ravintolababylon.fi', 'pizzeriaantonio.fi', 'tirvankahvila.fi'].map((domain) => (

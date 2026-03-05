@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "about": "Hakkımızda",
+    "faq": "SSS",
+    "tryDemo": "Demoyu Dene",
+    "launchingDate": "5 Mart'ta Başlıyoruz",
+    "launchingDateFull": "5 Mart'ta Başlıyoruz"
+  },
+  "footer": {
+    "product": "Ürün",
+    "company": "Şirket",
+    "support": "Destek",
+    "legal": "Yasal",
+    "links": {
+      "features": "Özellikler",
+      "pricing": "Fiyatlandırma",
+      "examples": "Örnekler",
+      "integrations": "Entegrasyonlar",
+      "aboutUs": "Hakkımızda",
+      "blog": "Blog",
+      "careers": "Kariyer",
+      "helpCenter": "Yardım Merkezi",
+      "documentation": "Dokümantasyon",
+      "apiReference": "API Referansı",
+      "status": "Durum",
+      "privacyPolicy": "Gizlilik Politikası",
+      "termsOfService": "Hizmet Şartları",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Çerez Politikası"
+    },
+    "socialGroup": "Sosyal medya grubumuza katılın",
+    "newsletter": "Bültenimize abone olun",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "submit": "Gönder",
+    "copyright": "© 2026 Helmies Bites. Tüm hakları saklıdır. Finlandiya'da 💚 ile yapıldı.",
+    "launchingDate": "5 Mart'ta Başlıyoruz"
+  },
+  "countdown": {
+    "days": "Gün",
+    "hours": "Saat",
+    "min": "Dk",
+    "sec": "Sn",
+    "launchingIn": "Lansmana kalan",
+    "launchingDate": "5 Mart'ta Başlıyoruz",
+    "launchingWith": "Birlikte başlıyoruz"
+  }
+}

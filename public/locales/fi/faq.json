@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "subtitle": "Tukikeskus",
+    "titleHighlight": "Miten voimme",
+    "title": "auttaa sinua?",
+    "description": "Löydä vastauksia yleisiin kysymyksiin Helmies Bitesistä. Etkö löydä etsimääsi? Olemme täällä auttamassa!",
+    "searchPlaceholder": "Etsi vastauksia...",
+    "stats": {
+      "faqs": "UKK",
+      "categories": "Kategoriat",
+      "categoriesCount": "6",
+      "support": "Tuki",
+      "supportValue": "24/7"
+    }
+  },
+  "search": {
+    "found": "Löytyi",
+    "result": "tulos",
+    "results": "tulosta",
+    "for": "haulle"
+  },
+  "noResults": {
+    "title": "Tuloksia ei löytynyt",
+    "description_prefix": "Emme löytäneet vastauksia haulla \"",
+    "description_suffix": "\". Kokeile eri hakusanoja tai selaa alla olevia kategorioita.",
+    "clearSearch": "Tyhjennä haku"
+  },
+  "allCategories": "Kaikki kategoriat",
+  "faqsSuffix": "UKK",
+  "categories": {
+    "gettingStarted": {
+      "title": "Alkuun pääseminen",
+      "questions": {
+        "q1": {
+          "question": "Kuinka kauan ravintolan verkkosivuston perustaminen kestää?",
+          "answer": "Useimmat ravintolat voivat suorittaa alkuasennuksen vain 5 minuutissa. Tekoälykäyttöinen ohjattu asennus opastaa sinut ravintolasi tietojen syöttämisessä, ruokalistan lataamisessa ja teeman valinnassa. Asennuksen jälkeen verkkosivustosi on heti käytössä ja valmis vastaanottamaan tilauksia."
+        },
+        "q2": {
+          "question": "Tarvitsenko teknisiä taitoja?",
+          "answer": "Ei lainkaan! Helmies Bites on suunniteltu nimenomaan ravintoloitsijoille, joilla ei välttämättä ole teknistä osaamista. Intuitiivinen käyttöliittymä ja tekoälyavustus tekevät ammattimaisen verkkosivuston luomisesta helppoa ilman koodaus- tai suunnittelutaitoja."
+        },
+        "q3": {
+          "question": "Mitä tietoja minun pitää antaa asennuksen aikana?",
+          "answer": "Tarvitset ravintolasi perustiedot (nimi, osoite, yhteystiedot), ruokalistasi (voidaan ladata PDF-tiedostona — tekoälymme poimii annokset) ja haluamasi värimaailman. Siinä kaikki! Me hoidamme tekniset yksityiskohdat."
+        },
+        "q4": {
+          "question": "Voinko käyttää omaa verkkotunnustani?",
+          "answer": "Kyllä! Voit yhdistää oman verkkotunnuksesi (kuten www.sinunravintolasi.fi) Helmies Bites -verkkosivustoosi. Tarjoamme ohjeet DNS-asetusten päivittämiseen, tai voit käyttää ilmaista aliverkkotunnusta kuten sinunravintolasi.helmiesbites.fi."
+        },
+        "q5": {
+          "question": "Onko ilmainen kokeilujakso?",
+          "answer": "Ehdottomasti! Aloittamisessa ei ole ennakkomaksuja. Maksat vain 5 % palvelumaksun, kun vastaanotat verkkotilauksia alustan kautta. Tämä tarkoittaa, että voit kokeilla palveluamme täysin riskittömästi."
+        }
+      }
+    },
+    "payments": {
+      "title": "Maksut",
+      "questions": {
+        "q1": {
+          "question": "Mitä maksutapoja hyväksytte?",
+          "answer": "Integroimme suomalaisten maksunvälittäjien kuten Stripen, Paytrailin ja MobilePayn kanssa. Asiakkaasi voivat maksaa luotto-/pankkikorteilla, mobiilimaksuilla ja verkkopankkipalveluilla. Lisäämme jatkuvasti uusia maksuvaihtoehtoja asiakaspalautteen perusteella."
+        },
+        "q2": {
+          "question": "Miten saan maksut tilauksistani?",
+          "answer": "Asiakkaiden tilausten maksut siirretään suoraan pankkitilillesi. Käsittelyaika riippuu maksunvälittäjästäsi, mutta useimmat siirrot valmistuvat 1-3 arkipäivässä. 5 % palvelumaksumme vähennetään automaattisesti jokaisesta tilauksesta."
+        },
+        "q3": {
+          "question": "Mikä on palvelumaksunne?",
+          "answer": "Veloitamme yksinkertaisen 5 % palvelumaksun jokaisesta verkkotilauksesta. Tämä kattaa maksunkäsittelyn, isännöinnin, ylläpidon ja asiakastuen. Ei kuukausimaksuja, ei asennusmaksuja, ei piilomaksuja. Maksat vain kun saat tilauksia."
+        },
+        "q4": {
+          "question": "Tarvitsenko erillisen maksunvälittäjätilin?",
+          "answer": "Voimme perustaa sinulle integroidun maksunkäsittelyn, tai jos sinulla on jo Stripe- tai Paytrail-tili, voit yhdistää sen Helmies Bites -tiliisi. Molemmat vaihtoehdot ovat turvallisia ja suomalaisten maksusäännösten mukaisia."
+        },
+        "q5": {
+          "question": "Onko PCI-vaatimustenmukaisuus hoidettu?",
+          "answer": "Kyllä, hoidamme kaikki PCI-vaatimustenmukaisuuden vaatimukset sertifioitujen maksukumppaneidemme kautta. Sinun ei tarvitse huolehtia turvallisuussertifikaateista tai tietosuojastandardeista — me huolehdimme kaikesta, jotta voit keskittyä ravintolaasi."
+        }
+      }
+    },
+    "orders": {
+      "title": "Tilaukset",
+      "questions": {
+        "q1": {
+          "question": "Miten vastaanotan verkkotilauksia?",
+          "answer": "Tilaukset vastaanotetaan reaaliajassa ravintolasi hallintapaneelin kautta. Voit myös ottaa käyttöön ilmoitukset tekstiviestillä, sähköpostilla tai mobiilisovelluksellamme. Kun uusi tilaus saapuu, saat hälytyksen välittömästi kaikkine tilaustietoineen."
+        },
+        "q2": {
+          "question": "Voinko mukauttaa tilausten saatavuutta?",
+          "answer": "Kyllä! Voit asettaa aukioloaikasi, vastaanottaa tilauksia tiettyinä aikoina tai väliaikaisesti poistaa tilaukset käytöstä kun olet suljettu tai täyteen varattu. Sinulla on täysi hallinta siihen, milloin vastaanotat tilauksia."
+        },
+        "q3": {
+          "question": "Mitä tapahtuu jos minun pitää peruuttaa tilaus?",
+          "answer": "Jos sinun pitää peruuttaa tilaus, voit tehdä sen hallintapaneelista. Asiakkaalle ilmoitetaan välittömästi ja heidän maksunsa palautetaan automaattisesti. Suosittelemme ottamaan asiakkaaseen yhteyttä suoraan, jos mahdollista, tilanteen selittämiseksi."
+        },
+        "q4": {
+          "question": "Voinko tarjota noutoa ja toimitusta?",
+          "answer": "Kyllä, voit valita tarjoatko noutoa, toimitusta tai molempia. Toimitusta varten voit asettaa toimitusvyöhykkeet, maksut ja tilausten vähimmäissummat. Järjestelmämme voi myös integroitua kolmannen osapuolen toimituspalveluihin."
+        },
+        "q5": {
+          "question": "Miten erikoistoiveet käsitellään?",
+          "answer": "Asiakkaat voivat lisätä erikoistoiveita tilauksiinsa, jotka näytetään selvästi tilausten hallintapaneelissa. Voit tarkistaa nämä toiveet ja ottaa yhteyttä asiakkaaseen, jos tarvitset selvennystä ennen tilauksen valmistelua."
+        }
+      }
+    },
+    "menu": {
+      "title": "Ruokalista",
+      "questions": {
+        "q1": {
+          "question": "Miten lisään ruokalistani?",
+          "answer": "Helpoin tapa on ladata nykyinen ruokalistasi PDF-tiedostona. Tekoälymme poimii automaattisesti kaikki annokset, kuvaukset ja hinnat. Voit sitten tarkistaa ja muokata poimittuja tietoja. Vaihtoehtoisesti voit lisätä annokset manuaalisesti ruokalistaeditorimme kautta."
+        },
+        "q2": {
+          "question": "Voinko luoda useita ruokalistoja?",
+          "answer": "Kyllä! Voit luoda erilaisia ruokalistoja aamiaiselle, lounaalle, illalliselle tai erikoistilaisuuksille. Voit ajastaa milloin mikäkin ruokalista on aktiivinen, mikä tekee helpoksi tarjota eri annoksia päivän tai viikon eri aikoina."
+        },
+        "q3": {
+          "question": "Miten päivitän ruokalistan annoksia tai hintoja?",
+          "answer": "Ruokalistan päivittäminen on helppoa hallintapaneelin kautta. Siirry ruokalistallesi, klikkaa muokattavaa annosta, tee muutokset ja tallenna. Muutokset näkyvät heti live-verkkosivustollasi."
+        },
+        "q4": {
+          "question": "Voinko lisätä kuvia annoksiin?",
+          "answer": "Ehdottomasti! Kuvien lisääminen tekee ruokalistastasi houkuttelevamman ja voi lisätä tilauksia. Voit ladata useita kuvia jokaisesta annoksesta, ja järjestelmämme optimoi ne automaattisesti verkkokäyttöön ja nopeaan lataamiseen."
+        },
+        "q5": {
+          "question": "Miten ruokalistan käännös toimii?",
+          "answer": "Tekoälymme voi automaattisesti kääntää ruokalistasi suomeksi, ruotsiksi, englanniksi ja muille kielille. Voit tarkistaa ja muokata käännöksiä tarkkuuden varmistamiseksi. Monikieliset ruokalistat auttavat palvelemaan laajempaa asiakaskuntaa."
+        }
+      }
+    },
+    "technical": {
+      "title": "Tekniset",
+      "questions": {
+        "q1": {
+          "question": "Onko verkkosivustoni mobiiliystävällinen?",
+          "answer": "Kyllä, jokainen Helmies Bites -verkkosivusto on täysin responsiivinen ja optimoitu mobiililaitteille. Sivustosi näyttää hyvältä ja toimii moitteettomasti älypuhelimilla, tableteilla ja pöytätietokoneilla."
+        },
+        "q2": {
+          "question": "Kuinka luotettava alusta on?",
+          "answer": "Ylläpidämme 99,9 % käytettävyyttä pilvipohjaisen infrastruktuurimme avulla. Verkkosivustosi isännöidään turvallisilla palvelimilla automaattisilla varmuuskopioilla. Hoidamme kaikki ylläpito- ja päivitystoimet, joten sinun ei tarvitse huolehtia teknisistä ongelmista."
+        },
+        "q3": {
+          "question": "Voinko integroida sosiaalisen median kanssa?",
+          "answer": "Kyllä, voit helposti linkittää verkkosivustosi sosiaalisen median profiileihisi ja lisätä sosiaalisen jakamisen painikkeet. Tarjoamme myös työkaluja, jotka auttavat mainostamaan ruokalistaasi ja erikoistarjouksiasi alustoilla kuten Instagram ja Facebook."
+        },
+        "q4": {
+          "question": "Mitä analytiikkaa on saatavilla?",
+          "answer": "Hallintapaneelissasi on analytiikkaa, joka näyttää tilaushistorian, suositut annokset, liikevaihdon trendit ja asiakastiedot. Nämä oivallukset auttavat tekemään datalähtöisiä päätöksiä ruokalistastasi ja markkinoinnistasi."
+        },
+        "q5": {
+          "question": "Onko tietoni turvassa?",
+          "answer": "Turvallisuus on tärkein prioriteettimme. Käytämme alan standardien mukaista salausta, noudatamme GDPR-säännöksiä ja käymme läpi säännöllisiä tietoturva-auditointeja. Tietosi ja asiakkaidesi tiedot ovat aina suojattuja."
+        }
+      }
+    },
+    "billing": {
+      "title": "Laskutus",
+      "questions": {
+        "q1": {
+          "question": "Onko kuukausimaksuja?",
+          "answer": "Ei, kuukausimaksuja tai tilauksia ei ole. Maksat vain 5 % palvelumaksumme kun vastaanotat verkkotilauksia. Tämä tarkoittaa, että jos et saa tilauksia kuukaudessa, et maksa mitään kyseiseltä kuukaudelta."
+        },
+        "q2": {
+          "question": "Miten tarkastelen laskutushistoriaani?",
+          "answer": "Laskutushistoriasi on saatavilla hallintapaneelissasi. Voit tarkastella yksityiskohtaisia raportteja kaikista kerätyistä maksuista, ladata laskuja ja seurata liikevaihtoasi ajan mittaan."
+        },
+        "q3": {
+          "question": "Onko tietyistä ominaisuuksista lisämaksuja?",
+          "answer": "Vakiohinnoittelumme sisältää kaikki ydinominaisuudet. Jotkut premium-lisäosat kuten käteismaksu toimituksessa (+30/kk) tai tekoälyavustaja (+10/kk) ovat saatavilla lisämaksusta, mutta ne ovat täysin valinnaisia."
+        },
+        "q4": {
+          "question": "Voinko saada palvelumaksusta hyvityksen?",
+          "answer": "Palvelumaksuja ei pääsääntöisesti palauteta, koska ne kattavat maksunkäsittelyn ja alustan käytön. Jos kuitenkin uskot, että maksu on veloitettu virheellisesti, ota yhteyttä tukitiimiimme ja käymme tapauksesi läpi."
+        },
+        "q5": {
+          "question": "Tarjoatteko yrityssuunnitelmia?",
+          "answer": "Suurille ravintolaketjuille tai -ryhmille voimme keskustella räätälöidystä hinnoittelusta. Ota yhteyttä myyntitiimiimme keskustellaksesi erityistarpeistasi, niin luomme sinulle sopivan suunnitelman."
+        }
+      }
+    }
+  },
+  "stillHaveQuestions": {
+    "title": "Onko sinulla vielä kysyttävää?",
+    "description": "Etkö löydä vastausta kysymykseesi? Ystävällinen tukitiimimme auttaa sinua pääsemään alkuun.",
+    "contactSupport": "Ota yhteyttä tukeen",
+    "emailUs": "Lähetä sähköpostia",
+    "trustIndicators": {
+      "fastResponse": "Nopea vastaus",
+      "expertHelp": "Asiantuntija-apu",
+      "freeSupport": "Ilmainen tuki"
+    }
+  },
+  "bottomCta": {
+    "subtitle": "Aloita tänään",
+    "titleHighlight": "Muuta",
+    "title": "ravintolasi",
+    "description": "Liity satojen ravintoloiden joukkoon, jotka jo käyttävät Helmies Bitesiä. Asennus kestää vain 5 minuuttia ja maksat vain kun saat tilauksia."
+  }
+}

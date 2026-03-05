@@ -1,0 +1,340 @@
+{
+  "backToHome": "Back to Home",
+  "header": {
+    "subtitle": "Get Started",
+    "title": "Setup Your Restaurant",
+    "description": "Complete these steps to launch your restaurant website"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "Restaurant Info",
+      "description": "Tell us about your restaurant so we can personalize your experience."
+    },
+    "menuUpload": {
+      "title": "Menu",
+      "description": "Upload your menu and let our AI do the heavy lifting."
+    },
+    "theme": {
+      "title": "Theme",
+      "description": "Choose a beautiful theme or let AI create one unique to you."
+    },
+    "domain": {
+      "title": "Domain",
+      "description": "Set up your web address and go live in minutes."
+    },
+    "review": {
+      "title": "Review",
+      "description": "Review everything before launching your restaurant website."
+    }
+  },
+  "progress": {
+    "stepOf": "Step {{current}} of {{total}}",
+    "percentage": "{{value}}%"
+  },
+  "buttons": {
+    "previous": "Previous",
+    "nextStep": "Next Step",
+    "completeSetup": "Complete Setup",
+    "settingUp": "Setting up..."
+  },
+  "errors": {
+    "completeFailed": "Failed to complete setup. Please try again."
+  },
+  "help": {
+    "text": "Need help? Contact our support team at",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "Restaurant Name",
+      "hint": "The name your customers will see",
+      "placeholder": "e.g., Ravintola Babylon",
+      "required": "Required"
+    },
+    "aiGenerate": {
+      "generating": "AI is generating...",
+      "autoFill": "Auto-fill with AI"
+    },
+    "cuisine": {
+      "label": "Cuisine Type",
+      "hint": "What food do you serve?",
+      "placeholder": "Select cuisine type",
+      "options": {
+        "finnish": "Finnish",
+        "italian": "Italian",
+        "chinese": "Chinese",
+        "indian": "Indian",
+        "thai": "Thai",
+        "japanese": "Japanese",
+        "burger": "Burger & American",
+        "pizza": "Pizza",
+        "kebab": "Kebab",
+        "mexican": "Mexican",
+        "other": "Other"
+      }
+    },
+    "city": {
+      "label": "City",
+      "hint": "Where is your restaurant?",
+      "placeholder": "e.g., Helsinki"
+    },
+    "descriptionFi": {
+      "label": "Description (Finnish)",
+      "hint": "Describe your restaurant to Finnish customers",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "Description (English)",
+      "hint": "Describe your restaurant to international customers",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "Email Address",
+      "hint": "For login credentials and updates",
+      "placeholder": "your@email.com"
+    }
+  },
+  "menuUpload": {
+    "title": "Upload Your Menu",
+    "description": "Upload a PDF or image of your menu. Our AI will extract all items, prices, and create translations.",
+    "dropZone": {
+      "clickToUpload": "Click to upload or drag and drop",
+      "fileTypes": "PDF, PNG, JPG up to 10MB",
+      "removeFile": "Remove file"
+    },
+    "parsing": {
+      "inProgress": "Parsing your menu with AI...",
+      "button": "Parse Menu with AI",
+      "chooseDifferent": "Choose Different File"
+    },
+    "success": {
+      "title": "Menu Parsed Successfully!",
+      "itemsFound": "Our AI found {{items}} items in {{categories}} categories",
+      "languages": {
+        "finnish": "Finnish",
+        "english": "English",
+        "swedish": "Swedish"
+      }
+    },
+    "errors": {
+      "parseFailed": "Failed to parse menu. Please try again or upload a different file."
+    },
+    "supportedFormats": {
+      "title": "Supported Formats",
+      "description": "We accept these file types"
+    },
+    "tips": {
+      "title": "Tips for Best Results",
+      "tip1": "Upload a clear, high-resolution image or well-formatted PDF",
+      "tip2": "Ensure prices are clearly visible next to each item",
+      "tip3": "Keep categories (appetizers, mains, etc.) well organized",
+      "tip4": "Our AI will automatically translate to Finnish, English, and Swedish"
+    },
+    "manual": {
+      "prompt": "Don't have a digital menu?",
+      "button": "Create Menu Manually Instead"
+    }
+  },
+  "themeSelection": {
+    "title": "Choose Your Theme",
+    "description": "Select a design that matches your brand",
+    "allThemes": "All Themes",
+    "themes": {
+      "modernOrange": {
+        "name": "Modern Orange",
+        "description": "Bold and energetic"
+      },
+      "elegantDark": {
+        "name": "Elegant Dark",
+        "description": "Sophisticated and refined"
+      },
+      "freshGreen": {
+        "name": "Fresh Green",
+        "description": "Natural and healthy"
+      },
+      "oceanBlue": {
+        "name": "Ocean Blue",
+        "description": "Calm and professional"
+      },
+      "berryBlend": {
+        "name": "Berry Blend",
+        "description": "Playful and vibrant"
+      },
+      "rusticWarm": {
+        "name": "Rustic Warm",
+        "description": "Cozy and inviting"
+      },
+      "royalPurple": {
+        "name": "Royal Purple",
+        "description": "Luxurious and bold"
+      },
+      "sunsetCoral": {
+        "name": "Sunset Coral",
+        "description": "Warm and welcoming"
+      }
+    },
+    "aiTheme": {
+      "title": "Create a Unique AI Theme",
+      "description": "Let our AI design a one-of-a-kind theme based on your restaurant's personality and cuisine",
+      "generating": "Generating AI theme...",
+      "button": "Generate Unique Theme (\u20ac5)",
+      "selected": "AI theme selected"
+    },
+    "customizeLater": {
+      "title": "Customize Later",
+      "description": "Not sure? You can always change colors, fonts, and layouts from your admin dashboard after setup. Our themes are fully customizable!"
+    }
+  },
+  "domainSetup": {
+    "title": "Choose Your Domain Type",
+    "description": "Select how you want your restaurant to be accessed",
+    "options": {
+      "subdomain": {
+        "title": "Free Subdomain",
+        "description": "restaurant.helmiesbites.fi",
+        "fullDescription": "Get a free subdomain on our platform",
+        "badge": "FREE"
+      },
+      "custom": {
+        "title": "Custom Domain",
+        "description": "your-restaurant.fi",
+        "fullDescription": "Use your own domain name",
+        "badge": "PREMIUM"
+      },
+      "path": {
+        "title": "Free Path",
+        "description": "helmiesbites.fi/restaurant",
+        "fullDescription": "Get a free path on our platform",
+        "badge": "FREE"
+      }
+    },
+    "subdomain": {
+      "label": "Your Subdomain",
+      "hint": "Choose a unique name for your restaurant",
+      "placeholder": "restaurant-name",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "Your website will be live at"
+    },
+    "customDomain": {
+      "label": "Your Custom Domain",
+      "hint": "Use a domain you already own",
+      "placeholder": "your-restaurant.fi",
+      "premium": "Premium",
+      "dnsNote": "<strong>After setup:</strong> You'll need to update your DNS settings to point to our servers. We'll send you detailed instructions via email."
+    },
+    "path": {
+      "label": "Your Path",
+      "hint": "Choose a unique path for your restaurant",
+      "placeholder": "restaurant-name",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "Your website will be live at"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "Instant Activation",
+        "description": "Free domains are available immediately after setup. No waiting required!"
+      },
+      "upgradeAnytime": {
+        "title": "Upgrade Anytime",
+        "description": "You can add a custom domain later from your admin dashboard."
+      }
+    },
+    "availability": {
+      "available": "Available!",
+      "readyForYou": "This address is ready for you."
+    }
+  },
+  "review": {
+    "title": "Review Your Restaurant",
+    "sections": {
+      "restaurantInfo": {
+        "title": "Restaurant Information",
+        "name": "Name",
+        "cuisine": "Cuisine",
+        "city": "City"
+      },
+      "website": {
+        "title": "Website",
+        "domain": "Domain",
+        "theme": "Theme",
+        "selectedTheme": "Selected theme"
+      },
+      "menu": {
+        "title": "Menu",
+        "items": "Items",
+        "categories": "Categories",
+        "languages": "Languages",
+        "menuItems": "{{count}} menu items",
+        "menuCategories": "{{count}} categories",
+        "languageList": "Finnish, English, Swedish"
+      },
+      "contact": {
+        "title": "Contact",
+        "email": "Email"
+      }
+    },
+    "notSet": "Not set",
+    "pricing": {
+      "title": "Pricing Summary",
+      "basePlatformFee": {
+        "label": "Base Platform Fee",
+        "value": "5% per online order",
+        "description": "Only pay when you get orders"
+      },
+      "cashOnDelivery": {
+        "label": "Cash on Delivery",
+        "value": "\u20ac30/month",
+        "description": "Accept cash payments on delivery"
+      },
+      "aiAssistant": {
+        "label": "AI Assistant",
+        "value": "\u20ac10/month",
+        "description": "Smart customer support AI"
+      },
+      "aiImages": {
+        "label": "AI Menu Images",
+        "value": "\u20ac20",
+        "description": "One-time fee for AI-generated food images"
+      },
+      "aiBranding": {
+        "label": "AI Branding",
+        "value": "\u20ac5",
+        "description": "One-time fee for AI-generated logo"
+      },
+      "oneTime": "One-time",
+      "monthlyTotal": "Monthly Total",
+      "perMonth": "/mo",
+      "oneTimeCharges": "One-time charges",
+      "noHiddenFees": "No hidden fees. 3-month cancellation notice."
+    },
+    "readyToLaunch": {
+      "title": "You're All Set!",
+      "description": "Click \"Complete Setup\" to launch your restaurant website. Your login credentials will be sent to your email address.",
+      "instantActivation": "Instant activation",
+      "freeSSL": "Free SSL certificate",
+      "mobileResponsive": "Mobile responsive"
+    },
+    "payment": {
+      "title": "Payment Information",
+      "description": "You can add your payment details after setup. We offer various payment methods including credit card, direct debit, and invoice.",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "Invoice"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "Finnish",
+      "italian": "Italian",
+      "chinese": "Chinese",
+      "indian": "Indian",
+      "thai": "Thai",
+      "japanese": "Japanese",
+      "burger": "Burger & American",
+      "pizza": "Pizza",
+      "kebab": "Kebab",
+      "mexican": "Mexican"
+    }
+  }
+}

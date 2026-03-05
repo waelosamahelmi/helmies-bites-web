@@ -1,29 +1,32 @@
 import { Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation('common');
+
   const footerLinks = {
     product: [
-      { name: 'Features', href: '/features' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Examples', href: '#' },
-      { name: 'Integrations', href: '/features#integrations' },
+      { name: t('footer.links.features'), href: '/features' },
+      { name: t('footer.links.pricing'), href: '/pricing' },
+      { name: t('footer.links.examples'), href: '#' },
+      { name: t('footer.links.integrations'), href: '/features#integrations' },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Blog', href: '#' },
-      { name: 'Careers', href: '#' },
+      { name: t('footer.links.aboutUs'), href: '/about' },
+      { name: t('footer.links.blog'), href: '#' },
+      { name: t('footer.links.careers'), href: '#' },
     ],
     support: [
-      { name: 'Help Center', href: '/faq' },
-      { name: 'Documentation', href: '#' },
-      { name: 'API Reference', href: '#' },
-      { name: 'Status', href: '#' },
+      { name: t('footer.links.helpCenter'), href: '/faq' },
+      { name: t('footer.links.documentation'), href: '#' },
+      { name: t('footer.links.apiReference'), href: '#' },
+      { name: t('footer.links.status'), href: '#' },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'GDPR', href: '/gdpr' },
-      { name: 'Cookie Policy', href: '/cookies' },
+      { name: t('footer.links.privacyPolicy'), href: '/privacy' },
+      { name: t('footer.links.termsOfService'), href: '/terms' },
+      { name: t('footer.links.gdpr'), href: '/gdpr' },
+      { name: t('footer.links.cookiePolicy'), href: '/cookies' },
     ],
   };
 
@@ -69,13 +72,18 @@ export function Footer() {
         {/* Nav Links Bar */}
         <div className="max-w-7xl mx-auto px-6 pt-16 pb-8">
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-12">
-            {['Features', 'Pricing', 'About', 'FAQ'].map((item) => (
+            {[
+              { label: t('nav.features'), path: '/features' },
+              { label: t('nav.pricing'), path: '/pricing' },
+              { label: t('nav.about'), path: '/about' },
+              { label: t('nav.faq'), path: '/faq' },
+            ].map((item) => (
               <a
-                key={item}
-                href={`/${item.toLowerCase()}`}
+                key={item.path}
+                href={item.path}
                 className="text-white/60 hover:text-[#FF7A00] transition-colors duration-300 font-semibold text-sm tracking-wide"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
@@ -87,7 +95,7 @@ export function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Social Media */}
               <div>
-                <p className="text-white/50 text-sm font-semibold uppercase tracking-wider mb-4">Join our social group</p>
+                <p className="text-white/50 text-sm font-semibold uppercase tracking-wider mb-4">{t('footer.socialGroup')}</p>
                 <div className="flex items-center gap-3">
                   {socialLinks.map((social) => (
                     <a
@@ -104,15 +112,15 @@ export function Footer() {
 
               {/* Newsletter */}
               <div className="md:col-span-1">
-                <p className="text-white/50 text-sm font-semibold uppercase tracking-wider mb-4">Subscribe to our newsletter</p>
+                <p className="text-white/50 text-sm font-semibold uppercase tracking-wider mb-4">{t('footer.newsletter')}</p>
                 <form className="flex gap-2">
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t('footer.emailPlaceholder')}
                     className="input-modern flex-1 !py-3 !px-4 !rounded-full text-sm"
                   />
                   <button type="submit" className="btn-primary !py-3 !px-6 text-sm whitespace-nowrap">
-                    <span className="relative z-10">Submit</span>
+                    <span className="relative z-10">{t('footer.submit')}</span>
                   </button>
                 </form>
               </div>
@@ -125,7 +133,7 @@ export function Footer() {
                     <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
                     <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
                   </svg>
-                  <span className="text-sm font-bold text-[#FF7A00]">Launching March 5th</span>
+                  <span className="text-sm font-bold text-[#FF7A00]">{t('footer.launchingDate')}</span>
                 </div>
               </div>
             </div>
@@ -136,7 +144,7 @@ export function Footer() {
             {Object.entries(footerLinks).map(([title, links]) => (
               <div key={title}>
                 <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-6">
-                  {title.charAt(0).toUpperCase() + title.slice(1)}
+                  {t(`footer.${title}`)}
                 </h4>
                 <ul className="space-y-3">
                   {links.map((link) => (
@@ -157,7 +165,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-white/30 text-sm">
-              © 2026 Helmies Bites. All rights reserved. Made with 💚 in Finland.
+              {t('footer.copyright')}
             </p>
             <div className="flex items-center gap-6">
               <a

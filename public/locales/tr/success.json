@@ -1,0 +1,10 @@
+{
+  "noData": "Kurulum verileri bulunamadı. Lütfen önce kurulum sihirbazını tamamlayın.",
+  "title": "Helmies Bites'a Hoş Geldiniz!",
+  "subtitle": "Restoranınızın web sitesi yayında ve sipariş almaya hazır",
+  "websiteLive": "Web Siteniz Yayında",
+  "yourWebsite": "Web Siteniz",
+  "adminDashboard": "Yönetim Paneli",
+  "credentials": "<strong>Giriş bilgileriniz e-posta adresinize gönderildi.</strong> Kullanıcı adınız ve şifreniz için gelen kutunuzu kontrol edin.",
+  "contactUs": "Sorularınız mı var? Bize ulaşın: support@helmiesbites.fi"
+}

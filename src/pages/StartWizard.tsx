@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { ChevronLeft, ChevronRight, Loader2, Check, ArrowUpRight, Rocket } from 'lucide-react';
 import { api } from '@/lib/api';
 import { SectionTitle } from '@/components/SectionTitle';
@@ -9,12 +10,12 @@ import { ThemeSelectionStep } from '@/components/wizard-steps/ThemeSelectionStep
 import { DomainSetupStep } from '@/components/wizard-steps/DomainSetupStep';
 import { ReviewConfirmStep } from '@/components/wizard-steps/ReviewConfirmStep';
 
-const steps = [
-  { id: 'restaurant-info', title: 'Restaurant Info', icon: 'store' },
-  { id: 'menu-upload', title: 'Menu', icon: 'menu' },
-  { id: 'theme', title: 'Theme', icon: 'palette' },
-  { id: 'domain', title: 'Domain', icon: 'globe' },
-  { id: 'review', title: 'Review', icon: 'check' },
+const stepKeys = [
+  { id: 'restaurant-info', titleKey: 'steps.restaurantInfo.title', descriptionKey: 'steps.restaurantInfo.description', icon: 'store' },
+  { id: 'menu-upload', titleKey: 'steps.menuUpload.title', descriptionKey: 'steps.menuUpload.description', icon: 'menu' },
+  { id: 'theme', titleKey: 'steps.theme.title', descriptionKey: 'steps.theme.description', icon: 'palette' },
+  { id: 'domain', titleKey: 'steps.domain.title', descriptionKey: 'steps.domain.description', icon: 'globe' },
+  { id: 'review', titleKey: 'steps.review.title', descriptionKey: 'steps.review.description', icon: 'check' },
 ];
 
 const stepComponents: Record<string, React.ComponentType<any>> = {
@@ -54,20 +55,21 @@ const stepIcons: Record<string, React.ReactNode> = {
 };
 
 export function StartWizard() {
+  const { t } = useTranslation('wizard');
   const navigate = useNavigate();
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [wizardData, setWizardData] = useState<any>({});
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const CurrentStepComponent = stepComponents[steps[currentStepIndex].id];
+  const CurrentStepComponent = stepComponents[stepKeys[currentStepIndex].id];
 
   const updateData = (newData: any) => {
     setWizardData((prev: any) => ({ ...prev, ...newData }));
   };
 
   const goToNextStep = () => {
-    if (currentStepIndex < steps.length - 1) {
+    if (currentStepIndex < stepKeys.length - 1) {
       setCurrentStepIndex(prev => prev + 1);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -98,13 +100,13 @@ export function StartWizard() {
       navigate('/success', { state: result });
     } catch (error) {
       console.error('Failed to complete wizard:', error);
-      alert('Failed to complete setup. Please try again.');
+      alert(t('errors.completeFailed'));
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const progress = ((currentStepIndex + 1) / steps.length) * 100;
+  const progress = ((currentStepIndex + 1) / stepKeys.length) * 100;
 
   return (
     <div className="min-h-screen hero-gradient pt-24 pb-12 px-4">
@@ -116,15 +118,15 @@ export function StartWizard() {
             className="inline-flex items-center gap-2 text-white/60 hover:text-[#FF7A00] transition-colors font-semibold"
           >
             <ChevronLeft className="h-5 w-5" />
-            Back to Home
+            {t('backToHome')}
           </button>
         </div>
 
         {/* Header - SectionTitle */}
         <SectionTitle
-          subtitle="Get Started"
-          title="Setup Your Restaurant"
-          description="Complete these steps to launch your restaurant website"
+          subtitle={t('header.subtitle')}
+          title={t('header.title')}
+          description={t('header.description')}
           icon={<Rocket className="h-4 w-4" />}
           className="mb-10"
         />
@@ -138,12 +140,12 @@ export function StartWizard() {
             {/* Active Progress Line */}
             <div
               className="absolute top-1/2 left-0 h-1 gradient-bg -translate-y-1/2 rounded-full transition-all duration-500 ease-out"
-              style={{ width: `${((steps.length - 1) > 0 ? (currentStepIndex / (steps.length - 1)) : 1) * 100}%` }}
+              style={{ width: `${((stepKeys.length - 1) > 0 ? (currentStepIndex / (stepKeys.length - 1)) : 1) * 100}%` }}
             />
 
             {/* Step Indicators */}
             <div className="relative flex justify-between">
-              {steps.map((step, index) => {
+              {stepKeys.map((step, index) => {
                 const isCompleted = index < currentStepIndex;
                 const isCurrent = index === currentStepIndex;
                 const isClickable = index <= currentStepIndex;
@@ -180,7 +182,7 @@ export function StartWizard() {
                         isCurrent ? 'text-[#FF7A00]' : isCompleted ? 'text-white/60' : 'text-white/40'
                       }`}
                     >
-                      {step.title}
+                      {t(step.titleKey)}
                     </span>
                   </button>
                 );
@@ -191,8 +193,8 @@ export function StartWizard() {
           {/* Progress Bar (Mobile) */}
           <div className="mt-6 sm:hidden">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-sm font-semibold text-white/60">Step {currentStepIndex + 1} of {steps.length}</span>
-              <span className="text-sm font-bold gradient-text">{Math.round(progress)}%</span>
+              <span className="text-sm font-semibold text-white/60">{t('progress.stepOf', { current: currentStepIndex + 1, total: stepKeys.length })}</span>
+              <span className="text-sm font-bold gradient-text">{t('progress.percentage', { value: Math.round(progress) })}</span>
             </div>
             <div className="h-2 bg-[#2A1F15]/40 rounded-full overflow-hidden">
               <div
@@ -208,14 +210,14 @@ export function StartWizard() {
           <div className="mb-8">
             <div className="flex items-center gap-3 mb-2">
               <div className="feature-icon w-12 h-12">
-                {stepIcons[steps[currentStepIndex].icon]}
+                {stepIcons[stepKeys[currentStepIndex].icon]}
               </div>
               <h2 className="text-2xl md:text-3xl font-black text-white">
-                {steps[currentStepIndex].title}
+                {t(stepKeys[currentStepIndex].titleKey)}
               </h2>
             </div>
             <p className="text-white/60 ml-15 mt-2">
-              {getStepDescription(steps[currentStepIndex].id)}
+              {t(stepKeys[currentStepIndex].descriptionKey)}
             </p>
           </div>
 
@@ -236,11 +238,11 @@ export function StartWizard() {
             className="btn-secondary disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 font-bold"
           >
             <ChevronLeft className="h-5 w-5" />
-            Previous
+            {t('buttons.previous')}
           </button>
 
           {/* Next / Complete - aivora-btn style */}
-          {currentStepIndex === steps.length - 1 ? (
+          {currentStepIndex === stepKeys.length - 1 ? (
             <button
               onClick={handleComplete}
               disabled={isSubmitting}
@@ -250,10 +252,10 @@ export function StartWizard() {
                 {isSubmitting ? (
                   <span className="flex items-center gap-2">
                     <Loader2 className="h-5 w-5 animate-spin" />
-                    Setting up...
+                    {t('buttons.settingUp')}
                   </span>
                 ) : (
-                  'Complete Setup'
+                  t('buttons.completeSetup')
                 )}
               </span>
               <span className="arrow-icon">
@@ -297,7 +299,7 @@ export function StartWizard() {
               onClick={goToNextStep}
               className="aivora-btn"
             >
-              <span className="relative z-10">Next Step</span>
+              <span className="relative z-10">{t('buttons.nextStep')}</span>
               <span className="arrow-icon">
                 <ChevronRight className="h-5 w-5 text-white" />
                 <ChevronRight className="h-5 w-5 text-white" />
@@ -334,24 +336,13 @@ export function StartWizard() {
         {/* Help Text */}
         <div className="text-center mt-8">
           <p className="text-sm text-white/50">
-            Need help? Contact our support team at{' '}
+            {t('help.text')}{' '}
             <a href="mailto:support@helmiesbites.fi" className="text-[#FF7A00] font-semibold hover:underline">
-              support@helmiesbites.fi
+              {t('help.email')}
             </a>
           </p>
         </div>
       </div>
     </div>
   );
-}
-
-function getStepDescription(stepId: string): string {
-  const descriptions: Record<string, string> = {
-    'restaurant-info': 'Tell us about your restaurant so we can personalize your experience.',
-    'menu-upload': 'Upload your menu and let our AI do the heavy lifting.',
-    'theme': 'Choose a beautiful theme or let AI create one unique to you.',
-    'domain': 'Set up your web address and go live in minutes.',
-    'review': 'Review everything before launching your restaurant website.',
-  };
-  return descriptions[stepId] || '';
 }

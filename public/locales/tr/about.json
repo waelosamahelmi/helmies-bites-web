@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "subtitle": "Hakkımızda",
+    "title": "erişilebilir kılıyoruz",
+    "titleHighlight": "Restoran teknolojisini",
+    "description": "Her restoranın, büyüklüğünden veya teknik bilgisinden bağımsız olarak, güzel bir online varlığı hak ettiğine inanıyoruz."
+  },
+  "story": {
+    "subtitle": "Hikayemiz",
+    "title": "büyük fikirlere",
+    "titleHighlight": "Küçük bir mutfaktan",
+    "imageAlt": "Restoran mutfağı",
+    "launchYear": "2026",
+    "launchLabel": "Şimdi başlıyoruz",
+    "paragraph1": "Helmies Bites basit bir gözlemden doğdu: teknoloji birçok sektörü dönüştürmüş olsa da, çoğu restoran hâlâ güçlü bir online varlık oluşturmakta zorlanıyor. Pahalı web siteleri, karmaşık sipariş sistemleri ve teknik engeller, birçok harika restoranın tam potansiyeline ulaşmasını engelliyordu.",
+    "paragraph2": "Kurucumuz Wael Helmi — Helsinki merkezli yaratıcı bir geliştirici — bu boşluğu gördü ve derin teknik bilgi veya büyük bütçe gerektirmeyen daha iyi bir çözüm oluşturmaya karar verdi.",
+    "paragraph3": "Şimdi, 2026'nın başlarında, Finlandiya genelindeki ve ötesindeki restoranların dijital varlıklarını oluşturmalarına, online sipariş almalarına ve müşterilerle anlamlı bağlantılar kurmalarına yardımcı olmaya hazırız."
+  },
+  "missionVision": {
+    "subtitle": "Amacımız",
+    "title": "Vizyon",
+    "titleHighlight": "Misyon ve",
+    "missionTitle": "Misyonumuz",
+    "missionDescription": "Her restoranı, dijital çağda başarılı olmalarına yardımcı olacak uygun fiyatlı ve kullanımı kolay teknolojiyle güçlendirmek. Harika yemeklerin herkes tarafından keşfedilmeyi, sipariş edilmeyi ve tadılmayı hak ettiğine inanıyoruz.",
+    "visionTitle": "Vizyonumuz",
+    "visionDescription": "En küçük aile kafesinden en büyük restoran işletmesine kadar her restoranın, başarılı olmak ve işini büyütmek için ihtiyaç duyduğu dijital araçlara eşit erişime sahip olduğu bir dünya."
+  },
+  "team": {
+    "subtitle": "Ekibimiz",
+    "title": "Helmies",
+    "titleHighlight": "Arkasındaki insanlarla tanışın",
+    "description": "Restoran teknolojisini dönüştürmek için birlikte çalışan tutkulu yaratıcı geliştiriciler ekibi.",
+    "linkedin": "LinkedIn",
+    "waelHelmi": {
+      "name": "Wael Helmi",
+      "role": "Kurucu ve CEO",
+      "bio": "Restoran sektörü için güzel dijital deneyimler oluşturmaya tutkuyla bağlı yaratıcı geliştirici."
+    },
+    "naghamAlaa": {
+      "name": "Nagham Alaa",
+      "role": "UI/UX Tasarımcı",
+      "bio": "Sezgisel ve etkileyici kullanıcı deneyimleri oluşturan yaratıcı geliştirici."
+    }
+  },
+  "values": {
+    "subtitle": "İnandıklarımız",
+    "title": "Değerler",
+    "titleHighlight": "Temel",
+    "customerFirst": {
+      "title": "Önce Müşteri",
+      "description": "Her karar, restoran ortaklarımız ve müşterileri için en iyi olanla başlar."
+    },
+    "continuousInnovation": {
+      "title": "Sürekli İnovasyon",
+      "description": "Sektör trendlerinin ve teknolojinin önünde kalmak için platformumuzu sürekli geliştiriyoruz."
+    },
+    "reliability": {
+      "title": "Güvenilirlik",
+      "description": "Restoranınızın her zaman online ve hazır olmasını sağlayan sağlam altyapı üzerine kurulmuştur."
+    },
+    "simplicity": {
+      "title": "Sadelik",
+      "description": "Karmaşık teknolojiyi basitleştirdik, böylece önemli olana — yemeğinize — odaklanabilirsiniz."
+    }
+  },
+  "milestones": {
+    "subtitle": "Yolculuğumuz",
+    "title": "Kilometre Taşları",
+    "titleHighlight": "Önemli",
+    "founded": {
+      "year": "2025 Sonu",
+      "title": "Kuruluş",
+      "description": "Restoran teknolojisini herkes için erişilebilir kılma vizyonuyla Helmies Bites'ı geliştirmeye başladık"
+    },
+    "platformLaunch": {
+      "year": "Şub 2026",
+      "title": "Platform Lansmanı",
+      "description": "Restoranların dijital varlıklarını oluşturmalarına yardımcı olmak için yapay zeka destekli platformumuzu başlatıyoruz"
+    }
+  },
+  "location": {
+    "subtitle": "Bizi Ziyaret Edin",
+    "title": "Evimiz",
+    "titleHighlight": "Bizim",
+    "imageAlt": "Helsinki ofisi",
+    "cityTitle": "Helsinki, Finlandiya",
+    "description": "Helsinki'yi evimiz olarak adlandırmaktan gurur duyuyoruz. Buradan, Finlandiya genelindeki restoranlara hizmet veriyor ve Avrupa'daki genişlememize devam ediyoruz.",
+    "address": "Punavuori, Helsinki, Finlandiya",
+    "email": "hello@helmiesbites.fi",
+    "teamSize": "25+ ekip üyesi"
+  },
+  "cta": {
+    "subtitle": "Ailemize katılın",
+    "title": "Başlamaya Hazır mısınız?",
+    "description": "Hikayemizin bir parçası olun ve size kendi hikayenizi yazmamızda yardımcı olalım.",
+    "firstRestaurants": "ilk restoranlar",
+    "descriptionEnd": "arasında olun ve Helmies Bites ile yayına geçin.",
+    "contactUs": "Bize Ulaşın",
+    "joinTitle": "Ailemize Katılın",
+    "joinDescription": "Helmies Bites ile büyüyen restoran topluluğunun bir parçası olun"
+  }
+}

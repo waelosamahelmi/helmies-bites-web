@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Главная",
+    "features": "Возможности",
+    "pricing": "Цены",
+    "about": "О нас",
+    "faq": "Вопросы",
+    "tryDemo": "Попробовать демо",
+    "launchingDate": "Запуск 5 марта",
+    "launchingDateFull": "Запуск 5 марта"
+  },
+  "footer": {
+    "product": "Продукт",
+    "company": "Компания",
+    "support": "Поддержка",
+    "legal": "Правовая информация",
+    "links": {
+      "features": "Возможности",
+      "pricing": "Цены",
+      "examples": "Примеры",
+      "integrations": "Интеграции",
+      "aboutUs": "О нас",
+      "blog": "Блог",
+      "careers": "Карьера",
+      "helpCenter": "Центр помощи",
+      "documentation": "Документация",
+      "apiReference": "API справочник",
+      "status": "Статус",
+      "privacyPolicy": "Политика конфиденциальности",
+      "termsOfService": "Условия использования",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Политика файлов cookie"
+    },
+    "socialGroup": "Присоединяйтесь к нашей группе в соцсетях",
+    "newsletter": "Подпишитесь на нашу рассылку",
+    "emailPlaceholder": "Введите Ваш email",
+    "submit": "Отправить",
+    "copyright": "© 2026 Helmies Bites. Все права защищены. Сделано с 💚 в Финляндии.",
+    "launchingDate": "Запуск 5 марта"
+  },
+  "countdown": {
+    "days": "Дни",
+    "hours": "Часы",
+    "min": "Мин",
+    "sec": "Сек",
+    "launchingIn": "Запуск через",
+    "launchingDate": "Запуск 5 марта",
+    "launchingWith": "Запуск вместе с"
+  }
+}

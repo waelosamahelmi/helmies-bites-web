@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "首页",
+    "features": "功能特点",
+    "pricing": "价格方案",
+    "about": "关于我们",
+    "faq": "常见问题",
+    "tryDemo": "试用演示",
+    "launchingDate": "3月5日上线",
+    "launchingDateFull": "3月5日正式上线"
+  },
+  "footer": {
+    "product": "产品",
+    "company": "公司",
+    "support": "支持",
+    "legal": "法律条款",
+    "links": {
+      "features": "功能特点",
+      "pricing": "价格方案",
+      "examples": "案例展示",
+      "integrations": "集成服务",
+      "aboutUs": "关于我们",
+      "blog": "博客",
+      "careers": "招聘信息",
+      "helpCenter": "帮助中心",
+      "documentation": "文档",
+      "apiReference": "API 参考",
+      "status": "状态",
+      "privacyPolicy": "隐私政策",
+      "termsOfService": "服务条款",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Cookie 政策"
+    },
+    "socialGroup": "加入我们的社交群组",
+    "newsletter": "订阅我们的新闻通讯",
+    "emailPlaceholder": "输入您的电子邮件",
+    "submit": "提交",
+    "copyright": "© 2026 Helmies Bites. 保留所有权利。用 💚 在芬兰制作。",
+    "launchingDate": "3月5日正式上线"
+  },
+  "countdown": {
+    "days": "天",
+    "hours": "小时",
+    "min": "分钟",
+    "sec": "秒",
+    "launchingIn": "距离上线还有",
+    "launchingDate": "3月5日正式上线",
+    "launchingWith": "即将与"
+  }
+}

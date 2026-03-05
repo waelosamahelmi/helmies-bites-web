@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Fragment, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   Check,
   X,
@@ -19,7 +20,7 @@ import { SectionTitle } from '../components/SectionTitle';
 import { LaunchCountdown } from '../components/LaunchCountdown';
 
 /* ============================================================================
-   Pricing Tiers Data
+   Types
    ============================================================================ */
 
 interface PricingTier {
@@ -45,169 +46,11 @@ interface PricingTier {
   icon: React.ReactNode;
 }
 
-const pricingTiers: PricingTier[] = [
-  {
-    id: 'starter',
-    name: 'Starter',
-    tagline: 'Pay-as-you-go',
-    color: '#FF7A00',
-    colorBadge: 'bg-[#FF7A00]/10 text-[#FF7A00] border-[#FF7A00]/20',
-    priceDisplay: '5%',
-    priceSubtext: 'per online order',
-    setupFee: '€0 setup',
-    highlights: ['€49 minimum monthly fee', '5% per online order', 'No commitment required'],
-    bestFor: 'Small cafés, testing the waters',
-    icon: <Star className="h-6 w-6" />,
-    features: {
-      included: [
-        'Full website builder',
-        'Online ordering system',
-        'AI menu import',
-        'Stripe payment integration',
-        'Mobile-optimized design',
-        'Multi-language support',
-        'Free subdomain',
-        'Email support',
-        '€49 minimum monthly fee',
-      ],
-      excluded: [
-        'Offline payment support',
-        'Custom branding & domain',
-        'AI Assistant',
-        'Advanced analytics',
-        'Priority support',
-      ],
-    },
-    cta: {
-      text: 'Start for Free',
-      variant: 'secondary',
-    },
-  },
-  {
-    id: 'pro',
-    name: 'Pro',
-    tagline: 'Monthly subscription',
-    color: '#D4915C',
-    colorBadge: 'bg-[#D4915C]/10 text-[#D4915C] border-[#D4915C]/20',
-    priceDisplay: '€129',
-    priceSubtext: '/month',
-    setupFee: '€500 one-time setup',
-    highlights: ['Full features unlocked', 'Offline payments included', '€500 one-time setup'],
-    bestFor: 'Established restaurants ready to commit',
-    highlighted: true,
-    icon: <Sparkles className="h-6 w-6" />,
-    features: {
-      included: [
-        'Everything in Starter',
-        'No transaction fees',
-        'Offline payment support (cash, card terminal)',
-        'AI Assistant for customers',
-        'Advanced analytics & reports',
-        'Custom branding & domain',
-        'Priority support',
-        'Social media integration',
-        'Delivery zone management',
-      ],
-      excluded: [
-        'White-label solution',
-        'API access',
-        'Dedicated account manager',
-      ],
-    },
-    cta: {
-      text: 'Get Started',
-      variant: 'primary',
-    },
-  },
-  {
-    id: 'annual',
-    name: 'Annual',
-    tagline: 'Best value',
-    color: '#fbbf24',
-    colorBadge: 'bg-[#fbbf24]/10 text-[#fbbf24] border-[#fbbf24]/20',
-    priceDisplay: '€99',
-    priceSubtext: '/month billed annually',
-    setupFee: '€0 setup',
-    highlights: ['€1,190/first year', 'Renewal: €1,390/year', '3-year: €2,990 (€83/mo)'],
-    bestFor: 'Restaurants wanting maximum savings',
-    icon: <Award className="h-6 w-6" />,
-    features: {
-      included: [
-        'Everything in Pro',
-        'No transaction fees',
-        'All features unlocked',
-        '€0 setup (saves €500)',
-        'Lowest effective monthly cost',
-        'Dedicated account manager',
-        'Custom integrations',
-        'Multi-branch support',
-        'SLA guarantee',
-      ],
-      excluded: [],
-    },
-    cta: {
-      text: 'Lock in Savings',
-      variant: 'primary',
-    },
-  },
-];
-
-/* ============================================================================
-   FAQ Data
-   ============================================================================ */
-
 interface FAQ {
   id: string;
   question: string;
   answer: string;
 }
-
-const faqs: FAQ[] = [
-  {
-    id: 'faq-1',
-    question: 'How does the Starter pay-as-you-go model work?',
-    answer: 'With Starter, you pay 5% of your online orders processed through our platform — no monthly subscription. There is a minimum monthly fee of €49 to cover platform costs. For example, if you process €2,000 in online orders, you pay €100 (5%). If your 5% comes to less than €49, you still pay the €49 minimum.',
-  },
-  {
-    id: 'faq-2',
-    question: 'What does the €500 Pro setup fee include?',
-    answer: 'The one-time €500 setup fee covers full onboarding: we configure your website, import your menu with AI, set up your custom domain, configure offline payment terminals, and provide a dedicated training session. With the Annual plan, setup is completely free (€0).',
-  },
-  {
-    id: 'faq-3',
-    question: 'Can I switch between plans?',
-    answer: 'Absolutely! The natural upgrade path is: Starter → Pro → Annual. You can upgrade at any time. When switching from Starter to Pro, you pay the €500 setup fee and start the monthly billing. When switching to Annual, the setup fee is waived and any remaining Pro subscription is prorated.',
-  },
-  {
-    id: 'faq-4',
-    question: 'How does the Annual plan pricing work?',
-    answer: 'First year: €1,190 (effectively €99/month). Renewal: €1,390/year. We also offer a 3-year commitment at €2,990 total (just €83/month). All annual plans include €0 setup and all features unlocked from day one.',
-  },
-  {
-    id: 'faq-5',
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major credit cards (Visa, Mastercard, American Express), bank transfers, and PayPal. Annual and 3-year plans can also be paid via invoice.',
-  },
-  {
-    id: 'faq-6',
-    question: 'What about offline payments on the Starter plan?',
-    answer: 'The Starter plan only supports online payments through Stripe. If you need to accept cash, card terminal payments, or other offline methods, you\'ll need the Pro or Annual plan.',
-  },
-  {
-    id: 'faq-7',
-    question: 'Is there a contract or commitment?',
-    answer: 'All plans require a 3-month cancellation notice. Annual: 1-year or 3-year commitment with our best rates.',
-  },
-  {
-    id: 'faq-8',
-    question: 'What is your refund policy?',
-    answer: 'We offer a 30-day money-back guarantee on Pro and Annual plans. If you\'re not satisfied within the first 30 days, contact us for a full refund — no questions asked.',
-  },
-];
-
-/* ============================================================================
-   Comparison Table Data
-   ============================================================================ */
 
 interface ComparisonFeature {
   category: string;
@@ -218,72 +61,6 @@ interface ComparisonFeature {
     annual: boolean | string;
   }[];
 }
-
-const comparisonFeatures: ComparisonFeature[] = [
-  {
-    category: 'Pricing',
-    features: [
-      { name: 'Monthly cost', starter: '5% + €49 min', pro: '€129/mo', annual: '€99/mo' },
-      { name: 'Setup fee', starter: '€0', pro: '€500', annual: '€0' },
-      { name: 'Transaction fees', starter: '5%', pro: '0%', annual: '0%' },
-      { name: 'Commitment', starter: 'None', pro: 'Monthly', annual: '1 or 3 years' },
-    ],
-  },
-  {
-    category: 'Core Features',
-    features: [
-      { name: 'Website builder', starter: true, pro: true, annual: true },
-      { name: 'Online ordering', starter: true, pro: true, annual: true },
-      { name: 'AI menu import', starter: true, pro: true, annual: true },
-      { name: 'Mobile-optimized', starter: true, pro: true, annual: true },
-      { name: 'Multi-language', starter: true, pro: true, annual: true },
-    ],
-  },
-  {
-    category: 'Payments',
-    features: [
-      { name: 'Stripe integration', starter: true, pro: true, annual: true },
-      { name: 'Offline payments (cash, terminal)', starter: false, pro: true, annual: true },
-      { name: 'Custom payment gateway', starter: false, pro: false, annual: true },
-    ],
-  },
-  {
-    category: 'AI & Automation',
-    features: [
-      { name: 'AI menu import', starter: true, pro: true, annual: true },
-      { name: 'AI Assistant', starter: false, pro: true, annual: true },
-      { name: 'AI translations', starter: true, pro: true, annual: true },
-    ],
-  },
-  {
-    category: 'Branding & Customization',
-    features: [
-      { name: 'Free subdomain', starter: true, pro: true, annual: true },
-      { name: 'Custom domain', starter: false, pro: true, annual: true },
-      { name: 'Custom branding', starter: false, pro: true, annual: true },
-      { name: 'White-label solution', starter: false, pro: false, annual: true },
-    ],
-  },
-  {
-    category: 'Analytics & Support',
-    features: [
-      { name: 'Basic analytics', starter: true, pro: true, annual: true },
-      { name: 'Advanced reports', starter: false, pro: true, annual: true },
-      { name: 'Email support', starter: true, pro: true, annual: true },
-      { name: 'Priority support', starter: false, pro: true, annual: true },
-      { name: 'Dedicated account manager', starter: false, pro: false, annual: true },
-      { name: 'SLA guarantee', starter: false, pro: false, annual: true },
-    ],
-  },
-  {
-    category: 'Technical',
-    features: [
-      { name: 'API access', starter: false, pro: false, annual: true },
-      { name: 'Custom integrations', starter: false, pro: false, annual: true },
-      { name: 'Multi-branch support', starter: false, pro: false, annual: true },
-    ],
-  },
-];
 
 /* ============================================================================
    Check SVG Icon (Aivora-style)
@@ -349,22 +126,173 @@ function FeatureCheck({ value, highlighted }: FeatureCheckProps) {
    ============================================================================ */
 
 export function Pricing() {
+  const { t } = useTranslation('pricing');
   const [isYearly, setIsYearly] = useState(false);
   const [activeFaqId, setActiveFaqId] = useState<string | null>('faq-1');
-
-  const starterTier = pricingTiers[0];
-  const proTier = pricingTiers[1];
-  const annualTier = pricingTiers[2];
 
   // Pro plan pricing toggle values
   const proMonthlyPrice = '129';
   const proYearlyPrice = '1,390';
-  const proMonthlyLabel = '/month';
-  const proYearlyLabel = '/year';
 
   const toggleFaq = (id: string) => {
     setActiveFaqId(activeFaqId === id ? null : id);
   };
+
+  /* ---------- Data (uses t() for all user-facing strings) ---------- */
+
+  const pricingTiers: PricingTier[] = [
+    {
+      id: 'starter',
+      name: t('tiers.starter.name'),
+      tagline: t('tiers.starter.tagline'),
+      color: '#FF7A00',
+      colorBadge: 'bg-[#FF7A00]/10 text-[#FF7A00] border-[#FF7A00]/20',
+      priceDisplay: t('tiers.starter.priceDisplay'),
+      priceSubtext: t('tiers.starter.priceSubtext'),
+      setupFee: t('tiers.starter.setupFee'),
+      highlights: (t('tiers.starter.highlights', { returnObjects: true }) as string[]),
+      bestFor: t('tiers.starter.bestFor'),
+      icon: <Star className="h-6 w-6" />,
+      features: {
+        included: (t('tiers.starter.features.included', { returnObjects: true }) as string[]),
+        excluded: (t('tiers.starter.features.excluded', { returnObjects: true }) as string[]),
+      },
+      cta: {
+        text: t('tiers.starter.ctaText'),
+        variant: 'secondary',
+      },
+    },
+    {
+      id: 'pro',
+      name: t('tiers.pro.name'),
+      tagline: t('tiers.pro.tagline'),
+      color: '#D4915C',
+      colorBadge: 'bg-[#D4915C]/10 text-[#D4915C] border-[#D4915C]/20',
+      priceDisplay: '€129',
+      priceSubtext: t('tiers.pro.priceSubtext'),
+      setupFee: t('tiers.pro.setupFee'),
+      highlights: (t('tiers.pro.highlights', { returnObjects: true }) as string[]),
+      bestFor: t('tiers.pro.bestFor'),
+      highlighted: true,
+      icon: <Sparkles className="h-6 w-6" />,
+      features: {
+        included: (t('tiers.pro.features.included', { returnObjects: true }) as string[]),
+        excluded: (t('tiers.pro.features.excluded', { returnObjects: true }) as string[]),
+      },
+      cta: {
+        text: t('tiers.pro.ctaText'),
+        variant: 'primary',
+      },
+    },
+    {
+      id: 'annual',
+      name: t('tiers.annual.name'),
+      tagline: t('tiers.annual.tagline'),
+      color: '#fbbf24',
+      colorBadge: 'bg-[#fbbf24]/10 text-[#fbbf24] border-[#fbbf24]/20',
+      priceDisplay: t('tiers.annual.priceDisplay'),
+      priceSubtext: t('tiers.annual.priceSubtext'),
+      setupFee: t('tiers.annual.setupFee'),
+      highlights: (t('tiers.annual.highlights', { returnObjects: true }) as string[]),
+      bestFor: t('tiers.annual.bestFor'),
+      icon: <Award className="h-6 w-6" />,
+      features: {
+        included: (t('tiers.annual.features.included', { returnObjects: true }) as string[]),
+        excluded: [],
+      },
+      cta: {
+        text: t('tiers.annual.ctaText'),
+        variant: 'primary',
+      },
+    },
+  ];
+
+  const faqKeys = [
+    'starterPayAsYouGo',
+    'proSetupFee',
+    'switchPlans',
+    'annualPricing',
+    'paymentMethods',
+    'offlinePaymentsStarter',
+    'contractCommitment',
+    'refundPolicy',
+  ] as const;
+
+  const faqs: FAQ[] = faqKeys.map((key, index) => ({
+    id: `faq-${index + 1}`,
+    question: t(`faq.${key}.question`),
+    answer: t(`faq.${key}.answer`),
+  }));
+
+  const comparisonFeatures: ComparisonFeature[] = [
+    {
+      category: t('comparison.categories.pricing'),
+      features: [
+        { name: t('comparison.features.monthlyCost'), starter: t('comparison.values.starter.monthlyCost'), pro: t('comparison.values.pro.monthlyCost'), annual: t('comparison.values.annual.monthlyCost') },
+        { name: t('comparison.features.setupFee'), starter: t('comparison.values.starter.setupFee'), pro: t('comparison.values.pro.setupFee'), annual: t('comparison.values.annual.setupFee') },
+        { name: t('comparison.features.transactionFees'), starter: t('comparison.values.starter.transactionFees'), pro: t('comparison.values.pro.transactionFees'), annual: t('comparison.values.annual.transactionFees') },
+        { name: t('comparison.features.commitment'), starter: t('comparison.values.starter.commitment'), pro: t('comparison.values.pro.commitment'), annual: t('comparison.values.annual.commitment') },
+      ],
+    },
+    {
+      category: t('comparison.categories.coreFeatures'),
+      features: [
+        { name: t('comparison.features.websiteBuilder'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.onlineOrdering'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.aiMenuImport'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.mobileOptimized'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.multiLanguage'), starter: true, pro: true, annual: true },
+      ],
+    },
+    {
+      category: t('comparison.categories.payments'),
+      features: [
+        { name: t('comparison.features.stripeIntegration'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.offlinePayments'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.customPaymentGateway'), starter: false, pro: false, annual: true },
+      ],
+    },
+    {
+      category: t('comparison.categories.aiAutomation'),
+      features: [
+        { name: t('comparison.features.aiMenuImportAi'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.aiAssistant'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.aiTranslations'), starter: true, pro: true, annual: true },
+      ],
+    },
+    {
+      category: t('comparison.categories.brandingCustomization'),
+      features: [
+        { name: t('comparison.features.freeSubdomain'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.customDomain'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.customBranding'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.whiteLabelSolution'), starter: false, pro: false, annual: true },
+      ],
+    },
+    {
+      category: t('comparison.categories.analyticsSupport'),
+      features: [
+        { name: t('comparison.features.basicAnalytics'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.advancedReports'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.emailSupport'), starter: true, pro: true, annual: true },
+        { name: t('comparison.features.prioritySupport'), starter: false, pro: true, annual: true },
+        { name: t('comparison.features.dedicatedAccountManager'), starter: false, pro: false, annual: true },
+        { name: t('comparison.features.slaGuarantee'), starter: false, pro: false, annual: true },
+      ],
+    },
+    {
+      category: t('comparison.categories.technical'),
+      features: [
+        { name: t('comparison.features.apiAccess'), starter: false, pro: false, annual: true },
+        { name: t('comparison.features.customIntegrations'), starter: false, pro: false, annual: true },
+        { name: t('comparison.features.multiBranchSupport'), starter: false, pro: false, annual: true },
+      ],
+    },
+  ];
+
+  const starterTier = pricingTiers[0];
+  const proTier = pricingTiers[1];
+  const annualTier = pricingTiers[2];
 
   return (
     <div className="min-h-screen bg-[#0D0907] font-sans pt-20">
@@ -378,10 +306,10 @@ export function Pricing() {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <ScrollReveal direction="up">
             <SectionTitle
-              subtitle="Pricing Plans"
-              titleHighlight="Simple & Flexible"
-              title="Pricing"
-              description="Start free. Upgrade as you grow. Every tier feeds the next — no dead ends."
+              subtitle={t('hero.subtitle')}
+              titleHighlight={t('hero.titleHighlight')}
+              title={t('hero.title')}
+              description={t('hero.description')}
               icon={<Sparkles className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -447,7 +375,7 @@ export function Pricing() {
                 </ul>
 
                 {/* Pricing tag */}
-                <span className="pricing-tag">Free Plan</span>
+                <span className="pricing-tag">{t('tiers.starter.pricingTag')}</span>
               </div>
             </ScrollReveal>
 
@@ -469,20 +397,20 @@ export function Pricing() {
                       €<span>{isYearly ? proYearlyPrice : proMonthlyPrice}</span>
                     </span>
                     <span className="text-lg font-semibold text-white/40">
-                      {isYearly ? proYearlyLabel : proMonthlyLabel}
+                      {isYearly ? t('tiers.pro.toggle.yearlyLabel') : t('tiers.pro.toggle.monthlyLabel')}
                     </span>
                   </h2>
 
                   {/* Monthly / Yearly Toggle */}
                   <div className="flex items-center gap-3 text-sm font-bold text-white/60">
-                    <span className={!isYearly ? 'text-[#FF7A00]' : ''}>Monthly</span>
+                    <span className={!isYearly ? 'text-[#FF7A00]' : ''}>{t('tiers.pro.toggle.monthly')}</span>
                     <button
                       onClick={() => setIsYearly(!isYearly)}
                       className={`price-toggle ${isYearly ? 'active' : ''}`}
                       aria-label="Toggle billing period"
                     />
                     <span className={isYearly ? 'text-[#FF7A00]' : ''}>
-                      Yearly <span className="text-[#FF7A00]/70 text-xs">10% off</span>
+                      {t('tiers.pro.toggle.yearly')} <span className="text-[#FF7A00]/70 text-xs">{t('tiers.pro.toggle.yearlyDiscount')}</span>
                     </span>
                   </div>
                 </div>
@@ -528,7 +456,7 @@ export function Pricing() {
                 </div>
 
                 {/* Pricing tag */}
-                <span className="pricing-tag">Premium Plan</span>
+                <span className="pricing-tag">{t('tiers.pro.pricingTag')}</span>
               </div>
             </ScrollReveal>
           </div>
@@ -537,7 +465,7 @@ export function Pricing() {
           <ScrollReveal direction="up" delay={0.3}>
             <div className="relative glass-card xb-border rounded-[20px] p-8 md:p-10 border-2 border-[#fbbf24]/30 glow-amber">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1.5 rounded-full text-xs font-black bg-gradient-to-r from-[#fbbf24] to-[#FF7A00] text-[#0D0907] shadow-lg whitespace-nowrap">
-                Best Value
+                {t('tiers.annual.bestValueBadge')}
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -606,14 +534,14 @@ export function Pricing() {
 
                   {/* Best For */}
                   <div className="mt-6 px-4 py-3 rounded-xl bg-white/5 border border-white/5">
-                    <span className="text-xs font-bold text-white/40 uppercase tracking-wider">Best for</span>
+                    <span className="text-xs font-bold text-white/40 uppercase tracking-wider">{t('tiers.annual.bestForLabel')}</span>
                     <p className="text-sm font-medium text-white/70 mt-1">{annualTier.bestFor}</p>
                   </div>
                 </div>
               </div>
 
               {/* Pricing tag */}
-              <span className="pricing-tag">Annual Plan</span>
+              <span className="pricing-tag">{t('tiers.annual.pricingTag')}</span>
             </div>
           </ScrollReveal>
         </div>
@@ -626,10 +554,10 @@ export function Pricing() {
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal direction="up">
             <SectionTitle
-              subtitle="Trust"
-              titleHighlight="Why Restaurants"
-              title="Choose Us"
-              description="We're committed to your success with risk-free guarantees"
+              subtitle={t('trust.subtitle')}
+              titleHighlight={t('trust.titleHighlight')}
+              title={t('trust.title')}
+              description={t('trust.description')}
               icon={<Shield className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -642,10 +570,10 @@ export function Pricing() {
                   <Shield className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-black text-white mb-3">
-                  Money-Back Guarantee
+                  {t('trust.badges.moneyBack.title')}
                 </h3>
                 <p className="text-white/60 font-medium">
-                  30-day full refund if you're not completely satisfied
+                  {t('trust.badges.moneyBack.description')}
                 </p>
               </div>
             </ScrollReveal>
@@ -657,10 +585,10 @@ export function Pricing() {
                   <Zap className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-black text-white mb-3">
-                  No Setup Fees
+                  {t('trust.badges.noSetupFees.title')}
                 </h3>
                 <p className="text-white/60 font-medium">
-                  Launch your restaurant website in minutes, completely free
+                  {t('trust.badges.noSetupFees.description')}
                 </p>
               </div>
             </ScrollReveal>
@@ -672,10 +600,10 @@ export function Pricing() {
                   <Clock className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-black text-white mb-3">
-                  3-Month Notice
+                  {t('trust.badges.threeMonthNotice.title')}
                 </h3>
                 <p className="text-white/60 font-medium">
-                  Cancel with a 3-month notice period
+                  {t('trust.badges.threeMonthNotice.description')}
                 </p>
               </div>
             </ScrollReveal>
@@ -690,10 +618,10 @@ export function Pricing() {
         <div className="max-w-6xl mx-auto px-6">
           <ScrollReveal direction="up">
             <SectionTitle
-              subtitle="Side-by-side comparison"
-              titleHighlight="Compare All"
-              title="Features"
-              description="See exactly what's included in each plan to make the right choice"
+              subtitle={t('comparison.subtitle')}
+              titleHighlight={t('comparison.titleHighlight')}
+              title={t('comparison.title')}
+              description={t('comparison.description')}
               icon={<CompareArrows className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -705,16 +633,16 @@ export function Pricing() {
                   <thead>
                     <tr className="border-b border-white/10 bg-[#2A1F15]/10">
                       <th className="text-left py-6 px-6 font-black text-white">
-                        Feature
+                        {t('comparison.tableHeader')}
                       </th>
                       <th className="text-center py-6 px-6 font-bold text-[#FF7A00]">
-                        Starter
+                        {t('comparison.starterHeader')}
                       </th>
                       <th className="text-center py-6 px-6 font-black text-[#D4915C]">
-                        Pro
+                        {t('comparison.proHeader')}
                       </th>
                       <th className="text-center py-6 px-6 font-bold text-[#fbbf24]">
-                        Annual
+                        {t('comparison.annualHeader')}
                       </th>
                     </tr>
                   </thead>
@@ -765,10 +693,10 @@ export function Pricing() {
         <div className="max-w-4xl mx-auto px-6">
           <ScrollReveal direction="up">
             <SectionTitle
-              subtitle="Got questions?"
-              titleHighlight="Frequently Asked"
-              title="Questions"
-              description="Everything you need to know about our pricing and plans"
+              subtitle={t('faq.subtitle')}
+              titleHighlight={t('faq.titleHighlight')}
+              title={t('faq.title')}
+              description={t('faq.description')}
               icon={<HelpCircle className="h-4 w-4" />}
             />
           </ScrollReveal>
@@ -815,10 +743,10 @@ export function Pricing() {
           <ScrollReveal direction="scale">
             <div className="text-center">
               <SectionTitle
-                subtitle="Get Started"
-                titleHighlight="Ready to Grow"
-                title="Your Restaurant?"
-                description="Join hundreds of restaurants already using Helmies Bites. Start free, no credit card required."
+                subtitle={t('cta.subtitle')}
+                titleHighlight={t('cta.titleHighlight')}
+                title={t('cta.title')}
+                description={t('cta.description')}
                 icon={<Sparkles className="h-4 w-4" />}
               />
 
@@ -828,7 +756,7 @@ export function Pricing() {
                   to="/features"
                   className="btn-secondary"
                 >
-                  See All Features
+                  {t('cta.seeAllFeatures')}
                 </Link>
               </div>
 
@@ -836,15 +764,15 @@ export function Pricing() {
               <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-white/80">
                 <div className="flex items-center gap-2">
                   <Shield className="h-5 w-5" />
-                  <span className="text-sm font-medium">30-day guarantee</span>
+                  <span className="text-sm font-medium">{t('cta.trustIndicators.guarantee')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CreditCard className="h-5 w-5" />
-                  <span className="text-sm font-medium">No credit card required</span>
+                  <span className="text-sm font-medium">{t('cta.trustIndicators.noCreditCard')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <HeadphonesIcon className="h-5 w-5" />
-                  <span className="text-sm font-medium">24/7 support</span>
+                  <span className="text-sm font-medium">{t('cta.trustIndicators.support')}</span>
                 </div>
               </div>
             </div>

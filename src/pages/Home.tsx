@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import CountUp from 'react-countup';
 import Marquee from 'react-fast-marquee';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslation, Trans } from 'react-i18next';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -34,30 +35,38 @@ import { AivoraButton } from '../components/AivoraButton';
 import { LaunchCountdown } from '../components/LaunchCountdown';
 
 /* ============================================================================
-   Data
+   Data (icons only - text comes from translations)
    ============================================================================ */
 
-const features = [
-  { icon: <Utensils className="h-7 w-7" />, title: 'AI Menu Import', description: 'Upload your menu PDF and let AI extract, categorize, and translate everything automatically.' },
-  { icon: <Palette className="h-7 w-7" />, title: 'Beautiful Themes', description: 'Choose from stunning presets or let AI create a unique look that matches your brand.' },
-  { icon: <Smartphone className="h-7 w-7" />, title: 'Mobile Optimized', description: 'Your site looks perfect on every device. 70% of customers order from mobile.' },
-  { icon: <Globe className="h-7 w-7" />, title: 'Multi-Language', description: 'Finnish, English, Swedish, and more - automatically translated by AI.' },
-  { icon: <ShoppingBag className="h-7 w-7" />, title: 'Online Ordering', description: 'Accept orders online with integrated payment processing and real-time updates.' },
+const featureIcons = [
+  <Utensils className="h-7 w-7" />,
+  <Palette className="h-7 w-7" />,
+  <Smartphone className="h-7 w-7" />,
+  <Globe className="h-7 w-7" />,
+  <ShoppingBag className="h-7 w-7" />,
 ];
 
-const steps = [
-  { number: '01', title: 'Sign Up & Wizard', description: 'Our guided wizard walks you through every step.', icon: <Sparkles className="h-8 w-8" /> },
-  { number: '02', title: 'AI Menu Setup', description: 'Upload your menu PDF. AI extracts everything automatically.', icon: <ChefHat className="h-8 w-8" /> },
-  { number: '03', title: 'Choose Your Theme', description: 'Select from beautiful presets or let AI design yours.', icon: <Palette className="h-8 w-8" /> },
-  { number: '04', title: 'Go Live', description: 'Launch instantly and start accepting orders.', icon: <Store className="h-8 w-8" /> },
+const featureKeys = ['aiMenuImport', 'beautifulThemes', 'mobileOptimized', 'multiLanguage', 'onlineOrdering'];
+
+const stepIcons = [
+  <Sparkles className="h-8 w-8" />,
+  <ChefHat className="h-8 w-8" />,
+  <Palette className="h-8 w-8" />,
+  <Store className="h-8 w-8" />,
 ];
 
-const stats = [
-  { value: '500+', label: 'Restaurants', icon: <Store className="h-6 w-6" /> },
-  { value: '50K+', label: 'Orders Processed', icon: <ShoppingBag className="h-6 w-6" /> },
-  { value: '98%', label: 'Satisfaction Rate', icon: <Trophy className="h-6 w-6" /> },
-  { value: '5 min', label: 'Average Setup', icon: <Clock className="h-6 w-6" /> },
+const stepKeys = ['signUp', 'aiMenu', 'theme', 'goLive'];
+const stepNumbers = ['01', '02', '03', '04'];
+
+const statIcons = [
+  <Store className="h-6 w-6" />,
+  <ShoppingBag className="h-6 w-6" />,
+  <Trophy className="h-6 w-6" />,
+  <Clock className="h-6 w-6" />,
 ];
+
+const statValues = ['500+', '50K+', '98%', '5 min'];
+const statKeys = ['restaurants', 'ordersProcessed', 'satisfactionRate', 'averageSetup'];
 
 /* ============================================================================
    Sub-Components
@@ -78,6 +87,7 @@ function FloatingElement({ className, delay, children }: { className: string; de
    ============================================================================ */
 
 export function Home() {
+  const { t } = useTranslation('home');
   return (
     <div>
       {/* ===== HERO - Two Column ===== */}
@@ -94,19 +104,19 @@ export function Home() {
               <ScrollReveal direction="up" delay={0.2}>
                 <div className="badge mb-8">
                   <Zap className="h-4 w-4" />
-                  <span>Launch in 5 minutes with AI magic</span>
+                  <span>{t('hero.badge')}</span>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.3}>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[1.05]">
-                  <span className="gradient-text">Your Restaurant Website, Ready in Minutes</span>
+                  <span className="gradient-text">{t('hero.title')}</span>
                 </h1>
               </ScrollReveal>
 
               <ScrollReveal direction="up" delay={0.5}>
                 <p className="text-xl md:text-2xl text-white/60 mb-10 max-w-xl leading-relaxed">
-                  AI-powered setup, beautiful themes, online ordering — launching soon for restaurants across Finland.
+                  {t('hero.description')}
                 </p>
               </ScrollReveal>
 
@@ -116,7 +126,7 @@ export function Home() {
 
               <ScrollReveal direction="fade" delay={0.9}>
                 <Link to="/features" className="btn-secondary inline-flex items-center gap-3">
-                  Explore Features <ArrowRight className="h-5 w-5" />
+                  {t('hero.cta')} <ArrowRight className="h-5 w-5" />
                 </Link>
               </ScrollReveal>
             </div>
@@ -136,7 +146,7 @@ export function Home() {
                     </div>
                     <div>
                       <p className="font-black text-2xl gradient-text">+127%</p>
-                      <p className="text-sm text-white/50 font-medium">Online Orders</p>
+                      <p className="text-sm text-white/50 font-medium">{t('floating.onlineOrders')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -145,8 +155,8 @@ export function Home() {
                   <div className="flex items-center gap-2 mb-2">
                     {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-[#FF7A00] text-[#FF7A00]" />)}
                   </div>
-                  <p className="text-lg font-bold text-white">4.9/5 Rating</p>
-                  <p className="text-sm text-white/40">500+ reviews</p>
+                  <p className="text-lg font-bold text-white">{t('floating.rating')}</p>
+                  <p className="text-sm text-white/40">{t('floating.reviews')}</p>
                 </FloatingElement>
 
                 <FloatingElement className="absolute bottom-20 -right-8 glass-card xb-border p-4" delay={2.5}>
@@ -158,7 +168,7 @@ export function Home() {
                     </div>
                     <div>
                       <p className="font-bold text-white">500+</p>
-                      <p className="text-xs text-white/40">Happy Owners</p>
+                      <p className="text-xs text-white/40">{t('floating.happyOwners')}</p>
                     </div>
                   </div>
                 </FloatingElement>
@@ -173,23 +183,23 @@ export function Home() {
       <section className="section-padding bg-[#0D0907] section-glow">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <SectionTitle subtitle="Trusted by restaurants across Finland" title="Join 500+ Restaurants" description="Already growing with Helmies Bites" icon={<Store className="h-4 w-4" />} />
+            <SectionTitle subtitle={t('stats.subtitle')} title={t('stats.title')} description={t('stats.description')} icon={<Store className="h-4 w-4" />} />
           </ScrollReveal>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-            {stats.map((stat, index) => {
-              const numericMatch = stat.value.match(/([\d.]+)/);
+            {statValues.map((value, index) => {
+              const numericMatch = value.match(/([\d.]+)/);
               const numericValue = numericMatch ? parseFloat(numericMatch[1]) : 0;
-              const prefix = stat.value.match(/^[^\d]*/)?.[0] || '';
-              const suffix = stat.value.match(/[^\d]*$/)?.[0] || '';
+              const prefix = value.match(/^[^\d]*/)?.[0] || '';
+              const suffix = value.match(/[^\d]*$/)?.[0] || '';
               return (
                 <ScrollReveal key={index} direction="up" delay={index * 0.1}>
                   <div className="glass-card xb-border p-8 text-center">
-                    <div className="feature-icon w-12 h-12 mx-auto mb-4">{stat.icon}</div>
+                    <div className="feature-icon w-12 h-12 mx-auto mb-4">{statIcons[index]}</div>
                     <div className="stat-value text-4xl md:text-5xl mb-2">
                       <CountUp end={numericValue} duration={2.5} separator="," prefix={prefix} suffix={suffix} enableScrollSpy scrollSpyOnce />
                     </div>
-                    <p className="text-white/50 font-medium">{stat.label}</p>
+                    <p className="text-white/50 font-medium">{t(`stats.${statKeys[index]}`)}</p>
                   </div>
                 </ScrollReveal>
               );
@@ -202,7 +212,7 @@ export function Home() {
       <section className="section-padding bg-[#2A1F15]/20 section-glow">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
-            <SectionTitle subtitle="Powerful Features" title="Everything You Need" description="All the tools to run your restaurant online, in one beautiful place" icon={<Zap className="h-4 w-4" />} />
+            <SectionTitle subtitle={t('features.subtitle')} title={t('features.title')} description={t('features.description')} icon={<Zap className="h-4 w-4" />} />
           </ScrollReveal>
 
           <div className="mt-16">
@@ -215,9 +225,9 @@ export function Home() {
                         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600" alt="AI Menu Import" className="w-full h-56 object-cover rounded-2xl" />
                       </div>
                       <div className="flex-1">
-                        <div className="feature-icon mb-4">{features[0].icon}</div>
-                        <h3 className="text-2xl font-bold text-white mb-3">{features[0].title}</h3>
-                        <p className="text-white/50 leading-relaxed">{features[0].description}</p>
+                        <div className="feature-icon mb-4">{featureIcons[0]}</div>
+                        <h3 className="text-2xl font-bold text-white mb-3">{t(`features.${featureKeys[0]}.title`)}</h3>
+                        <p className="text-white/50 leading-relaxed">{t(`features.${featureKeys[0]}.description`)}</p>
                       </div>
                     </div>
                   </div>
@@ -226,20 +236,20 @@ export function Home() {
               <div className="lg:col-span-4">
                 <ScrollReveal direction="up" delay={0.1}>
                   <div className="glass-card xb-border p-8 h-full">
-                    <div className="feature-icon mb-4">{features[1].icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{features[1].title}</h3>
-                    <p className="text-white/50 leading-relaxed">{features[1].description}</p>
+                    <div className="feature-icon mb-4">{featureIcons[1]}</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{t(`features.${featureKeys[1]}.title`)}</h3>
+                    <p className="text-white/50 leading-relaxed">{t(`features.${featureKeys[1]}.description`)}</p>
                   </div>
                 </ScrollReveal>
               </div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.slice(2).map((feature, index) => (
-                <ScrollReveal key={index} direction="up" delay={(index + 2) * 0.1}>
+              {featureKeys.slice(2).map((key, index) => (
+                <ScrollReveal key={key} direction="up" delay={(index + 2) * 0.1}>
                   <div className="glass-card xb-border p-8 h-full group">
-                    <div className="feature-icon mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-white/50 leading-relaxed">{feature.description}</p>
+                    <div className="feature-icon mb-6 group-hover:scale-110 transition-transform duration-300">{featureIcons[index + 2]}</div>
+                    <h3 className="text-xl font-bold text-white mb-3">{t(`features.${key}.title`)}</h3>
+                    <p className="text-white/50 leading-relaxed">{t(`features.${key}.description`)}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -248,7 +258,7 @@ export function Home() {
 
           <ScrollReveal direction="fade" delay={0.6}>
             <div className="mt-12 text-center">
-              <AivoraButton to="/features">View All Features</AivoraButton>
+              <AivoraButton to="/features">{t('features.viewAll')}</AivoraButton>
             </div>
           </ScrollReveal>
         </div>
@@ -262,18 +272,18 @@ export function Home() {
           <div className="grid lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5">
               <ScrollReveal direction="left">
-                <SectionTitle subtitle="How It Works" title="Launch in 4 Easy Steps" align="left" icon={<Clock className="h-4 w-4" />} className="mb-8" />
+                <SectionTitle subtitle={t('howItWorks.subtitle')} title={t('howItWorks.title')} align="left" icon={<Clock className="h-4 w-4" />} className="mb-8" />
                 <div className="mb-8">
                   <LaunchCountdown compact />
                 </div>
                 <div className="space-y-4">
-                  {steps.map((step, index) => (
-                    <div key={index} className={`process-step xb-border ${index === 0 ? 'active' : ''}`}>
-                      <div className="feature-icon w-12 h-12 flex-shrink-0">{step.icon}</div>
-                      <span className="step-num">{step.number}</span>
+                  {stepKeys.map((key, index) => (
+                    <div key={key} className={`process-step xb-border ${index === 0 ? 'active' : ''}`}>
+                      <div className="feature-icon w-12 h-12 flex-shrink-0">{stepIcons[index]}</div>
+                      <span className="step-num">{stepNumbers[index]}</span>
                       <div>
-                        <h3 className="text-lg font-bold text-white">{step.title}</h3>
-                        <p className="text-sm text-white/40 mt-1">{step.description}</p>
+                        <h3 className="text-lg font-bold text-white">{t(`howItWorks.steps.${key}.title`)}</h3>
+                        <p className="text-sm text-white/40 mt-1">{t(`howItWorks.steps.${key}.description`)}</p>
                       </div>
                     </div>
                   ))}
@@ -314,12 +324,12 @@ export function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
-              <SectionTitle subtitle="Built-In Integrations" title="Everything You Need, Built In" description="Seamless integrations with payment and delivery platforms" align="left" icon={<Zap className="h-4 w-4" />} className="mb-10" />
+              <SectionTitle subtitle={t('integrations.subtitle')} title={t('integrations.title')} description={t('integrations.description')} align="left" icon={<Zap className="h-4 w-4" />} className="mb-10" />
               <div className="space-y-6">
                 {[
-                  { icon: <Shield className="h-6 w-6" />, title: 'Secure Payments', text: 'PCI-compliant processing with industry-leading security' },
-                  { icon: <BarChart3 className="h-6 w-6" />, title: 'Real-time Analytics', text: 'Track orders, revenue, and customer insights in real-time' },
-                  { icon: <Truck className="h-6 w-6" />, title: 'Delivery Integration', text: 'Built-in delivery management with zones, fees, and tracking' },
+                  { icon: <Shield className="h-6 w-6" />, title: t('integrations.securePayments.title'), text: t('integrations.securePayments.text') },
+                  { icon: <BarChart3 className="h-6 w-6" />, title: t('integrations.realTimeAnalytics.title'), text: t('integrations.realTimeAnalytics.text') },
+                  { icon: <Truck className="h-6 w-6" />, title: t('integrations.deliveryIntegration.title'), text: t('integrations.deliveryIntegration.text') },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="feature-icon w-14 h-14 flex-shrink-0">{item.icon}</div>
@@ -350,12 +360,12 @@ export function Home() {
 
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="comparison-card text-center p-6">
-                    <p className="text-white/40 text-sm font-bold uppercase mb-2">Without Helmies</p>
-                    <p className="text-white/60 text-sm">Complex setup, high fees, no control</p>
+                    <p className="text-white/40 text-sm font-bold uppercase mb-2">{t('integrations.withoutHelmies')}</p>
+                    <p className="text-white/60 text-sm">{t('integrations.withoutDesc')}</p>
                   </div>
                   <div className="comparison-card text-center p-6" style={{ borderColor: 'rgba(255,122,0,0.2)' }}>
-                    <p className="text-[#FF7A00] text-sm font-bold uppercase mb-2">With Helmies</p>
-                    <p className="text-white/60 text-sm">5-min setup, 0% commission, full control</p>
+                    <p className="text-[#FF7A00] text-sm font-bold uppercase mb-2">{t('integrations.withHelmies')}</p>
+                    <p className="text-white/60 text-sm">{t('integrations.withDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -374,12 +384,14 @@ export function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
-              <SectionTitle subtitle="Coming Soon" title="We're Launching Soon!" align="left" icon={<Sparkles className="h-4 w-4" />} className="mb-8" />
+              <SectionTitle subtitle={t('cta.subtitle')} title={t('cta.title')} align="left" icon={<Sparkles className="h-4 w-4" />} className="mb-8" />
               <p className="text-xl text-white/60 mb-10 max-w-xl leading-relaxed">
-                Be among the <strong className="text-[#FF7A00]">first restaurants</strong> to launch with Helmies Bites. Setup takes just <strong className="text-[#FF7A00]">5 minutes</strong>.
+                <Trans i18nKey="cta.description" ns="home">
+                  Be among the <strong className="text-[#FF7A00]">first restaurants</strong> to launch with Helmies Bites. Setup takes just <strong className="text-[#FF7A00]">5 minutes</strong>.
+                </Trans>
               </p>
               <LaunchCountdown showRestaurants className="mb-8" />
-              <Link to="/pricing" className="btn-secondary inline-flex items-center gap-2">View Pricing</Link>
+              <Link to="/pricing" className="btn-secondary inline-flex items-center gap-2">{t('cta.viewPricing')}</Link>
             </ScrollReveal>
 
             <ScrollReveal direction="right">
@@ -388,8 +400,8 @@ export function Home() {
                   <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#CC6200] flex items-center justify-center">
                     <Sparkles className="h-12 w-12 text-white" />
                   </div>
-                  <h3 className="text-2xl font-black text-white mb-2">Launching Soon</h3>
-                  <p className="text-white/50">Be ready when we go live on March 5th, 2026</p>
+                  <h3 className="text-2xl font-black text-white mb-2">{t('cta.launchingSoon')}</h3>
+                  <p className="text-white/50">{t('cta.launchingDate')}</p>
                 </div>
               </div>
             </ScrollReveal>

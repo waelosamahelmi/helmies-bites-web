@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
 import { AivoraButton } from '../components/AivoraButton';
@@ -16,6 +17,8 @@ import {
 } from 'lucide-react';
 
 export function Contact() {
+  const { t } = useTranslation('contact');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -48,34 +51,28 @@ export function Contact() {
   const contactInfo = [
     {
       icon: <Mail className="h-7 w-7 text-white" />,
-      title: 'Email Us',
-      value: 'support@helmiesbites.fi',
+      key: 'emailUs',
       link: 'mailto:support@helmiesbites.fi',
-      description: 'We respond within 24 hours',
       color: 'from-[#FF7A00] to-[#CC6200]'
     },
     {
       icon: <Phone className="h-7 w-7 text-white" />,
-      title: 'Call Us',
-      value: '+358 20 123 4567',
+      key: 'callUs',
       link: 'tel:+358201234567',
-      description: 'Mon-Fri, 9am-6pm EET',
       color: 'from-[#CC6200] to-[#D4915C]'
     },
     {
       icon: <MapPin className="h-7 w-7 text-white" />,
-      title: 'Visit Us',
-      value: 'Helsinki, Finland',
+      key: 'visitUs',
       link: null,
-      description: 'Punavuori district',
       color: 'from-[#D4915C] to-[#FF7A00]'
     }
   ];
 
-  const supportHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EET' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EET' },
-    { day: 'Sunday', hours: 'Closed' }
+  const supportHoursData = [
+    { key: 'mondayFriday' },
+    { key: 'saturday' },
+    { key: 'sunday' }
   ];
 
   return (
@@ -90,10 +87,10 @@ export function Contact() {
           <ScrollReveal>
             <div className="text-center py-16">
               <SectionTitle
-                subtitle="We're here to help"
-                title="touch"
-                titleHighlight="Get in"
-                description="Have questions about Helmies Bites? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+                subtitle={t('hero.subtitle')}
+                title={t('hero.title')}
+                titleHighlight={t('hero.titleHighlight')}
+                description={t('hero.description')}
                 icon={<MessageCircle className="h-4 w-4" />}
               />
             </div>
@@ -113,10 +110,10 @@ export function Contact() {
                     <div className="feature-icon">
                       <Send className="h-6 w-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-black text-white">Send us a message</h2>
+                    <h2 className="text-3xl font-black text-white">{t('form.title')}</h2>
                   </div>
                   <p className="text-white/60 mb-8 ml-1">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    {t('form.subtitle')}
                   </p>
 
                   {isSubmitted && (
@@ -125,8 +122,8 @@ export function Contact() {
                         <CheckCircle2 className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <p className="font-bold text-green-400">Message sent successfully!</p>
-                        <p className="text-green-400/70 text-sm">Thank you! We've received your message and will respond soon.</p>
+                        <p className="font-bold text-green-400">{t('form.success.title')}</p>
+                        <p className="text-green-400/70 text-sm">{t('form.success.description')}</p>
                       </div>
                     </div>
                   )}
@@ -135,7 +132,7 @@ export function Contact() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-bold text-white/80 mb-3">
-                          Your Name *
+                          {t('form.name.label')}
                         </label>
                         <input
                           type="text"
@@ -145,12 +142,12 @@ export function Contact() {
                           onChange={handleInputChange}
                           required
                           className="input-modern"
-                          placeholder="Enter your name"
+                          placeholder={t('form.name.placeholder')}
                         />
                       </div>
                       <div>
                         <label htmlFor="email" className="block text-sm font-bold text-white/80 mb-3">
-                          Email Address *
+                          {t('form.email.label')}
                         </label>
                         <input
                           type="email"
@@ -160,14 +157,14 @@ export function Contact() {
                           onChange={handleInputChange}
                           required
                           className="input-modern"
-                          placeholder="your@email.com"
+                          placeholder={t('form.email.placeholder')}
                         />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="subject" className="block text-sm font-bold text-white/80 mb-3">
-                        Subject *
+                        {t('form.subject.label')}
                       </label>
                       <select
                         id="subject"
@@ -177,19 +174,19 @@ export function Contact() {
                         required
                         className="input-modern appearance-none cursor-pointer"
                       >
-                        <option value="">Select a subject</option>
-                        <option value="general">General Inquiry</option>
-                        <option value="sales">Sales Question</option>
-                        <option value="support">Technical Support</option>
-                        <option value="partnership">Partnership Opportunity</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="other">Other</option>
+                        <option value="">{t('form.subject.placeholder')}</option>
+                        <option value="general">{t('form.subject.general')}</option>
+                        <option value="sales">{t('form.subject.sales')}</option>
+                        <option value="support">{t('form.subject.support')}</option>
+                        <option value="partnership">{t('form.subject.partnership')}</option>
+                        <option value="feedback">{t('form.subject.feedback')}</option>
+                        <option value="other">{t('form.subject.other')}</option>
                       </select>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-bold text-white/80 mb-3">
-                        Your Message *
+                        {t('form.message.label')}
                       </label>
                       <textarea
                         id="message"
@@ -199,7 +196,7 @@ export function Contact() {
                         required
                         rows={6}
                         className="input-modern resize-none"
-                        placeholder="How can we help you today?"
+                        placeholder={t('form.message.placeholder')}
                       />
                     </div>
 
@@ -211,12 +208,12 @@ export function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin" />
-                          <span>Sending message...</span>
+                          <span>{t('form.submitting')}</span>
                         </>
                       ) : (
                         <>
                           <Send className="h-5 w-5" />
-                          <span>Send Message</span>
+                          <span>{t('form.submit')}</span>
                         </>
                       )}
                     </button>
@@ -230,7 +227,7 @@ export function Contact() {
               {/* Contact Cards */}
               <ScrollReveal direction="right">
                 <h3 className="text-2xl font-black text-white mb-6 flex items-center gap-3">
-                  <span className="gradient-text">Contact</span> Information
+                  <span className="gradient-text">{t('contactInfo.title')}</span> {t('contactInfo.titleSuffix')}
                 </h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
@@ -243,18 +240,18 @@ export function Contact() {
                           {info.icon}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-white mb-1">{info.title}</h4>
+                          <h4 className="font-bold text-white mb-1">{t(`contactInfo.${info.key}.title`)}</h4>
                           {info.link ? (
                             <a
                               href={info.link}
                               className="text-[#FF7A00] hover:text-[#FF7A00] font-semibold block truncate transition-colors"
                             >
-                              {info.value}
+                              {t(`contactInfo.${info.key}.value`)}
                             </a>
                           ) : (
-                            <p className="text-white/80 font-semibold truncate">{info.value}</p>
+                            <p className="text-white/80 font-semibold truncate">{t(`contactInfo.${info.key}.value`)}</p>
                           )}
-                          <p className="text-sm text-white/50 mt-1">{info.description}</p>
+                          <p className="text-sm text-white/50 mt-1">{t(`contactInfo.${info.key}.description`)}</p>
                         </div>
                       </div>
                     </div>
@@ -269,23 +266,23 @@ export function Contact() {
                     <div className="feature-icon bg-gradient-to-br from-[#FF7A00] to-[#CC6200]">
                       <Clock className="h-6 w-6 text-white" />
                     </div>
-                    <h4 className="text-xl font-bold text-white">Support Hours</h4>
+                    <h4 className="text-xl font-bold text-white">{t('supportHours.title')}</h4>
                   </div>
                   <div className="space-y-4">
-                    {supportHours.map((schedule, index) => (
+                    {supportHoursData.map((schedule, index) => (
                       <div
                         key={index}
                         className="flex justify-between items-center py-3 border-b border-white/10 last:border-0"
                       >
-                        <span className="text-white/60 font-medium">{schedule.day}</span>
-                        <span className="text-white font-bold">{schedule.hours}</span>
+                        <span className="text-white/60 font-medium">{t(`supportHours.${schedule.key}.day`)}</span>
+                        <span className="text-white font-bold">{t(`supportHours.${schedule.key}.hours`)}</span>
                       </div>
                     ))}
                   </div>
                   <div className="mt-5 pt-5 border-t border-white/10">
                     <p className="text-sm text-white/50 flex items-center gap-2">
                       <Sparkles className="h-4 w-4 text-[#FF7A00]" />
-                      Average response time: within 24 hours
+                      {t('supportHours.averageResponse')}
                     </p>
                   </div>
                 </div>
@@ -303,21 +300,21 @@ export function Contact() {
                       <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
                         <MessageCircle className="h-7 w-7 text-white" />
                       </div>
-                      <h4 className="text-xl font-bold">Need instant help?</h4>
+                      <h4 className="text-xl font-bold">{t('liveChat.title')}</h4>
                     </div>
                     <p className="text-white/90 mb-6 leading-relaxed">
-                      Chat with our support team for quick answers to your questions.
+                      {t('liveChat.description')}
                     </p>
                     <button
-                      onClick={() => alert('Live chat coming soon!')}
+                      onClick={() => alert(t('liveChat.alertMessage'))}
                       className="w-full px-6 py-4 bg-[#0D0907] text-white rounded-2xl font-bold hover:bg-[#1A1410] transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg"
                     >
                       <MessageCircle className="h-5 w-5" />
-                      Start Live Chat
+                      {t('liveChat.button')}
                     </button>
                     <p className="text-white/70 text-sm mt-4 flex items-center gap-2">
                       <Clock className="h-4 w-4" />
-                      Available Mon-Fri, 9am-6pm EET
+                      {t('liveChat.availability')}
                     </p>
                   </div>
                 </div>
@@ -344,8 +341,8 @@ export function Contact() {
                   <div className="feature-icon mx-auto mb-6 bg-gradient-to-br from-[#FF7A00] to-[#D4915C] w-20 h-20">
                     <MapPin className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-3xl font-black text-white mb-3">Helsinki, Finland</h3>
-                  <p className="text-white/60 text-lg mb-6">Punavuori District</p>
+                  <h3 className="text-3xl font-black text-white mb-3">{t('map.city')}</h3>
+                  <p className="text-white/60 text-lg mb-6">{t('map.district')}</p>
                   <a
                     href="https://maps.google.com/?q=Punavuori,Helsinki,Finland"
                     target="_blank"
@@ -353,7 +350,7 @@ export function Contact() {
                     className="inline-flex items-center gap-3 px-8 py-4 bg-[#0D0907] text-[#FF7A00] rounded-2xl font-bold hover:bg-[#1A1410] transition-all transform hover:scale-105 shadow-lg border border-white/10"
                   >
                     <MapPin className="h-5 w-5" />
-                    Open in Google Maps
+                    {t('map.openInMaps')}
                   </a>
                 </div>
               </div>
@@ -371,14 +368,14 @@ export function Contact() {
                 <HelpCircle className="h-10 w-10 text-white" />
               </div>
               <SectionTitle
-                subtitle="Common Questions"
-                title="quick answers?"
-                titleHighlight="Looking for"
-                description="Check out our FAQ page for common questions about Helmies Bites."
+                subtitle={t('faqLink.subtitle')}
+                title={t('faqLink.title')}
+                titleHighlight={t('faqLink.titleHighlight')}
+                description={t('faqLink.description')}
                 icon={<HelpCircle className="h-4 w-4" />}
               />
               <div className="mt-8">
-                <AivoraButton to="/faq">Visit FAQ</AivoraButton>
+                <AivoraButton to="/faq">{t('faqLink.button')}</AivoraButton>
               </div>
             </div>
           </ScrollReveal>
@@ -400,17 +397,17 @@ export function Contact() {
                 <Send className="h-12 w-12 text-white" />
               </div>
               <SectionTitle
-                subtitle="Let's grow together"
-                title="started?"
-                titleHighlight="Ready to get"
-                description="Join hundreds of restaurants already using Helmies Bites to streamline their operations."
+                subtitle={t('cta.subtitle')}
+                title={t('cta.title')}
+                titleHighlight={t('cta.titleHighlight')}
+                description={t('cta.description')}
                 icon={<Sparkles className="h-4 w-4" />}
               />
               <div className="mt-10">
                 <LaunchCountdown compact />
               </div>
               <p className="text-sm text-white/50 mt-6">
-                No credit card required. Setup takes less than 5 minutes.
+                {t('cta.noCardRequired')}
               </p>
             </div>
           </ScrollReveal>

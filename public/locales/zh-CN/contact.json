@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "subtitle": "我们随时为您服务",
+    "title": "联系",
+    "titleHighlight": "与我们",
+    "description": "对 Helmies Bites 有疑问？我们很乐意听取您的意见。给我们发送消息，我们会尽快回复。"
+  },
+  "form": {
+    "title": "给我们留言",
+    "subtitle": "填写以下表单，我们将在 24 小时内回复您。",
+    "name": {
+      "label": "您的姓名 *",
+      "placeholder": "请输入您的姓名"
+    },
+    "email": {
+      "label": "电子邮件地址 *",
+      "placeholder": "your@email.com"
+    },
+    "subject": {
+      "label": "主题 *",
+      "placeholder": "请选择主题",
+      "general": "一般咨询",
+      "sales": "销售问题",
+      "support": "技术支持",
+      "partnership": "合作机会",
+      "feedback": "意见反馈",
+      "other": "其他"
+    },
+    "message": {
+      "label": "您的留言 *",
+      "placeholder": "今天我们能为您做些什么？"
+    },
+    "submit": "发送消息",
+    "submitting": "正在发送消息...",
+    "success": {
+      "title": "消息发送成功！",
+      "description": "感谢您！我们已收到您的消息，会尽快回复。"
+    }
+  },
+  "contactInfo": {
+    "title": "联系",
+    "titleSuffix": "信息",
+    "emailUs": {
+      "title": "发送邮件",
+      "value": "support@helmiesbites.fi",
+      "description": "我们将在 24 小时内回复"
+    },
+    "callUs": {
+      "title": "致电我们",
+      "value": "+358 20 123 4567",
+      "description": "周一至周五，上午 9 点至下午 6 点（东欧时间）"
+    },
+    "visitUs": {
+      "title": "来访我们",
+      "value": "赫尔辛基，芬兰",
+      "description": "Punavuori 区"
+    }
+  },
+  "supportHours": {
+    "title": "客服时间",
+    "mondayFriday": {
+      "day": "周一 - 周五",
+      "hours": "上午 9:00 - 下午 6:00（东欧时间）"
+    },
+    "saturday": {
+      "day": "周六",
+      "hours": "上午 10:00 - 下午 4:00（东欧时间）"
+    },
+    "sunday": {
+      "day": "周日",
+      "hours": "休息"
+    },
+    "averageResponse": "平均回复时间：24 小时内"
+  },
+  "liveChat": {
+    "title": "需要即时帮助？",
+    "description": "与我们的支持团队在线聊天，快速获取答案。",
+    "button": "开始在线聊天",
+    "alertMessage": "在线聊天即将推出！",
+    "availability": "周一至周五，上午 9 点至下午 6 点（东欧时间）可用"
+  },
+  "map": {
+    "city": "赫尔辛基，芬兰",
+    "district": "Punavuori 区",
+    "openInMaps": "在谷歌地图中打开"
+  },
+  "faqLink": {
+    "subtitle": "常见问题",
+    "title": "快速答案？",
+    "titleHighlight": "正在寻找",
+    "description": "查看我们的常见问题页面，了解关于 Helmies Bites 的常见问题。",
+    "button": "访问常见问题"
+  },
+  "cta": {
+    "subtitle": "让我们共同成长",
+    "title": "开始了吗？",
+    "titleHighlight": "准备好",
+    "description": "加入已使用 Helmies Bites 简化运营的数百家餐厅。",
+    "noCardRequired": "无需信用卡。设置仅需不到 5 分钟。"
+  }
+}

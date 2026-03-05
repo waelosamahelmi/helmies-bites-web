@@ -1,14 +1,16 @@
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { CheckCircle2, Globe, Mail, ArrowRight } from 'lucide-react';
 
 export function Success() {
+  const { t } = useTranslation('success');
   const location = useLocation();
   const result = location.state as any;
 
   if (!result) {
     return (
       <div className="min-h-screen pt-20 flex items-center justify-center">
-        <p>No setup data found. Please complete the wizard first.</p>
+        <p>{t('noData')}</p>
       </div>
     );
   }
@@ -21,15 +23,15 @@ export function Success() {
             <CheckCircle2 className="h-10 w-10 text-[#FF7A00]" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">
-            Welcome to Helmies Bites!
+            {t('title')}
           </h1>
           <p className="text-white/60">
-            Your restaurant website is now live and ready to take orders
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="bg-[#1A1410] rounded-xl shadow-sm p-8 border border-white/5 mb-8">
-          <h2 className="font-semibold text-white mb-4">Your Website is Live</h2>
+          <h2 className="font-semibold text-white mb-4">{t('websiteLive')}</h2>
 
           <div className="space-y-4">
             <a
@@ -41,7 +43,7 @@ export function Success() {
               <div className="flex items-center gap-3">
                 <Globe className="h-5 w-5 text-[#FF7A00]" />
                 <div className="text-left">
-                  <p className="font-medium text-white">Your Website</p>
+                  <p className="font-medium text-white">{t('yourWebsite')}</p>
                   <p className="text-sm text-white/50">{result.siteUrl}</p>
                 </div>
               </div>
@@ -57,7 +59,7 @@ export function Success() {
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-[#FF7A00]" />
                 <div className="text-left">
-                  <p className="font-medium text-white">Admin Dashboard</p>
+                  <p className="font-medium text-white">{t('adminDashboard')}</p>
                   <p className="text-sm text-white/50">{result.adminUrl}</p>
                 </div>
               </div>
@@ -66,15 +68,15 @@ export function Success() {
           </div>
 
           <div className="mt-6 p-4 bg-[#FF7A00]/5 rounded-lg">
-            <p className="text-sm text-orange-900">
-              <strong>Login credentials have been sent to your email.</strong> Check your inbox
-              for your username and password.
-            </p>
+            <p
+              className="text-sm text-orange-900"
+              dangerouslySetInnerHTML={{ __html: t('credentials') }}
+            />
           </div>
         </div>
 
         <div className="text-sm text-white/50">
-          <p>Questions? Contact us at support@helmiesbites.fi</p>
+          <p>{t('contactUs')}</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,758 @@
+{
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Helmies Bites olarak gizliliğinizi ciddiye alıyoruz. Bu Gizlilik Politikası, restoran platformu hizmetlerimizi kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı, ifşa ettiğimizi ve koruduğumuzu açıklar. Lütfen bu politikayı dikkatle okuyun.",
+    "tableOfContents": "İçindekiler",
+    "printPage": "Bu sayfayı yazdır",
+    "sections": {
+      "informationCollection": {
+        "title": "Bilgi Toplama",
+        "intro": "Helmies Bites olarak, bize doğrudan sağladığınız bilgileri ve hizmetlerimizi kullandığınızda otomatik olarak topladığımız bilgileri topluyoruz.",
+        "youProvideTitle": "Sağladığınız Bilgiler",
+        "youProvideItems": {
+          "item1": "Hesap bilgileri (ad, e-posta adresi, restoran adı)",
+          "item2": "Restoran detayları (adres, telefon numarası, çalışma saatleri)",
+          "item3": "Menü öğeleri ve fiyatlandırma bilgileri",
+          "item4": "Ödeme ve faturalandırma bilgileri",
+          "item5": "Destek ekibimizle iletişimler"
+        },
+        "autoCollectedTitle": "Otomatik Olarak Toplanan Bilgiler",
+        "autoCollectedItems": {
+          "item1": "Cihaz bilgileri (IP adresi, tarayıcı türü, işletim sistemi)",
+          "item2": "Kullanım verileri (ziyaret edilen sayfalar, kullanılan özellikler, harcanan süre)",
+          "item3": "Günlük verileri (erişim zamanları, yönlendiren URL'ler)"
+        }
+      },
+      "dataUsage": {
+        "title": "Bilgilerinizi Nasıl Kullanıyoruz",
+        "intro": "Topladığımız bilgileri şu amaçlarla kullanıyoruz:",
+        "items": {
+          "item1": "Hizmetlerimizi sağlamak, sürdürmek ve iyileştirmek",
+          "item2": "İşlemleri gerçekleştirmek ve ilgili bilgileri göndermek",
+          "item3": "Teknik bildirimler ve destek mesajları göndermek",
+          "item4": "Yorumlara, sorulara ve müşteri hizmetleri taleplerine yanıt vermek",
+          "item5": "Ürünler, hizmetler ve etkinlikler hakkında bilgilendirmek",
+          "item6": "Trendleri, kullanımı ve aktiviteleri izlemek ve analiz etmek",
+          "item7": "Güvenlik olaylarını ve dolandırıcılığı tespit etmek, araştırmak ve önlemek",
+          "item8": "Yasal yükümlülüklere uymak"
+        }
+      },
+      "cookies": {
+        "title": "Çerezler ve İzleme Teknolojileri",
+        "content1": "Platformumuzdaki etkinlikleriniz hakkında bilgi toplamak ve izlemek için çerezler ve benzer izleme teknolojileri kullanıyoruz. Çerezler, cihazınızda depolanan ve size daha iyi bir deneyim sunmamıza yardımcı olan küçük veri dosyalarıdır.",
+        "content2": "Aşağıdaki çerez türlerini kullanıyoruz:",
+        "items": {
+          "item1Label": "Temel çerezler:",
+          "item1Text": "Platformun çalışması için gereklidir",
+          "item2Label": "Analitik çerezler:",
+          "item2Text": "Kullanıcıların platformumuzla nasıl etkileşimde bulunduğunu anlamamıza yardımcı olur",
+          "item3Label": "Pazarlama çerezleri:",
+          "item3Text": "İlgili reklamları sunmak için kullanılır"
+        },
+        "cookiePolicyLink": "Daha fazla bilgi için lütfen <1>Çerez Politikamıza</1> bakın."
+      },
+      "dataSecurity": {
+        "title": "Veri Güvenliği",
+        "content1": "Kişisel bilgilerinizi yetkisiz veya yasadışı işlemeye, kazara kayba, imhaya veya hasara karşı korumak için uygun teknik ve organizasyonel önlemler uyguluyoruz.",
+        "content2": "Güvenlik önlemlerimiz şunları içerir:",
+        "items": {
+          "item1": "İletim sırasında ve durağan halde veri şifreleme",
+          "item2": "Düzenli güvenlik değerlendirmeleri ve güncellemeleri",
+          "item3": "Erişim kontrolleri ve kimlik doğrulama sistemleri",
+          "item4": "Fiziksel güvenlik kontrollü güvenli veri merkezleri"
+        },
+        "content3": "Ancak, internet üzerinden hiçbir iletim yöntemi %100 güvenli değildir. Verilerinizi korumak için çaba gösterirken, mutlak güvenliği garanti edemeyiz."
+      },
+      "userRights": {
+        "title": "Haklarınız",
+        "intro": "Bulunduğunuz konuma bağlı olarak, aşağıdaki haklara sahip olabilirsiniz:",
+        "items": {
+          "item1Label": "Erişim:",
+          "item1Text": "Kişisel verilerinizin bir kopyasını talep etme",
+          "item2Label": "Düzeltme:",
+          "item2Text": "Yanlış veya eksik verileri düzeltme",
+          "item3Label": "Silme:",
+          "item3Text": "Kişisel verilerinizin silinmesini talep etme",
+          "item4Label": "Kısıtlama:",
+          "item4Text": "Veri işlemenin sınırlandırılmasını talep etme",
+          "item5Label": "Taşınabilirlik:",
+          "item5Text": "Verilerinizi yapılandırılmış bir formatta alma",
+          "item6Label": "İtiraz:",
+          "item6Text": "Verilerinizin işlenmesine itiraz etme",
+          "item7Label": "Onayı geri çekme:",
+          "item7Text": "İşlemenin onaya dayandığı durumlarda onayı geri çekme"
+        },
+        "contactText": "Bu hakları kullanmak için lütfen <1>{{email}}</1> adresinden bizimle iletişime geçin."
+      },
+      "dataRetention": {
+        "title": "Veri Saklama",
+        "content1": "Kişisel bilgilerinizi, hizmetlerimizi sağlamak ve bu gizlilik politikasında belirtilen amaçları yerine getirmek için gerekli olduğu sürece saklıyoruz.",
+        "content2": "Saklama süreleri şunlara göre değişir:",
+        "items": {
+          "item1": "Veri türü ve hassasiyeti",
+          "item2": "Toplandığı amaç",
+          "item3": "Yasal ve düzenleyici gereksinimler",
+          "item4": "Olası talepler için zamanaşımı süreleri"
+        },
+        "content3": "Hesap verileri genellikle hesap kapatıldıktan sonra 3 yıl boyunca saklanır. Mali kayıtlar vergi yasaları gereği 7 yıl saklanır."
+      },
+      "thirdPartyServices": {
+        "title": "Üçüncü Taraf Hizmetleri",
+        "content1": "Platformumuzu işletmemize yardımcı olması için üçüncü taraf hizmetleri kullanıyoruz. Bu hizmet sağlayıcılar, kişisel bilgilerinize yalnızca bizim adımıza belirli görevleri yerine getirmek için erişebilir.",
+        "content2": "Üçüncü taraf hizmet örnekleri:",
+        "items": {
+          "item1": "Ödeme işlemcileri (Stripe, PayPal)",
+          "item2": "Bulut barındırma sağlayıcıları",
+          "item3": "Analitik hizmetleri",
+          "item4": "E-posta iletişim hizmetleri",
+          "item5": "Müşteri destek araçları"
+        },
+        "content3": "Bu ortakları dikkatli seçiyor ve katı veri koruma standartlarına uymalarını talep ediyoruz."
+      },
+      "internationalTransfers": {
+        "title": "Uluslararası Veri Transferleri",
+        "content1": "Bilgileriniz, bulunduğunuz ülke dışındaki ülkelere aktarılabilir ve buralarda işlenebilir. Bu gizlilik politikası ve yürürlükteki yasalara uygun olarak verilerinizi korumak için uygun güvencelerin uygulanmasını sağlıyoruz.",
+        "content2": "Avrupa Ekonomik Alanı'ndan (AEA) veri aktarırken, Avrupa Komisyonu tarafından onaylanan standart sözleşme maddelerine veya diğer uygun yasal mekanizmalara dayanıyoruz."
+      },
+      "childrenPrivacy": {
+        "title": "Çocukların Gizliliği",
+        "content": "Hizmetlerimiz 16 yaşından küçük çocuklara yönelik değildir. 16 yaşından küçük çocuklardan bilerek kişisel bilgi toplamayız. Bir çocuğun bize kişisel bilgi sağladığından haberdar olursanız, lütfen derhal bizimle iletişime geçin."
+      },
+      "contact": {
+        "title": "Bize Ulaşın",
+        "intro": "Bu gizlilik politikası veya veri uygulamalarımız hakkında sorularınız, endişeleriniz veya şikayetleriniz varsa, lütfen bizimle iletişime geçin:",
+        "contactLabel": "Gizlilik İletişimi",
+        "emailLabel": "E-posta:",
+        "addressLabel": "Adres:",
+        "address": "Helsinki, Finlandiya",
+        "euNote": "Avrupa Birliği'ndeki veri sahipleri, yerel veri koruma otoritesine şikayette bulunma hakkına da sahiptir."
+      }
+    },
+    "footerNote": "Bu gizlilik politikası, Genel Veri Koruma Yönetmeliği (GDPR), Kaliforniya Tüketici Gizlilik Yasası (CCPA) ve diğer geçerli veri koruma yasalarına uygun olması amaçlanmıştır. Bu politikayı zaman zaman güncelleme hakkımızı saklı tutuyoruz. Herhangi bir değişiklik, güncellenmiş revizyon tarihiyle birlikte bu sayfada yayınlanacaktır."
+  },
+  "terms": {
+    "title": "Hizmet Şartları",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "email": "legal@helmiesbites.fi",
+    "introduction": "Helmies Bites'a hoş geldiniz. Bu Hizmet Şartları, restoran platformumuzu ve online sipariş hizmetlerimizi kullanımınızı düzenler. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz. Lütfen dikkatle okuyun.",
+    "tableOfContents": "İçindekiler",
+    "printPage": "Bu sayfayı yazdır",
+    "sections": {
+      "acceptance": {
+        "title": "Şartların Kabulü",
+        "content1": "Helmies Bites hizmetlerine erişerek veya bunları kullanarak, bu Hizmet Şartlarına ve tüm yürürlükteki yasa ve düzenlemelere uymayı kabul ediyorsunuz. Bu şartların herhangi biriyle aynı fikirde değilseniz, hizmetlerimizi kullanmanız yasaktır.",
+        "content2": "Bu şartlar, sizinle Finlandiya'da kayıtlı bir şirket olan Helmies Bites Oy arasında yasal olarak bağlayıcı bir sözleşme oluşturur."
+      },
+      "serviceDescription": {
+        "title": "Hizmet Açıklaması",
+        "intro": "Helmies Bites, restoranların aşağıdakileri yapmasını sağlayan bir restoran web sitesi oluşturucu ve online sipariş platformu sunar:",
+        "items": {
+          "item1": "Restoran web siteleri oluşturmak ve özelleştirmek",
+          "item2": "Menüleri ve fiyat bilgilerini sergilemek",
+          "item3": "Online sipariş ve ödeme kabul etmek",
+          "item4": "Siparişleri ve müşteri iletişimlerini yönetmek",
+          "item5": "Alan adı ve barındırma hizmetleriyle entegre olmak"
+        },
+        "content": "Hizmetlerimizin herhangi bir yönünü önceden bildirimde bulunmaksızın istediğimiz zaman değiştirme, askıya alma veya sonlandırma hakkımızı saklı tutuyoruz."
+      },
+      "userResponsibilities": {
+        "title": "Kullanıcı Sorumlulukları",
+        "intro": "Hizmetlerimizin bir kullanıcısı olarak şunları kabul ediyorsunuz:",
+        "items": {
+          "item1": "Doğru, güncel ve eksiksiz bilgi sağlamak",
+          "item2": "Hesap kimlik bilgilerinizin güvenliğini sağlamak",
+          "item3": "Hesabınız altındaki tüm etkinliklerden sorumluluğu kabul etmek",
+          "item4": "Herhangi bir yetkisiz kullanımı derhal bildirmek",
+          "item5": "Tüm yürürlükteki yasa ve düzenlemelere uymak",
+          "item6": "Hizmetlerimizi yasadışı veya yetkisiz amaçlar için kullanmamak",
+          "item7": "Sistemlerimize yetkisiz erişim sağlamaya çalışmamak",
+          "item8": "Hizmetlerimize veya sunucularımıza müdahale etmemek veya bozmamak"
+        },
+        "note": "Restoran web sitenizde yayınladığınız menü öğeleri, fiyatlar ve görseller dahil içerikten yalnızca siz sorumlusunuz."
+      },
+      "paymentTerms": {
+        "title": "Ödeme ve Faturalandırma",
+        "serviceFeesTitle": "Hizmet Ücretleri",
+        "serviceFeesContent": "Helmies Bites, platformumuz aracılığıyla işlenen her online sipariş için %5 hizmet ücreti alır. Bu ücret, ödeme yapılmadan önce sipariş toplamından otomatik olarak düşülür.",
+        "addonsTitle": "Opsiyonel Eklentiler",
+        "addonsItems": {
+          "item1": "Kapıda Ödeme: €30/ay",
+          "item2": "Yapay Zeka Asistanı: €10/ay"
+        },
+        "processingTitle": "Ödeme İşleme",
+        "processingContent": "Tüm ödemeler üçüncü taraf ödeme işlemcileri (Stripe, PayPal) aracılığıyla gerçekleştirilir. Ek ödeme işlemcisi ücretleri geçerli olabilir ve hizmet ücretlerimizden ayrıdır.",
+        "settlementTitle": "Ödeme Aktarımı",
+        "settlementContent": "Sipariş gelirleri (hizmet ücretimiz ve ödeme işlemcisi ücretleri düşüldükten sonra) haftalık olarak, genellikle 3-5 iş günü içinde belirlediğiniz banka hesabınıza aktarılır.",
+        "taxesTitle": "Vergiler",
+        "taxesContent": "Tüm fiyatlar KDV hariçtir. Fin KDV'si (2026 itibarıyla %25,5) geçerli olduğunda hizmet ücretlerine eklenir. İşletme faaliyetlerinizle ilgili vergilerden siz sorumlusunuz."
+      },
+      "cancellation": {
+        "title": "İptal ve Sonlandırma",
+        "byYouTitle": "Sizin Tarafınızdan",
+        "byYouIntro": "Hesabınızı istediğiniz zaman bizimle iletişime geçerek veya hesap ayarlarınız aracılığıyla iptal edebilirsiniz. İptal üzerine:",
+        "byYouItems": {
+          "item1": "Mevcut faturalandırma döneminin sonuna kadar erişiminiz devam eder",
+          "item2": "Bekleyen tüm siparişler işlenecek ve ödeme yapılacaktır",
+          "item3": "Web siteniz 30 gün içinde kapatılacaktır",
+          "item4": "90 gün içinde verilerinizin dışa aktarımını talep edebilirsiniz"
+        },
+        "byUsTitle": "Bizim Tarafımızdan",
+        "byUsIntro": "Aşağıdaki durumlarda hesabınızı istediğimiz zaman askıya alma veya sonlandırma hakkımızı saklı tutuyoruz:",
+        "byUsItems": {
+          "item1": "Bu Hizmet Şartlarının ihlali",
+          "item2": "Yürürlükteki yasa veya düzenlemelerin ihlali",
+          "item3": "Dolandırıcılık veya kötüye kullanım faaliyeti",
+          "item4": "Uzun süreli hareketsizlik (12+ ay)"
+        },
+        "note": "Dolandırıcılık veya yasadışı faaliyet durumları hariç, sonlandırmadan önce makul bir bildirimde bulunacağız."
+      },
+      "refunds": {
+        "title": "İadeler",
+        "intro": "Hizmet ücretimiz, bir sipariş işlendikten sonra iade edilmez. Ancak, aşağıdaki durumlarda kendi takdirimize bağlı olarak iade veya kredi verebiliriz:",
+        "items": {
+          "item1": "24 saatten uzun süren hizmet kesintileri",
+          "item2": "Teknik hatalar nedeniyle çift ücretlendirme",
+          "item3": "Platform sorunları nedeniyle gerçekleştirilmeyen siparişler"
+        },
+        "content": "Siparişlerle ilgili müşteri iade talepleri için, hesap ayarlarınızda belirleyebileceğiniz bireysel restoran iade politikamıza başvurun."
+      },
+      "intellectualProperty": {
+        "title": "Fikri Mülkiyet",
+        "ourPropertyTitle": "Bizim Mülkiyetimiz",
+        "ourPropertyIntro": "Tüm yazılımlar, tasarımlar, metinler, grafikler, logolar ve diğer içerikler dahil olmak üzere Helmies Bites platformu, Helmies Bites Oy'a aittir ve fikri mülkiyet yasaları tarafından korunmaktadır. Şunları yapamazsınız:",
+        "ourPropertyItems": {
+          "item1": "Platformumuzu kopyalamak, değiştirmek veya dağıtmak",
+          "item2": "Ticari markalarımızı izinsiz kullanmak",
+          "item3": "Tersine mühendislik yapmak veya kaynak kodu çıkarmaya çalışmak"
+        },
+        "yourContentTitle": "Sizin İçeriğiniz",
+        "yourContentText": "Platformumuza sağladığınız tüm içeriğin (menü öğeleri, görseller, açıklamalar) mülkiyeti size aittir. Hizmetlerimizi kullanarak, içeriğinizi yalnızca hizmetlerimizi sunmak amacıyla kullanmamız, görüntülememiz ve işlememiz için bize lisans veriyorsunuz.",
+        "userGeneratedTitle": "Kullanıcı Tarafından Oluşturulan İçerik",
+        "userGeneratedText": "Müşteri yorumları, geri bildirimler ve diğer kullanıcı tarafından oluşturulan içerik, Gizlilik Politikamıza uygun olarak pazarlama ve hizmet iyileştirme amaçlarıyla tarafımızca kullanılabilir."
+      },
+      "limitationOfLiability": {
+        "title": "Sorumluluk Sınırlaması",
+        "disclaimer": "YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, HELMIES BITES AŞAĞIDAKİLERDEN SORUMLU OLMAYACAKTIR:",
+        "items": {
+          "item1": "Dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlar",
+          "item2": "Kayıp kârlar veya kaçırılan iş fırsatları",
+          "item3": "Veri kaybı veya veri bozulması",
+          "item4": "Hizmet kesintileri veya çalışmama süreleri",
+          "item5": "Üçüncü tarafların (ödeme işlemcileri, teslimat hizmetleri) eylemleri veya ihmalleri"
+        },
+        "totalLiabilityTitle": "Toplam Sorumluluk",
+        "totalLiabilityContent": "Tüm talepler için size karşı toplam sorumluluğumuz, talebin öncesindeki 12 ay içinde bize ödediğiniz hizmet ücretleri tutarını aşmayacaktır. Bu sınırlama, toplu olarak tüm dava nedenleri için geçerlidir.",
+        "noWarrantiesTitle": "Garanti Yokluğu",
+        "noWarrantiesContent": "Hizmetlerimiz, açık veya zımni herhangi bir garanti olmaksızın \"olduğu gibi\" sunulmaktadır. Kesintisiz veya hatasız çalışmayı garanti etmiyoruz."
+      },
+      "disputeResolution": {
+        "title": "Uyuşmazlık Çözümü",
+        "governingLawTitle": "Geçerli Hukuk",
+        "governingLawContent": "Bu Hizmet Şartları Finlandiya yasalarına tabidir. Bu şartlarla ilgili herhangi bir uyuşmazlık Helsinki, Finlandiya mahkemelerinde çözülecektir.",
+        "resolutionProcessTitle": "Çözüm Süreci",
+        "resolutionProcessContent": "Herhangi bir sorunu gayri resmi olarak çözmek için doğrudan <1>{{email}}</1> adresinden bizimle iletişime geçmenizi teşvik ediyoruz. Çoğu uyuşmazlık doğrudan iletişim yoluyla hızla çözülebilir.",
+        "euConsumerTitle": "AB Tüketici Hakları",
+        "euConsumerContent": "Avrupa Birliği'nde bulunan tüketiciler, AB Online Uyuşmazlık Çözümü platformu aracılığıyla alternatif uyuşmazlık çözüm mekanizmalarına erişebilir."
+      },
+      "indemnification": {
+        "title": "Tazminat",
+        "intro": "Aşağıdakilerden kaynaklanan her türlü talep, zarar, kayıp, yükümlülük ve masrafa karşı Helmies Bites'ı ve bağlı kuruluşlarını, yetkililerini, yöneticilerini, çalışanlarını ve temsilcilerini tazmin etmeyi, savunmayı ve zararsız tutmayı kabul ediyorsunuz:",
+        "items": {
+          "item1": "Hizmetlerimizi kullanımınız",
+          "item2": "Bu Hizmet Şartlarını ihlal etmeniz",
+          "item3": "Üçüncü taraf haklarını ihlal etmeniz",
+          "item4": "Platformumuz aracılığıyla sağladığınız veya yayınladığınız içerik"
+        }
+      },
+      "modifications": {
+        "title": "Şartlarda Değişiklikler",
+        "intro": "Bu Hizmet Şartlarını istediğimiz zaman değiştirme hakkımızı saklı tutuyoruz. Önemli değişiklikleri size şu yollarla bildireceğiz:",
+        "items": {
+          "item1": "Yeni şartları platformumuzda yayınlama",
+          "item2": "Kayıtlı e-posta adresinize e-posta gönderme",
+          "item3": "Hesap panonuzda belirgin bir bildirim görüntüleme"
+        },
+        "content": "Değişikliklerden sonra hizmetlerimizi kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir. Değiştirilen şartları kabul etmiyorsanız, hizmetlerimizi kullanmayı bırakmalısınız."
+      },
+      "generalProvisions": {
+        "title": "Genel Hükümler",
+        "items": {
+          "item1Label": "Sözleşmenin Bütünlüğü:",
+          "item1Text": "Bu şartlar, hizmetlerimizle ilgili olarak sizinle Helmies Bites arasındaki sözleşmenin tamamını oluşturur.",
+          "item2Label": "Bölünebilirlik:",
+          "item2Text": "Herhangi bir hüküm geçersiz bulunursa, kalan hükümler tam olarak yürürlükte kalır.",
+          "item3Label": "Feragat:",
+          "item3Text": "Herhangi bir hakkımızı kullanmamamız, o haktan feragat ettiğimiz anlamına gelmez.",
+          "item4Label": "Devir:",
+          "item4Text": "Bu şartları onayımız olmadan devredemezsiniz. Biz hak ve yükümlülüklerimizi kısıtlama olmaksızın devredebiliriz.",
+          "item5Label": "Mücbir Sebepler:",
+          "item5Text": "Makul kontrolümüz dışındaki nedenlerden kaynaklanan gecikmeler veya aksaklıklardan sorumlu değiliz."
+        }
+      },
+      "contact": {
+        "title": "Bize Ulaşın",
+        "intro": "Bu Hizmet Şartları hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+        "contactLabel": "Hukuki İletişim",
+        "emailLabel": "E-posta:",
+        "addressLabel": "Adres:",
+        "address": "Helsinki, Finlandiya",
+        "businessIdLabel": "İşletme Kimliği:",
+        "businessId": "(Fince: Y-tunnus) Talep üzerine mevcuttur"
+      }
+    },
+    "footerNote": "Bu Hizmet Şartları, Fin ve Avrupa Birliği tüketici koruma yasalarına uygun olarak tasarlanmıştır. Tüketici haklarınız hakkında sorularınız varsa, lütfen bizimle veya yerel tüketici koruma otoritenizle iletişime geçin."
+  },
+  "gdpr": {
+    "title": "GDPR Uyumluluğu",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Bu GDPR Uyumluluk belgesi, Helmies Bites'ın Genel Veri Koruma Yönetmeliğini (GDPR) nasıl uyguladığını ve veri sahibi haklarınızı nasıl kullanabileceğinizi açıklar. Kişisel verilerinizi korumaya ve veri işleme uygulamalarımızda şeffaflığı sağlamaya kararlıyız.",
+    "tableOfContents": "İçindekiler",
+    "printPage": "Bu sayfayı yazdır",
+    "keyPrinciples": {
+      "title": "GDPR Temel İlkeleri (Madde 5)",
+      "principle1": "Hukuka uygunluk, adalet, şeffaflık",
+      "principle2": "Amaç sınırlaması",
+      "principle3": "Veri minimizasyonu",
+      "principle4": "Doğruluk",
+      "principle5": "Depolama sınırlaması",
+      "principle6": "Bütünlük ve gizlilik",
+      "accountability": "Bu ilkelere uymaktan sorumluyuz ve uyumumuzu gösterebilecek durumdayız."
+    },
+    "sections": {
+      "dataController": {
+        "title": "Veri Sorumlusu Bilgileri",
+        "intro": "Helmies Bites Oy, kişisel verilerinizin işlenmesinden sorumlu veri sorumlusudur. İletişim bilgilerimiz:",
+        "contactLabel": "Veri Sorumlusu",
+        "companyLabel": "Şirket:",
+        "company": "Helmies Bites Oy",
+        "addressLabel": "Adres:",
+        "address": "Helsinki, Finlandiya",
+        "emailLabel": "E-posta:",
+        "businessIdLabel": "İşletme Kimliği:",
+        "businessId": "(Fince: Y-tunnus) Talep üzerine mevcuttur"
+      },
+      "legalBasis": {
+        "title": "İşleme İçin Yasal Dayanak",
+        "intro": "Kişisel verilerinizi Genel Veri Koruma Yönetmeliği (GDPR) kapsamında aşağıdaki yasal dayanaklara göre işliyoruz:",
+        "items": {
+          "item1Label": "Sözleşmenin İfası (Madde 6(1)(b)):",
+          "item1Text": "Abonelik sözleşmeniz kapsamında hizmetlerimizi sunmak için gerekli işleme",
+          "item2Label": "Meşru Çıkarlar (Madde 6(1)(f)):",
+          "item2Text": "Güvenlik, dolandırıcılık önleme ve hizmet iyileştirme için işleme",
+          "item3Label": "Onay (Madde 6(1)(a)):",
+          "item3Text": "Pazarlama iletişimleri ve isteğe bağlı özellikler için işleme",
+          "item4Label": "Yasal Yükümlülük (Madde 6(1)(c)):",
+          "item4Text": "Vergi yasaları ve diğer düzenlemeler tarafından gereken işleme"
+        }
+      },
+      "dataCategories": {
+        "title": "Kişisel Veri Kategorileri",
+        "intro": "Aşağıdaki kişisel veri kategorilerini işliyoruz:",
+        "accountDataTitle": "Hesap ve İletişim Verileri",
+        "accountDataItems": {
+          "item1": "Ad, e-posta adresi, telefon numarası",
+          "item2": "Hesap kimlik bilgileri ve kimlik doğrulama verileri",
+          "item3": "İletişim tercihleri"
+        },
+        "businessDataTitle": "İş Verileri",
+        "businessDataItems": {
+          "item1": "Restoran adı ve adresi",
+          "item2": "İşletme kayıt bilgileri",
+          "item3": "Menü öğeleri, fiyatlar ve açıklamalar",
+          "item4": "Çalışma saatleri ve konum verileri"
+        },
+        "financialDataTitle": "Finansal Veriler",
+        "financialDataItems": {
+          "item1": "Ödeme ve faturalandırma bilgileri",
+          "item2": "Ödeme aktarımları için banka hesap bilgileri",
+          "item3": "İşlem geçmişi",
+          "item4": "Faturalar ve makbuzlar"
+        },
+        "technicalDataTitle": "Teknik Veriler",
+        "technicalDataItems": {
+          "item1": "IP adresi ve cihaz bilgileri",
+          "item2": "Kullanım ve tarama verileri",
+          "item3": "Çerezler ve izleme tanımlayıcıları",
+          "item4": "Günlük dosyaları ve erişim kayıtları"
+        }
+      },
+      "dataSubjectRights": {
+        "title": "Veri Sahibi Hakları",
+        "intro": "GDPR kapsamında kişisel verilerinizle ilgili aşağıdaki haklara sahipsiniz. Bu hakları kullanmanız için mekanizmalar sağlıyoruz.",
+        "howToExerciseTitle": "Haklarınızı Nasıl Kullanırsınız",
+        "howToExerciseContent": "Bu haklardan herhangi birini kullanmak için lütfen <1>{{email}}</1> adresinden bizimle iletişime geçin. Talebinize 30 gün içinde ücretsiz olarak yanıt vereceğiz."
+      },
+      "rightOfAccess": {
+        "title": "Erişim Hakkı (Madde 15)",
+        "content1": "Kişisel verilerinizi işleyip işlemediğimize dair bizden onay alma ve işliyorsak, kişisel verilerinize ve ek bilgilere erişim hakkınız vardır.",
+        "content2": "Talep üzerine şunları sağlayacağız:",
+        "items": {
+          "item1": "Kişisel verilerinizin bir kopyası",
+          "item2": "İşleme amaçları",
+          "item3": "İlgili kişisel veri kategorileri",
+          "item4": "Alıcılar veya alıcı kategorileri",
+          "item5": "Saklama süresi veya belirleme kriterleri",
+          "item6": "Haklarınız hakkında bilgi",
+          "item7": "Sizden toplanmadıysa verinin kaynağı",
+          "item8": "Otomatik karar alma hakkında bilgi"
+        }
+      },
+      "rightOfRectification": {
+        "title": "Düzeltme Hakkı (Madde 16)",
+        "content1": "Sizinle ilgili yanlış kişisel verilerin gecikmeksizin düzeltilmesini talep etme hakkınız vardır. İşleme amaçları dikkate alınarak, eksik kişisel verilerin tamamlanmasını talep etme hakkınız da vardır.",
+        "content2": "Kişisel verilerinizin çoğunu doğrudan hesap panonuz aracılığıyla güncelleyebilirsiniz. Pano üzerinden yapılamayan değişiklikler için lütfen bizimle iletişime geçin."
+      },
+      "rightOfErasure": {
+        "title": "Silme Hakkı (Unutulma Hakkı) (Madde 17)",
+        "intro": "Aşağıdaki gerekçelerden birinin geçerli olduğu durumlarda kişisel verilerinizin gecikmeksizin silinmesini talep etme hakkınız vardır:",
+        "items": {
+          "item1": "Kişisel veriler artık amaçlar için gerekli değildir",
+          "item2": "İşlemenin onaya dayandığı durumlarda onayınızı geri çekiyorsunuz",
+          "item3": "İşlemeye itiraz ediyorsunuz ve üstün meşru gerekçeler bulunmuyor",
+          "item4": "Kişisel veriler yasa dışı olarak işlenmiştir",
+          "item5": "Kişisel verilerin yasal yükümlülüğe uyum için silinmesi gerekmektedir"
+        },
+        "note": "Not: Silme talebinizden sonra bile yasal, muhasebe veya düzenleyici amaçlarla belirli verileri saklayabiliriz."
+      },
+      "rightToRestrict": {
+        "title": "İşlemeyi Kısıtlama Hakkı (Madde 18)",
+        "intro": "Aşağıdakilerden birinin geçerli olduğu durumlarda işlemenin kısıtlanmasını talep etme hakkınız vardır:",
+        "items": {
+          "item1": "Kişisel verilerin doğruluğuna itiraz ediyorsunuz (doğrulama süresi boyunca)",
+          "item2": "İşleme yasa dışı ve silmeye itiraz ediyorsunuz",
+          "item3": "Verilere artık ihtiyacımız yok ama yasal talepler için bunlara ihtiyacınız var",
+          "item4": "İşlemeye itiraz ettiniz (meşru gerekçelerin doğrulanması bekleniyor)"
+        }
+      },
+      "rightToDataPortability": {
+        "title": "Veri Taşınabilirliği Hakkı (Madde 20)",
+        "content1": "Bize sağladığınız, sizinle ilgili kişisel verileri yapılandırılmış, yaygın olarak kullanılan, makine tarafından okunabilir bir formatta alma hakkınız vardır. Ayrıca bu verileri engelsiz olarak başka bir veri sorumlusuna iletme hakkınız da vardır.",
+        "content2": "Verilerinizi doğrudan hesap panonuzdan dışa aktarabilirsiniz. Dışa aktarma şunları içerir:",
+        "items": {
+          "item1": "Hesap bilgileri ve profil",
+          "item2": "Restoran ve menü verileri",
+          "item3": "Sipariş geçmişi",
+          "item4": "Mali kayıtlar"
+        }
+      },
+      "rightToObject": {
+        "title": "İtiraz Hakkı (Madde 21)",
+        "intro": "Aşağıdakilere dayanan kişisel verilerinizin işlenmesine, kendi özel durumunuzla ilgili gerekçelerle istediğiniz zaman itiraz etme hakkınız vardır:",
+        "items": {
+          "item1": "Meşru çıkarlar (Madde 6(1)(f))",
+          "item2": "Doğrudan pazarlama (pazarlama için profilleme dahil)"
+        },
+        "content": "Böyle bir işlemeye itiraz ederseniz, kişisel verilerinizi artık doğrudan pazarlama amaçlarıyla işlemeyeceğiz. Hesap ayarlarınız aracılığıyla veya e-postalarımızdaki abonelik iptal bağlantısına tıklayarak pazarlama iletişimlerinden çıkabilirsiniz."
+      },
+      "automatedDecisionMaking": {
+        "title": "Otomatik Karar Alma ve Profilleme (Madde 22)",
+        "content1": "Sizinle ilgili yasal sonuçlar doğuran veya benzer şekilde sizi önemli ölçüde etkileyen, profilleme dahil yalnızca otomatik işlemeye dayanan bir karara tabi olmama hakkınız vardır.",
+        "content2": "Platformumuz şunlar için otomatik özellikler kullanır:",
+        "items": {
+          "item1": "Dolandırıcılık tespiti ve önleme",
+          "item2": "Menü optimizasyon önerileri",
+          "item3": "Kişiselleştirilmiş öneriler"
+        },
+        "note": "Bu özellikler yasal sonuçlar doğurmaz ve hesap ayarlarınız aracılığıyla devre dışı bırakılabilir."
+      },
+      "crossBorderTransfers": {
+        "title": "Sınır Ötesi Veri Transferleri (Madde 44-50)",
+        "intro": "Kişisel verileriniz Avrupa Ekonomik Alanı (AEA) dışındaki ülkelere aktarılabilir. Bu tür transferler için uygun güvencelerin uygulanmasını sağlıyoruz.",
+        "mechanismsTitle": "Transfer Mekanizmaları",
+        "items": {
+          "item1Label": "Standart Sözleşme Maddeleri (SSM):",
+          "item1Text": "Yeterlilik kararı olmayan ülkelere transferler için Avrupa Komisyonu tarafından onaylanmış SSM'leri kullanıyoruz",
+          "item2Label": "Yeterlilik Kararları:",
+          "item2Text": "Yeterli veri koruması sağladığı kabul edilen ülkeler için Komisyon yeterlilik kararlarına dayanıyoruz",
+          "item3Label": "Privacy Shield (geçerliyse):",
+          "item3Text": "Amerika Birleşik Devletleri'ne yapılan transferler için geçerli çerçevelere uyuyoruz"
+        },
+        "note": "Veri transferleriniz için kullanılan uygun güvencelerin bir kopyasını {{email}} adresinden bizimle iletişime geçerek talep edebilirsiniz."
+      },
+      "dataBreachNotification": {
+        "title": "Veri İhlali Bildirimi (Madde 33-34)",
+        "intro": "Kişisel veri ihlali durumunda:",
+        "items": {
+          "item1Label": "Denetim Otoritesini Bilgilendir:",
+          "item1Text": "Gecikmeksizin ve mümkünse ihlalden haberdar olduktan sonra 72 saat içinde (hak ve özgürlükler için risk oluşturması muhtemel değilse)",
+          "item2Label": "Sizi Bilgilendir:",
+          "item2Text": "İhlalin hak ve özgürlükleriniz için yüksek risk oluşturması muhtemelse gecikmeksizin"
+        },
+        "notificationContent": "İhlal bildirimimiz şunları içerecektir:",
+        "notificationItems": {
+          "item1": "İhlalin ve ilgili veri kategorilerinin açıklaması",
+          "item2": "Veri koruma görevlimizin adı ve iletişim bilgileri",
+          "item3": "İhlalin olası sonuçları",
+          "item4": "İhlali gidermek için alınan veya önerilen önlemler"
+        }
+      },
+      "dataRetention": {
+        "title": "Veri Saklama (Madde 5(1)(e))",
+        "intro": "GDPR'nin depolama sınırlaması ilkesine uyuyoruz. Kişisel veriler, işlenme amaçları için gerekli olandan daha uzun süre saklanmaz.",
+        "retentionPeriodsTitle": "Saklama Süreleri",
+        "items": {
+          "item1Label": "Hesap verileri:",
+          "item1Text": "Hesap kapatıldıktan sonra 3 yıl",
+          "item2Label": "Mali kayıtlar:",
+          "item2Text": "7 yıl (vergi gerekliliği)",
+          "item3Label": "Sipariş verileri:",
+          "item3Text": "Sipariş tamamlandıktan sonra 3 yıl",
+          "item4Label": "Pazarlama verileri:",
+          "item4Text": "Onay geri çekilene veya 2 yıllık hareketsizliğe kadar",
+          "item5Label": "Sunucu günlükleri:",
+          "item5Text": "90 gün"
+        },
+        "note": "Saklama süresi dolduktan sonra veriler güvenli bir şekilde silinir veya anonimleştirilir."
+      },
+      "securityMeasures": {
+        "title": "Veri Güvenliği Önlemleri (Madde 32)",
+        "intro": "Riske uygun bir güvenlik seviyesi sağlamak için uygun teknik ve organizasyonel önlemler uyguluyoruz:",
+        "items": {
+          "item1Label": "Takma adlaştırma ve şifreleme:",
+          "item1Text": "Kişisel verilerin",
+          "item2Label": "Gizlilik:",
+          "item2Text": "İşleme sistemlerinin sürekli gizliliğini, bütünlüğünü, kullanılabilirliğini ve dayanıklılığını sağlama",
+          "item3Label": "Kullanılabilirlik:",
+          "item3Text": "Bir olay durumunda zamanında erişim ve kullanılabilirliği geri yükleme yeteneği",
+          "item4Label": "Düzenli test:",
+          "item4Text": "Güvenlik önlemlerinin etkinliğinin düzenli olarak test edilmesi ve değerlendirilmesi"
+        },
+        "content": "Güvenlik açıklarını belirlemek ve gidermek için düzenli güvenlik denetimleri ve sızma testleri gerçekleştiriyoruz."
+      },
+      "supervisoryAuthority": {
+        "title": "Şikayette Bulunma Hakkı (Madde 77)",
+        "intro": "Özellikle mutat ikamet yeriniz, çalıştığınız yer veya iddia edilen ihlalin gerçekleştiği yerdeki üye devlette bir denetim otoritesine şikayette bulunma hakkınız vardır.",
+        "authorityLabel": "Fin Denetim Otoritesi",
+        "authorityName": "Veri Koruma Ombudsmanlığı Ofisi",
+        "authorityAddress": "Ratapihantie 9, 00100 Helsinki, Finlandiya",
+        "authorityEmail": "tietosuoja@om.fi",
+        "authorityWebsite": "tietosuoja.fi",
+        "authorityWebsiteUrl": "https://tietosuoja.fi",
+        "note": "Bu hak, diğer idari veya yargısal başvuru yollarına halel getirmez."
+      },
+      "contact": {
+        "title": "GDPR İletişim",
+        "intro": "Haklarınızı kullanma talepleri dahil olmak üzere GDPR ile ilgili her türlü soru için lütfen bizimle iletişime geçin:",
+        "contactLabel": "Veri Koruma İletişimi",
+        "emailLabel": "E-posta:",
+        "addressLabel": "Adres:",
+        "address": "Helsinki, Finlandiya",
+        "responseTime": "Yanıt süresi: Talep alındıktan sonra 30 gün içinde",
+        "representativeNote": "Ayrıca Avrupa Birliği içinde haklarınızı sizin adınıza kullanmak üzere yetkili bir temsilci atayabilirsiniz."
+      }
+    },
+    "footerNote": "Bu GDPR Uyumluluk belgesi bilgilendirme amaçlıdır ve hukuki danışmanlık niteliği taşımamaktadır. Düzenlemeler değişebilir ve belirli uyumluluk ihtiyaçları için hukuk uzmanlarına danışmanızı öneririz. Sürekli GDPR uyumluluğunu sağlamak için uygulamalarımızı düzenli olarak gözden geçiriyor ve güncelliyoruz."
+  },
+  "cookies": {
+    "title": "Çerez Politikası",
+    "lastUpdated": "Son güncelleme: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Bu Çerez Politikası, Helmies Bites'ın platformumuzda çerezleri ve benzer teknolojileri nasıl kullandığını açıklar. Hizmetlerimizi kullanarak, bu politikada açıklandığı şekilde çerezlerin kullanımına onay vermiş olursunuz.",
+    "tableOfContents": "İçindekiler",
+    "printPage": "Bu sayfayı yazdır",
+    "nav": {
+      "whatAreCookies": "Çerezler Nedir?",
+      "howWeUseCookies": "Çerezleri Nasıl Kullanıyoruz",
+      "thirdPartyCookies": "Üçüncü Taraf Çerezleri",
+      "managingCookies": "Çerezleri Yönetme",
+      "updatesToThisPolicy": "Politika Güncellemeleri"
+    },
+    "whatAreCookies": {
+      "title": "Çerezler Nedir?",
+      "content": "Çerezler, bir web sitesini ziyaret ettiğinizde cihazınıza (bilgisayar, tablet veya mobil) depolanan küçük metin dosyalarıdır. Web sitelerinin daha verimli çalışmasını sağlamak ve web sitesi sahiplerine bilgi vermek için yaygın olarak kullanılırlar.",
+      "typesTitle": "Çerez Türleri",
+      "sessionLabel": "Oturum Çerezleri:",
+      "sessionText": "Tarayıcınızı kapattığınızda süresi dolan geçici çerezler",
+      "persistentLabel": "Kalıcı Çerezler:",
+      "persistentText": "Belirlenen bir süre boyunca veya silinene kadar cihazınızda kalır",
+      "firstPartyLabel": "Birinci Taraf Çerezleri:",
+      "firstPartyText": "Ziyaret ettiğiniz web sitesi tarafından ayarlanır",
+      "thirdPartyLabel": "Üçüncü Taraf Çerezleri:",
+      "thirdPartyText": "Web sitesinde kullanılan harici hizmetler tarafından ayarlanır"
+    },
+    "howWeUseCookies": {
+      "title": "Çerezleri Nasıl Kullanıyoruz",
+      "intro": "Çerezleri aşağıdaki amaçlarla kullanıyoruz:",
+      "items": {
+        "item1Label": "Kimlik Doğrulama:",
+        "item1Text": "Oturumunuz süresince giriş durumunuzu korumak için",
+        "item2Label": "Güvenlik:",
+        "item2Text": "Dolandırıcılığa karşı koruma ve güvenli erişimi sağlamak için",
+        "item3Label": "Tercihler:",
+        "item3Text": "Ayarlarınızı ve seçimlerinizi hatırlamak için",
+        "item4Label": "Analitik:",
+        "item4Text": "Platformumuzun nasıl kullanıldığını anlamak için",
+        "item5Label": "Pazarlama:",
+        "item5Text": "İlgili reklamlar sunmak için",
+        "item6Label": "Performans:",
+        "item6Text": "Platform hızını ve güvenilirliğini optimize etmek için"
+      }
+    },
+    "cookieTypes": {
+      "essential": {
+        "name": "Temel Çerezler",
+        "description": "Bu çerezler platformun çalışması için kesinlikle gereklidir. Kullanıcı kimlik doğrulaması, güvenlik ve güvenli alanlara erişim gibi temel işlevselliği sağlarlar. Platform bu çerezler olmadan düzgün çalışamaz.",
+        "purpose": "Temel platform işlevselliğini sağlamak",
+        "provider": "Helmies Bites",
+        "lifetime": "Oturum - 1 yıl",
+        "examples": {
+          "sessionId": {
+            "name": "session_id",
+            "purpose": "Navigasyon sırasında kullanıcı oturumunu sürdürür"
+          },
+          "csrfToken": {
+            "name": "csrf_token",
+            "purpose": "Siteler Arası İstek Sahteciliği saldırılarını önler"
+          },
+          "authToken": {
+            "name": "auth_token",
+            "purpose": "Giriş yaptıktan sonra kullanıcının kimliğini doğrular"
+          },
+          "cookieConsent": {
+            "name": "cookie_consent",
+            "purpose": "Çerez tercihlerinizi hatırlar"
+          }
+        }
+      },
+      "analytics": {
+        "name": "Analitik Çerezler",
+        "description": "Bu çerezler, ziyaret edilen sayfalar, harcanan süre ve karşılaşılan hata mesajları hakkında bilgi sağlayarak ziyaretçilerin platformumuzla nasıl etkileşimde bulunduğunu anlamamıza yardımcı olur. Bu, platformumuzun performansını ve kullanıcı deneyimini iyileştirmemize yardımcı olur.",
+        "purpose": "Platform kullanımını analiz etmek ve performansı iyileştirmek",
+        "provider": "Helmies Bites, Google Analytics",
+        "lifetime": "Oturum - 2 yıl",
+        "examples": {
+          "ga": {
+            "name": "_ga",
+            "purpose": "Google Analytics - Benzersiz kullanıcıyı tanımlar"
+          },
+          "gid": {
+            "name": "_gid",
+            "purpose": "Google Analytics - Kullanıcıları ayırt eder"
+          },
+          "gat": {
+            "name": "_gat",
+            "purpose": "Google Analytics - İstek oranını kısar"
+          },
+          "pageViews": {
+            "name": "page_views",
+            "purpose": "Oturum sırasında ziyaret edilen sayfaları sayar"
+          }
+        }
+      },
+      "marketing": {
+        "name": "Pazarlama Çerezleri",
+        "description": "Bu çerezler, size ve ilgi alanlarınıza uygun reklamlar sunmak için kullanılır. Ayrıca bir reklamı görme sayınızı sınırlamak ve reklam kampanyalarının etkinliğini ölçmeye yardımcı olmak için de kullanılır.",
+        "purpose": "İlgili reklamlar sunmak ve kampanya performansını izlemek",
+        "provider": "Helmies Bites, üçüncü taraf reklam platformları",
+        "lifetime": "Oturum - 1 yıl",
+        "examples": {
+          "adPersonalization": {
+            "name": "ad_personalization",
+            "purpose": "Reklam kişiselleştirme tercihlerini depolar"
+          },
+          "adUserData": {
+            "name": "ad_user_data",
+            "purpose": "Reklam kişiselleştirme için veri paylaşımını kontrol eder"
+          },
+          "campaignId": {
+            "name": "campaign_id",
+            "purpose": "Sizi hangi pazarlama kampanyasının getirdiğini izler"
+          },
+          "conversionId": {
+            "name": "conversion_id",
+            "purpose": "Reklamlardan gelen dönüşümleri izler"
+          }
+        }
+      },
+      "functional": {
+        "name": "Fonksiyonel Çerezler",
+        "description": "Bu çerezler videolar ve canlı sohbetler gibi gelişmiş işlevsellik ve kişiselleştirmeyi sağlar. Tarafımızdan veya sayfalarımıza eklediğimiz hizmetlerin üçüncü taraf sağlayıcıları tarafından ayarlanabilir.",
+        "purpose": "Gelişmiş özellikleri ve kişiselleştirmeyi sağlamak",
+        "provider": "Helmies Bites, üçüncü taraf hizmet sağlayıcıları",
+        "lifetime": "Oturum - 1 yıl",
+        "examples": {
+          "languagePreference": {
+            "name": "language_preference",
+            "purpose": "Seçilen dili hatırlar"
+          },
+          "themePreference": {
+            "name": "theme_preference",
+            "purpose": "Seçilen görsel temayı hatırlar"
+          },
+          "restaurantLocation": {
+            "name": "restaurant_location",
+            "purpose": "Son seçilen restoranı hatırlar"
+          },
+          "wizardProgress": {
+            "name": "wizard_progress",
+            "purpose": "Kurulum sihirbazındaki ilerlemeyi kaydeder"
+          }
+        }
+      }
+    },
+    "cookieTableLabels": {
+      "purpose": "Amaç",
+      "provider": "Sağlayıcı",
+      "lifetime": "Süre",
+      "canBeDisabled": "Devre dışı bırakılabilir mi?",
+      "noRequired": "Hayır, gerekli",
+      "yes": "Evet",
+      "examples": "Örnekler",
+      "cookieName": "Çerez Adı"
+    },
+    "thirdPartyCookies": {
+      "title": "Üçüncü Taraf Çerezleri",
+      "intro": "Aşağıda açıklanan hizmetler için belirli üçüncü tarafların cihazınıza çerez yerleştirmesine izin veriyoruz:",
+      "googleAnalytics": {
+        "title": "Google Analytics",
+        "description": "Google Analytics, ziyaretçilerin platformumuzu nasıl kullandığını anlamamıza yardımcı olmak için anonim kullanım verileri toplar.",
+        "privacyPolicyLabel": "Gizlilik Politikası:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "description": "Google Ads, ilgili reklamlar sunmak ve reklam kampanyası performansını ölçmek için çerezler kullanır.",
+        "privacyPolicyLabel": "Gizlilik Politikası:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "paymentProcessors": {
+        "title": "Ödeme İşlemcileri",
+        "description": "Stripe ve PayPal, ödemeleri güvenli bir şekilde işlemek için çerezler kullanabilir.",
+        "stripeLabel": "Stripe:",
+        "stripeLink": "stripe.com/privacy",
+        "paypalLabel": "PayPal:",
+        "paypalLink": "paypal.com/privacy"
+      }
+    },
+    "managingCookies": {
+      "title": "Çerezleri Yönetme",
+      "intro": "Çerezleri kabul etme veya reddetme konusunda karar verme hakkınız vardır. Web tarayıcı kontrollerinizi çerezleri kabul etmek veya reddetmek için ayarlayabilirsiniz. Çerezleri reddetmeyi seçerseniz, web sitemizi kullanmaya devam edebilirsiniz, ancak bazı işlevlere ve alanlara erişiminiz kısıtlanabilir.",
+      "choicesTitle": "Çerez Tercihleriniz",
+      "acceptAll": "Tüm Çerezleri Kabul Et",
+      "rejectNonEssential": "Gerekli Olmayan Çerezleri Reddet",
+      "browserSettingsTitle": "Tarayıcı Ayarları",
+      "browserSettingsIntro": "Çoğu web tarayıcısı, tarayıcı ayarları aracılığıyla çerezler üzerinde bir miktar kontrol sağlar. Çerezleri nasıl yönetip sileceğiniz hakkında daha fazla bilgi için tarayıcınızın yardım sayfalarını ziyaret edin:",
+      "browsers": {
+        "chrome": "Chrome (Google)",
+        "firefox": "Firefox (Mozilla)",
+        "edge": "Edge (Microsoft)",
+        "safari": "Safari (Apple)"
+      }
+    },
+    "updates": {
+      "title": "Politika Güncellemeleri",
+      "content1": "Uygulamalarımızdaki, teknolojideki, yasal gerekliliklerdeki veya diğer faktörlerdeki değişiklikleri yansıtmak için bu Çerez Politikasını zaman zaman güncelleyebiliriz. Herhangi bir değişiklik, güncellenmiş revizyon tarihiyle birlikte bu sayfada yayınlanacaktır.",
+      "content2": "Çerezleri nasıl kullandığımız ve tercihleriniz hakkında bilgi sahibi olmak için bu politikayı düzenli olarak gözden geçirmenizi öneririz."
+    },
+    "contact": {
+      "title": "Bize Ulaşın",
+      "intro": "Çerez kullanımımız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:",
+      "contactLabel": "Gizlilik İletişimi",
+      "emailLabel": "E-posta:"
+    },
+    "footerNote": "Bu Çerez Politikası, GDPR e-Gizlilik Yönergesi ve diğer geçerli çerez yasalarına uygun olarak tasarlanmıştır. Kişisel verilerinizi nasıl işlediğimiz hakkında daha fazla bilgi için lütfen <1>Gizlilik Politikamıza</1> bakın."
+  }
+}

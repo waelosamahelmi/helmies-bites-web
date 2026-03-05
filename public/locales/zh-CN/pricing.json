@@ -1,0 +1,253 @@
+{
+  "hero": {
+    "subtitle": "价格方案",
+    "titleHighlight": "简单灵活的",
+    "title": "定价",
+    "description": "免费开始。随业务增长而升级。每个层级都通往下一步 — 没有死胡同。"
+  },
+  "tiers": {
+    "starter": {
+      "name": "入门版",
+      "tagline": "按使用量付费",
+      "priceDisplay": "5%",
+      "priceSubtext": "每笔在线订单",
+      "setupFee": "€0 设置费",
+      "highlights": [
+        "每月最低费用 €49",
+        "每笔在线订单 5%",
+        "无需承诺"
+      ],
+      "bestFor": "小型咖啡馆，初试水温",
+      "features": {
+        "included": [
+          "完整网站构建器",
+          "在线订餐系统",
+          "AI 菜单导入",
+          "Stripe 支付集成",
+          "移动端优化设计",
+          "多语言支持",
+          "免费子域名",
+          "邮件支持",
+          "每月最低费用 €49"
+        ],
+        "excluded": [
+          "线下支付支持",
+          "自定义品牌和域名",
+          "AI 助手",
+          "高级分析",
+          "优先支持"
+        ]
+      },
+      "ctaText": "免费开始",
+      "pricingTag": "免费方案"
+    },
+    "pro": {
+      "name": "专业版",
+      "tagline": "月度订阅",
+      "priceSubtext": "/月",
+      "setupFee": "€500 一次性设置费",
+      "highlights": [
+        "全部功能解锁",
+        "包含线下支付",
+        "€500 一次性设置费"
+      ],
+      "bestFor": "准备承诺的成熟餐厅",
+      "features": {
+        "included": [
+          "入门版全部内容",
+          "零交易费",
+          "线下支付支持（现金、刷卡终端）",
+          "客户 AI 助手",
+          "高级分析与报告",
+          "自定义品牌和域名",
+          "优先支持",
+          "社交媒体集成",
+          "配送区域管理"
+        ],
+        "excluded": [
+          "白标解决方案",
+          "API 访问",
+          "专属客户经理"
+        ]
+      },
+      "ctaText": "立即开始",
+      "pricingTag": "高级方案",
+      "toggle": {
+        "monthly": "月付",
+        "yearly": "年付",
+        "yearlyDiscount": "省 10%",
+        "monthlyLabel": "/月",
+        "yearlyLabel": "/年"
+      }
+    },
+    "annual": {
+      "name": "年度版",
+      "tagline": "最佳性价比",
+      "priceDisplay": "€99",
+      "priceSubtext": "/月（按年付费）",
+      "setupFee": "€0 设置费",
+      "highlights": [
+        "首年 €1,190",
+        "续费：€1,390/年",
+        "3 年：€2,990（€83/月）"
+      ],
+      "bestFor": "希望最大化节省的餐厅",
+      "features": {
+        "included": [
+          "专业版全部内容",
+          "零交易费",
+          "全部功能解锁",
+          "€0 设置费（节省 €500）",
+          "最低实际月费",
+          "专属客户经理",
+          "自定义集成",
+          "多门店支持",
+          "SLA 保障"
+        ]
+      },
+      "ctaText": "锁定优惠",
+      "pricingTag": "年度方案",
+      "bestValueBadge": "最佳性价比",
+      "bestForLabel": "最适合"
+    }
+  },
+  "trust": {
+    "subtitle": "信赖",
+    "titleHighlight": "为什么餐厅",
+    "title": "选择我们",
+    "description": "我们以零风险保障助力您的成功",
+    "badges": {
+      "moneyBack": {
+        "title": "退款保证",
+        "description": "30 天内不满意全额退款"
+      },
+      "noSetupFees": {
+        "title": "零设置费",
+        "description": "几分钟内免费启动您的餐厅网站"
+      },
+      "threeMonthNotice": {
+        "title": "3 个月通知期",
+        "description": "提前 3 个月通知即可取消"
+      }
+    }
+  },
+  "comparison": {
+    "subtitle": "并排对比",
+    "titleHighlight": "比较所有",
+    "title": "功能",
+    "description": "清晰了解每个方案包含的内容，做出正确选择",
+    "tableHeader": "功能",
+    "starterHeader": "入门版",
+    "proHeader": "专业版",
+    "annualHeader": "年度版",
+    "categories": {
+      "pricing": "定价",
+      "coreFeatures": "核心功能",
+      "payments": "支付",
+      "aiAutomation": "AI 与自动化",
+      "brandingCustomization": "品牌与定制",
+      "analyticsSupport": "分析与支持",
+      "technical": "技术"
+    },
+    "features": {
+      "monthlyCost": "月费",
+      "setupFee": "设置费",
+      "transactionFees": "交易费",
+      "commitment": "承诺期",
+      "websiteBuilder": "网站构建器",
+      "onlineOrdering": "在线订餐",
+      "aiMenuImport": "AI 菜单导入",
+      "mobileOptimized": "移动端优化",
+      "multiLanguage": "多语言",
+      "stripeIntegration": "Stripe 集成",
+      "offlinePayments": "线下支付（现金、终端）",
+      "customPaymentGateway": "自定义支付网关",
+      "aiMenuImportAi": "AI 菜单导入",
+      "aiAssistant": "AI 助手",
+      "aiTranslations": "AI 翻译",
+      "freeSubdomain": "免费子域名",
+      "customDomain": "自定义域名",
+      "customBranding": "自定义品牌",
+      "whiteLabelSolution": "白标解决方案",
+      "basicAnalytics": "基础分析",
+      "advancedReports": "高级报告",
+      "emailSupport": "邮件支持",
+      "prioritySupport": "优先支持",
+      "dedicatedAccountManager": "专属客户经理",
+      "slaGuarantee": "SLA 保障",
+      "apiAccess": "API 访问",
+      "customIntegrations": "自定义集成",
+      "multiBranchSupport": "多门店支持"
+    },
+    "values": {
+      "starter": {
+        "monthlyCost": "5% + €49 最低",
+        "setupFee": "€0",
+        "transactionFees": "5%",
+        "commitment": "无"
+      },
+      "pro": {
+        "monthlyCost": "€129/月",
+        "setupFee": "€500",
+        "transactionFees": "0%",
+        "commitment": "月付"
+      },
+      "annual": {
+        "monthlyCost": "€99/月",
+        "setupFee": "€0",
+        "transactionFees": "0%",
+        "commitment": "1 年或 3 年"
+      }
+    }
+  },
+  "faq": {
+    "subtitle": "有疑问？",
+    "titleHighlight": "常见",
+    "title": "问题",
+    "description": "关于我们定价和方案的一切您需要了解的信息",
+    "starterPayAsYouGo": {
+      "question": "入门版的按使用量付费模式如何运作？",
+      "answer": "使用入门版，您支付通过我们平台处理的在线订单的 5% — 无月度订阅费。每月最低费用为 €49，用于覆盖平台成本。例如，如果您处理了 €2,000 的在线订单，您支付 €100（5%）。如果您的 5% 不足 €49，您仍需支付 €49 的最低费用。"
+    },
+    "proSetupFee": {
+      "question": "€500 的专业版设置费包含什么？",
+      "answer": "一次性 €500 设置费涵盖完整的入门服务：我们为您配置网站、使用 AI 导入菜单、设置自定义域名、配置线下支付终端，并提供专属培训课程。选择年度方案，设置完全免费（€0）。"
+    },
+    "switchPlans": {
+      "question": "我可以在方案之间切换吗？",
+      "answer": "当然可以！自然的升级路径是：入门版 → 专业版 → 年度版。您可以随时升级。从入门版切换到专业版时，您需支付 €500 设置费并开始月度计费。切换到年度版时，设置费免除，剩余的专业版订阅按比例折算。"
+    },
+    "annualPricing": {
+      "question": "年度方案的定价如何运作？",
+      "answer": "首年：€1,190（实际 €99/月）。续费：€1,390/年。我们还提供 3 年承诺方案，总计 €2,990（仅 €83/月）。所有年度方案均包含 €0 设置费，且从第一天起所有功能全部解锁。"
+    },
+    "paymentMethods": {
+      "question": "你们接受哪些付款方式？",
+      "answer": "我们接受所有主流信用卡（Visa、Mastercard、American Express）、银行转账和 PayPal。年度和 3 年方案还可以通过发票付款。"
+    },
+    "offlinePaymentsStarter": {
+      "question": "入门版的线下支付怎么办？",
+      "answer": "入门版仅支持通过 Stripe 的在线支付。如果您需要接受现金、刷卡终端或其他线下支付方式，您需要升级到专业版或年度版。"
+    },
+    "contractCommitment": {
+      "question": "有合同或承诺要求吗？",
+      "answer": "所有方案需要提前 3 个月通知取消。年度版：1 年或 3 年承诺，享受最优费率。"
+    },
+    "refundPolicy": {
+      "question": "你们的退款政策是什么？",
+      "answer": "我们为专业版和年度版提供 30 天退款保证。如果您在前 30 天内不满意，请联系我们获取全额退款 — 无需任何理由。"
+    }
+  },
+  "cta": {
+    "subtitle": "立即开始",
+    "titleHighlight": "准备好发展",
+    "title": "您的餐厅了吗？",
+    "description": "加入已使用 Helmies Bites 的数百家餐厅。免费开始，无需信用卡。",
+    "seeAllFeatures": "查看所有功能",
+    "trustIndicators": {
+      "guarantee": "30 天保证",
+      "noCreditCard": "无需信用卡",
+      "support": "24/7 支持"
+    }
+  }
+}

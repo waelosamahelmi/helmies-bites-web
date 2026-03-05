@@ -1,0 +1,758 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "At Helmies Bites, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our restaurant platform services. Please read this policy carefully.",
+    "tableOfContents": "Table of Contents",
+    "printPage": "Print this page",
+    "sections": {
+      "informationCollection": {
+        "title": "Information Collection",
+        "intro": "At Helmies Bites, we collect information you provide directly to us and information we collect automatically when you use our services.",
+        "youProvideTitle": "Information You Provide",
+        "youProvideItems": {
+          "item1": "Account information (name, email address, restaurant name)",
+          "item2": "Restaurant details (address, phone number, business hours)",
+          "item3": "Menu items and pricing information",
+          "item4": "Payment and billing information",
+          "item5": "Communications with our support team"
+        },
+        "autoCollectedTitle": "Automatically Collected Information",
+        "autoCollectedItems": {
+          "item1": "Device information (IP address, browser type, operating system)",
+          "item2": "Usage data (pages visited, features used, time spent)",
+          "item3": "Log data (access times, referring URLs)"
+        }
+      },
+      "dataUsage": {
+        "title": "How We Use Your Information",
+        "intro": "We use the information we collect to:",
+        "items": {
+          "item1": "Provide, maintain, and improve our services",
+          "item2": "Process transactions and send related information",
+          "item3": "Send technical notices and support messages",
+          "item4": "Respond to comments, questions, and customer service requests",
+          "item5": "Communicate about products, services, and events",
+          "item6": "Monitor and analyze trends, usage, and activities",
+          "item7": "Detect, investigate, and prevent security incidents and fraud",
+          "item8": "Comply with legal obligations"
+        }
+      },
+      "cookies": {
+        "title": "Cookies and Tracking Technologies",
+        "content1": "We use cookies and similar tracking technologies to collect and track information about your activities on our platform. Cookies are small data files stored on your device that help us provide you with a better experience.",
+        "content2": "We use the following types of cookies:",
+        "items": {
+          "item1Label": "Essential cookies:",
+          "item1Text": "Required for the platform to function",
+          "item2Label": "Analytics cookies:",
+          "item2Text": "Help us understand how users interact with our platform",
+          "item3Label": "Marketing cookies:",
+          "item3Text": "Used to deliver relevant advertisements"
+        },
+        "cookiePolicyLink": "For more details, please see our <1>Cookie Policy</1>."
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "content1": "We implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction, or damage.",
+        "content2": "Our security measures include:",
+        "items": {
+          "item1": "Encryption of data in transit and at rest",
+          "item2": "Regular security assessments and updates",
+          "item3": "Access controls and authentication systems",
+          "item4": "Secure data centers with physical security controls"
+        },
+        "content3": "However, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security."
+      },
+      "userRights": {
+        "title": "Your Rights",
+        "intro": "Depending on your location, you may have the following rights:",
+        "items": {
+          "item1Label": "Access:",
+          "item1Text": "Request a copy of your personal data",
+          "item2Label": "Rectification:",
+          "item2Text": "Correct inaccurate or incomplete data",
+          "item3Label": "Erasure:",
+          "item3Text": "Request deletion of your personal data",
+          "item4Label": "Restriction:",
+          "item4Text": "Request limitation of data processing",
+          "item5Label": "Portability:",
+          "item5Text": "Receive your data in a structured format",
+          "item6Label": "Objection:",
+          "item6Text": "Object to processing of your data",
+          "item7Label": "Withdraw consent:",
+          "item7Text": "Withdraw consent where processing is based on consent"
+        },
+        "contactText": "To exercise these rights, please contact us at <1>{{email}}</1>."
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "content1": "We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this privacy policy.",
+        "content2": "Retention periods vary based on:",
+        "items": {
+          "item1": "The type of data and its sensitivity",
+          "item2": "The purpose for which it was collected",
+          "item3": "Legal and regulatory requirements",
+          "item4": "Statute of limitations for potential claims"
+        },
+        "content3": "Account data is typically retained for 3 years after account closure. Financial records are retained for 7 years as required by tax laws."
+      },
+      "thirdPartyServices": {
+        "title": "Third-Party Services",
+        "content1": "We use third-party services to help operate our platform. These service providers have access to your personal information only to perform specific tasks on our behalf.",
+        "content2": "Examples of third-party services include:",
+        "items": {
+          "item1": "Payment processors (Stripe, PayPal)",
+          "item2": "Cloud hosting providers",
+          "item3": "Analytics services",
+          "item4": "Email communication services",
+          "item5": "Customer support tools"
+        },
+        "content3": "We carefully select these partners and require them to comply with strict data protection standards."
+      },
+      "internationalTransfers": {
+        "title": "International Data Transfers",
+        "content1": "Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your data in accordance with this privacy policy and applicable law.",
+        "content2": "When transferring data from the European Economic Area (EEA), we rely on standard contractual clauses approved by the European Commission or other appropriate legal mechanisms."
+      },
+      "childrenPrivacy": {
+        "title": "Children Privacy",
+        "content": "Our services are not intended for children under the age of 16. We do not knowingly collect personal information from children under 16. If you become aware that a child has provided us with personal information, please contact us immediately."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "intro": "If you have questions, concerns, or complaints about this privacy policy or our data practices, please contact us:",
+        "contactLabel": "Privacy Contact",
+        "emailLabel": "Email:",
+        "addressLabel": "Address:",
+        "address": "Helsinki, Finland",
+        "euNote": "For data subjects in the European Union, you also have the right to lodge a complaint with your local data protection authority."
+      }
+    },
+    "footerNote": "This privacy policy is intended to comply with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable data protection laws. We reserve the right to update this policy from time to time. Any changes will be posted on this page with an updated revision date."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: {{date}}",
+    "email": "legal@helmiesbites.fi",
+    "introduction": "Welcome to Helmies Bites. These Terms of Service govern your use of our restaurant platform and online ordering services. By using our services, you agree to these terms. Please read them carefully.",
+    "tableOfContents": "Table of Contents",
+    "printPage": "Print this page",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content1": "By accessing or using Helmies Bites services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using our services.",
+        "content2": "These terms constitute a legally binding agreement between you and Helmies Bites Oy, a company registered in Finland."
+      },
+      "serviceDescription": {
+        "title": "Description of Service",
+        "intro": "Helmies Bites provides a restaurant website builder and online ordering platform that enables restaurants to:",
+        "items": {
+          "item1": "Create and customize restaurant websites",
+          "item2": "Display menus and pricing information",
+          "item3": "Accept online orders and payments",
+          "item4": "Manage orders and customer communications",
+          "item5": "Integrate with domain and hosting services"
+        },
+        "content": "We reserve the right to modify, suspend, or discontinue any aspect of our services at any time without prior notice."
+      },
+      "userResponsibilities": {
+        "title": "User Responsibilities",
+        "intro": "As a user of our services, you agree to:",
+        "items": {
+          "item1": "Provide accurate, current, and complete information",
+          "item2": "Maintain the security of your account credentials",
+          "item3": "Accept responsibility for all activities under your account",
+          "item4": "Notify us immediately of any unauthorized use",
+          "item5": "Comply with all applicable laws and regulations",
+          "item6": "Not use our services for any illegal or unauthorized purpose",
+          "item7": "Not attempt to gain unauthorized access to our systems",
+          "item8": "Not interfere with or disrupt our services or servers"
+        },
+        "note": "You are solely responsible for the content you publish on your restaurant website, including menu items, prices, and images."
+      },
+      "paymentTerms": {
+        "title": "Payment and Billing",
+        "serviceFeesTitle": "Service Fees",
+        "serviceFeesContent": "Helmies Bites charges a service fee of 5% on each online order processed through our platform. This fee is automatically deducted from the order total before settlement.",
+        "addonsTitle": "Optional Add-ons",
+        "addonsItems": {
+          "item1": "Cash on Delivery: \u20ac30/month",
+          "item2": "AI Assistant: \u20ac10/month"
+        },
+        "processingTitle": "Payment Processing",
+        "processingContent": "All payments are processed through third-party payment processors (Stripe, PayPal). Additional payment processor fees may apply and are separate from our service fees.",
+        "settlementTitle": "Settlement",
+        "settlementContent": "Order proceeds (minus our service fee and payment processor fees) are settled to your designated bank account on a weekly basis, typically within 3-5 business days.",
+        "taxesTitle": "Taxes",
+        "taxesContent": "All prices are exclusive of VAT. Finnish VAT (25.5% as of 2026) is added to service fees where applicable. You are responsible for any taxes related to your business operations."
+      },
+      "cancellation": {
+        "title": "Cancellation and Termination",
+        "byYouTitle": "By You",
+        "byYouIntro": "You may cancel your account at any time by contacting us or through your account settings. Upon cancellation:",
+        "byYouItems": {
+          "item1": "You will continue to have access until the end of your current billing period",
+          "item2": "All pending orders will be processed and settled",
+          "item3": "Your website will be taken offline within 30 days",
+          "item4": "You may request export of your data within 90 days"
+        },
+        "byUsTitle": "By Us",
+        "byUsIntro": "We reserve the right to suspend or terminate your account at any time for:",
+        "byUsItems": {
+          "item1": "Violation of these Terms of Service",
+          "item2": "Violation of applicable laws or regulations",
+          "item3": "Fraudulent or abusive activity",
+          "item4": "Extended period of inactivity (12+ months)"
+        },
+        "note": "We will provide reasonable notice before termination except in cases of fraud or illegal activity."
+      },
+      "refunds": {
+        "title": "Refunds",
+        "intro": "Our service fee is non-refundable once an order has been processed. However, we may issue refunds or credits in our sole discretion in cases of:",
+        "items": {
+          "item1": "Service interruptions lasting more than 24 hours",
+          "item2": "Double charging due to technical errors",
+          "item3": "Orders not fulfilled due to platform issues"
+        },
+        "content": "For customer refund requests related to orders, please refer to our individual restaurant refund policy, which you can set in your account settings."
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "ourPropertyTitle": "Our Property",
+        "ourPropertyIntro": "The Helmies Bites platform, including all software, designs, text, graphics, logos, and other content, is owned by Helmies Bites Oy and protected by intellectual property laws. You may not:",
+        "ourPropertyItems": {
+          "item1": "Copy, modify, or distribute our platform",
+          "item2": "Use our trademarks without permission",
+          "item3": "Reverse engineer or attempt to extract source code"
+        },
+        "yourContentTitle": "Your Content",
+        "yourContentText": "You retain ownership of all content you provide to our platform (menu items, images, descriptions). By using our services, you grant us a license to use, display, and process your content solely to provide our services to you.",
+        "userGeneratedTitle": "User-Generated Content",
+        "userGeneratedText": "Customer reviews, feedback, and other user-generated content may be used by us for marketing and service improvement purposes, in accordance with our Privacy Policy."
+      },
+      "limitationOfLiability": {
+        "title": "Limitation of Liability",
+        "disclaimer": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, HELMIES BITES SHALL NOT BE LIABLE FOR:",
+        "items": {
+          "item1": "Indirect, incidental, special, or consequential damages",
+          "item2": "Lost profits or lost business opportunities",
+          "item3": "Loss of data or corruption of data",
+          "item4": "Service interruptions or downtime",
+          "item5": "Actions or omissions by third parties (payment processors, delivery services)"
+        },
+        "totalLiabilityTitle": "Total Liability",
+        "totalLiabilityContent": "Our total liability to you for all claims shall not exceed the amount of service fees you paid to us in the 12 months preceding the claim. This limitation applies to all causes of action in the aggregate.",
+        "noWarrantiesTitle": "No Warranties",
+        "noWarrantiesContent": "Our services are provided \"as is\" without warranties of any kind, whether express or implied. We do not guarantee uninterrupted or error-free operation."
+      },
+      "disputeResolution": {
+        "title": "Dispute Resolution",
+        "governingLawTitle": "Governing Law",
+        "governingLawContent": "These Terms of Service are governed by the laws of Finland. Any disputes relating to these terms shall be resolved in the courts of Helsinki, Finland.",
+        "resolutionProcessTitle": "Resolution Process",
+        "resolutionProcessContent": "We encourage you to contact us directly at <1>{{email}}</1> to resolve any issues informally. Most disputes can be resolved quickly through direct communication.",
+        "euConsumerTitle": "EU Consumer Rights",
+        "euConsumerContent": "For consumers located in the European Union, you may have access to alternative dispute resolution mechanisms through the EU Online Dispute Resolution platform."
+      },
+      "indemnification": {
+        "title": "Indemnification",
+        "intro": "You agree to indemnify, defend, and hold harmless Helmies Bites and its affiliates, officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, and expenses arising from:",
+        "items": {
+          "item1": "Your use of our services",
+          "item2": "Your violation of these Terms of Service",
+          "item3": "Your violation of any third-party rights",
+          "item4": "Content you provide or publish through our platform"
+        }
+      },
+      "modifications": {
+        "title": "Modifications to Terms",
+        "intro": "We reserve the right to modify these Terms of Service at any time. We will notify you of material changes by:",
+        "items": {
+          "item1": "Posting the new terms on our platform",
+          "item2": "Sending an email to your registered email address",
+          "item3": "Displaying a prominent notice in your account dashboard"
+        },
+        "content": "Continued use of our services after modifications constitutes acceptance of the new terms. If you do not agree to the modified terms, you must discontinue use of our services."
+      },
+      "generalProvisions": {
+        "title": "General Provisions",
+        "items": {
+          "item1Label": "Entire Agreement:",
+          "item1Text": "These terms constitute the entire agreement between you and Helmies Bites regarding our services.",
+          "item2Label": "Severability:",
+          "item2Text": "If any provision is found invalid, the remaining provisions shall remain in full force.",
+          "item3Label": "Waiver:",
+          "item3Text": "Our failure to enforce any right does not constitute a waiver of that right.",
+          "item4Label": "Assignment:",
+          "item4Text": "You may not assign these terms without our consent. We may assign our rights and obligations without restriction.",
+          "item5Label": "Force Majeure:",
+          "item5Text": "We are not liable for delays or failures due to causes beyond our reasonable control."
+        }
+      },
+      "contact": {
+        "title": "Contact Us",
+        "intro": "If you have questions about these Terms of Service, please contact us:",
+        "contactLabel": "Legal Contact",
+        "emailLabel": "Email:",
+        "addressLabel": "Address:",
+        "address": "Helsinki, Finland",
+        "businessIdLabel": "Business ID:",
+        "businessId": "(Finnish: Y-tunnus) Available upon request"
+      }
+    },
+    "footerNote": "These Terms of Service are designed to comply with Finnish and European Union consumer protection laws. If you have any questions about your rights as a consumer, please contact us or your local consumer protection authority."
+  },
+  "gdpr": {
+    "title": "GDPR Compliance",
+    "lastUpdated": "Last updated: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "This GDPR Compliance document explains how Helmies Bites implements the General Data Protection Regulation (GDPR) and how you can exercise your data subject rights. We are committed to protecting your personal data and ensuring transparency in our data processing practices.",
+    "tableOfContents": "Table of Contents",
+    "printPage": "Print this page",
+    "keyPrinciples": {
+      "title": "GDPR Key Principles (Article 5)",
+      "principle1": "Lawfulness, fairness, transparency",
+      "principle2": "Purpose limitation",
+      "principle3": "Data minimisation",
+      "principle4": "Accuracy",
+      "principle5": "Storage limitation",
+      "principle6": "Integrity and confidentiality",
+      "accountability": "We are accountable for, and able to demonstrate, compliance with these principles."
+    },
+    "sections": {
+      "dataController": {
+        "title": "Data Controller Information",
+        "intro": "Helmies Bites Oy is the data controller responsible for processing your personal data. Our contact information:",
+        "contactLabel": "Data Controller",
+        "companyLabel": "Company:",
+        "company": "Helmies Bites Oy",
+        "addressLabel": "Address:",
+        "address": "Helsinki, Finland",
+        "emailLabel": "Email:",
+        "businessIdLabel": "Business ID:",
+        "businessId": "(Finnish: Y-tunnus) Available upon request"
+      },
+      "legalBasis": {
+        "title": "Legal Basis for Processing",
+        "intro": "We process your personal data on the following legal bases under the General Data Protection Regulation (GDPR):",
+        "items": {
+          "item1Label": "Contract Performance (Article 6(1)(b)):",
+          "item1Text": "Processing necessary to provide our services under your subscription agreement",
+          "item2Label": "Legitimate Interests (Article 6(1)(f)):",
+          "item2Text": "Processing for security, fraud prevention, and service improvement",
+          "item3Label": "Consent (Article 6(1)(a)):",
+          "item3Text": "Processing for marketing communications and optional features",
+          "item4Label": "Legal Obligation (Article 6(1)(c)):",
+          "item4Text": "Processing required by tax laws and other regulations"
+        }
+      },
+      "dataCategories": {
+        "title": "Categories of Personal Data",
+        "intro": "We process the following categories of personal data:",
+        "accountDataTitle": "Account and Contact Data",
+        "accountDataItems": {
+          "item1": "Name, email address, phone number",
+          "item2": "Account credentials and authentication data",
+          "item3": "Communication preferences"
+        },
+        "businessDataTitle": "Business Data",
+        "businessDataItems": {
+          "item1": "Restaurant name and address",
+          "item2": "Business registration information",
+          "item3": "Menu items, prices, and descriptions",
+          "item4": "Operating hours and location data"
+        },
+        "financialDataTitle": "Financial Data",
+        "financialDataItems": {
+          "item1": "Payment and billing information",
+          "item2": "Bank account details for settlements",
+          "item3": "Transaction history",
+          "item4": "Invoices and receipts"
+        },
+        "technicalDataTitle": "Technical Data",
+        "technicalDataItems": {
+          "item1": "IP address and device information",
+          "item2": "Usage and browsing data",
+          "item3": "Cookies and tracking identifiers",
+          "item4": "Log files and access records"
+        }
+      },
+      "dataSubjectRights": {
+        "title": "Data Subject Rights",
+        "intro": "Under GDPR, you have the following rights regarding your personal data. We provide mechanisms for you to exercise these rights.",
+        "howToExerciseTitle": "How to Exercise Your Rights",
+        "howToExerciseContent": "To exercise any of these rights, please contact us at <1>{{email}}</1>. We will respond to your request within 30 days, free of charge."
+      },
+      "rightOfAccess": {
+        "title": "Right of Access (Article 15)",
+        "content1": "You have the right to obtain confirmation from us as to whether we are processing your personal data and, if we are, access to your personal data and additional information.",
+        "content2": "Upon request, we will provide:",
+        "items": {
+          "item1": "A copy of your personal data",
+          "item2": "The purposes of processing",
+          "item3": "The categories of personal data concerned",
+          "item4": "The recipients or categories of recipients",
+          "item5": "The retention period or criteria for determining it",
+          "item6": "Information about your rights",
+          "item7": "The source of the data, if not collected from you",
+          "item8": "Information about automated decision-making"
+        }
+      },
+      "rightOfRectification": {
+        "title": "Right to Rectification (Article 16)",
+        "content1": "You have the right to obtain inaccurate personal data concerning you to be rectified without undue delay. Taking into account the purposes of the processing, you have the right to have incomplete personal data completed.",
+        "content2": "You can update most of your personal data directly through your account dashboard. For changes that cannot be made through the dashboard, please contact us."
+      },
+      "rightOfErasure": {
+        "title": "Right to Erasure (Right to be Forgotten) (Article 17)",
+        "intro": "You have the right to obtain erasure of your personal data without undue delay when one of the following grounds applies:",
+        "items": {
+          "item1": "The personal data is no longer necessary for the purposes",
+          "item2": "You withdraw consent where processing is based on consent",
+          "item3": "You object to processing and there are no overriding legitimate grounds",
+          "item4": "The personal data has been processed unlawfully",
+          "item5": "The personal data must be erased for compliance with legal obligation"
+        },
+        "note": "Note: We may retain certain data for legal, accounting, or regulatory purposes even after your request for erasure."
+      },
+      "rightToRestrict": {
+        "title": "Right to Restrict Processing (Article 18)",
+        "intro": "You have the right to obtain restriction of processing when one of the following applies:",
+        "items": {
+          "item1": "You contest the accuracy of the personal data (for a period enabling verification)",
+          "item2": "Processing is unlawful and you oppose erasure",
+          "item3": "We no longer need the data but you require it for legal claims",
+          "item4": "You have objected to processing (pending verification of legitimate grounds)"
+        }
+      },
+      "rightToDataPortability": {
+        "title": "Right to Data Portability (Article 20)",
+        "content1": "You have the right to receive the personal data concerning you, which you have provided to us, in a structured, commonly used, machine-readable format. You also have the right to transmit this data to another controller without hindrance.",
+        "content2": "You can export your data directly from your account dashboard. The export includes:",
+        "items": {
+          "item1": "Account information and profile",
+          "item2": "Restaurant and menu data",
+          "item3": "Order history",
+          "item4": "Financial records"
+        }
+      },
+      "rightToObject": {
+        "title": "Right to Object (Article 21)",
+        "intro": "You have the right to object, on grounds relating to your particular situation, at any time to processing of your personal data based on:",
+        "items": {
+          "item1": "Legitimate interests (Article 6(1)(f))",
+          "item2": "Direct marketing (including profiling for marketing)"
+        },
+        "content": "We will no longer process your personal data for direct marketing purposes if you object to such processing. You can opt out of marketing communications through your account settings or by clicking the unsubscribe link in our emails."
+      },
+      "automatedDecisionMaking": {
+        "title": "Automated Decision-Making and Profiling (Article 22)",
+        "content1": "You have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning you or similarly significantly affects you.",
+        "content2": "Our platform does use automated features for:",
+        "items": {
+          "item1": "Fraud detection and prevention",
+          "item2": "Menu optimization suggestions",
+          "item3": "Personalized recommendations"
+        },
+        "note": "These features do not produce legal effects and can be disabled through your account settings."
+      },
+      "crossBorderTransfers": {
+        "title": "Cross-Border Data Transfers (Article 44-50)",
+        "intro": "Your personal data may be transferred to countries outside the European Economic Area (EEA). We ensure appropriate safeguards are in place for such transfers.",
+        "mechanismsTitle": "Transfer Mechanisms",
+        "items": {
+          "item1Label": "Standard Contractual Clauses (SCCs):",
+          "item1Text": "We use European Commission-approved SCCs for transfers to countries without an adequacy decision",
+          "item2Label": "Adequacy Decisions:",
+          "item2Text": "We rely on Commission adequacy decisions for countries recognized as providing adequate data protection",
+          "item3Label": "Privacy Shield (if applicable):",
+          "item3Text": "For transfers to the United States, we comply with applicable frameworks"
+        },
+        "note": "You may request a copy of the appropriate safeguards used for your data transfers by contacting us at {{email}}."
+      },
+      "dataBreachNotification": {
+        "title": "Data Breach Notification (Article 33-34)",
+        "intro": "In the event of a personal data breach, we will:",
+        "items": {
+          "item1Label": "Notify Supervisory Authority:",
+          "item1Text": "Without undue delay and, where feasible, not later than 72 hours after becoming aware of the breach (unless unlikely to result in a risk to rights and freedoms)",
+          "item2Label": "Notify You:",
+          "item2Text": "Without undue delay if the breach is likely to result in a high risk to your rights and freedoms"
+        },
+        "notificationContent": "Our breach notification will include:",
+        "notificationItems": {
+          "item1": "Description of the breach and categories of data concerned",
+          "item2": "Name and contact details of our data protection officer",
+          "item3": "Likely consequences of the breach",
+          "item4": "Measures taken or proposed to address the breach"
+        }
+      },
+      "dataRetention": {
+        "title": "Data Retention (Article 5(1)(e))",
+        "intro": "We adhere to the GDPR principle of storage limitation. Personal data is retained no longer than necessary for the purposes for which it is processed.",
+        "retentionPeriodsTitle": "Retention Periods",
+        "items": {
+          "item1Label": "Account data:",
+          "item1Text": "3 years after account closure",
+          "item2Label": "Financial records:",
+          "item2Text": "7 years (tax requirement)",
+          "item3Label": "Order data:",
+          "item3Text": "3 years after order completion",
+          "item4Label": "Marketing data:",
+          "item4Text": "Until consent withdrawal or 2 years of inactivity",
+          "item5Label": "Server logs:",
+          "item5Text": "90 days"
+        },
+        "note": "After the retention period expires, data is securely deleted or anonymized."
+      },
+      "securityMeasures": {
+        "title": "Data Security Measures (Article 32)",
+        "intro": "We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk:",
+        "items": {
+          "item1Label": "Pseudonymization and encryption:",
+          "item1Text": "Of personal data",
+          "item2Label": "Confidentiality:",
+          "item2Text": "Ensuring ongoing confidentiality, integrity, availability and resilience of processing systems",
+          "item3Label": "Availability:",
+          "item3Text": "Ability to restore access and availability in a timely manner in the event of an incident",
+          "item4Label": "Regular testing:",
+          "item4Text": "Regular testing and assessment of effectiveness of security measures"
+        },
+        "content": "We conduct regular security audits and penetration testing to identify and address vulnerabilities."
+      },
+      "supervisoryAuthority": {
+        "title": "Right to Lodge a Complaint (Article 77)",
+        "intro": "You have the right to lodge a complaint with a supervisory authority, particularly in the Member State of your habitual residence, place of work, or place of alleged infringement.",
+        "authorityLabel": "Finnish Supervisory Authority",
+        "authorityName": "Office of the Data Protection Ombudsman",
+        "authorityAddress": "Ratapihantie 9, 00100 Helsinki, Finland",
+        "authorityEmail": "tietosuoja@om.fi",
+        "authorityWebsite": "tietosuoja.fi",
+        "authorityWebsiteUrl": "https://tietosuoja.fi",
+        "note": "This right is without prejudice to any other administrative or judicial remedy."
+      },
+      "contact": {
+        "title": "GDPR Contact",
+        "intro": "For any GDPR-related inquiries, including requests to exercise your rights, please contact us:",
+        "contactLabel": "Data Protection Contact",
+        "emailLabel": "Email:",
+        "addressLabel": "Address:",
+        "address": "Helsinki, Finland",
+        "responseTime": "Response time: Within 30 days of receipt of request",
+        "representativeNote": "You may also designate an authorized representative to exercise rights on your behalf within the European Union."
+      }
+    },
+    "footerNote": "This GDPR Compliance document is provided for informational purposes and does not constitute legal advice. Regulations may change, and we recommend consulting with legal professionals for specific compliance needs. We regularly review and update our practices to ensure ongoing GDPR compliance."
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "lastUpdated": "Last updated: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "This Cookie Policy explains how Helmies Bites uses cookies and similar technologies on our platform. By using our services, you consent to the use of cookies as described in this policy.",
+    "tableOfContents": "Table of Contents",
+    "printPage": "Print this page",
+    "nav": {
+      "whatAreCookies": "What Are Cookies?",
+      "howWeUseCookies": "How We Use Cookies",
+      "thirdPartyCookies": "Third-Party Cookies",
+      "managingCookies": "Managing Cookies",
+      "updatesToThisPolicy": "Updates to This Policy"
+    },
+    "whatAreCookies": {
+      "title": "What Are Cookies?",
+      "content": "Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.",
+      "typesTitle": "Types of Cookies",
+      "sessionLabel": "Session Cookies:",
+      "sessionText": "Temporary cookies that expire when you close your browser",
+      "persistentLabel": "Persistent Cookies:",
+      "persistentText": "Remain on your device for a set period or until deleted",
+      "firstPartyLabel": "First-Party Cookies:",
+      "firstPartyText": "Set by the website you are visiting",
+      "thirdPartyLabel": "Third-Party Cookies:",
+      "thirdPartyText": "Set by external services used on the website"
+    },
+    "howWeUseCookies": {
+      "title": "How We Use Cookies",
+      "intro": "We use cookies for the following purposes:",
+      "items": {
+        "item1Label": "Authentication:",
+        "item1Text": "To keep you logged in during your session",
+        "item2Label": "Security:",
+        "item2Text": "To protect against fraud and ensure secure access",
+        "item3Label": "Preferences:",
+        "item3Text": "To remember your settings and choices",
+        "item4Label": "Analytics:",
+        "item4Text": "To understand how our platform is used",
+        "item5Label": "Marketing:",
+        "item5Text": "To deliver relevant advertisements",
+        "item6Label": "Performance:",
+        "item6Text": "To optimize platform speed and reliability"
+      }
+    },
+    "cookieTypes": {
+      "essential": {
+        "name": "Essential Cookies",
+        "description": "These cookies are strictly necessary for the platform to function. They enable core functionality such as user authentication, security, and access to secure areas. The platform cannot function properly without these cookies.",
+        "purpose": "To enable essential platform functionality",
+        "provider": "Helmies Bites",
+        "lifetime": "Session to 1 year",
+        "examples": {
+          "sessionId": {
+            "name": "session_id",
+            "purpose": "Maintains user session during navigation"
+          },
+          "csrfToken": {
+            "name": "csrf_token",
+            "purpose": "Prevents Cross-Site Request Forgery attacks"
+          },
+          "authToken": {
+            "name": "auth_token",
+            "purpose": "Authenticates user after login"
+          },
+          "cookieConsent": {
+            "name": "cookie_consent",
+            "purpose": "Remembers your cookie preferences"
+          }
+        }
+      },
+      "analytics": {
+        "name": "Analytics Cookies",
+        "description": "These cookies help us understand how visitors interact with our platform by providing information about pages visited, time spent, and error messages encountered. This helps us improve the performance and user experience of our platform.",
+        "purpose": "To analyze platform usage and improve performance",
+        "provider": "Helmies Bites, Google Analytics",
+        "lifetime": "Session to 2 years",
+        "examples": {
+          "ga": {
+            "name": "_ga",
+            "purpose": "Google Analytics - Identifies unique user"
+          },
+          "gid": {
+            "name": "_gid",
+            "purpose": "Google Analytics - Distinguishes users"
+          },
+          "gat": {
+            "name": "_gat",
+            "purpose": "Google Analytics - Throttles request rate"
+          },
+          "pageViews": {
+            "name": "page_views",
+            "purpose": "Counts pages visited during session"
+          }
+        }
+      },
+      "marketing": {
+        "name": "Marketing Cookies",
+        "description": "These cookies are used to deliver advertisements that are relevant to you and your interests. They are also used to limit the number of times you see an advertisement and help measure the effectiveness of advertising campaigns.",
+        "purpose": "To deliver relevant advertisements and track campaign performance",
+        "provider": "Helmies Bites, third-party advertising platforms",
+        "lifetime": "Session to 1 year",
+        "examples": {
+          "adPersonalization": {
+            "name": "ad_personalization",
+            "purpose": "Stores ad personalization preferences"
+          },
+          "adUserData": {
+            "name": "ad_user_data",
+            "purpose": "Controls sharing of data for ad personalization"
+          },
+          "campaignId": {
+            "name": "campaign_id",
+            "purpose": "Tracks which marketing campaign brought you here"
+          },
+          "conversionId": {
+            "name": "conversion_id",
+            "purpose": "Tracks conversions from advertising"
+          }
+        }
+      },
+      "functional": {
+        "name": "Functional Cookies",
+        "description": "These cookies enable enhanced functionality and personalization, such as videos and live chats. They may be set by us or by third-party providers whose services we have added to our pages.",
+        "purpose": "To enable enhanced features and personalization",
+        "provider": "Helmies Bites, third-party service providers",
+        "lifetime": "Session to 1 year",
+        "examples": {
+          "languagePreference": {
+            "name": "language_preference",
+            "purpose": "Remembers selected language"
+          },
+          "themePreference": {
+            "name": "theme_preference",
+            "purpose": "Remembers visual theme selection"
+          },
+          "restaurantLocation": {
+            "name": "restaurant_location",
+            "purpose": "Remembers last selected restaurant"
+          },
+          "wizardProgress": {
+            "name": "wizard_progress",
+            "purpose": "Saves progress in setup wizard"
+          }
+        }
+      }
+    },
+    "cookieTableLabels": {
+      "purpose": "Purpose",
+      "provider": "Provider",
+      "lifetime": "Lifetime",
+      "canBeDisabled": "Can be disabled?",
+      "noRequired": "No, required",
+      "yes": "Yes",
+      "examples": "Examples",
+      "cookieName": "Cookie Name"
+    },
+    "thirdPartyCookies": {
+      "title": "Third-Party Cookies",
+      "intro": "We allow certain third parties to place cookies on your device for the services described below:",
+      "googleAnalytics": {
+        "title": "Google Analytics",
+        "description": "Google Analytics collects anonymous usage data to help us understand how visitors use our platform.",
+        "privacyPolicyLabel": "Privacy Policy:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "description": "Google Ads uses cookies to deliver relevant advertisements and measure ad campaign performance.",
+        "privacyPolicyLabel": "Privacy Policy:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "paymentProcessors": {
+        "title": "Payment Processors",
+        "description": "Stripe and PayPal may use cookies to process payments securely.",
+        "stripeLabel": "Stripe:",
+        "stripeLink": "stripe.com/privacy",
+        "paypalLabel": "PayPal:",
+        "paypalLink": "paypal.com/privacy"
+      }
+    },
+    "managingCookies": {
+      "title": "Managing Cookies",
+      "intro": "You have the right to decide whether to accept or reject cookies. You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website, though your access to some functionality and areas may be restricted.",
+      "choicesTitle": "Your Cookie Choices",
+      "acceptAll": "Accept All Cookies",
+      "rejectNonEssential": "Reject Non-Essential",
+      "browserSettingsTitle": "Browser Settings",
+      "browserSettingsIntro": "Most web browsers allow some control over cookies through browser settings. To learn more about how to manage and delete cookies, visit the help pages of your browser:",
+      "browsers": {
+        "chrome": "Chrome (Google)",
+        "firefox": "Firefox (Mozilla)",
+        "edge": "Edge (Microsoft)",
+        "safari": "Safari (Apple)"
+      }
+    },
+    "updates": {
+      "title": "Updates to This Policy",
+      "content1": "We may update this Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. Any changes will be posted on this page with an updated revision date.",
+      "content2": "We encourage you to review this policy periodically to stay informed about how we use cookies and your choices regarding them."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "intro": "If you have questions about our use of cookies, please contact us:",
+      "contactLabel": "Privacy Contact",
+      "emailLabel": "Email:"
+    },
+    "footerNote": "This Cookie Policy is designed to comply with the GDPR ePrivacy Directive and other applicable cookie laws. For more information about how we handle your personal data, please see our <1>Privacy Policy</1>."
+  }
+}

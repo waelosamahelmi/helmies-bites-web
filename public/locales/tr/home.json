@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Yapay zeka ile 5 dakikada başlayın",
+    "title": "Restoranınızın Web Sitesi, Dakikalar İçinde Hazır",
+    "description": "Yapay zeka destekli kurulum, şık temalar, online sipariş — Finlandiya genelindeki restoranlar için çok yakında.",
+    "cta": "Özellikleri Keşfedin"
+  },
+  "stats": {
+    "subtitle": "Finlandiya genelinde restoranlar tarafından tercih ediliyor",
+    "title": "500+ Restorana Katılın",
+    "description": "Helmies Bites ile zaten büyüyorlar",
+    "restaurants": "Restoran",
+    "ordersProcessed": "İşlenen Sipariş",
+    "satisfactionRate": "Memnuniyet Oranı",
+    "averageSetup": "Ortalama Kurulum"
+  },
+  "features": {
+    "subtitle": "Güçlü Özellikler",
+    "title": "İhtiyacınız Olan Her Şey",
+    "description": "Restoranınızı online yönetmek için gereken tüm araçlar, tek bir güzel platformda",
+    "aiMenuImport": {
+      "title": "Yapay Zeka Menü İçe Aktarımı",
+      "description": "Menü PDF'inizi yükleyin, yapay zeka her şeyi otomatik olarak çıkarsın, sınıflandırsın ve çevirsin."
+    },
+    "beautifulThemes": {
+      "title": "Şık Temalar",
+      "description": "Etkileyici hazır temalardan seçin veya yapay zekanın markanıza uygun benzersiz bir tasarım oluşturmasına izin verin."
+    },
+    "mobileOptimized": {
+      "title": "Mobil Uyumlu",
+      "description": "Siteniz her cihazda mükemmel görünür. Müşterilerin %70'i mobil cihazdan sipariş verir."
+    },
+    "multiLanguage": {
+      "title": "Çoklu Dil Desteği",
+      "description": "Fince, İngilizce, İsveççe ve daha fazlası — yapay zeka ile otomatik çeviri."
+    },
+    "onlineOrdering": {
+      "title": "Online Sipariş",
+      "description": "Entegre ödeme işleme ve gerçek zamanlı güncellemelerle online sipariş kabul edin."
+    },
+    "viewAll": "Tüm Özellikleri Gör"
+  },
+  "howItWorks": {
+    "subtitle": "Nasıl Çalışır",
+    "title": "4 Kolay Adımda Başlayın",
+    "steps": {
+      "signUp": {
+        "title": "Kayıt ve Kurulum Sihirbazı",
+        "description": "Rehberli kurulum sihirbazımız sizi her adımda yönlendirir."
+      },
+      "aiMenu": {
+        "title": "Yapay Zeka Menü Kurulumu",
+        "description": "Menü PDF'inizi yükleyin. Yapay zeka her şeyi otomatik olarak çıkarır."
+      },
+      "theme": {
+        "title": "Temanızı Seçin",
+        "description": "Güzel hazır temalardan seçin veya yapay zekanın sizin için tasarlamasına izin verin."
+      },
+      "goLive": {
+        "title": "Yayına Geçin",
+        "description": "Anında yayına geçin ve sipariş almaya başlayın."
+      }
+    }
+  },
+  "integrations": {
+    "subtitle": "Yerleşik Entegrasyonlar",
+    "title": "İhtiyacınız Olan Her Şey, Hazır",
+    "description": "Ödeme ve teslimat platformlarıyla sorunsuz entegrasyonlar",
+    "securePayments": {
+      "title": "Güvenli Ödemeler",
+      "text": "Sektör lideri güvenlik ile PCI uyumlu ödeme işleme"
+    },
+    "realTimeAnalytics": {
+      "title": "Gerçek Zamanlı Analitik",
+      "text": "Siparişleri, geliri ve müşteri verilerini gerçek zamanlı takip edin"
+    },
+    "deliveryIntegration": {
+      "title": "Teslimat Entegrasyonu",
+      "text": "Bölgeler, ücretler ve takip ile yerleşik teslimat yönetimi"
+    },
+    "withoutHelmies": "Helmies Olmadan",
+    "withoutDesc": "Karmaşık kurulum, yüksek ücretler, kontrol yok",
+    "withHelmies": "Helmies ile",
+    "withDesc": "5 dk kurulum, %0 komisyon, tam kontrol"
+  },
+  "floating": {
+    "onlineOrders": "Online Siparişler",
+    "rating": "4.9/5 Puan",
+    "reviews": "500+ değerlendirme",
+    "happyOwners": "Mutlu İşletme Sahipleri"
+  },
+  "cta": {
+    "subtitle": "Çok Yakında",
+    "title": "Çok Yakında Başlıyoruz!",
+    "description": "Helmies Bites ile yayına geçen <1>ilk restoranlar</1> arasında olun. Kurulum sadece <3>5 dakika</3> sürer.",
+    "viewPricing": "Fiyatları Gör",
+    "launchingSoon": "Çok Yakında",
+    "launchingDate": "5 Mart 2026'da yayına geçtiğimizde hazır olun"
+  }
+}

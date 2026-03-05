@@ -728,3 +728,29 @@
   background-color: rgba(255, 122, 0, 0.3);
   color: #ffffff;
 }
+
+/* RTL Support for Arabic */
+[dir="rtl"] {
+  font-family: 'Noto Sans Arabic', 'Nunito', sans-serif;
+}
+
+[dir="rtl"] html,
+[dir="rtl"] body {
+  font-family: 'Noto Sans Arabic', 'Nunito', sans-serif;
+}
+
+/* Chinese font support */
+html[lang="zh-CN"],
+html[lang="zh-CN"] body {
+  font-family: 'Noto Sans SC', 'Nunito', sans-serif;
+}
+
+/* RTL layout adjustments */
+[dir="rtl"] .faq-accordion .faq-body-inner {
+  padding-left: 0;
+  padding-right: 3rem;
+}
+
+[dir="rtl"] .process-step {
+  flex-direction: row-reverse;
+}

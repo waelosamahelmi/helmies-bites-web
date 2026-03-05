@@ -1,0 +1,758 @@
+{
+  "privacy": {
+    "title": "Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "På Helmies Bites tar vi din integritet på allvar. Denna integritetspolicy förklarar hur vi samlar in, använder, lämnar ut och skyddar din information när du använder våra restaurangplattformstjänster. Vänligen läs denna policy noggrant.",
+    "tableOfContents": "Innehållsförteckning",
+    "printPage": "Skriv ut denna sida",
+    "sections": {
+      "informationCollection": {
+        "title": "Informationsinsamling",
+        "intro": "På Helmies Bites samlar vi in information du ger oss direkt och information vi samlar in automatiskt när du använder våra tjänster.",
+        "youProvideTitle": "Information du tillhandahåller",
+        "youProvideItems": {
+          "item1": "Kontoinformation (namn, e-postadress, restaurangnamn)",
+          "item2": "Restauranguppgifter (adress, telefonnummer, öppettider)",
+          "item3": "Menyartiklar och prisinformation",
+          "item4": "Betalnings- och faktureringsinformation",
+          "item5": "Kommunikation med vårt supportteam"
+        },
+        "autoCollectedTitle": "Automatiskt insamlad information",
+        "autoCollectedItems": {
+          "item1": "Enhetsinformation (IP-adress, webbläsartyp, operativsystem)",
+          "item2": "Användningsdata (besökta sidor, använda funktioner, spenderad tid)",
+          "item3": "Loggdata (åtkomsttider, hänvisande URL:er)"
+        }
+      },
+      "dataUsage": {
+        "title": "Hur vi använder din information",
+        "intro": "Vi använder informationen vi samlar in för att:",
+        "items": {
+          "item1": "Tillhandahålla, underhålla och förbättra våra tjänster",
+          "item2": "Bearbeta transaktioner och skicka relaterad information",
+          "item3": "Skicka tekniska meddelanden och supportmeddelanden",
+          "item4": "Svara på kommentarer, frågor och kundtjänstförfrågningar",
+          "item5": "Kommunicera om produkter, tjänster och evenemang",
+          "item6": "Övervaka och analysera trender, användning och aktiviteter",
+          "item7": "Upptäcka, utreda och förhindra säkerhetsincidenter och bedrägerier",
+          "item8": "Uppfylla rättsliga skyldigheter"
+        }
+      },
+      "cookies": {
+        "title": "Cookies och spårningsteknologier",
+        "content1": "Vi använder cookies och liknande spårningsteknologier för att samla in och spåra information om dina aktiviteter på vår plattform. Cookies är små datafiler som lagras på din enhet och hjälper oss att ge dig en bättre upplevelse.",
+        "content2": "Vi använder följande typer av cookies:",
+        "items": {
+          "item1Label": "Nödvändiga cookies:",
+          "item1Text": "Krävs för att plattformen ska fungera",
+          "item2Label": "Analyticscookies:",
+          "item2Text": "Hjälper oss förstå hur användare interagerar med vår plattform",
+          "item3Label": "Marknadsföringscookies:",
+          "item3Text": "Används för att visa relevanta annonser"
+        },
+        "cookiePolicyLink": "För mer information, se vår <1>cookiepolicy</1>."
+      },
+      "dataSecurity": {
+        "title": "Datasäkerhet",
+        "content1": "Vi implementerar lämpliga tekniska och organisatoriska åtgärder för att skydda dina personuppgifter mot obehörig eller olaglig behandling, oavsiktlig förlust, förstöring eller skada.",
+        "content2": "Våra säkerhetsåtgärder inkluderar:",
+        "items": {
+          "item1": "Kryptering av data under överföring och lagring",
+          "item2": "Regelbundna säkerhetsbedömningar och uppdateringar",
+          "item3": "Åtkomstkontroller och autentiseringssystem",
+          "item4": "Säkra datacenter med fysiska säkerhetskontroller"
+        },
+        "content3": "Ingen metod för överföring via internet är dock 100 % säker. Även om vi strävar efter att skydda dina data kan vi inte garantera absolut säkerhet."
+      },
+      "userRights": {
+        "title": "Dina rättigheter",
+        "intro": "Beroende på din plats kan du ha följande rättigheter:",
+        "items": {
+          "item1Label": "Åtkomst:",
+          "item1Text": "Begära en kopia av dina personuppgifter",
+          "item2Label": "Rättelse:",
+          "item2Text": "Korrigera felaktiga eller ofullständiga uppgifter",
+          "item3Label": "Radering:",
+          "item3Text": "Begära radering av dina personuppgifter",
+          "item4Label": "Begränsning:",
+          "item4Text": "Begära begränsning av databehandling",
+          "item5Label": "Portabilitet:",
+          "item5Text": "Ta emot dina data i ett strukturerat format",
+          "item6Label": "Invändning:",
+          "item6Text": "Invända mot behandling av dina data",
+          "item7Label": "Återkalla samtycke:",
+          "item7Text": "Återkalla samtycke där behandlingen baseras på samtycke"
+        },
+        "contactText": "För att utöva dessa rättigheter, vänligen kontakta oss på <1>{{email}}</1>."
+      },
+      "dataRetention": {
+        "title": "Datalagring",
+        "content1": "Vi lagrar dina personuppgifter så länge det är nödvändigt för att tillhandahålla våra tjänster och uppfylla de syften som beskrivs i denna integritetspolicy.",
+        "content2": "Lagringsperioderna varierar baserat på:",
+        "items": {
+          "item1": "Typen av data och dess känslighet",
+          "item2": "Syftet för vilken den samlades in",
+          "item3": "Rättsliga och regulatoriska krav",
+          "item4": "Preskriptionstid för potentiella anspråk"
+        },
+        "content3": "Kontodata lagras vanligtvis i 3 år efter kontoavslutning. Finansiella poster lagras i 7 år enligt skattekrav."
+      },
+      "thirdPartyServices": {
+        "title": "Tredjepartstjänster",
+        "content1": "Vi använder tredjepartstjänster för att hjälpa till med driften av vår plattform. Dessa tjänsteleverantörer har tillgång till dina personuppgifter enbart för att utföra specifika uppgifter å våra vägnar.",
+        "content2": "Exempel på tredjepartstjänster inkluderar:",
+        "items": {
+          "item1": "Betalningsbearbetare (Stripe, PayPal)",
+          "item2": "Molnhostingleverantörer",
+          "item3": "Analystjänster",
+          "item4": "E-postkommunikationstjänster",
+          "item5": "Kundsupportverktyg"
+        },
+        "content3": "Vi väljer dessa partners noggrant och kräver att de följer strikta dataskyddsstandarder."
+      },
+      "internationalTransfers": {
+        "title": "Internationella dataöverföringar",
+        "content1": "Din information kan överföras till och behandlas i andra länder än ditt eget. Vi säkerställer att lämpliga skyddsåtgärder finns på plats för att skydda dina data i enlighet med denna integritetspolicy och tillämplig lag.",
+        "content2": "Vid överföring av data från Europeiska ekonomiska samarbetsområdet (EES) förlitar vi oss på standardavtalsklausuler godkända av Europeiska kommissionen eller andra lämpliga rättsliga mekanismer."
+      },
+      "childrenPrivacy": {
+        "title": "Barns integritet",
+        "content": "Våra tjänster är inte avsedda för barn under 16 år. Vi samlar inte medvetet in personuppgifter från barn under 16 år. Om du blir medveten om att ett barn har gett oss personuppgifter, vänligen kontakta oss omedelbart."
+      },
+      "contact": {
+        "title": "Kontakta oss",
+        "intro": "Om du har frågor, funderingar eller klagomål om denna integritetspolicy eller våra databehandlingsmetoder, vänligen kontakta oss:",
+        "contactLabel": "Integritetskontakt",
+        "emailLabel": "E-post:",
+        "addressLabel": "Adress:",
+        "address": "Helsingfors, Finland",
+        "euNote": "För registrerade i Europeiska unionen har du också rätt att lämna in ett klagomål till din lokala dataskyddsmyndighet."
+      }
+    },
+    "footerNote": "Denna integritetspolicy är avsedd att följa den allmänna dataskyddsförordningen (GDPR), California Consumer Privacy Act (CCPA) och andra tillämpliga dataskyddslagar. Vi förbehåller oss rätten att uppdatera denna policy från tid till annan. Eventuella ändringar kommer att publiceras på denna sida med ett uppdaterat revisionsdatum."
+  },
+  "terms": {
+    "title": "Användarvillkor",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
+    "email": "legal@helmiesbites.fi",
+    "introduction": "Välkommen till Helmies Bites. Dessa användarvillkor reglerar din användning av vår restaurangplattform och onlinebeställningstjänster. Genom att använda våra tjänster godkänner du dessa villkor. Vänligen läs dem noggrant.",
+    "tableOfContents": "Innehållsförteckning",
+    "printPage": "Skriv ut denna sida",
+    "sections": {
+      "acceptance": {
+        "title": "Godkännande av villkor",
+        "content1": "Genom att använda Helmies Bites tjänster godkänner du att vara bunden av dessa användarvillkor och alla tillämpliga lagar och förordningar. Om du inte samtycker till dessa villkor är du förbjuden att använda våra tjänster.",
+        "content2": "Dessa villkor utgör ett juridiskt bindande avtal mellan dig och Helmies Bites Oy, ett bolag registrerat i Finland."
+      },
+      "serviceDescription": {
+        "title": "Beskrivning av tjänsten",
+        "intro": "Helmies Bites tillhandahåller en webbplatsbyggare och onlinebeställningsplattform för restauranger som möjliggör för restauranger att:",
+        "items": {
+          "item1": "Skapa och anpassa restaurangwebbplatser",
+          "item2": "Visa menyer och prisinformation",
+          "item3": "Ta emot onlinebeställningar och betalningar",
+          "item4": "Hantera beställningar och kundkommunikation",
+          "item5": "Integrera med domän- och hostingtjänster"
+        },
+        "content": "Vi förbehåller oss rätten att ändra, avbryta eller upphöra med vilken aspekt av våra tjänster som helst när som helst utan föregående meddelande."
+      },
+      "userResponsibilities": {
+        "title": "Användaransvar",
+        "intro": "Som användare av våra tjänster godkänner du att:",
+        "items": {
+          "item1": "Tillhandahålla korrekt, aktuell och fullständig information",
+          "item2": "Upprätthålla säkerheten för dina kontouppgifter",
+          "item3": "Ta ansvar för alla aktiviteter under ditt konto",
+          "item4": "Meddela oss omedelbart vid obehörig användning",
+          "item5": "Följa alla tillämpliga lagar och förordningar",
+          "item6": "Inte använda våra tjänster för olagliga eller obehöriga ändamål",
+          "item7": "Inte försöka få obehörig åtkomst till våra system",
+          "item8": "Inte störa våra tjänster eller servrar"
+        },
+        "note": "Du är ensam ansvarig för innehållet du publicerar på din restaurangwebbplats, inklusive menyartiklar, priser och bilder."
+      },
+      "paymentTerms": {
+        "title": "Betalning och fakturering",
+        "serviceFeesTitle": "Serviceavgifter",
+        "serviceFeesContent": "Helmies Bites tar ut en serviceavgift på 5 % på varje onlinebeställning som behandlas genom vår plattform. Denna avgift dras automatiskt av från beställningens totalbelopp före avräkning.",
+        "addonsTitle": "Valfria tillägg",
+        "addonsItems": {
+          "item1": "Betalning vid leverans: 30 €/mån",
+          "item2": "AI-assistent: 10 €/mån"
+        },
+        "processingTitle": "Betalningshantering",
+        "processingContent": "Alla betalningar behandlas genom tredjepartsbetalningsbearbetare (Stripe, PayPal). Ytterligare betalningsbearbetaravgifter kan tillkomma och är separata från våra serviceavgifter.",
+        "settlementTitle": "Avräkning",
+        "settlementContent": "Orderintäkter (minus vår serviceavgift och betalningsbearbetaravgifter) avräknas till ditt angivna bankkonto veckovis, vanligtvis inom 3-5 arbetsdagar.",
+        "taxesTitle": "Skatter",
+        "taxesContent": "Alla priser är exklusive moms. Finsk moms (25,5 % från 2026) läggs till serviceavgifter där tillämpligt. Du ansvarar för alla skatter relaterade till din verksamhet."
+      },
+      "cancellation": {
+        "title": "Avslut och uppsägning",
+        "byYouTitle": "Av dig",
+        "byYouIntro": "Du kan avsluta ditt konto när som helst genom att kontakta oss eller via dina kontoinställningar. Vid avslut:",
+        "byYouItems": {
+          "item1": "Du har åtkomst till slutet av din nuvarande faktureringsperiod",
+          "item2": "Alla pågående beställningar behandlas och avräknas",
+          "item3": "Din webbplats tas offline inom 30 dagar",
+          "item4": "Du kan begära export av dina data inom 90 dagar"
+        },
+        "byUsTitle": "Av oss",
+        "byUsIntro": "Vi förbehåller oss rätten att stänga av eller avsluta ditt konto när som helst för:",
+        "byUsItems": {
+          "item1": "Brott mot dessa användarvillkor",
+          "item2": "Brott mot tillämpliga lagar eller förordningar",
+          "item3": "Bedräglig eller missbrukande aktivitet",
+          "item4": "Längre period av inaktivitet (12+ månader)"
+        },
+        "note": "Vi meddelar dig i rimlig tid innan uppsägning förutom vid bedrägeri eller olaglig verksamhet."
+      },
+      "refunds": {
+        "title": "Återbetalningar",
+        "intro": "Vår serviceavgift är ej återbetalningsbar när en beställning har behandlats. Vi kan dock efter eget gottfinnande utfärda återbetalningar eller krediter i fall av:",
+        "items": {
+          "item1": "Tjänsteavbrott som varar mer än 24 timmar",
+          "item2": "Dubbeldebiteringar på grund av tekniska fel",
+          "item3": "Beställningar som inte uppfylldes på grund av plattformsproblem"
+        },
+        "content": "För kundåterbetalningsförfrågningar relaterade till beställningar, se den enskilda restaurangens återbetalningspolicy som du kan ställa in i dina kontoinställningar."
+      },
+      "intellectualProperty": {
+        "title": "Immateriella rättigheter",
+        "ourPropertyTitle": "Vår egendom",
+        "ourPropertyIntro": "Helmies Bites-plattformen, inklusive all mjukvara, design, text, grafik, logotyper och annat innehåll, ägs av Helmies Bites Oy och skyddas av immaterialrätt. Du får inte:",
+        "ourPropertyItems": {
+          "item1": "Kopiera, modifiera eller distribuera vår plattform",
+          "item2": "Använda våra varumärken utan tillstånd",
+          "item3": "Göra reverse engineering eller försöka extrahera källkod"
+        },
+        "yourContentTitle": "Ditt innehåll",
+        "yourContentText": "Du behåller äganderätten till allt innehåll du tillhandahåller till vår plattform (menyartiklar, bilder, beskrivningar). Genom att använda våra tjänster ger du oss en licens att använda, visa och bearbeta ditt innehåll enbart för att tillhandahålla våra tjänster till dig.",
+        "userGeneratedTitle": "Användargenererat innehåll",
+        "userGeneratedText": "Kundrecensioner, feedback och annat användargenererat innehåll kan användas av oss för marknadsförings- och tjänsteförbättringsändamål, i enlighet med vår integritetspolicy."
+      },
+      "limitationOfLiability": {
+        "title": "Ansvarsbegränsning",
+        "disclaimer": "I DEN MAXIMALA UTSTRÄCKNING SOM LAGEN TILLÅTER SKA HELMIES BITES INTE VARA ANSVARIGT FÖR:",
+        "items": {
+          "item1": "Indirekta, tillfälliga, speciella eller följdskador",
+          "item2": "Förlorade vinster eller förlorade affärsmöjligheter",
+          "item3": "Dataförlust eller datakorruption",
+          "item4": "Tjänstavbrott eller driftstopp",
+          "item5": "Handlingar eller underlåtenheter av tredje part (betalningsbearbetare, leveranstjänster)"
+        },
+        "totalLiabilityTitle": "Totalt ansvar",
+        "totalLiabilityContent": "Vårt totala ansvar gentemot dig för alla anspråk ska inte överstiga beloppet av serviceavgifter du betalat till oss under de 12 månaderna före anspråket. Denna begränsning gäller för alla grunder för talan sammantaget.",
+        "noWarrantiesTitle": "Inga garantier",
+        "noWarrantiesContent": "Våra tjänster tillhandahålls \"som de är\" utan garantier av något slag, vare sig uttryckliga eller underförstådda. Vi garanterar inte oavbruten eller felfri drift."
+      },
+      "disputeResolution": {
+        "title": "Tvistlösning",
+        "governingLawTitle": "Tillämplig lag",
+        "governingLawContent": "Dessa användarvillkor regleras av finsk lag. Tvister relaterade till dessa villkor ska avgöras vid domstolarna i Helsingfors, Finland.",
+        "resolutionProcessTitle": "Lösningsprocess",
+        "resolutionProcessContent": "Vi uppmuntrar dig att kontakta oss direkt på <1>{{email}}</1> för att lösa eventuella problem informellt. De flesta tvister kan lösas snabbt genom direkt kommunikation.",
+        "euConsumerTitle": "EU:s konsumenträttigheter",
+        "euConsumerContent": "För konsumenter inom Europeiska unionen kan du ha tillgång till alternativa tvistlösningsmekanismer via EU:s plattform för tvistlösning online."
+      },
+      "indemnification": {
+        "title": "Skadestånd",
+        "intro": "Du samtycker till att ersätta, försvara och hålla Helmies Bites och dess dotterbolag, tjänstemän, styrelseledamöter, anställda och ombud skadeslösa från och mot alla anspråk, skador, förluster, skulder och kostnader som uppstår från:",
+        "items": {
+          "item1": "Din användning av våra tjänster",
+          "item2": "Ditt brott mot dessa användarvillkor",
+          "item3": "Ditt brott mot tredje parts rättigheter",
+          "item4": "Innehåll du tillhandahåller eller publicerar genom vår plattform"
+        }
+      },
+      "modifications": {
+        "title": "Ändringar av villkor",
+        "intro": "Vi förbehåller oss rätten att ändra dessa användarvillkor när som helst. Vi meddelar dig om väsentliga ändringar genom att:",
+        "items": {
+          "item1": "Publicera de nya villkoren på vår plattform",
+          "item2": "Skicka ett e-postmeddelande till din registrerade e-postadress",
+          "item3": "Visa ett framträdande meddelande i din kontoinstrumentpanel"
+        },
+        "content": "Fortsatt användning av våra tjänster efter ändringar utgör godkännande av de nya villkoren. Om du inte samtycker till de ändrade villkoren måste du sluta använda våra tjänster."
+      },
+      "generalProvisions": {
+        "title": "Allmänna bestämmelser",
+        "items": {
+          "item1Label": "Fullständigt avtal:",
+          "item1Text": "Dessa villkor utgör det fullständiga avtalet mellan dig och Helmies Bites avseende våra tjänster.",
+          "item2Label": "Avskiljbarhet:",
+          "item2Text": "Om någon bestämmelse befinns ogiltig förblir de återstående bestämmelserna i full kraft.",
+          "item3Label": "Avstående:",
+          "item3Text": "Vår underlåtenhet att utöva en rättighet utgör inte ett avstående från den rättigheten.",
+          "item4Label": "Överlåtelse:",
+          "item4Text": "Du får inte överlåta dessa villkor utan vårt samtycke. Vi kan överlåta våra rättigheter och skyldigheter utan begränsning.",
+          "item5Label": "Force majeure:",
+          "item5Text": "Vi ansvarar inte för förseningar eller underlåtenheter som beror på orsaker utanför vår rimliga kontroll."
+        }
+      },
+      "contact": {
+        "title": "Kontakta oss",
+        "intro": "Om du har frågor om dessa användarvillkor, vänligen kontakta oss:",
+        "contactLabel": "Juridisk kontakt",
+        "emailLabel": "E-post:",
+        "addressLabel": "Adress:",
+        "address": "Helsingfors, Finland",
+        "businessIdLabel": "Företags-ID:",
+        "businessId": "(Finskt: Y-tunnus) Tillgängligt på begäran"
+      }
+    },
+    "footerNote": "Dessa användarvillkor är utformade för att följa finska och EU:s konsumentskyddslagar. Om du har frågor om dina rättigheter som konsument, vänligen kontakta oss eller din lokala konsumentskyddsmyndighet."
+  },
+  "gdpr": {
+    "title": "GDPR-efterlevnad",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Detta GDPR-efterlevnadsdokument förklarar hur Helmies Bites implementerar den allmänna dataskyddsförordningen (GDPR) och hur du kan utöva dina rättigheter som registrerad. Vi är engagerade i att skydda dina personuppgifter och säkerställa transparens i vår databehandling.",
+    "tableOfContents": "Innehållsförteckning",
+    "printPage": "Skriv ut denna sida",
+    "keyPrinciples": {
+      "title": "GDPR:s huvudprinciper (Artikel 5)",
+      "principle1": "Laglighet, korrekthet, transparens",
+      "principle2": "Ändamålsbegränsning",
+      "principle3": "Uppgiftsminimering",
+      "principle4": "Korrekthet",
+      "principle5": "Lagringsminimering",
+      "principle6": "Integritet och konfidentialitet",
+      "accountability": "Vi är ansvariga för, och kan visa efterlevnad av, dessa principer."
+    },
+    "sections": {
+      "dataController": {
+        "title": "Information om personuppgiftsansvarig",
+        "intro": "Helmies Bites Oy är personuppgiftsansvarig som ansvarar för behandling av dina personuppgifter. Vår kontaktinformation:",
+        "contactLabel": "Personuppgiftsansvarig",
+        "companyLabel": "Företag:",
+        "company": "Helmies Bites Oy",
+        "addressLabel": "Adress:",
+        "address": "Helsingfors, Finland",
+        "emailLabel": "E-post:",
+        "businessIdLabel": "Företags-ID:",
+        "businessId": "(Finskt: Y-tunnus) Tillgängligt på begäran"
+      },
+      "legalBasis": {
+        "title": "Rättslig grund för behandling",
+        "intro": "Vi behandlar dina personuppgifter på följande rättsliga grunder enligt den allmänna dataskyddsförordningen (GDPR):",
+        "items": {
+          "item1Label": "Fullgörande av avtal (Artikel 6(1)(b)):",
+          "item1Text": "Behandling som krävs för att tillhandahålla våra tjänster enligt ditt prenumerationsavtal",
+          "item2Label": "Berättigade intressen (Artikel 6(1)(f)):",
+          "item2Text": "Behandling för säkerhet, bedrägeriförebyggande och tjänsteförbättring",
+          "item3Label": "Samtycke (Artikel 6(1)(a)):",
+          "item3Text": "Behandling för marknadsföringskommunikation och valfria funktioner",
+          "item4Label": "Rättslig skyldighet (Artikel 6(1)(c)):",
+          "item4Text": "Behandling som krävs enligt skattelagar och andra förordningar"
+        }
+      },
+      "dataCategories": {
+        "title": "Kategorier av personuppgifter",
+        "intro": "Vi behandlar följande kategorier av personuppgifter:",
+        "accountDataTitle": "Konto- och kontaktuppgifter",
+        "accountDataItems": {
+          "item1": "Namn, e-postadress, telefonnummer",
+          "item2": "Kontouppgifter och autentiseringsdata",
+          "item3": "Kommunikationspreferenser"
+        },
+        "businessDataTitle": "Verksamhetsdata",
+        "businessDataItems": {
+          "item1": "Restaurangnamn och adress",
+          "item2": "Företagsregistreringsinformation",
+          "item3": "Menyartiklar, priser och beskrivningar",
+          "item4": "Öppettider och platsdata"
+        },
+        "financialDataTitle": "Finansiella data",
+        "financialDataItems": {
+          "item1": "Betalnings- och faktureringsinformation",
+          "item2": "Bankkontouppgifter för avräkningar",
+          "item3": "Transaktionshistorik",
+          "item4": "Fakturor och kvitton"
+        },
+        "technicalDataTitle": "Tekniska data",
+        "technicalDataItems": {
+          "item1": "IP-adress och enhetsinformation",
+          "item2": "Användnings- och webbläsardata",
+          "item3": "Cookies och spårningsidentifierare",
+          "item4": "Loggfiler och åtkomstposter"
+        }
+      },
+      "dataSubjectRights": {
+        "title": "Registrerades rättigheter",
+        "intro": "Enligt GDPR har du följande rättigheter avseende dina personuppgifter. Vi tillhandahåller mekanismer för att utöva dessa rättigheter.",
+        "howToExerciseTitle": "Hur du utövar dina rättigheter",
+        "howToExerciseContent": "För att utöva någon av dessa rättigheter, vänligen kontakta oss på <1>{{email}}</1>. Vi svarar på din begäran inom 30 dagar, kostnadsfritt."
+      },
+      "rightOfAccess": {
+        "title": "Rätt till åtkomst (Artikel 15)",
+        "content1": "Du har rätt att få bekräftelse från oss om huruvida vi behandlar dina personuppgifter och, om vi gör det, åtkomst till dina personuppgifter och ytterligare information.",
+        "content2": "På begäran tillhandahåller vi:",
+        "items": {
+          "item1": "En kopia av dina personuppgifter",
+          "item2": "Ändamålen med behandlingen",
+          "item3": "Kategorierna av berörda personuppgifter",
+          "item4": "Mottagarna eller kategorierna av mottagare",
+          "item5": "Lagringsperioden eller kriterierna för att fastställa den",
+          "item6": "Information om dina rättigheter",
+          "item7": "Uppgifternas källa, om de inte samlats in från dig",
+          "item8": "Information om automatiserat beslutsfattande"
+        }
+      },
+      "rightOfRectification": {
+        "title": "Rätt till rättelse (Artikel 16)",
+        "content1": "Du har rätt att utan onödigt dröjsmål få felaktiga personuppgifter som rör dig rättade. Med hänsyn till ändamålen med behandlingen har du rätt att komplettera ofullständiga personuppgifter.",
+        "content2": "Du kan uppdatera de flesta av dina personuppgifter direkt via din kontoinstrumentpanel. För ändringar som inte kan göras via instrumentpanelen, vänligen kontakta oss."
+      },
+      "rightOfErasure": {
+        "title": "Rätt till radering (Rätten att bli glömd) (Artikel 17)",
+        "intro": "Du har rätt att utan onödigt dröjsmål få dina personuppgifter raderade när någon av följande grunder gäller:",
+        "items": {
+          "item1": "Personuppgifterna är inte längre nödvändiga för ändamålen",
+          "item2": "Du återkallar samtycke där behandlingen baseras på samtycke",
+          "item3": "Du invänder mot behandlingen och det saknas tvingande berättigade skäl",
+          "item4": "Personuppgifterna har behandlats olagligt",
+          "item5": "Personuppgifterna måste raderas för att uppfylla en rättslig skyldighet"
+        },
+        "note": "Observera: Vi kan behålla viss data för rättsliga, bokföringsmässiga eller regulatoriska ändamål även efter din begäran om radering."
+      },
+      "rightToRestrict": {
+        "title": "Rätt till begränsning av behandling (Artikel 18)",
+        "intro": "Du har rätt att begränsa behandlingen när något av följande gäller:",
+        "items": {
+          "item1": "Du bestrider personuppgifternas riktighet (under en period som möjliggör verifiering)",
+          "item2": "Behandlingen är olaglig och du motsätter dig radering",
+          "item3": "Vi behöver inte längre uppgifterna men du behöver dem för rättsliga anspråk",
+          "item4": "Du har invänt mot behandlingen (i väntan på verifiering av berättigade grunder)"
+        }
+      },
+      "rightToDataPortability": {
+        "title": "Rätt till dataportabilitet (Artikel 20)",
+        "content1": "Du har rätt att ta emot dina personuppgifter som du har tillhandahållit oss, i ett strukturerat, allmänt använt och maskinläsbart format. Du har också rätt att överföra dessa uppgifter till en annan personuppgiftsansvarig utan hinder.",
+        "content2": "Du kan exportera dina data direkt från din kontoinstrumentpanel. Exporten inkluderar:",
+        "items": {
+          "item1": "Kontoinformation och profil",
+          "item2": "Restaurang- och menydata",
+          "item3": "Beställningshistorik",
+          "item4": "Finansiella poster"
+        }
+      },
+      "rightToObject": {
+        "title": "Rätt att invända (Artikel 21)",
+        "intro": "Du har rätt att invända, av skäl som hänför sig till din specifika situation, mot behandling av dina personuppgifter baserat på:",
+        "items": {
+          "item1": "Berättigade intressen (Artikel 6(1)(f))",
+          "item2": "Direktmarknadsföring (inklusive profilering för marknadsföring)"
+        },
+        "content": "Vi kommer inte längre att behandla dina personuppgifter för direktmarknadsföringsändamål om du invänder mot sådan behandling. Du kan avregistrera dig från marknadsföringskommunikation via dina kontoinställningar eller genom att klicka på avregistreringslänken i våra e-postmeddelanden."
+      },
+      "automatedDecisionMaking": {
+        "title": "Automatiserat beslutsfattande och profilering (Artikel 22)",
+        "content1": "Du har rätt att inte bli föremål för ett beslut som enbart grundas på automatiserad behandling, inklusive profilering, som har rättsliga följder för dig eller på liknande sätt väsentligt påverkar dig.",
+        "content2": "Vår plattform använder automatiserade funktioner för:",
+        "items": {
+          "item1": "Bedrägeriupptäckt och förebyggande",
+          "item2": "Förslag för menyoptimering",
+          "item3": "Personliga rekommendationer"
+        },
+        "note": "Dessa funktioner ger inte upphov till rättsliga följder och kan inaktiveras via dina kontoinställningar."
+      },
+      "crossBorderTransfers": {
+        "title": "Gränsöverskridande dataöverföringar (Artikel 44-50)",
+        "intro": "Dina personuppgifter kan överföras till länder utanför Europeiska ekonomiska samarbetsområdet (EES). Vi säkerställer att lämpliga skyddsåtgärder finns på plats för sådana överföringar.",
+        "mechanismsTitle": "Överföringsmekanismer",
+        "items": {
+          "item1Label": "Standardavtalsklausuler (SCCs):",
+          "item1Text": "Vi använder EU-kommissionens godkända SCCs för överföringar till länder utan beslut om adekvat skyddsnivå",
+          "item2Label": "Beslut om adekvat skyddsnivå:",
+          "item2Text": "Vi förlitar oss på kommissionens beslut om adekvat skyddsnivå för länder som erkänns ge tillräckligt dataskydd",
+          "item3Label": "Privacy Shield (om tillämpligt):",
+          "item3Text": "För överföringar till USA följer vi tillämpliga ramverk"
+        },
+        "note": "Du kan begära en kopia av de lämpliga skyddsåtgärderna som används för dina dataöverföringar genom att kontakta oss på {{email}}."
+      },
+      "dataBreachNotification": {
+        "title": "Anmälan av personuppgiftsincident (Artikel 33-34)",
+        "intro": "Vid en personuppgiftsincident kommer vi att:",
+        "items": {
+          "item1Label": "Meddela tillsynsmyndigheten:",
+          "item1Text": "Utan onödigt dröjsmål och, om möjligt, senast 72 timmar efter att ha blivit medvetna om incidenten (om den inte sannolikt leder till risk för rättigheter och friheter)",
+          "item2Label": "Meddela dig:",
+          "item2Text": "Utan onödigt dröjsmål om incidenten sannolikt leder till hög risk för dina rättigheter och friheter"
+        },
+        "notificationContent": "Vår incidentanmälan inkluderar:",
+        "notificationItems": {
+          "item1": "Beskrivning av incidenten och kategorierna av berörda data",
+          "item2": "Namn och kontaktuppgifter till vårt dataskyddsombud",
+          "item3": "Sannolika konsekvenser av incidenten",
+          "item4": "Åtgärder som vidtagits eller föreslagits för att hantera incidenten"
+        }
+      },
+      "dataRetention": {
+        "title": "Datalagring (Artikel 5(1)(e))",
+        "intro": "Vi följer GDPR:s princip om lagringsminimering. Personuppgifter lagras inte längre än nödvändigt för de ändamål för vilka de behandlas.",
+        "retentionPeriodsTitle": "Lagringsperioder",
+        "items": {
+          "item1Label": "Kontodata:",
+          "item1Text": "3 år efter kontoavslutning",
+          "item2Label": "Finansiella poster:",
+          "item2Text": "7 år (skattekrav)",
+          "item3Label": "Beställningsdata:",
+          "item3Text": "3 år efter beställningens slutförande",
+          "item4Label": "Marknadsföringsdata:",
+          "item4Text": "Tills samtycke återkallas eller 2 års inaktivitet",
+          "item5Label": "Serverloggar:",
+          "item5Text": "90 dagar"
+        },
+        "note": "Efter att lagringsperioden har löpt ut raderas data säkert eller anonymiseras."
+      },
+      "securityMeasures": {
+        "title": "Datasäkerhetsåtgärder (Artikel 32)",
+        "intro": "Vi implementerar lämpliga tekniska och organisatoriska åtgärder för att säkerställa en säkerhetsnivå som är lämplig i förhållande till risken:",
+        "items": {
+          "item1Label": "Pseudonymisering och kryptering:",
+          "item1Text": "Av personuppgifter",
+          "item2Label": "Konfidentialitet:",
+          "item2Text": "Säkerställande av fortlöpande konfidentialitet, integritet, tillgänglighet och motståndskraft hos behandlingssystem",
+          "item3Label": "Tillgänglighet:",
+          "item3Text": "Möjlighet att återställa åtkomst och tillgänglighet i tid vid en incident",
+          "item4Label": "Regelbunden testning:",
+          "item4Text": "Regelbunden testning och utvärdering av säkerhetsåtgärdernas effektivitet"
+        },
+        "content": "Vi genomför regelbundna säkerhetsgranskningar och penetrationstester för att identifiera och åtgärda sårbarheter."
+      },
+      "supervisoryAuthority": {
+        "title": "Rätt att lämna klagomål (Artikel 77)",
+        "intro": "Du har rätt att lämna in ett klagomål till en tillsynsmyndighet, särskilt i den medlemsstat där du har din hemvist, arbetsplats eller den plats där den påstådda överträdelsen skedde.",
+        "authorityLabel": "Finsk tillsynsmyndighet",
+        "authorityName": "Dataombudsmannens byrå",
+        "authorityAddress": "Ratapihantie 9, 00100 Helsingfors, Finland",
+        "authorityEmail": "tietosuoja@om.fi",
+        "authorityWebsite": "tietosuoja.fi",
+        "authorityWebsiteUrl": "https://tietosuoja.fi",
+        "note": "Denna rätt påverkar inte andra administrativa eller rättsliga rättsmedel."
+      },
+      "contact": {
+        "title": "GDPR-kontakt",
+        "intro": "För alla GDPR-relaterade förfrågningar, inklusive begäranden om att utöva dina rättigheter, vänligen kontakta oss:",
+        "contactLabel": "Dataskyddskontakt",
+        "emailLabel": "E-post:",
+        "addressLabel": "Adress:",
+        "address": "Helsingfors, Finland",
+        "responseTime": "Svarstid: Inom 30 dagar från mottagande av begäran",
+        "representativeNote": "Du kan också utse ett behörigt ombud att utöva rättigheter å dina vägnar inom Europeiska unionen."
+      }
+    },
+    "footerNote": "Detta GDPR-efterlevnadsdokument tillhandahålls i informationssyfte och utgör inte juridisk rådgivning. Förordningar kan förändras och vi rekommenderar att konsultera juridiska experter för specifika efterlevnadsbehov. Vi granskar och uppdaterar regelbundet våra rutiner för att säkerställa fortlöpande GDPR-efterlevnad."
+  },
+  "cookies": {
+    "title": "Cookiepolicy",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Denna cookiepolicy förklarar hur Helmies Bites använder cookies och liknande teknologier på vår plattform. Genom att använda våra tjänster samtycker du till användning av cookies enligt beskrivningen i denna policy.",
+    "tableOfContents": "Innehållsförteckning",
+    "printPage": "Skriv ut denna sida",
+    "nav": {
+      "whatAreCookies": "Vad är cookies?",
+      "howWeUseCookies": "Hur vi använder cookies",
+      "thirdPartyCookies": "Tredjepartscookies",
+      "managingCookies": "Hantera cookies",
+      "updatesToThisPolicy": "Uppdateringar av denna policy"
+    },
+    "whatAreCookies": {
+      "title": "Vad är cookies?",
+      "content": "Cookies är små textfiler som lagras på din enhet (dator, surfplatta eller mobil) när du besöker en webbplats. De används i stor utsträckning för att webbplatser ska fungera mer effektivt och för att ge information till webbplatsägare.",
+      "typesTitle": "Typer av cookies",
+      "sessionLabel": "Sessionscookies:",
+      "sessionText": "Tillfälliga cookies som upphör när du stänger webbläsaren",
+      "persistentLabel": "Varaktiga cookies:",
+      "persistentText": "Stannar kvar på din enhet under en bestämd period eller tills de raderas",
+      "firstPartyLabel": "Förstapartscookies:",
+      "firstPartyText": "Sätts av webbplatsen du besöker",
+      "thirdPartyLabel": "Tredjepartscookies:",
+      "thirdPartyText": "Sätts av externa tjänster som används på webbplatsen"
+    },
+    "howWeUseCookies": {
+      "title": "Hur vi använder cookies",
+      "intro": "Vi använder cookies för följande ändamål:",
+      "items": {
+        "item1Label": "Autentisering:",
+        "item1Text": "För att hålla dig inloggad under din session",
+        "item2Label": "Säkerhet:",
+        "item2Text": "För att skydda mot bedrägerier och säkerställa säker åtkomst",
+        "item3Label": "Preferenser:",
+        "item3Text": "För att komma ihåg dina inställningar och val",
+        "item4Label": "Analys:",
+        "item4Text": "För att förstå hur vår plattform används",
+        "item5Label": "Marknadsföring:",
+        "item5Text": "För att visa relevanta annonser",
+        "item6Label": "Prestanda:",
+        "item6Text": "För att optimera plattformens hastighet och tillförlitlighet"
+      }
+    },
+    "cookieTypes": {
+      "essential": {
+        "name": "Nödvändiga cookies",
+        "description": "Dessa cookies är strikt nödvändiga för att plattformen ska fungera. De möjliggör kärnfunktionalitet som användarautentisering, säkerhet och åtkomst till säkra områden. Plattformen kan inte fungera korrekt utan dessa cookies.",
+        "purpose": "För att möjliggöra nödvändig plattformsfunktionalitet",
+        "provider": "Helmies Bites",
+        "lifetime": "Session till 1 år",
+        "examples": {
+          "sessionId": {
+            "name": "session_id",
+            "purpose": "Upprätthåller användarsession under navigering"
+          },
+          "csrfToken": {
+            "name": "csrf_token",
+            "purpose": "Förhindrar Cross-Site Request Forgery-attacker"
+          },
+          "authToken": {
+            "name": "auth_token",
+            "purpose": "Autentiserar användaren efter inloggning"
+          },
+          "cookieConsent": {
+            "name": "cookie_consent",
+            "purpose": "Kommer ihåg dina cookiepreferenser"
+          }
+        }
+      },
+      "analytics": {
+        "name": "Analyticscookies",
+        "description": "Dessa cookies hjälper oss förstå hur besökare interagerar med vår plattform genom att tillhandahålla information om besökta sidor, spenderad tid och felmeddelanden som uppstått. Detta hjälper oss att förbättra plattformens prestanda och användarupplevelse.",
+        "purpose": "För att analysera plattformsanvändning och förbättra prestanda",
+        "provider": "Helmies Bites, Google Analytics",
+        "lifetime": "Session till 2 år",
+        "examples": {
+          "ga": {
+            "name": "_ga",
+            "purpose": "Google Analytics - Identifierar unik användare"
+          },
+          "gid": {
+            "name": "_gid",
+            "purpose": "Google Analytics - Särskiljer användare"
+          },
+          "gat": {
+            "name": "_gat",
+            "purpose": "Google Analytics - Begränsar förfrågningsfrekvens"
+          },
+          "pageViews": {
+            "name": "page_views",
+            "purpose": "Räknar besökta sidor under sessionen"
+          }
+        }
+      },
+      "marketing": {
+        "name": "Marknadsföringscookies",
+        "description": "Dessa cookies används för att visa annonser som är relevanta för dig och dina intressen. De används också för att begränsa antalet gånger du ser en annons och hjälpa till att mäta effektiviteten hos reklamkampanjer.",
+        "purpose": "För att visa relevanta annonser och spåra kampanjprestanda",
+        "provider": "Helmies Bites, tredjepartsannonsplattformar",
+        "lifetime": "Session till 1 år",
+        "examples": {
+          "adPersonalization": {
+            "name": "ad_personalization",
+            "purpose": "Lagrar annonspersonaliseringspreferenser"
+          },
+          "adUserData": {
+            "name": "ad_user_data",
+            "purpose": "Styr delning av data för annonspersonalisering"
+          },
+          "campaignId": {
+            "name": "campaign_id",
+            "purpose": "Spårar vilken marknadsföringskampanj som ledde dig hit"
+          },
+          "conversionId": {
+            "name": "conversion_id",
+            "purpose": "Spårar konverteringar från annonsering"
+          }
+        }
+      },
+      "functional": {
+        "name": "Funktionella cookies",
+        "description": "Dessa cookies möjliggör förbättrad funktionalitet och personalisering, såsom videor och livechattar. De kan sättas av oss eller av tredjepartsleverantörer vars tjänster vi har lagt till på våra sidor.",
+        "purpose": "För att möjliggöra förbättrade funktioner och personalisering",
+        "provider": "Helmies Bites, tredjepartstjänsteleverantörer",
+        "lifetime": "Session till 1 år",
+        "examples": {
+          "languagePreference": {
+            "name": "language_preference",
+            "purpose": "Kommer ihåg valt språk"
+          },
+          "themePreference": {
+            "name": "theme_preference",
+            "purpose": "Kommer ihåg valt visuellt tema"
+          },
+          "restaurantLocation": {
+            "name": "restaurant_location",
+            "purpose": "Kommer ihåg senast vald restaurang"
+          },
+          "wizardProgress": {
+            "name": "wizard_progress",
+            "purpose": "Sparar framsteg i installationsguiden"
+          }
+        }
+      }
+    },
+    "cookieTableLabels": {
+      "purpose": "Syfte",
+      "provider": "Leverantör",
+      "lifetime": "Livslängd",
+      "canBeDisabled": "Kan inaktiveras?",
+      "noRequired": "Nej, krävs",
+      "yes": "Ja",
+      "examples": "Exempel",
+      "cookieName": "Cookienamn"
+    },
+    "thirdPartyCookies": {
+      "title": "Tredjepartscookies",
+      "intro": "Vi tillåter vissa tredje parter att placera cookies på din enhet för de tjänster som beskrivs nedan:",
+      "googleAnalytics": {
+        "title": "Google Analytics",
+        "description": "Google Analytics samlar in anonym användningsdata för att hjälpa oss förstå hur besökare använder vår plattform.",
+        "privacyPolicyLabel": "Integritetspolicy:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "description": "Google Ads använder cookies för att visa relevanta annonser och mäta annoskampanjprestanda.",
+        "privacyPolicyLabel": "Integritetspolicy:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "paymentProcessors": {
+        "title": "Betalningsbearbetare",
+        "description": "Stripe och PayPal kan använda cookies för att behandla betalningar säkert.",
+        "stripeLabel": "Stripe:",
+        "stripeLink": "stripe.com/privacy",
+        "paypalLabel": "PayPal:",
+        "paypalLink": "paypal.com/privacy"
+      }
+    },
+    "managingCookies": {
+      "title": "Hantera cookies",
+      "intro": "Du har rätt att besluta om du vill acceptera eller avvisa cookies. Du kan ställa in eller ändra dina webbläsarinställningar för att acceptera eller neka cookies. Om du väljer att avvisa cookies kan du fortfarande använda vår webbplats, men din åtkomst till viss funktionalitet och vissa områden kan vara begränsad.",
+      "choicesTitle": "Dina cookieval",
+      "acceptAll": "Acceptera alla cookies",
+      "rejectNonEssential": "Avvisa icke-nödvändiga",
+      "browserSettingsTitle": "Webbläsarinställningar",
+      "browserSettingsIntro": "De flesta webbläsare tillåter viss kontroll över cookies via webbläsarinställningar. För att lära dig mer om hur du hanterar och raderar cookies, besök hjälpsidorna för din webbläsare:",
+      "browsers": {
+        "chrome": "Chrome (Google)",
+        "firefox": "Firefox (Mozilla)",
+        "edge": "Edge (Microsoft)",
+        "safari": "Safari (Apple)"
+      }
+    },
+    "updates": {
+      "title": "Uppdateringar av denna policy",
+      "content1": "Vi kan uppdatera denna cookiepolicy från tid till annan för att återspegla ändringar i våra rutiner, teknologi, rättsliga krav eller andra faktorer. Eventuella ändringar publiceras på denna sida med ett uppdaterat revisionsdatum.",
+      "content2": "Vi uppmuntrar dig att regelbundet granska denna policy för att hålla dig informerad om hur vi använder cookies och dina val gällande dem."
+    },
+    "contact": {
+      "title": "Kontakta oss",
+      "intro": "Om du har frågor om vår användning av cookies, vänligen kontakta oss:",
+      "contactLabel": "Integritetskontakt",
+      "emailLabel": "E-post:"
+    },
+    "footerNote": "Denna cookiepolicy är utformad för att följa GDPR:s ePrivacy-direktiv och andra tillämpliga cookielagar. För mer information om hur vi hanterar dina personuppgifter, se vår <1>integritetspolicy</1>."
+  }
+}

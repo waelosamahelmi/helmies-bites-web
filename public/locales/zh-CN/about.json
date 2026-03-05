@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "subtitle": "关于我们",
+    "title": "触手可及",
+    "titleHighlight": "让餐厅技术",
+    "description": "我们相信每家餐厅都值得拥有精美的在线形象，无论规模大小或技术水平如何。"
+  },
+  "story": {
+    "subtitle": "我们的故事",
+    "title": "大梦想",
+    "titleHighlight": "从小厨房到",
+    "imageAlt": "餐厅厨房",
+    "launchYear": "2026",
+    "launchLabel": "即将上线",
+    "paragraph1": "Helmies Bites 源于一个简单的观察：虽然技术已经改变了许多行业，但大多数餐厅仍然难以建立强大的在线形象。昂贵的网站、复杂的订餐系统和技术壁垒使许多优秀的餐厅无法充分发挥其潜力。",
+    "paragraph2": "我们的创始人 Wael Helmi 是一位居住在赫尔辛基的创意开发者，他看到了这个差距，并着手构建一个更好的解决方案 — 一个不需要深厚技术知识或大量预算的方案。",
+    "paragraph3": "现在，随着我们在 2026 年初正式上线，我们已准备好帮助芬兰及更远地区的餐厅建立数字形象、接受在线订单，并以有意义的方式与客户建立联系。"
+  },
+  "missionVision": {
+    "subtitle": "我们的目标",
+    "title": "愿景",
+    "titleHighlight": "使命与",
+    "missionTitle": "我们的使命",
+    "missionDescription": "赋能每家餐厅，提供经济实惠、易于使用的技术，帮助他们在数字时代蓬勃发展。我们相信，美好的食物值得被每个人发现、订购和享用。",
+    "visionTitle": "我们的愿景",
+    "visionDescription": "一个每家餐厅 — 从最小的家庭咖啡馆到最大的餐饮机构 — 都能平等获得所需数字工具以取得成功和发展业务的世界。"
+  },
+  "team": {
+    "subtitle": "我们的团队",
+    "title": "Helmies",
+    "titleHighlight": "认识",
+    "description": "一支充满激情的创意开发者团队，共同致力于变革餐厅技术。",
+    "linkedin": "LinkedIn",
+    "waelHelmi": {
+      "name": "Wael Helmi",
+      "role": "创始人兼首席执行官",
+      "bio": "热衷于为餐饮行业打造精美数字体验的创意开发者。"
+    },
+    "naghamAlaa": {
+      "name": "Nagham Alaa",
+      "role": "UI/UX 设计师",
+      "bio": "打造直观且令人惊叹的用户体验的创意开发者。"
+    }
+  },
+  "values": {
+    "subtitle": "我们的信念",
+    "title": "价值观",
+    "titleHighlight": "核心",
+    "customerFirst": {
+      "title": "客户至上",
+      "description": "每一个决策都从对我们餐厅合作伙伴及其客户最有利的角度出发。"
+    },
+    "continuousInnovation": {
+      "title": "持续创新",
+      "description": "我们不断发展平台，以保持在行业趋势和技术前沿。"
+    },
+    "reliability": {
+      "title": "可靠性",
+      "description": "基于稳健的基础设施构建，确保您的餐厅始终在线并随时就绪。"
+    },
+    "simplicity": {
+      "title": "简约",
+      "description": "让复杂的技术变得简单，让您专注于最重要的事情 — 您的美食。"
+    }
+  },
+  "milestones": {
+    "subtitle": "我们的历程",
+    "title": "里程碑",
+    "titleHighlight": "关键",
+    "founded": {
+      "year": "2025 年末",
+      "title": "成立",
+      "description": "怀着让餐厅技术人人可及的愿景，开始构建 Helmies Bites"
+    },
+    "platformLaunch": {
+      "year": "2026 年 2 月",
+      "title": "平台上线",
+      "description": "推出我们的 AI 驱动平台，帮助餐厅建立数字形象"
+    }
+  },
+  "location": {
+    "subtitle": "来访我们",
+    "title": "总部",
+    "titleHighlight": "我们的",
+    "imageAlt": "赫尔辛基办公室",
+    "cityTitle": "赫尔辛基，芬兰",
+    "description": "我们自豪地称赫尔辛基为家。从这里，我们服务芬兰各地的餐厅，并继续向整个欧洲扩展。",
+    "address": "Punavuori，赫尔辛基，芬兰",
+    "email": "hello@helmiesbites.fi",
+    "teamSize": "25+ 名团队成员"
+  },
+  "cta": {
+    "subtitle": "加入我们的大家庭",
+    "title": "准备好开始了吗？",
+    "description": "成为我们故事的一部分，让我们帮您书写您的故事。成为与",
+    "firstRestaurants": "首批餐厅",
+    "descriptionEnd": "一起使用 Helmies Bites 上线的伙伴。",
+    "contactUs": "联系我们",
+    "joinTitle": "加入我们的大家庭",
+    "joinDescription": "成为与 Helmies Bites 共同蓬勃发展的餐厅社区的一员"
+  }
+}

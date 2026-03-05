@@ -1,0 +1,758 @@
+{
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：{{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "在 Helmies Bites，我们非常重视您的隐私。本隐私政策说明了当您使用我们的餐厅平台服务时，我们如何收集、使用、披露和保护您的信息。请仔细阅读本政策。",
+    "tableOfContents": "目录",
+    "printPage": "打印此页面",
+    "sections": {
+      "informationCollection": {
+        "title": "信息收集",
+        "intro": "在 Helmies Bites，我们收集您直接提供给我们的信息以及您使用我们服务时自动收集的信息。",
+        "youProvideTitle": "您提供的信息",
+        "youProvideItems": {
+          "item1": "账户信息（姓名、电子邮件地址、餐厅名称）",
+          "item2": "餐厅详情（地址、电话号码、营业时间）",
+          "item3": "菜单项目和定价信息",
+          "item4": "支付和账单信息",
+          "item5": "与我们支持团队的通信"
+        },
+        "autoCollectedTitle": "自动收集的信息",
+        "autoCollectedItems": {
+          "item1": "设备信息（IP 地址、浏览器类型、操作系统）",
+          "item2": "使用数据（访问的页面、使用的功能、花费的时间）",
+          "item3": "日志数据（访问时间、引用 URL）"
+        }
+      },
+      "dataUsage": {
+        "title": "我们如何使用您的信息",
+        "intro": "我们使用收集的信息用于：",
+        "items": {
+          "item1": "提供、维护和改进我们的服务",
+          "item2": "处理交易并发送相关信息",
+          "item3": "发送技术通知和支持消息",
+          "item4": "回复评论、问题和客户服务请求",
+          "item5": "就产品、服务和活动进行沟通",
+          "item6": "监控和分析趋势、使用情况和活动",
+          "item7": "检测、调查和防止安全事件和欺诈行为",
+          "item8": "遵守法律义务"
+        }
+      },
+      "cookies": {
+        "title": "Cookie 和跟踪技术",
+        "content1": "我们使用 Cookie 和类似跟踪技术来收集和跟踪您在我们平台上的活动信息。Cookie 是存储在您设备上的小型数据文件，帮助我们为您提供更好的体验。",
+        "content2": "我们使用以下类型的 Cookie：",
+        "items": {
+          "item1Label": "必要 Cookie：",
+          "item1Text": "平台正常运行所必需",
+          "item2Label": "分析 Cookie：",
+          "item2Text": "帮助我们了解用户如何与平台交互",
+          "item3Label": "营销 Cookie：",
+          "item3Text": "用于投放相关广告"
+        },
+        "cookiePolicyLink": "如需了解更多详情，请参阅我们的 <1>Cookie 政策</1>。"
+      },
+      "dataSecurity": {
+        "title": "数据安全",
+        "content1": "我们实施适当的技术和组织措施，以保护您的个人信息免受未经授权或非法处理、意外丢失、破坏或损坏。",
+        "content2": "我们的安全措施包括：",
+        "items": {
+          "item1": "传输和静态数据加密",
+          "item2": "定期安全评估和更新",
+          "item3": "访问控制和身份验证系统",
+          "item4": "具有物理安全控制的安全数据中心"
+        },
+        "content3": "然而，互联网上的传输方法不能保证 100% 安全。虽然我们努力保护您的数据，但无法保证绝对安全。"
+      },
+      "userRights": {
+        "title": "您的权利",
+        "intro": "根据您的所在地，您可能拥有以下权利：",
+        "items": {
+          "item1Label": "访问权：",
+          "item1Text": "请求获取您个人数据的副本",
+          "item2Label": "更正权：",
+          "item2Text": "更正不准确或不完整的数据",
+          "item3Label": "删除权：",
+          "item3Text": "请求删除您的个人数据",
+          "item4Label": "限制权：",
+          "item4Text": "请求限制数据处理",
+          "item5Label": "可携带权：",
+          "item5Text": "以结构化格式接收您的数据",
+          "item6Label": "反对权：",
+          "item6Text": "反对处理您的数据",
+          "item7Label": "撤回同意权：",
+          "item7Text": "在基于同意进行处理的情况下撤回同意"
+        },
+        "contactText": "如需行使这些权利，请通过 <1>{{email}}</1> 联系我们。"
+      },
+      "dataRetention": {
+        "title": "数据保留",
+        "content1": "我们会在提供服务和实现本隐私政策所述目的所需的时间内保留您的个人信息。",
+        "content2": "保留期限取决于：",
+        "items": {
+          "item1": "数据的类型及其敏感性",
+          "item2": "收集数据的目的",
+          "item3": "法律和监管要求",
+          "item4": "潜在索赔的诉讼时效"
+        },
+        "content3": "账户数据通常在账户关闭后保留 3 年。根据税法要求，财务记录保留 7 年。"
+      },
+      "thirdPartyServices": {
+        "title": "第三方服务",
+        "content1": "我们使用第三方服务来帮助运营我们的平台。这些服务提供商仅在代表我们执行特定任务时才能访问您的个人信息。",
+        "content2": "第三方服务示例包括：",
+        "items": {
+          "item1": "支付处理商（Stripe、PayPal）",
+          "item2": "云托管服务提供商",
+          "item3": "分析服务",
+          "item4": "电子邮件通信服务",
+          "item5": "客户支持工具"
+        },
+        "content3": "我们精心挑选这些合作伙伴，并要求他们遵守严格的数据保护标准。"
+      },
+      "internationalTransfers": {
+        "title": "国际数据传输",
+        "content1": "您的信息可能会被传输到您所在国以外的国家并在那里处理。我们确保采取适当的保障措施，根据本隐私政策和适用法律保护您的数据。",
+        "content2": "从欧洲经济区 (EEA) 传输数据时，我们依赖欧盟委员会批准的标准合同条款或其他适当的法律机制。"
+      },
+      "childrenPrivacy": {
+        "title": "儿童隐私",
+        "content": "我们的服务不面向 16 岁以下的儿童。我们不会有意收集 16 岁以下儿童的个人信息。如果您发现有儿童向我们提供了个人信息，请立即联系我们。"
+      },
+      "contact": {
+        "title": "联系我们",
+        "intro": "如果您对本隐私政策或我们的数据实践有疑问、担忧或投诉，请联系我们：",
+        "contactLabel": "隐私联系人",
+        "emailLabel": "电子邮件：",
+        "addressLabel": "地址：",
+        "address": "赫尔辛基，芬兰",
+        "euNote": "对于欧盟境内的数据主体，您还有权向当地数据保护机构提出投诉。"
+      }
+    },
+    "footerNote": "本隐私政策旨在遵守《通用数据保护条例》(GDPR)、《加州消费者隐私法》(CCPA) 以及其他适用的数据保护法律。我们保留不时更新本政策的权利。任何更改将在本页面发布，并附有更新的修订日期。"
+  },
+  "terms": {
+    "title": "服务条款",
+    "lastUpdated": "最后更新：{{date}}",
+    "email": "legal@helmiesbites.fi",
+    "introduction": "欢迎使用 Helmies Bites。本服务条款管辖您对我们餐厅平台和在线订餐服务的使用。使用我们的服务即表示您同意这些条款。请仔细阅读。",
+    "tableOfContents": "目录",
+    "printPage": "打印此页面",
+    "sections": {
+      "acceptance": {
+        "title": "条款接受",
+        "content1": "通过访问或使用 Helmies Bites 服务，您同意受本服务条款及所有适用法律法规的约束。如果您不同意这些条款中的任何一项，则禁止使用我们的服务。",
+        "content2": "本条款构成您与 Helmies Bites Oy（一家在芬兰注册的公司）之间具有法律约束力的协议。"
+      },
+      "serviceDescription": {
+        "title": "服务描述",
+        "intro": "Helmies Bites 提供餐厅网站建设和在线订餐平台，使餐厅能够：",
+        "items": {
+          "item1": "创建和定制餐厅网站",
+          "item2": "展示菜单和定价信息",
+          "item3": "接受在线订单和付款",
+          "item4": "管理订单和客户沟通",
+          "item5": "与域名和托管服务集成"
+        },
+        "content": "我们保留随时修改、暂停或终止服务任何方面的权利，恕不另行通知。"
+      },
+      "userResponsibilities": {
+        "title": "用户责任",
+        "intro": "作为我们服务的用户，您同意：",
+        "items": {
+          "item1": "提供准确、最新和完整的信息",
+          "item2": "维护您账户凭证的安全",
+          "item3": "对您账户下的所有活动承担责任",
+          "item4": "立即通知我们任何未经授权的使用",
+          "item5": "遵守所有适用的法律法规",
+          "item6": "不将我们的服务用于任何非法或未经授权的目的",
+          "item7": "不试图未经授权访问我们的系统",
+          "item8": "不干扰或破坏我们的服务或服务器"
+        },
+        "note": "您对在餐厅网站上发布的内容（包括菜单项目、价格和图片）负全部责任。"
+      },
+      "paymentTerms": {
+        "title": "付款和账单",
+        "serviceFeesTitle": "服务费",
+        "serviceFeesContent": "Helmies Bites 对通过我们平台处理的每笔在线订单收取 5% 的服务费。该费用在结算前自动从订单总额中扣除。",
+        "addonsTitle": "可选附加服务",
+        "addonsItems": {
+          "item1": "货到付款：€30/月",
+          "item2": "AI 助手：€10/月"
+        },
+        "processingTitle": "支付处理",
+        "processingContent": "所有付款均通过第三方支付处理商（Stripe、PayPal）处理。可能会产生额外的支付处理商费用，这与我们的服务费分开。",
+        "settlementTitle": "结算",
+        "settlementContent": "订单收入（扣除我们的服务费和支付处理商费用后）每周结算到您指定的银行账户，通常在 3-5 个工作日内完成。",
+        "taxesTitle": "税费",
+        "taxesContent": "所有价格均不含增值税。芬兰增值税（截至 2026 年为 25.5%）将在适用时加到服务费上。您对与业务运营相关的任何税费负责。"
+      },
+      "cancellation": {
+        "title": "取消和终止",
+        "byYouTitle": "由您取消",
+        "byYouIntro": "您可以随时通过联系我们或通过账户设置取消账户。取消后：",
+        "byYouItems": {
+          "item1": "您将继续使用到当前计费周期结束",
+          "item2": "所有待处理订单将被处理和结算",
+          "item3": "您的网站将在 30 天内下线",
+          "item4": "您可以在 90 天内请求导出您的数据"
+        },
+        "byUsTitle": "由我们终止",
+        "byUsIntro": "我们保留随时暂停或终止您账户的权利，原因包括：",
+        "byUsItems": {
+          "item1": "违反本服务条款",
+          "item2": "违反适用的法律法规",
+          "item3": "欺诈或滥用行为",
+          "item4": "长期不活跃（12 个月以上）"
+        },
+        "note": "除欺诈或非法活动外，我们将在终止前提供合理通知。"
+      },
+      "refunds": {
+        "title": "退款",
+        "intro": "订单处理后，我们的服务费不可退还。但在以下情况下，我们可能自行决定发放退款或积分：",
+        "items": {
+          "item1": "服务中断超过 24 小时",
+          "item2": "因技术错误造成的重复收费",
+          "item3": "因平台问题导致订单未完成"
+        },
+        "content": "对于与订单相关的客户退款请求，请参阅各餐厅的退款政策，您可以在账户设置中进行设置。"
+      },
+      "intellectualProperty": {
+        "title": "知识产权",
+        "ourPropertyTitle": "我们的财产",
+        "ourPropertyIntro": "Helmies Bites 平台，包括所有软件、设计、文本、图形、标志和其他内容，均归 Helmies Bites Oy 所有，受知识产权法保护。您不得：",
+        "ourPropertyItems": {
+          "item1": "复制、修改或分发我们的平台",
+          "item2": "未经许可使用我们的商标",
+          "item3": "逆向工程或尝试提取源代码"
+        },
+        "yourContentTitle": "您的内容",
+        "yourContentText": "您保留提供给我们平台的所有内容（菜单项目、图片、描述）的所有权。使用我们的服务，即表示您授予我们许可，仅为向您提供服务而使用、展示和处理您的内容。",
+        "userGeneratedTitle": "用户生成内容",
+        "userGeneratedText": "客户评价、反馈和其他用户生成内容可能被我们用于营销和服务改进目的，具体遵循我们的隐私政策。"
+      },
+      "limitationOfLiability": {
+        "title": "责任限制",
+        "disclaimer": "在法律允许的最大范围内，HELMIES BITES 不对以下情况承担责任：",
+        "items": {
+          "item1": "间接、附带、特殊或后果性损害",
+          "item2": "利润损失或商业机会损失",
+          "item3": "数据丢失或数据损坏",
+          "item4": "服务中断或停机",
+          "item5": "第三方（支付处理商、配送服务）的行为或疏忽"
+        },
+        "totalLiabilityTitle": "总责任",
+        "totalLiabilityContent": "我们对您所有索赔的总责任不超过您在索赔前 12 个月内向我们支付的服务费金额。此限制适用于所有诉因的总和。",
+        "noWarrantiesTitle": "无担保",
+        "noWarrantiesContent": "我们的服务以\"原样\"提供，不附带任何明示或暗示的担保。我们不保证服务不会中断或不会出错。"
+      },
+      "disputeResolution": {
+        "title": "争议解决",
+        "governingLawTitle": "管辖法律",
+        "governingLawContent": "本服务条款受芬兰法律管辖。与本条款相关的任何争议应在芬兰赫尔辛基的法院解决。",
+        "resolutionProcessTitle": "解决流程",
+        "resolutionProcessContent": "我们鼓励您直接通过 <1>{{email}}</1> 与我们联系，以非正式方式解决任何问题。大多数争议可以通过直接沟通快速解决。",
+        "euConsumerTitle": "欧盟消费者权利",
+        "euConsumerContent": "对于位于欧盟的消费者，您可以通过欧盟在线争议解决平台获得替代争议解决机制。"
+      },
+      "indemnification": {
+        "title": "赔偿",
+        "intro": "您同意赔偿、捍卫并使 Helmies Bites 及其关联公司、高管、董事、员工和代理人免受因以下原因产生的任何索赔、损害、损失、责任和费用：",
+        "items": {
+          "item1": "您使用我们的服务",
+          "item2": "您违反本服务条款",
+          "item3": "您侵犯任何第三方权利",
+          "item4": "您通过我们平台提供或发布的内容"
+        }
+      },
+      "modifications": {
+        "title": "条款修改",
+        "intro": "我们保留随时修改本服务条款的权利。我们将通过以下方式通知您重大变更：",
+        "items": {
+          "item1": "在我们的平台上发布新条款",
+          "item2": "向您的注册电子邮件地址发送邮件",
+          "item3": "在您的账户管理面板中显示醒目通知"
+        },
+        "content": "在修改后继续使用我们的服务即表示接受新条款。如果您不同意修改后的条款，您必须停止使用我们的服务。"
+      },
+      "generalProvisions": {
+        "title": "一般条款",
+        "items": {
+          "item1Label": "完整协议：",
+          "item1Text": "本条款构成您与 Helmies Bites 之间关于我们服务的完整协议。",
+          "item2Label": "可分割性：",
+          "item2Text": "如果任何条款被认定无效，其余条款仍完全有效。",
+          "item3Label": "弃权：",
+          "item3Text": "我们未行使任何权利不构成对该权利的放弃。",
+          "item4Label": "转让：",
+          "item4Text": "未经我们同意，您不得转让本条款。我们可以无限制地转让我们的权利和义务。",
+          "item5Label": "不可抗力：",
+          "item5Text": "对于超出我们合理控制范围的原因造成的延误或失败，我们不承担责任。"
+        }
+      },
+      "contact": {
+        "title": "联系我们",
+        "intro": "如果您对本服务条款有疑问，请联系我们：",
+        "contactLabel": "法律联系人",
+        "emailLabel": "电子邮件：",
+        "addressLabel": "地址：",
+        "address": "赫尔辛基，芬兰",
+        "businessIdLabel": "商业注册号：",
+        "businessId": "（芬兰语：Y-tunnus）可应要求提供"
+      }
+    },
+    "footerNote": "本服务条款旨在遵守芬兰和欧盟消费者保护法。如果您对作为消费者的权利有任何疑问，请联系我们或您当地的消费者保护机构。"
+  },
+  "gdpr": {
+    "title": "GDPR 合规",
+    "lastUpdated": "最后更新：{{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "本 GDPR 合规文件说明了 Helmies Bites 如何实施《通用数据保护条例》(GDPR) 以及您如何行使数据主体权利。我们致力于保护您的个人数据，并确保数据处理实践的透明度。",
+    "tableOfContents": "目录",
+    "printPage": "打印此页面",
+    "keyPrinciples": {
+      "title": "GDPR 关键原则（第 5 条）",
+      "principle1": "合法性、公平性、透明度",
+      "principle2": "目的限制",
+      "principle3": "数据最小化",
+      "principle4": "准确性",
+      "principle5": "存储限制",
+      "principle6": "完整性和保密性",
+      "accountability": "我们对遵守这些原则负责，并能够证明合规性。"
+    },
+    "sections": {
+      "dataController": {
+        "title": "数据控制者信息",
+        "intro": "Helmies Bites Oy 是负责处理您个人数据的数据控制者。我们的联系信息：",
+        "contactLabel": "数据控制者",
+        "companyLabel": "公司：",
+        "company": "Helmies Bites Oy",
+        "addressLabel": "地址：",
+        "address": "赫尔辛基，芬兰",
+        "emailLabel": "电子邮件：",
+        "businessIdLabel": "商业注册号：",
+        "businessId": "（芬兰语：Y-tunnus）可应要求提供"
+      },
+      "legalBasis": {
+        "title": "处理的法律依据",
+        "intro": "根据《通用数据保护条例》(GDPR)，我们基于以下法律依据处理您的个人数据：",
+        "items": {
+          "item1Label": "合同履行（第 6(1)(b) 条）：",
+          "item1Text": "根据您的订阅协议提供服务所必需的处理",
+          "item2Label": "合法利益（第 6(1)(f) 条）：",
+          "item2Text": "为安全、防欺诈和服务改进目的的处理",
+          "item3Label": "同意（第 6(1)(a) 条）：",
+          "item3Text": "为营销通信和可选功能的处理",
+          "item4Label": "法律义务（第 6(1)(c) 条）：",
+          "item4Text": "税法和其他法规要求的处理"
+        }
+      },
+      "dataCategories": {
+        "title": "个人数据类别",
+        "intro": "我们处理以下类别的个人数据：",
+        "accountDataTitle": "账户和联系数据",
+        "accountDataItems": {
+          "item1": "姓名、电子邮件地址、电话号码",
+          "item2": "账户凭证和身份验证数据",
+          "item3": "通信偏好"
+        },
+        "businessDataTitle": "业务数据",
+        "businessDataItems": {
+          "item1": "餐厅名称和地址",
+          "item2": "商业注册信息",
+          "item3": "菜单项目、价格和描述",
+          "item4": "营业时间和位置数据"
+        },
+        "financialDataTitle": "财务数据",
+        "financialDataItems": {
+          "item1": "支付和账单信息",
+          "item2": "用于结算的银行账户详情",
+          "item3": "交易记录",
+          "item4": "发票和收据"
+        },
+        "technicalDataTitle": "技术数据",
+        "technicalDataItems": {
+          "item1": "IP 地址和设备信息",
+          "item2": "使用和浏览数据",
+          "item3": "Cookie 和跟踪标识符",
+          "item4": "日志文件和访问记录"
+        }
+      },
+      "dataSubjectRights": {
+        "title": "数据主体权利",
+        "intro": "根据 GDPR，您对个人数据享有以下权利。我们提供行使这些权利的机制。",
+        "howToExerciseTitle": "如何行使您的权利",
+        "howToExerciseContent": "如需行使上述任何权利，请通过 <1>{{email}}</1> 联系我们。我们将在 30 天内免费回复您的请求。"
+      },
+      "rightOfAccess": {
+        "title": "访问权（第 15 条）",
+        "content1": "您有权获得我们关于是否正在处理您的个人数据的确认，如果正在处理，有权访问您的个人数据和附加信息。",
+        "content2": "应请求，我们将提供：",
+        "items": {
+          "item1": "您个人数据的副本",
+          "item2": "处理目的",
+          "item3": "相关个人数据的类别",
+          "item4": "接收者或接收者类别",
+          "item5": "保留期限或确定其的标准",
+          "item6": "关于您权利的信息",
+          "item7": "如果数据不是从您处收集的，则提供数据来源",
+          "item8": "关于自动决策的信息"
+        }
+      },
+      "rightOfRectification": {
+        "title": "更正权（第 16 条）",
+        "content1": "您有权要求我们及时更正与您相关的不准确个人数据。考虑到处理目的，您有权要求补充不完整的个人数据。",
+        "content2": "您可以直接通过账户管理面板更新大部分个人数据。对于无法通过管理面板进行的更改，请联系我们。"
+      },
+      "rightOfErasure": {
+        "title": "删除权（被遗忘权）（第 17 条）",
+        "intro": "当以下情况之一适用时，您有权要求及时删除您的个人数据：",
+        "items": {
+          "item1": "个人数据不再为收集目的所必需",
+          "item2": "在基于同意处理的情况下撤回同意",
+          "item3": "您反对处理且没有压倒性的合法理由",
+          "item4": "个人数据被非法处理",
+          "item5": "必须删除个人数据以遵守法律义务"
+        },
+        "note": "注意：即使在您请求删除后，我们也可能出于法律、会计或监管目的保留某些数据。"
+      },
+      "rightToRestrict": {
+        "title": "限制处理权（第 18 条）",
+        "intro": "当以下情况之一适用时，您有权要求限制处理：",
+        "items": {
+          "item1": "您对个人数据的准确性提出异议（在核实期间）",
+          "item2": "处理不合法且您反对删除",
+          "item3": "我们不再需要数据但您因法律索赔而需要",
+          "item4": "您已反对处理（等待核实合法理由）"
+        }
+      },
+      "rightToDataPortability": {
+        "title": "数据可携带权（第 20 条）",
+        "content1": "您有权以结构化、常用的机器可读格式接收您提供给我们的个人数据。您还有权将这些数据传输给其他控制者而不受阻碍。",
+        "content2": "您可以直接从账户管理面板导出数据。导出包括：",
+        "items": {
+          "item1": "账户信息和个人资料",
+          "item2": "餐厅和菜单数据",
+          "item3": "订单历史",
+          "item4": "财务记录"
+        }
+      },
+      "rightToObject": {
+        "title": "反对权（第 21 条）",
+        "intro": "基于与您特定情况相关的原因，您有权随时反对以下依据处理您的个人数据：",
+        "items": {
+          "item1": "合法利益（第 6(1)(f) 条）",
+          "item2": "直接营销（包括用于营销的用户画像）"
+        },
+        "content": "如果您反对直接营销处理，我们将不再为直接营销目的处理您的个人数据。您可以通过账户设置或点击我们电子邮件中的取消订阅链接退出营销通信。"
+      },
+      "automatedDecisionMaking": {
+        "title": "自动化决策和用户画像（第 22 条）",
+        "content1": "您有权不受仅基于自动化处理（包括用户画像）做出的、对您产生法律效力或类似重大影响的决定的约束。",
+        "content2": "我们的平台确实使用自动化功能用于：",
+        "items": {
+          "item1": "欺诈检测和预防",
+          "item2": "菜单优化建议",
+          "item3": "个性化推荐"
+        },
+        "note": "这些功能不产生法律效力，可以通过您的账户设置禁用。"
+      },
+      "crossBorderTransfers": {
+        "title": "跨境数据传输（第 44-50 条）",
+        "intro": "您的个人数据可能被传输到欧洲经济区 (EEA) 以外的国家。我们确保对此类传输采取适当的保障措施。",
+        "mechanismsTitle": "传输机制",
+        "items": {
+          "item1Label": "标准合同条款 (SCCs)：",
+          "item1Text": "我们使用欧盟委员会批准的标准合同条款向没有充分性决定的国家传输数据",
+          "item2Label": "充分性决定：",
+          "item2Text": "我们依赖委员会对被认定提供充分数据保护的国家的充分性决定",
+          "item3Label": "隐私保护盾（如适用）：",
+          "item3Text": "对于向美国的传输，我们遵守适用的框架"
+        },
+        "note": "您可以通过 {{email}} 联系我们，申请获取用于数据传输的适当保障措施的副本。"
+      },
+      "dataBreachNotification": {
+        "title": "数据泄露通知（第 33-34 条）",
+        "intro": "如果发生个人数据泄露，我们将：",
+        "items": {
+          "item1Label": "通知监管机构：",
+          "item1Text": "在知悉泄露后不迟延地、如可行则在 72 小时内通知（除非不太可能对权利和自由构成风险）",
+          "item2Label": "通知您：",
+          "item2Text": "如果泄露可能对您的权利和自由构成高风险，将不迟延地通知您"
+        },
+        "notificationContent": "我们的泄露通知将包括：",
+        "notificationItems": {
+          "item1": "泄露的描述和相关数据类别",
+          "item2": "我们数据保护官的姓名和联系方式",
+          "item3": "泄露的可能后果",
+          "item4": "已采取或拟采取的补救措施"
+        }
+      },
+      "dataRetention": {
+        "title": "数据保留（第 5(1)(e) 条）",
+        "intro": "我们遵循 GDPR 的存储限制原则。个人数据的保留时间不超过处理目的所需的时间。",
+        "retentionPeriodsTitle": "保留期限",
+        "items": {
+          "item1Label": "账户数据：",
+          "item1Text": "账户关闭后 3 年",
+          "item2Label": "财务记录：",
+          "item2Text": "7 年（税务要求）",
+          "item3Label": "订单数据：",
+          "item3Text": "订单完成后 3 年",
+          "item4Label": "营销数据：",
+          "item4Text": "直到撤回同意或 2 年不活跃",
+          "item5Label": "服务器日志：",
+          "item5Text": "90 天"
+        },
+        "note": "保留期满后，数据将被安全删除或匿名化处理。"
+      },
+      "securityMeasures": {
+        "title": "数据安全措施（第 32 条）",
+        "intro": "我们实施适当的技术和组织措施，以确保与风险相适应的安全级别：",
+        "items": {
+          "item1Label": "假名化和加密：",
+          "item1Text": "对个人数据进行处理",
+          "item2Label": "保密性：",
+          "item2Text": "确保处理系统的持续保密性、完整性、可用性和弹性",
+          "item3Label": "可用性：",
+          "item3Text": "在发生事故时及时恢复访问和可用性的能力",
+          "item4Label": "定期测试：",
+          "item4Text": "定期测试和评估安全措施的有效性"
+        },
+        "content": "我们定期进行安全审计和渗透测试，以识别和解决漏洞。"
+      },
+      "supervisoryAuthority": {
+        "title": "投诉权（第 77 条）",
+        "intro": "您有权向监管机构提出投诉，特别是在您惯常居住地、工作地或涉嫌侵权地的成员国。",
+        "authorityLabel": "芬兰监管机构",
+        "authorityName": "数据保护监察官办公室",
+        "authorityAddress": "Ratapihantie 9, 00100 Helsinki, Finland",
+        "authorityEmail": "tietosuoja@om.fi",
+        "authorityWebsite": "tietosuoja.fi",
+        "authorityWebsiteUrl": "https://tietosuoja.fi",
+        "note": "此权利不影响任何其他行政或司法救济。"
+      },
+      "contact": {
+        "title": "GDPR 联系方式",
+        "intro": "如有任何与 GDPR 相关的咨询，包括行使您权利的请求，请联系我们：",
+        "contactLabel": "数据保护联系人",
+        "emailLabel": "电子邮件：",
+        "addressLabel": "地址：",
+        "address": "赫尔辛基，芬兰",
+        "responseTime": "响应时间：收到请求后 30 天内",
+        "representativeNote": "您也可以指定授权代表在欧盟范围内代您行使权利。"
+      }
+    },
+    "footerNote": "本 GDPR 合规文件仅供参考，不构成法律建议。法规可能会发生变化，我们建议就具体合规需求咨询法律专业人士。我们定期审查和更新我们的做法，以确保持续符合 GDPR。"
+  },
+  "cookies": {
+    "title": "Cookie 政策",
+    "lastUpdated": "最后更新：{{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "本 Cookie 政策说明了 Helmies Bites 如何在我们的平台上使用 Cookie 和类似技术。使用我们的服务即表示您同意按本政策所述使用 Cookie。",
+    "tableOfContents": "目录",
+    "printPage": "打印此页面",
+    "nav": {
+      "whatAreCookies": "什么是 Cookie？",
+      "howWeUseCookies": "我们如何使用 Cookie",
+      "thirdPartyCookies": "第三方 Cookie",
+      "managingCookies": "管理 Cookie",
+      "updatesToThisPolicy": "本政策的更新"
+    },
+    "whatAreCookies": {
+      "title": "什么是 Cookie？",
+      "content": "Cookie 是当您访问网站时存储在您的设备（电脑、平板电脑或手机）上的小型文本文件。它们被广泛用于使网站更高效地运行，并向网站所有者提供信息。",
+      "typesTitle": "Cookie 类型",
+      "sessionLabel": "会话 Cookie：",
+      "sessionText": "关闭浏览器后即过期的临时 Cookie",
+      "persistentLabel": "持久 Cookie：",
+      "persistentText": "在您的设备上保留设定的时间或直到被删除",
+      "firstPartyLabel": "第一方 Cookie：",
+      "firstPartyText": "由您正在访问的网站设置",
+      "thirdPartyLabel": "第三方 Cookie：",
+      "thirdPartyText": "由网站上使用的外部服务设置"
+    },
+    "howWeUseCookies": {
+      "title": "我们如何使用 Cookie",
+      "intro": "我们将 Cookie 用于以下目的：",
+      "items": {
+        "item1Label": "身份验证：",
+        "item1Text": "在会话期间保持您的登录状态",
+        "item2Label": "安全：",
+        "item2Text": "防止欺诈并确保安全访问",
+        "item3Label": "偏好设置：",
+        "item3Text": "记住您的设置和选择",
+        "item4Label": "分析：",
+        "item4Text": "了解我们的平台是如何被使用的",
+        "item5Label": "营销：",
+        "item5Text": "投放相关广告",
+        "item6Label": "性能：",
+        "item6Text": "优化平台速度和可靠性"
+      }
+    },
+    "cookieTypes": {
+      "essential": {
+        "name": "必要 Cookie",
+        "description": "这些 Cookie 是平台正常运行所严格必需的。它们支持核心功能，如用户身份验证、安全和访问安全区域。没有这些 Cookie，平台无法正常运行。",
+        "purpose": "启用平台基本功能",
+        "provider": "Helmies Bites",
+        "lifetime": "会话至 1 年",
+        "examples": {
+          "sessionId": {
+            "name": "session_id",
+            "purpose": "在导航过程中维护用户会话"
+          },
+          "csrfToken": {
+            "name": "csrf_token",
+            "purpose": "防止跨站请求伪造攻击"
+          },
+          "authToken": {
+            "name": "auth_token",
+            "purpose": "登录后验证用户身份"
+          },
+          "cookieConsent": {
+            "name": "cookie_consent",
+            "purpose": "记住您的 Cookie 偏好设置"
+          }
+        }
+      },
+      "analytics": {
+        "name": "分析 Cookie",
+        "description": "这些 Cookie 通过提供关于访问页面、花费时间和遇到的错误消息的信息，帮助我们了解访客如何与平台交互。这有助于我们改善平台的性能和用户体验。",
+        "purpose": "分析平台使用情况并改善性能",
+        "provider": "Helmies Bites、Google Analytics",
+        "lifetime": "会话至 2 年",
+        "examples": {
+          "ga": {
+            "name": "_ga",
+            "purpose": "Google Analytics - 识别唯一用户"
+          },
+          "gid": {
+            "name": "_gid",
+            "purpose": "Google Analytics - 区分用户"
+          },
+          "gat": {
+            "name": "_gat",
+            "purpose": "Google Analytics - 限制请求速率"
+          },
+          "pageViews": {
+            "name": "page_views",
+            "purpose": "统计会话期间访问的页面数"
+          }
+        }
+      },
+      "marketing": {
+        "name": "营销 Cookie",
+        "description": "这些 Cookie 用于向您投放与您和您的兴趣相关的广告。它们还用于限制您看到广告的次数，并帮助衡量广告活动的效果。",
+        "purpose": "投放相关广告并跟踪活动效果",
+        "provider": "Helmies Bites、第三方广告平台",
+        "lifetime": "会话至 1 年",
+        "examples": {
+          "adPersonalization": {
+            "name": "ad_personalization",
+            "purpose": "存储广告个性化偏好"
+          },
+          "adUserData": {
+            "name": "ad_user_data",
+            "purpose": "控制数据共享以实现广告个性化"
+          },
+          "campaignId": {
+            "name": "campaign_id",
+            "purpose": "追踪将您带到此处的营销活动"
+          },
+          "conversionId": {
+            "name": "conversion_id",
+            "purpose": "追踪广告转化"
+          }
+        }
+      },
+      "functional": {
+        "name": "功能 Cookie",
+        "description": "这些 Cookie 支持增强功能和个性化，如视频和在线聊天。它们可能由我们或我们页面上添加了其服务的第三方提供商设置。",
+        "purpose": "启用增强功能和个性化",
+        "provider": "Helmies Bites、第三方服务提供商",
+        "lifetime": "会话至 1 年",
+        "examples": {
+          "languagePreference": {
+            "name": "language_preference",
+            "purpose": "记住所选语言"
+          },
+          "themePreference": {
+            "name": "theme_preference",
+            "purpose": "记住所选视觉主题"
+          },
+          "restaurantLocation": {
+            "name": "restaurant_location",
+            "purpose": "记住上次选择的餐厅"
+          },
+          "wizardProgress": {
+            "name": "wizard_progress",
+            "purpose": "保存设置向导中的进度"
+          }
+        }
+      }
+    },
+    "cookieTableLabels": {
+      "purpose": "用途",
+      "provider": "提供者",
+      "lifetime": "有效期",
+      "canBeDisabled": "可否禁用？",
+      "noRequired": "否，必需",
+      "yes": "是",
+      "examples": "示例",
+      "cookieName": "Cookie 名称"
+    },
+    "thirdPartyCookies": {
+      "title": "第三方 Cookie",
+      "intro": "我们允许某些第三方在您的设备上放置 Cookie，用于以下描述的服务：",
+      "googleAnalytics": {
+        "title": "Google Analytics",
+        "description": "Google Analytics 收集匿名使用数据，帮助我们了解访客如何使用我们的平台。",
+        "privacyPolicyLabel": "隐私政策：",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "description": "Google Ads 使用 Cookie 投放相关广告并衡量广告活动效果。",
+        "privacyPolicyLabel": "隐私政策：",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "paymentProcessors": {
+        "title": "支付处理商",
+        "description": "Stripe 和 PayPal 可能使用 Cookie 来安全处理支付。",
+        "stripeLabel": "Stripe：",
+        "stripeLink": "stripe.com/privacy",
+        "paypalLabel": "PayPal：",
+        "paypalLink": "paypal.com/privacy"
+      }
+    },
+    "managingCookies": {
+      "title": "管理 Cookie",
+      "intro": "您有权决定接受或拒绝 Cookie。您可以设置或修改浏览器设置来接受或拒绝 Cookie。如果您选择拒绝 Cookie，您仍然可以使用我们的网站，但某些功能和区域的访问可能会受到限制。",
+      "choicesTitle": "您的 Cookie 选择",
+      "acceptAll": "接受所有 Cookie",
+      "rejectNonEssential": "拒绝非必要 Cookie",
+      "browserSettingsTitle": "浏览器设置",
+      "browserSettingsIntro": "大多数网络浏览器允许通过浏览器设置对 Cookie 进行一定程度的控制。要了解更多关于如何管理和删除 Cookie 的信息，请访问您浏览器的帮助页面：",
+      "browsers": {
+        "chrome": "Chrome (Google)",
+        "firefox": "Firefox (Mozilla)",
+        "edge": "Edge (Microsoft)",
+        "safari": "Safari (Apple)"
+      }
+    },
+    "updates": {
+      "title": "本政策的更新",
+      "content1": "我们可能会不时更新本 Cookie 政策，以反映我们的实践、技术、法律要求或其他因素的变化。任何更改将在本页面发布，并附有更新的修订日期。",
+      "content2": "我们鼓励您定期查看本政策，了解我们如何使用 Cookie 以及您的相关选择。"
+    },
+    "contact": {
+      "title": "联系我们",
+      "intro": "如果您对我们使用 Cookie 有疑问，请联系我们：",
+      "contactLabel": "隐私联系人",
+      "emailLabel": "电子邮件："
+    },
+    "footerNote": "本 Cookie 政策旨在遵守 GDPR 电子隐私指令和其他适用的 Cookie 法律。有关我们如何处理您个人数据的更多信息，请参阅我们的 <1>隐私政策</1>。"
+  }
+}

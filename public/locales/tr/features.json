@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "badge": "Başarı İçin İhtiyacınız Olan Her Şey",
+    "title": "Her Restoran İçin Güçlü Özellikler",
+    "description": "Yapay zeka destekli kurulumdan teslimat yönetimine, başarılı bir restoran işletmesi için ihtiyacınız olan her şey <strong>tek güzel platformda</strong>.",
+    "exploreFeatures": "Özellikleri Keşfedin",
+    "stats": {
+      "setupTime": {
+        "value": "5 dk",
+        "label": "Kurulum Süresi"
+      },
+      "commission": {
+        "value": "%0",
+        "label": "Komisyon"
+      },
+      "support": {
+        "value": "7/24",
+        "label": "Destek"
+      },
+      "integrations": {
+        "value": "50+",
+        "label": "Entegrasyon"
+      }
+    },
+    "floatingIcons": {
+      "onlineOrdering": {
+        "title": "Online Sipariş",
+        "subtitle": "Akıllı sepet ve ödeme"
+      },
+      "menuManagement": {
+        "title": "Menü Yönetimi",
+        "subtitle": "Yapay zeka destekli kurulum"
+      },
+      "payments": {
+        "title": "Ödemeler",
+        "subtitle": "Stripe ve mobil cüzdanlar"
+      },
+      "analytics": {
+        "title": "Analitik",
+        "subtitle": "Veriye dayalı içgörüler"
+      },
+      "delivery": {
+        "title": "Teslimat",
+        "subtitle": "Bölgeler ve takip"
+      },
+      "mobileReady": {
+        "title": "Mobil Hazır",
+        "subtitle": "PWA ve duyarlı tasarım"
+      }
+    }
+  },
+  "categories": {
+    "sectionSubtitle": "Kapsamlı Platform",
+    "sectionTitle": "Eksiksiz Restoran Platformu",
+    "sectionDescription": "Restoran işinizi büyütmeniz için tasarlanmış kapsamlı özellik paketimizi keşfedin.",
+    "onlineOrdering": {
+      "title": "Online Sipariş",
+      "description": "Sorunsuz müşteri deneyimi ile sipariş sürecinizi optimize edin",
+      "features": {
+        "smartShoppingCart": {
+          "title": "Akıllı Alışveriş Sepeti",
+          "description": "Gerçek zamanlı güncellemeler, miktar kontrolleri ve özel talimat desteği ile sezgisel sepet.",
+          "benefit": "Sepet terk oranını %35'e kadar azaltın"
+        },
+        "oneClickCheckout": {
+          "title": "Tek Tıkla Ödeme",
+          "description": "Stripe entegrasyonu ile yıldırım hızında tekrar siparişler için müşteri bilgilerini kaydedin.",
+          "benefit": "Müşteriler siparişlerini 3 kat daha hızlı tamamlar"
+        },
+        "realTimeOrderTracking": {
+          "title": "Gerçek Zamanlı Sipariş Takibi",
+          "description": "Hazırlıktan teslimata veya teslim almaya kadar canlı sipariş durumu güncellemeleri.",
+          "benefit": "'Siparişim nerede?' aramalarını %80 azaltın"
+        },
+        "scheduledOrdering": {
+          "title": "Programlı Sipariş",
+          "description": "Müşterilerin teslim alma veya teslimat için saatler veya günler öncesinden sipariş vermesine izin verin.",
+          "benefit": "Yoğun olmayan saatlerde sipariş alın"
+        },
+        "orderNotifications": {
+          "title": "Sipariş Bildirimleri",
+          "description": "Yeni siparişler, güncellemeler ve onaylar için anlık SMS ve e-posta uyarıları.",
+          "benefit": "Bir daha hiç sipariş kaçırmayın"
+        }
+      }
+    },
+    "menuManagement": {
+      "title": "Menü Yönetimi",
+      "description": "Yapay zeka yardımıyla güzel, çekici menüler oluşturun ve yönetin",
+      "features": {
+        "aiPoweredMenuSetup": {
+          "title": "Yapay Zeka Destekli Menü Kurulumu",
+          "description": "Fotoğraf ve açıklamaları yükleyin. Yapay zekamız her şeyi kategorilere ayırır, fiyat önerir ve düzenleyiciler oluşturur.",
+          "benefit": "Sıfırdan canlı menüye 5 dakikadan kısa sürede"
+        },
+        "customModifiersOptions": {
+          "title": "Özel Düzenleyiciler ve Seçenekler",
+          "description": "Kolayca ekstra malzemeler, boyutlar, pişirme tercihleri ve özel istekler ekleyin.",
+          "benefit": "Ortalama sipariş değerini %20 artırın"
+        },
+        "photoGalleries": {
+          "title": "Fotoğraf Galerileri",
+          "description": "Yemeklerinizi güzel bir şekilde sergilemek için birden fazla yüksek kaliteli fotoğraf yükleyin.",
+          "benefit": "Fotoğraflar siparişleri %30 artırır"
+        },
+        "multiLanguageMenus": {
+          "title": "Çok Dilli Menüler",
+          "description": "Yapay zeka menünüzü otomatik olarak Fince, İngilizce, İsveççe ve daha fazlasına çevirir.",
+          "benefit": "Daha geniş bir müşteri tabanına ulaşın"
+        },
+        "qrCodeMenus": {
+          "title": "QR Kod Menüler",
+          "description": "Masa başı sipariş ve temassız menüler için yazdırılabilir QR kodları oluşturun.",
+          "benefit": "Fiziksel menü baskı maliyetlerini azaltın"
+        }
+      }
+    },
+    "paymentProcessing": {
+      "title": "Ödeme İşleme",
+      "description": "Güvenli bir şekilde ödeme kabul edin ve anında ödeme alın",
+      "features": {
+        "stripeIntegration": {
+          "title": "Stripe Entegrasyonu",
+          "description": "Stripe aracılığıyla tüm büyük kredi kartlarını, mobil cüzdanları ve yerel ödeme yöntemlerini kabul edin.",
+          "benefit": "Sektör lideri güvenlik ve güvenilirlik"
+        },
+        "instantPayouts": {
+          "title": "Anında Ödemeler",
+          "description": "Banka hesabınıza günlük otomatik ödemeleri yapılandırın. Paranız için haftalarca beklemeyin.",
+          "benefit": "Nakit akışınızı hemen iyileştirin"
+        },
+        "mobilePayments": {
+          "title": "Mobil Ödemeler",
+          "description": "Sorunsuz ödeme için Apple Pay, Google Pay ve diğer mobil cüzdanları kabul edin.",
+          "benefit": "Mobil kullanıcılar 2 kat daha fazla dönüşüm sağlar"
+        },
+        "digitalReceipts": {
+          "title": "Dijital Makbuzlar",
+          "description": "Sipariş detayları ve kolay tekrar sipariş bağlantıları ile otomatik e-posta makbuzları.",
+          "benefit": "Tekrar satın almaları teşvik edin"
+        }
+      }
+    },
+    "deliveryManagement": {
+      "title": "Teslimat Yönetimi",
+      "description": "Teslimat operasyonlarınızı kontrol altına alın veya ortaklarla entegre olun",
+      "features": {
+        "deliveryZones": {
+          "title": "Teslimat Bölgeleri",
+          "description": "Yarıçap tabanlı veya poligon bölgeler ve benzersiz ücretlerle özel teslimat alanları tanımlayın.",
+          "benefit": "Teslimat maliyetlerini ve kapsamını optimize edin"
+        },
+        "dynamicFeeCalculation": {
+          "title": "Dinamik Ücret Hesaplama",
+          "description": "Mesafeye, sipariş boyutuna veya günün saatine göre otomatik ayarlamalarla ücretler belirleyin.",
+          "benefit": "Küçük siparişlerde marjları koruyun"
+        },
+        "driverApp": {
+          "title": "Kurye Uygulaması",
+          "description": "Rota optimizasyonu ve durum güncellemeleri ile teslimat sürücüleri için özel mobil uygulama.",
+          "benefit": "Teslimat deneyimi üzerinde tam kontrol"
+        },
+        "driverManagement": {
+          "title": "Kurye Yönetimi",
+          "description": "Siparişleri kuryellere atayın, teslimatları takip edin ve rotaları optimize edin.",
+          "benefit": "Teslimat deneyimi üzerinde tam kontrol"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Analitik ve Raporlar",
+      "description": "İşinizi büyütmek için veriye dayalı içgörüler",
+      "features": {
+        "salesAnalytics": {
+          "title": "Satış Analitiği",
+          "description": "Güzel görselleştirmelerle geliri, ortalama sipariş değerini ve büyümeyi takip edin.",
+          "benefit": "Veriye dayalı iş kararları alın"
+        },
+        "popularItemsReport": {
+          "title": "Popüler Ürünler Raporu",
+          "description": "Menünüzü optimize etmek için en çok satanları ve düşük performanslı ürünleri keşfedin.",
+          "benefit": "Kâr sağlayan ürünlere odaklanın"
+        },
+        "customerInsights": {
+          "title": "Müşteri İçgörüleri",
+          "description": "Müşteri davranışını, sipariş sıklığını ve yaşam boyu değerini anlayın.",
+          "benefit": "VIP müşterilerinizi belirleyin ve elde tutun"
+        },
+        "peakHourAnalysis": {
+          "title": "Yoğun Saat Analizi",
+          "description": "Personel ve hazırlık optimizasyonu için en yoğun zamanlarınızı belirleyin.",
+          "benefit": "Bekleme sürelerini azaltın ve hizmeti iyileştirin"
+        }
+      }
+    },
+    "marketing": {
+      "title": "Pazarlama Araçları",
+      "description": "Yeni müşteriler çekin ve mevcut müşterilerin geri gelmesini sağlayın",
+      "features": {
+        "promotionsDiscounts": {
+          "title": "Promosyonlar ve İndirimler",
+          "description": "Kolayca kupon kodları, yüzde indirimleri ve 1 alana 1 bedava teklifleri oluşturun.",
+          "benefit": "Sakin dönemlerde satışları artırın"
+        },
+        "loyaltyPrograms": {
+          "title": "Sadakat Programları",
+          "description": "Düzenli müşterileri puanlar, ücretsiz ürünler ve özel ayrıcalıklarla ödüllendirin.",
+          "benefit": "Müşteri elde tutmayı %40 artırın"
+        },
+        "emailCampaigns": {
+          "title": "E-posta Kampanyaları",
+          "description": "Özel teklifleri, etkinlikleri ve promosyonları duyurmak için hedefli e-posta kampanyaları gönderin.",
+          "benefit": "Müşterilere doğrudan gelen kutularında ulaşın"
+        },
+        "socialSharing": {
+          "title": "Sosyal Medya Paylaşımı",
+          "description": "Facebook, Instagram ve diğer sosyal platformlara kolay paylaşım.",
+          "benefit": "Erişiminizi organik olarak genişletin"
+        }
+      }
+    },
+    "multiLocation": {
+      "title": "Çoklu Konum Desteği",
+      "description": "Birden fazla restoranı tek bir panelden yönetin",
+      "features": {
+        "centralizedManagement": {
+          "title": "Merkezi Yönetim",
+          "description": "Tek yönetim panelinden tüm konumlar için menüleri, fiyatları ve ayarları yönetin.",
+          "benefit": "Saatlerce yönetim işinden tasarruf edin"
+        },
+        "locationSpecificOptions": {
+          "title": "Konuma Özel Seçenekler",
+          "description": "Her konum için menüleri, fiyatları ve teslimat bölgelerini bağımsız olarak özelleştirin.",
+          "benefit": "Yerel pazar koşullarına uyum sağlayın"
+        },
+        "aggregatedReporting": {
+          "title": "Toplu Raporlama",
+          "description": "Bireysel konum performansını veya tüm konumlar için konsolide raporları görüntüleyin.",
+          "benefit": "Büyük resmi ve detayları görün"
+        },
+        "roleBasedAccess": {
+          "title": "Rol Tabanlı Erişim",
+          "description": "Konum yöneticilerine yalnızca kendi restoran verilerine erişim verin.",
+          "benefit": "Güvenliği ve kontrolü koruyun"
+        }
+      }
+    },
+    "mobileFriendly": {
+      "title": "Mobil Uyumlu",
+      "description": "Her cihazda, her yerde mükemmel deneyim",
+      "features": {
+        "responsiveDesign": {
+          "title": "Duyarlı Tasarım",
+          "description": "Siteniz telefonlarda, tabletlerde ve masaüstü bilgisayarlarda otomatik olarak harika görünür.",
+          "benefit": "Müşterilerin %70'i mobilde sipariş verir"
+        },
+        "pwaSupport": {
+          "title": "PWA Desteği",
+          "description": "Progressive Web App teknolojisi, müşterilerin sitenizi yerel bir uygulama gibi yüklemesine olanak tanır.",
+          "benefit": "Etkileşimi ve tekrar siparişleri artırın"
+        },
+        "offlineCapability": {
+          "title": "Çevrimdışı Yetenek",
+          "description": "Menü tarama, zayıf veya internet bağlantısı olmadan bile çalışır.",
+          "benefit": "Bağlantı sorunları yüzünden asla müşteri kaybetmeyin"
+        },
+        "lightningFast": {
+          "title": "Yıldırım Hızında",
+          "description": "Optimize edilmiş performans, eski cihazlarda bile sayfaları anında yükler.",
+          "benefit": "Hızlı siteler daha fazla müşteri dönüştürür"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "sectionSubtitle": "Farkı Görün",
+    "sectionTitle": "Neden Helmies, Geleneksel Değil?",
+    "sectionDescription": "Geleneksel teslimat platformları ve sipariş sistemleriyle nasıl karşılaştırıldığımızı görün.",
+    "withoutHelmies": "Helmies Olmadan",
+    "withHelmies": "Helmies ile",
+    "viewPricing": "Fiyat Planlarını Gör",
+    "items": {
+      "setupTime": {
+        "feature": "Kurulum Süresi",
+        "helmies": "Yapay zeka ile 5 dakika",
+        "traditional": "Günler veya haftalar"
+      },
+      "monthlyCost": {
+        "feature": "Aylık Maliyet",
+        "helmies": "29/aydan başlayan",
+        "traditional": "99-299/ay"
+      },
+      "commissionOnOrders": {
+        "feature": "Sipariş Komisyonu",
+        "helmies": "%0",
+        "traditional": "%15-30"
+      },
+      "paymentProcessing": {
+        "feature": "Ödeme İşleme",
+        "helmies": "Doğrudan Stripe - paranız hesabınızda",
+        "traditional": "Platform tarafından tutulan, haftalık/aylık ödenen"
+      },
+      "menuManagement": {
+        "feature": "Menü Yönetimi",
+        "helmies": "Yapay zeka destekli, anlık güncellemeler",
+        "traditional": "Manuel giriş, yavaş değişiklikler"
+      },
+      "customBranding": {
+        "feature": "Özel Markalaşma",
+        "helmies": "Yapay zeka ile tam özelleştirme",
+        "traditional": "Sınırlı şablonlar veya pahalı özel tasarım"
+      },
+      "customerData": {
+        "feature": "Müşteri Verileri",
+        "helmies": "%100 sizin - tam dışa aktarma",
+        "traditional": "Platforma ait"
+      },
+      "multiLanguage": {
+        "feature": "Çoklu Dil",
+        "helmies": "Yapay zeka ile otomatik çeviri",
+        "traditional": "Manuel çeviri gerekli"
+      },
+      "deliveryFees": {
+        "feature": "Teslimat Ücretleri",
+        "helmies": "Tamamı sizin",
+        "traditional": "Platform pay alır"
+      },
+      "support": {
+        "feature": "Destek",
+        "helmies": "7/24 Fince destek",
+        "traditional": "Genellikle dış kaynaklı, yavaş yanıt"
+      }
+    }
+  },
+  "integrations": {
+    "sectionSubtitle": "Her Şeyi Bağlayın",
+    "sectionTitle": "Sorunsuz Entegrasyonlar",
+    "sectionDescription": "Zaten kullandığınız araçlara bağlanın. Ödeme işlemcilerinden pazarlama platformlarına kadar her şeyi düşündük.",
+    "categories": {
+      "payments": "Ödemeler",
+      "marketing": "Pazarlama",
+      "accounting": "Muhasebe",
+      "social": "Sosyal Medya",
+      "analytics": "Analitik"
+    }
+  },
+  "cta": {
+    "sectionSubtitle": "Büyümeye hazır mısınız?",
+    "sectionTitle": "Restoranınızı Dönüştürün",
+    "sectionDescription": "İşlerini büyütmek için Helmies kullanan yüzlerce restorana katılın. Kredi kartı gerekmez. 5 dakikada kurulum.",
+    "stats": {
+      "setupTime": {
+        "value": "5 dk",
+        "description": "Yapay zeka destekli sihirbaz ile ortalama kurulum süresi"
+      },
+      "commission": {
+        "value": "%0",
+        "description": "Aldığınız her sipariş üzerinden komisyon"
+      },
+      "restaurants": {
+        "value": "500+",
+        "description": "Bizimle büyüyen restoran sayısı"
+      },
+      "support": {
+        "value": "7/24",
+        "description": "İhtiyacınız olduğunda Fince destek"
+      }
+    }
+  }
+}

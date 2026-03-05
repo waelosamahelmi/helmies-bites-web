@@ -1,0 +1,340 @@
+{
+  "backToHome": "返回首页",
+  "header": {
+    "subtitle": "立即开始",
+    "title": "设置您的餐厅",
+    "description": "完成以下步骤以启动您的餐厅网站"
+  },
+  "steps": {
+    "restaurantInfo": {
+      "title": "餐厅信息",
+      "description": "告诉我们您的餐厅信息，以便我们为您定制体验。"
+    },
+    "menuUpload": {
+      "title": "菜单",
+      "description": "上传您的菜单，让我们的 AI 完成繁重的工作。"
+    },
+    "theme": {
+      "title": "主题",
+      "description": "选择精美主题或让 AI 为您创建独特设计。"
+    },
+    "domain": {
+      "title": "域名",
+      "description": "设置您的网址，几分钟内即可上线。"
+    },
+    "review": {
+      "title": "审核",
+      "description": "在启动餐厅网站之前审核所有内容。"
+    }
+  },
+  "progress": {
+    "stepOf": "第 {{current}} 步，共 {{total}} 步",
+    "percentage": "{{value}}%"
+  },
+  "buttons": {
+    "previous": "上一步",
+    "nextStep": "下一步",
+    "completeSetup": "完成设置",
+    "settingUp": "正在设置..."
+  },
+  "errors": {
+    "completeFailed": "设置失败。请重试。"
+  },
+  "help": {
+    "text": "需要帮助？请联系我们的支持团队",
+    "email": "support@helmiesbites.fi"
+  },
+  "restaurantInfo": {
+    "name": {
+      "label": "餐厅名称",
+      "hint": "您的客户将看到的名称",
+      "placeholder": "例如：Ravintola Babylon",
+      "required": "必填"
+    },
+    "aiGenerate": {
+      "generating": "AI 正在生成...",
+      "autoFill": "AI 自动填充"
+    },
+    "cuisine": {
+      "label": "菜系类型",
+      "hint": "您供应什么类型的食物？",
+      "placeholder": "选择菜系类型",
+      "options": {
+        "finnish": "芬兰菜",
+        "italian": "意大利菜",
+        "chinese": "中国菜",
+        "indian": "印度菜",
+        "thai": "泰国菜",
+        "japanese": "日本菜",
+        "burger": "汉堡和美式",
+        "pizza": "比萨",
+        "kebab": "烤肉",
+        "mexican": "墨西哥菜",
+        "other": "其他"
+      }
+    },
+    "city": {
+      "label": "城市",
+      "hint": "您的餐厅在哪里？",
+      "placeholder": "例如：赫尔辛基"
+    },
+    "descriptionFi": {
+      "label": "描述（芬兰语）",
+      "hint": "向芬兰客户描述您的餐厅",
+      "placeholder": "Kerro ravintolastasi..."
+    },
+    "descriptionEn": {
+      "label": "描述（英语）",
+      "hint": "向国际客户描述您的餐厅",
+      "placeholder": "Describe your restaurant..."
+    },
+    "email": {
+      "label": "电子邮件地址",
+      "hint": "用于登录凭证和更新通知",
+      "placeholder": "your@email.com"
+    }
+  },
+  "menuUpload": {
+    "title": "上传您的菜单",
+    "description": "上传菜单的 PDF 或图片。我们的 AI 将提取所有菜品、价格并创建翻译。",
+    "dropZone": {
+      "clickToUpload": "点击上传或拖放文件",
+      "fileTypes": "PDF、PNG、JPG，最大 10MB",
+      "removeFile": "移除文件"
+    },
+    "parsing": {
+      "inProgress": "正在使用 AI 解析您的菜单...",
+      "button": "使用 AI 解析菜单",
+      "chooseDifferent": "选择其他文件"
+    },
+    "success": {
+      "title": "菜单解析成功！",
+      "itemsFound": "我们的 AI 在 {{categories}} 个分类中找到了 {{items}} 个菜品",
+      "languages": {
+        "finnish": "芬兰语",
+        "english": "英语",
+        "swedish": "瑞典语"
+      }
+    },
+    "errors": {
+      "parseFailed": "菜单解析失败。请重试或上传其他文件。"
+    },
+    "supportedFormats": {
+      "title": "支持的格式",
+      "description": "我们接受以下文件类型"
+    },
+    "tips": {
+      "title": "获得最佳效果的提示",
+      "tip1": "上传清晰、高分辨率的图片或格式良好的 PDF",
+      "tip2": "确保每个菜品旁边的价格清晰可见",
+      "tip3": "保持分类（开胃菜、主菜等）组织良好",
+      "tip4": "我们的 AI 将自动翻译为芬兰语、英语和瑞典语"
+    },
+    "manual": {
+      "prompt": "没有电子菜单？",
+      "button": "改为手动创建菜单"
+    }
+  },
+  "themeSelection": {
+    "title": "选择您的主题",
+    "description": "选择与您品牌匹配的设计",
+    "allThemes": "所有主题",
+    "themes": {
+      "modernOrange": {
+        "name": "现代橙色",
+        "description": "大胆而充满活力"
+      },
+      "elegantDark": {
+        "name": "优雅深色",
+        "description": "精致而高雅"
+      },
+      "freshGreen": {
+        "name": "清新绿色",
+        "description": "自然而健康"
+      },
+      "oceanBlue": {
+        "name": "海洋蓝色",
+        "description": "沉稳而专业"
+      },
+      "berryBlend": {
+        "name": "浆果混合",
+        "description": "活泼而鲜明"
+      },
+      "rusticWarm": {
+        "name": "乡村暖调",
+        "description": "温馨而舒适"
+      },
+      "royalPurple": {
+        "name": "皇家紫色",
+        "description": "奢华而大胆"
+      },
+      "sunsetCoral": {
+        "name": "落日珊瑚",
+        "description": "温暖而热情"
+      }
+    },
+    "aiTheme": {
+      "title": "创建独特的 AI 主题",
+      "description": "让我们的 AI 根据您餐厅的个性和菜系设计独一无二的主题",
+      "generating": "正在生成 AI 主题...",
+      "button": "生成独特主题（€5）",
+      "selected": "已选择 AI 主题"
+    },
+    "customizeLater": {
+      "title": "稍后自定义",
+      "description": "不确定？设置完成后，您随时可以在管理面板中更改颜色、字体和布局。我们的主题完全可自定义！"
+    }
+  },
+  "domainSetup": {
+    "title": "选择您的域名类型",
+    "description": "选择您希望如何访问餐厅网站",
+    "options": {
+      "subdomain": {
+        "title": "免费子域名",
+        "description": "restaurant.helmiesbites.fi",
+        "fullDescription": "在我们的平台上获取免费子域名",
+        "badge": "免费"
+      },
+      "custom": {
+        "title": "自定义域名",
+        "description": "your-restaurant.fi",
+        "fullDescription": "使用您自己的域名",
+        "badge": "高级"
+      },
+      "path": {
+        "title": "免费路径",
+        "description": "helmiesbites.fi/restaurant",
+        "fullDescription": "在我们的平台上获取免费路径",
+        "badge": "免费"
+      }
+    },
+    "subdomain": {
+      "label": "您的子域名",
+      "hint": "为您的餐厅选择一个唯一的名称",
+      "placeholder": "restaurant-name",
+      "suffix": ".helmiesbites.fi",
+      "liveAt": "您的网站将在以下地址上线"
+    },
+    "customDomain": {
+      "label": "您的自定义域名",
+      "hint": "使用您已拥有的域名",
+      "placeholder": "your-restaurant.fi",
+      "premium": "高级",
+      "dnsNote": "<strong>设置完成后：</strong>您需要更新 DNS 设置以指向我们的服务器。我们会通过电子邮件向您发送详细说明。"
+    },
+    "path": {
+      "label": "您的路径",
+      "hint": "为您的餐厅选择一个唯一的路径",
+      "placeholder": "restaurant-name",
+      "prefix": "helmiesbites.fi/",
+      "liveAt": "您的网站将在以下地址上线"
+    },
+    "infoCards": {
+      "instantActivation": {
+        "title": "即时激活",
+        "description": "免费域名在设置完成后立即可用。无需等待！"
+      },
+      "upgradeAnytime": {
+        "title": "随时升级",
+        "description": "您可以稍后在管理面板中添加自定义域名。"
+      }
+    },
+    "availability": {
+      "available": "可用！",
+      "readyForYou": "此地址已为您准备就绪。"
+    }
+  },
+  "review": {
+    "title": "审核您的餐厅",
+    "sections": {
+      "restaurantInfo": {
+        "title": "餐厅信息",
+        "name": "名称",
+        "cuisine": "菜系",
+        "city": "城市"
+      },
+      "website": {
+        "title": "网站",
+        "domain": "域名",
+        "theme": "主题",
+        "selectedTheme": "已选主题"
+      },
+      "menu": {
+        "title": "菜单",
+        "items": "菜品",
+        "categories": "分类",
+        "languages": "语言",
+        "menuItems": "{{count}} 个菜品",
+        "menuCategories": "{{count}} 个分类",
+        "languageList": "芬兰语、英语、瑞典语"
+      },
+      "contact": {
+        "title": "联系方式",
+        "email": "电子邮件"
+      }
+    },
+    "notSet": "未设置",
+    "pricing": {
+      "title": "价格摘要",
+      "basePlatformFee": {
+        "label": "基础平台费",
+        "value": "每笔在线订单 5%",
+        "description": "仅在收到订单时付费"
+      },
+      "cashOnDelivery": {
+        "label": "货到付款",
+        "value": "€30/月",
+        "description": "接受配送货到付款"
+      },
+      "aiAssistant": {
+        "label": "AI 助手",
+        "value": "€10/月",
+        "description": "智能客户支持 AI"
+      },
+      "aiImages": {
+        "label": "AI 菜品图片",
+        "value": "€20",
+        "description": "一次性费用，AI 生成食物图片"
+      },
+      "aiBranding": {
+        "label": "AI 品牌设计",
+        "value": "€5",
+        "description": "一次性费用，AI 生成标志"
+      },
+      "oneTime": "一次性",
+      "monthlyTotal": "每月总计",
+      "perMonth": "/月",
+      "oneTimeCharges": "一次性费用",
+      "noHiddenFees": "无隐藏费用。取消需提前 3 个月通知。"
+    },
+    "readyToLaunch": {
+      "title": "一切就绪！",
+      "description": "点击「完成设置」启动您的餐厅网站。登录凭证将发送到您的电子邮件。",
+      "instantActivation": "即时激活",
+      "freeSSL": "免费 SSL 证书",
+      "mobileResponsive": "移动端响应"
+    },
+    "payment": {
+      "title": "付款信息",
+      "description": "您可以在设置完成后添加付款信息。我们提供多种付款方式，包括信用卡、直接扣款和发票。",
+      "methods": {
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "amex": "American Express",
+        "invoice": "发票"
+      }
+    },
+    "cuisineLabels": {
+      "finnish": "芬兰菜",
+      "italian": "意大利菜",
+      "chinese": "中国菜",
+      "indian": "印度菜",
+      "thai": "泰国菜",
+      "japanese": "日本菜",
+      "burger": "汉堡和美式",
+      "pizza": "比萨",
+      "kebab": "烤肉",
+      "mexican": "墨西哥菜"
+    }
+  }
+}

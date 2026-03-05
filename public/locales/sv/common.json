@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Hem",
+    "features": "Funktioner",
+    "pricing": "Priser",
+    "about": "Om oss",
+    "faq": "FAQ",
+    "tryDemo": "Testa demo",
+    "launchingDate": "Lansering 5 mars",
+    "launchingDateFull": "Lansering den 5 mars"
+  },
+  "footer": {
+    "product": "Produkt",
+    "company": "Företag",
+    "support": "Support",
+    "legal": "Juridik",
+    "links": {
+      "features": "Funktioner",
+      "pricing": "Priser",
+      "examples": "Exempel",
+      "integrations": "Integrationer",
+      "aboutUs": "Om oss",
+      "blog": "Blogg",
+      "careers": "Karriär",
+      "helpCenter": "Hjälpcenter",
+      "documentation": "Dokumentation",
+      "apiReference": "API-referens",
+      "status": "Status",
+      "privacyPolicy": "Integritetspolicy",
+      "termsOfService": "Användarvillkor",
+      "gdpr": "GDPR",
+      "cookiePolicy": "Cookiepolicy"
+    },
+    "socialGroup": "Gå med i vår sociala grupp",
+    "newsletter": "Prenumerera på vårt nyhetsbrev",
+    "emailPlaceholder": "Ange din e-post",
+    "submit": "Skicka",
+    "copyright": "© 2026 Helmies Bites. Alla rättigheter förbehållna. Gjord med 💚 i Finland.",
+    "launchingDate": "Lansering den 5 mars"
+  },
+  "countdown": {
+    "days": "Dagar",
+    "hours": "Timmar",
+    "min": "Min",
+    "sec": "Sek",
+    "launchingIn": "Lansering om",
+    "launchingDate": "Lansering den 5 mars",
+    "launchingWith": "Lanseras med"
+  }
+}

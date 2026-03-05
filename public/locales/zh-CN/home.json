@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "借助 AI 魔力，5 分钟即可上线",
+    "title": "您的餐厅网站，几分钟即可就绪",
+    "description": "AI 驱动的设置、精美主题、在线订餐 — 即将为芬兰各地的餐厅推出。",
+    "cta": "探索功能"
+  },
+  "stats": {
+    "subtitle": "深受芬兰各地餐厅信赖",
+    "title": "加入 500+ 家餐厅",
+    "description": "已在与 Helmies Bites 共同成长",
+    "restaurants": "餐厅",
+    "ordersProcessed": "已处理订单",
+    "satisfactionRate": "满意度",
+    "averageSetup": "平均设置时间"
+  },
+  "features": {
+    "subtitle": "强大功能",
+    "title": "您所需的一切",
+    "description": "在一个精美的平台上，拥有经营在线餐厅所需的全部工具",
+    "aiMenuImport": {
+      "title": "AI 菜单导入",
+      "description": "上传您的菜单 PDF，让 AI 自动提取、分类和翻译所有内容。"
+    },
+    "beautifulThemes": {
+      "title": "精美主题",
+      "description": "从精美预设中选择，或让 AI 创建与您品牌匹配的独特外观。"
+    },
+    "mobileOptimized": {
+      "title": "移动端优化",
+      "description": "您的网站在每台设备上都呈现完美效果。70% 的客户通过手机下单。"
+    },
+    "multiLanguage": {
+      "title": "多语言支持",
+      "description": "芬兰语、英语、瑞典语等 — AI 自动翻译。"
+    },
+    "onlineOrdering": {
+      "title": "在线订餐",
+      "description": "通过集成的支付处理和实时更新接受在线订单。"
+    },
+    "viewAll": "查看所有功能"
+  },
+  "howItWorks": {
+    "subtitle": "运作方式",
+    "title": "4 个简单步骤即可上线",
+    "steps": {
+      "signUp": {
+        "title": "注册并使用向导",
+        "description": "我们的引导式向导将带您完成每一步。"
+      },
+      "aiMenu": {
+        "title": "AI 菜单设置",
+        "description": "上传您的菜单 PDF。AI 将自动提取所有内容。"
+      },
+      "theme": {
+        "title": "选择您的主题",
+        "description": "从精美预设中选择，或让 AI 为您设计。"
+      },
+      "goLive": {
+        "title": "正式上线",
+        "description": "即时上线，开始接受订单。"
+      }
+    }
+  },
+  "integrations": {
+    "subtitle": "内置集成",
+    "title": "您需要的一切，内置其中",
+    "description": "与支付和配送平台无缝集成",
+    "securePayments": {
+      "title": "安全支付",
+      "text": "符合 PCI 标准的处理，具有行业领先的安全性"
+    },
+    "realTimeAnalytics": {
+      "title": "实时分析",
+      "text": "实时跟踪订单、收入和客户洞察"
+    },
+    "deliveryIntegration": {
+      "title": "配送集成",
+      "text": "内置配送管理，包含区域、费用和追踪功能"
+    },
+    "withoutHelmies": "没有 Helmies",
+    "withoutDesc": "设置复杂、费用高昂、缺乏控制",
+    "withHelmies": "使用 Helmies",
+    "withDesc": "5 分钟设置、0% 佣金、完全掌控"
+  },
+  "floating": {
+    "onlineOrders": "在线订单",
+    "rating": "4.9/5 评分",
+    "reviews": "500+ 条评价",
+    "happyOwners": "满意的店主"
+  },
+  "cta": {
+    "subtitle": "即将推出",
+    "title": "我们即将上线！",
+    "description": "成为与 Helmies Bites 一起上线的<1>首批餐厅</1>之一。设置仅需 <3>5 分钟</3>。",
+    "viewPricing": "查看价格",
+    "launchingSoon": "即将上线",
+    "launchingDate": "准备好在 2026 年 3 月 5 日与我们一起上线"
+  }
+}

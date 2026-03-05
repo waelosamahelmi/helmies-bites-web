@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "subtitle": "Hjälpcenter",
+    "titleHighlight": "Hur kan vi",
+    "title": "hjälpa dig?",
+    "description": "Hitta svar på vanliga frågor om Helmies Bites. Hittar du inte det du söker? Vi finns här för att hjälpa!",
+    "searchPlaceholder": "Sök efter svar...",
+    "stats": {
+      "faqs": "FAQ",
+      "categories": "Kategorier",
+      "categoriesCount": "6",
+      "support": "Support",
+      "supportValue": "24/7"
+    }
+  },
+  "search": {
+    "found": "Hittade",
+    "result": "resultat",
+    "results": "resultat",
+    "for": "för"
+  },
+  "noResults": {
+    "title": "Inga resultat hittades",
+    "description_prefix": "Vi kunde inte hitta några svar som matchar \"",
+    "description_suffix": "\". Prova andra sökord eller bläddra bland våra kategorier nedan.",
+    "clearSearch": "Rensa sökning"
+  },
+  "allCategories": "Alla kategorier",
+  "faqsSuffix": "FAQ",
+  "categories": {
+    "gettingStarted": {
+      "title": "Kom igång",
+      "questions": {
+        "q1": {
+          "question": "Hur lång tid tar det att ställa in min restaurangwebbplats?",
+          "answer": "De flesta restauranger kan slutföra den initiala installationen på bara 5 minuter. Vår AI-drivna guide leder dig genom att ange din restauranginformation, ladda upp din meny och välja ett tema. Efter installationen är din webbplats omedelbart live och redo att ta emot beställningar."
+        },
+        "q2": {
+          "question": "Behöver jag några tekniska kunskaper?",
+          "answer": "Inte alls! Helmies Bites är designat specifikt för restaurangägare som kanske inte har teknisk expertis. Vårt intuitiva gränssnitt och AI-assistans gör det enkelt att skapa en professionell webbplats utan kodnings- eller designkunskaper."
+        },
+        "q3": {
+          "question": "Vilken information behöver jag ange under installationen?",
+          "answer": "Du behöver din restaurangs grundinformation (namn, adress, kontaktuppgifter), din meny (kan laddas upp som PDF — vår AI extraherar artiklarna) och ditt föredragna färgschema. Det är allt! Vi tar hand om de tekniska detaljerna."
+        },
+        "q4": {
+          "question": "Kan jag använda mitt eget domännamn?",
+          "answer": "Ja! Du kan ansluta din egen anpassade domän (som www.dinrestaurang.fi) till din Helmies Bites-webbplats. Vi ger instruktioner för att uppdatera dina DNS-inställningar, eller så kan du använda en gratis subdomän som dinrestaurang.helmiesbites.fi."
+        },
+        "q5": {
+          "question": "Finns det en gratis provperiod?",
+          "answer": "Absolut! Det finns ingen förskottskostnad för att komma igång. Du betalar bara vår 5 % serviceavgift när du tar emot onlinebeställningar genom plattformen. Det betyder att du kan prova vår tjänst helt riskfritt."
+        }
+      }
+    },
+    "payments": {
+      "title": "Betalningar",
+      "questions": {
+        "q1": {
+          "question": "Vilka betalningsmetoder accepterar ni?",
+          "answer": "Vi integrerar med stora finska betalningsleverantörer inklusive Stripe, Paytrail och MobilePay. Dina kunder kan betala med kredit-/betalkort, mobilbetalningar och nätbankstjänster. Vi lägger ständigt till nya betalningsalternativ baserat på kundfeedback."
+        },
+        "q2": {
+          "question": "Hur får jag betalningar från beställningar?",
+          "answer": "Betalningar från kundbeställningar överförs direkt till ditt bankkonto. Handläggningstiden beror på din betalningsleverantör, men de flesta överföringar slutförs inom 1-3 arbetsdagar. Vår 5 % serviceavgift dras automatiskt av från varje beställning."
+        },
+        "q3": {
+          "question": "Vad är er serviceavgift?",
+          "answer": "Vi tar ut en enkel 5 % serviceavgift på varje onlinebeställning. Det täcker betalningshantering, hosting, underhåll och kundsupport. Det finns inga månadsavgifter, installationsavgifter eller dolda avgifter. Du betalar bara när du får beställningar."
+        },
+        "q4": {
+          "question": "Behöver jag ett separat betalningsbearbetarkonto?",
+          "answer": "Vi kan ställa in dig med vår integrerade betalningshantering, eller om du redan har ett Stripe- eller Paytrail-konto kan du ansluta det till ditt Helmies Bites-konto. Båda alternativen är säkra och följer finska betalningsregler."
+        },
+        "q5": {
+          "question": "Hanteras PCI-efterlevnad?",
+          "answer": "Ja, vi hanterar alla PCI-efterlevnadskrav genom våra certifierade betalningspartners. Du behöver inte oroa dig för säkerhetscertifieringar eller dataskyddsstandarder — vi tar hand om allt så att du kan fokusera på din restaurang."
+        }
+      }
+    },
+    "orders": {
+      "title": "Beställningar",
+      "questions": {
+        "q1": {
+          "question": "Hur tar jag emot onlinebeställningar?",
+          "answer": "Beställningar tas emot i realtid via din restaurangs instrumentpanel. Du kan också aktivera aviseringar via SMS, e-post eller vår mobilapp. När en ny beställning kommer in blir du omedelbart notifierad med alla beställningsdetaljer."
+        },
+        "q2": {
+          "question": "Kan jag anpassa tillgängligheten för beställningar?",
+          "answer": "Ja! Du kan ställa in dina öppettider, ta emot beställningar under specifika tider eller tillfälligt inaktivera beställningar när du har stängt eller är fullbokad. Du har full kontroll över när du tar emot beställningar."
+        },
+        "q3": {
+          "question": "Vad händer om jag behöver avbryta en beställning?",
+          "answer": "Om du behöver avbryta en beställning kan du göra det från din instrumentpanel. Kunden meddelas omedelbart och deras betalning återbetalas automatiskt. Vi rekommenderar att kontakta kunden direkt om möjligt för att förklara situationen."
+        },
+        "q4": {
+          "question": "Kan jag erbjuda hämtning och leverans?",
+          "answer": "Ja, du kan välja att erbjuda hämtning, leverans eller båda. För leverans kan du ställa in leveranszoner, avgifter och minimibeställningsbelopp. Vårt system kan även integreras med tredjepartsleveranstjänster."
+        },
+        "q5": {
+          "question": "Hur hanteras specialönskemål?",
+          "answer": "Kunder kan lägga till specialönskemål till sina beställningar, som visas tydligt i din beställningspanel. Du kan granska dessa önskemål och kontakta kunden om du behöver förtydliganden innan du förbereder deras beställning."
+        }
+      }
+    },
+    "menu": {
+      "title": "Meny",
+      "questions": {
+        "q1": {
+          "question": "Hur lägger jag till min meny?",
+          "answer": "Det enklaste sättet är att ladda upp din befintliga meny som PDF. Vår AI extraherar automatiskt alla artiklar, beskrivningar och priser. Du kan sedan granska och redigera den extraherade informationen. Alternativt kan du manuellt lägga till artiklar via vår menyredigerare."
+        },
+        "q2": {
+          "question": "Kan jag skapa flera menyer?",
+          "answer": "Ja! Du kan skapa olika menyer för frukost, lunch, middag eller specialevenemang. Du kan schemalägga när varje meny är aktiv, vilket gör det enkelt att erbjuda olika rätter under dagen eller veckan."
+        },
+        "q3": {
+          "question": "Hur uppdaterar jag menyartiklar eller priser?",
+          "answer": "Menyuppdateringar är enkla via din instrumentpanel. Navigera bara till din meny, klicka på artikeln du vill redigera, gör dina ändringar och spara. Ändringarna syns omedelbart på din live-webbplats."
+        },
+        "q4": {
+          "question": "Kan jag lägga till foton till menyartiklar?",
+          "answer": "Absolut! Att lägga till foton gör din meny mer tilltalande och kan öka beställningarna. Du kan ladda upp flera foton för varje artikel, och vårt system optimerar dem automatiskt för webbvisning och snabb laddning."
+        },
+        "q5": {
+          "question": "Hur fungerar menyöversättning?",
+          "answer": "Vår AI kan automatiskt översätta din meny till finska, svenska, engelska och andra språk. Du kan granska och redigera översättningar för att säkerställa noggrannheten. Flerspråkiga menyer hjälper dig att betjäna en bredare kundbas."
+        }
+      }
+    },
+    "technical": {
+      "title": "Tekniskt",
+      "questions": {
+        "q1": {
+          "question": "Är min webbplats mobilvänlig?",
+          "answer": "Ja, varje Helmies Bites-webbplats är helt responsiv och optimerad för mobila enheter. Din webbplats ser bra ut och fungerar perfekt på smartphones, surfplattor och stationära datorer."
+        },
+        "q2": {
+          "question": "Hur tillförlitlig är plattformen?",
+          "answer": "Vi upprätthåller 99,9 % drifttid med vår molnbaserade infrastruktur. Din webbplats hostas på säkra servrar med automatiska säkerhetskopieringar. Vi hanterar all underhåll och uppdateringar så att du inte behöver oroa dig för tekniska problem."
+        },
+        "q3": {
+          "question": "Kan jag integrera med sociala medier?",
+          "answer": "Ja, du kan enkelt länka din webbplats till dina sociala medieprofiler och lägga till sociala delningsknappar. Vi erbjuder också verktyg som hjälper dig att marknadsföra din meny och specialerbjudanden på plattformar som Instagram och Facebook."
+        },
+        "q4": {
+          "question": "Vilken analys finns tillgänglig?",
+          "answer": "Din instrumentpanel inkluderar analys som visar beställningshistorik, populära artiklar, intäktstrender och kundinformation. Dessa insikter hjälper dig att fatta datadrivna beslut om din meny och marknadsföring."
+        },
+        "q5": {
+          "question": "Är mina data säkra?",
+          "answer": "Säkerhet är vår högsta prioritet. Vi använder branschstandard kryptering, följer GDPR-regler och genomgår regelbundna säkerhetsgranskningar. Dina data och dina kunders data är alltid skyddade."
+        }
+      }
+    },
+    "billing": {
+      "title": "Fakturering",
+      "questions": {
+        "q1": {
+          "question": "Finns det några månadsavgifter?",
+          "answer": "Nej, det finns inga månadsavgifter eller prenumerationer. Du betalar bara vår 5 % serviceavgift när du tar emot onlinebeställningar. Det innebär att om du inte får några beställningar under en månad betalar du ingenting den månaden."
+        },
+        "q2": {
+          "question": "Hur ser jag min faktureringshistorik?",
+          "answer": "Din faktureringshistorik finns tillgänglig på din instrumentpanel. Du kan se detaljerade rapporter över alla avgifter som tagits ut, ladda ner fakturor och följa dina intäkter över tid."
+        },
+        "q3": {
+          "question": "Finns det extra avgifter för vissa funktioner?",
+          "answer": "Vår standardprissättning inkluderar alla kärnfunktioner. Vissa premiumtillägg som betalning vid leverans (+30/mån) eller AI-assistent (+10/mån) finns tillgängliga mot en extra avgift, men dessa är helt valfria."
+        },
+        "q4": {
+          "question": "Kan jag få återbetalning för en serviceavgift?",
+          "answer": "Serviceavgifter är i allmänhet ej återbetalningsbara eftersom de täcker betalningshantering och plattformsanvändning. Om du dock tror att en avgift debiterats felaktigt, kontakta vårt supportteam så granskar vi ditt ärende."
+        },
+        "q5": {
+          "question": "Erbjuder ni företagsplaner?",
+          "answer": "För stora restauranggrupper eller kedjor kan vi diskutera anpassade prisarrangemang. Kontakta vårt säljteam för att diskutera dina specifika behov så skapar vi en plan som fungerar för dig."
+        }
+      }
+    }
+  },
+  "stillHaveQuestions": {
+    "title": "Har du fortfarande frågor?",
+    "description": "Hittar du inte svaret du söker? Vårt vänliga supportteam finns här för att hjälpa dig komma igång.",
+    "contactSupport": "Kontakta support",
+    "emailUs": "E-posta oss",
+    "trustIndicators": {
+      "fastResponse": "Snabbt svar",
+      "expertHelp": "Experthjälp",
+      "freeSupport": "Gratis support"
+    }
+  },
+  "bottomCta": {
+    "subtitle": "Kom igång idag",
+    "titleHighlight": "Förvandla",
+    "title": "din restaurang",
+    "description": "Gå med bland hundratals restauranger som redan använder Helmies Bites. Installationen tar bara 5 minuter, och du betalar bara när du får beställningar."
+  }
+}

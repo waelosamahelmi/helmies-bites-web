@@ -1,0 +1,10 @@
+{
+  "noData": "未找到设置数据。请先完成设置向导。",
+  "title": "欢迎来到 Helmies Bites！",
+  "subtitle": "您的餐厅网站已上线，可以开始接受订单了",
+  "websiteLive": "您的网站已上线",
+  "yourWebsite": "您的网站",
+  "adminDashboard": "管理面板",
+  "credentials": "<strong>登录凭证已发送至您的电子邮件。</strong>请查看收件箱获取用户名和密码。",
+  "contactUs": "有问题？请联系我们：support@helmiesbites.fi"
+}

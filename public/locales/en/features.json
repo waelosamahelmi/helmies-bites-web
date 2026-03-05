@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "badge": "Everything You Need to Succeed",
+    "title": "Powerful Features For Every Restaurant",
+    "description": "From AI-powered setup to delivery management, everything you need to run a successful restaurant business in <strong>one beautiful platform</strong>.",
+    "exploreFeatures": "Explore Features",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "label": "Setup Time"
+      },
+      "commission": {
+        "value": "0%",
+        "label": "Commission"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Support"
+      },
+      "integrations": {
+        "value": "50+",
+        "label": "Integrations"
+      }
+    },
+    "floatingIcons": {
+      "onlineOrdering": {
+        "title": "Online Ordering",
+        "subtitle": "Smart cart & checkout"
+      },
+      "menuManagement": {
+        "title": "Menu Management",
+        "subtitle": "AI-powered setup"
+      },
+      "payments": {
+        "title": "Payments",
+        "subtitle": "Stripe & mobile wallets"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "subtitle": "Data-driven insights"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "subtitle": "Zones & tracking"
+      },
+      "mobileReady": {
+        "title": "Mobile Ready",
+        "subtitle": "PWA & responsive"
+      }
+    }
+  },
+  "categories": {
+    "sectionSubtitle": "Comprehensive Platform",
+    "sectionTitle": "Complete Restaurant Platform",
+    "sectionDescription": "Explore our comprehensive suite of features designed to help you grow your restaurant business.",
+    "onlineOrdering": {
+      "title": "Online Ordering",
+      "description": "Streamline your ordering process with a seamless customer experience",
+      "features": {
+        "smartShoppingCart": {
+          "title": "Smart Shopping Cart",
+          "description": "Intuitive cart with real-time updates, quantity controls, and special instructions support.",
+          "benefit": "Reduce cart abandonment by up to 35%"
+        },
+        "oneClickCheckout": {
+          "title": "One-Click Checkout",
+          "description": "Save customer details for lightning-fast repeat orders with Stripe integration.",
+          "benefit": "Customers complete orders 3x faster"
+        },
+        "realTimeOrderTracking": {
+          "title": "Real-Time Order Tracking",
+          "description": "Live order status updates from preparation to delivery or pickup.",
+          "benefit": "Reduce \"Where is my order?\" calls by 80%"
+        },
+        "scheduledOrdering": {
+          "title": "Scheduled Ordering",
+          "description": "Let customers order hours or days in advance for pickup or delivery.",
+          "benefit": "Capture orders during off-peak hours"
+        },
+        "orderNotifications": {
+          "title": "Order Notifications",
+          "description": "Instant SMS and email alerts for new orders, updates, and confirmations.",
+          "benefit": "Never miss an order again"
+        }
+      }
+    },
+    "menuManagement": {
+      "title": "Menu Management",
+      "description": "Create and manage beautiful, engaging menus with AI assistance",
+      "features": {
+        "aiPoweredMenuSetup": {
+          "title": "AI-Powered Menu Setup",
+          "description": "Upload photos and descriptions. Our AI organizes everything into categories, suggests prices, and creates modifiers.",
+          "benefit": "Go from zero to live menu in under 5 minutes"
+        },
+        "customModifiersOptions": {
+          "title": "Custom Modifiers & Options",
+          "description": "Add toppings, sizes, cooking preferences, and special requests with ease.",
+          "benefit": "Increase average order value by 20%"
+        },
+        "photoGalleries": {
+          "title": "Photo Galleries",
+          "description": "Upload multiple high-quality photos to showcase your dishes beautifully.",
+          "benefit": "Photos increase orders by 30%"
+        },
+        "multiLanguageMenus": {
+          "title": "Multi-Language Menus",
+          "description": "AI translates your menu into Finnish, English, Swedish, and more automatically.",
+          "benefit": "Reach a broader customer base"
+        },
+        "qrCodeMenus": {
+          "title": "QR Code Menus",
+          "description": "Generate printable QR codes for table-side ordering and contactless menus.",
+          "benefit": "Reduce physical menu printing costs"
+        }
+      }
+    },
+    "paymentProcessing": {
+      "title": "Payment Processing",
+      "description": "Accept payments securely and get paid instantly",
+      "features": {
+        "stripeIntegration": {
+          "title": "Stripe Integration",
+          "description": "Accept all major credit cards, mobile wallets, and local payment methods through Stripe.",
+          "benefit": "Industry-leading security and reliability"
+        },
+        "instantPayouts": {
+          "title": "Instant Payouts",
+          "description": "Configure daily automatic payouts to your bank account. No waiting weeks for your money.",
+          "benefit": "Improve cash flow immediately"
+        },
+        "mobilePayments": {
+          "title": "Mobile Payments",
+          "description": "Accept Apple Pay, Google Pay, and other mobile wallets for seamless checkout.",
+          "benefit": "Mobile users convert 2x more"
+        },
+        "digitalReceipts": {
+          "title": "Digital Receipts",
+          "description": "Automatic email receipts with order details and easy re-order links.",
+          "benefit": "Encourage repeat purchases"
+        }
+      }
+    },
+    "deliveryManagement": {
+      "title": "Delivery Management",
+      "description": "Take control of your delivery operations or integrate with partners",
+      "features": {
+        "deliveryZones": {
+          "title": "Delivery Zones",
+          "description": "Define custom delivery areas with radius-based or polygon zones and unique fees.",
+          "benefit": "Optimize delivery costs and coverage"
+        },
+        "dynamicFeeCalculation": {
+          "title": "Dynamic Fee Calculation",
+          "description": "Set fees based on distance, order size, or time-of-day with automatic adjustments.",
+          "benefit": "Protect margins on small orders"
+        },
+        "driverApp": {
+          "title": "Driver App",
+          "description": "Dedicated mobile app for delivery drivers with route optimization and status updates.",
+          "benefit": "Complete control over delivery experience"
+        },
+        "driverManagement": {
+          "title": "Driver Management",
+          "description": "Assign orders to drivers, track deliveries, and optimize routes.",
+          "benefit": "Complete control over delivery experience"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Analytics & Reports",
+      "description": "Data-driven insights to grow your business",
+      "features": {
+        "salesAnalytics": {
+          "title": "Sales Analytics",
+          "description": "Track revenue, average order value, and growth over time with beautiful visualizations.",
+          "benefit": "Make data-driven business decisions"
+        },
+        "popularItemsReport": {
+          "title": "Popular Items Report",
+          "description": "Discover your best-sellers and underperforming items to optimize your menu.",
+          "benefit": "Focus on what drives profit"
+        },
+        "customerInsights": {
+          "title": "Customer Insights",
+          "description": "Understand customer behavior, order frequency, and lifetime value.",
+          "benefit": "Identify and retain VIP customers"
+        },
+        "peakHourAnalysis": {
+          "title": "Peak Hour Analysis",
+          "description": "Identify your busiest times to optimize staffing and preparation.",
+          "benefit": "Reduce wait times and improve service"
+        }
+      }
+    },
+    "marketing": {
+      "title": "Marketing Tools",
+      "description": "Attract new customers and keep them coming back",
+      "features": {
+        "promotionsDiscounts": {
+          "title": "Promotions & Discounts",
+          "description": "Create coupon codes, percentage discounts, and BOGO offers with ease.",
+          "benefit": "Drive sales during slow periods"
+        },
+        "loyaltyPrograms": {
+          "title": "Loyalty Programs",
+          "description": "Reward repeat customers with points, free items, and exclusive perks.",
+          "benefit": "Increase customer retention by 40%"
+        },
+        "emailCampaigns": {
+          "title": "Email Campaigns",
+          "description": "Send targeted email campaigns to announce specials, events, and promotions.",
+          "benefit": "Reach customers directly in their inbox"
+        },
+        "socialSharing": {
+          "title": "Social Sharing",
+          "description": "Easy sharing to Facebook, Instagram, and other social platforms.",
+          "benefit": "Amplify your reach organically"
+        }
+      }
+    },
+    "multiLocation": {
+      "title": "Multi-Location Support",
+      "description": "Manage multiple restaurants from a single dashboard",
+      "features": {
+        "centralizedManagement": {
+          "title": "Centralized Management",
+          "description": "Manage menus, prices, and settings across all locations from one admin panel.",
+          "benefit": "Save hours of administrative work"
+        },
+        "locationSpecificOptions": {
+          "title": "Location-Specific Options",
+          "description": "Customize menus, pricing, and delivery zones for each location independently.",
+          "benefit": "Adapt to local market conditions"
+        },
+        "aggregatedReporting": {
+          "title": "Aggregated Reporting",
+          "description": "View individual location performance or consolidated reports across all locations.",
+          "benefit": "See the big picture and details"
+        },
+        "roleBasedAccess": {
+          "title": "Role-Based Access",
+          "description": "Grant location managers access only to their specific restaurant data.",
+          "benefit": "Maintain security and control"
+        }
+      }
+    },
+    "mobileFriendly": {
+      "title": "Mobile Friendly",
+      "description": "Perfect experience on every device, everywhere",
+      "features": {
+        "responsiveDesign": {
+          "title": "Responsive Design",
+          "description": "Your site looks stunning on phones, tablets, and desktops automatically.",
+          "benefit": "70% of customers order on mobile"
+        },
+        "pwaSupport": {
+          "title": "PWA Support",
+          "description": "Progressive Web App technology lets customers install your site like a native app.",
+          "benefit": "Increase engagement and repeat orders"
+        },
+        "offlineCapability": {
+          "title": "Offline Capability",
+          "description": "Menu browsing works even with poor or no internet connection.",
+          "benefit": "Never lose a customer to connectivity issues"
+        },
+        "lightningFast": {
+          "title": "Lightning Fast",
+          "description": "Optimized performance loads pages instantly even on older devices.",
+          "benefit": "Faster sites convert more customers"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "sectionSubtitle": "See the Difference",
+    "sectionTitle": "Why Helmies vs Traditional?",
+    "sectionDescription": "See how we compare to traditional delivery platforms and ordering systems.",
+    "withoutHelmies": "Without Helmies",
+    "withHelmies": "With Helmies",
+    "viewPricing": "View Pricing Plans",
+    "items": {
+      "setupTime": {
+        "feature": "Setup Time",
+        "helmies": "5 minutes with AI",
+        "traditional": "Days to weeks"
+      },
+      "monthlyCost": {
+        "feature": "Monthly Cost",
+        "helmies": "From 29/month",
+        "traditional": "99-299/month"
+      },
+      "commissionOnOrders": {
+        "feature": "Commission on Orders",
+        "helmies": "0%",
+        "traditional": "15-30%"
+      },
+      "paymentProcessing": {
+        "feature": "Payment Processing",
+        "helmies": "Direct Stripe - funds in your account",
+        "traditional": "Held by platform, paid out weekly/monthly"
+      },
+      "menuManagement": {
+        "feature": "Menu Management",
+        "helmies": "AI-powered, instant updates",
+        "traditional": "Manual input, slow changes"
+      },
+      "customBranding": {
+        "feature": "Custom Branding",
+        "helmies": "Full customization with AI",
+        "traditional": "Limited templates or expensive custom"
+      },
+      "customerData": {
+        "feature": "Customer Data",
+        "helmies": "100% yours - full export",
+        "traditional": "Owned by platform"
+      },
+      "multiLanguage": {
+        "feature": "Multi-Language",
+        "helmies": "Auto-translate with AI",
+        "traditional": "Manual translation needed"
+      },
+      "deliveryFees": {
+        "feature": "Delivery Fees",
+        "helmies": "You keep it all",
+        "traditional": "Platform takes a cut"
+      },
+      "support": {
+        "feature": "Support",
+        "helmies": "24/7 Finnish support",
+        "traditional": "Often outsourced, slow response"
+      }
+    }
+  },
+  "integrations": {
+    "sectionSubtitle": "Connect Everything",
+    "sectionTitle": "Seamless Integrations",
+    "sectionDescription": "Connect with the tools you already use. From payment processors to marketing platforms, we have got you covered.",
+    "categories": {
+      "payments": "Payments",
+      "marketing": "Marketing",
+      "accounting": "Accounting",
+      "social": "Social",
+      "analytics": "Analytics"
+    }
+  },
+  "cta": {
+    "sectionSubtitle": "Ready to grow?",
+    "sectionTitle": "Transform Your Restaurant",
+    "sectionDescription": "Join hundreds of restaurants already using Helmies to grow their business. No credit card required. Setup in 5 minutes.",
+    "stats": {
+      "setupTime": {
+        "value": "5 min",
+        "description": "Average setup time with AI-powered wizard"
+      },
+      "commission": {
+        "value": "0%",
+        "description": "Commission on every order you receive"
+      },
+      "restaurants": {
+        "value": "500+",
+        "description": "Restaurants already growing with us"
+      },
+      "support": {
+        "value": "24/7",
+        "description": "Finnish support whenever you need help"
+      }
+    }
+  }
+}

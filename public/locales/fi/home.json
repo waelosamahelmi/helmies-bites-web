@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "badge": "Julkaise 5 minuutissa tekoälyn avulla",
+    "title": "Ravintolasi verkkosivusto, valmis minuuteissa",
+    "description": "Tekoälypohjainen asennus, kauniit teemat, verkkotilaukset — tulossa pian ravintoloille kaikkialla Suomessa.",
+    "cta": "Tutustu ominaisuuksiin"
+  },
+  "stats": {
+    "subtitle": "Ravintoloiden luottama kaikkialla Suomessa",
+    "title": "Liity 500+ ravintolan joukkoon",
+    "description": "Jo kasvussa Helmies Bitesin kanssa",
+    "restaurants": "Ravintolat",
+    "ordersProcessed": "Käsitellyt tilaukset",
+    "satisfactionRate": "Tyytyväisyysaste",
+    "averageSetup": "Keskimääräinen asennus"
+  },
+  "features": {
+    "subtitle": "Tehokkaat ominaisuudet",
+    "title": "Kaikki mitä tarvitset",
+    "description": "Kaikki työkalut ravintolasi verkkoliiketoimintaan, yhdessä kauniissa paikassa",
+    "aiMenuImport": {
+      "title": "Tekoälyruokalistan tuonti",
+      "description": "Lataa ruokalistasi PDF-tiedostona ja anna tekoälyn poimia, luokitella ja kääntää kaiken automaattisesti."
+    },
+    "beautifulThemes": {
+      "title": "Kauniit teemat",
+      "description": "Valitse upeista valmisteemoista tai anna tekoälyn luoda ainutlaatuinen ilme brändillesi."
+    },
+    "mobileOptimized": {
+      "title": "Mobiilioptimoitu",
+      "description": "Sivustosi näyttää täydelliseltä jokaisella laitteella. 70 % asiakkaista tilaa mobiililla."
+    },
+    "multiLanguage": {
+      "title": "Monikielinen",
+      "description": "Suomi, englanti, ruotsi ja muut — tekoäly kääntää automaattisesti."
+    },
+    "onlineOrdering": {
+      "title": "Verkkotilaukset",
+      "description": "Vastaanota tilauksia verkossa integroidulla maksunkäsittelyllä ja reaaliaikaisilla päivityksillä."
+    },
+    "viewAll": "Näytä kaikki ominaisuudet"
+  },
+  "howItWorks": {
+    "subtitle": "Näin se toimii",
+    "title": "Julkaise 4 helpossa vaiheessa",
+    "steps": {
+      "signUp": {
+        "title": "Rekisteröidy ja ohjattu asennus",
+        "description": "Ohjattu asennuksemme opastaa sinut jokaisen vaiheen läpi."
+      },
+      "aiMenu": {
+        "title": "Tekoälyruokalistan luonti",
+        "description": "Lataa ruokalistasi PDF-tiedostona. Tekoäly poimii kaiken automaattisesti."
+      },
+      "theme": {
+        "title": "Valitse teemasi",
+        "description": "Valitse kauniista valmisteemoista tai anna tekoälyn suunnitella omasi."
+      },
+      "goLive": {
+        "title": "Julkaise",
+        "description": "Julkaise heti ja aloita tilausten vastaanottaminen."
+      }
+    }
+  },
+  "integrations": {
+    "subtitle": "Sisäänrakennetut integraatiot",
+    "title": "Kaikki mitä tarvitset, sisäänrakennettuna",
+    "description": "Saumattomat integraatiot maksu- ja toimitusalustojen kanssa",
+    "securePayments": {
+      "title": "Turvalliset maksut",
+      "text": "PCI-yhteensopiva käsittely alan johtavalla turvallisuudella"
+    },
+    "realTimeAnalytics": {
+      "title": "Reaaliaikainen analytiikka",
+      "text": "Seuraa tilauksia, liikevaihtoa ja asiakasnäkemyksiä reaaliajassa"
+    },
+    "deliveryIntegration": {
+      "title": "Toimitusintegraatio",
+      "text": "Sisäänrakennettu toimitustenhallinta vyöhykkeineen, maksuineen ja seurantoineen"
+    },
+    "withoutHelmies": "Ilman Helmiesiä",
+    "withoutDesc": "Monimutkainen asennus, korkeat maksut, ei hallintaa",
+    "withHelmies": "Helmiesin kanssa",
+    "withDesc": "5 min asennus, 0 % provisio, täysi hallinta"
+  },
+  "floating": {
+    "onlineOrders": "Verkkotilaukset",
+    "rating": "4,9/5 Arvosana",
+    "reviews": "500+ arvostelua",
+    "happyOwners": "Tyytyväiset omistajat"
+  },
+  "cta": {
+    "subtitle": "Tulossa pian",
+    "title": "Julkaisemme pian!",
+    "description": "Ole yksi <1>ensimmäisistä ravintoloista</1>, joka julkaisee Helmies Bitesin kanssa. Asennus kestää vain <3>5 minuuttia</3>.",
+    "viewPricing": "Katso hinnoittelu",
+    "launchingSoon": "Tulossa pian",
+    "launchingDate": "Ole valmis kun julkaisemme 5. maaliskuuta 2026"
+  }
+}

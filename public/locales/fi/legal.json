@@ -1,0 +1,758 @@
+{
+  "privacy": {
+    "title": "Tietosuojakäytäntö",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Helmies Bitesissä otamme yksityisyytesi vakavasti. Tämä tietosuojakäytäntö selittää, miten keräämme, käytämme, luovutamme ja suojaamme tietojasi, kun käytät ravintola-alustapalveluitamme. Lue tämä käytäntö huolellisesti.",
+    "tableOfContents": "Sisällysluettelo",
+    "printPage": "Tulosta tämä sivu",
+    "sections": {
+      "informationCollection": {
+        "title": "Tietojen kerääminen",
+        "intro": "Helmies Bitesissä keräämme tietoja, jotka annat meille suoraan, sekä tietoja, jotka keräämme automaattisesti, kun käytät palveluitamme.",
+        "youProvideTitle": "Antamasi tiedot",
+        "youProvideItems": {
+          "item1": "Tilitiedot (nimi, sähköpostiosoite, ravintolan nimi)",
+          "item2": "Ravintolan tiedot (osoite, puhelinnumero, aukioloajat)",
+          "item3": "Ruokalistan annokset ja hintatiedot",
+          "item4": "Maksu- ja laskutustiedot",
+          "item5": "Viestintä tukitiimimme kanssa"
+        },
+        "autoCollectedTitle": "Automaattisesti kerätyt tiedot",
+        "autoCollectedItems": {
+          "item1": "Laitetiedot (IP-osoite, selaintyyppi, käyttöjärjestelmä)",
+          "item2": "Käyttötiedot (vieraillut sivut, käytetyt ominaisuudet, vietetty aika)",
+          "item3": "Lokitiedot (pääsyajat, viittaavat URL-osoitteet)"
+        }
+      },
+      "dataUsage": {
+        "title": "Miten käytämme tietojasi",
+        "intro": "Käytämme keräämiämme tietoja:",
+        "items": {
+          "item1": "Palveluidemme tarjoamiseen, ylläpitoon ja parantamiseen",
+          "item2": "Tapahtumien käsittelyyn ja niihin liittyvien tietojen lähettämiseen",
+          "item3": "Teknisten ilmoitusten ja tukiviestien lähettämiseen",
+          "item4": "Kommentteihin, kysymyksiin ja asiakaspalvelupyyntöihin vastaamiseen",
+          "item5": "Tuotteista, palveluista ja tapahtumista viestimiseen",
+          "item6": "Trendien, käytön ja toimintojen seurantaan ja analysointiin",
+          "item7": "Turvallisuuspoikkeamien ja petosten havaitsemiseen, tutkimiseen ja ehkäisemiseen",
+          "item8": "Lakisääteisten velvoitteiden noudattamiseen"
+        }
+      },
+      "cookies": {
+        "title": "Evästeet ja seurantateknologiat",
+        "content1": "Käytämme evästeitä ja vastaavia seurantateknologioita kerätäksemme ja seurataksemme tietoja toiminnastasi alustamme. Evästeet ovat pieniä datatiedostoja, jotka tallennetaan laitteellesi ja jotka auttavat meitä tarjoamaan sinulle paremman kokemuksen.",
+        "content2": "Käytämme seuraavan tyyppisiä evästeitä:",
+        "items": {
+          "item1Label": "Välttämättömät evästeet:",
+          "item1Text": "Alustan toiminnan edellyttämiä",
+          "item2Label": "Analytiikkaevästeet:",
+          "item2Text": "Auttavat meitä ymmärtämään, miten käyttäjät käyttävät alustaamme",
+          "item3Label": "Markkinointievästeet:",
+          "item3Text": "Käytetään oleellisten mainosten näyttämiseen"
+        },
+        "cookiePolicyLink": "Lisätietoja löydät <1>evästekäytännöstämme</1>."
+      },
+      "dataSecurity": {
+        "title": "Tietoturva",
+        "content1": "Toteutamme asianmukaiset tekniset ja organisatoriset toimenpiteet suojataksemme henkilötietojasi luvattomalta tai laittomalta käsittelyltä, vahingossa tapahtuvalta häviämiseltä, tuhoutumiselta tai vahingoittumiselta.",
+        "content2": "Turvallisuustoimenpiteemme sisältävät:",
+        "items": {
+          "item1": "Tietojen salaus siirron ja tallennuksen aikana",
+          "item2": "Säännölliset turvallisuusarvioinnit ja päivitykset",
+          "item3": "Pääsynhallinta ja todennusjärjestelmät",
+          "item4": "Turvalliset palvelinkeskukset fyysisellä turvallisuudella"
+        },
+        "content3": "Mikään internetin kautta tapahtuva siirtomenetelmä ei kuitenkaan ole 100 % turvallinen. Vaikka pyrimme suojaamaan tietojasi, emme voi taata ehdotonta turvallisuutta."
+      },
+      "userRights": {
+        "title": "Oikeutesi",
+        "intro": "Sijainnistasi riippuen sinulla voi olla seuraavat oikeudet:",
+        "items": {
+          "item1Label": "Pääsy:",
+          "item1Text": "Pyydä kopio henkilötiedoistasi",
+          "item2Label": "Oikaisu:",
+          "item2Text": "Korjaa virheelliset tai puutteelliset tiedot",
+          "item3Label": "Poistaminen:",
+          "item3Text": "Pyydä henkilötietojesi poistamista",
+          "item4Label": "Rajoittaminen:",
+          "item4Text": "Pyydä tietojenkäsittelyn rajoittamista",
+          "item5Label": "Siirrettävyys:",
+          "item5Text": "Vastaanota tietosi jäsennellyssä muodossa",
+          "item6Label": "Vastustaminen:",
+          "item6Text": "Vastusta tietojesi käsittelyä",
+          "item7Label": "Suostumuksen peruuttaminen:",
+          "item7Text": "Peruuta suostumus, kun käsittely perustuu suostumukseen"
+        },
+        "contactText": "Käyttääksesi näitä oikeuksia, ota meihin yhteyttä osoitteessa <1>{{email}}</1>."
+      },
+      "dataRetention": {
+        "title": "Tietojen säilyttäminen",
+        "content1": "Säilytämme henkilötietojasi niin kauan kuin on tarpeellista palveluidemme tarjoamiseksi ja tässä tietosuojakäytännössä kuvattujen tarkoitusten täyttämiseksi.",
+        "content2": "Säilytysajat vaihtelevat seuraavien perusteella:",
+        "items": {
+          "item1": "Tietojen tyyppi ja arkaluonteisuus",
+          "item2": "Tarkoitus, jota varten ne kerättiin",
+          "item3": "Oikeudelliset ja lainsäädännölliset vaatimukset",
+          "item4": "Mahdollisten vaatimusten vanhentumisaika"
+        },
+        "content3": "Tilitiedot säilytetään yleensä 3 vuotta tilin sulkemisen jälkeen. Taloustiedot säilytetään 7 vuotta verolakien edellyttämällä tavalla."
+      },
+      "thirdPartyServices": {
+        "title": "Kolmansien osapuolten palvelut",
+        "content1": "Käytämme kolmansien osapuolten palveluita auttamaan alustamme toiminnassa. Näillä palveluntarjoajilla on pääsy henkilötietoihisi vain suorittaakseen tiettyjä tehtäviä puolestamme.",
+        "content2": "Esimerkkejä kolmansien osapuolten palveluista:",
+        "items": {
+          "item1": "Maksunvälittäjät (Stripe, PayPal)",
+          "item2": "Pilvipalvelintarjoajat",
+          "item3": "Analytiikkapalvelut",
+          "item4": "Sähköpostiviestintäpalvelut",
+          "item5": "Asiakastukityökalut"
+        },
+        "content3": "Valitsemme nämä kumppanit huolellisesti ja edellytämme, että he noudattavat tiukkoja tietosuojastandardeja."
+      },
+      "internationalTransfers": {
+        "title": "Kansainväliset tietosiirrot",
+        "content1": "Tietojasi voidaan siirtää ja käsitellä muissa maissa kuin omassasi. Varmistamme, että asianmukaiset suojatoimet ovat käytössä tietojesi suojaamiseksi tämän tietosuojakäytännön ja sovellettavan lain mukaisesti.",
+        "content2": "Siirrettäessä tietoja Euroopan talousalueelta (ETA) käytämme Euroopan komission hyväksymiä vakiosopimuslausekkeita tai muita asianmukaisia oikeudellisia mekanismeja."
+      },
+      "childrenPrivacy": {
+        "title": "Lasten yksityisyys",
+        "content": "Palvelumme eivät ole tarkoitettu alle 16-vuotiaille lapsille. Emme tietoisesti kerää henkilötietoja alle 16-vuotiailta. Jos saat tietää, että lapsi on antanut meille henkilötietoja, ota meihin yhteyttä välittömästi."
+      },
+      "contact": {
+        "title": "Ota yhteyttä",
+        "intro": "Jos sinulla on kysymyksiä, huolenaiheita tai valituksia tästä tietosuojakäytännöstä tai tietojenkäsittelykäytännöistämme, ota meihin yhteyttä:",
+        "contactLabel": "Tietosuojayhteyshenkilö",
+        "emailLabel": "Sähköposti:",
+        "addressLabel": "Osoite:",
+        "address": "Helsinki, Suomi",
+        "euNote": "Euroopan unionin rekisteröidyillä on myös oikeus tehdä valitus paikalliselle tietosuojaviranomaiselle."
+      }
+    },
+    "footerNote": "Tämä tietosuojakäytäntö on tarkoitettu noudattamaan yleistä tietosuoja-asetusta (GDPR), Kalifornian kuluttajansuojalakia (CCPA) ja muita sovellettavia tietosuojalakeja. Pidätämme oikeuden päivittää tätä käytäntöä ajoittain. Muutokset julkaistaan tällä sivulla päivitetyllä tarkistuspäivämäärällä."
+  },
+  "terms": {
+    "title": "Käyttöehdot",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
+    "email": "legal@helmiesbites.fi",
+    "introduction": "Tervetuloa Helmies Bitesiin. Nämä käyttöehdot säätelevät ravintola-alustamme ja verkkotilauspalveluidemme käyttöä. Käyttämällä palveluitamme hyväksyt nämä ehdot. Lue ne huolellisesti.",
+    "tableOfContents": "Sisällysluettelo",
+    "printPage": "Tulosta tämä sivu",
+    "sections": {
+      "acceptance": {
+        "title": "Ehtojen hyväksyminen",
+        "content1": "Käyttämällä Helmies Bitesin palveluita sitoudut noudattamaan näitä käyttöehtoja ja kaikkia sovellettavia lakeja ja säännöksiä. Jos et hyväksy näitä ehtoja, sinulla ei ole oikeutta käyttää palveluitamme.",
+        "content2": "Nämä ehdot muodostavat oikeudellisesti sitovan sopimuksen sinun ja Helmies Bites Oy:n, Suomeen rekisteröidyn yrityksen, välillä."
+      },
+      "serviceDescription": {
+        "title": "Palvelun kuvaus",
+        "intro": "Helmies Bites tarjoaa ravintolan verkkosivuston rakentajan ja verkkotilausalustan, joka mahdollistaa ravintoloiden:",
+        "items": {
+          "item1": "Luoda ja mukauttaa ravintolan verkkosivustoja",
+          "item2": "Näyttää ruokalistoja ja hintatietoja",
+          "item3": "Vastaanottaa verkkotilauksia ja maksuja",
+          "item4": "Hallita tilauksia ja asiakasviestintää",
+          "item5": "Integroitua verkkotunnus- ja isännöintipalveluihin"
+        },
+        "content": "Pidätämme oikeuden muuttaa, keskeyttää tai lopettaa minkä tahansa palvelumme osan milloin tahansa ilman ennakkoilmoitusta."
+      },
+      "userResponsibilities": {
+        "title": "Käyttäjän velvollisuudet",
+        "intro": "Palveluidemme käyttäjänä sitoudut:",
+        "items": {
+          "item1": "Antamaan tarkkoja, ajantasaisia ja täydellisiä tietoja",
+          "item2": "Ylläpitämään tilisi tunnusten turvallisuutta",
+          "item3": "Vastaamaan kaikesta tilisi alla tapahtuvasta toiminnasta",
+          "item4": "Ilmoittamaan meille välittömästi luvattomasta käytöstä",
+          "item5": "Noudattamaan kaikkia sovellettavia lakeja ja säännöksiä",
+          "item6": "Olemaan käyttämättä palveluitamme laittomiin tai luvattomiin tarkoituksiin",
+          "item7": "Olemaan yrittämättä luvatonta pääsyä järjestelmiimme",
+          "item8": "Olemaan häiritsemättä palveluitamme tai palvelimiamme"
+        },
+        "note": "Olet yksin vastuussa ravintolasi verkkosivustolla julkaisemastasi sisällöstä, mukaan lukien ruokalistan annokset, hinnat ja kuvat."
+      },
+      "paymentTerms": {
+        "title": "Maksu ja laskutus",
+        "serviceFeesTitle": "Palvelumaksut",
+        "serviceFeesContent": "Helmies Bites veloittaa 5 %:n palvelumaksun jokaisesta alustamme kautta käsitellystä verkkotilauksesta. Tämä maksu vähennetään automaattisesti tilauksen kokonaissummasta ennen tilitystä.",
+        "addonsTitle": "Valinnaiset lisäpalvelut",
+        "addonsItems": {
+          "item1": "Käteismaksu toimituksessa: 30 €/kk",
+          "item2": "Tekoälyavustaja: 10 €/kk"
+        },
+        "processingTitle": "Maksunkäsittely",
+        "processingContent": "Kaikki maksut käsitellään kolmansien osapuolten maksunvälittäjien (Stripe, PayPal) kautta. Lisämaksunvälittäjän maksuja voidaan soveltaa, ja ne ovat erillisiä palvelumaksuistamme.",
+        "settlementTitle": "Tilitys",
+        "settlementContent": "Tilausten tuotot (vähennettynä palvelumaksumme ja maksunvälittäjän maksut) tilitetään nimeämällesi pankkitilille viikoittain, yleensä 3-5 arkipäivän kuluessa.",
+        "taxesTitle": "Verot",
+        "taxesContent": "Kaikki hinnat ovat ilman ALV:tä. Suomen ALV (25,5 % vuonna 2026) lisätään palvelumaksuihin tarvittaessa. Olet vastuussa kaikista liiketoimintaasi liittyvistä veroista."
+      },
+      "cancellation": {
+        "title": "Peruutus ja irtisanominen",
+        "byYouTitle": "Sinun toimestasi",
+        "byYouIntro": "Voit peruuttaa tilisi milloin tahansa ottamalla meihin yhteyttä tai tiliasetustesi kautta. Peruutuksen yhteydessä:",
+        "byYouItems": {
+          "item1": "Sinulla on pääsy palveluun nykyisen laskutuskauden loppuun asti",
+          "item2": "Kaikki keskeneräiset tilaukset käsitellään ja tilitetään",
+          "item3": "Verkkosivustosi poistetaan käytöstä 30 päivän kuluessa",
+          "item4": "Voit pyytää tietojesi vientiä 90 päivän kuluessa"
+        },
+        "byUsTitle": "Meidän toimestamme",
+        "byUsIntro": "Pidätämme oikeuden keskeyttää tai lopettaa tilisi milloin tahansa seuraavista syistä:",
+        "byUsItems": {
+          "item1": "Näiden käyttöehtojen rikkominen",
+          "item2": "Sovellettavien lakien tai säännösten rikkominen",
+          "item3": "Petollinen tai väärinkäyttöön liittyvä toiminta",
+          "item4": "Pitkäaikainen käyttämättömyys (yli 12 kuukautta)"
+        },
+        "note": "Ilmoitamme irtisanomisesta kohtuullisessa ajassa etukäteen, paitsi petoksen tai laittoman toiminnan tapauksissa."
+      },
+      "refunds": {
+        "title": "Hyvitykset",
+        "intro": "Palvelumaksumme ei ole palautettavissa, kun tilaus on käsitelty. Voimme kuitenkin harkintamme mukaan myöntää hyvityksiä tai krediittejä seuraavissa tapauksissa:",
+        "items": {
+          "item1": "Yli 24 tuntia kestävät palvelukatkokset",
+          "item2": "Teknisen virheen aiheuttama kaksoisveloitus",
+          "item3": "Tilaukset, jotka jäivät toteutumatta alustaongelmien vuoksi"
+        },
+        "content": "Tilauksiin liittyvien asiakkaan hyvityspyyntöjen osalta katso ravintolan yksilölliset hyvitysehdot, jotka voit asettaa tilisi asetuksissa."
+      },
+      "intellectualProperty": {
+        "title": "Immateriaalioikeudet",
+        "ourPropertyTitle": "Meidän omaisuutemme",
+        "ourPropertyIntro": "Helmies Bites -alusta, mukaan lukien kaikki ohjelmistot, suunnittelut, tekstit, grafiikat, logot ja muu sisältö, on Helmies Bites Oy:n omaisuutta ja immateriaalioikeuslainsäädännön suojaama. Et saa:",
+        "ourPropertyItems": {
+          "item1": "Kopioida, muokata tai jaella alustaamme",
+          "item2": "Käyttää tavaramerkkejämme ilman lupaa",
+          "item3": "Takaisinmallintaa tai yrittää poimia lähdekoodia"
+        },
+        "yourContentTitle": "Sinun sisältösi",
+        "yourContentText": "Pidät omistajuuden kaikkeen alustalemme tarjoamaasi sisältöön (ruokalistan annokset, kuvat, kuvaukset). Käyttämällä palveluitamme myönnät meille lisenssin käyttää, näyttää ja käsitellä sisältöäsi ainoastaan palveluidemme tarjoamiseksi sinulle.",
+        "userGeneratedTitle": "Käyttäjien luoma sisältö",
+        "userGeneratedText": "Asiakkaiden arvosteluja, palautetta ja muuta käyttäjien luomaa sisältöä voidaan käyttää markkinointi- ja palvelun parantamistarkoituksiin tietosuojakäytäntömme mukaisesti."
+      },
+      "limitationOfLiability": {
+        "title": "Vastuunrajoitus",
+        "disclaimer": "LAIN SALLIMISSA ENIMMÄISRAJOISSA HELMIES BITES EI OLE VASTUUSSA:",
+        "items": {
+          "item1": "Epäsuorista, satunnaisista, erityisistä tai välillisistä vahingoista",
+          "item2": "Menetetyistä voitoista tai menetetyistä liiketoimintamahdollisuuksista",
+          "item3": "Tietojen menetyksestä tai vahingoittumisesta",
+          "item4": "Palvelukatkoista tai käyttökatkoksista",
+          "item5": "Kolmansien osapuolten (maksunvälittäjät, toimituspalvelut) toimista tai laiminlyönneistä"
+        },
+        "totalLiabilityTitle": "Kokonaisvastuu",
+        "totalLiabilityContent": "Kokonaisvastuumme sinulle kaikista vaatimuksista ei saa ylittää sinun meille maksamiesi palvelumaksujen summaa vaatimusta edeltävien 12 kuukauden ajalta. Tämä rajoitus koskee kaikkia kanneperusteita yhteensä.",
+        "noWarrantiesTitle": "Ei takuita",
+        "noWarrantiesContent": "Palvelumme tarjotaan \"sellaisenaan\" ilman minkäänlaisia takuita, olivatpa ne nimenomaisia tai oletettuja. Emme takaa keskeytymätöntä tai virheetöntä toimintaa."
+      },
+      "disputeResolution": {
+        "title": "Riitojen ratkaiseminen",
+        "governingLawTitle": "Sovellettava laki",
+        "governingLawContent": "Näitä käyttöehtoja säätelee Suomen laki. Näihin ehtoihin liittyvät riidat ratkaistaan Helsingin käräjäoikeudessa.",
+        "resolutionProcessTitle": "Ratkaisuprosessi",
+        "resolutionProcessContent": "Kannustamme ottamaan meihin yhteyttä suoraan osoitteessa <1>{{email}}</1> ongelmien ratkaisemiseksi epävirallisesti. Useimmat riidat voidaan ratkaista nopeasti suoralla viestinnällä.",
+        "euConsumerTitle": "EU:n kuluttajaoikeudet",
+        "euConsumerContent": "Euroopan unionissa sijaitsevilla kuluttajilla voi olla pääsy vaihtoehtoisiin riidanratkaisumekanismeihin EU:n verkkovälitteisen riidanratkaisufoorumin kautta."
+      },
+      "indemnification": {
+        "title": "Vahingonkorvaus",
+        "intro": "Sitoudut korvaamaan, puolustamaan ja pitämään vahingottomana Helmies Bitesin ja sen tytäryhtiöt, toimihenkilöt, johtajat, työntekijät ja edustajat kaikilta vaatimuksilta, vahingoilta, menetyksiltä, vastuuilta ja kustannuksilta, jotka johtuvat:",
+        "items": {
+          "item1": "Palveluidemme käytöstäsi",
+          "item2": "Näiden käyttöehtojen rikkomisestasi",
+          "item3": "Kolmansien osapuolten oikeuksien rikkomisestasi",
+          "item4": "Alustamme kautta tarjoamastasi tai julkaisemastasi sisällöstä"
+        }
+      },
+      "modifications": {
+        "title": "Ehtojen muutokset",
+        "intro": "Pidätämme oikeuden muuttaa näitä käyttöehtoja milloin tahansa. Ilmoitamme olennaisista muutoksista:",
+        "items": {
+          "item1": "Julkaisemalla uudet ehdot alustamme",
+          "item2": "Lähettämällä sähköpostin rekisteröityyn sähköpostiosoitteeseesi",
+          "item3": "Näyttämällä näkyvän ilmoituksen tilisi hallintapaneelissa"
+        },
+        "content": "Palveluidemme jatkuva käyttö muutosten jälkeen merkitsee uusien ehtojen hyväksymistä. Jos et hyväksy muutettuja ehtoja, sinun on lopetettava palveluidemme käyttö."
+      },
+      "generalProvisions": {
+        "title": "Yleiset määräykset",
+        "items": {
+          "item1Label": "Koko sopimus:",
+          "item1Text": "Nämä ehdot muodostavat koko sopimuksen sinun ja Helmies Bitesin välillä koskien palveluitamme.",
+          "item2Label": "Osittainen pätemättömyys:",
+          "item2Text": "Jos jokin määräys todetaan pätemättömäksi, muut määräykset pysyvät voimassa.",
+          "item3Label": "Luopuminen:",
+          "item3Text": "Oikeuden käyttämättä jättäminen ei merkitse kyseisestä oikeudesta luopumista.",
+          "item4Label": "Siirrettävyys:",
+          "item4Text": "Et voi siirtää näitä ehtoja ilman suostumustamme. Voimme siirtää oikeutemme ja velvollisuutemme rajoituksitta.",
+          "item5Label": "Ylivoimainen este:",
+          "item5Text": "Emme ole vastuussa viivästyksistä tai laiminlyönneistä, jotka johtuvat kohtuullisen hallintamme ulkopuolella olevista syistä."
+        }
+      },
+      "contact": {
+        "title": "Ota yhteyttä",
+        "intro": "Jos sinulla on kysymyksiä näistä käyttöehdoista, ota meihin yhteyttä:",
+        "contactLabel": "Oikeudellinen yhteyshenkilö",
+        "emailLabel": "Sähköposti:",
+        "addressLabel": "Osoite:",
+        "address": "Helsinki, Suomi",
+        "businessIdLabel": "Y-tunnus:",
+        "businessId": "(Y-tunnus) Saatavissa pyynnöstä"
+      }
+    },
+    "footerNote": "Nämä käyttöehdot on laadittu noudattamaan Suomen ja Euroopan unionin kuluttajansuojalakeja. Jos sinulla on kysymyksiä oikeuksistasi kuluttajana, ota meihin yhteyttä tai paikalliseen kuluttajansuojaviranomaiseen."
+  },
+  "gdpr": {
+    "title": "GDPR-vaatimustenmukaisuus",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Tämä GDPR-vaatimustenmukaisuusasiakirja selittää, miten Helmies Bites toteuttaa yleisen tietosuoja-asetuksen (GDPR) ja miten voit käyttää rekisteröidyn oikeuksiasi. Olemme sitoutuneet suojaamaan henkilötietojasi ja varmistamaan avoimuuden tietojenkäsittelykäytännöissämme.",
+    "tableOfContents": "Sisällysluettelo",
+    "printPage": "Tulosta tämä sivu",
+    "keyPrinciples": {
+      "title": "GDPR:n keskeiset periaatteet (5 artikla)",
+      "principle1": "Lainmukaisuus, kohtuullisuus, läpinäkyvyys",
+      "principle2": "Käyttötarkoitussidonnaisuus",
+      "principle3": "Tietojen minimointi",
+      "principle4": "Täsmällisyys",
+      "principle5": "Säilytyksen rajoittaminen",
+      "principle6": "Eheys ja luottamuksellisuus",
+      "accountability": "Olemme vastuullisia ja kykenemme osoittamaan näiden periaatteiden noudattamisen."
+    },
+    "sections": {
+      "dataController": {
+        "title": "Rekisterinpitäjän tiedot",
+        "intro": "Helmies Bites Oy on rekisterinpitäjä, joka vastaa henkilötietojesi käsittelystä. Yhteystietomme:",
+        "contactLabel": "Rekisterinpitäjä",
+        "companyLabel": "Yritys:",
+        "company": "Helmies Bites Oy",
+        "addressLabel": "Osoite:",
+        "address": "Helsinki, Suomi",
+        "emailLabel": "Sähköposti:",
+        "businessIdLabel": "Y-tunnus:",
+        "businessId": "(Y-tunnus) Saatavissa pyynnöstä"
+      },
+      "legalBasis": {
+        "title": "Käsittelyn oikeusperuste",
+        "intro": "Käsittelemme henkilötietojasi seuraavilla yleisen tietosuoja-asetuksen (GDPR) mukaisilla oikeusperusteilla:",
+        "items": {
+          "item1Label": "Sopimuksen täytäntöönpano (6 artikla, 1 kohta, b alakohta):",
+          "item1Text": "Käsittely, joka on tarpeen palveluidemme tarjoamiseksi tilauksesi mukaisesti",
+          "item2Label": "Oikeutetut edut (6 artikla, 1 kohta, f alakohta):",
+          "item2Text": "Käsittely turvallisuutta, petosten ehkäisyä ja palvelun parantamista varten",
+          "item3Label": "Suostumus (6 artikla, 1 kohta, a alakohta):",
+          "item3Text": "Käsittely markkinointiviestintää ja valinnaisia ominaisuuksia varten",
+          "item4Label": "Lakisääteinen velvoite (6 artikla, 1 kohta, c alakohta):",
+          "item4Text": "Verolakien ja muiden säännösten edellyttämä käsittely"
+        }
+      },
+      "dataCategories": {
+        "title": "Henkilötietojen kategoriat",
+        "intro": "Käsittelemme seuraavia henkilötietokategorioita:",
+        "accountDataTitle": "Tili- ja yhteystiedot",
+        "accountDataItems": {
+          "item1": "Nimi, sähköpostiosoite, puhelinnumero",
+          "item2": "Tilin tunnukset ja todennustiedot",
+          "item3": "Viestintäasetukset"
+        },
+        "businessDataTitle": "Liiketoimintatiedot",
+        "businessDataItems": {
+          "item1": "Ravintolan nimi ja osoite",
+          "item2": "Yrityksen rekisteröintitiedot",
+          "item3": "Ruokalistan annokset, hinnat ja kuvaukset",
+          "item4": "Aukioloajat ja sijaintitiedot"
+        },
+        "financialDataTitle": "Taloudelliset tiedot",
+        "financialDataItems": {
+          "item1": "Maksu- ja laskutustiedot",
+          "item2": "Pankkitilin tiedot tilityksiä varten",
+          "item3": "Tapahtumahistoria",
+          "item4": "Laskut ja kuitit"
+        },
+        "technicalDataTitle": "Tekniset tiedot",
+        "technicalDataItems": {
+          "item1": "IP-osoite ja laitetiedot",
+          "item2": "Käyttö- ja selaustiedot",
+          "item3": "Evästeet ja seurantatunnisteet",
+          "item4": "Lokitiedostot ja pääsytiedot"
+        }
+      },
+      "dataSubjectRights": {
+        "title": "Rekisteröidyn oikeudet",
+        "intro": "GDPR:n mukaisesti sinulla on seuraavat oikeudet henkilötietoihisi liittyen. Tarjoamme mekanismit näiden oikeuksien käyttämiseen.",
+        "howToExerciseTitle": "Miten käytät oikeuksiasi",
+        "howToExerciseContent": "Käyttääksesi mitä tahansa näistä oikeuksista, ota meihin yhteyttä osoitteessa <1>{{email}}</1>. Vastaamme pyyntöösi 30 päivän kuluessa maksutta."
+      },
+      "rightOfAccess": {
+        "title": "Pääsyoikeus (15 artikla)",
+        "content1": "Sinulla on oikeus saada meiltä vahvistus siitä, käsittelemmekö henkilötietojasi ja, jos käsittelemme, pääsy henkilötietoihisi ja lisätietoja.",
+        "content2": "Pyynnöstä toimitamme:",
+        "items": {
+          "item1": "Kopion henkilötiedoistasi",
+          "item2": "Käsittelyn tarkoitukset",
+          "item3": "Käsiteltävien henkilötietojen kategoriat",
+          "item4": "Vastaanottajat tai vastaanottajien kategoriat",
+          "item5": "Säilytysajan tai sen määrittämiskriteerit",
+          "item6": "Tiedot oikeuksistasi",
+          "item7": "Tietojen lähteen, jos niitä ei ole kerätty sinulta",
+          "item8": "Tiedot automatisoidusta päätöksenteosta"
+        }
+      },
+      "rightOfRectification": {
+        "title": "Oikaisuoikeus (16 artikla)",
+        "content1": "Sinulla on oikeus saada sinua koskevat virheelliset henkilötiedot oikaistuiksi ilman aiheetonta viivytystä. Ottaen huomioon käsittelyn tarkoitukset, sinulla on oikeus saada puutteelliset henkilötiedot täydennetyksi.",
+        "content2": "Voit päivittää useimmat henkilötietosi suoraan tilisi hallintapaneelin kautta. Muutoksista, joita ei voida tehdä hallintapaneelin kautta, ota meihin yhteyttä."
+      },
+      "rightOfErasure": {
+        "title": "Oikeus tulla unohdetuksi (17 artikla)",
+        "intro": "Sinulla on oikeus saada henkilötietosi poistetuksi ilman aiheetonta viivytystä, kun jokin seuraavista perusteista täyttyy:",
+        "items": {
+          "item1": "Henkilötietoja ei enää tarvita niiden tarkoituksiin",
+          "item2": "Peruutat suostumuksen, kun käsittely perustuu suostumukseen",
+          "item3": "Vastustat käsittelyä eikä käsittelylle ole oikeutettua perustetta",
+          "item4": "Henkilötietoja on käsitelty lainvastaisesti",
+          "item5": "Henkilötiedot on poistettava lakisääteisen velvoitteen noudattamiseksi"
+        },
+        "note": "Huomautus: Voimme säilyttää tiettyjä tietoja oikeudellisiin, kirjanpidollisiin tai viranomaistarkoituksiin poistopyynnöstäsi huolimatta."
+      },
+      "rightToRestrict": {
+        "title": "Oikeus käsittelyn rajoittamiseen (18 artikla)",
+        "intro": "Sinulla on oikeus saada käsittely rajoitetuksi, kun jokin seuraavista pätee:",
+        "items": {
+          "item1": "Kiistät henkilötietojen paikkansapitävyyden (ajaksi, jonka kuluessa paikkansapitävyys voidaan varmistaa)",
+          "item2": "Käsittely on lainvastaista ja vastustat poistamista",
+          "item3": "Emme enää tarvitse tietoja, mutta tarvitset niitä oikeudellisiin vaateisiin",
+          "item4": "Olet vastustanut käsittelyä (odottaen oikeutettujen perusteiden tarkistamista)"
+        }
+      },
+      "rightToDataPortability": {
+        "title": "Oikeus siirtää tiedot järjestelmästä toiseen (20 artikla)",
+        "content1": "Sinulla on oikeus vastaanottaa sinua koskevat henkilötiedot, jotka olet toimittanut meille, jäsennellyssä, yleisesti käytetyssä ja koneellisesti luettavassa muodossa. Sinulla on myös oikeus siirtää nämä tiedot toiselle rekisterinpitäjälle esteettä.",
+        "content2": "Voit viedä tietosi suoraan tilisi hallintapaneelista. Vienti sisältää:",
+        "items": {
+          "item1": "Tilitiedot ja profiilin",
+          "item2": "Ravintola- ja ruokalistatiedot",
+          "item3": "Tilaushistorian",
+          "item4": "Taloudelliset tiedot"
+        }
+      },
+      "rightToObject": {
+        "title": "Vastustamisoikeus (21 artikla)",
+        "intro": "Sinulla on oikeus vastustaa henkilötietojesi käsittelyä erityiseen tilanteeseesi liittyvillä perusteilla, kun käsittely perustuu:",
+        "items": {
+          "item1": "Oikeutettuihin etuihin (6 artikla, 1 kohta, f alakohta)",
+          "item2": "Suoramarkkinointiin (mukaan lukien markkinointia varten tapahtuva profilointi)"
+        },
+        "content": "Emme enää käsittele henkilötietojasi suoramarkkinointitarkoituksiin, jos vastustat tällaista käsittelyä. Voit kieltäytyä markkinointiviestinnästä tilisi asetusten kautta tai klikkaamalla sähköposteissamme olevaa peruutuslinkkiä."
+      },
+      "automatedDecisionMaking": {
+        "title": "Automaattinen päätöksenteko ja profilointi (22 artikla)",
+        "content1": "Sinulla on oikeus olla joutumatta sellaisen päätöksen kohteeksi, joka perustuu pelkästään automaattiseen käsittelyyn, mukaan lukien profilointi, joka tuottaa sinulle oikeusvaikutuksia tai vaikuttaa sinuun vastaavalla merkittävällä tavalla.",
+        "content2": "Alustamme käyttää automaattisia ominaisuuksia:",
+        "items": {
+          "item1": "Petosten havaitsemiseen ja ehkäisemiseen",
+          "item2": "Ruokalistan optimointiehdotuksiin",
+          "item3": "Personoituihin suosituksiin"
+        },
+        "note": "Nämä ominaisuudet eivät tuota oikeusvaikutuksia ja ne voidaan poistaa käytöstä tilisi asetuksista."
+      },
+      "crossBorderTransfers": {
+        "title": "Rajat ylittävät tietosiirrot (44-50 artiklat)",
+        "intro": "Henkilötietojasi voidaan siirtää Euroopan talousalueen (ETA) ulkopuolisiin maihin. Varmistamme, että asianmukaiset suojatoimet ovat käytössä tällaisissa siirroissa.",
+        "mechanismsTitle": "Siirtomekanismit",
+        "items": {
+          "item1Label": "Vakiosopimuslausekkeet (SCCs):",
+          "item1Text": "Käytämme Euroopan komission hyväksymiä vakiosopimuslausekkeita siirtoihin maihin, joilla ei ole riittävyyspäätöstä",
+          "item2Label": "Riittävyyspäätökset:",
+          "item2Text": "Luotamme komission riittävyyspäätöksiin maissa, jotka on tunnustettu tarjoavan riittävän tietosuojan",
+          "item3Label": "Privacy Shield (tarvittaessa):",
+          "item3Text": "Yhdysvaltoihin suuntautuvissa siirroissa noudatamme sovellettavia kehyksiä"
+        },
+        "note": "Voit pyytää kopiota tietosiirtoihisi käytetyistä asianmukaisista suojatoimista ottamalla meihin yhteyttä osoitteessa {{email}}."
+      },
+      "dataBreachNotification": {
+        "title": "Tietoturvaloukkauksesta ilmoittaminen (33-34 artiklat)",
+        "intro": "Henkilötietojen tietoturvaloukkauksen sattuessa:",
+        "items": {
+          "item1Label": "Ilmoitus valvontaviranomaiselle:",
+          "item1Text": "Ilman aiheetonta viivytystä ja mahdollisuuksien mukaan viimeistään 72 tunnin kuluttua rikkomuksen tiedoksisaannista (ellei se todennäköisesti aiheuta riskiä oikeuksille ja vapauksille)",
+          "item2Label": "Ilmoitus sinulle:",
+          "item2Text": "Ilman aiheetonta viivytystä, jos rikkomus todennäköisesti aiheuttaa korkean riskin oikeuksillesi ja vapauksillesi"
+        },
+        "notificationContent": "Loukkauilmoituksemme sisältää:",
+        "notificationItems": {
+          "item1": "Kuvaus rikkomuksesta ja kyseisten tietojen kategorioista",
+          "item2": "Tietosuojavastaavamme nimi ja yhteystiedot",
+          "item3": "Rikkomuksen todennäköiset seuraukset",
+          "item4": "Toimenpiteet, jotka on toteutettu tai ehdotettu rikkomuksen korjaamiseksi"
+        }
+      },
+      "dataRetention": {
+        "title": "Tietojen säilyttäminen (5 artikla, 1 kohta, e alakohta)",
+        "intro": "Noudatamme GDPR:n säilytyksen rajoittamisen periaatetta. Henkilötietoja säilytetään vain niin kauan kuin on tarpeellista niiden käsittelyn tarkoituksia varten.",
+        "retentionPeriodsTitle": "Säilytysajat",
+        "items": {
+          "item1Label": "Tilitiedot:",
+          "item1Text": "3 vuotta tilin sulkemisen jälkeen",
+          "item2Label": "Taloudelliset tiedot:",
+          "item2Text": "7 vuotta (verovaatimus)",
+          "item3Label": "Tilaustiedot:",
+          "item3Text": "3 vuotta tilauksen valmistumisen jälkeen",
+          "item4Label": "Markkinointitiedot:",
+          "item4Text": "Suostumuksen peruuttamiseen tai 2 vuoden käyttämättömyyteen asti",
+          "item5Label": "Palvelinlokit:",
+          "item5Text": "90 päivää"
+        },
+        "note": "Säilytysajan umpeuduttua tiedot poistetaan turvallisesti tai anonymisoidaan."
+      },
+      "securityMeasures": {
+        "title": "Tietoturvatoimenpiteet (32 artikla)",
+        "intro": "Toteutamme asianmukaiset tekniset ja organisatoriset toimenpiteet varmistaaksemme riskiin nähden riittävän turvallisuustason:",
+        "items": {
+          "item1Label": "Pseudonymisointi ja salaus:",
+          "item1Text": "Henkilötietojen osalta",
+          "item2Label": "Luottamuksellisuus:",
+          "item2Text": "Käsittelyjärjestelmien jatkuvan luottamuksellisuuden, eheyden, saatavuuden ja vikasietoisuuden varmistaminen",
+          "item3Label": "Saatavuus:",
+          "item3Text": "Kyky palauttaa pääsy ja saatavuus nopeasti poikkeaman sattuessa",
+          "item4Label": "Säännöllinen testaus:",
+          "item4Text": "Turvallisuustoimenpiteiden tehokkuuden säännöllinen testaus ja arviointi"
+        },
+        "content": "Suoritamme säännöllisiä tietoturva-auditointeja ja penetraatiotestejä haavoittuvuuksien tunnistamiseksi ja korjaamiseksi."
+      },
+      "supervisoryAuthority": {
+        "title": "Oikeus tehdä valitus (77 artikla)",
+        "intro": "Sinulla on oikeus tehdä valitus valvontaviranomaiselle, erityisesti siinä jäsenvaltiossa, jossa asuinpaikkasi, työpaikkasi tai väitetty rikkomus on.",
+        "authorityLabel": "Suomen valvontaviranomainen",
+        "authorityName": "Tietosuojavaltuutetun toimisto",
+        "authorityAddress": "Ratapihantie 9, 00100 Helsinki, Suomi",
+        "authorityEmail": "tietosuoja@om.fi",
+        "authorityWebsite": "tietosuoja.fi",
+        "authorityWebsiteUrl": "https://tietosuoja.fi",
+        "note": "Tämä oikeus ei rajoita muita hallinnollisia tai oikeudellisia oikeussuojakeinoja."
+      },
+      "contact": {
+        "title": "GDPR-yhteyshenkilö",
+        "intro": "Kaikissa GDPR:ään liittyvissä kysymyksissä, mukaan lukien pyynnöt oikeuksiesi käyttämiseksi, ota meihin yhteyttä:",
+        "contactLabel": "Tietosuojayhteyshenkilö",
+        "emailLabel": "Sähköposti:",
+        "addressLabel": "Osoite:",
+        "address": "Helsinki, Suomi",
+        "responseTime": "Vastausaika: 30 päivän kuluessa pyynnön vastaanottamisesta",
+        "representativeNote": "Voit myös nimetä valtuutetun edustajan käyttämään oikeuksiasi puolestasi Euroopan unionissa."
+      }
+    },
+    "footerNote": "Tämä GDPR-vaatimustenmukaisuusasiakirja on tarkoitettu tiedoksi eikä ole oikeudellinen neuvo. Säännökset voivat muuttua, ja suosittelemme konsultoimaan lakiasiantuntijoita erityisten vaatimustenmukaisuustarpeiden osalta. Tarkistamme ja päivitämme käytäntöjämme säännöllisesti varmistaaksemme jatkuvan GDPR-vaatimustenmukaisuuden."
+  },
+  "cookies": {
+    "title": "Evästekäytäntö",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
+    "email": "privacy@helmiesbites.fi",
+    "introduction": "Tämä evästekäytäntö selittää, miten Helmies Bites käyttää evästeitä ja vastaavia teknologioita alustamme. Käyttämällä palveluitamme hyväksyt evästeiden käytön tässä käytännössä kuvatulla tavalla.",
+    "tableOfContents": "Sisällysluettelo",
+    "printPage": "Tulosta tämä sivu",
+    "nav": {
+      "whatAreCookies": "Mitä evästeet ovat?",
+      "howWeUseCookies": "Miten käytämme evästeitä",
+      "thirdPartyCookies": "Kolmansien osapuolten evästeet",
+      "managingCookies": "Evästeiden hallinta",
+      "updatesToThisPolicy": "Käytännön päivitykset"
+    },
+    "whatAreCookies": {
+      "title": "Mitä evästeet ovat?",
+      "content": "Evästeet ovat pieniä tekstitiedostoja, jotka tallennetaan laitteellesi (tietokone, tabletti tai mobiililaite), kun vierailet verkkosivustolla. Niitä käytetään laajasti verkkosivustojen tehokkaamman toiminnan varmistamiseksi ja tietojen tarjoamiseksi verkkosivuston ylläpitäjille.",
+      "typesTitle": "Evästetyypit",
+      "sessionLabel": "Istuntoevästeet:",
+      "sessionText": "Väliaikaiset evästeet, jotka vanhenevat selaimen sulkemisen yhteydessä",
+      "persistentLabel": "Pysyvät evästeet:",
+      "persistentText": "Pysyvät laitteella määrätyn ajan tai kunnes ne poistetaan",
+      "firstPartyLabel": "Ensimmäisen osapuolen evästeet:",
+      "firstPartyText": "Vierailemasi verkkosivuston asettamat",
+      "thirdPartyLabel": "Kolmannen osapuolen evästeet:",
+      "thirdPartyText": "Verkkosivustolla käytettyjen ulkoisten palveluiden asettamat"
+    },
+    "howWeUseCookies": {
+      "title": "Miten käytämme evästeitä",
+      "intro": "Käytämme evästeitä seuraaviin tarkoituksiin:",
+      "items": {
+        "item1Label": "Todennus:",
+        "item1Text": "Pitääksemme sinut kirjautuneena istunnon aikana",
+        "item2Label": "Turvallisuus:",
+        "item2Text": "Suojautuaksemme petoksilta ja varmistaaksemme turvallisen pääsyn",
+        "item3Label": "Asetukset:",
+        "item3Text": "Muistaaksemme asetuksesi ja valintasi",
+        "item4Label": "Analytiikka:",
+        "item4Text": "Ymmärtääksemme miten alustaamme käytetään",
+        "item5Label": "Markkinointi:",
+        "item5Text": "Näyttääksemme oleellisia mainoksia",
+        "item6Label": "Suorituskyky:",
+        "item6Text": "Optimoidaksemme alustan nopeuden ja luotettavuuden"
+      }
+    },
+    "cookieTypes": {
+      "essential": {
+        "name": "Välttämättömät evästeet",
+        "description": "Nämä evästeet ovat ehdottomasti välttämättömiä alustan toiminnalle. Ne mahdollistavat ydintoiminnot kuten käyttäjän todennuksen, turvallisuuden ja pääsyn suojatuille alueille. Alusta ei voi toimia kunnolla ilman näitä evästeitä.",
+        "purpose": "Alustan olennaisen toiminnallisuuden mahdollistamiseksi",
+        "provider": "Helmies Bites",
+        "lifetime": "Istunnosta 1 vuoteen",
+        "examples": {
+          "sessionId": {
+            "name": "session_id",
+            "purpose": "Ylläpitää käyttäjäistuntoa navigoinnin aikana"
+          },
+          "csrfToken": {
+            "name": "csrf_token",
+            "purpose": "Estää Cross-Site Request Forgery -hyökkäykset"
+          },
+          "authToken": {
+            "name": "auth_token",
+            "purpose": "Todentaa käyttäjän kirjautumisen jälkeen"
+          },
+          "cookieConsent": {
+            "name": "cookie_consent",
+            "purpose": "Muistaa evästeasetuksesi"
+          }
+        }
+      },
+      "analytics": {
+        "name": "Analytiikkaevästeet",
+        "description": "Nämä evästeet auttavat meitä ymmärtämään, miten kävijät käyttävät alustaamme tarjoamalla tietoja vierailluista sivuista, vietetystä ajasta ja kohdatuista virheistä. Tämä auttaa meitä parantamaan alustan suorituskykyä ja käyttökokemusta.",
+        "purpose": "Alustan käytön analysointiin ja suorituskyvyn parantamiseen",
+        "provider": "Helmies Bites, Google Analytics",
+        "lifetime": "Istunnosta 2 vuoteen",
+        "examples": {
+          "ga": {
+            "name": "_ga",
+            "purpose": "Google Analytics - Tunnistaa yksilöllisen käyttäjän"
+          },
+          "gid": {
+            "name": "_gid",
+            "purpose": "Google Analytics - Erottelee käyttäjät"
+          },
+          "gat": {
+            "name": "_gat",
+            "purpose": "Google Analytics - Rajoittaa pyyntötiheyttä"
+          },
+          "pageViews": {
+            "name": "page_views",
+            "purpose": "Laskee istunnon aikana vierailtujen sivujen määrän"
+          }
+        }
+      },
+      "marketing": {
+        "name": "Markkinointievästeet",
+        "description": "Näitä evästeitä käytetään sinulle ja kiinnostuksen kohteillesi oleellisten mainosten näyttämiseen. Niitä käytetään myös rajoittamaan mainoksen näyttökertoja ja mittaamaan mainoskampanjoiden tehokkuutta.",
+        "purpose": "Oleellisten mainosten näyttämiseen ja kampanjoiden suorituskyvyn seurantaan",
+        "provider": "Helmies Bites, kolmansien osapuolten mainosalustat",
+        "lifetime": "Istunnosta 1 vuoteen",
+        "examples": {
+          "adPersonalization": {
+            "name": "ad_personalization",
+            "purpose": "Tallentaa mainosten personointiasetukset"
+          },
+          "adUserData": {
+            "name": "ad_user_data",
+            "purpose": "Hallitsee tietojen jakamista mainosten personointia varten"
+          },
+          "campaignId": {
+            "name": "campaign_id",
+            "purpose": "Seuraa mikä markkinointikampanja toi sinut"
+          },
+          "conversionId": {
+            "name": "conversion_id",
+            "purpose": "Seuraa konversioita mainonnasta"
+          }
+        }
+      },
+      "functional": {
+        "name": "Toiminnalliset evästeet",
+        "description": "Nämä evästeet mahdollistavat parannetun toiminnallisuuden ja personoinnin, kuten videoiden ja live-chattien. Ne voidaan asettaa meidän tai kolmansien osapuolten palveluntarjoajien toimesta, joiden palvelut olemme lisänneet sivuillemme.",
+        "purpose": "Parannettujen ominaisuuksien ja personoinnin mahdollistamiseksi",
+        "provider": "Helmies Bites, kolmansien osapuolten palveluntarjoajat",
+        "lifetime": "Istunnosta 1 vuoteen",
+        "examples": {
+          "languagePreference": {
+            "name": "language_preference",
+            "purpose": "Muistaa valitun kielen"
+          },
+          "themePreference": {
+            "name": "theme_preference",
+            "purpose": "Muistaa visuaalisen teeman valinnan"
+          },
+          "restaurantLocation": {
+            "name": "restaurant_location",
+            "purpose": "Muistaa viimeksi valitun ravintolan"
+          },
+          "wizardProgress": {
+            "name": "wizard_progress",
+            "purpose": "Tallentaa edistymisen ohjattu asennuksessa"
+          }
+        }
+      }
+    },
+    "cookieTableLabels": {
+      "purpose": "Tarkoitus",
+      "provider": "Tarjoaja",
+      "lifetime": "Elinikä",
+      "canBeDisabled": "Voidaan poistaa käytöstä?",
+      "noRequired": "Ei, vaadittu",
+      "yes": "Kyllä",
+      "examples": "Esimerkit",
+      "cookieName": "Evästeen nimi"
+    },
+    "thirdPartyCookies": {
+      "title": "Kolmansien osapuolten evästeet",
+      "intro": "Sallimme tiettyjen kolmansien osapuolten asettaa evästeitä laitteellesi alla kuvattujen palveluiden osalta:",
+      "googleAnalytics": {
+        "title": "Google Analytics",
+        "description": "Google Analytics kerää nimettömiä käyttötietoja auttaakseen meitä ymmärtämään, miten kävijät käyttävät alustaamme.",
+        "privacyPolicyLabel": "Tietosuojakäytäntö:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "googleAds": {
+        "title": "Google Ads",
+        "description": "Google Ads käyttää evästeitä oleellisten mainosten näyttämiseen ja mainoskampanjoiden suorituskyvyn mittaamiseen.",
+        "privacyPolicyLabel": "Tietosuojakäytäntö:",
+        "privacyPolicyLink": "policies.google.com/privacy"
+      },
+      "paymentProcessors": {
+        "title": "Maksunvälittäjät",
+        "description": "Stripe ja PayPal voivat käyttää evästeitä maksujen turvalliseen käsittelyyn.",
+        "stripeLabel": "Stripe:",
+        "stripeLink": "stripe.com/privacy",
+        "paypalLabel": "PayPal:",
+        "paypalLink": "paypal.com/privacy"
+      }
+    },
+    "managingCookies": {
+      "title": "Evästeiden hallinta",
+      "intro": "Sinulla on oikeus päättää, hyväksytkö vai hylkäätkö evästeet. Voit asettaa tai muuttaa selaimesi asetuksia hyväksyäksesi tai hylätäksesi evästeet. Jos päätät hylätä evästeet, voit silti käyttää verkkosivustoamme, joskin joidenkin toimintojen ja alueiden käyttö saattaa olla rajoitettua.",
+      "choicesTitle": "Evästevaihtoehtosi",
+      "acceptAll": "Hyväksy kaikki evästeet",
+      "rejectNonEssential": "Hylkää ei-välttämättömät",
+      "browserSettingsTitle": "Selaimen asetukset",
+      "browserSettingsIntro": "Useimmat selaimet mahdollistavat evästeiden hallinnan selaimen asetusten kautta. Lisätietoja evästeiden hallinnasta ja poistamisesta saat selaimesi ohjesivuilta:",
+      "browsers": {
+        "chrome": "Chrome (Google)",
+        "firefox": "Firefox (Mozilla)",
+        "edge": "Edge (Microsoft)",
+        "safari": "Safari (Apple)"
+      }
+    },
+    "updates": {
+      "title": "Käytännön päivitykset",
+      "content1": "Voimme päivittää tätä evästekäytäntöä ajoittain muutosten vuoksi käytännöissämme, teknologiassa, lakivaatimuksissa tai muissa tekijöissä. Muutokset julkaistaan tällä sivulla päivitetyllä tarkistuspäivämäärällä.",
+      "content2": "Suosittelemme tarkistamaan tämän käytännön säännöllisesti pysyäksesi ajan tasalla evästeiden käytöstämme ja valinnoistasi niiden suhteen."
+    },
+    "contact": {
+      "title": "Ota yhteyttä",
+      "intro": "Jos sinulla on kysymyksiä evästeiden käytöstämme, ota meihin yhteyttä:",
+      "contactLabel": "Tietosuojayhteyshenkilö",
+      "emailLabel": "Sähköposti:"
+    },
+    "footerNote": "Tämä evästekäytäntö on laadittu noudattamaan GDPR:n sähköisen viestinnän direktiiviä ja muita sovellettavia evästelainsäädäntöjä. Lisätietoja henkilötietojesi käsittelystä saat <1>tietosuojakäytännöstämme</1>."
+  }
+}
