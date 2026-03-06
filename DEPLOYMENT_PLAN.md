@@ -138,11 +138,11 @@ HOSTINGER_API_BASE=https://api.hostinger.com/v1
 # ============================================================
 # EMAIL (SMTP)
 # ============================================================
-SMTP_HOST=smtp.gmail.com
+SMTP_HOST=smtp.hostinger.com
 SMTP_PORT=587
 SMTP_USER=noreply@helmiesbites.com
 SMTP_PASS=your-app-password
-ADMIN_EMAIL=admin@helmiesbites.com
+ADMIN_EMAIL=admin@helmies.fi
 CUSTOMER_SUPPORT_EMAIL=support@helmiesbites.com
 
 # ============================================================
@@ -361,7 +361,7 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxx
 # ============================================================
 # EMAIL (for admin server)
 # ============================================================
-SMTP_HOST=smtp.gmail.com
+SMTP_HOST=smtp.hostinger.com
 SMTP_PORT=587
 SMTP_USER=admin@helmiesbites.com
 SMTP_PASS=your-app-password
@@ -369,7 +369,7 @@ SMTP_PASS=your-app-password
 # ============================================================
 # ADMIN CREDENTIALS (Initial setup)
 # ============================================================
-ADMIN_EMAIL=admin@helmiesbites.com
+ADMIN_EMAIL=admin@helmies.fi
 ADMIN_PASSWORD=initial-secure-password
 
 # ============================================================
