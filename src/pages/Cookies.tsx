@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const LAST_UPDATED = 'February 26, 2026';
-const PRIVACY_EMAIL = 'privacy@helmiesbites.fi';
+const PRIVACY_EMAIL = 'privacy@helmiesbites.com';
 
 interface CookieType {
   id: string;

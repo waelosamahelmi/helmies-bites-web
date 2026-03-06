@@ -42,7 +42,7 @@
   },
   "help": {
     "text": "Tarvitsetko apua? Ota yhteyttä tukitiimiimme osoitteessa",
-    "email": "support@helmiesbites.fi"
+    "email": "support@helmiesbites.com"
   },
   "restaurantInfo": {
     "name": {
@@ -191,7 +191,7 @@
     "options": {
       "subdomain": {
         "title": "Ilmainen aliverkkotunnus",
-        "description": "ravintola.helmiesbites.fi",
+        "description": "ravintola.helmiesbites.com",
         "fullDescription": "Saat ilmaisen aliverkkotunnuksen alustaltamme",
         "badge": "ILMAINEN"
       },
@@ -203,7 +203,7 @@
       },
       "path": {
         "title": "Ilmainen polku",
-        "description": "helmiesbites.fi/ravintola",
+        "description": "helmiesbites.com/ravintola",
         "fullDescription": "Saat ilmaisen polun alustaltamme",
         "badge": "ILMAINEN"
       }
@@ -212,7 +212,7 @@
       "label": "Aliverkkotunnuksesi",
       "hint": "Valitse ainutlaatuinen nimi ravintolallesi",
       "placeholder": "ravintolan-nimi",
-      "suffix": ".helmiesbites.fi",
+      "suffix": ".helmiesbites.com",
       "liveAt": "Verkkosivustosi on käytettävissä osoitteessa"
     },
     "customDomain": {
@@ -226,7 +226,7 @@
       "label": "Polkusi",
       "hint": "Valitse ainutlaatuinen polku ravintolallesi",
       "placeholder": "ravintolan-nimi",
-      "prefix": "helmiesbites.fi/",
+      "prefix": "helmiesbites.com/",
       "liveAt": "Verkkosivustosi on käytettävissä osoitteessa"
     },
     "infoCards": {

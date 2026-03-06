@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "Kendi alan adımı kullanabilir miyim?",
-          "answer": "Evet! Kendi özel alan adınızı (örneğin www.restoraniniz.fi) Helmies Bites web sitenize bağlayabilirsiniz. DNS ayarlarınızı güncellemeniz için talimatlar sağlıyoruz veya yourrestaurant.helmiesbites.fi gibi ücretsiz bir alt alan adı kullanabilirsiniz."
+          "answer": "Evet! Kendi özel alan adınızı (örneğin www.restoraniniz.fi) Helmies Bites web sitenize bağlayabilirsiniz. DNS ayarlarınızı güncellemeniz için talimatlar sağlıyoruz veya yourrestaurant.helmiesbites.com gibi ücretsiz bir alt alan adı kullanabilirsiniz."
         },
         "q5": {
           "question": "Ücretsiz deneme var mı?",

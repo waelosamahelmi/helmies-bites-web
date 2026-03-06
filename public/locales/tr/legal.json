@@ -2,7 +2,7 @@
   "privacy": {
     "title": "Gizlilik Politikası",
     "lastUpdated": "Son güncelleme: {{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "Helmies Bites olarak gizliliğinizi ciddiye alıyoruz. Bu Gizlilik Politikası, restoran platformu hizmetlerimizi kullanırken bilgilerinizi nasıl topladığımızı, kullandığımızı, ifşa ettiğimizi ve koruduğumuzu açıklar. Lütfen bu politikayı dikkatle okuyun.",
     "tableOfContents": "İçindekiler",
     "printPage": "Bu sayfayı yazdır",
@@ -135,7 +135,7 @@
   "terms": {
     "title": "Hizmet Şartları",
     "lastUpdated": "Son güncelleme: {{date}}",
-    "email": "legal@helmiesbites.fi",
+    "email": "legal@helmiesbites.com",
     "introduction": "Helmies Bites'a hoş geldiniz. Bu Hizmet Şartları, restoran platformumuzu ve online sipariş hizmetlerimizi kullanımınızı düzenler. Hizmetlerimizi kullanarak bu şartları kabul etmiş olursunuz. Lütfen dikkatle okuyun.",
     "tableOfContents": "İçindekiler",
     "printPage": "Bu sayfayı yazdır",
@@ -307,7 +307,7 @@
   "gdpr": {
     "title": "GDPR Uyumluluğu",
     "lastUpdated": "Son güncelleme: {{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "Bu GDPR Uyumluluk belgesi, Helmies Bites'ın Genel Veri Koruma Yönetmeliğini (GDPR) nasıl uyguladığını ve veri sahibi haklarınızı nasıl kullanabileceğinizi açıklar. Kişisel verilerinizi korumaya ve veri işleme uygulamalarımızda şeffaflığı sağlamaya kararlıyız.",
     "tableOfContents": "İçindekiler",
     "printPage": "Bu sayfayı yazdır",
@@ -549,7 +549,7 @@
   "cookies": {
     "title": "Çerez Politikası",
     "lastUpdated": "Son güncelleme: {{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "Bu Çerez Politikası, Helmies Bites'ın platformumuzda çerezleri ve benzer teknolojileri nasıl kullandığını açıklar. Hizmetlerimizi kullanarak, bu politikada açıklandığı şekilde çerezlerin kullanımına onay vermiş olursunuz.",
     "tableOfContents": "İçindekiler",
     "printPage": "Bu sayfayı yazdır",

@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "Kan jag använda mitt eget domännamn?",
-          "answer": "Ja! Du kan ansluta din egen anpassade domän (som www.dinrestaurang.fi) till din Helmies Bites-webbplats. Vi ger instruktioner för att uppdatera dina DNS-inställningar, eller så kan du använda en gratis subdomän som dinrestaurang.helmiesbites.fi."
+          "answer": "Ja! Du kan ansluta din egen anpassade domän (som www.dinrestaurang.fi) till din Helmies Bites-webbplats. Vi ger instruktioner för att uppdatera dina DNS-inställningar, eller så kan du använda en gratis subdomän som dinrestaurang.helmiesbites.com."
         },
         "q5": {
           "question": "Finns det en gratis provperiod?",

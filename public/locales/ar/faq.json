@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "هل يمكنني استخدام اسم نطاق خاص بي؟",
-          "answer": "نعم! يمكنك ربط نطاقك المخصص (مثل www.yourrestaurant.fi) بموقعك على Helmies Bites. نوفر تعليمات لتحديث إعدادات DNS الخاصة بك، أو يمكنك استخدام نطاق فرعي مجاني مثل yourrestaurant.helmiesbites.fi."
+          "answer": "نعم! يمكنك ربط نطاقك المخصص (مثل www.yourrestaurant.fi) بموقعك على Helmies Bites. نوفر تعليمات لتحديث إعدادات DNS الخاصة بك، أو يمكنك استخدام نطاق فرعي مجاني مثل yourrestaurant.helmiesbites.com."
         },
         "q5": {
           "question": "هل هناك فترة تجريبية مجانية؟",

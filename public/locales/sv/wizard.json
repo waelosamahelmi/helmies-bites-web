@@ -42,7 +42,7 @@
   },
   "help": {
     "text": "Behöver du hjälp? Kontakta vårt supportteam på",
-    "email": "support@helmiesbites.fi"
+    "email": "support@helmiesbites.com"
   },
   "restaurantInfo": {
     "name": {
@@ -191,7 +191,7 @@
     "options": {
       "subdomain": {
         "title": "Gratis subdomän",
-        "description": "restaurang.helmiesbites.fi",
+        "description": "restaurang.helmiesbites.com",
         "fullDescription": "Få en gratis subdomän på vår plattform",
         "badge": "GRATIS"
       },
@@ -203,7 +203,7 @@
       },
       "path": {
         "title": "Gratis sökväg",
-        "description": "helmiesbites.fi/restaurang",
+        "description": "helmiesbites.com/restaurang",
         "fullDescription": "Få en gratis sökväg på vår plattform",
         "badge": "GRATIS"
       }
@@ -212,7 +212,7 @@
       "label": "Din subdomän",
       "hint": "Välj ett unikt namn för din restaurang",
       "placeholder": "restaurang-namn",
-      "suffix": ".helmiesbites.fi",
+      "suffix": ".helmiesbites.com",
       "liveAt": "Din webbplats kommer att vara live på"
     },
     "customDomain": {
@@ -226,7 +226,7 @@
       "label": "Din sökväg",
       "hint": "Välj en unik sökväg för din restaurang",
       "placeholder": "restaurang-namn",
-      "prefix": "helmiesbites.fi/",
+      "prefix": "helmiesbites.com/",
       "liveAt": "Din webbplats kommer att vara live på"
     },
     "infoCards": {

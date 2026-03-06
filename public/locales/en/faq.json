@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "Can I use my own domain name?",
-          "answer": "Yes! You can connect your own custom domain (like www.yourrestaurant.fi) to your Helmies Bites website. We provide instructions for updating your DNS settings, or you can use a free subdomain like yourrestaurant.helmiesbites.fi."
+          "answer": "Yes! You can connect your own custom domain (like www.yourrestaurant.fi) to your Helmies Bites website. We provide instructions for updating your DNS settings, or you can use a free subdomain like yourrestaurant.helmiesbites.com."
         },
         "q5": {
           "question": "Is there a free trial?",

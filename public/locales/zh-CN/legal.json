@@ -2,7 +2,7 @@
   "privacy": {
     "title": "隐私政策",
     "lastUpdated": "最后更新：{{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "在 Helmies Bites，我们非常重视您的隐私。本隐私政策说明了当您使用我们的餐厅平台服务时，我们如何收集、使用、披露和保护您的信息。请仔细阅读本政策。",
     "tableOfContents": "目录",
     "printPage": "打印此页面",
@@ -135,7 +135,7 @@
   "terms": {
     "title": "服务条款",
     "lastUpdated": "最后更新：{{date}}",
-    "email": "legal@helmiesbites.fi",
+    "email": "legal@helmiesbites.com",
     "introduction": "欢迎使用 Helmies Bites。本服务条款管辖您对我们餐厅平台和在线订餐服务的使用。使用我们的服务即表示您同意这些条款。请仔细阅读。",
     "tableOfContents": "目录",
     "printPage": "打印此页面",
@@ -307,7 +307,7 @@
   "gdpr": {
     "title": "GDPR 合规",
     "lastUpdated": "最后更新：{{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "本 GDPR 合规文件说明了 Helmies Bites 如何实施《通用数据保护条例》(GDPR) 以及您如何行使数据主体权利。我们致力于保护您的个人数据，并确保数据处理实践的透明度。",
     "tableOfContents": "目录",
     "printPage": "打印此页面",
@@ -549,7 +549,7 @@
   "cookies": {
     "title": "Cookie 政策",
     "lastUpdated": "最后更新：{{date}}",
-    "email": "privacy@helmiesbites.fi",
+    "email": "privacy@helmiesbites.com",
     "introduction": "本 Cookie 政策说明了 Helmies Bites 如何在我们的平台上使用 Cookie 和类似技术。使用我们的服务即表示您同意按本政策所述使用 Cookie。",
     "tableOfContents": "目录",
     "printPage": "打印此页面",

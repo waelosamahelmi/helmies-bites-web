@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "我可以使用自己的域名吗？",
-          "answer": "可以！您可以将自己的自定义域名（如 www.yourrestaurant.fi）连接到您的 Helmies Bites 网站。我们提供更新 DNS 设置的说明，您也可以使用免费子域名，如 yourrestaurant.helmiesbites.fi。"
+          "answer": "可以！您可以将自己的自定义域名（如 www.yourrestaurant.fi）连接到您的 Helmies Bites 网站。我们提供更新 DNS 设置的说明，您也可以使用免费子域名，如 yourrestaurant.helmiesbites.com。"
         },
         "q5": {
           "question": "有免费试用吗？",

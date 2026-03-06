@@ -337,7 +337,7 @@ export function StartWizard() {
         <div className="text-center mt-8">
           <p className="text-sm text-white/50">
             {t('help.text')}{' '}
-            <a href="mailto:support@helmiesbites.fi" className="text-[#FF7A00] font-semibold hover:underline">
+            <a href="mailto:support@helmiesbites.com" className="text-[#FF7A00] font-semibold hover:underline">
               {t('help.email')}
             </a>
           </p>

@@ -42,7 +42,7 @@
   },
   "help": {
     "text": "Yardım mı gerekiyor? Destek ekibimizle iletişime geçin:",
-    "email": "support@helmiesbites.fi"
+    "email": "support@helmiesbites.com"
   },
   "restaurantInfo": {
     "name": {
@@ -191,7 +191,7 @@
     "options": {
       "subdomain": {
         "title": "Ücretsiz Alt Alan Adı",
-        "description": "restaurant.helmiesbites.fi",
+        "description": "restaurant.helmiesbites.com",
         "fullDescription": "Platformumuzda ücretsiz bir alt alan adı edinin",
         "badge": "ÜCRETSİZ"
       },
@@ -203,7 +203,7 @@
       },
       "path": {
         "title": "Ücretsiz Yol",
-        "description": "helmiesbites.fi/restaurant",
+        "description": "helmiesbites.com/restaurant",
         "fullDescription": "Platformumuzda ücretsiz bir yol edinin",
         "badge": "ÜCRETSİZ"
       }
@@ -212,7 +212,7 @@
       "label": "Alt Alan Adınız",
       "hint": "Restoranınız için benzersiz bir ad seçin",
       "placeholder": "restaurant-name",
-      "suffix": ".helmiesbites.fi",
+      "suffix": ".helmiesbites.com",
       "liveAt": "Web siteniz şu adreste yayında olacak"
     },
     "customDomain": {
@@ -226,7 +226,7 @@
       "label": "Yolunuz",
       "hint": "Restoranınız için benzersiz bir yol seçin",
       "placeholder": "restaurant-name",
-      "prefix": "helmiesbites.fi/",
+      "prefix": "helmiesbites.com/",
       "liveAt": "Web siteniz şu adreste yayında olacak"
     },
     "infoCards": {

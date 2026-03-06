@@ -354,7 +354,7 @@ export function FAQ() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <AivoraButton to="/contact">{t('stillHaveQuestions.contactSupport')}</AivoraButton>
                 <a
-                  href="mailto:support@helmiesbites.fi"
+                  href="mailto:support@helmiesbites.com"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold hover:bg-white/20 transition-all duration-300 border border-white/10"
                 >
                   {t('stillHaveQuestions.emailUs')}

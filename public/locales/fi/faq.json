@@ -45,7 +45,7 @@
         },
         "q4": {
           "question": "Voinko käyttää omaa verkkotunnustani?",
-          "answer": "Kyllä! Voit yhdistää oman verkkotunnuksesi (kuten www.sinunravintolasi.fi) Helmies Bites -verkkosivustoosi. Tarjoamme ohjeet DNS-asetusten päivittämiseen, tai voit käyttää ilmaista aliverkkotunnusta kuten sinunravintolasi.helmiesbites.fi."
+          "answer": "Kyllä! Voit yhdistää oman verkkotunnuksesi (kuten www.sinunravintolasi.fi) Helmies Bites -verkkosivustoosi. Tarjoamme ohjeet DNS-asetusten päivittämiseen, tai voit käyttää ilmaista aliverkkotunnusta kuten sinunravintolasi.helmiesbites.com."
         },
         "q5": {
           "question": "Onko ilmainen kokeilujakso?",

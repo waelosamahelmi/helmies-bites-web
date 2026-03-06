@@ -42,8 +42,8 @@ export function ReviewConfirmStep({ data }: Props) {
                 value: data.domainType === 'custom'
                   ? data.customDomain || t('review.notSet')
                   : data.domainType === 'path'
-                  ? `helmiesbites.fi/${data.slug || 'restaurant'}`
-                  : `${data.slug || 'restaurant'}.helmiesbites.fi`
+                  ? `helmiesbites.com/${data.slug || 'restaurant'}`
+                  : `${data.slug || 'restaurant'}.helmiesbites.com`
               },
               { label: t('review.sections.website.theme'), value: data.theme?.name || t('review.sections.website.selectedTheme') },
             ]}

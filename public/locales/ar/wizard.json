@@ -42,7 +42,7 @@
   },
   "help": {
     "text": "تحتاج مساعدة؟ تواصل مع فريق الدعم على",
-    "email": "support@helmiesbites.fi"
+    "email": "support@helmiesbites.com"
   },
   "restaurantInfo": {
     "name": {
@@ -191,7 +191,7 @@
     "options": {
       "subdomain": {
         "title": "نطاق فرعي مجاني",
-        "description": "restaurant.helmiesbites.fi",
+        "description": "restaurant.helmiesbites.com",
         "fullDescription": "احصل على نطاق فرعي مجاني على منصتنا",
         "badge": "مجاني"
       },
@@ -203,7 +203,7 @@
       },
       "path": {
         "title": "مسار مجاني",
-        "description": "helmiesbites.fi/restaurant",
+        "description": "helmiesbites.com/restaurant",
         "fullDescription": "احصل على مسار مجاني على منصتنا",
         "badge": "مجاني"
       }
@@ -212,7 +212,7 @@
       "label": "نطاقك الفرعي",
       "hint": "اختر اسمًا فريدًا لمطعمك",
       "placeholder": "restaurant-name",
-      "suffix": ".helmiesbites.fi",
+      "suffix": ".helmiesbites.com",
       "liveAt": "سيكون موقعك متاحًا على"
     },
     "customDomain": {
@@ -226,7 +226,7 @@
       "label": "مسارك",
       "hint": "اختر مسارًا فريدًا لمطعمك",
       "placeholder": "restaurant-name",
-      "prefix": "helmiesbites.fi/",
+      "prefix": "helmiesbites.com/",
       "liveAt": "سيكون موقعك متاحًا على"
     },
     "infoCards": {

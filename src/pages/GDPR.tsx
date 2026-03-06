@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 const LAST_UPDATED = 'February 26, 2026';
-const GDPR_EMAIL = 'privacy@helmiesbites.fi';
+const GDPR_EMAIL = 'privacy@helmiesbites.com';
 
 export function GDPR() {
   const { t } = useTranslation('legal');

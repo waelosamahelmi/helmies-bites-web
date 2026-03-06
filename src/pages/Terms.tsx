@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const LAST_UPDATED = 'February 26, 2026';
-const CONTACT_EMAIL = 'legal@helmiesbites.fi';
+const CONTACT_EMAIL = 'legal@helmiesbites.com';
 
 export function Terms() {
   const { t } = useTranslation('legal');

@@ -7,7 +7,7 @@
 │   helmies-bites-web      │     │   helmies-bites-admin    │
 │   (Marketing Website)    │     │   (Admin Dashboard)      │
 │   Deploy: Vercel         │     │   Deploy: Hostinger VPS  │
-│   Domain: bites.helmies.fi     │   Domain: admin.helmiesbites.fi
+│   Domain: bites.helmies.fi     │   Domain: admin.helmiesbites.com
 └───────────┬──────────────┘     └───────────┬──────────────┘
             │                                │
             │ API calls                      │ API calls
@@ -16,7 +16,7 @@
 │              helmies-bites-platform                         │
 │              (Central API Server)                           │
 │              Deploy: Hostinger VPS (same server as admin)   │
-│              Domain: api.helmiesbites.fi                    │
+│              Domain: api.helmiesbites.com                    │
 └───────────────────────────┬─────────────────────────────────┘
                             │
                             │ Clones & deploys via automation
@@ -25,7 +25,7 @@
 │            helmies-bites-site-template                      │
 │            (Restaurant Website Template)                    │
 │            Deploy: Vercel (auto per tenant)                 │
-│            Domain: {slug}.helmiesbites.fi                   │
+│            Domain: {slug}.helmiesbites.com                   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -55,14 +55,14 @@ Note these values:
 
 ### Domain Configuration (Hostinger)
 ```
-Primary Domain: helmiesbites.fi
+Primary Domain: helmiesbites.com
 VPS IP: YOUR_VPS_IP (e.g., 154.x.x.x)
 
 DNS Records needed:
-  - A record: api.helmiesbites.fi → YOUR_VPS_IP
-  - A record: admin.helmiesbites.fi → YOUR_VPS_IP (same VPS)
+  - A record: api.helmiesbites.com → YOUR_VPS_IP
+  - A record: admin.helmiesbites.com → YOUR_VPS_IP (same VPS)
   - CNAME: bites.helmies.fi → cname.vercel-dns.com
-  - Wildcard CNAME: *.helmiesbites.fi → cname.vercel-dns.com (for tenant sites)
+  - Wildcard CNAME: *.helmiesbites.com → cname.vercel-dns.com (for tenant sites)
 ```
 
 ---
@@ -72,7 +72,7 @@ DNS Records needed:
 ### Deployment Target: Hostinger VPS
 ```
 Server: Hostinger VPS (YOUR_VPS_IP)
-Domain: api.helmiesbites.fi
+Domain: api.helmiesbites.com
 Port: 3000 (behind Nginx reverse proxy)
 Process Manager: PM2
 ```
@@ -92,13 +92,13 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxx
 PORT=3000
 NODE_ENV=production
 APP_NAME=Helmies Bites
-APP_URL=https://api.helmiesbites.fi
-PLATFORM_URL=https://api.helmiesbites.fi
+APP_URL=https://api.helmiesbites.com
+PLATFORM_URL=https://api.helmiesbites.com
 
 # ============================================================
 # CORS - Allowed Origins
 # ============================================================
-ALLOWED_ORIGINS=https://bites.helmies.fi,https://admin.helmiesbites.fi,https://*.helmiesbites.fi
+ALLOWED_ORIGINS=https://bites.helmies.fi,https://admin.helmiesbites.com,https://*.helmiesbites.com
 
 # ============================================================
 # JWT & SESSION
@@ -140,10 +140,10 @@ HOSTINGER_API_BASE=https://api.hostinger.com/v1
 # ============================================================
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=noreply@helmiesbites.fi
+SMTP_USER=noreply@helmiesbites.com
 SMTP_PASS=your-app-password
-ADMIN_EMAIL=admin@helmiesbites.fi
-CUSTOMER_SUPPORT_EMAIL=support@helmiesbites.fi
+ADMIN_EMAIL=admin@helmiesbites.com
+CUSTOMER_SUPPORT_EMAIL=support@helmiesbites.com
 
 # ============================================================
 # AI (OpenRouter)
@@ -253,7 +253,7 @@ pm2 monit                    # Real-time monitoring
 # /etc/nginx/sites-available/helmies-platform
 server {
     listen 80;
-    server_name api.helmiesbites.fi;
+    server_name api.helmiesbites.com;
 
     location / {
         proxy_pass http://127.0.0.1:3000;
@@ -271,7 +271,7 @@ server {
 # /etc/nginx/sites-available/helmies-admin
 server {
     listen 80;
-    server_name admin.helmiesbites.fi;
+    server_name admin.helmiesbites.com;
 
     location / {
         proxy_pass http://127.0.0.1:5174;
@@ -296,8 +296,8 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 # SSL certificates (Let's Encrypt)
-sudo certbot --nginx -d api.helmiesbites.fi
-sudo certbot --nginx -d admin.helmiesbites.fi
+sudo certbot --nginx -d api.helmiesbites.com
+sudo certbot --nginx -d admin.helmiesbites.com
 
 # Auto-renew
 sudo certbot renew --dry-run
@@ -305,7 +305,7 @@ sudo certbot renew --dry-run
 
 ### Stripe Webhook Setup
 ```
-Endpoint URL: https://api.helmiesbites.fi/api/stripe/webhook
+Endpoint URL: https://api.helmiesbites.com/api/stripe/webhook
 Events to listen:
   - checkout.session.completed
   - payment_intent.succeeded
@@ -322,7 +322,7 @@ Events to listen:
 ### Deployment Target: Hostinger VPS (same server as Platform)
 ```
 Server: Hostinger VPS (YOUR_VPS_IP)
-Domain: admin.helmiesbites.fi
+Domain: admin.helmiesbites.com
 Frontend Port: 5174
 Backend Port: 3001 (bundled)
 ```
@@ -338,13 +338,13 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxx
 # ============================================================
 # API CONNECTION (Points to Platform)
 # ============================================================
-VITE_API_URL=https://api.helmiesbites.fi
+VITE_API_URL=https://api.helmiesbites.com
 
 # ============================================================
 # APPLICATION
 # ============================================================
 VITE_APP_NAME=Helmies Bites Admin
-VITE_APP_URL=https://admin.helmiesbites.fi
+VITE_APP_URL=https://admin.helmiesbites.com
 NODE_ENV=production
 
 # ============================================================
@@ -363,13 +363,13 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxx
 # ============================================================
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=admin@helmiesbites.fi
+SMTP_USER=admin@helmiesbites.com
 SMTP_PASS=your-app-password
 
 # ============================================================
 # ADMIN CREDENTIALS (Initial setup)
 # ============================================================
-ADMIN_EMAIL=admin@helmiesbites.fi
+ADMIN_EMAIL=admin@helmiesbites.com
 ADMIN_PASSWORD=initial-secure-password
 
 # ============================================================
@@ -421,7 +421,7 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.xxxxx
 # ============================================================
 # API CONNECTION (Points to Platform)
 # ============================================================
-VITE_API_URL=https://api.helmiesbites.fi
+VITE_API_URL=https://api.helmiesbites.com
 
 # ============================================================
 # APPLICATION
@@ -467,7 +467,7 @@ Set in Vercel Dashboard → Project → Settings → Environment Variables:
 |----------|-------|
 | VITE_SUPABASE_URL | https://xxx.supabase.co |
 | VITE_SUPABASE_ANON_KEY | eyJxxx |
-| VITE_API_URL | https://api.helmiesbites.fi |
+| VITE_API_URL | https://api.helmiesbites.com |
 | VITE_STRIPE_PUBLISHABLE_KEY | pk_live_xxx |
 
 ---
@@ -479,7 +479,7 @@ Each tenant site is automatically deployed when:
 1. Wizard is completed on helmies-bites-web
 2. Platform clones template → GitHub repo (`{slug}-site`)
 3. Platform creates Vercel project
-4. Platform configures domain (`{slug}.helmiesbites.fi`)
+4. Platform configures domain (`{slug}.helmiesbites.com`)
 
 ### Template .env (Injected by Platform)
 ```dotenv
@@ -498,7 +498,7 @@ VITE_TENANT_SLUG=restaurant-slug
 # ============================================================
 # API CONNECTION (Points to Platform)
 # ============================================================
-VITE_API_URL=https://api.helmiesbites.fi
+VITE_API_URL=https://api.helmiesbites.com
 
 # ============================================================
 # STRIPE (Publishable only)
@@ -517,7 +517,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_xxxxx
     "VITE_SUPABASE_ANON_KEY": "@supabase_anon_key",
     "VITE_TENANT_SLUG": "@tenant_slug",
     "VITE_TENANT_ID": "@tenant_id",
-    "VITE_API_URL": "https://api.helmiesbites.fi"
+    "VITE_API_URL": "https://api.helmiesbites.com"
   }
 }
 ```
@@ -538,7 +538,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_xxxxx
 - [ ] Create `helmies` user
 - [ ] Clone all repos to VPS
 
-### Platform (api.helmiesbites.fi)
+### Platform (api.helmiesbites.com)
 - [ ] Build & start with PM2 on VPS
 - [ ] Create .env with production values
 - [ ] Configure Nginx reverse proxy
@@ -546,7 +546,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_xxxxx
 - [ ] Configure Stripe webhooks
 - [ ] Test API endpoints
 
-### Admin (admin.helmiesbites.fi)
+### Admin (admin.helmiesbites.com)
 - [ ] Build & start with PM2 on VPS
 - [ ] Create .env with production values
 - [ ] Configure Nginx reverse proxy
@@ -670,8 +670,8 @@ Store in:
 
 ### Health Check Endpoints
 ```
-Platform: https://api.helmiesbites.fi/health
-Admin:    https://admin.helmiesbites.fi/health
+Platform: https://api.helmiesbites.com/health
+Admin:    https://admin.helmiesbites.com/health
 ```
 
 ---
@@ -680,7 +680,7 @@ Admin:    https://admin.helmiesbites.fi/health
 
 | Project | Deploy To | Domain | Port | Connects To |
 |---------|-----------|--------|------|-------------|
-| platform | Hostinger VPS | api.helmiesbites.fi | 3000 | Supabase, Stripe, GitHub, Vercel, Hostinger API |
-| admin | Hostinger VPS | admin.helmiesbites.fi | 5174 | Platform API, Supabase |
+| platform | Hostinger VPS | api.helmiesbites.com | 3000 | Supabase, Stripe, GitHub, Vercel, Hostinger API |
+| admin | Hostinger VPS | admin.helmiesbites.com | 5174 | Platform API, Supabase |
 | web | Vercel | bites.helmies.fi | - | Platform API, Supabase |
-| site-template | Vercel (auto) | {slug}.helmiesbites.fi | - | Platform API, Supabase |
+| site-template | Vercel (auto) | {slug}.helmiesbites.com | - | Platform API, Supabase |

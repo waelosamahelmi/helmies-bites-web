@@ -52,7 +52,7 @@ export function Contact() {
     {
       icon: <Mail className="h-7 w-7 text-white" />,
       key: 'emailUs',
-      link: 'mailto:support@helmiesbites.fi',
+      link: 'mailto:support@helmiesbites.com',
       color: 'from-[#FF7A00] to-[#CC6200]'
     },
     {

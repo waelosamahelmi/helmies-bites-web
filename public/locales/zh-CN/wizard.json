@@ -42,7 +42,7 @@
   },
   "help": {
     "text": "需要帮助？请联系我们的支持团队",
-    "email": "support@helmiesbites.fi"
+    "email": "support@helmiesbites.com"
   },
   "restaurantInfo": {
     "name": {
@@ -191,7 +191,7 @@
     "options": {
       "subdomain": {
         "title": "免费子域名",
-        "description": "restaurant.helmiesbites.fi",
+        "description": "restaurant.helmiesbites.com",
         "fullDescription": "在我们的平台上获取免费子域名",
         "badge": "免费"
       },
@@ -203,7 +203,7 @@
       },
       "path": {
         "title": "免费路径",
-        "description": "helmiesbites.fi/restaurant",
+        "description": "helmiesbites.com/restaurant",
         "fullDescription": "在我们的平台上获取免费路径",
         "badge": "免费"
       }
@@ -212,7 +212,7 @@
       "label": "您的子域名",
       "hint": "为您的餐厅选择一个唯一的名称",
       "placeholder": "restaurant-name",
-      "suffix": ".helmiesbites.fi",
+      "suffix": ".helmiesbites.com",
       "liveAt": "您的网站将在以下地址上线"
     },
     "customDomain": {
@@ -226,7 +226,7 @@
       "label": "您的路径",
       "hint": "为您的餐厅选择一个唯一的路径",
       "placeholder": "restaurant-name",
-      "prefix": "helmiesbites.fi/",
+      "prefix": "helmiesbites.com/",
       "liveAt": "您的网站将在以下地址上线"
     },
     "infoCards": {

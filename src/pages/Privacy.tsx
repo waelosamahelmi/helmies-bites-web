@@ -3,7 +3,7 @@ import { ScrollReveal } from '../components/ScrollReveal';
 import { Shield, Eye, Clock, Cookie, Mail, Lock } from 'lucide-react';
 
 const LAST_UPDATED = 'February 26, 2026';
-const PRIVACY_EMAIL = 'privacy@helmiesbites.fi';
+const PRIVACY_EMAIL = 'privacy@helmiesbites.com';
 
 export function Privacy() {
   const { t } = useTranslation('legal');
