@@ -117,10 +117,6 @@
     "title": "选择我们",
     "description": "我们以零风险保障助力您的成功",
     "badges": {
-      "moneyBack": {
-        "title": "退款保证",
-        "description": "30 天内不满意全额退款"
-      },
       "noSetupFees": {
         "title": "零设置费",
         "description": "几分钟内免费启动您的餐厅网站"
@@ -235,7 +231,7 @@
     },
     "refundPolicy": {
       "question": "你们的退款政策是什么？",
-      "answer": "我们为专业版和年度版提供 30 天退款保证。如果您在前 30 天内不满意，请联系我们获取全额退款 — 无需任何理由。"
+      "answer": "我们为专业版和年度版提供灵活的退款政策。请联系我们讨论退款选项。"
     }
   },
   "cta": {
@@ -245,7 +241,6 @@
     "description": "加入已使用 Helmies Bites 的数百家餐厅。免费开始，无需信用卡。",
     "seeAllFeatures": "查看所有功能",
     "trustIndicators": {
-      "guarantee": "30 天保证",
       "noCreditCard": "无需信用卡",
       "support": "24/7 支持"
     }

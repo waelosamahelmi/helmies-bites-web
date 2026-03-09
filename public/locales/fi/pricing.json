@@ -117,10 +117,6 @@
     "title": "valitsevat meidät",
     "description": "Olemme sitoutuneet menestykseesi riskittömillä takuilla",
     "badges": {
-      "moneyBack": {
-        "title": "Rahat takaisin -takuu",
-        "description": "30 päivän täysi palautus, jos et ole täysin tyytyväinen"
-      },
       "noSetupFees": {
         "title": "Ei asennusmaksuja",
         "description": "Julkaise ravintolasi verkkosivusto minuuteissa, täysin ilmaiseksi"
@@ -235,7 +231,7 @@
     },
     "refundPolicy": {
       "question": "Mikä on palautuskäytäntönne?",
-      "answer": "Tarjoamme 30 päivän rahat takaisin -takuun Pro- ja vuosisuunnitelmille. Jos et ole tyytyväinen ensimmäisten 30 päivän aikana, ota meihin yhteyttä saadaksesi täyden palautuksen — ei kysymyksiä."
+      "answer": "Tarjoamme joustavaa palautuskäytäntöä Pro- ja vuosisuunnitelmille. Ota meihin yhteyttä keskustellaksesi palautusvaihtoehdoista."
     }
   },
   "cta": {
@@ -245,7 +241,6 @@
     "description": "Liity satojen ravintoloiden joukkoon, jotka jo käyttävät Helmies Bitesiä. Aloita ilmaiseksi, luottokorttia ei tarvita.",
     "seeAllFeatures": "Katso kaikki ominaisuudet",
     "trustIndicators": {
-      "guarantee": "30 päivän takuu",
       "noCreditCard": "Luottokorttia ei tarvita",
       "support": "24/7 tuki"
     }

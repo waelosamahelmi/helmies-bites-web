@@ -117,10 +117,6 @@
     "title": "bizi seçiyor",
     "description": "Risksiz garantilerle başarınıza kararlıyız",
     "badges": {
-      "moneyBack": {
-        "title": "Para İade Garantisi",
-        "description": "Tamamen memnun kalmazsanız 30 gün içinde tam iade"
-      },
       "noSetupFees": {
         "title": "Kurulum Ücreti Yok",
         "description": "Restoran web sitenizi dakikalar içinde, tamamen ücretsiz başlatın"
@@ -235,7 +231,7 @@
     },
     "refundPolicy": {
       "question": "İade politikanız nedir?",
-      "answer": "Pro ve Yıllık planlarda 30 günlük para iade garantisi sunuyoruz. İlk 30 gün içinde memnun kalmazsanız, tam iade için bizimle iletişime geçin — soru sorulmaz."
+      "answer": "Pro ve Yıllık planlarda esnek iade politikası sunuyoruz. İade seçeneklerini görüşmek için bizimle iletişime geçin."
     }
   },
   "cta": {
@@ -245,7 +241,6 @@
     "description": "Helmies Bites kullanan yüzlerce restorana katılın. Ücretsiz başlayın, kredi kartı gerekmez.",
     "seeAllFeatures": "Tüm Özellikleri Gör",
     "trustIndicators": {
-      "guarantee": "30 gün garanti",
       "noCreditCard": "Kredi kartı gerekmez",
       "support": "7/24 destek"
     }

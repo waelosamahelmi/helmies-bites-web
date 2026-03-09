@@ -117,10 +117,6 @@
     "title": "väljer oss",
     "description": "Vi är engagerade i din framgång med riskfria garantier",
     "badges": {
-      "moneyBack": {
-        "title": "Pengarna-tillbaka-garanti",
-        "description": "30 dagars full återbetalning om du inte är helt nöjd"
-      },
       "noSetupFees": {
         "title": "Inga installationsavgifter",
         "description": "Lansera din restaurangwebbplats på minuter, helt gratis"
@@ -235,7 +231,7 @@
     },
     "refundPolicy": {
       "question": "Vad är er återbetalningspolicy?",
-      "answer": "Vi erbjuder 30 dagars pengarna-tillbaka-garanti på Pro- och årsplaner. Om du inte är nöjd inom de första 30 dagarna, kontakta oss för full återbetalning — inga frågor."
+      "answer": "Vi erbjuder flexibel återbetalningspolicy på Pro- och årsplaner. Kontakta oss för att diskutera återbetalningsalternativ."
     }
   },
   "cta": {
@@ -245,7 +241,6 @@
     "description": "Gå med bland hundratals restauranger som redan använder Helmies Bites. Börja gratis, inget kreditkort krävs.",
     "seeAllFeatures": "Se alla funktioner",
     "trustIndicators": {
-      "guarantee": "30 dagars garanti",
       "noCreditCard": "Inget kreditkort krävs",
       "support": "24/7 support"
     }
