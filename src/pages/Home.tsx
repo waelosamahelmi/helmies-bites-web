@@ -481,17 +481,17 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
               <SectionTitle subtitle={t('integrations.subtitle')} title={t('integrations.title')} description={t('integrations.description')} align="left" icon={<Zap className="h-4 w-4" />} className="mb-10" />
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {[
-                  { icon: <Shield className="h-6 w-6" />, title: t('integrations.securePayments.title'), text: t('integrations.securePayments.text') },
-                  { icon: <BarChart3 className="h-6 w-6" />, title: t('integrations.realTimeAnalytics.title'), text: t('integrations.realTimeAnalytics.text') },
-                  { icon: <Truck className="h-6 w-6" />, title: t('integrations.deliveryIntegration.title'), text: t('integrations.deliveryIntegration.text') },
+                  { icon: <Shield className="h-5 w-5 sm:h-6 sm:w-6" />, title: t('integrations.securePayments.title'), text: t('integrations.securePayments.text') },
+                  { icon: <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6" />, title: t('integrations.realTimeAnalytics.title'), text: t('integrations.realTimeAnalytics.text') },
+                  { icon: <Truck className="h-5 w-5 sm:h-6 sm:w-6" />, title: t('integrations.deliveryIntegration.title'), text: t('integrations.deliveryIntegration.text') },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="feature-icon w-14 h-14 flex-shrink-0">{item.icon}</div>
+                  <div key={i} className="flex items-start gap-3 sm:gap-4">
+                    <div className="feature-icon w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0">{item.icon}</div>
                     <div>
-                      <h3 className="font-bold text-xl mb-1 text-white">{item.title}</h3>
-                      <p className="text-white/40">{item.text}</p>
+                      <h3 className="font-bold text-lg sm:text-xl mb-1 text-white">{item.title}</h3>
+                      <p className="text-white/40 text-sm sm:text-base">{item.text}</p>
                     </div>
                   </div>
                 ))}
@@ -506,22 +506,22 @@ export function Home() {
                 ].map((row, rowIndex) => (
                   <Marquee key={rowIndex} gradient={false} speed={25 + rowIndex * 10} direction={rowIndex % 2 === 0 ? 'left' : 'right'} pauseOnHover className="py-2">
                     {row.map((item, i) => (
-                      <div key={i} className="mx-4 glass-card xb-border p-4 flex items-center gap-3 min-w-[160px]">
-                        <div className="w-10 h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00]">{item.icon}</div>
-                        <span className="text-white font-semibold">{item.name}</span>
+                      <div key={i} className="mx-2 sm:mx-4 glass-card xb-border p-3 sm:p-4 flex items-center gap-2 sm:gap-3 min-w-[120px] sm:min-w-[160px]">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00]">{item.icon}</div>
+                        <span className="text-white font-semibold text-sm sm:text-base">{item.name}</span>
                       </div>
                     ))}
                   </Marquee>
                 ))}
 
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="comparison-card text-center p-6">
-                    <p className="text-white/40 text-sm font-bold uppercase mb-2">{t('integrations.withoutHelmies')}</p>
-                    <p className="text-white/60 text-sm">{t('integrations.withoutDesc')}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  <div className="comparison-card text-center p-4 sm:p-6">
+                    <p className="text-white/40 text-xs sm:text-sm font-bold uppercase mb-2">{t('integrations.withoutHelmies')}</p>
+                    <p className="text-white/60 text-xs sm:text-sm">{t('integrations.withoutDesc')}</p>
                   </div>
-                  <div className="comparison-card text-center p-6" style={{ borderColor: 'rgba(255,122,0,0.2)' }}>
-                    <p className="text-[#FF7A00] text-sm font-bold uppercase mb-2">{t('integrations.withHelmies')}</p>
-                    <p className="text-white/60 text-sm">{t('integrations.withDesc')}</p>
+                  <div className="comparison-card text-center p-4 sm:p-6" style={{ borderColor: 'rgba(255,122,0,0.2)' }}>
+                    <p className="text-[#FF7A00] text-xs sm:text-sm font-bold uppercase mb-2">{t('integrations.withHelmies')}</p>
+                    <p className="text-white/60 text-xs sm:text-sm">{t('integrations.withDesc')}</p>
                   </div>
                 </div>
               </div>

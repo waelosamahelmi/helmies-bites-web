@@ -29,7 +29,7 @@ export function SectionTitle({
           </span>
         </div>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 break-words">
         {titleHighlight ? (
           <>
             <span className="gradient-text">{titleHighlight}</span>{' '}
