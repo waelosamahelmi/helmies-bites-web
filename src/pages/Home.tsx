@@ -216,29 +216,29 @@ export function Home() {
       </section>
 
       {/* ===== AI MENU IMPORT - Browser Mockup ===== */}
-      <section className="section-padding bg-[#2A1F15]/20 section-glow">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="section-padding bg-[#2A1F15]/20 section-glow overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <ScrollReveal direction="left">
-                <div className="badge mb-6">
+                <div className="badge mb-4 sm:mb-6">
                   <FileText className="h-4 w-4" />
                   <span>{t('aiMenu.badge')}</span>
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-black mb-6 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 leading-tight">
                   <span className="gradient-text">{t('aiMenu.title')}</span><br />
                   <span className="text-white">{t('aiMenu.titleLine2')}</span>
                 </h2>
-                <p className="text-lg text-white/50 mb-8 max-w-lg leading-relaxed">
+                <p className="text-base sm:text-lg text-white/50 mb-6 sm:mb-8 max-w-lg leading-relaxed">
                   {t('aiMenu.description')}
                 </p>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {['upload', 'extract', 'categorize'].map((key) => (
-                    <div key={key} className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center">
-                        <Check className="h-5 w-5 text-[#FF7A00]" />
+                    <div key={key} className="flex items-center gap-3 sm:gap-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center flex-shrink-0">
+                        <Check className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF7A00]" />
                       </div>
-                      <span className="text-white/70 font-semibold">{t(`aiMenu.steps.${key}`)}</span>
+                      <span className="text-white/70 font-semibold text-sm sm:text-base">{t(`aiMenu.steps.${key}`)}</span>
                     </div>
                   ))}
                 </div>
@@ -246,38 +246,38 @@ export function Home() {
             </div>
 
             <ScrollReveal direction="right">
-              <div className="glass-card xb-border rounded-2xl overflow-hidden shadow-2xl">
+              <div className="glass-card xb-border rounded-2xl overflow-hidden shadow-2xl max-w-full">
                 {/* Browser Bar */}
-                <div className="flex items-center gap-2.5 px-4 py-3 bg-white/[0.03] border-b border-white/[0.06]">
-                  <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-                  <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-                  <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-                  <div className="flex-1 ml-3 px-4 py-1.5 rounded-lg bg-white/5 text-sm text-white/40 font-medium">
+                <div className="flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-3 bg-white/[0.03] border-b border-white/[0.06]">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ff5f57]" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#ffbd2e]" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#28c840]" />
+                  <div className="flex-1 ml-2 sm:ml-3 px-2 sm:px-4 py-1 sm:py-1.5 rounded-lg bg-white/5 text-xs sm:text-sm text-white/40 font-medium truncate">
                     helmies.fi/admin/menu
                   </div>
                 </div>
                 {/* Browser Body */}
-                <div className="p-6">
+                <div className="p-3 sm:p-6">
                   {/* Upload Area */}
-                  <div className="border-2 border-dashed border-[#FF7A00]/25 rounded-2xl p-8 text-center mb-6 hover:border-[#FF7A00]/50 transition-colors">
-                    <Upload className="h-10 w-10 text-[#FF7A00]/60 mx-auto mb-3" />
-                    <p className="text-white/50 font-bold text-sm">{t('aiMenu.dropHere')}</p>
+                  <div className="border-2 border-dashed border-[#FF7A00]/25 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-center mb-4 sm:mb-6 hover:border-[#FF7A00]/50 transition-colors">
+                    <Upload className="h-8 w-8 sm:h-10 sm:w-10 text-[#FF7A00]/60 mx-auto mb-2 sm:mb-3" />
+                    <p className="text-white/50 font-bold text-xs sm:text-sm">{t('aiMenu.dropHere')}</p>
                     <p className="text-white/30 text-xs mt-1">{t('aiMenu.fileTypes')}</p>
                   </div>
                   {/* Menu Items */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {menuMockItems.map((item, i) => (
                       <ScrollReveal key={i} direction="left" delay={0.2 + i * 0.15}>
-                        <div className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-                          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#2A1F15] to-[#1A1410] flex items-center justify-center text-2xl flex-shrink-0">
+                        <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-[#2A1F15] to-[#1A1410] flex items-center justify-center text-lg sm:text-2xl flex-shrink-0">
                             {item.emoji}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="text-sm font-bold text-white">{t(`aiMenu.items.${i}.name`)}</div>
-                            <div className="text-xs text-white/35 truncate">{t(`aiMenu.items.${i}.desc`)}</div>
-                            <div className="text-sm font-extrabold text-[#FF7A00]">{item.price}</div>
+                            <div className="text-xs sm:text-sm font-bold text-white truncate">{t(`aiMenu.items.${i}.name`)}</div>
+                            <div className="text-xs text-white/35 truncate hidden sm:block">{t(`aiMenu.items.${i}.desc`)}</div>
+                            <div className="text-xs sm:text-sm font-extrabold text-[#FF7A00]">{item.price}</div>
                           </div>
-                          <div className="w-8 h-8 rounded-lg bg-[#FF7A00]/15 border border-[#FF7A00]/20 flex items-center justify-center text-[#FF7A00] text-sm font-bold flex-shrink-0">+</div>
+                          <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-[#FF7A00]/15 border border-[#FF7A00]/20 flex items-center justify-center text-[#FF7A00] text-xs sm:text-sm font-bold flex-shrink-0">+</div>
                         </div>
                       </ScrollReveal>
                     ))}
@@ -476,11 +476,11 @@ export function Home() {
       </section>
 
       {/* ===== INTEGRATIONS ===== */}
-      <section className="section-padding bg-[#2A1F15]/20 section-glow">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="section-padding bg-[#2A1F15]/20 section-glow overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal direction="left">
-              <SectionTitle subtitle={t('integrations.subtitle')} title={t('integrations.title')} description={t('integrations.description')} align="left" icon={<Zap className="h-4 w-4" />} className="mb-10" />
+              <SectionTitle subtitle={t('integrations.subtitle')} title={t('integrations.title')} description={t('integrations.description')} align="left" icon={<Zap className="h-4 w-4" />} className="mb-6 sm:mb-10" />
               <div className="space-y-4 sm:space-y-6">
                 {[
                   { icon: <Shield className="h-5 w-5 sm:h-6 sm:w-6" />, title: t('integrations.securePayments.title'), text: t('integrations.securePayments.text') },

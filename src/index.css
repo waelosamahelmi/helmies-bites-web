@@ -340,7 +340,7 @@
 
   /* Section Spacing */
   .section-padding {
-    @apply py-24 px-6;
+    @apply py-12 sm:py-16 md:py-24 px-4 sm:px-6;
   }
 
   /* Container */
