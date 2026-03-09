@@ -83,11 +83,10 @@
     "title": "Kotimme",
     "titleHighlight": "Meidän",
     "imageAlt": "Helsingin toimisto",
-    "cityTitle": "Helsinki, Suomi",
-    "description": "Olemme ylpeitä voidessamme kutsua Helsinkiä kodiksemme. Täältä palvelemme ravintoloita kaikkialla Suomessa ja jatkamme laajentumistamme ympäri Eurooppaa.",
-    "address": "Punavuori, Helsinki, Suomi",
-    "email": "hello@helmiesbites.com",
-    "teamSize": "25+ tiimin jäsentä"
+    "cityTitle": "Lahti, Suomi",
+    "description": "Olemme ylpeitä voidessamme kutsua Lahtiä kodiksemme. Täältä palvelemme ravintoloita kaikkialla Suomessa ja jatkamme laajentumistamme ympäri Eurooppaa.",
+    "address": "Lahti, Suomi",
+    "email": "bites@helmies.fi",
   },
   "cta": {
     "subtitle": "Liity perheeseemme",

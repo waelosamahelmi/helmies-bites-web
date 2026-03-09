@@ -52,7 +52,7 @@
     },
     "visitUs": {
       "title": "Visit Us",
-      "value": "Helsinki, Finland",
+      "value": "Lahti, Finland",
       "description": "Punavuori district"
     }
   },
@@ -80,7 +80,7 @@
     "availability": "Available Mon-Fri, 9am-6pm EET"
   },
   "map": {
-    "city": "Helsinki, Finland",
+    "city": "Lahti, Finland",
     "district": "Punavuori District",
     "openInMaps": "Open in Google Maps"
   },

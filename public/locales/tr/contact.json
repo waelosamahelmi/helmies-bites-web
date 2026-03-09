@@ -52,7 +52,7 @@
     },
     "visitUs": {
       "title": "Bizi Ziyaret Edin",
-      "value": "Helsinki, Finlandiya",
+      "value": "Lahti, Finlandiya",
       "description": "Punavuori bölgesi"
     }
   },
@@ -80,7 +80,7 @@
     "availability": "Pzt-Cum, 09:00-18:00 EET arası mevcuttur"
   },
   "map": {
-    "city": "Helsinki, Finlandiya",
+    "city": "Lahti, Finlandiya",
     "district": "Punavuori Bölgesi",
     "openInMaps": "Google Haritalar'da Aç"
   },

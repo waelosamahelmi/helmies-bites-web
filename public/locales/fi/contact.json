@@ -52,7 +52,7 @@
     },
     "visitUs": {
       "title": "Vieraile meillä",
-      "value": "Helsinki, Suomi",
+      "value": "Lahti, Suomi",
       "description": "Punavuoren kaupunginosa"
     }
   },
@@ -80,7 +80,7 @@
     "availability": "Saatavilla Ma-Pe, 9-18 EET"
   },
   "map": {
-    "city": "Helsinki, Suomi",
+    "city": "Lahti, Suomi",
     "district": "Punavuoren kaupunginosa",
     "openInMaps": "Avaa Google Mapsissa"
   },

@@ -13,7 +13,7 @@
     "launchYear": "2026",
     "launchLabel": "Şimdi başlıyoruz",
     "paragraph1": "Helmies Bites basit bir gözlemden doğdu: teknoloji birçok sektörü dönüştürmüş olsa da, çoğu restoran hâlâ güçlü bir online varlık oluşturmakta zorlanıyor. Pahalı web siteleri, karmaşık sipariş sistemleri ve teknik engeller, birçok harika restoranın tam potansiyeline ulaşmasını engelliyordu.",
-    "paragraph2": "Kurucumuz Wael Helmi — Helsinki merkezli yaratıcı bir geliştirici — bu boşluğu gördü ve derin teknik bilgi veya büyük bütçe gerektirmeyen daha iyi bir çözüm oluşturmaya karar verdi.",
+    "paragraph2": "Kurucumuz Wael Helmi — Lahti merkezli yaratıcı bir geliştirici — bu boşluğu gördü ve derin teknik bilgi veya büyük bütçe gerektirmeyen daha iyi bir çözüm oluşturmaya karar verdi.",
     "paragraph3": "Şimdi, 2026'nın başlarında, Finlandiya genelindeki ve ötesindeki restoranların dijital varlıklarını oluşturmalarına, online sipariş almalarına ve müşterilerle anlamlı bağlantılar kurmalarına yardımcı olmaya hazırız."
   },
   "missionVision": {
@@ -82,12 +82,11 @@
     "subtitle": "Bizi Ziyaret Edin",
     "title": "Evimiz",
     "titleHighlight": "Bizim",
-    "imageAlt": "Helsinki ofisi",
-    "cityTitle": "Helsinki, Finlandiya",
-    "description": "Helsinki'yi evimiz olarak adlandırmaktan gurur duyuyoruz. Buradan, Finlandiya genelindeki restoranlara hizmet veriyor ve Avrupa'daki genişlememize devam ediyoruz.",
-    "address": "Punavuori, Helsinki, Finlandiya",
-    "email": "hello@helmiesbites.com",
-    "teamSize": "25+ ekip üyesi"
+    "imageAlt": "Lahti ofisi",
+    "cityTitle": "Lahti, Finlandiya",
+    "description": "Lahti'yi evimiz olarak adlandırmaktan gurur duyuyoruz. Buradan, Finlandiya genelindeki restoranlara hizmet veriyor ve Avrupa'daki genişlememize devam ediyoruz.",
+    "address": "Lahti, Finlandiya",
+    "email": "bites@helmies.fi",
   },
   "cta": {
     "subtitle": "Ailemize katılın",

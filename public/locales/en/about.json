@@ -13,7 +13,7 @@
     "launchYear": "2026",
     "launchLabel": "Launching now",
     "paragraph1": "Helmies Bites was born from a simple observation: while technology has transformed many industries, most restaurants still struggle to establish a strong online presence. Expensive websites, complicated ordering systems, and technical barriers kept many amazing restaurants from reaching their full potential.",
-    "paragraph2": "Our founder, Wael Helmi, a creative developer based in Helsinki, saw this gap and set out to build a better solution - one that doesn't require deep technical knowledge or a large budget.",
+    "paragraph2": "Our founder, Wael Helmi, a creative developer based in Lahti, saw this gap and set out to build a better solution - one that doesn't require deep technical knowledge or a large budget.",
     "paragraph3": "Now, as we launch in early 2026, we're ready to help restaurants across Finland and beyond establish their digital presence, accept online orders, and connect with customers in meaningful ways."
   },
   "missionVision": {
@@ -82,12 +82,11 @@
     "subtitle": "Visit Us",
     "title": "Home",
     "titleHighlight": "Our",
-    "imageAlt": "Helsinki office",
-    "cityTitle": "Helsinki, Finland",
-    "description": "We're proud to call Helsinki our home. From here, we serve restaurants across Finland and continue our expansion throughout Europe.",
-    "address": "Punavuori, Helsinki, Finland",
-    "email": "hello@helmiesbites.com",
-    "teamSize": "25+ team members"
+    "imageAlt": "Lahti office",
+    "cityTitle": "Lahti, Finland",
+    "description": "We're proud to call Lahti our home. From here, we serve restaurants across Finland and continue our expansion throughout Europe.",
+    "address": "Lahti, Finland",
+    "email": "bites@helmies.fi",
   },
   "cta": {
     "subtitle": "Join our family",
