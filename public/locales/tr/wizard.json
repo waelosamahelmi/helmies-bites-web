@@ -401,6 +401,25 @@
       "hours": {
         "label": "Çalışma Saatleri", "hint": "Restoranınızın çalışma programını ayarlayın", "closed": "Kapalı", "open": "Aç", "close": "Kapat",
         "days": { "monday": "Pazartesi", "tuesday": "Salı", "wednesday": "Çarşamba", "thursday": "Perşembe", "friday": "Cuma", "saturday": "Cumartesi", "sunday": "Pazar" }
+      },
+      "referral": {
+        "label": "Bizi nasıl duydunuz?",
+        "hint": "HelmiesBites'ı nasıl bulduğunuzu anlamamıza yardımcı olun",
+        "placeholder": "Bir seçenek seçin",
+        "required": "Zorunlu",
+        "options": {
+          "google": "Google",
+          "linkedin": "LinkedIn",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "wordOfMouth": "Kulaktan kulağa",
+          "salesman": "Satış temsilcisi"
+        }
+      },
+      "salesman": {
+        "label": "Satış temsilcisi seçin",
+        "placeholder": "Size yardımcı olan satış temsilcisini seçin"
       }
     },
     "menuUpload": {

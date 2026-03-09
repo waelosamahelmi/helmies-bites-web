@@ -401,6 +401,25 @@
       "hours": {
         "label": "营业时间", "hint": "设置餐厅的营业时间", "closed": "休息", "open": "营业", "close": "关闭",
         "days": { "monday": "周一", "tuesday": "周二", "wednesday": "周三", "thursday": "周四", "friday": "周五", "saturday": "周六", "sunday": "周日" }
+      },
+      "referral": {
+        "label": "您是如何了解我们的？",
+        "hint": "帮助我们了解您是如何找到 HelmiesBites 的",
+        "placeholder": "请选择",
+        "required": "必填",
+        "options": {
+          "google": "谷歌",
+          "linkedin": "领英",
+          "instagram": "Instagram",
+          "tiktok": "抖音/TikTok",
+          "facebook": "脸书",
+          "wordOfMouth": "口碑推荐",
+          "salesman": "销售人员"
+        }
+      },
+      "salesman": {
+        "label": "选择销售人员",
+        "placeholder": "选择帮助您的销售人员"
       }
     },
     "menuUpload": {

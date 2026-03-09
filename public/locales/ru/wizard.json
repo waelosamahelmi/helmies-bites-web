@@ -401,6 +401,25 @@
       "hours": {
         "label": "Часы работы", "hint": "Установите расписание работы ресторана", "closed": "Закрыто", "open": "Открыть", "close": "Закрыть",
         "days": { "monday": "Понедельник", "tuesday": "Вторник", "wednesday": "Среда", "thursday": "Четверг", "friday": "Пятница", "saturday": "Суббота", "sunday": "Воскресенье" }
+      },
+      "referral": {
+        "label": "Как вы узнали о нас?",
+        "hint": "Помогите нам понять, как вы нашли HelmiesBites",
+        "placeholder": "Выберите вариант",
+        "required": "Обязательно",
+        "options": {
+          "google": "Google",
+          "linkedin": "LinkedIn",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "wordOfMouth": "Сарафанное радио",
+          "salesman": "Продавец"
+        }
+      },
+      "salesman": {
+        "label": "Выберите продавца",
+        "placeholder": "Выберите продавца, который вам помог"
       }
     },
     "menuUpload": {

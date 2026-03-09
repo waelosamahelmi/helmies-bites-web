@@ -488,6 +488,25 @@
           "saturday": "السبت",
           "sunday": "الأحد"
         }
+      },
+      "referral": {
+        "label": "كيف سمعت عنا؟",
+        "hint": "ساعدنا على فهم كيف وجدت HelmiesBites",
+        "placeholder": "اختر خياراً",
+        "required": "مطلوب",
+        "options": {
+          "google": "جوجل",
+          "linkedin": "لينكد إن",
+          "instagram": "إنستغرام",
+          "tiktok": "تيك توك",
+          "facebook": "فيسبوك",
+          "wordOfMouth": "التوصية الشخصية",
+          "salesman": "مندوب مبيعات"
+        }
+      },
+      "salesman": {
+        "label": "اختر مندوب المبيعات",
+        "placeholder": "اختر المندوب الذي ساعدك"
       }
     },
     "menuUpload": {

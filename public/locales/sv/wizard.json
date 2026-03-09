@@ -401,6 +401,25 @@
       "hours": {
         "label": "Öppettider", "hint": "Ange din restaurangs schema", "closed": "Stängt", "open": "Öppna", "close": "Stäng",
         "days": { "monday": "Måndag", "tuesday": "Tisdag", "wednesday": "Onsdag", "thursday": "Torsdag", "friday": "Fredag", "saturday": "Lördag", "sunday": "Söndag" }
+      },
+      "referral": {
+        "label": "Hur hörde du talas om oss?",
+        "hint": "Hjälp oss förstå hur du hittade HelmiesBites",
+        "placeholder": "Välj ett alternativ",
+        "required": "Obligatoriskt",
+        "options": {
+          "google": "Google",
+          "linkedin": "LinkedIn",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "wordOfMouth": "Mun till mun",
+          "salesman": "Säljare"
+        }
+      },
+      "salesman": {
+        "label": "Välj säljare",
+        "placeholder": "Välj säljaren som hjälpte dig"
       }
     },
     "menuUpload": {

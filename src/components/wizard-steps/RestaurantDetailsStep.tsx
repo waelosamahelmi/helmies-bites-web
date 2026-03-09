@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Store, MapPin, Phone, Clock, Plus, Minus, UtensilsCrossed } from 'lucide-react';
+import { Store, MapPin, Phone, Clock, Plus, Minus, UtensilsCrossed, HelpCircle, Users } from 'lucide-react';
 
 interface Props {
   data: any;
@@ -18,6 +18,15 @@ const DEFAULT_HOURS = DAY_KEYS.map((day) => ({
 
 const cuisineKeys = ['finnish', 'italian', 'chinese', 'indian', 'thai', 'japanese', 'burger', 'pizza', 'kebab', 'mexican', 'sushi', 'other'] as const;
 
+const referralSourceKeys = ['google', 'linkedin', 'instagram', 'tiktok', 'facebook', 'wordOfMouth', 'salesman'] as const;
+
+const salesmenList = [
+  { id: 'pekka', name: 'Pekka Mäntylä', email: 'pekka.mantyla@gmail.com' },
+  { id: 'reijo', name: 'Reijo Vilkman', email: 'reijo@suomenteippipaino.com' },
+  { id: 'wael', name: 'Wael Helmi', email: 'wael@helmies.fi' },
+  { id: 'nagham', name: 'Nagham Alaa', email: 'nagham@helmies.fi' },
+] as const;
+
 export function RestaurantDetailsStep({ data, onUpdate }: Props) {
   const { t } = useTranslation('wizard');
   const [formData, setFormData] = useState({
@@ -28,6 +37,8 @@ export function RestaurantDetailsStep({ data, onUpdate }: Props) {
     postalCode: data.postalCode || '',
     city: data.city || '',
     openingHours: data.openingHours || DEFAULT_HOURS,
+    referralSource: data.referralSource || '',
+    selectedSalesman: data.selectedSalesman || '',
   });
 
   const handleChange = (field: string, value: any) => {
@@ -214,6 +225,57 @@ export function RestaurantDetailsStep({ data, onUpdate }: Props) {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* How did you hear about us? */}
+      <div className="glass-card rounded-2xl p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="feature-icon w-10 h-10">
+            <HelpCircle className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <label className="block text-sm font-bold text-white">{t('getStarted.restaurant.referral.label')}</label>
+            <p className="text-xs text-white/50">{t('getStarted.restaurant.referral.hint')}</p>
+          </div>
+          <span className="ml-auto badge text-xs">{t('getStarted.restaurant.referral.required')}</span>
+        </div>
+        <select
+          value={formData.referralSource}
+          onChange={(e) => {
+            handleChange('referralSource', e.target.value);
+            if (e.target.value !== 'salesman') {
+              handleChange('selectedSalesman', '');
+            }
+          }}
+          className="input-modern w-full"
+        >
+          <option value="">{t('getStarted.restaurant.referral.placeholder')}</option>
+          {referralSourceKeys.map((key) => (
+            <option key={key} value={key}>{t(`getStarted.restaurant.referral.options.${key}`)}</option>
+          ))}
+        </select>
+
+        {/* Salesman Selection - Only show when salesman is selected */}
+        {formData.referralSource === 'salesman' && (
+          <div className="mt-4">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="feature-icon w-8 h-8">
+                <Users className="w-4 h-4 text-white" />
+              </div>
+              <label className="block text-sm font-bold text-white">{t('getStarted.restaurant.salesman.label')}</label>
+            </div>
+            <select
+              value={formData.selectedSalesman}
+              onChange={(e) => handleChange('selectedSalesman', e.target.value)}
+              className="input-modern w-full"
+            >
+              <option value="">{t('getStarted.restaurant.salesman.placeholder')}</option>
+              {salesmenList.map((salesman) => (
+                <option key={salesman.id} value={salesman.id}>{salesman.name}</option>
+              ))}
+            </select>
+          </div>
+        )}
       </div>
     </div>
   );

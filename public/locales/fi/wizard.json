@@ -401,6 +401,25 @@
       "hours": {
         "label": "Aukioloajat", "hint": "Aseta ravintolasi aikataulu", "closed": "Suljettu", "open": "Avaa", "close": "Sulje",
         "days": { "monday": "Maanantai", "tuesday": "Tiistai", "wednesday": "Keskiviikko", "thursday": "Torstai", "friday": "Perjantai", "saturday": "Lauantai", "sunday": "Sunnuntai" }
+      },
+      "referral": {
+        "label": "Mistä kuulit meistä?",
+        "hint": "Auta meitä ymmärtämään, miten löysit HelmiesBitesin",
+        "placeholder": "Valitse vaihtoehto",
+        "required": "Pakollinen",
+        "options": {
+          "google": "Google",
+          "linkedin": "LinkedIn",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "wordOfMouth": "Puskaradio",
+          "salesman": "Myyjä"
+        }
+      },
+      "salesman": {
+        "label": "Valitse myyjä",
+        "placeholder": "Valitse myyjä, joka auttoi sinua"
       }
     },
     "menuUpload": {

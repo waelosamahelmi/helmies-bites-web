@@ -35,7 +35,10 @@ export function StartWizard() {
       case 'plan':
         return !!wizardData.plan;
       case 'restaurant':
-        return !!(wizardData.restaurantName && wizardData.city);
+        // Require referralSource, and if salesman, require selectedSalesman
+        const hasReferral = !!wizardData.referralSource;
+        const salesmanValid = wizardData.referralSource !== 'salesman' || !!wizardData.selectedSalesman;
+        return !!(wizardData.restaurantName && wizardData.city && hasReferral && salesmanValid);
       default:
         return true;
     }
@@ -68,6 +71,15 @@ export function StartWizard() {
       // Prepare submission data (exclude File objects from JSON)
       const { _menuFile, ...submitData } = wizardData;
 
+      // Add salesman email info if applicable
+      if (submitData.referralSource === 'salesman' && submitData.selectedSalesman) {
+        const salesmanInfo = SALESMEN_EMAILS[submitData.selectedSalesman];
+        if (salesmanInfo) {
+          submitData.salesmanEmail = salesmanInfo.email;
+          submitData.salesmanName = salesmanInfo.name;
+        }
+      }
+
       const response = await fetch('/api/onboarding/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -84,7 +96,22 @@ export function StartWizard() {
       // Fallback: open mailto with the data
       const subject = encodeURIComponent(`New Restaurant Onboarding - ${wizardData.restaurantName || 'Unknown'}`);
       const body = encodeURIComponent(formatEmailBody(wizardData));
-      window.location.href = `mailto:info@helmies.fi?subject=${subject}&body=${body}`;
+      
+      // Build CC for salesman if applicable
+      let mailtoUrl = `mailto:info@helmies.fi`;
+      if (wizardData.referralSource === 'salesman' && wizardData.selectedSalesman) {
+        const salesmanInfo = SALESMEN_EMAILS[wizardData.selectedSalesman];
+        if (salesmanInfo) {
+          mailtoUrl += `?cc=${encodeURIComponent(salesmanInfo.email)}`;
+          mailtoUrl += `&subject=${subject}&body=${body}`;
+        } else {
+          mailtoUrl += `?subject=${subject}&body=${body}`;
+        }
+      } else {
+        mailtoUrl += `?subject=${subject}&body=${body}`;
+      }
+      
+      window.location.href = mailtoUrl;
       // Still navigate to success
       navigate('/success');
     } finally {
@@ -275,7 +302,29 @@ export function StartWizard() {
   );
 }
 
+const SALESMEN_EMAILS: Record<string, { name: string; email: string }> = {
+  pekka: { name: 'Pekka Mäntylä', email: 'pekka.mantyla@gmail.com' },
+  reijo: { name: 'Reijo Vilkman', email: 'reijo@suomenteippipaino.com' },
+  wael: { name: 'Wael Helmi', email: 'wael@helmies.fi' },
+  nagham: { name: 'Nagham Alaa', email: 'nagham@helmies.fi' },
+};
+
+const REFERRAL_LABELS: Record<string, string> = {
+  google: 'Google',
+  linkedin: 'LinkedIn',
+  instagram: 'Instagram',
+  tiktok: 'TikTok',
+  facebook: 'Facebook',
+  wordOfMouth: 'Word of Mouth',
+  salesman: 'Salesman',
+};
+
 function formatEmailBody(data: any): string {
+  const salesmanInfo = data.selectedSalesman && SALESMEN_EMAILS[data.selectedSalesman];
+  const referralText = data.referralSource === 'salesman' && salesmanInfo
+    ? `Salesman - ${salesmanInfo.name}`
+    : REFERRAL_LABELS[data.referralSource] || data.referralSource || 'N/A';
+
   const lines = [
     `Restaurant Name: ${data.restaurantName || 'N/A'}`,
     `Email: ${data.email || 'N/A'}`,
@@ -283,6 +332,8 @@ function formatEmailBody(data: any): string {
     `Cuisine: ${data.cuisine || 'N/A'}`,
     `Phone: ${data.phone || 'N/A'}`,
     `Address: ${data.street || ''}, ${data.postalCode || ''} ${data.city || ''}`,
+    '',
+    `How did they hear about us: ${referralText}`,
     '',
     'Opening Hours:',
   ];
@@ -306,3 +357,5 @@ function formatEmailBody(data: any): string {
 
   return lines.join('\n');
 }
+
+// Salesman notification email is sent server-side via /api/onboarding/submit

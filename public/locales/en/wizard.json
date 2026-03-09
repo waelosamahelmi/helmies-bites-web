@@ -488,6 +488,25 @@
           "saturday": "Saturday",
           "sunday": "Sunday"
         }
+      },
+      "referral": {
+        "label": "How did you hear about us?",
+        "hint": "Help us understand how you found HelmiesBites",
+        "placeholder": "Select an option",
+        "required": "Required",
+        "options": {
+          "google": "Google",
+          "linkedin": "LinkedIn",
+          "instagram": "Instagram",
+          "tiktok": "TikTok",
+          "facebook": "Facebook",
+          "wordOfMouth": "Word of Mouth",
+          "salesman": "Salesman"
+        }
+      },
+      "salesman": {
+        "label": "Select Salesman",
+        "placeholder": "Select the salesman who helped you"
       }
     },
     "menuUpload": {
