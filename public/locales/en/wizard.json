@@ -177,7 +177,7 @@
       "title": "Create a Unique AI Theme",
       "description": "Let our AI design a one-of-a-kind theme based on your restaurant's personality and cuisine",
       "generating": "Generating AI theme...",
-      "button": "Generate Unique Theme (\u20ac5)",
+      "button": "Generate Unique Theme (€5)",
       "selected": "AI theme selected"
     },
     "customizeLater": {
@@ -283,22 +283,22 @@
       },
       "cashOnDelivery": {
         "label": "Cash on Delivery",
-        "value": "\u20ac30/month",
+        "value": "€30/month",
         "description": "Accept cash payments on delivery"
       },
       "aiAssistant": {
         "label": "AI Assistant",
-        "value": "\u20ac10/month",
+        "value": "€10/month",
         "description": "Smart customer support AI"
       },
       "aiImages": {
         "label": "AI Menu Images",
-        "value": "\u20ac20",
+        "value": "€20",
         "description": "One-time fee for AI-generated food images"
       },
       "aiBranding": {
         "label": "AI Branding",
-        "value": "\u20ac5",
+        "value": "€5",
         "description": "One-time fee for AI-generated logo"
       },
       "oneTime": "One-time",
@@ -523,7 +523,8 @@
       "viewParsed": "View parsed items",
       "uploadDifferent": "Upload different menu",
       "skipNote": "Don't have a menu file ready? You can skip this step and add it later.",
-      "parseError": "Failed to parse menu. Please try again or upload a different file."
+      "parseError": "Failed to parse menu. Please try again or upload a different file.",
+      "successDescription": "Menu uploaded successfully! Our team will process it and set up your menu within 24 hours."
     },
     "review": {
       "heading": "Review Your Information",

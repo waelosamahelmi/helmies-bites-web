@@ -345,13 +345,31 @@
     "stepOf": "Vaihe {{current}} / {{total}}",
     "needHelp": "Tarvitsetko apua?",
     "steps": {
-      "email": { "title": "Sähköposti", "description": "Syötä yhteyssähköpostisi" },
-      "plan": { "title": "Valitse paketti", "description": "Valitse sinulle sopiva paketti" },
-      "restaurant": { "title": "Ravintolan tiedot", "description": "Kerro meille ravintolastasi" },
-      "menu": { "title": "Lataa ruokalista", "description": "Lataa ja jäsennä ruokalista tekoälyllä" },
-      "review": { "title": "Tarkista ja lähetä", "description": "Tarkista ja lähetä hakemuksesi" }
+      "email": {
+        "title": "Sähköposti",
+        "description": "Syötä yhteyssähköpostisi"
+      },
+      "plan": {
+        "title": "Valitse paketti",
+        "description": "Valitse sinulle sopiva paketti"
+      },
+      "restaurant": {
+        "title": "Ravintolan tiedot",
+        "description": "Kerro meille ravintolastasi"
+      },
+      "menu": {
+        "title": "Lataa ruokalista",
+        "description": "Lataa ja jäsennä ruokalista tekoälyllä"
+      },
+      "review": {
+        "title": "Tarkista ja lähetä",
+        "description": "Tarkista ja lähetä hakemuksesi"
+      }
     },
-    "nav": { "previous": "Edellinen", "nextStep": "Seuraava vaihe" },
+    "nav": {
+      "previous": "Edellinen",
+      "nextStep": "Seuraava vaihe"
+    },
     "email": {
       "heading": "Aloitetaan",
       "description": "Syötä sähköpostiosoitteesi aloittaaksesi ravintolasi verkkoläsnäolon.",
@@ -371,7 +389,16 @@
         "priceDetail": "per verkkotilaus",
         "subDetail": "€49 vähimmäiskuukausimaksu",
         "setup": "€0 asennus",
-        "features": { "1": "Täysi verkkosivurakentaja", "2": "Verkkotilausjärjestelmä", "3": "AI-ruokalistan tuonti", "4": "Stripe-maksut", "5": "Mobiilioptimoitu", "6": "Monikielinen (FI, EN, SV)", "7": "Ilmainen alidomain", "8": "Sähköpostituki" }
+        "features": {
+          "1": "Täysi verkkosivurakentaja",
+          "2": "Verkkotilausjärjestelmä",
+          "3": "AI-ruokalistan tuonti",
+          "4": "Stripe-maksut",
+          "5": "Mobiilioptimoitu",
+          "6": "Monikielinen (FI, EN, SV)",
+          "7": "Ilmainen alidomain",
+          "8": "Sähköpostituki"
+        }
       },
       "pro": {
         "name": "Pro",
@@ -379,7 +406,17 @@
         "priceDetail": "/kuukausi",
         "subDetail": "tai €1 390/vuosi (säästä 10%)",
         "setup": "€500 kertamaksu",
-        "features": { "1": "Kaikki Aloittelijassa", "2": "Ei transaktiomaksuja", "3": "Käteismaksut", "4": "AI-avustaja", "5": "Edistyneet analytiikka", "6": "Oma brändi ja domain", "7": "Prioriteettituki", "8": "Some-integraatio", "9": "Toimitusalueiden hallinta" }
+        "features": {
+          "1": "Kaikki Aloittelijassa",
+          "2": "Ei transaktiomaksuja",
+          "3": "Käteismaksut",
+          "4": "AI-avustaja",
+          "5": "Edistyneet analytiikka",
+          "6": "Oma brändi ja domain",
+          "7": "Prioriteettituki",
+          "8": "Some-integraatio",
+          "9": "Toimitusalueiden hallinta"
+        }
       },
       "annual": {
         "name": "Vuosittainen",
@@ -387,20 +424,70 @@
         "priceDetail": "/kk laskutetaan vuosittain",
         "subDetail": "€1 190 ensimmäinen vuosi",
         "setup": "€0 asennus",
-        "features": { "1": "Kaikki Prossa", "2": "€0 aloitusmaksu", "3": "Oma asiakasvastaava", "4": "Mukautetut integraatiot", "5": "Monipistepiste-tuki", "6": "SLA-takuu" }
+        "features": {
+          "1": "Kaikki Prossa",
+          "2": "€0 aloitusmaksu",
+          "3": "Oma asiakasvastaava",
+          "4": "Mukautetut integraatiot",
+          "5": "Monipistepiste-tuki",
+          "6": "SLA-takuu"
+        }
       }
     },
     "restaurant": {
-      "name": { "label": "Ravintolan nimi", "hint": "Ravintolasi virallinen nimi", "placeholder": "esim. Ravintola Helmies", "required": "Pakollinen" },
-      "cuisine": {
-        "label": "Keittiötyyppi", "hint": "Millaista ruokaa tarjoat?", "placeholder": "Valitse keittiötyyppi",
-        "options": { "finnish": "Suomalainen 🇫🇮", "italian": "Italialainen 🇮🇹", "chinese": "Kiinalainen 🇨🇳", "indian": "Intialainen 🇮🇳", "thai": "Thaimaalainen 🇹🇭", "japanese": "Japanilainen 🇯🇵", "burger": "Burgeri 🇺🇸", "pizza": "Pizza 🍕", "kebab": "Kebab 🇹🇷", "mexican": "Meksikolainen 🇲🇽", "sushi": "Sushi 🍣", "other": "Muu 🌍" }
+      "name": {
+        "label": "Ravintolan nimi",
+        "hint": "Ravintolasi virallinen nimi",
+        "placeholder": "esim. Ravintola Helmies",
+        "required": "Pakollinen"
       },
-      "phone": { "label": "Puhelinnumero", "hint": "Ravintolasi yhteystieto", "placeholder": "esim. +358 40 123 4567" },
-      "address": { "label": "Osoite", "hint": "Ravintolasi fyysinen osoite", "required": "Pakollinen", "street": "Katuosoite", "postalCode": "Postinumero", "city": "Kaupunki" },
+      "cuisine": {
+        "label": "Keittiötyyppi",
+        "hint": "Millaista ruokaa tarjoat?",
+        "placeholder": "Valitse keittiötyyppi",
+        "options": {
+          "finnish": "Suomalainen 🇫🇮",
+          "italian": "Italialainen 🇮🇹",
+          "chinese": "Kiinalainen 🇨🇳",
+          "indian": "Intialainen 🇮🇳",
+          "thai": "Thaimaalainen 🇹🇭",
+          "japanese": "Japanilainen 🇯🇵",
+          "burger": "Burgeri 🇺🇸",
+          "pizza": "Pizza 🍕",
+          "kebab": "Kebab 🇹🇷",
+          "mexican": "Meksikolainen 🇲🇽",
+          "sushi": "Sushi 🍣",
+          "other": "Muu 🌍"
+        }
+      },
+      "phone": {
+        "label": "Puhelinnumero",
+        "hint": "Ravintolasi yhteystieto",
+        "placeholder": "esim. +358 40 123 4567"
+      },
+      "address": {
+        "label": "Osoite",
+        "hint": "Ravintolasi fyysinen osoite",
+        "required": "Pakollinen",
+        "street": "Katuosoite",
+        "postalCode": "Postinumero",
+        "city": "Kaupunki"
+      },
       "hours": {
-        "label": "Aukioloajat", "hint": "Aseta ravintolasi aikataulu", "closed": "Suljettu", "open": "Avaa", "close": "Sulje",
-        "days": { "monday": "Maanantai", "tuesday": "Tiistai", "wednesday": "Keskiviikko", "thursday": "Torstai", "friday": "Perjantai", "saturday": "Lauantai", "sunday": "Sunnuntai" }
+        "label": "Aukioloajat",
+        "hint": "Aseta ravintolasi aikataulu",
+        "closed": "Suljettu",
+        "open": "Avaa",
+        "close": "Sulje",
+        "days": {
+          "monday": "Maanantai",
+          "tuesday": "Tiistai",
+          "wednesday": "Keskiviikko",
+          "thursday": "Torstai",
+          "friday": "Perjantai",
+          "saturday": "Lauantai",
+          "sunday": "Sunnuntai"
+        }
       },
       "referral": {
         "label": "Mistä kuulit meistä?",
@@ -436,7 +523,8 @@
       "viewParsed": "Näytä jäsennetyt tuotteet",
       "uploadDifferent": "Lataa eri ruokalista",
       "skipNote": "Ei ruokalistatiedostoa valmiina? Voit ohittaa tämän vaiheen ja lisätä sen myöhemmin.",
-      "parseError": "Ruokalistan jäsentäminen epäonnistui. Yritä uudelleen tai lataa eri tiedosto."
+      "parseError": "Ruokalistan jäsentäminen epäonnistui. Yritä uudelleen tai lataa eri tiedosto.",
+      "successDescription": "Ruokalista ladattu onnistuneesti! Tiimimme käsittelee sen ja asettaa ruokalistasi 24 tunnin sisällä."
     },
     "review": {
       "heading": "Tarkista tietosi",
@@ -458,7 +546,11 @@
       "privacyPolicy": "Tietosuojakäytäntö",
       "submitting": "Lähetetään...",
       "submitApplication": "Lähetä hakemus",
-      "planNames": { "starter": "Aloittelija (5% per tilaus, €49 min/kk)", "pro": "Pro (€129/kk)", "annual": "Vuosittainen (€99/kk laskutetaan vuosittain)" }
+      "planNames": {
+        "starter": "Aloittelija (5% per tilaus, €49 min/kk)",
+        "pro": "Pro (€129/kk)",
+        "annual": "Vuosittainen (€99/kk laskutetaan vuosittain)"
+      }
     },
     "success": {
       "title": "Hakemus vastaanotettu!",
