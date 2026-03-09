@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Upload, Loader2, FileText, Image as ImageIcon, CheckCircle, X } from 'lucide-react';
+import { Upload, Loader2, FileText, Image as ImageIcon, CheckCircle, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface Props {
   data: any;
@@ -14,7 +14,13 @@ export function MenuUploadParseStep({ data, onUpdate }: Props) {
   const [parsedMenu, setParsedMenu] = useState<any>(data.parsedMenu || null);
   const [isDragging, setIsDragging] = useState(false);
   const [parseError, setParseError] = useState('');
+  const [showDetails, setShowDetails] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const totalItems = parsedMenu?.categories?.reduce(
+    (sum: number, cat: any) => sum + (cat.items?.length || 0), 0
+  ) || 0;
+  const totalCategories = parsedMenu?.categories?.length || 0;
 
   const handleFileSelect = async (selectedFile: File) => {
     setFile(selectedFile);
@@ -22,34 +28,41 @@ export function MenuUploadParseStep({ data, onUpdate }: Props) {
     setParseError('');
     onUpdate({ _menuFile: selectedFile, parsedMenu: null });
     
-    // Auto-start parsing
+    // Auto-start parsing with AI
     setIsParsing(true);
     
     try {
       let menuData: string;
+      let contentType: string;
 
       if (selectedFile.type.startsWith('image/') || selectedFile.type === 'application/pdf') {
         menuData = await fileToBase64(selectedFile);
+        contentType = 'image';
       } else {
         menuData = await selectedFile.text();
+        contentType = 'text';
       }
 
-      // For now, store the file and mark as "pending manual processing"
-      // The actual AI parsing will be done server-side after submission
-      // Show a simulated success for UX
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate processing
+      // Call OpenRouter AI to parse the menu
+      const response = await fetch('/api/ai/parse-menu', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ menuData, contentType }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to parse menu');
+      }
+
+      const result = await response.json();
+      const menu = result.data || result;
       
-      const mockParsedMenu = {
-        status: 'pending',
-        message: 'Menu uploaded successfully. Our team will process it within 24 hours.',
-        categories: []
-      };
-      
-      setParsedMenu(mockParsedMenu);
-      onUpdate({ parsedMenu: mockParsedMenu, _menuFile: selectedFile, menuBase64: menuData });
+      setParsedMenu(menu);
+      onUpdate({ parsedMenu: menu, _menuFile: selectedFile });
     } catch (error) {
       console.error('Menu processing failed:', error);
-      setParseError('Failed to process menu. Please try again.');
+      setParseError(t('getStarted.menuUpload.parseError'));
     } finally {
       setIsParsing(false);
     }
@@ -183,7 +196,7 @@ export function MenuUploadParseStep({ data, onUpdate }: Props) {
         )}
       </div>
 
-      {/* Upload Success */}
+      {/* Parsed Result */}
       {parsedMenu && (
         <div className="glass-card rounded-2xl p-6 border border-green-500/20">
           <div className="flex items-start gap-4">
@@ -193,8 +206,42 @@ export function MenuUploadParseStep({ data, onUpdate }: Props) {
             <div className="flex-1">
               <h3 className="font-bold text-green-400 text-lg mb-2">{t('getStarted.menuUpload.successTitle')}</h3>
               <p className="text-white/60 mb-4">
-                {t('getStarted.menuUpload.successDescription')}
+                {totalItems > 0 
+                  ? t('getStarted.menuUpload.itemsFound', { items: totalItems, categories: totalCategories })
+                  : t('getStarted.menuUpload.successDescription')
+                }
               </p>
+
+              {totalItems > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setShowDetails(!showDetails)}
+                  className="flex items-center gap-2 text-sm text-[#FF7A00] font-semibold hover:underline mb-4"
+                >
+                  {showDetails ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+                  {showDetails ? t('getStarted.menuUpload.hideDetails') : t('getStarted.menuUpload.viewParsed')}
+                </button>
+              )}
+
+              {showDetails && parsedMenu.categories && (
+                <div className="mt-4 space-y-4 max-h-96 overflow-y-auto pr-2">
+                  {parsedMenu.categories.map((cat: any, catIdx: number) => (
+                    <div key={catIdx} className="bg-white/5 rounded-xl p-4">
+                      <h4 className="font-bold text-white mb-2">{cat.name || cat.name_en || `Category ${catIdx + 1}`}</h4>
+                      <div className="space-y-2">
+                        {cat.items?.map((item: any, itemIdx: number) => (
+                          <div key={itemIdx} className="flex justify-between items-center text-sm">
+                            <span className="text-white/70">{item.name || item.name_en}</span>
+                            <span className="text-[#FF7A00] font-semibold">
+                              {item.price ? `€${typeof item.price === 'number' ? item.price.toFixed(2) : item.price}` : '—'}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               <div className="mt-4 flex gap-2">
                 <button
