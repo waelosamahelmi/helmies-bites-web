@@ -7,7 +7,10 @@
     "faq": "FAQ",
     "tryDemo": "Try Demo",
     "launchingDate": "Launching Mar 5",
-    "launchingDateFull": "Launching March 5th"
+    "launchingDateFull": "Launching March 5th",
+    "getStarted": "Get Started",
+    "getStartedFree": "Get Started Free",
+    "getStartedNow": "Get Started Now"
   },
   "footer": {
     "product": "Product",

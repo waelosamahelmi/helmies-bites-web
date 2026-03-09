@@ -14,6 +14,59 @@
     "satisfactionRate": "Nöjdhetsgrad",
     "averageSetup": "Genomsnittlig installation"
   },
+  "aiMenu": {
+    "badge": "AI-drivna",
+    "title": "Importera din meny",
+    "titleLine2": "med AI-magi",
+    "description": "Ladda upp din meny som PDF eller foto så extraherar vår AI alla rätter, priser, beskrivningar och kategorier på sekunder.",
+    "steps": {
+      "upload": "Ladda upp din meny som PDF, bild eller URL",
+      "extract": "AI extraherar rätter, priser och beskrivningar",
+      "categorize": "Automatiskt kategoriserat och klart"
+    },
+    "dropHere": "Släpp din meny här",
+    "fileTypes": "PDF, JPG, PNG eller klistra in en URL",
+    "items": {
+      "0": { "name": "Margherita Pizza", "desc": "Färsk tomat, mozzarella, basilika" },
+      "1": { "name": "Pasta Carbonara", "desc": "Krämig sås, pancetta, parmesan" },
+      "2": { "name": "Caesarsallad", "desc": "Romansallat, krutonger, parmesandressing" }
+    }
+  },
+  "themes": {
+    "subtitle": "Vackra teman",
+    "title": "Välj ditt perfekta utseende",
+    "description": "Fantastiska färdiga teman designade för restauranger. Ett klick att applicera, helt anpassningsbara.",
+    "presets": {
+      "midnight": { "name": "Midnight", "label": "Mörk & Elegant" },
+      "rustic": { "name": "Rustic", "label": "Varm & Mysig" },
+      "fresh": { "name": "Fresh", "label": "Ren & Modern" },
+      "royal": { "name": "Royal", "label": "Djärv & Lyxig" }
+    }
+  },
+  "ordering": {
+    "badge": "Beställning & Betalning",
+    "title": "Ta emot beställningar",
+    "titleLine2": "och betalningar direkt",
+    "mockup": {
+      "restaurantName": "Helmie's Kitchen",
+      "domain": "helmies.fi/restaurang",
+      "items": "artiklar"
+    },
+    "features": {
+      "mobileOptimized": {
+        "title": "Mobiloptimerad",
+        "desc": "Perfekt på alla enheter — 70% av beställningarna kommer från mobilen"
+      },
+      "realTimeNotifications": {
+        "title": "Realtidsnotiser",
+        "desc": "Omedelbara aviseringar för nya beställningar, uppdateringar och recensioner"
+      },
+      "analyticsReports": {
+        "title": "Analys & Rapporter",
+        "desc": "Spåra intäkter, populära rätter och kundinsikter"
+      }
+    }
+  },
   "features": {
     "subtitle": "Kraftfulla funktioner",
     "title": "Allt du behöver",
@@ -88,6 +141,15 @@
     "rating": "4,9/5 Betyg",
     "reviews": "500+ omdömen",
     "happyOwners": "Nöjda ägare"
+  },
+  "goLive": {
+    "title": "Redo att gå live?",
+    "subtitle": "Lansera din restaurangwebbplats idag. Installationen tar bara 5 minuter, inga tekniska kunskaper krävs.",
+    "pricing": {
+      "starter": { "label": "Starter", "price": "5%", "detail": "per beställning" },
+      "pro": { "label": "Pro", "price": "€129", "detail": "per månad" },
+      "annual": { "label": "Årsvis", "price": "€99", "detail": "per månad" }
+    }
   },
   "cta": {
     "subtitle": "Kommer snart",

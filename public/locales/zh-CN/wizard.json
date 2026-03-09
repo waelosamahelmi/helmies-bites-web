@@ -336,5 +336,126 @@
       "kebab": "烤肉",
       "mexican": "墨西哥菜"
     }
+  },
+  "getStarted": {
+    "backToHome": "返回首页",
+    "subtitle": "开始使用",
+    "title": "设置您的餐厅",
+    "description": "完成以下步骤让您的餐厅上线。只需几分钟。",
+    "stepOf": "第 {{current}} 步，共 {{total}} 步",
+    "needHelp": "需要帮助？",
+    "steps": {
+      "email": { "title": "电子邮件", "description": "输入您的联系邮箱" },
+      "plan": { "title": "选择套餐", "description": "选择适合您的套餐" },
+      "restaurant": { "title": "餐厅信息", "description": "告诉我们关于您的餐厅" },
+      "menu": { "title": "上传菜单", "description": "上传菜单并用AI解析" },
+      "review": { "title": "审核并提交", "description": "审核并提交您的申请" }
+    },
+    "nav": { "previous": "上一步", "nextStep": "下一步" },
+    "email": {
+      "heading": "让我们开始吧",
+      "description": "输入您的电子邮件地址，开始建立餐厅的在线形象。",
+      "label": "电子邮件地址",
+      "hint": "我们将用此邮箱通知您设置进度",
+      "placeholder": "your@email.com",
+      "invalidEmail": "请输入有效的电子邮件地址",
+      "looksGood": "看起来不错！点击下一步继续。"
+    },
+    "plans": {
+      "heading": "选择您的套餐",
+      "description": "选择最适合您餐厅的套餐。您随时可以升级。",
+      "mostPopular": "最受欢迎",
+      "starter": {
+        "name": "入门版",
+        "price": "5%",
+        "priceDetail": "每笔在线订单",
+        "subDetail": "€49 最低月费",
+        "setup": "€0 设置费",
+        "features": { "1": "完整网站构建器", "2": "在线订单系统", "3": "AI菜单导入", "4": "Stripe支付", "5": "移动端优化", "6": "多语言 (FI, EN, SV)", "7": "免费子域名", "8": "邮件支持" }
+      },
+      "pro": {
+        "name": "专业版",
+        "price": "€129",
+        "priceDetail": "/月",
+        "subDetail": "或 €1,390/年（省10%）",
+        "setup": "€500 一次性设置费",
+        "features": { "1": "入门版所有功能", "2": "零交易手续费", "3": "现金和POS支付", "4": "AI助手", "5": "高级分析", "6": "自定义品牌和域名", "7": "优先支持", "8": "社交媒体集成", "9": "配送区域管理" }
+      },
+      "annual": {
+        "name": "年度版",
+        "price": "€99",
+        "priceDetail": "/月 按年计费",
+        "subDetail": "€1,190 第一年",
+        "setup": "€0 设置费",
+        "features": { "1": "专业版所有功能", "2": "€0 设置费", "3": "专属客户经理", "4": "定制集成", "5": "多门店支持", "6": "SLA保障" }
+      }
+    },
+    "restaurant": {
+      "name": { "label": "餐厅名称", "hint": "您餐厅的正式名称", "placeholder": "例如 Helmies餐厅", "required": "必填" },
+      "cuisine": {
+        "label": "菜系类型", "hint": "您提供什么类型的食物？", "placeholder": "选择菜系类型",
+        "options": { "finnish": "芬兰菜 🇫🇮", "italian": "意大利菜 🇮🇹", "chinese": "中国菜 🇨🇳", "indian": "印度菜 🇮🇳", "thai": "泰国菜 🇹🇭", "japanese": "日本菜 🇯🇵", "burger": "汉堡 🇺🇸", "pizza": "披萨 🍕", "kebab": "烤肉 🇹🇷", "mexican": "墨西哥菜 🇲🇽", "sushi": "寿司 🍣", "other": "其他 🌍" }
+      },
+      "phone": { "label": "电话号码", "hint": "餐厅联系电话", "placeholder": "例如 +358 40 123 4567" },
+      "address": { "label": "地址", "hint": "您餐厅的实际地址", "required": "必填", "street": "街道地址", "postalCode": "邮编", "city": "城市" },
+      "hours": {
+        "label": "营业时间", "hint": "设置餐厅的营业时间", "closed": "休息", "open": "营业", "close": "关闭",
+        "days": { "monday": "周一", "tuesday": "周二", "wednesday": "周三", "thursday": "周四", "friday": "周五", "saturday": "周六", "sunday": "周日" }
+      }
+    },
+    "menuUpload": {
+      "heading": "上传您的菜单",
+      "description": "上传菜单的照片或PDF，我们的AI将自动提取所有菜品、分类和价格。",
+      "clickToUpload": "点击上传或拖拽文件",
+      "fileTypes": "PDF, PNG, JPG 或 WebP",
+      "removeFile": "删除文件",
+      "parseButton": "用AI解析菜单",
+      "parsing": "AI正在解析菜单...",
+      "successTitle": "菜单解析成功！",
+      "itemsFound": "在 {{categories}} 个分类中找到 {{items}} 个菜品",
+      "hideDetails": "隐藏详情",
+      "viewParsed": "查看解析的菜品",
+      "uploadDifferent": "上传其他菜单",
+      "skipNote": "没有准备好菜单文件？您可以跳过此步骤，稍后添加。",
+      "parseError": "菜单解析失败。请重试或上传其他文件。"
+    },
+    "review": {
+      "heading": "审核您的信息",
+      "description": "请在提交前检查以下所有信息。",
+      "contactEmail": "联系邮箱",
+      "selectedPlan": "已选套餐",
+      "restaurantSection": "餐厅",
+      "cuisine": "菜系",
+      "addressSection": "地址",
+      "openingHours": "营业时间",
+      "closedLabel": "休息",
+      "menuSection": "菜单",
+      "menuItemsCount": "{{categories}} 个分类中共 {{items}} 个菜品",
+      "menuNotParsed": "菜单已上传但尚未解析",
+      "noMenu": "未上传菜单（可以稍后添加）",
+      "agreement": "我确认提供的信息准确无误，并同意",
+      "termsOfService": "服务条款",
+      "and": "和",
+      "privacyPolicy": "隐私政策",
+      "submitting": "正在提交...",
+      "submitApplication": "提交申请",
+      "planNames": { "starter": "入门版（5%/订单，€49 最低/月）", "pro": "专业版（€129/月）", "annual": "年度版（€99/月 按年计费）" }
+    },
+    "success": {
+      "title": "申请已收到！",
+      "subtitle": "我们已收到您的信息，处理完您的系统后将与您联系。",
+      "whatNext": "接下来会发生什么？",
+      "step1Title": "我们审核您的信息",
+      "step1Desc": "我们的团队将审核您的餐厅详情和菜单。",
+      "step2Title": "我们设置您的系统",
+      "step2Desc": "我们将配置您的网站、菜单和订单系统。",
+      "step3Title": "您正式上线！",
+      "step3Desc": "我们将发送您的登录凭据和网站URL。",
+      "processingTime": "预计处理时间：1个工作日",
+      "contactNote": "我们将通过您提供的邮箱与您联系。",
+      "backToHome": "返回首页",
+      "contactUs": "联系我们",
+      "questions": "有问题？请联系我们"
+    }
   }
 }

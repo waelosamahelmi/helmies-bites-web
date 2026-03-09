@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
-import { LaunchCountdown } from '../components/LaunchCountdown';
+
 
 /* ============================================================================
    Types
@@ -353,7 +353,7 @@ export function Pricing() {
 
                 {/* CTA Button */}
                 <div className="mb-6">
-                  <LaunchCountdown compact />
+                  <Link to="/get-started" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white text-sm font-bold hover:scale-105 transition-all duration-300">{t('nav.getStarted', { ns: 'common' })}</Link>
                 </div>
 
                 {/* Feature list */}
@@ -424,7 +424,7 @@ export function Pricing() {
 
                 {/* CTA Button */}
                 <div className="mb-6">
-                  <LaunchCountdown compact />
+                  <Link to="/get-started" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white text-sm font-bold hover:scale-105 transition-all duration-300">{t('nav.getStarted', { ns: 'common' })}</Link>
                 </div>
 
                 {/* Feature list in two columns on larger screens */}
@@ -508,7 +508,7 @@ export function Pricing() {
                     ))}
                   </div>
 
-                  <LaunchCountdown compact />
+                  <Link to="/get-started" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white text-sm font-bold hover:scale-105 transition-all duration-300">{t('nav.getStarted', { ns: 'common' })}</Link>
                 </div>
 
                 {/* Right side: Features in two columns */}
@@ -751,7 +751,7 @@ export function Pricing() {
               />
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-                <LaunchCountdown showRestaurants />
+                <Link to="/get-started" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white font-bold text-lg hover:scale-105 transition-all duration-300">{t('nav.getStartedNow', { ns: 'common' })}</Link>
                 <Link
                   to="/features"
                   className="btn-secondary"

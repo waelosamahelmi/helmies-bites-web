@@ -7,7 +7,10 @@
     "faq": "常见问题",
     "tryDemo": "试用演示",
     "launchingDate": "3月5日上线",
-    "launchingDateFull": "3月5日正式上线"
+    "launchingDateFull": "3月5日正式上线",
+    "getStarted": "开始使用",
+    "getStartedFree": "免费开始",
+    "getStartedNow": "立即开始"
   },
   "footer": {
     "product": "产品",

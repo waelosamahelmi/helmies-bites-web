@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -31,7 +32,7 @@ import {
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
 import { AivoraButton } from '../components/AivoraButton';
-import { LaunchCountdown } from '../components/LaunchCountdown';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -247,7 +248,7 @@ export function Features() {
           title: t('categories.onlineOrdering.features.smartShoppingCart.title'),
           description: t('categories.onlineOrdering.features.smartShoppingCart.description'),
           benefit: t('categories.onlineOrdering.features.smartShoppingCart.benefit'),
-          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
         },
         {
           icon: <CreditCard className="h-5 w-5" />,
@@ -432,7 +433,7 @@ export function Features() {
           title: t('categories.marketing.features.promotionsDiscounts.title'),
           description: t('categories.marketing.features.promotionsDiscounts.description'),
           benefit: t('categories.marketing.features.promotionsDiscounts.benefit'),
-          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80',
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
         },
         {
           icon: <Gift className="h-5 w-5" />,
@@ -593,7 +594,7 @@ export function Features() {
 
               <ScrollReveal direction="up" delay={0.7}>
                 <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
-                  <LaunchCountdown compact />
+                  <Link to="/get-started" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white font-bold hover:scale-105 transition-all duration-300">{t('nav.getStarted', { ns: 'common' })}</Link>
                   <a href="#features" className="btn-secondary flex items-center gap-3">
                     {t('hero.exploreFeatures')}
                   </a>
@@ -861,7 +862,7 @@ export function Features() {
                 icon={<Zap className="h-4 w-4" />}
               />
               <div className="mt-10">
-                <LaunchCountdown showRestaurants />
+                <Link to="/get-started" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white font-bold text-lg hover:scale-105 transition-all duration-300">{t('nav.getStartedNow', { ns: 'common' })}</Link>
               </div>
             </ScrollReveal>
 

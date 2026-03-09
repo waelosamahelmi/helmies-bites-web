@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
 import { Link } from 'react-router-dom';
-import { LaunchCountdown } from '../components/LaunchCountdown';
+
 import {
   Heart,
   Target,
@@ -365,7 +365,7 @@ export function About() {
                 <strong className="text-[#FF7A00]">{t('cta.firstRestaurants')}</strong> {t('cta.descriptionEnd')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <LaunchCountdown compact />
+                <Link to="/get-started" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white font-bold hover:scale-105 transition-all duration-300">{t('nav.getStarted', { ns: 'common' })}</Link>
                 <Link to="/contact" className="btn-secondary">{t('cta.contactUs')}</Link>
               </div>
             </ScrollReveal>

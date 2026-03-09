@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import { Menu, X, Rocket, ExternalLink } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '../i18n/LanguageSwitcher';
@@ -76,18 +76,11 @@ export function Navbar() {
           {/* Desktop Right Actions */}
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF7A00]/10 border border-[#FF7A00]/20">
-              <Rocket className="h-4 w-4 text-[#FF7A00]" />
-              <span className="text-sm font-bold text-[#FF7A00]">{t('nav.launchingDate')}</span>
-            </div>
             <a
-              href="https://plateos.fi/demo"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/get-started"
               className="flex items-center gap-2 px-5 py-2 rounded-full bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300 hover:scale-105"
             >
-              {t('nav.tryDemo')}
-              <ExternalLink className="h-3.5 w-3.5" />
+              {t('nav.getStarted')}
             </a>
           </div>
 
@@ -122,18 +115,11 @@ export function Navbar() {
                 </a>
               ))}
               <LanguageSwitcher mobile />
-              <div className="mx-6 mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00]/10 border border-[#FF7A00]/20">
-                <Rocket className="h-4 w-4 text-[#FF7A00]" />
-                <span className="text-sm font-bold text-[#FF7A00]">{t('nav.launchingDateFull')}</span>
-              </div>
               <a
-                href="https://plateos.fi/demo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-6 mt-2 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300"
+                href="/get-started"
+                className="mx-6 mt-4 flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FF7A00] text-white text-sm font-bold hover:bg-[#CC6200] transition-all duration-300"
               >
-                {t('nav.tryDemo')}
-                <ExternalLink className="h-3.5 w-3.5" />
+                {t('nav.getStarted')}
               </a>
             </div>
           </div>

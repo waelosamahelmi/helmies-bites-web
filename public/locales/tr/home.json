@@ -14,6 +14,59 @@
     "satisfactionRate": "Memnuniyet Oranı",
     "averageSetup": "Ortalama Kurulum"
   },
+  "aiMenu": {
+    "badge": "Yapay Zeka Destekli",
+    "title": "Menünüzü İçe Aktarın",
+    "titleLine2": "Yapay Zeka Sihri ile",
+    "description": "Menü PDF'inizi veya fotoğrafınızı yükleyin, yapay zekamız tüm öğeleri, fiyatları, açıklamaları ve kategorileri saniyeler içinde çıkarsın.",
+    "steps": {
+      "upload": "Menü PDF'inizi, görselinizi veya URL'nizi yükleyin",
+      "extract": "Yapay zeka öğeleri, fiyatları ve açıklamaları çıkarır",
+      "categorize": "Otomatik kategorize edilmiş ve kullanıma hazır"
+    },
+    "dropHere": "Menünüzü buraya bırakın",
+    "fileTypes": "PDF, JPG, PNG veya URL yapıştırın",
+    "items": {
+      "0": { "name": "Margherita Pizza", "desc": "Taze domates, mozzarella, fesleğen" },
+      "1": { "name": "Pasta Carbonara", "desc": "Kremalı sos, pancetta, parmesan" },
+      "2": { "name": "Sezar Salatası", "desc": "Marul, kruton, parmesan sosu" }
+    }
+  },
+  "themes": {
+    "subtitle": "Şık Temalar",
+    "title": "Mükemmel Görünümünüzü Seçin",
+    "description": "Restoranlar için tasarlanmış etkileyici hazır temalar. Tek tıkla uygulayın, tamamen özelleştirilebilir.",
+    "presets": {
+      "midnight": { "name": "Midnight", "label": "Koyu ve Zarif" },
+      "rustic": { "name": "Rustic", "label": "Sıcak ve Samimi" },
+      "fresh": { "name": "Fresh", "label": "Temiz ve Modern" },
+      "royal": { "name": "Royal", "label": "Cesur ve Lüks" }
+    }
+  },
+  "ordering": {
+    "badge": "Sipariş ve Ödeme",
+    "title": "Sipariş Kabul Edin",
+    "titleLine2": "ve Anında Ödeme Alın",
+    "mockup": {
+      "restaurantName": "Helmie's Kitchen",
+      "domain": "helmies.fi/restoran",
+      "items": "ürün"
+    },
+    "features": {
+      "mobileOptimized": {
+        "title": "Mobil Uyumlu",
+        "desc": "Her cihazda mükemmel — siparişlerin %70'i mobil cihazdan geliyor"
+      },
+      "realTimeNotifications": {
+        "title": "Anlık Bildirimler",
+        "desc": "Yeni siparişler, güncellemeler ve değerlendirmeler için anlık uyarılar"
+      },
+      "analyticsReports": {
+        "title": "Analitik ve Raporlar",
+        "desc": "Gelirleri, popüler ürünleri ve müşteri verilerini takip edin"
+      }
+    }
+  },
   "features": {
     "subtitle": "Güçlü Özellikler",
     "title": "İhtiyacınız Olan Her Şey",
@@ -88,6 +141,15 @@
     "rating": "4.9/5 Puan",
     "reviews": "500+ değerlendirme",
     "happyOwners": "Mutlu İşletme Sahipleri"
+  },
+  "goLive": {
+    "title": "Yayına geçmeye hazır mısınız?",
+    "subtitle": "Restoranınızın web sitesini bugün yayınlayın. Kurulum sadece 5 dakika sürer, teknik bilgi gerektirmez.",
+    "pricing": {
+      "starter": { "label": "Starter", "price": "%5", "detail": "sipariş başına" },
+      "pro": { "label": "Pro", "price": "€129", "detail": "aylık" },
+      "annual": { "label": "Yıllık", "price": "€99", "detail": "aylık" }
+    }
   },
   "cta": {
     "subtitle": "Çok Yakında",

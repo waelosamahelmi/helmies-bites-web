@@ -14,6 +14,59 @@
     "satisfactionRate": "满意度",
     "averageSetup": "平均设置时间"
   },
+  "aiMenu": {
+    "badge": "AI 驱动",
+    "title": "导入您的菜单",
+    "titleLine2": "AI 智能处理",
+    "description": "上传您的菜单 PDF 或照片，我们的 AI 将在数秒内提取所有菜品、价格、描述和分类。",
+    "steps": {
+      "upload": "上传菜单 PDF、图片或 URL",
+      "extract": "AI 提取菜品、价格和描述",
+      "categorize": "自动分类，即刻可用"
+    },
+    "dropHere": "将菜单拖放到此处",
+    "fileTypes": "PDF、JPG、PNG 或粘贴 URL",
+    "items": {
+      "0": { "name": "玛格丽特披萨", "desc": "新鲜番茄、马苏里拉奶酪、罗勒" },
+      "1": { "name": "奶油培根意面", "desc": "奶油酱、培根、帕玛森" },
+      "2": { "name": "凯撒沙拉", "desc": "罗马生菜、面包丁、帕玛森酱" }
+    }
+  },
+  "themes": {
+    "subtitle": "精美主题",
+    "title": "选择完美外观",
+    "description": "专为餐厅设计的精美预置主题。一键应用，完全可自定义。",
+    "presets": {
+      "midnight": { "name": "Midnight", "label": "深色优雅" },
+      "rustic": { "name": "Rustic", "label": "温馨舒适" },
+      "fresh": { "name": "Fresh", "label": "清新现代" },
+      "royal": { "name": "Royal", "label": "大胆奢华" }
+    }
+  },
+  "ordering": {
+    "badge": "订单与支付",
+    "title": "接受订单",
+    "titleLine2": "即时收款",
+    "mockup": {
+      "restaurantName": "Helmie 厨房",
+      "domain": "helmies.fi/restaurant",
+      "items": "件商品"
+    },
+    "features": {
+      "mobileOptimized": {
+        "title": "移动端优化",
+        "desc": "在所有设备上完美呈现 — 70% 的订单来自移动端"
+      },
+      "realTimeNotifications": {
+        "title": "实时通知",
+        "desc": "新订单、更新和评论的即时提醒"
+      },
+      "analyticsReports": {
+        "title": "分析与报告",
+        "desc": "追踪收入、热门菜品和客户洞察"
+      }
+    }
+  },
   "features": {
     "subtitle": "强大功能",
     "title": "您所需的一切",
@@ -88,6 +141,15 @@
     "rating": "4.9/5 评分",
     "reviews": "500+ 条评价",
     "happyOwners": "满意的店主"
+  },
+  "goLive": {
+    "title": "准备上线了吗？",
+    "subtitle": "今天就启动您的餐厅网站。设置仅需 5 分钟，无需技术技能。",
+    "pricing": {
+      "starter": { "label": "入门版", "price": "5%", "detail": "每笔订单" },
+      "pro": { "label": "专业版", "price": "€129", "detail": "每月" },
+      "annual": { "label": "年度版", "price": "€99", "detail": "每月" }
+    }
   },
   "cta": {
     "subtitle": "即将推出",

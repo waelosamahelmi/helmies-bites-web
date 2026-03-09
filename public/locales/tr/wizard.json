@@ -336,5 +336,126 @@
       "kebab": "Kebap",
       "mexican": "Meksika"
     }
+  },
+  "getStarted": {
+    "backToHome": "Ana Sayfaya Dön",
+    "subtitle": "Başla",
+    "title": "Restoranınızı Kurun",
+    "description": "Restoranınızı çevrimiçi yapmak için aşağıdaki adımları tamamlayın. Sadece birkaç dakika sürer.",
+    "stepOf": "Adım {{current}} / {{total}}",
+    "needHelp": "Yardıma mı ihtiyacınız var?",
+    "steps": {
+      "email": { "title": "E-posta", "description": "İletişim e-postanızı girin" },
+      "plan": { "title": "Plan Seçin", "description": "Sizin için doğru planı seçin" },
+      "restaurant": { "title": "Restoran Bilgileri", "description": "Restoranınız hakkında bilgi verin" },
+      "menu": { "title": "Menü Yükleme", "description": "Menünüzü yükleyin ve yapay zeka ile ayrıştırın" },
+      "review": { "title": "İncele ve Gönder", "description": "Başvurunuzu inceleyin ve gönderin" }
+    },
+    "nav": { "previous": "Önceki", "nextStep": "Sonraki Adım" },
+    "email": {
+      "heading": "Haydi başlayalım",
+      "description": "Restoranınızın çevrimiçi varlığını oluşturmaya başlamak için e-posta adresinizi girin.",
+      "label": "E-posta Adresi",
+      "hint": "Kurulum süreciniz hakkında sizi bilgilendirmek için kullanacağız",
+      "placeholder": "sizin@email.com",
+      "invalidEmail": "Geçerli bir e-posta adresi girin",
+      "looksGood": "Harika görünüyor! Devam etmek için İleri'ye tıklayın."
+    },
+    "plans": {
+      "heading": "Planınızı Seçin",
+      "description": "Restoranınıza en uygun planı seçin. Daha sonra her zaman yükseltebilirsiniz.",
+      "mostPopular": "En Popüler",
+      "starter": {
+        "name": "Başlangıç",
+        "price": "5%",
+        "priceDetail": "çevrimiçi sipariş başına",
+        "subDetail": "€49 minimum aylık ücret",
+        "setup": "€0 kurulum",
+        "features": { "1": "Tam web sitesi oluşturucu", "2": "Çevrimiçi sipariş sistemi", "3": "AI menü içe aktarma", "4": "Stripe ödemeleri", "5": "Mobil uyumlu", "6": "Çok dilli (FI, EN, SV)", "7": "Ücretsiz alt alan adı", "8": "E-posta desteği" }
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€129",
+        "priceDetail": "/ay",
+        "subDetail": "veya €1.390/yıl (%10 tasarruf)",
+        "setup": "€500 tek seferlik kurulum",
+        "features": { "1": "Başlangıçtaki her şey", "2": "İşlem ücreti yok", "3": "Nakit ve POS ödemeleri", "4": "AI Asistan", "5": "Gelişmiş analitik", "6": "Özel marka ve alan adı", "7": "Öncelikli destek", "8": "Sosyal medya entegrasyonu", "9": "Teslimat bölgesi yönetimi" }
+      },
+      "annual": {
+        "name": "Yıllık",
+        "price": "€99",
+        "priceDetail": "/ay yıllık faturalandırma",
+        "subDetail": "€1.190 ilk yıl",
+        "setup": "€0 kurulum",
+        "features": { "1": "Pro'daki her şey", "2": "€0 kurulum ücreti", "3": "Özel hesap yöneticisi", "4": "Özel entegrasyonlar", "5": "Çoklu şube desteği", "6": "SLA garantisi" }
+      }
+    },
+    "restaurant": {
+      "name": { "label": "Restoran Adı", "hint": "Restoranınızın resmi adı", "placeholder": "ör. Restoran Helmies", "required": "Gerekli" },
+      "cuisine": {
+        "label": "Mutfak Türü", "hint": "Ne tür yemek sunuyorsunuz?", "placeholder": "Mutfak türünü seçin",
+        "options": { "finnish": "Fin 🇫🇮", "italian": "İtalyan 🇮🇹", "chinese": "Çin 🇨🇳", "indian": "Hint 🇮🇳", "thai": "Tayland 🇹🇭", "japanese": "Japon 🇯🇵", "burger": "Burger 🇺🇸", "pizza": "Pizza 🍕", "kebab": "Kebap 🇹🇷", "mexican": "Meksika 🇲🇽", "sushi": "Suşi 🍣", "other": "Diğer 🌍" }
+      },
+      "phone": { "label": "Telefon Numarası", "hint": "Restoranınızın iletişim numarası", "placeholder": "ör. +358 40 123 4567" },
+      "address": { "label": "Adres", "hint": "Restoranınızın fiziksel adresi", "required": "Gerekli", "street": "Sokak adresi", "postalCode": "Posta kodu", "city": "Şehir" },
+      "hours": {
+        "label": "Çalışma Saatleri", "hint": "Restoranınızın çalışma programını ayarlayın", "closed": "Kapalı", "open": "Aç", "close": "Kapat",
+        "days": { "monday": "Pazartesi", "tuesday": "Salı", "wednesday": "Çarşamba", "thursday": "Perşembe", "friday": "Cuma", "saturday": "Cumartesi", "sunday": "Pazar" }
+      }
+    },
+    "menuUpload": {
+      "heading": "Menünüzü Yükleyin",
+      "description": "Menünüzün bir fotoğrafını veya PDF'ini yükleyin, yapay zekamız tüm öğeleri, kategorileri ve fiyatları otomatik olarak çıkaracaktır.",
+      "clickToUpload": "Yüklemek için tıklayın veya sürükleyip bırakın",
+      "fileTypes": "PDF, PNG, JPG veya WebP",
+      "removeFile": "Dosyayı kaldır",
+      "parseButton": "Menüyü AI ile Ayrıştır",
+      "parsing": "Menü AI ile ayrıştırılıyor...",
+      "successTitle": "Menü Başarıyla Ayrıştırıldı!",
+      "itemsFound": "{{categories}} kategoride {{items}} öğe bulundu",
+      "hideDetails": "Detayları gizle",
+      "viewParsed": "Ayrıştırılan öğeleri görüntüle",
+      "uploadDifferent": "Farklı menü yükle",
+      "skipNote": "Hazır bir menü dosyanız yok mu? Bu adımı atlayıp daha sonra ekleyebilirsiniz.",
+      "parseError": "Menü ayrıştırılamadı. Tekrar deneyin veya farklı bir dosya yükleyin."
+    },
+    "review": {
+      "heading": "Bilgilerinizi İnceleyin",
+      "description": "Lütfen göndermeden önce aşağıdaki tüm bilgileri inceleyin.",
+      "contactEmail": "İletişim E-postası",
+      "selectedPlan": "Seçilen Plan",
+      "restaurantSection": "Restoran",
+      "cuisine": "mutfak",
+      "addressSection": "Adres",
+      "openingHours": "Çalışma Saatleri",
+      "closedLabel": "Kapalı",
+      "menuSection": "Menü",
+      "menuItemsCount": "{{categories}} kategoride {{items}} öğe",
+      "menuNotParsed": "Menü yüklendi ancak henüz ayrıştırılmadı",
+      "noMenu": "Menü yüklenmedi (daha sonra eklenebilir)",
+      "agreement": "Verilen bilgilerin doğru olduğunu onaylıyor ve kabul ediyorum",
+      "termsOfService": "Hizmet Şartları",
+      "and": "ve",
+      "privacyPolicy": "Gizlilik Politikası",
+      "submitting": "Gönderiliyor...",
+      "submitApplication": "Başvuruyu Gönder",
+      "planNames": { "starter": "Başlangıç (sipariş başı %5, €49 min/ay)", "pro": "Pro (€129/ay)", "annual": "Yıllık (€99/ay yıllık faturalandırma)" }
+    },
+    "success": {
+      "title": "Başvuru Alındı!",
+      "subtitle": "Bilgilerinizi aldık ve sisteminizi işledikten sonra sizinle iletişime geçeceğiz.",
+      "whatNext": "Sırada ne var?",
+      "step1Title": "Bilgilerinizi inceliyoruz",
+      "step1Desc": "Ekibimiz restoran detaylarınızı ve menünüzü inceleyecek.",
+      "step2Title": "Sisteminizi kuruyoruz",
+      "step2Desc": "Web sitenizi, menünüzü ve sipariş sisteminizi yapılandıracağız.",
+      "step3Title": "Yayına geçiyorsunuz!",
+      "step3Desc": "Giriş bilgilerinizi ve site URL'nizi göndereceğiz.",
+      "processingTime": "Beklenen işlem süresi: 1 iş günü",
+      "contactNote": "Verdiğiniz e-posta adresinden sizinle iletişime geçeceğiz.",
+      "backToHome": "Ana Sayfaya Dön",
+      "contactUs": "Bize Ulaşın",
+      "questions": "Sorularınız mı var? Bize ulaşın"
+    }
   }
 }

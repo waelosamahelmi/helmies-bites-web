@@ -14,6 +14,59 @@
     "satisfactionRate": "Tyytyväisyysaste",
     "averageSetup": "Keskimääräinen asennus"
   },
+  "aiMenu": {
+    "badge": "Tekoälypohjainen",
+    "title": "Tuo ruokalistasi",
+    "titleLine2": "tekoälyn avulla",
+    "description": "Lataa ruokalistasi PDF tai valokuva, ja tekoälymme poimii kaikki tuotteet, hinnat, kuvaukset ja kategoriat sekunneissa.",
+    "steps": {
+      "upload": "Lataa ruokalistasi PDF, kuva tai URL",
+      "extract": "Tekoäly poimii tuotteet, hinnat ja kuvaukset",
+      "categorize": "Automaattisesti luokiteltu ja valmis käyttöön"
+    },
+    "dropHere": "Pudota ruokalistasi tähän",
+    "fileTypes": "PDF, JPG, PNG tai liitä URL",
+    "items": {
+      "0": { "name": "Margherita Pizza", "desc": "Tuore tomaatti, mozzarella, basilika" },
+      "1": { "name": "Pasta Carbonara", "desc": "Kermainen kastike, pancetta, parmesaani" },
+      "2": { "name": "Caesar-salaatti", "desc": "Roomansalaatti, krutonkeja, parmesaanikastike" }
+    }
+  },
+  "themes": {
+    "subtitle": "Kauniit teemat",
+    "title": "Valitse täydellinen ilme",
+    "description": "Upeat valmiit teemat ravintoloille. Yksi napsautus käyttöönottoon, täysin muokattavissa.",
+    "presets": {
+      "midnight": { "name": "Midnight", "label": "Tumma ja tyylikäs" },
+      "rustic": { "name": "Rustic", "label": "Lämmin ja kodikas" },
+      "fresh": { "name": "Fresh", "label": "Raikas ja moderni" },
+      "royal": { "name": "Royal", "label": "Rohkea ja ylellinen" }
+    }
+  },
+  "ordering": {
+    "badge": "Tilaukset ja maksut",
+    "title": "Vastaanota tilauksia",
+    "titleLine2": "ja maksuja heti",
+    "mockup": {
+      "restaurantName": "Helmie's Kitchen",
+      "domain": "helmies.fi/ravintola",
+      "items": "tuotetta"
+    },
+    "features": {
+      "mobileOptimized": {
+        "title": "Mobiilioptimoitu",
+        "desc": "Täydellinen jokaisella laitteella — 70 % tilauksista tulee mobiililta"
+      },
+      "realTimeNotifications": {
+        "title": "Reaaliaikaiset ilmoitukset",
+        "desc": "Välittömät hälytykset uusista tilauksista, päivityksistä ja arvosteluista"
+      },
+      "analyticsReports": {
+        "title": "Analytiikka ja raportit",
+        "desc": "Seuraa liikevaihtoa, suosituimpia tuotteita ja asiakasnäkemyksiä"
+      }
+    }
+  },
   "features": {
     "subtitle": "Tehokkaat ominaisuudet",
     "title": "Kaikki mitä tarvitset",
@@ -88,6 +141,15 @@
     "rating": "4,9/5 Arvosana",
     "reviews": "500+ arvostelua",
     "happyOwners": "Tyytyväiset omistajat"
+  },
+  "goLive": {
+    "title": "Valmis julkaistavaksi?",
+    "subtitle": "Julkaise ravintolasi verkkosivusto tänään. Asennus kestää vain 5 minuuttia, ei vaadi teknisiä taitoja.",
+    "pricing": {
+      "starter": { "label": "Starter", "price": "5 %", "detail": "per tilaus" },
+      "pro": { "label": "Pro", "price": "129 €", "detail": "per kuukausi" },
+      "annual": { "label": "Vuosittain", "price": "99 €", "detail": "per kuukausi" }
+    }
   },
   "cta": {
     "subtitle": "Tulossa pian",

@@ -7,7 +7,10 @@
     "faq": "SSS",
     "tryDemo": "Demoyu Dene",
     "launchingDate": "5 Mart'ta Başlıyoruz",
-    "launchingDateFull": "5 Mart'ta Başlıyoruz"
+    "launchingDateFull": "5 Mart'ta Başlıyoruz",
+    "getStarted": "Başlayın",
+    "getStartedFree": "Ücretsiz Başlayın",
+    "getStartedNow": "Şimdi Başlayın"
   },
   "footer": {
     "product": "Ürün",

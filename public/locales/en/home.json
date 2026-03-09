@@ -14,6 +14,59 @@
     "satisfactionRate": "Satisfaction Rate",
     "averageSetup": "Average Setup"
   },
+  "aiMenu": {
+    "badge": "AI-Powered",
+    "title": "Import Your Menu",
+    "titleLine2": "with AI Magic",
+    "description": "Upload your menu PDF or photo and our AI will extract all items, prices, descriptions, and categories in seconds.",
+    "steps": {
+      "upload": "Upload your menu PDF, image, or URL",
+      "extract": "AI extracts items, prices & descriptions",
+      "categorize": "Auto-categorized and ready to go"
+    },
+    "dropHere": "Drop your menu here",
+    "fileTypes": "PDF, JPG, PNG or paste a URL",
+    "items": {
+      "0": { "name": "Margherita Pizza", "desc": "Fresh tomato, mozzarella, basil" },
+      "1": { "name": "Pasta Carbonara", "desc": "Creamy sauce, pancetta, parmesan" },
+      "2": { "name": "Caesar Salad", "desc": "Romaine, croutons, parmesan dressing" }
+    }
+  },
+  "themes": {
+    "subtitle": "Beautiful Themes",
+    "title": "Choose Your Perfect Look",
+    "description": "Stunning pre-built themes designed for restaurants. One click to apply, fully customizable.",
+    "presets": {
+      "midnight": { "name": "Midnight", "label": "Dark & Elegant" },
+      "rustic": { "name": "Rustic", "label": "Warm & Cozy" },
+      "fresh": { "name": "Fresh", "label": "Clean & Modern" },
+      "royal": { "name": "Royal", "label": "Bold & Luxurious" }
+    }
+  },
+  "ordering": {
+    "badge": "Ordering & Payments",
+    "title": "Accept Orders",
+    "titleLine2": "& Payments Instantly",
+    "mockup": {
+      "restaurantName": "Helmie's Kitchen",
+      "domain": "helmies.fi/restaurant",
+      "items": "items"
+    },
+    "features": {
+      "mobileOptimized": {
+        "title": "Mobile Optimized",
+        "desc": "Perfect on every device — 70% of orders come from mobile"
+      },
+      "realTimeNotifications": {
+        "title": "Real-Time Notifications",
+        "desc": "Instant alerts for new orders, updates, and reviews"
+      },
+      "analyticsReports": {
+        "title": "Analytics & Reports",
+        "desc": "Track revenue, popular items, and customer insights"
+      }
+    }
+  },
   "features": {
     "subtitle": "Powerful Features",
     "title": "Everything You Need",
@@ -88,6 +141,15 @@
     "rating": "4.9/5 Rating",
     "reviews": "500+ reviews",
     "happyOwners": "Happy Owners"
+  },
+  "goLive": {
+    "title": "Ready to Go Live?",
+    "subtitle": "Launch your restaurant website today. Setup takes just 5 minutes, no technical skills needed.",
+    "pricing": {
+      "starter": { "label": "Starter", "price": "5%", "detail": "per order" },
+      "pro": { "label": "Pro", "price": "€129", "detail": "per month" },
+      "annual": { "label": "Annual", "price": "€99", "detail": "per month" }
+    }
   },
   "cta": {
     "subtitle": "Coming Soon",

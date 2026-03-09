@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ScrollReveal } from '../components/ScrollReveal';
 import { SectionTitle } from '../components/SectionTitle';
 import { AivoraButton } from '../components/AivoraButton';
-import { LaunchCountdown } from '../components/LaunchCountdown';
+
 import {
   Search,
   ChevronDown,
@@ -399,7 +399,7 @@ export function FAQ() {
               align="center"
             />
             <div className="mt-10">
-              <LaunchCountdown compact />
+              <a href="/get-started" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#CC6200] text-white font-bold text-lg hover:scale-105 transition-all duration-300">{t('nav.getStartedNow', { ns: 'common' })}</a>
             </div>
           </ScrollReveal>
         </div>

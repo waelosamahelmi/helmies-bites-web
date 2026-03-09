@@ -336,5 +336,126 @@
       "kebab": "Kebab",
       "mexican": "Mexikanskt"
     }
+  },
+  "getStarted": {
+    "backToHome": "Tillbaka till startsidan",
+    "subtitle": "Kom igång",
+    "title": "Ställ in din restaurang",
+    "description": "Slutför stegen nedan för att få din restaurang online. Det tar bara några minuter.",
+    "stepOf": "Steg {{current}} av {{total}}",
+    "needHelp": "Behöver du hjälp?",
+    "steps": {
+      "email": { "title": "E-post", "description": "Ange din kontakt-e-post" },
+      "plan": { "title": "Välj plan", "description": "Välj rätt plan för dig" },
+      "restaurant": { "title": "Restauranginformation", "description": "Berätta om din restaurang" },
+      "menu": { "title": "Ladda upp meny", "description": "Ladda upp och tolka din meny med AI" },
+      "review": { "title": "Granska och skicka", "description": "Granska och skicka din ansökan" }
+    },
+    "nav": { "previous": "Föregående", "nextStep": "Nästa steg" },
+    "email": {
+      "heading": "Låt oss börja",
+      "description": "Ange din e-postadress för att börja ställa in din restaurangs onlinenärvaro.",
+      "label": "E-postadress",
+      "hint": "Vi använder detta för att hålla dig uppdaterad",
+      "placeholder": "din@email.com",
+      "invalidEmail": "Ange en giltig e-postadress",
+      "looksGood": "Ser bra ut! Klicka Nästa för att fortsätta."
+    },
+    "plans": {
+      "heading": "Välj din plan",
+      "description": "Välj den plan som passar din restaurang bäst. Du kan alltid uppgradera senare.",
+      "mostPopular": "Mest populär",
+      "starter": {
+        "name": "Starter",
+        "price": "5%",
+        "priceDetail": "per onlinebeställning",
+        "subDetail": "€49 minsta månadsavgift",
+        "setup": "€0 installation",
+        "features": { "1": "Komplett webbplatsbyggare", "2": "Onlinebeställningssystem", "3": "AI-menyimport", "4": "Stripe-betalningar", "5": "Mobiloptimerad", "6": "Flerspråkig (FI, EN, SV)", "7": "Gratis underdomän", "8": "E-postsupport" }
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€129",
+        "priceDetail": "/månad",
+        "subDetail": "eller €1 390/år (spara 10%)",
+        "setup": "€500 engångsavgift",
+        "features": { "1": "Allt i Starter", "2": "Inga transaktionsavgifter", "3": "Kontantbetalningar", "4": "AI-assistent", "5": "Avancerad analys", "6": "Eget varumärke och domän", "7": "Prioriterad support", "8": "Sociala medier-integration", "9": "Leveranszonshantering" }
+      },
+      "annual": {
+        "name": "Årlig",
+        "price": "€99",
+        "priceDetail": "/mån faktureras årsvis",
+        "subDetail": "€1 190 första året",
+        "setup": "€0 installation",
+        "features": { "1": "Allt i Pro", "2": "€0 startavgift", "3": "Dedikerad kontoansvarig", "4": "Anpassade integrationer", "5": "Stöd för flera filialer", "6": "SLA-garanti" }
+      }
+    },
+    "restaurant": {
+      "name": { "label": "Restaurangnamn", "hint": "Din restaurangs officiella namn", "placeholder": "t.ex. Restaurang Helmies", "required": "Obligatoriskt" },
+      "cuisine": {
+        "label": "Kökstyp", "hint": "Vilken typ av mat serverar du?", "placeholder": "Välj kökstyp",
+        "options": { "finnish": "Finsk 🇫🇮", "italian": "Italiensk 🇮🇹", "chinese": "Kinesisk 🇨🇳", "indian": "Indisk 🇮🇳", "thai": "Thailändsk 🇹🇭", "japanese": "Japansk 🇯🇵", "burger": "Burgare 🇺🇸", "pizza": "Pizza 🍕", "kebab": "Kebab 🇹🇷", "mexican": "Mexikansk 🇲🇽", "sushi": "Sushi 🍣", "other": "Övrigt 🌍" }
+      },
+      "phone": { "label": "Telefonnummer", "hint": "Kontaktnummer för din restaurang", "placeholder": "t.ex. +358 40 123 4567" },
+      "address": { "label": "Adress", "hint": "Din restaurangs fysiska adress", "required": "Obligatoriskt", "street": "Gatuadress", "postalCode": "Postnummer", "city": "Stad" },
+      "hours": {
+        "label": "Öppettider", "hint": "Ange din restaurangs schema", "closed": "Stängt", "open": "Öppna", "close": "Stäng",
+        "days": { "monday": "Måndag", "tuesday": "Tisdag", "wednesday": "Onsdag", "thursday": "Torsdag", "friday": "Fredag", "saturday": "Lördag", "sunday": "Söndag" }
+      }
+    },
+    "menuUpload": {
+      "heading": "Ladda upp din meny",
+      "description": "Ladda upp en bild eller PDF av din meny så extraherar vår AI alla artiklar, kategorier och priser automatiskt.",
+      "clickToUpload": "Klicka för att ladda upp eller dra och släpp",
+      "fileTypes": "PDF, PNG, JPG eller WebP",
+      "removeFile": "Ta bort fil",
+      "parseButton": "Tolka meny med AI",
+      "parsing": "Tolkar meny med AI...",
+      "successTitle": "Menyn tolkad framgångsrikt!",
+      "itemsFound": "Hittade {{items}} artiklar i {{categories}} kategorier",
+      "hideDetails": "Dölj detaljer",
+      "viewParsed": "Visa tolkade artiklar",
+      "uploadDifferent": "Ladda upp annan meny",
+      "skipNote": "Har du ingen menyfil redo? Du kan hoppa över detta steg och lägga till den senare.",
+      "parseError": "Kunde inte tolka menyn. Försök igen eller ladda upp en annan fil."
+    },
+    "review": {
+      "heading": "Granska din information",
+      "description": "Vänligen granska alla uppgifter nedan innan du skickar.",
+      "contactEmail": "Kontakt-e-post",
+      "selectedPlan": "Vald plan",
+      "restaurantSection": "Restaurang",
+      "cuisine": "kök",
+      "addressSection": "Adress",
+      "openingHours": "Öppettider",
+      "closedLabel": "Stängt",
+      "menuSection": "Meny",
+      "menuItemsCount": "{{items}} artiklar i {{categories}} kategorier",
+      "menuNotParsed": "Meny uppladdad men ej tolkad ännu",
+      "noMenu": "Ingen meny uppladdad (kan läggas till senare)",
+      "agreement": "Jag bekräftar att uppgifterna är korrekta och godkänner",
+      "termsOfService": "Användarvillkor",
+      "and": "och",
+      "privacyPolicy": "Integritetspolicy",
+      "submitting": "Skickar...",
+      "submitApplication": "Skicka ansökan",
+      "planNames": { "starter": "Starter (5% per beställning, €49 min/mån)", "pro": "Pro (€129/mån)", "annual": "Årlig (€99/mån faktureras årsvis)" }
+    },
+    "success": {
+      "title": "Ansökan mottagen!",
+      "subtitle": "Vi har tagit emot din information och kontaktar dig när vi har behandlat ditt system.",
+      "whatNext": "Vad händer nu?",
+      "step1Title": "Vi granskar din information",
+      "step1Desc": "Vårt team granskar dina restauranguppgifter och meny.",
+      "step2Title": "Vi ställer in ditt system",
+      "step2Desc": "Vi konfigurerar din webbplats, meny och beställningssystem.",
+      "step3Title": "Du går live!",
+      "step3Desc": "Vi skickar dig dina inloggningsuppgifter och webbadress.",
+      "processingTime": "Förväntad handläggningstid: 1 arbetsdag",
+      "contactNote": "Vi kontaktar dig via den e-postadress du angav.",
+      "backToHome": "Tillbaka till startsidan",
+      "contactUs": "Kontakta oss",
+      "questions": "Frågor? Kontakta oss på"
+    }
   }
 }

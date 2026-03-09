@@ -336,5 +336,217 @@
       "kebab": "Kebab",
       "mexican": "Mexican"
     }
+  },
+  "getStarted": {
+    "backToHome": "Back to Home",
+    "subtitle": "Get Started",
+    "title": "Set Up Your Restaurant",
+    "description": "Complete the steps below to get your restaurant online. It only takes a few minutes.",
+    "stepOf": "Step {{current}} of {{total}}",
+    "needHelp": "Need help?",
+    "steps": {
+      "email": {
+        "title": "Email",
+        "description": "Enter your contact email"
+      },
+      "plan": {
+        "title": "Select Plan",
+        "description": "Choose the right plan for you"
+      },
+      "restaurant": {
+        "title": "Restaurant Info",
+        "description": "Tell us about your restaurant"
+      },
+      "menu": {
+        "title": "Upload Menu",
+        "description": "Upload and parse your menu with AI"
+      },
+      "review": {
+        "title": "Review & Submit",
+        "description": "Review and submit your application"
+      }
+    },
+    "nav": {
+      "previous": "Previous",
+      "nextStep": "Next Step"
+    },
+    "email": {
+      "heading": "Let's get started",
+      "description": "Enter your email address to begin setting up your restaurant's online presence.",
+      "label": "Email Address",
+      "hint": "We'll use this to keep you updated on your setup progress",
+      "placeholder": "your@email.com",
+      "invalidEmail": "Please enter a valid email address",
+      "looksGood": "Looks good! Click Next to continue."
+    },
+    "plans": {
+      "heading": "Choose Your Plan",
+      "description": "Select the plan that best fits your restaurant. You can always upgrade later.",
+      "mostPopular": "Most Popular",
+      "starter": {
+        "name": "Starter",
+        "price": "5%",
+        "priceDetail": "per online order",
+        "subDetail": "€49 minimum monthly fee",
+        "setup": "€0 setup",
+        "features": {
+          "1": "Full website builder",
+          "2": "Online ordering system",
+          "3": "AI menu import",
+          "4": "Stripe payments",
+          "5": "Mobile-optimized",
+          "6": "Multi-language (FI, EN, SV)",
+          "7": "Free subdomain",
+          "8": "Email support"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "price": "€129",
+        "priceDetail": "/month",
+        "subDetail": "or €1,390/year (save 10%)",
+        "setup": "€500 one-time setup",
+        "features": {
+          "1": "Everything in Starter",
+          "2": "No transaction fees",
+          "3": "Offline payments (cash, terminal)",
+          "4": "AI Assistant",
+          "5": "Advanced analytics",
+          "6": "Custom branding & domain",
+          "7": "Priority support",
+          "8": "Social media integration",
+          "9": "Delivery zone management"
+        }
+      },
+      "annual": {
+        "name": "Annual",
+        "price": "€99",
+        "priceDetail": "/month billed annually",
+        "subDetail": "€1,190 first year",
+        "setup": "€0 setup",
+        "features": {
+          "1": "Everything in Pro",
+          "2": "€0 setup fee",
+          "3": "Dedicated account manager",
+          "4": "Custom integrations",
+          "5": "Multi-branch support",
+          "6": "SLA guarantee"
+        }
+      }
+    },
+    "restaurant": {
+      "name": {
+        "label": "Restaurant Name",
+        "hint": "Your restaurant's official name",
+        "placeholder": "e.g. Ravintola Helmies",
+        "required": "Required"
+      },
+      "cuisine": {
+        "label": "Cuisine Type",
+        "hint": "What kind of food do you serve?",
+        "placeholder": "Select cuisine type",
+        "options": {
+          "finnish": "Finnish 🇫🇮",
+          "italian": "Italian 🇮🇹",
+          "chinese": "Chinese 🇨🇳",
+          "indian": "Indian 🇮🇳",
+          "thai": "Thai 🇹🇭",
+          "japanese": "Japanese 🇯🇵",
+          "burger": "Burger 🇺🇸",
+          "pizza": "Pizza 🍕",
+          "kebab": "Kebab 🇹🇷",
+          "mexican": "Mexican 🇲🇽",
+          "sushi": "Sushi 🍣",
+          "other": "Other 🌍"
+        }
+      },
+      "phone": {
+        "label": "Phone Number",
+        "hint": "Contact number for your restaurant",
+        "placeholder": "e.g. +358 40 123 4567"
+      },
+      "address": {
+        "label": "Address",
+        "hint": "Your restaurant's physical address",
+        "required": "Required",
+        "street": "Street address",
+        "postalCode": "Postal code",
+        "city": "City"
+      },
+      "hours": {
+        "label": "Opening Hours",
+        "hint": "Set your restaurant's operating schedule",
+        "closed": "Closed",
+        "open": "Open",
+        "close": "Close",
+        "days": {
+          "monday": "Monday",
+          "tuesday": "Tuesday",
+          "wednesday": "Wednesday",
+          "thursday": "Thursday",
+          "friday": "Friday",
+          "saturday": "Saturday",
+          "sunday": "Sunday"
+        }
+      }
+    },
+    "menuUpload": {
+      "heading": "Upload Your Menu",
+      "description": "Upload a photo or PDF of your menu and our AI will extract all items, categories, and prices automatically.",
+      "clickToUpload": "Click to upload or drag & drop",
+      "fileTypes": "PDF, PNG, JPG, or WebP",
+      "removeFile": "Remove file",
+      "parseButton": "Parse Menu with AI",
+      "parsing": "Parsing menu with AI...",
+      "successTitle": "Menu Parsed Successfully!",
+      "itemsFound": "Found {{items}} items in {{categories}} categories",
+      "hideDetails": "Hide details",
+      "viewParsed": "View parsed items",
+      "uploadDifferent": "Upload different menu",
+      "skipNote": "Don't have a menu file ready? You can skip this step and add it later.",
+      "parseError": "Failed to parse menu. Please try again or upload a different file."
+    },
+    "review": {
+      "heading": "Review Your Information",
+      "description": "Please review all the details below before submitting.",
+      "contactEmail": "Contact Email",
+      "selectedPlan": "Selected Plan",
+      "restaurantSection": "Restaurant",
+      "cuisine": "cuisine",
+      "addressSection": "Address",
+      "openingHours": "Opening Hours",
+      "closedLabel": "Closed",
+      "menuSection": "Menu",
+      "menuItemsCount": "{{items}} items in {{categories}} categories",
+      "menuNotParsed": "Menu uploaded but not yet parsed",
+      "noMenu": "No menu uploaded (can be added later)",
+      "agreement": "I confirm that the information provided is accurate and I agree to the",
+      "termsOfService": "Terms of Service",
+      "and": "and",
+      "privacyPolicy": "Privacy Policy",
+      "submitting": "Submitting...",
+      "submitApplication": "Submit Application",
+      "planNames": {
+        "starter": "Starter (5% per order, €49 min/mo)",
+        "pro": "Pro (€129/month)",
+        "annual": "Annual (€99/month billed annually)"
+      }
+    },
+    "success": {
+      "title": "Application Received!",
+      "subtitle": "We have received your information and will reach out to you once we process your system.",
+      "whatNext": "What happens next?",
+      "step1Title": "We review your information",
+      "step1Desc": "Our team will review your restaurant details and menu.",
+      "step2Title": "We set up your system",
+      "step2Desc": "We'll configure your website, menu, and ordering system.",
+      "step3Title": "You go live!",
+      "step3Desc": "We'll send you your login credentials and site URL.",
+      "processingTime": "Expected processing time: 1 business day",
+      "contactNote": "We'll contact you at the email address you provided.",
+      "backToHome": "Back to Home",
+      "contactUs": "Contact Us",
+      "questions": "Questions? Reach us at"
+    }
   }
 }
